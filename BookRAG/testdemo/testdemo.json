@@ -1,0 +1,20 @@
+[
+  {
+    "question": "这篇论文的标题是什么？",
+    "answer": "",
+    "doc_uuid": "11111111-1111-1111-1111-111111111111",
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+  },
+  {
+    "question": "BookRAG 的核心方法/贡献点用 1-2 句话概括是什么？",
+    "answer": "",
+    "doc_uuid": "11111111-1111-1111-1111-111111111111",
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+  },
+  {
+    "question": "论文里实验用了哪些数据集？",
+    "answer": "",
+    "doc_uuid": "11111111-1111-1111-1111-111111111111",
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+  }
+]

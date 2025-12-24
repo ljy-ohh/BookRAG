@@ -1,0 +1,3 @@
+dataset_path: 'D:\pycharm\Project\BookRAG\BookRAG\testdemo\testdemo.json'
+working_dir: 'D:\pycharm\Project\BookRAG\BookRAG\testdemo\testdemo_data'
+dataset_name: testdemo
