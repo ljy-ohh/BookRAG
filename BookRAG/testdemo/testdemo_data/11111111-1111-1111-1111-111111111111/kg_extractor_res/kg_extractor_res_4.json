@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "shuwang3 link cuhk edu cn",
+      "entity_type": "PERSON",
+      "description": "an email address likely belonging to a person named shuwang  indicating their contact information",
+      "source_ids": [
+        4
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 4
+}

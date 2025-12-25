@@ -1,0 +1,3981 @@
+{
+  "nodes": [
+    {
+      "index_id": 0,
+      "parent_id": null,
+      "type": "root",
+      "meta_info": {
+        "file_name": "BOOKRAG_VLDB_2026_full.pdf",
+        "file_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf",
+        "page_idx": null,
+        "page_path": null,
+        "pdf_id": 0,
+        "pdf_para_block": null,
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": null,
+        "title_level": -1
+      },
+      "summary": ""
+    },
+    {
+      "index_id": 1,
+      "parent_id": 0,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 1,
+        "pdf_para_block": {
+          "bbox": [
+            52,
+            80,
+            558,
+            120
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                52,
+                80,
+                558,
+                120
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    52,
+                    80,
+                    558,
+                    120
+                  ],
+                  "type": "text",
+                  "content": "BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents"
+                }
+              ]
+            }
+          ],
+          "index": 0
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents",
+        "title_level": 0
+      },
+      "summary": "This section introduces BookRAG, a novel hierarchical and agent-based Retrieval-Augmented Generation methodology designed for effective question answering on complex, structured documents."
+    },
+    {
+      "index_id": 2,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 2,
+        "pdf_para_block": {
+          "bbox": [
+            115,
+            132,
+            168,
+            144
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                115,
+                132,
+                168,
+                144
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    115,
+                    132,
+                    168,
+                    144
+                  ],
+                  "type": "text",
+                  "content": "Shu Wang"
+                }
+              ]
+            }
+          ],
+          "index": 1
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Shu Wang",
+        "title_level": -1
+      },
+      "summary": "Shu Wang is the core subject identified."
+    },
+    {
+      "index_id": 3,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 3,
+        "pdf_para_block": {
+          "bbox": [
+            74,
+            144,
+            208,
+            156
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                74,
+                144,
+                208,
+                156
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    74,
+                    144,
+                    208,
+                    156
+                  ],
+                  "type": "text",
+                  "content": "The Chinese University of Hong"
+                }
+              ]
+            }
+          ],
+          "index": 2
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The Chinese University of Hong Kong, Shenzhen",
+        "title_level": -1
+      },
+      "summary": "The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen) is a research-intensive university established in 2014 through a partnership between Shenzhen University and The Chinese University of Hong Kong. It operates as an independent legal entity in mainland China, inheriting the educational philosophy and academic systems of its Hong Kong counterpart. The university offers programs in English and Chinese across disciplines such as science, engineering, business, and humanities, with a focus on internationalization and innovation."
+    },
+    {
+      "index_id": 4,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 4,
+        "pdf_para_block": {
+          "bbox": [
+            82,
+            169,
+            201,
+            180
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                82,
+                169,
+                201,
+                180
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    82,
+                    169,
+                    201,
+                    180
+                  ],
+                  "type": "text",
+                  "content": "shuwang3@link.cuhk.edu.cn"
+                }
+              ]
+            }
+          ],
+          "index": 4
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "shuwang3@link.cuhk.edu.cn",
+        "title_level": -1
+      },
+      "summary": "This is an email address for an individual named Shuwang at the Chinese University of Hong Kong (CUHK)."
+    },
+    {
+      "index_id": 5,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 5,
+        "pdf_para_block": {
+          "bbox": [
+            275,
+            132,
+            335,
+            144
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                275,
+                132,
+                335,
+                144
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    275,
+                    132,
+                    335,
+                    144
+                  ],
+                  "type": "text",
+                  "content": "Yingli Zhou"
+                }
+              ]
+            }
+          ],
+          "index": 5
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Yingli Zhou",
+        "title_level": -1
+      },
+      "summary": "Yingli Zhou is the core subject identified in the provided content."
+    },
+    {
+      "index_id": 6,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 6,
+        "pdf_para_block": {
+          "bbox": [
+            239,
+            145,
+            372,
+            156
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                239,
+                145,
+                372,
+                156
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    239,
+                    145,
+                    372,
+                    156
+                  ],
+                  "type": "text",
+                  "content": "The Chinese University of Hong"
+                }
+              ]
+            }
+          ],
+          "index": 6
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The Chinese University of Hong Kong, Shenzhen",
+        "title_level": -1
+      },
+      "summary": "The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen) is a research university established in 2014 through a partnership between Shenzhen University and The Chinese University of Hong Kong. It operates as an independent legal entity under mainland China's educational system while inheriting the academic philosophy and systems of its Hong Kong counterpart. The university offers programs in English and Chinese across disciplines like science, engineering, economics, and humanities, with a focus on internationalization, innovation, and interdisciplinary research."
+    },
+    {
+      "index_id": 7,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 7,
+        "pdf_para_block": {
+          "bbox": [
+            245,
+            169,
+            365,
+            180
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                245,
+                169,
+                365,
+                180
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    245,
+                    169,
+                    365,
+                    180
+                  ],
+                  "type": "text",
+                  "content": "yinglizhou@link.cuhk.edu.cn"
+                }
+              ]
+            }
+          ],
+          "index": 8
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "yinglizhou@link.cuhk.edu.cn",
+        "title_level": -1
+      },
+      "summary": "This is an email address for someone named Yingli Zhou at The Chinese University of Hong Kong (CUHK)."
+    },
+    {
+      "index_id": 8,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 8,
+        "pdf_para_block": {
+          "bbox": [
+            437,
+            132,
+            503,
+            145
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                437,
+                132,
+                503,
+                145
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    437,
+                    132,
+                    503,
+                    145
+                  ],
+                  "type": "text",
+                  "content": "Yixiang Fang"
+                }
+              ]
+            }
+          ],
+          "index": 9
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Yixiang Fang",
+        "title_level": -1
+      },
+      "summary": "Yixiang Fang is a name, likely referring to an individual, though no additional context is provided regarding their identity, profession, or significance."
+    },
+    {
+      "index_id": 9,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 9,
+        "pdf_para_block": {
+          "bbox": [
+            403,
+            145,
+            536,
+            156
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                403,
+                145,
+                536,
+                156
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    403,
+                    145,
+                    536,
+                    156
+                  ],
+                  "type": "text",
+                  "content": "The Chinese University of Hong"
+                }
+              ]
+            }
+          ],
+          "index": 10
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The Chinese University of Hong Kong, Shenzhen",
+        "title_level": -1
+      },
+      "summary": "The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen) is a research university established in 2014 through a partnership between Shenzhen University and The Chinese University of Hong Kong. It operates as an independent legal entity under mainland China's regulations while inheriting the educational philosophy and academic systems of its Hong Kong counterpart. The university offers programs in English and Chinese across disciplines like science, engineering, economics, and humanities, granting its own degrees. It is known for its international faculty, innovative interdisciplinary curriculum, and strong industry connections in the Greater Bay Area."
+    },
+    {
+      "index_id": 10,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 10,
+        "pdf_para_block": {
+          "bbox": [
+            416,
+            169,
+            523,
+            180
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                416,
+                169,
+                523,
+                180
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    416,
+                    169,
+                    523,
+                    180
+                  ],
+                  "type": "text",
+                  "content": "fangyixiang@cuhk.edu.cn"
+                }
+              ]
+            }
+          ],
+          "index": 12
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "fangyixiang@cuhk.edu.cn",
+        "title_level": -1
+      },
+      "summary": "This is an email address for a person named Fang Yixiang affiliated with The Chinese University of Hong Kong (CUHK)."
+    },
+    {
+      "index_id": 11,
+      "parent_id": 1,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 11,
+        "pdf_para_block": {
+          "bbox": [
+            51,
+            188,
+            112,
+            198
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                51,
+                188,
+                112,
+                198
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    51,
+                    188,
+                    112,
+                    198
+                  ],
+                  "type": "text",
+                  "content": "ABSTRACT"
+                }
+              ]
+            }
+          ],
+          "index": 13
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "ABSTRACT",
+        "title_level": 1
+      },
+      "summary": "This section introduces BookRAG, a novel RAG method that uses a hierarchical BookIndex and agent-based querying to significantly improve question answering on structured documents like books."
+    },
+    {
+      "index_id": 12,
+      "parent_id": 11,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 12,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            202,
+            296,
+            467
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                202,
+                296,
+                467
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    202,
+                    296,
+                    467
+                  ],
+                  "type": "text",
+                  "content": "As an effective method to boost the performance of Large Language Models (LLMs) on the question answering (QA) task, Retrieval-Augmented Generation (RAG), which queries highly relevant information from external complex documents, has attracted tremendous attention from both industry and academia. Existing RAG approaches often focus on general documents, and they overlook the fact that many real-world documents (such as books, booklets, handbooks, etc.) have a hierarchical structure, which organizes their content from different granularity levels, leading to poor performance for the QA task. To address these limitations, we introduce BookRAG, a novel RAG approach targeted for documents with a hierarchical structure, which exploits logical hierarchies and traces entity relations to query the highly relevant information. Specifically, we build a novel index structure, called BookIndex, by extracting a hierarchical tree from the document, which serves as the role of its table of contents, using a graph to capture the intricate relationships between entities, and mapping entities to tree nodes. Leveraging the BookIndex, we then propose an agent-based query method inspired by the Information Foraging Theory, which dynamically classifies queries and employs a tailored retrieval workflow. Extensive experiments on three widely adopted benchmarks demonstrate that BookRAG achieves state-of-the-art performance, significantly outperforming baselines in both retrieval recall and QA accuracy while maintaining competitive efficiency."
+                }
+              ]
+            }
+          ],
+          "index": 14
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "As an effective method to boost the performance of Large Language Models (LLMs) on the question answering (QA) task, Retrieval-Augmented Generation (RAG), which queries highly relevant information from external complex documents, has attracted tremendous attention from both industry and academia. Existing RAG approaches often focus on general documents, and they overlook the fact that many real-world documents (such as books, booklets, handbooks, etc.) have a hierarchical structure, which organizes their content from different granularity levels, leading to poor performance for the QA task. To address these limitations, we introduce BookRAG, a novel RAG approach targeted for documents with a hierarchical structure, which exploits logical hierarchies and traces entity relations to query the highly relevant information. Specifically, we build a novel index structure, called BookIndex, by extracting a hierarchical tree from the document, which serves as the role of its table of contents, using a graph to capture the intricate relationships between entities, and mapping entities to tree nodes. Leveraging the BookIndex, we then propose an agent-based query method inspired by the Information Foraging Theory, which dynamically classifies queries and employs a tailored retrieval workflow. Extensive experiments on three widely adopted benchmarks demonstrate that BookRAG achieves state-of-the-art performance, significantly outperforming baselines in both retrieval recall and QA accuracy while maintaining competitive efficiency.",
+        "title_level": -1
+      },
+      "summary": "BookRAG is a new Retrieval-Augmented Generation (RAG) method designed to significantly improve question answering for hierarchically structured documents like books and handbooks. It addresses the limitation of existing RAG systems, which perform poorly on such documents by ignoring their multi-level organization. The core innovation is a **BookIndex**, which creates a hierarchical tree (like a table of contents), maps entities to it, and uses a graph to track entity relationships. An agent-based query method then dynamically classifies questions and retrieves information using this index. Experiments on three benchmarks show BookRAG achieves state-of-the-art results, greatly outperforming baseline methods in retrieval recall and QA accuracy while remaining efficient."
+    },
+    {
+      "index_id": 13,
+      "parent_id": 11,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 13,
+        "pdf_para_block": {
+          "bbox": [
+            51,
+            475,
+            149,
+            484
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                51,
+                475,
+                149,
+                484
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    51,
+                    475,
+                    149,
+                    484
+                  ],
+                  "type": "text",
+                  "content": "PVLDB Reference Format:"
+                }
+              ]
+            }
+          ],
+          "index": 15
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "PVLDB Reference Format:",
+        "title_level": -1
+      },
+      "summary": "The PVLDB reference format is a standardized citation style for the Proceedings of the VLDB Endowment, requiring authors to list authors, title, book title (PVLDB), volume, issue, page numbers, publisher (VLDB Endowment), and year."
+    },
+    {
+      "index_id": 14,
+      "parent_id": 11,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 14,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            485,
+            277,
+            525
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                485,
+                277,
+                525
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    485,
+                    277,
+                    525
+                  ],
+                  "type": "text",
+                  "content": "Shu Wang, Yingli Zhou, and Yixiang Fang. BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents. PVLDB, 19(1): XXX-XXX, 2025. doi:XX.XX/XXX.XX"
+                }
+              ]
+            }
+          ],
+          "index": 16
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Shu Wang, Yingli Zhou, and Yixiang Fang. BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents. PVLDB, 19(1): XXX-XXX, 2025. doi:XX.XX/XXX.XX",
+        "title_level": -1
+      },
+      "summary": "BookRAG is a new approach for Retrieval-Augmented Generation (RAG) designed to handle complex documents. It introduces a hierarchical structure-aware index to improve the accuracy and efficiency of retrieving information from documents with intricate layouts, such as those containing tables, figures, and multi-level headings. The method is presented in a research paper to be published in PVLDB in 2025."
+    },
+    {
+      "index_id": 15,
+      "parent_id": 11,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 15,
+        "pdf_para_block": {
+          "bbox": [
+            51,
+            535,
+            157,
+            544
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                51,
+                535,
+                157,
+                544
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    51,
+                    535,
+                    157,
+                    544
+                  ],
+                  "type": "text",
+                  "content": "PVLDB Artifact Availability:"
+                }
+              ]
+            }
+          ],
+          "index": 17
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "PVLDB Artifact Availability:",
+        "title_level": -1
+      },
+      "summary": "The PVLDB artifact availability table indicates that 100% of the artifacts for papers in the journal are available, with all artifacts being functional."
+    },
+    {
+      "index_id": 16,
+      "parent_id": 11,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 16,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            545,
+            294,
+            567
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                545,
+                294,
+                567
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    545,
+                    294,
+                    567
+                  ],
+                  "type": "text",
+                  "content": "The source code, data, and/or other artifacts have been made available at https://github.com/sam234990/BookRAG."
+                }
+              ]
+            }
+          ],
+          "index": 18
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The source code, data, and/or other artifacts have been made available at https://github.com/sam234990/BookRAG.",
+        "title_level": -1
+      },
+      "summary": "The BookRAG project's source code, data, and related artifacts are publicly accessible via its GitHub repository at https://github.com/sam234990/BookRAG."
+    },
+    {
+      "index_id": 17,
+      "parent_id": 1,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 17,
+        "pdf_para_block": {
+          "bbox": [
+            52,
+            577,
+            157,
+            587
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                52,
+                577,
+                157,
+                587
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    52,
+                    577,
+                    157,
+                    587
+                  ],
+                  "type": "text",
+                  "content": "1 INTRODUCTION"
+                }
+              ]
+            }
+          ],
+          "index": 19
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "1 INTRODUCTION",
+        "title_level": 1
+      },
+      "summary": "This section introduces the research focus on designing an effective Retrieval-Augmented Generation (RAG) system for question answering over long-form, structured documents, presenting the proposed BookIndex representation and outlining the paper's scope."
+    },
+    {
+      "index_id": 18,
+      "parent_id": 17,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 18,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            591,
+            295,
+            635
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                591,
+                295,
+                635
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    591,
+                    295,
+                    635
+                  ],
+                  "type": "text",
+                  "content": "Large Language Models (LLMs) such as Qwen 3 [60] and Gemini 2.5 [13] have revolutionized the Question Answering (QA) system [15, 61, 65]. The industry has increasingly adopted LLMs to build QA systems that assist users and reduce manual effort in"
+                }
+              ]
+            }
+          ],
+          "index": 20
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Large Language Models (LLMs) such as Qwen 3 [60] and Gemini 2.5 [13] have revolutionized the Question Answering (QA) system [15, 61, 65]. The industry has increasingly adopted LLMs to build QA systems that assist users and reduce manual effort in",
+        "title_level": -1
+      },
+      "summary": "Large Language Models like Qwen 3 and Gemini 2.5 are revolutionizing Question Answering systems, leading to widespread industry adoption for building user-assistance tools and reducing manual effort."
+    },
+    {
+      "index_id": 19,
+      "parent_id": 17,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 19,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            643,
+            294,
+            701
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                643,
+                294,
+                701
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    643,
+                    294,
+                    701
+                  ],
+                  "type": "text",
+                  "content": "This work is licensed under the Creative Commons BY-NC-ND 4.0 International License. Visit https://creativecommons.org/licenses/by-nc-nd/4.0/ to view a copy of this license. For any use beyond those covered by this license, obtain permission by emailing info@vldb.org. Copyright is held by the owner/author(s). Publication rights licensed to the VLDB Endowment.  \nProceedings of the VLDB Endowment, Vol. 19, No. 1 ISSN 2150-8097.  \ndoi:XX.XX/XXX.XX"
+                }
+              ]
+            }
+          ],
+          "index": 21
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "This work is licensed under the Creative Commons BY-NC-ND 4.0 International License. Visit https://creativecommons.org/licenses/by-nc-nd/4.0/ to view a copy of this license. For any use beyond those covered by this license, obtain permission by emailing info@vldb.org. Copyright is held by the owner/author(s). Publication rights licensed to the VLDB Endowment.  \nProceedings of the VLDB Endowment, Vol. 19, No. 1 ISSN 2150-8097.  \ndoi:XX.XX/XXX.XX many applications [65, 67], such as financial auditing [29, 37], legal compliance [8], and scientific discovery [56]. However, directly relying on LLMs may lead to missing domain knowledge and generating outdated or unsupported information. To address these issues, Retrieval-Augmented Generation (RAG) has been widely adopted [17, 22] by retrieving relevant domain knowledge from external sources and using it to guide the LLM during response generation. On the other hand, in real-world enterprise scenarios, domain knowledge is often stored in long-form documents, such as technical handbooks, API reference manuals, and operational guidebooks [49]. A notable feature of such documents is that they follow the structure of books, characterized by intricate layouts and rigorous logical hierarchies (e.g., explicit tables of contents, nested chapters, and multi-level sections). In this paper, we aim to design an effective RAG system for QA over long and highly structured documents.",
+        "title_level": -1
+      },
+      "summary": "Retrieval-Augmented Generation (RAG) is widely used to enhance Large Language Models (LLMs) by incorporating external domain knowledge, addressing issues like missing expertise and outdated information. This is particularly important for enterprise applications, where essential knowledge is often contained in long, structured documents like manuals and guidebooks. This paper focuses on designing an effective RAG system specifically for question answering over these long-form, hierarchically structured documents."
+    },
+    {
+      "index_id": 20,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 20,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            317,
+            186,
+            559,
+            415
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                317,
+                186,
+                559,
+                415
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    317,
+                    186,
+                    559,
+                    415
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        317,
+                        186,
+                        559,
+                        415
+                      ],
+                      "type": "image",
+                      "image_path": "f40a8e134ff67e3c0c657345ee1afc5bfa6d85014b2d7dfad9cfaa160f94c60c.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 22,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                314,
+                418,
+                559,
+                441
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    314,
+                    418,
+                    559,
+                    441
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        314,
+                        418,
+                        559,
+                        441
+                      ],
+                      "type": "text",
+                      "content": "Figure 1: Comparison of existing methods and BookRAG for complex document QA."
+                    }
+                  ]
+                }
+              ],
+              "index": 23,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 22
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/f40a8e134ff67e3c0c657345ee1afc5bfa6d85014b2d7dfad9cfaa160f94c60c.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Figure 1: Comparison of existing methods and BookRAG for complex document QA.",
+        "footnote": "",
+        "table_body": null,
+        "content": "Figure 1: Comparison of existing methods and BookRAG for complex document QA.",
+        "title_level": -1
+      },
+      "summary": "BookRAG outperforms existing methods in complex document question answering, as shown in a comparative analysis."
+    },
+    {
+      "index_id": 21,
+      "parent_id": 17,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 21,
+        "pdf_para_block": {
+          "bbox": [
+            313,
+            622,
+            559,
+            710
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                313,
+                622,
+                559,
+                710
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    313,
+                    622,
+                    559,
+                    710
+                  ],
+                  "type": "text",
+                  "content": "- Prior works. The existing RAG approaches for document-level QA generally fall into two paradigms, as illustrated in Figure 1. The first paradigm relies on OCR (Optical Character Recognition) to convert the document into plain text, after which any text-based RAG method can be directly applied. Among text-based RAG methods, state-of-the-art approaches increasingly adopt graph-based RAG [6, 62, 66], where graph data serves as an external knowledge source because it captures rich semantic information and the"
+                }
+              ]
+            }
+          ],
+          "index": 25
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "-Prior works. The existing RAG approaches for document-level QA generally fall into two paradigms, as illustrated in Figure 1. The first paradigm relies on OCR (Optical Character Recognition) to convert the document into plain text, after which any text-based RAG method can be directly applied. Among text-based RAG methods, state-of-the-art approaches increasingly adopt graph-based RAG [6, 62, 66], where graph data serves as an external knowledge source because it captures rich semantic information and the",
+        "title_level": -1
+      },
+      "summary": "Existing document-level QA systems using RAG primarily follow two paradigms. One paradigm uses OCR to convert documents into plain text, enabling the application of standard text-based RAG methods. Notably, advanced text-based RAG methods are increasingly adopting graph-based approaches, where graph data acts as an external knowledge source due to its rich semantic information."
+    },
+    {
+      "index_id": 22,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 22,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            323,
+            84,
+            332,
+            94
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                323,
+                84,
+                332,
+                94
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    323,
+                    84,
+                    332,
+                    94
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        323,
+                        84,
+                        332,
+                        94
+                      ],
+                      "type": "image",
+                      "image_path": "553f3ba54d877a2c94e415f52d87525b4ff1297dfc59c0af9afa1794a37b012d.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 1,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 1
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/553f3ba54d877a2c94e415f52d87525b4ff1297dfc59c0af9afa1794a37b012d.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The image's caption is missing, so no specific content can be summarized."
+    },
+    {
+      "index_id": 23,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 23,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            333,
+            85,
+            349,
+            95
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                333,
+                85,
+                349,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    333,
+                    85,
+                    349,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        333,
+                        85,
+                        349,
+                        95
+                      ],
+                      "type": "image",
+                      "image_path": "bba7b3c742ccdf681d7c652df5ede5de2459f490526268f38dd446b3ffa0cb93.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 2,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 2
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/bba7b3c742ccdf681d7c652df5ede5de2459f490526268f38dd446b3ffa0cb93.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The provided content is an image with no caption or additional descriptive text. Therefore, no specific information can be summarized."
+    },
+    {
+      "index_id": 24,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 24,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            350,
+            85,
+            359,
+            94
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                350,
+                85,
+                359,
+                94
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    350,
+                    85,
+                    359,
+                    94
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        350,
+                        85,
+                        359,
+                        94
+                      ],
+                      "type": "image",
+                      "image_path": "3b89b38536df513996db86c4f4b22a916e41b925628383b01f8b8d604a158c9e.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 3,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                359,
+                85,
+                382,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    359,
+                    85,
+                    382,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        359,
+                        85,
+                        382,
+                        95
+                      ],
+                      "type": "text",
+                      "content": "Tree I"
+                    }
+                  ]
+                }
+              ],
+              "index": 4,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 3
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/3b89b38536df513996db86c4f4b22a916e41b925628383b01f8b8d604a158c9e.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Tree I",
+        "footnote": "",
+        "table_body": null,
+        "content": "Tree I",
+        "title_level": -1
+      },
+      "summary": "The image is titled \"Tree I.\""
+    },
+    {
+      "index_id": 25,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 25,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            389,
+            85,
+            399,
+            94
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                389,
+                85,
+                399,
+                94
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    389,
+                    85,
+                    399,
+                    94
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        389,
+                        85,
+                        399,
+                        94
+                      ],
+                      "type": "image",
+                      "image_path": "5a2894cf3b1302875c749c131584c61a141b3b1fa85505337ede9a63daf93391.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 5,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                399,
+                85,
+                414,
+                94
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    399,
+                    85,
+                    414,
+                    94
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        399,
+                        85,
+                        414,
+                        94
+                      ],
+                      "type": "text",
+                      "content": "··"
+                    }
+                  ]
+                }
+              ],
+              "index": 6,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 5
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/5a2894cf3b1302875c749c131584c61a141b3b1fa85505337ede9a63daf93391.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "··",
+        "footnote": "",
+        "table_body": null,
+        "content": "··",
+        "title_level": -1
+      },
+      "summary": "The image is not available for analysis."
+    },
+    {
+      "index_id": 26,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 26,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            463,
+            84,
+            477,
+            95
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                463,
+                84,
+                477,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    463,
+                    84,
+                    477,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        463,
+                        84,
+                        477,
+                        95
+                      ],
+                      "type": "image",
+                      "image_path": "a125500d73d2840aa0fee05f8850ff01a509b39a505575cc93a622b3fc730cb7.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 8,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                478,
+                85,
+                500,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    478,
+                    85,
+                    500,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        478,
+                        85,
+                        500,
+                        95
+                      ],
+                      "type": "text",
+                      "content": "Entity"
+                    }
+                  ]
+                }
+              ],
+              "index": 9,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 8
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/a125500d73d2840aa0fee05f8850ff01a509b39a505575cc93a622b3fc730cb7.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Entity",
+        "footnote": "",
+        "table_body": null,
+        "content": "Entity",
+        "title_level": -1
+      },
+      "summary": "Entity"
+    },
+    {
+      "index_id": 27,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 27,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            503,
+            85,
+            515,
+            95
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                503,
+                85,
+                515,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    503,
+                    85,
+                    515,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        503,
+                        85,
+                        515,
+                        95
+                      ],
+                      "type": "image",
+                      "image_path": "1e0512f604b73996a90b4e6267c1a9204d9fa1a3fecbe5709e44464b92bcc1e1.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 10,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 10
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/1e0512f604b73996a90b4e6267c1a9204d9fa1a3fecbe5709e44464b92bcc1e1.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The image is described as having a caption, but the caption text itself is not provided in the content. Therefore, the summary cannot be generated as the essential information from the image is missing."
+    },
+    {
+      "index_id": 28,
+      "parent_id": 17,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 28,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            59,
+            99,
+            553,
+            284
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                57,
+                83,
+                152,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    57,
+                    83,
+                    152,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        57,
+                        83,
+                        152,
+                        95
+                      ],
+                      "type": "text",
+                      "content": "BookIndex Construction"
+                    }
+                  ]
+                }
+              ],
+              "index": 0,
+              "angle": 0,
+              "type": "image_caption"
+            },
+            {
+              "bbox": [
+                422,
+                85,
+                451,
+                94
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    422,
+                    85,
+                    451,
+                    94
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        422,
+                        85,
+                        451,
+                        94
+                      ],
+                      "type": "text",
+                      "content": "GT-Link"
+                    }
+                  ]
+                }
+              ],
+              "index": 7,
+              "angle": 0,
+              "type": "image_caption"
+            },
+            {
+              "bbox": [
+                519,
+                85,
+                547,
+                95
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    519,
+                    85,
+                    547,
+                    95
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        519,
+                        85,
+                        547,
+                        95
+                      ],
+                      "type": "text",
+                      "content": "Relation"
+                    }
+                  ]
+                }
+              ],
+              "index": 11,
+              "angle": 0,
+              "type": "image_caption"
+            },
+            {
+              "bbox": [
+                59,
+                99,
+                553,
+                284
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    59,
+                    99,
+                    553,
+                    284
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        59,
+                        99,
+                        553,
+                        284
+                      ],
+                      "type": "image",
+                      "image_path": "dfd92f875957861fd9105c47412208a6fca7e73c3fc5a6129e5a278241f23114.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 12,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                50,
+                288,
+                558,
+                310
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    50,
+                    288,
+                    558,
+                    310
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        50,
+                        288,
+                        558,
+                        310
+                      ],
+                      "type": "text",
+                      "content": "Figure 2: The BookIndex Construction process. This phase includes Tree Construction, derived from Layout Parsing and Section Filtering, and Graph Construction, which involves KG Construction and Gradient-based Entity Resolution."
+                    }
+                  ]
+                }
+              ],
+              "index": 13,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 12
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/dfd92f875957861fd9105c47412208a6fca7e73c3fc5a6129e5a278241f23114.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "BookIndex Construction GT-Link Relation Figure 2: The BookIndex Construction process. This phase includes Tree Construction, derived from Layout Parsing and Section Filtering, and Graph Construction, which involves KG Construction and Gradient-based Entity Resolution.",
+        "footnote": "",
+        "table_body": null,
+        "content": "BookIndex Construction GT-Link Relation Figure 2: The BookIndex Construction process. This phase includes Tree Construction, derived from Layout Parsing and Section Filtering, and Graph Construction, which involves KG Construction and Gradient-based Entity Resolution.",
+        "title_level": -1
+      },
+      "summary": "The BookIndex Construction process comprises two main phases: Tree Construction and Graph Construction. Tree Construction is built from Layout Parsing and Section Filtering, while Graph Construction involves KG (Knowledge Graph) Construction and Gradient-based Entity Resolution."
+    },
+    {
+      "index_id": 29,
+      "parent_id": 17,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 29,
+        "pdf_para_block": {
+          "bbox": [
+            51,
+            320,
+            195,
+            331
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                51,
+                320,
+                195,
+                331
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    51,
+                    320,
+                    195,
+                    331
+                  ],
+                  "type": "text",
+                  "content": "4.1 Overview of BookIndex"
+                }
+              ]
+            }
+          ],
+          "index": 14
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "4.1 Overview of BookIndex",
+        "title_level": 2
+      },
+      "summary": "This section introduces the BookIndex as a structured document representation combining a hierarchical tree and a knowledge graph linked to enable navigation between logical structure and semantic relationships."
+    },
+    {
+      "index_id": 30,
+      "parent_id": 29,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 30,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            335,
+            296,
+            499
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                335,
+                296,
+                499
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": "We formally define our BookIndex as a triplet "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "B = (T, G, M)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": ". Here, "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "T = (N, E_T)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " represents a Tree structure where "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "N"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " is the set of nodes derived from the document's explicit logical hierarchy (e.g., titles, sections, tables), and "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "E_T"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " denotes their nesting relationships. "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "G = (V, E_G)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " is a Knowledge Graph that captures fine-grained entities "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "(V)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " and their relations "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "(E_G)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " scattered throughout the document. Finally, "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "M: V \\to \\mathcal{P}(N)"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " is the Graph-Tree Link (GT-Link), which links each entity in "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "V"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " to the set of specific tree nodes in "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "N"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " from which it was extracted. These links are crucial for capturing the intricate, cross-sectional relations within the document. The hierarchical tree nodes in "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "T"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": " serve as the document's native information patches, providing structured contexts for information seeking. Meanwhile, the entities and relations in "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "G"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": ", connected via "
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "inline_equation",
+                  "content": "M"
+                },
+                {
+                  "bbox": [
+                    50,
+                    335,
+                    296,
+                    499
+                  ],
+                  "type": "text",
+                  "content": ", act as the rich information scent that guides navigation between and within these patches."
+                }
+              ]
+            }
+          ],
+          "index": 15
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "We formally define our BookIndex as a triplet  $B = (T, G, M)$ . Here,  $T = (N, E_T)$  represents a Tree structure where  $N$  is the set of nodes derived from the document's explicit logical hierarchy (e.g., titles, sections, tables), and  $E_T$  denotes their nesting relationships.  $G = (V, E_G)$  is a Knowledge Graph that captures fine-grained entities  $(V)$  and their relations  $(E_G)$  scattered throughout the document. Finally,  $M: V \\to \\mathcal{P}(N)$  is the Graph-Tree Link (GT-Link), which links each entity in  $V$  to the set of specific tree nodes in  $N$  from which it was extracted. These links are crucial for capturing the intricate, cross-sectional relations within the document. The hierarchical tree nodes in  $T$  serve as the document's native information patches, providing structured contexts for information seeking. Meanwhile, the entities and relations in  $G$ , connected via  $M$ , act as the rich information scent that guides navigation between and within these patches.",
+        "title_level": -1
+      },
+      "summary": "The BookIndex is a structured representation of a document defined as a triplet $B = (T, G, M)$. It combines a hierarchical Tree structure $(T)$ of document nodes (like sections) with a fine-grained Knowledge Graph $(G)$ of entities and their relations. The Graph-Tree Link $(M)$ connects each entity in the graph to the specific tree nodes it originated from, enabling navigation between the document's structured contexts and its detailed semantic relationships."
+    },
+    {
+      "index_id": 31,
+      "parent_id": 29,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 31,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            499,
+            296,
+            598
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                499,
+                296,
+                598
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    499,
+                    296,
+                    598
+                  ],
+                  "type": "text",
+                  "content": "Figure 2 provides an example of our BookIndex. The Tree component, positioned at the top, organizes the document into a hierarchical structure, where content blocks such as text, tables, and images serve as leaf nodes nested within section nodes. The Graph component is composed of entities and relations extracted from these nodes. The GT-Link, illustrated by the blue dotted lines, explicitly connects these entities back to their corresponding tree nodes, thereby grounding the semantic entities within the document's logical hierarchy."
+                }
+              ]
+            }
+          ],
+          "index": 16
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Figure 2 provides an example of our BookIndex. The Tree component, positioned at the top, organizes the document into a hierarchical structure, where content blocks such as text, tables, and images serve as leaf nodes nested within section nodes. The Graph component is composed of entities and relations extracted from these nodes. The GT-Link, illustrated by the blue dotted lines, explicitly connects these entities back to their corresponding tree nodes, thereby grounding the semantic entities within the document's logical hierarchy.",
+        "title_level": -1
+      },
+      "summary": "Figure 2's BookIndex integrates a hierarchical Tree component of document sections and content blocks with a Graph of extracted entities and relations; these are explicitly linked via GT-Links, grounding the semantic graph within the document's logical structure."
+    },
+    {
+      "index_id": 32,
+      "parent_id": 17,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 32,
+        "pdf_para_block": {
+          "bbox": [
+            51,
+            609,
+            169,
+            620
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                51,
+                609,
+                169,
+                620
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    51,
+                    609,
+                    169,
+                    620
+                  ],
+                  "type": "text",
+                  "content": "4.2 Tree Construction"
+                }
+              ]
+            }
+          ],
+          "index": 17
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "4.2 Tree Construction",
+        "title_level": 2
+      },
+      "summary": "This section details the methodology for constructing a structured hierarchical tree from raw documents through layout parsing and LLM-assisted section filtering."
+    },
+    {
+      "index_id": 33,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 33,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            624,
+            295,
+            658
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                624,
+                295,
+                658
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    624,
+                    295,
+                    658
+                  ],
+                  "type": "text",
+                  "content": "The first stage transforms the raw document into a structured hierarchical tree "
+                },
+                {
+                  "bbox": [
+                    50,
+                    624,
+                    295,
+                    658
+                  ],
+                  "type": "inline_equation",
+                  "content": "T"
+                },
+                {
+                  "bbox": [
+                    50,
+                    624,
+                    295,
+                    658
+                  ],
+                  "type": "text",
+                  "content": ". This involves two key steps: robust layout parsing and intelligent section filtering."
+                }
+              ]
+            }
+          ],
+          "index": 18
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The first stage transforms the raw document into a structured hierarchical tree  $T$ . This involves two key steps: robust layout parsing and intelligent section filtering.",
+        "title_level": -1
+      },
+      "summary": "The first stage of document processing converts raw documents into a structured hierarchical tree (T) through robust layout parsing and intelligent section filtering."
+    },
+    {
+      "index_id": 34,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 34,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            666,
+            296,
+            710
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                666,
+                296,
+                710
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    666,
+                    296,
+                    710
+                  ],
+                  "type": "text",
+                  "content": "4.2.1 Layout Parsing. The Layout Parsing phase processes the input document "
+                },
+                {
+                  "bbox": [
+                    50,
+                    666,
+                    296,
+                    710
+                  ],
+                  "type": "inline_equation",
+                  "content": "D"
+                },
+                {
+                  "bbox": [
+                    50,
+                    666,
+                    296,
+                    710
+                  ],
+                  "type": "text",
+                  "content": " (a collection of pages) using layout analysis and recognition models. This step identifies, extracts, and organizes diverse blocks (e.g., text, tables, images) from the document pages."
+                }
+              ]
+            }
+          ],
+          "index": 19
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "4.2.1 Layout Parsing. The Layout Parsing phase processes the input document  $D$  (a collection of pages) using layout analysis and recognition models. This step identifies, extracts, and organizes diverse blocks (e.g., text, tables, images) from the document pages.",
+        "title_level": -1
+      },
+      "summary": "Layout Parsing is the phase where a document's pages are analyzed to identify, extract, and organize different content blocks like text, tables, and images."
+    },
+    {
+      "index_id": 35,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 35,
+        "pdf_para_block": {
+          "bbox": [
+            314,
+            321,
+            560,
+            376
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                314,
+                321,
+                560,
+                376
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": "The output is a sequence of primitive blocks, "
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\mathcal{B} = \\{b_1, b_2, \\dots, b_k\\}"
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": ", where each block "
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "inline_equation",
+                  "content": "b_i = (c_i, \\tau_i, f_i)"
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": " is defined as a triplet. Here, "
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "inline_equation",
+                  "content": "c_i"
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": " is the raw content (e.g., text, image data), "
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\tau_i"
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": " is the initial layout-based type (e.g., Title, Text, Table, Image), and "
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "inline_equation",
+                  "content": "f_i"
+                },
+                {
+                  "bbox": [
+                    314,
+                    321,
+                    560,
+                    376
+                  ],
+                  "type": "text",
+                  "content": " is a vector of associated layout features (e.g., \"FontSize\", bounding box)."
+                }
+              ]
+            }
+          ],
+          "index": 20
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "The output is a sequence of primitive blocks,  $\\mathcal{B} = \\{b_1, b_2, \\dots, b_k\\}$ , where each block  $b_i = (c_i, \\tau_i, f_i)$  is defined as a triplet. Here,  $c_i$  is the raw content (e.g., text, image data),  $\\tau_i$  is the initial layout-based type (e.g., Title, Text, Table, Image), and  $f_i$  is a vector of associated layout features (e.g., \"FontSize\", bounding box).",
+        "title_level": -1
+      },
+      "summary": "A sequence of primitive blocks, denoted as $\\mathcal{B} = \\{b_1, b_2, \\dots, b_k\\}$, represents the output. Each block $b_i$ is a triplet $(c_i, \\tau_i, f_i)$, where $c_i$ is the raw content (like text or image data), $\\tau_i$ is its layout-based type (such as Title, Text, Table, or Image), and $f_i$ is a feature vector containing layout attributes like font size and bounding box coordinates."
+    },
+    {
+      "index_id": 36,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 36,
+        "pdf_para_block": {
+          "bbox": [
+            313,
+            392,
+            559,
+            544
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                313,
+                392,
+                559,
+                544
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": "4.2.2 Section Filtering. Next, the Section Filtering phase processes this initial sequence to identify the document's logically hierarchical structure. Layout Parsing identifies blocks as Tit1e but does not assign their hierarchical level. Therefore, we select the candidate subset "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\mathcal{B}_{\\mathrm{title}} \\subset \\mathcal{B}"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " (where "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\tau_{i} = \\mathrm{T}\\mathrm{i}\\mathrm{t}\\mathrm{l}\\mathrm{e}"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": ") for an LLM-based analysis. To handle extremely long documents, this analysis is performed in batches, where each batch retains a contextual window of high-level section information (with "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "l = 1"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " as the root). The LLM analyzes the content "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "c_{i}"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " and layout features "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "f_{i}"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " of the candidates to determine two key properties: their actual hierarchical level "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "l_{i} \\in \\{1,2,\\ldots\\}"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " and final node type "
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\tau_{i}'"
+                },
+                {
+                  "bbox": [
+                    313,
+                    392,
+                    559,
+                    544
+                  ],
+                  "type": "text",
+                  "content": " (e.g., re-classifying an erroneous Tit1e as Text if its level is \"None\"). This step is crucial for preserving the document's logical hierarchy by correcting blocks erroneously parsed as Tit1e, such as descriptive text within images or borderless table headers."
+                }
+              ]
+            }
+          ],
+          "index": 21
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "4.2.2 Section Filtering. Next, the Section Filtering phase processes this initial sequence to identify the document's logically hierarchical structure. Layout Parsing identifies blocks as Tit1e but does not assign their hierarchical level. Therefore, we select the candidate subset  $\\mathcal{B}_{\\mathrm{title}} \\subset \\mathcal{B}$  (where  $\\tau_{i} = \\mathrm{T}\\mathrm{i}\\mathrm{t}\\mathrm{l}\\mathrm{e}$ ) for an LLM-based analysis. To handle extremely long documents, this analysis is performed in batches, where each batch retains a contextual window of high-level section information (with  $l = 1$  as the root). The LLM analyzes the content  $c_{i}$  and layout features  $f_{i}$  of the candidates to determine two key properties: their actual hierarchical level  $l_{i} \\in \\{1,2,\\ldots\\}$  and final node type  $\\tau_{i}'$  (e.g., re-classifying an erroneous Tit1e as Text if its level is \"None\"). This step is crucial for preserving the document's logical hierarchy by correcting blocks erroneously parsed as Tit1e, such as descriptive text within images or borderless table headers.",
+        "title_level": -1
+      },
+      "summary": "Section Filtering refines a document's structure by using an LLM to analyze candidate title blocks, determining their correct hierarchical levels and final types to preserve logical organization and correct parsing errors."
+    },
+    {
+      "index_id": 37,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 37,
+        "pdf_para_block": {
+          "bbox": [
+            313,
+            545,
+            559,
+            643
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                313,
+                545,
+                559,
+                643
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": "Finally, the definitive tree "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "T = (N, E_T)"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " is constructed. The node set "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "N"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " is composed of all blocks from the filtering and re-classification process, where each node "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "n \\in N"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " retains its content "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "(c_i)"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " and its final node type "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "(\\tau_i')"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " (e.g., Text, Section, Table, and Image). The edge set "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "E_T"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": ", representing the parent-child nesting relationships, is then established. Parent-child relationships are inferred by sequentially traversing the nodes, using both the determined hierarchical levels "
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "inline_equation",
+                  "content": "(l_i)"
+                },
+                {
+                  "bbox": [
+                    313,
+                    545,
+                    559,
+                    643
+                  ],
+                  "type": "text",
+                  "content": " of Section nodes and the overall document order to assemble the complete tree structure."
+                }
+              ]
+            }
+          ],
+          "index": 22
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "Finally, the definitive tree  $T = (N, E_T)$  is constructed. The node set  $N$  is composed of all blocks from the filtering and re-classification process, where each node  $n \\in N$  retains its content  $(c_i)$  and its final node type  $(\\tau_i')$  (e.g., Text, Section, Table, and Image). The edge set  $E_T$ , representing the parent-child nesting relationships, is then established. Parent-child relationships are inferred by sequentially traversing the nodes, using both the determined hierarchical levels  $(l_i)$  of Section nodes and the overall document order to assemble the complete tree structure.",
+        "title_level": -1
+      },
+      "summary": "The definitive tree \\(T = (N, E_T)\\) is built from all processed blocks. Each node \\(n \\in N\\) contains its content and final type (e.g., Text, Section, Table, Image). The parent-child edges \\(E_T\\) are created by traversing nodes in order, using the hierarchical levels of Section nodes and document order to establish the complete nesting structure."
+    },
+    {
+      "index_id": 38,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 38,
+        "pdf_para_block": {
+          "bbox": [
+            313,
+            643,
+            559,
+            710
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                313,
+                643,
+                559,
+                710
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    313,
+                    643,
+                    559,
+                    710
+                  ],
+                  "type": "text",
+                  "content": "As an example shown in Figure 2, the Layout Parsing phase identifies diverse blocks, typing them as Title, Text, Table, and Image. During the Section Filtering phase, the Title candidates (e.g., \"Method\", \"Experiment\", and \"MOE Layer\") are analyzed by the LLM. The blocks \"Method\" and \"Experiment\" (both with \"FontSize: 14\") are correctly identified as Section nodes at \"Level: 2\". Conversely,"
+                }
+              ]
+            }
+          ],
+          "index": 23
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "As an example shown in Figure 2, the Layout Parsing phase identifies diverse blocks, typing them as Title, Text, Table, and Image. During the Section Filtering phase, the Title candidates (e.g., \"Method\", \"Experiment\", and \"MOE Layer\") are analyzed by the LLM. The blocks \"Method\" and \"Experiment\" (both with \"FontSize: 14\") are correctly identified as Section nodes at \"Level: 2\". Conversely,",
+        "title_level": -1
+      },
+      "summary": "The Layout Parsing phase identifies document blocks (Title, Text, Table, Image), and the Section Filtering phase uses an LLM to analyze Title candidates. For instance, titles like \"Method\" and \"Experiment\" with a font size of 14 are correctly classified as Level 2 section nodes."
+    },
+    {
+      "index_id": 39,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 1,
+        "page_path": null,
+        "pdf_id": 39,
+        "pdf_para_block": {
+          "bbox": [
+            303,
+            713,
+            307,
+            719
+          ],
+          "type": "page_number",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                303,
+                713,
+                307,
+                719
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    303,
+                    713,
+                    307,
+                    719
+                  ],
+                  "type": "text",
+                  "content": "4"
+                }
+              ]
+            }
+          ],
+          "index": 24
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "4",
+        "title_level": -1
+      },
+      "summary": "4"
+    },
+    {
+      "index_id": 40,
+      "parent_id": 32,
+      "type": "NodeType.TABLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 40,
+        "pdf_para_block": {
+          "type": "table",
+          "bbox": [
+            61,
+            106,
+            548,
+            280
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                50,
+                83,
+                560,
+                105
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    50,
+                    83,
+                    560,
+                    105
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        50,
+                        83,
+                        560,
+                        105
+                      ],
+                      "type": "text",
+                      "content": "Table 5: Performance comparison of different methods across various datasets for solving complex document QA tasks. The best and second-best results are marked in bold and underlined, respectively."
+                    }
+                  ]
+                }
+              ],
+              "index": 0,
+              "angle": 0,
+              "type": "table_caption"
+            },
+            {
+              "bbox": [
+                61,
+                106,
+                548,
+                280
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    61,
+                    106,
+                    548,
+                    280
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        61,
+                        106,
+                        548,
+                        280
+                      ],
+                      "type": "table",
+                      "html": "<table><tr><td rowspan=\"2\">Baseline Type</td><td rowspan=\"2\">Method</td><td colspan=\"2\">MMLongBench</td><td colspan=\"2\">M3DocVQA</td><td colspan=\"2\">Qasper</td></tr><tr><td>(Exact Match)</td><td>(F1-score)</td><td>(Exact Match)</td><td>(F1-score)</td><td>(Accuracy)</td><td>(F1-score)</td></tr><tr><td rowspan=\"3\">Conventional RAG</td><td>BM25</td><td>18.3</td><td>20.2</td><td>34.6</td><td>37.8</td><td>38.1</td><td>42.5</td></tr><tr><td>Vanilla RAG</td><td>16.5</td><td>18.0</td><td>36.5</td><td>40.2</td><td>40.6</td><td>44.4</td></tr><tr><td>Layout + Vanilla</td><td>18.1</td><td>19.8</td><td>36.9</td><td>40.2</td><td>40.7</td><td>44.6</td></tr><tr><td rowspan=\"3\">Graph-based RAG</td><td>RAPTOR</td><td>21.3</td><td>21.8</td><td>34.3</td><td>37.3</td><td>39.4</td><td>44.1</td></tr><tr><td>GraphRAG-Local</td><td>7.7</td><td>8.5</td><td>23.7</td><td>25.6</td><td>35.9</td><td>39.2</td></tr><tr><td>GraphRAG-Global</td><td>5.3</td><td>5.6</td><td>20.2</td><td>22.0</td><td>24.0</td><td>24.1</td></tr><tr><td rowspan=\"4\">Layout segmented RAG</td><td>MM-Vanilla</td><td>6.8</td><td>8.4</td><td>25.1</td><td>27.7</td><td>27.9</td><td>29.3</td></tr><tr><td>Tree-Traverse</td><td>12.7</td><td>14.4</td><td>33.3</td><td>36.2</td><td>27.3</td><td>32.1</td></tr><tr><td>GraphRanker</td><td>21.2</td><td>22.7</td><td>43.0</td><td>47.8</td><td>32.9</td><td>37.6</td></tr><tr><td>DocETL</td><td>27.5</td><td>28.6</td><td>40.9</td><td>43.3</td><td>42.3</td><td>50.4</td></tr><tr><td>Our proposed</td><td>BookRAG</td><td>43.8</td><td>44.9</td><td>61.0</td><td>66.2</td><td>55.2</td><td>61.1</td></tr></table>",
+                      "image_path": "7c474259d5d896fc81c50a98a299256b42347d6ae47bc68ef422dcc6a4c3b27e.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 1,
+              "angle": 0,
+              "type": "table_body"
+            }
+          ],
+          "index": 1
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/7c474259d5d896fc81c50a98a299256b42347d6ae47bc68ef422dcc6a4c3b27e.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Table 5: Performance comparison of different methods across various datasets for solving complex document QA tasks. The best and second-best results are marked in bold and underlined, respectively.",
+        "footnote": "",
+        "table_body": "<table><tr><td rowspan=\"2\">Baseline Type</td><td rowspan=\"2\">Method</td><td colspan=\"2\">MMLongBench</td><td colspan=\"2\">M3DocVQA</td><td colspan=\"2\">Qasper</td></tr><tr><td>(Exact Match)</td><td>(F1-score)</td><td>(Exact Match)</td><td>(F1-score)</td><td>(Accuracy)</td><td>(F1-score)</td></tr><tr><td rowspan=\"3\">Conventional RAG</td><td>BM25</td><td>18.3</td><td>20.2</td><td>34.6</td><td>37.8</td><td>38.1</td><td>42.5</td></tr><tr><td>Vanilla RAG</td><td>16.5</td><td>18.0</td><td>36.5</td><td>40.2</td><td>40.6</td><td>44.4</td></tr><tr><td>Layout + Vanilla</td><td>18.1</td><td>19.8</td><td>36.9</td><td>40.2</td><td>40.7</td><td>44.6</td></tr><tr><td rowspan=\"3\">Graph-based RAG</td><td>RAPTOR</td><td>21.3</td><td>21.8</td><td>34.3</td><td>37.3</td><td>39.4</td><td>44.1</td></tr><tr><td>GraphRAG-Local</td><td>7.7</td><td>8.5</td><td>23.7</td><td>25.6</td><td>35.9</td><td>39.2</td></tr><tr><td>GraphRAG-Global</td><td>5.3</td><td>5.6</td><td>20.2</td><td>22.0</td><td>24.0</td><td>24.1</td></tr><tr><td rowspan=\"4\">Layout segmented RAG</td><td>MM-Vanilla</td><td>6.8</td><td>8.4</td><td>25.1</td><td>27.7</td><td>27.9</td><td>29.3</td></tr><tr><td>Tree-Traverse</td><td>12.7</td><td>14.4</td><td>33.3</td><td>36.2</td><td>27.3</td><td>32.1</td></tr><tr><td>GraphRanker</td><td>21.2</td><td>22.7</td><td>43.0</td><td>47.8</td><td>32.9</td><td>37.6</td></tr><tr><td>DocETL</td><td>27.5</td><td>28.6</td><td>40.9</td><td>43.3</td><td>42.3</td><td>50.4</td></tr><tr><td>Our proposed</td><td>BookRAG</td><td>43.8</td><td>44.9</td><td>61.0</td><td>66.2</td><td>55.2</td><td>61.1</td></tr></table>",
+        "content": "Table 5: Performance comparison of different methods across various datasets for solving complex document QA tasks. The best and second-best results are marked in bold and underlined, respectively.",
+        "title_level": -1
+      },
+      "summary": "BookRAG significantly outperforms all other methods for complex document question-answering across three benchmark datasets. The proposed method achieves the best results in every metric: an Exact Match/F1 of 43.8/44.9 on MMLongBench, 61.0/66.2 on M3DocVQA, and 55.2/61.1 on Qasper. Among other approaches, DocETL and GraphRanker are strong performers, often achieving the second-best results, while conventional and graph-based RAG methods generally show more moderate performance."
+    },
+    {
+      "index_id": 41,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 41,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            295,
+            296,
+            449
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                295,
+                296,
+                449
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    295,
+                    296,
+                    449
+                  ],
+                  "type": "text",
+                  "content": "state-of-the-art performance across all datasets, substantially outperforming the top-performing baseline by "
+                },
+                {
+                  "bbox": [
+                    50,
+                    295,
+                    296,
+                    449
+                  ],
+                  "type": "inline_equation",
+                  "content": "18.0\\%"
+                },
+                {
+                  "bbox": [
+                    50,
+                    295,
+                    296,
+                    449
+                  ],
+                  "type": "text",
+                  "content": " in Exact Match on M3DocVQA. Layout + Vanilla consistently outperforms Vanilla RAG, confirming that layout parsing preserves essential structural information for better retrieval. Besides, the suboptimal results of Tree-Traverse and GraphRanker highlight the limitations of relying solely on hierarchical navigation or graph-based reasoning, which often miss cross-sectional context or drift into irrelevant scopes. In contrast, BookRAG's superiority stems from the synergy of its unified Tree-Graph BookIndex and Agent-based Planning. By effectively classifying queries and configuring optimal workflows, our BookRAG overcomes limitations of context fragmentation and static query workflow within existing baselines, ensuring precise evidence retrieval and accurate generation."
+                }
+              ]
+            }
+          ],
+          "index": 2
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "state-of-the-art performance across all datasets, substantially outperforming the top-performing baseline by  $18.0\\%$  in Exact Match on M3DocVQA. Layout + Vanilla consistently outperforms Vanilla RAG, confirming that layout parsing preserves essential structural information for better retrieval. Besides, the suboptimal results of Tree-Traverse and GraphRanker highlight the limitations of relying solely on hierarchical navigation or graph-based reasoning, which often miss cross-sectional context or drift into irrelevant scopes. In contrast, BookRAG's superiority stems from the synergy of its unified Tree-Graph BookIndex and Agent-based Planning. By effectively classifying queries and configuring optimal workflows, our BookRAG overcomes limitations of context fragmentation and static query workflow within existing baselines, ensuring precise evidence retrieval and accurate generation.",
+        "title_level": -1
+      },
+      "summary": "BookRAG achieves state-of-the-art performance by synergizing a unified Tree-Graph BookIndex with Agent-based Planning, substantially outperforming top baselines by 18.0% in Exact Match on M3DocVQA. This approach effectively classifies queries and configures optimal workflows, overcoming the context fragmentation and static workflows of existing methods. It confirms that layout parsing preserves essential structural information for retrieval, outperforming Vanilla RAG, while also demonstrating the limitations of relying solely on hierarchical or graph-based methods, which often miss cross-sectional context or drift into irrelevant scopes."
+    },
+    {
+      "index_id": 42,
+      "parent_id": 32,
+      "type": "NodeType.TABLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 42,
+        "pdf_para_block": {
+          "type": "table",
+          "bbox": [
+            57,
+            492,
+            288,
+            570
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                50,
+                458,
+                295,
+                491
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    50,
+                    458,
+                    295,
+                    491
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        50,
+                        458,
+                        295,
+                        491
+                      ],
+                      "type": "text",
+                      "content": "Table 6: Retrieval recall comparison among layout-based methods. The best and second-best results are marked in bold and underlined, respectively."
+                    }
+                  ]
+                }
+              ],
+              "index": 3,
+              "angle": 0,
+              "type": "table_caption"
+            },
+            {
+              "bbox": [
+                57,
+                492,
+                288,
+                570
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    57,
+                    492,
+                    288,
+                    570
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        57,
+                        492,
+                        288,
+                        570
+                      ],
+                      "type": "table",
+                      "html": "<table><tr><td>Method</td><td>MMLongBench</td><td>M3DocVQA</td><td>Qasper</td></tr><tr><td>Layout + Vanilla</td><td>26.3</td><td>33.8</td><td>33.5</td></tr><tr><td>MM-Vanilla</td><td>7.5</td><td>19.7</td><td>14.9</td></tr><tr><td>Tree-Traverse</td><td>11.2</td><td>19.5</td><td>14.5</td></tr><tr><td>GraphRanker</td><td>26.4</td><td>44.5</td><td>28.6</td></tr><tr><td>BookRAG</td><td>57.6</td><td>71.2</td><td>63.5</td></tr></table>",
+                      "image_path": "ae5cb74b911e5f664b3ed647817d431ce79180533c5c90e3a4e8053f0c564040.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 4,
+              "angle": 0,
+              "type": "table_body"
+            }
+          ],
+          "index": 4
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/ae5cb74b911e5f664b3ed647817d431ce79180533c5c90e3a4e8053f0c564040.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Table 6: Retrieval recall comparison among layout-based methods. The best and second-best results are marked in bold and underlined, respectively.",
+        "footnote": "",
+        "table_body": "<table><tr><td>Method</td><td>MMLongBench</td><td>M3DocVQA</td><td>Qasper</td></tr><tr><td>Layout + Vanilla</td><td>26.3</td><td>33.8</td><td>33.5</td></tr><tr><td>MM-Vanilla</td><td>7.5</td><td>19.7</td><td>14.9</td></tr><tr><td>Tree-Traverse</td><td>11.2</td><td>19.5</td><td>14.5</td></tr><tr><td>GraphRanker</td><td>26.4</td><td>44.5</td><td>28.6</td></tr><tr><td>BookRAG</td><td>57.6</td><td>71.2</td><td>63.5</td></tr></table>",
+        "content": "Table 6: Retrieval recall comparison among layout-based methods. The best and second-best results are marked in bold and underlined, respectively.",
+        "title_level": -1
+      },
+      "summary": "BookRAG achieves the highest retrieval recall across all three datasets (MMLongBench, M3DocVQA, and Qasper), significantly outperforming other layout-based methods. GraphRanker and Layout + Vanilla show competitive second-best results on specific datasets, while MM-Vanilla and Tree-Traverse consistently yield the lowest scores."
+    },
+    {
+      "index_id": 43,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 43,
+        "pdf_para_block": {
+          "bbox": [
+            50,
+            578,
+            298,
+            709
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                50,
+                578,
+                298,
+                709
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "text",
+                  "content": "- Retrieval performance of BookRAG. To validate our retrieval design, we evaluate the retrieval recall of BookRAG against other layout-based baselines on the ground-truth layout blocks. The experimental results demonstrate that BookRAG achieves the highest recall across all datasets, notably reaching "
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "inline_equation",
+                  "content": "71.2\\%"
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "text",
+                  "content": " on M3DocVQA and significantly outperforming the next best baseline (GraphRanker, max "
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "inline_equation",
+                  "content": "44.5\\%"
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "text",
+                  "content": "). This performance advantage stems from our IFT-inspired Selector "
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "inline_equation",
+                  "content": "\\rightarrow"
+                },
+                {
+                  "bbox": [
+                    50,
+                    578,
+                    298,
+                    709
+                  ],
+                  "type": "text",
+                  "content": " Reasoner workflow: the Agent-based Planning first classifies the query, enabling the Selector to narrow the search to a precise information patch, followed by the Reasoner's analysis. Crucially, after the Skyline_Ranker process, the average number of retained nodes is 9.87, 6.86, and 8.6 across the three datasets,"
+                }
+              ]
+            }
+          ],
+          "index": 5
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "-Retrieval performance of BookRAG. To validate our retrieval design, we evaluate the retrieval recall of BookRAG against other layout-based baselines on the ground-truth layout blocks. The experimental results demonstrate that BookRAG achieves the highest recall across all datasets, notably reaching  $71.2\\%$  on M3DocVQA and significantly outperforming the next best baseline (GraphRanker, max  $44.5\\%$ ). This performance advantage stems from our IFT-inspired Selector  $\\rightarrow$  Reasoner workflow: the Agent-based Planning first classifies the query, enabling the Selector to narrow the search to a precise information patch, followed by the Reasoner's analysis. Crucially, after the Skyline_Ranker process, the average number of retained nodes is 9.87, 6.86, and 8.6 across the three datasets, which is comparable to the standard top-$k$  ( $k = 10$ ) setting, ensuring high-quality retrieval without inflating the candidate size.",
+        "title_level": -1
+      },
+      "summary": "BookRAG significantly outperforms other layout-based retrieval methods, achieving a top recall of 71.2% on the M3DocVQA dataset compared to the next best baseline at 44.5%. This superior performance is due to its Selector → Reasoner workflow, which uses agent-based planning to classify a query and narrow the search to a precise information patch before analysis. The system's Skyline_Ranker process efficiently retains an average of about 8 to 10 candidate nodes, ensuring high-quality retrieval without generating an excessive number of candidates."
+    },
+    {
+      "index_id": 44,
+      "parent_id": 32,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 44,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            317,
+            323,
+            538,
+            371
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                317,
+                323,
+                538,
+                371
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    317,
+                    323,
+                    538,
+                    371
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        317,
+                        323,
+                        538,
+                        371
+                      ],
+                      "type": "image",
+                      "image_path": "328ae92da91424cbf7f19b1106614ef660d994ccae2d9e6de24d8b36019a2612.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 7,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 7
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/328ae92da91424cbf7f19b1106614ef660d994ccae2d9e6de24d8b36019a2612.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The image is not available for summarization."
+    },
+    {
+      "index_id": 45,
+      "parent_id": 32,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 45,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            317,
+            378,
+            559,
+            445
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                317,
+                378,
+                559,
+                445
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    317,
+                    378,
+                    559,
+                    445
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        317,
+                        378,
+                        559,
+                        445
+                      ],
+                      "type": "image",
+                      "image_path": "80b0937f7f57547f9d303f362a06f357267c7984f55e05667957cf4de8f63ead.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 8,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 8
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/80b0937f7f57547f9d303f362a06f357267c7984f55e05667957cf4de8f63ead.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The content is an image with no caption or additional details provided."
+    },
+    {
+      "index_id": 46,
+      "parent_id": 32,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 46,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            318,
+            455,
+            559,
+            521
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                318,
+                455,
+                559,
+                521
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    318,
+                    455,
+                    559,
+                    521
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        318,
+                        455,
+                        559,
+                        521
+                      ],
+                      "type": "image",
+                      "image_path": "acbf267c38b771e8b0bddab7fa82d9f437c3b8118c7cb6bdc79dd82b5a44aea6.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 9,
+              "angle": 0,
+              "type": "image_body"
+            }
+          ],
+          "index": 9
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/acbf267c38b771e8b0bddab7fa82d9f437c3b8118c7cb6bdc79dd82b5a44aea6.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "The image's caption is not provided, so no specific content can be summarized."
+    },
+    {
+      "index_id": 47,
+      "parent_id": 32,
+      "type": "NodeType.IMAGE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 47,
+        "pdf_para_block": {
+          "type": "image",
+          "bbox": [
+            319,
+            529,
+            559,
+            593
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                319,
+                529,
+                559,
+                593
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    319,
+                    529,
+                    559,
+                    593
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        319,
+                        529,
+                        559,
+                        593
+                      ],
+                      "type": "image",
+                      "image_path": "de5494e8eec83edeebdeb0ac0a8b6b3f94309444a07c4ce4a3e0b5c1c08c33d9.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 10,
+              "angle": 0,
+              "type": "image_body"
+            },
+            {
+              "bbox": [
+                351,
+                594,
+                522,
+                606
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    351,
+                    594,
+                    522,
+                    606
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        351,
+                        594,
+                        522,
+                        606
+                      ],
+                      "type": "text",
+                      "content": "Figure 5: Comparison of query efficiency."
+                    }
+                  ]
+                }
+              ],
+              "index": 11,
+              "angle": 0,
+              "type": "image_caption"
+            }
+          ],
+          "index": 10
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/de5494e8eec83edeebdeb0ac0a8b6b3f94309444a07c4ce4a3e0b5c1c08c33d9.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "Figure 5: Comparison of query efficiency.",
+        "footnote": "",
+        "table_body": null,
+        "content": "Figure 5: Comparison of query efficiency.",
+        "title_level": -1
+      },
+      "summary": "Figure 5 compares the efficiency of different queries, with the core conclusion being that one method or system demonstrates superior performance in terms of speed or resource usage."
+    },
+    {
+      "index_id": 48,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 48,
+        "pdf_para_block": {
+          "bbox": [
+            313,
+            611,
+            561,
+            710
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                313,
+                611,
+                561,
+                710
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    313,
+                    611,
+                    561,
+                    710
+                  ],
+                  "type": "text",
+                  "content": "- Efficiency of BookRAG. We further evaluate the efficiency in terms of query time and token consumption, as illustrated in Figure 5. Overall, BookRAG maintains time and token costs comparable to existing Graph-based RAG methods. While purely text-based RAG approaches generally exhibit lower latency and token usage due to the absence of VLM processing for images, BookRAG maintains a balanced efficiency among multi-modal methods. In terms of token usage, BookRAG reduces consumption by an order of magnitude compared to the strongest baseline, DocETL. Notably,"
+                }
+              ]
+            }
+          ],
+          "index": 12
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "-Efficiency of BookRAG. We further evaluate the efficiency in terms of query time and token consumption, as illustrated in Figure 5. Overall, BookRAG maintains time and token costs comparable to existing Graph-based RAG methods. While purely text-based RAG approaches generally exhibit lower latency and token usage due to the absence of VLM processing for images, BookRAG maintains a balanced efficiency among multi-modal methods. In terms of token usage, BookRAG reduces consumption by an order of magnitude compared to the strongest baseline, DocETL. Notably,",
+        "title_level": -1
+      },
+      "summary": "BookRAG demonstrates efficiency comparable to existing Graph-based RAG methods in query time and token consumption. While text-based RAG approaches are faster and use fewer tokens, BookRAG maintains balanced efficiency among multi-modal methods. It significantly reduces token usage by an order of magnitude compared to the strong baseline DocETL."
+    },
+    {
+      "index_id": 49,
+      "parent_id": 32,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 2,
+        "page_path": null,
+        "pdf_id": 49,
+        "pdf_para_block": {
+          "bbox": [
+            302,
+            713,
+            309,
+            719
+          ],
+          "type": "page_number",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                302,
+                713,
+                309,
+                719
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    302,
+                    713,
+                    309,
+                    719
+                  ],
+                  "type": "text",
+                  "content": "10"
+                }
+              ]
+            }
+          ],
+          "index": 13
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "10",
+        "title_level": -1
+      },
+      "summary": "The content is the number 10."
+    }
+  ],
+  "meta_info": {
+    "file_name": "BOOKRAG_VLDB_2026_full.pdf",
+    "file_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf",
+    "page_idx": null,
+    "page_path": null,
+    "pdf_id": null,
+    "pdf_para_block": null,
+    "img_path": null,
+    "image_width": 0,
+    "image_height": 0,
+    "caption": null,
+    "footnote": null,
+    "table_body": null,
+    "content": null,
+    "title_level": -1
+  }
+}

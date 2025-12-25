@@ -1,0 +1,185 @@
+{
+  "entities": [
+    {
+      "entity_name": "bookindex",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookindex is formally defined as a triplet structure for representing document information",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "tree structure",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "a tree structure is part of the bookindex  representing the document s logical hierarchy",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "knowledge graph",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "a knowledge graph is part of the bookindex  capturing fine grained entities and their relations",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "graph tree link gt link",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "the graph tree link is a mapping function linking entities to tree nodes within the bookindex",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "t",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "t is a variable representing the tree structure component of the bookindex",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "g",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "g is a variable representing the knowledge graph component of the bookindex",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "m",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "m is a variable representing the graph tree link function within the bookindex",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "n",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "n is a variable representing the set of nodes in the tree structure",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "e t",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "e t is a variable representing the nesting relationships in the tree structure",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "v",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "v is a variable representing the set of entities in the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "e g",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "e g is a variable representing the set of relations in the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "t",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookindex is defined as containing t  which represents the tree structure",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "g",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookindex is defined as containing g  which represents the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "m",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookindex is defined as containing m  which represents the graph tree link function",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "t",
+      "tgt_entity_name": "n",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "t is defined as containing n  the set of nodes in the tree structure",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "t",
+      "tgt_entity_name": "e t",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "t is defined as containing e t  the nesting relationships in the tree structure",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "g",
+      "tgt_entity_name": "v",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "g is defined as containing v  the set of entities in the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "g",
+      "tgt_entity_name": "e g",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "g is defined as containing e g  the set of relations in the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "m",
+      "tgt_entity_name": "v",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "m is a function that maps from v  the set of entities in the knowledge graph",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "src_entity_name": "m",
+      "tgt_entity_name": "n",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "m is a function that maps entities to nodes in n  the set of tree nodes",
+      "source_ids": [
+        30
+      ]
+    }
+  ],
+  "node_idx": 30
+}

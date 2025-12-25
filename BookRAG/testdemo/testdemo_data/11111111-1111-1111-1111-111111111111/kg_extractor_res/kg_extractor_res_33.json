@@ -1,0 +1,69 @@
+{
+  "entities": [
+    {
+      "entity_name": "t",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "t is a structured hierarchical tree resulting from the transformation of a raw document",
+      "source_ids": [
+        33
+      ]
+    },
+    {
+      "entity_name": "raw document",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "the raw document is the initial  unstructured input that is transformed into a structured hierarchical tree",
+      "source_ids": [
+        33
+      ]
+    },
+    {
+      "entity_name": "robust layout parsing",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "robust layout parsing is a key step in transforming a raw document into a structured hierarchical tree",
+      "source_ids": [
+        33
+      ]
+    },
+    {
+      "entity_name": "intelligent section filtering",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "intelligent section filtering is a key step in transforming a raw document into a structured hierarchical tree",
+      "source_ids": [
+        33
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "raw document",
+      "tgt_entity_name": "t",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the raw document is transformed into the structured hierarchical tree t",
+      "source_ids": [
+        33
+      ]
+    },
+    {
+      "src_entity_name": "robust layout parsing",
+      "tgt_entity_name": "t",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "robust layout parsing is a key step in the transformation process that creates the structured hierarchical tree t",
+      "source_ids": [
+        33
+      ]
+    },
+    {
+      "src_entity_name": "intelligent section filtering",
+      "tgt_entity_name": "t",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "intelligent section filtering is a key step in the transformation process that creates the structured hierarchical tree t",
+      "source_ids": [
+        33
+      ]
+    }
+  ],
+  "node_idx": 33
+}

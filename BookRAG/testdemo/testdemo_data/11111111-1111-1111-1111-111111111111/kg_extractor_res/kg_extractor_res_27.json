@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {
+      "entity_name": "the image",
+      "entity_type": "IMAGE",
+      "description": "The image provided does not contain any discernible content to extract entities.",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        27
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "the image",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to The Image",
+      "source_ids": [
+        27
+      ]
+    }
+  ],
+  "node_idx": 27
+}

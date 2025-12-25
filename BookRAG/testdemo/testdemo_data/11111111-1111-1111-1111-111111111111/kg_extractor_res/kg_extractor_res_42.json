@@ -1,0 +1,213 @@
+{
+  "entities": [
+    {
+      "entity_name": "table 6",
+      "entity_type": "TABLE",
+      "description": "A table presenting a retrieval recall comparison among layout-based methods, with the best and second-best results highlighted, as described in the text.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "m3docvqa",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset used as a benchmark for evaluating retrieval recall performance",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "mmlongbench",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset used as a benchmark for evaluating retrieval recall performance",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "method",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "The primary categorical column of the table, listing the layout-based methods being compared",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "qasper",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset used as a benchmark for evaluating retrieval recall performance",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "retrieval recall",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "The primary evaluation metric being compared among the methods in the table",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "layout-based methods",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The category of methods being compared in the table, as stated in the description",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "layout + vanilla",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout-based retrieval method compared for recall on document QA benchmarks, achieving 26.3",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "mm-vanilla",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout-based retrieval method compared for recall on document QA benchmarks, achieving 7.5",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "tree-traverse",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout-based retrieval method compared for recall on document QA benchmarks, achieving 11.2",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "graphranker",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout-based retrieval method compared for recall on document QA benchmarks, achieving 26.4",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout-based retrieval method compared for recall on document QA benchmarks, achieving 57.6",
+      "source_ids": [
+        42
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'M3DocVQA'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "mmlongbench",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'MMLongBench'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "method",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Method'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "qasper",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Qasper'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "retrieval recall",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Retrieval Recall'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "layout-based methods",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Layout-based Methods'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "layout + vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Layout + Vanilla'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "mm-vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'MM-Vanilla'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "tree-traverse",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'Tree-Traverse'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "graphranker",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'GraphRanker'.",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "table 6",
+      "tgt_entity_name": "bookrag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 6' contains data about 'BookRAG'.",
+      "source_ids": [
+        42
+      ]
+    }
+  ],
+  "node_idx": 42
+}

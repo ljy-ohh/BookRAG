@@ -1,0 +1,447 @@
+{
+  "entities": [
+    {
+      "entity_name": "table 5",
+      "entity_type": "TABLE",
+      "description": "A table comparing the performance of different methods across various datasets for solving complex document question-answering tasks, with best and second-best results highlighted.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "baseline type",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A column header categorizing the methods or approaches being compared in the table.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "exact match m3docvqa",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the M3DocVQA dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "f1-score m3docvqa",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the M3DocVQA dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "exact match mmlongbench",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the MMLongBench dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "f1-score mmlongbench",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the MMLongBench dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "method",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A column header listing the different methods or models being evaluated in the performance comparison.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "accuracy qasper",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the Qasper dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "f1-score qasper",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "An evaluation metric for the Qasper dataset",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "m3docvqa",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset for document visual question answering, used as a benchmark in the performance comparison.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "mmlongbench",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A multimodal long document benchmark dataset, used as a benchmark in the performance comparison.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "qasper",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset for question answering on scientific papers, used as a benchmark in the performance comparison.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "document qa tasks",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "The core task being evaluated, as described in the table's context - solving complex document question1-answering tasks.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "performance comparison",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "The overarching purpose of the table, as stated in the description, to compare the performance of different methods.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "bm25",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A conventional RAG baseline method for document QA, using a probabilistic retrieval model, evaluated across multiple datasets.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "vanilla rag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A conventional RAG baseline method for document QA",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "layout + vanilla",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A conventional RAG baseline method for document QA that incorporates layout information.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "raptor",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A graph-based RAG method for document QA.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "graphrag-local",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A graph-based RAG method for document QA focusing on local graph structures.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "graphrag-global",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A graph-based RAG method for document QA focusing on global graph structures.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "mm-vanilla",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout segmented RAG method for document QA.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "tree-traverse",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout segmented RAG method for document QA using a tree traversal approach.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "graphranker",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout segmented RAG method for document QA using a graph ranking approach.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "docetl",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A layout segmented RAG method for document QA.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The proposed RAG method for document QA, showing the best performance across all evaluated datasets.",
+      "source_ids": [
+        40
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "baseline type",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Baseline Type'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "exact match m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Exact Match M3DocVQA'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "f1-score m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'F1-score M3DocVQA'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "exact match mmlongbench",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Exact Match MMLongBench'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "f1-score mmlongbench",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'F1-score MMLongBench'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "method",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Method'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "accuracy qasper",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Accuracy Qasper'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "f1-score qasper",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'F1-score Qasper'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'M3DocVQA'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "mmlongbench",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'MMLongBench'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "qasper",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Qasper'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "document qa tasks",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Document QA Tasks'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "performance comparison",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Performance Comparison'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "bm25",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'BM25'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "vanilla rag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Vanilla RAG'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "layout + vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Layout + Vanilla'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "raptor",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'RAPTOR'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "graphrag-local",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'GraphRAG-Local'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "graphrag-global",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'GraphRAG-Global'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "mm-vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'MM-Vanilla'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "tree-traverse",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'Tree-Traverse'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "graphranker",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'GraphRanker'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "docetl",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'DocETL'.",
+      "source_ids": [
+        40
+      ]
+    },
+    {
+      "src_entity_name": "table 5",
+      "tgt_entity_name": "bookrag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 5' contains data about 'BookRAG'.",
+      "source_ids": [
+        40
+      ]
+    }
+  ],
+  "node_idx": 40
+}

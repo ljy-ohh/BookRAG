@@ -1,0 +1,261 @@
+{
+  "entities": [
+    {
+      "entity_name": "figure 2",
+      "entity_type": "IMAGE",
+      "description": "figure 2 is an example image used to illustrate the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "layout parsing",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "layout parsing is a phase that identifies and types diverse blocks in a document",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "title",
+      "entity_type": "SECTION_TITLE",
+      "description": "title is a type of block identified during the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "text",
+      "entity_type": "SECTION_TITLE",
+      "description": "text is a type of block identified during the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "table",
+      "entity_type": "TABLE",
+      "description": "table is a type of block identified during the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "IMAGE",
+      "description": "image is a type of block identified during the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "section filtering",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "section filtering is a phase where title candidates are analyzed by an llm",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "llm",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "llm is a model used to analyze title candidates during the section filtering phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "method",
+      "entity_type": "SECTION_TITLE",
+      "description": "method is a title candidate analyzed by the llm and identified as a section node",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "experiment",
+      "entity_type": "SECTION_TITLE",
+      "description": "experiment is a title candidate analyzed by the llm and identified as a section node",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "moe layer",
+      "entity_type": "SECTION_TITLE",
+      "description": "moe layer is a title candidate mentioned for analysis by the llm",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "fontsize 14",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "fontsize  14 is a parameter associated with the blocks  method  and  experiment",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "entity_name": "level 2",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "level  2 is a parameter indicating the hierarchical level of identified section nodes",
+      "source_ids": [
+        38
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "figure 2",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "figure 2 is used as an example to illustrate the layout parsing phase",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "title",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the layout parsing phase identifies blocks typed as title",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "text",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the layout parsing phase identifies blocks typed as text",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "table",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the layout parsing phase identifies blocks typed as table",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "image",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the layout parsing phase identifies blocks typed as image",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "llm",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "during the section filtering phase  title candidates are analyzed by the llm",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "method",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the section filtering phase analyzes the title candidate  method",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "experiment",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the section filtering phase analyzes the title candidate  experiment",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "moe layer",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the section filtering phase analyzes the title candidate  moe layer",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "llm",
+      "tgt_entity_name": "method",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the llm analyzes the title candidate  method",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "llm",
+      "tgt_entity_name": "experiment",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the llm analyzes the title candidate  experiment",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "method",
+      "tgt_entity_name": "fontsize 14",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the block  method  has the parameter  fontsize  14",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "experiment",
+      "tgt_entity_name": "fontsize 14",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the block  experiment  has the parameter  fontsize  14",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "method",
+      "tgt_entity_name": "level 2",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the block  method  is identified as a section node at  level  2",
+      "source_ids": [
+        38
+      ]
+    },
+    {
+      "src_entity_name": "experiment",
+      "tgt_entity_name": "level 2",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the block  experiment  is identified as a section node at  level  2",
+      "source_ids": [
+        38
+      ]
+    }
+  ],
+  "node_idx": 38
+}

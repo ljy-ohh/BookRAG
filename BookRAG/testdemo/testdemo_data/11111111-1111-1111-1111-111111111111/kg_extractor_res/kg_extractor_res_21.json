@@ -1,0 +1,69 @@
+{
+  "entities": [
+    {
+      "entity_name": "ocr",
+      "entity_type": "TECHNOLOGY",
+      "description": "ocr  optical character recognition  is a technology used to convert documents into plain text",
+      "source_ids": [
+        21
+      ]
+    },
+    {
+      "entity_name": "rag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "rag  retrieval augmented generation  is a method used for document level qa  with graph based approaches being state of the art",
+      "source_ids": [
+        21
+      ]
+    },
+    {
+      "entity_name": "graph based rag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "graph based rag is a state of the art approach that uses graph data as an external knowledge source for document qa",
+      "source_ids": [
+        21
+      ]
+    },
+    {
+      "entity_name": "figure 1",
+      "entity_type": "IMAGE",
+      "description": "figure 1 is an illustration that shows the two paradigms of existing rag approaches for document level qa",
+      "source_ids": [
+        21
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "ocr",
+      "tgt_entity_name": "rag",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "ocr is used as a preliminary step in one paradigm of rag approaches to convert documents into plain text",
+      "source_ids": [
+        21
+      ]
+    },
+    {
+      "src_entity_name": "rag",
+      "tgt_entity_name": "graph based rag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "graph based rag is described as a state of the art approach within text based rag methods",
+      "source_ids": [
+        21
+      ]
+    },
+    {
+      "src_entity_name": "figure 1",
+      "tgt_entity_name": "rag",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "figure 1 illustrates the existing rag approaches for document level qa",
+      "source_ids": [
+        21
+      ]
+    }
+  ],
+  "node_idx": 21
+}

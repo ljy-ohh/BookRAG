@@ -1,0 +1,267 @@
+{
+  "entities": [
+    {
+      "entity_name": "figure 2",
+      "entity_type": "IMAGE",
+      "description": "The image depicts the BookIndex Construction process, showing Tree Construction from Layout Parsing and Section Filtering, as well as Graph Construction involving KG Construction and Gradient-based Entity Resolution.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "layout parsing",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The stage in the BookIndex Construction process where the layout of text, tables, images, and titles is parsed to create tree nodes.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "section filtering",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The stage following Layout Parsing where sections are filtered based on specific parameters such as level and type.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "tree construction",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The process of constructing a tree from the parsed layout data. It relies on the analysis of text, titles, tables, and images.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "graph construction",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The method that involves creating a graph using KG Construction followed by Gradient-based Entity Resolution.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "kg construction",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The first step in Graph Construction, which involves building a knowledge graph from the tree nodes derived from Layout Parsing.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "gradient-based entity resolution",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The second step in Graph Construction, which uses gradient-based techniques to perform entity matching and merging.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "tree nodes",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "Representations or components of the document content, visually depicted as individual entities in the graphical description.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "match?",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "A phase for evaluating the similarity and deciding if two entities should match during the gradient-based entity resolution process.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "merge",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "Action taken after successful matching using gradient-based entity resolution to combine or merge related entities.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "bookindex",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "The final representation of the document content derived from the entire BookIndex Construction process.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "method",
+      "entity_type": "EQUATION_OR_FORMULA",
+      "description": "A label within the section filtering phase that specifies the associated text or content as a method with a font size of 14.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "experiment",
+      "entity_type": "EQUATION_OR_FORMULA",
+      "description": "A label indicating experimental content with a font size of 14, presented in the section filtering phase.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "moe layer",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title with a specified font size of 20 in the section filtering phase.",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "image bookindex construction gt-link relation figure",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        28
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "figure 2",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Figure 2",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "layout parsing",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Layout Parsing",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "section filtering",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Section Filtering",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "tree construction",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Tree Construction",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "graph construction",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Graph Construction",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "kg construction",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to KG Construction",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "gradient-based entity resolution",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Gradient-based Entity Resolution",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "tree nodes",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Tree Nodes",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "match?",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Match?",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "merge",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Merge",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "bookindex",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to BookIndex",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "method",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Method",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "experiment",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Experiment",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "image bookindex construction gt-link relation figure",
+      "tgt_entity_name": "moe layer",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to MOE Layer",
+      "source_ids": [
+        28
+      ]
+    }
+  ],
+  "node_idx": 28
+}

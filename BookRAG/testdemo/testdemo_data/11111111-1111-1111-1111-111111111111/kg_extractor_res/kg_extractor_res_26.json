@@ -1,0 +1,51 @@
+{
+  "entities": [
+    {
+      "entity_name": "the image",
+      "entity_type": "IMAGE",
+      "description": "An image depicting a single circular shape.",
+      "source_ids": [
+        26
+      ]
+    },
+    {
+      "entity_name": "circle",
+      "entity_type": "SHAPE",
+      "description": "A geometric shape with a single continuous curved line enclosing an equal amount of space from its center to the edge.",
+      "source_ids": [
+        26
+      ]
+    },
+    {
+      "entity_name": "image entity",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        26
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image entity",
+      "tgt_entity_name": "the image",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image Entity related to The Image",
+      "source_ids": [
+        26
+      ]
+    },
+    {
+      "src_entity_name": "image entity",
+      "tgt_entity_name": "circle",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image Entity related to Circle",
+      "source_ids": [
+        26
+      ]
+    }
+  ],
+  "node_idx": 26
+}

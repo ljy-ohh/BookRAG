@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "entity_name": "the image",
+      "entity_type": "IMAGE",
+      "description": "A color-coded legend associating different entities and approaches with specific colors.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "bm25",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A search algorithm used as a retrieval model for information retrieval.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "vanilla rag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A retrieval-augmented generation model without additional enhancements.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "layout + vanilla",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A Vanilla RAG model combined with layout analysis.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "raptor",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "An enhanced retrieval-augmented pretraining and fine-tuning approach.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "graphrag-local",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A variant of GraphRAG focused on local graph-based retrieval.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "graphrag-global",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A variant of GraphRAG focused on global graph-based retrieval.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "mm-vanilla",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A multimodal Vanilla RAG model.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "tree-traverse",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A traversal-based method applied to a tree structure.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "graphranker",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A model ranking candidates using graph-based techniques.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "docetl",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A document extraction and transformation pipeline.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A model leveraging book-related data for retrieval-augmented generation.",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        44
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "the image",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to The Image",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "bm25",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to BM25",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "vanilla rag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Vanilla RAG",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "layout + vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Layout + Vanilla",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "raptor",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to RAPTOR",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "graphrag-local",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to GraphRAG-Local",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "graphrag-global",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to GraphRAG-Global",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "mm-vanilla",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to MM-Vanilla",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "tree-traverse",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Tree-Traverse",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "graphranker",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to GraphRanker",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "docetl",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to DocETL",
+      "source_ids": [
+        44
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "bookrag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to BookRAG",
+      "source_ids": [
+        44
+      ]
+    }
+  ],
+  "node_idx": 44
+}

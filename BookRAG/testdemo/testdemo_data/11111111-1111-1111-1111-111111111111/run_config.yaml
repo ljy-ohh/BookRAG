@@ -1,0 +1,82 @@
+graph:
+  embedding_config:
+    api_base: https://api.siliconflow.cn/v1
+    api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+    backend: openai
+    device: cuda:2
+    max_length: 4096
+    model_name: Qwen/Qwen3-Embedding-8B
+    type: text
+  extractor_type: llm
+  image_description_force: true
+  local_model_name: en_core_web_sm
+  max_gleaning: 0
+  refine_type: advanced
+  reranker_config:
+    api_base: https://api.siliconflow.cn/v1
+    api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+    backend: openai
+    device: cuda:2
+    max_length: 4096
+    model_name: Qwen/Qwen3-Reranker-8B
+index_type: pdf_vanilla
+llm:
+  api_base: https://api.siliconflow.cn/v1
+  api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+  backend: openai
+  frequency_penalty: 0.0
+  max_tokens: 5000
+  max_workers: 8
+  model_name: deepseek-ai/DeepSeek-V3.2
+  presence_penalty: 0.0
+  temperature: 0.1
+mineru:
+  backend: vlm-sglang-client
+  lang: en
+  method: vlm
+  server_url: http://localhost:30000
+pdf_path: D:\pycharm\Project\BookRAG\BookRAG\BOOKRAG_VLDB_2026_full.pdf
+rag:
+  strategy_config:
+    retrieval_method: pdf_vanilla
+    strategy: vanilla
+    topk: 20
+    vdb_config:
+      collection_name: PDFVanillaVDB
+      embedding_config:
+        api_base: https://api.siliconflow.cn/v1
+        api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+        backend: openai
+        device: cuda:2
+        max_length: 4096
+        model_name: Qwen/Qwen3-Embedding-8B
+        type: text
+      force_rebuild: true
+      mm_embedding: false
+      vdb_dir_name: pdf_vanilla_vdb
+rag_force_reprocess: true
+save_path: D:\pycharm\Project\BookRAG\BookRAG\testdemo\testdemo_data\11111111-1111-1111-1111-111111111111
+tree:
+  node_keywords: true
+  node_summary: true
+  use_vlm: false
+vdb:
+  collection_name: PDFVanillaVDB
+  embedding_config:
+    api_base: https://api.siliconflow.cn/v1
+    api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+    backend: openai
+    device: cuda:2
+    max_length: 4096
+    model_name: Qwen/Qwen3-Embedding-8B
+    type: text
+  force_rebuild: true
+  mm_embedding: false
+  vdb_dir_name: pdf_vanilla_vdb
+vlm:
+  api_base: https://api.siliconflow.cn/v1
+  api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
+  backend: gpt
+  max_tokens: 6000
+  model_name: Qwen/Qwen2.5-VL-72B-Instruct
+  temperature: 0.1

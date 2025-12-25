@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "shu wang",
+      "entity_type": "PERSON",
+      "description": "shu wang is a person mentioned in the text",
+      "source_ids": [
+        2
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 2
+}

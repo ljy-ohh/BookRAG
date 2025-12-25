@@ -1,0 +1,69 @@
+{
+  "entities": [
+    {
+      "entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+      "entity_type": "SECTION_TITLE",
+      "description": "This is the main title of the document, introducing the proposed system 'BookRAG', which is a novel approach for Retrieval-Augmented Generation that leverages hierarchical document structure and indexing for processing complex documents.",
+      "source_ids": [
+        1
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "The name of the proposed system, a hierarchical structure-aware, index-based model for Retrieval-Augmented Generation.",
+      "source_ids": [
+        1
+      ]
+    },
+    {
+      "entity_name": "retrieval-augmented generation",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A methodology that combines information retrieval with text generation, which is the core technique enhanced by the BookRAG approach.",
+      "source_ids": [
+        1
+      ]
+    },
+    {
+      "entity_name": "complex documents",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "Refers to the target domain or challenge of processing documents with intricate, hierarchical structures, which the BookRAG system is designed to address.",
+      "source_ids": [
+        1
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The model 'BookRAG' is the central subject introduced and described by the main document title.",
+      "source_ids": [
+        1
+      ]
+    },
+    {
+      "src_entity_name": "retrieval-augmented generation",
+      "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The technique 'Retrieval-Augmented Generation' is the foundational methodology that the title's proposed approach is based upon and aims to enhance.",
+      "source_ids": [
+        1
+      ]
+    },
+    {
+      "src_entity_name": "complex documents",
+      "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The problem domain of 'Complex Documents' is the primary application area and challenge addressed by the system described in the title.",
+      "source_ids": [
+        1
+      ]
+    }
+  ],
+  "node_idx": 1
+}

@@ -1,0 +1,4104 @@
+{
+    "graph": {
+        "directed": false,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "entity_type": "SECTION_TITLE",
+                "description": "\"BookRAG: A Hierarchical Structure-Aware Index-Based Approach for Retrieval-Augmented Generation on Complex Documents\" is the main title of a research paper that introduces the proposed system \"BookRAG,\" a novel approach for Retrieval-Augmented Generation which leverages hierarchical document structure and indexing for processing complex documents.",
+                "source_ids": [
+                    1,
+                    14
+                ],
+                "id": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "complex documents",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "Refers to the target domain or challenge of processing documents with intricate, hierarchical structures, which the BookRAG system is designed to address.",
+                "source_ids": [
+                    1
+                ],
+                "id": "Name: complex documents\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "shu wang",
+                "entity_type": "PERSON",
+                "description": "Shu Wang is a person mentioned in the text and is listed as an author of the research paper.",
+                "source_ids": [
+                    2,
+                    14
+                ],
+                "id": "Name: shu wang\nType: PERSON"
+            },
+            {
+                "entity_name": "the chinese university of hong kong shenzhen",
+                "entity_type": "ORGANIZATION",
+                "description": "an educational institution mentioned in the text",
+                "source_ids": [
+                    3
+                ],
+                "id": "Name: the chinese university of hong kong shenzhen\nType: ORGANIZATION"
+            },
+            {
+                "entity_name": "shuwang3 link cuhk edu cn",
+                "entity_type": "PERSON",
+                "description": "an email address likely belonging to a person named shuwang  indicating their contact information",
+                "source_ids": [
+                    4
+                ],
+                "id": "Name: shuwang3 link cuhk edu cn\nType: PERSON"
+            },
+            {
+                "entity_name": "yingli zhou",
+                "entity_type": "PERSON",
+                "description": "Yingli Zhou is a person mentioned in the text and is listed as an author of the research paper.",
+                "source_ids": [
+                    5,
+                    14
+                ],
+                "id": "Name: yingli zhou\nType: PERSON"
+            },
+            {
+                "entity_name": "yinglizhou",
+                "entity_type": "PERSON",
+                "description": "a person mentioned in the text via an email address",
+                "source_ids": [
+                    7
+                ],
+                "id": "Name: yinglizhou\nType: PERSON"
+            },
+            {
+                "entity_name": "yixiang fang",
+                "entity_type": "PERSON",
+                "description": "yixiang fang is a person mentioned in the text and is listed as an author of the research paper.",
+                "source_ids": [
+                    8,
+                    14
+                ],
+                "id": "Name: yixiang fang\nType: PERSON"
+            },
+            {
+                "entity_name": "fangyixiang",
+                "entity_type": "PERSON",
+                "description": "a person mentioned in the text via an email address",
+                "source_ids": [
+                    10
+                ],
+                "id": "Name: fangyixiang\nType: PERSON"
+            },
+            {
+                "entity_name": "cuhk",
+                "entity_type": "ORGANIZATION",
+                "description": "an organization indicated by the email domain  likely an educational institution",
+                "source_ids": [
+                    10
+                ],
+                "id": "Name: cuhk\nType: ORGANIZATION"
+            },
+            {
+                "entity_name": "abstract",
+                "entity_type": "SECTION_TITLE",
+                "description": "As the initial major section of the paper 'BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents', this section provides a concise summary of the research problem, the proposed methodology, and the key findings or contributions of the study.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: abstract\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "retrieval-augmented generation (rag)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Retrieval-augmented generation (RAG) is a methodology that combines information retrieval with text generation to improve large language model performance by querying relevant information from external documents, enhancing language models through the retrieval of external domain knowledge for response generation; it serves as a conventional baseline method for document question-answering.",
+                "source_ids": [
+                    40,
+                    1,
+                    19,
+                    12
+                ],
+                "id": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "bookindex",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "bookindex is a novel index structure and the core indexing component of the BookRAG system, formally defined as a triplet structure for representing document information. It is built by extracting a hierarchical tree from a document and includes both a tree component and a graph component, forming a unified indexing structure. This model supports the structure-aware retrieval of a document's content, with its final representation derived from the entire BookIndex Construction process.",
+                "source_ids": [
+                    41,
+                    12,
+                    20,
+                    28,
+                    29,
+                    30,
+                    31
+                ],
+                "id": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "information foraging theory",
+                "entity_type": "SCIENTIFIC_THEORY",
+                "description": "information foraging theory is a theory that inspires the agent based query method in bookrag",
+                "source_ids": [
+                    12
+                ],
+                "id": "Name: information foraging theory\nType: SCIENTIFIC_THEORY"
+            },
+            {
+                "entity_name": "hierarchical structure",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "a hierarchical structure is a property of many real world documents that organizes content at different granularity levels",
+                "source_ids": [
+                    12
+                ],
+                "id": "Name: hierarchical structure\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "retrieval recall",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "retrieval recall is a metric on which bookrag's performance is evaluated and serves as the primary evaluation metric being compared among the methods in the table.",
+                "source_ids": [
+                    42,
+                    12
+                ],
+                "id": "Name: retrieval recall\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "qa accuracy",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "qa accuracy is a metric on which bookrag s performance is evaluated",
+                "source_ids": [
+                    12
+                ],
+                "id": "Name: qa accuracy\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "2025",
+                "entity_type": "DATE",
+                "description": "2025 is the publication year of the research paper",
+                "source_ids": [
+                    14
+                ],
+                "id": "Name: 2025\nType: DATE"
+            },
+            {
+                "entity_name": "artifact availability",
+                "entity_type": "SECTION_TITLE",
+                "description": "artifact availability is a section title in the text",
+                "source_ids": [
+                    15
+                ],
+                "id": "Name: artifact availability\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "https github com sam234990 bookrag",
+                "entity_type": "SOFTWARE",
+                "description": "a url pointing to a github repository containing source code  data  and other artifacts",
+                "source_ids": [
+                    16
+                ],
+                "id": "Name: https github com sam234990 bookrag\nType: SOFTWARE"
+            },
+            {
+                "entity_name": "1 introduction",
+                "entity_type": "SECTION_TITLE",
+                "description": "As the opening section of the paper 'BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents', this section introduces the research problem, provides background on Retrieval-Augmented Generation (RAG) for complex documents, and outlines the paper's contributions and structure.",
+                "source_ids": [
+                    17
+                ],
+                "id": "Name: 1 introduction\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "qwen 3",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "qwen 3 is cited as an example of a large language model",
+                "source_ids": [
+                    18
+                ],
+                "id": "Name: qwen 3\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "gemini 2 5",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "gemini 2 5 is cited as an example of a large language model",
+                "source_ids": [
+                    18
+                ],
+                "id": "Name: gemini 2 5\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "question answering (qa) task",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "The question answering (qa) task is the performance target for large language models (LLMs) that retrieval-augmented generation (RAG) methods aim to boost, and it has been revolutionized by these models. This task, which involves solving complex document-based question-answering problems, is the core focus and evaluation target of the designed RAG system described in the paper.",
+                "source_ids": [
+                    40,
+                    18,
+                    19,
+                    12
+                ],
+                "id": "Name: question answering (qa) task\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "creative commons by nc nd 4 0 international license",
+                "entity_type": "LAW",
+                "description": "a license under which this work is distributed  specifying terms of use",
+                "source_ids": [
+                    19
+                ],
+                "id": "Name: creative commons by nc nd 4 0 international license\nType: LAW"
+            },
+            {
+                "entity_name": "vldb endowment",
+                "entity_type": "ORGANIZATION",
+                "description": "an organization that holds publication rights for the proceedings mentioned in the text",
+                "source_ids": [
+                    19
+                ],
+                "id": "Name: vldb endowment\nType: ORGANIZATION"
+            },
+            {
+                "entity_name": "proceedings of the vldb endowment (pvldb)",
+                "entity_type": "PUBLICATION_VENUE",
+                "description": "Proceedings of the VLDB Endowment (PVLDB) is a publication venue where the research paper is published, as indicated by the citation details.",
+                "source_ids": [
+                    19,
+                    13,
+                    14,
+                    15
+                ],
+                "id": "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE"
+            },
+            {
+                "entity_name": "large language models (llms)",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "Large language models (LLMs) are models whose performance is boosted for question answering tasks, having revolutionized question answering systems. They are used in applications such as text-only RAG, where they generate answers based on retrieved information, and in analyzing content and layout features to determine hierarchical levels and node types, including analyzing title candidates during section filtering. However, they may lack current or domain-specific knowledge.",
+                "source_ids": [
+                    36,
+                    38,
+                    12,
+                    18,
+                    19,
+                    20
+                ],
+                "id": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "figure 1",
+                "entity_type": "IMAGE",
+                "description": "Figure 1 is an illustration that shows the two paradigms of existing RAG approaches for document-level QA; it is a diagram comparing text-only RAG, layout segmented RAG, and BookRAG for complex document QA, demonstrating their strengths and weaknesses.",
+                "source_ids": [
+                    20,
+                    21
+                ],
+                "id": "Name: figure 1\nType: IMAGE"
+            },
+            {
+                "entity_name": "complex query",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "A query that is complex in nature, represented by a person icon in the diagram, serving as the initial point in the QA process.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: complex query\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "complex multi-page document",
+                "entity_type": "DOCUMENT",
+                "description": "The multi-page document used for QA, depicted as a stack of pages in the diagram.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: complex multi-page document\nType: DOCUMENT"
+            },
+            {
+                "entity_name": "plain text extraction (ocr)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The process of extracting plain text from the document using Optical Character Recognition.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: plain text extraction (ocr)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "unstructured chunks",
+                "entity_type": "DATA_STRUCTURE",
+                "description": "The text chunks that have been extracted and processed without maintaining the document's layout or structure.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: unstructured chunks\nType: DATA_STRUCTURE"
+            },
+            {
+                "entity_name": "text index (vector/graph/tree)",
+                "entity_type": "DATA_STRUCTURE",
+                "description": "The index created from the unstructured text chunks, which can be vector-based, graph-based, or tree-based for retrieval.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: text index (vector/graph/tree)\nType: DATA_STRUCTURE"
+            },
+            {
+                "entity_name": "fixed/graph retrieval",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The retrieval process that may be fixed or built on a graph structure to obtain relevant texts to the complex query.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: fixed/graph retrieval\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "fails on structural dependencies",
+                "entity_type": "LIMITATION",
+                "description": "A drawback of the text-only RAG in that it doesn't handle dependencies inherent in the document's structure.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: fails on structural dependencies\nType: LIMITATION"
+            },
+            {
+                "entity_name": "layout segmented rag",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "This approach first conducts layout analysis and parsing before using a flattened vector index and fixed retrieval.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: layout segmented rag\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "flattened vector index",
+                "entity_type": "DATA_STRUCTURE",
+                "description": "The indexing of the parsed document in a simplified, linear format to enable quicker retrieval of information.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: flattened vector index\nType: DATA_STRUCTURE"
+            },
+            {
+                "entity_name": "loses complex relationships",
+                "entity_type": "LIMITATION",
+                "description": "A limit of layout segmented RAG that flattens the data and may lead to loss of complex interrelationships within the document.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: loses complex relationships\nType: LIMITATION"
+            },
+            {
+                "entity_name": "hierarchical chunks",
+                "entity_type": "DATA_STRUCTURE",
+                "description": "The complex multi-page document converted into hierarchical chunks to preserve the structure's hierarchy.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: hierarchical chunks\nType: DATA_STRUCTURE"
+            },
+            {
+                "entity_name": "agent-based query method (agent-based retrieval)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The agent-based query method, also known as agent-based retrieval, is proposed in BookRAG and is inspired by information foraging theory; it leverages an agent-based system to intelligently extract pertinent information for question answering.",
+                "source_ids": [
+                    12,
+                    20
+                ],
+                "id": "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "accurate, structured-grounded",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "The outcome of using the BookRAG approach, producing answers that are accurate and grounded in the document's structure.",
+                "source_ids": [
+                    20
+                ],
+                "id": "Name: accurate, structured-grounded\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "ocr",
+                "entity_type": "TECHNOLOGY",
+                "description": "ocr  optical character recognition  is a technology used to convert documents into plain text",
+                "source_ids": [
+                    21
+                ],
+                "id": "Name: ocr\nType: TECHNOLOGY"
+            },
+            {
+                "entity_name": "rag",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "rag  retrieval augmented generation  is a method used for document level qa  with graph based approaches being state of the art",
+                "source_ids": [
+                    21
+                ],
+                "id": "Name: rag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "the image",
+                "entity_type": "IMAGE",
+                "description": "The image is an icon that depicts a small, open paperback book with a darker cover and several pages, suggesting a book or text-based resource, alongside a separate icon representing photo or visual media content, and it also includes a single circular shape and a color-coded legend that associates different entities and approaches with specific colors.",
+                "source_ids": [
+                    44,
+                    22,
+                    23,
+                    25,
+                    26,
+                    27
+                ],
+                "id": "Name: the image\nType: IMAGE"
+            },
+            {
+                "entity_name": "book icon",
+                "entity_type": "ARTWORK",
+                "description": "A graphical representation showcasing a book with an open spine, typically used as an icon or symbol to depict books, reading, or literature.",
+                "source_ids": [
+                    22
+                ],
+                "id": "Name: book icon\nType: ARTWORK"
+            },
+            {
+                "entity_name": "photograph/table icon",
+                "entity_type": "IMAGE",
+                "description": "An icon depicting a photograph or image next to a tabular representation, possibly symbolizing data or information presentation.",
+                "source_ids": [
+                    23
+                ],
+                "id": "Name: photograph/table icon\nType: IMAGE"
+            },
+            {
+                "entity_name": "tree i",
+                "entity_type": "IMAGE",
+                "description": "An image depicting a tree or a reference to the concept of a tree as suggested by the label 'Tree I'.",
+                "source_ids": [
+                    24
+                ],
+                "id": "Name: tree i\nType: IMAGE"
+            },
+            {
+                "entity_name": "image",
+                "entity_type": "IMAGE",
+                "description": "An image is a type of content block that serves as a leaf node in the tree component, representing a block of image content, and it is listed as an initial layout-based type for a primitive block, identified during the layout parsing phase.",
+                "source_ids": [
+                    35,
+                    37,
+                    38,
+                    44,
+                    45,
+                    46,
+                    22,
+                    23,
+                    25,
+                    27,
+                    31
+                ],
+                "id": "Name: image\nType: IMAGE"
+            },
+            {
+                "entity_name": "circle",
+                "entity_type": "SHAPE",
+                "description": "A geometric shape with a single continuous curved line enclosing an equal amount of space from its center to the edge.",
+                "source_ids": [
+                    26
+                ],
+                "id": "Name: circle\nType: SHAPE"
+            },
+            {
+                "entity_name": "image entity",
+                "entity_type": "UNKNOWN",
+                "description": "",
+                "source_ids": [
+                    26
+                ],
+                "id": "Name: image entity\nType: UNKNOWN"
+            },
+            {
+                "entity_name": "figure 2",
+                "entity_type": "IMAGE",
+                "description": "Figure 2 is an image that depicts the BookIndex Construction process, providing an example of bookindex and illustrating the layout parsing phase. It shows Tree Construction from Layout Parsing and Section Filtering, as well as Graph Construction involving KG Construction and Gradient-based Entity Resolution.",
+                "source_ids": [
+                    28,
+                    38,
+                    31
+                ],
+                "id": "Name: figure 2\nType: IMAGE"
+            },
+            {
+                "entity_name": "layout analysis & parsing (layout parsing)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Layout analysis & parsing, also known as layout parsing, is a method or technique that analyzes and parses a document's layout to convert complex multi-page documents into a segmented, structured hierarchical tree. This phase processes a document to identify, extract, and organize diverse blocks such as text, tables, images, and titles, creating tree nodes. It is a key step in transforming a raw document into a structured form, as seen in processes like BookIndex Construction, and it identifies blocks like titles without assigning their hierarchical levels.",
+                "source_ids": [
+                    33,
+                    34,
+                    36,
+                    38,
+                    20,
+                    28
+                ],
+                "id": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "tree construction",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Tree construction is the process of building a hierarchical tree structure from parsed layout data, relying on the analysis of text, titles, tables, and images. As detailed in the paper 'BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents', this methodology is a core component of the proposed indexing approach for complex document retrieval.",
+                "source_ids": [
+                    32,
+                    28
+                ],
+                "id": "Name: tree construction\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "graph construction",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The method that involves creating a graph using KG Construction followed by Gradient-based Entity Resolution.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: graph construction\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "kg construction",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The first step in Graph Construction, which involves building a knowledge graph from the tree nodes derived from Layout Parsing.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: kg construction\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "gradient-based entity resolution",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The second step in Graph Construction, which uses gradient-based techniques to perform entity matching and merging.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: gradient-based entity resolution\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "tree nodes",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "Representations or components of the document content, visually depicted as individual entities in the graphical description.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: tree nodes\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "match?",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "A phase for evaluating the similarity and deciding if two entities should match during the gradient-based entity resolution process.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: match?\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "merge",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Action taken after successful matching using gradient-based entity resolution to combine or merge related entities.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: merge\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "method",
+                "entity_type": "EQUATION_OR_FORMULA",
+                "description": "A label within the section filtering phase that specifies the associated text or content as a method with a font size of 14.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: method\nType: EQUATION_OR_FORMULA"
+            },
+            {
+                "entity_name": "experiment",
+                "entity_type": "EQUATION_OR_FORMULA",
+                "description": "A label indicating experimental content with a font size of 14, presented in the section filtering phase.",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: experiment\nType: EQUATION_OR_FORMULA"
+            },
+            {
+                "entity_name": "moe layer",
+                "entity_type": "SECTION_TITLE",
+                "description": "The moe layer is a section title with a specified font size of 20 in the section filtering phase and is a title candidate mentioned for analysis by the LLM.",
+                "source_ids": [
+                    28,
+                    38
+                ],
+                "id": "Name: moe layer\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "image bookindex construction gt-link relation figure",
+                "entity_type": "UNKNOWN",
+                "description": "",
+                "source_ids": [
+                    28
+                ],
+                "id": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "entity_name": "4.1 overview of bookindex",
+                "entity_type": "SECTION_TITLE",
+                "description": "As a subsection of the paper's methodology, this section provides a high-level introduction to the BookIndex component, explaining its purpose and role within the overall BookRAG system for handling complex documents, as detailed in the paper's fourth main section.",
+                "source_ids": [
+                    29
+                ],
+                "id": "Name: 4.1 overview of bookindex\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "tree structure",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "A tree structure is part of the bookindex, representing the document's logical hierarchy, and it organizes the document into a hierarchical structure with content blocks as leaf nodes.",
+                "source_ids": [
+                    30,
+                    31
+                ],
+                "id": "Name: tree structure\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "knowledge graph",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "a knowledge graph is part of the bookindex  capturing fine grained entities and their relations",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: knowledge graph\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "t",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "t is a variable representing the tree structure component of the bookindex",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: t\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "g",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "g is a variable representing the knowledge graph component of the bookindex",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: g\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "m",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "m is a variable representing the graph tree link function within the bookindex",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: m\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "n",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "n is a variable representing the set of nodes in the tree structure",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: n\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "e t",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "e t is a variable representing the nesting relationships in the tree structure",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: e t\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "v",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "v is a variable representing the set of entities in the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: v\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "e g",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "e g is a variable representing the set of relations in the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "id": "Name: e g\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "graph component",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "the graph component is composed of entities and relations extracted from document nodes",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: graph component\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "graph tree link (gt link)",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "The graph tree link (gt link) is a mapping function that links entities to tree nodes within the bookindex, serving as a component that connects entities back to their corresponding tree nodes.",
+                "source_ids": [
+                    30,
+                    31
+                ],
+                "id": "Name: graph tree link (gt link)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "entities",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "entities are extracted from document nodes and are part of the graph component",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: entities\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "relations",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "relations are extracted from document nodes and are part of the graph component",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: relations\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "content blocks",
+                "entity_type": "SECTION_TITLE",
+                "description": "content blocks such as text  tables  and images serve as leaf nodes in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: content blocks\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "text",
+                "entity_type": "SECTION_TITLE",
+                "description": "text is a type of content block that serves as a leaf node in the tree component, representing a block of textual content. It is listed as an initial layout-based type for a primitive block and is identified during the layout parsing phase. Additionally, text can be a final node type that a block can be reclassified as, such as from an erroneous title.",
+                "source_ids": [
+                    35,
+                    36,
+                    37,
+                    38,
+                    31
+                ],
+                "id": "Name: text\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "tables",
+                "entity_type": "TABLE",
+                "description": "tables are a type of content block that serve as leaf nodes in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: tables\nType: TABLE"
+            },
+            {
+                "entity_name": "leaf nodes",
+                "entity_type": "SECTION_TITLE",
+                "description": "leaf nodes are content blocks nested within section nodes in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: leaf nodes\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "section nodes",
+                "entity_type": "SECTION_TITLE",
+                "description": "section nodes are part of the hierarchical structure in the tree component  containing leaf nodes",
+                "source_ids": [
+                    31
+                ],
+                "id": "Name: section nodes\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "t",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "t is a structured hierarchical tree resulting from the transformation of a raw document",
+                "source_ids": [
+                    33
+                ],
+                "id": "Name: t\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "intelligent section filtering",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Intelligent section filtering is a key step in the document processing pipeline that follows Layout Parsing, where it transforms a raw document into a structured hierarchical tree. This phase processes an initial sequence to identify the document's logically hierarchical structure by analyzing title candidates with an LLM and filtering sections based on specific parameters such as level and type.",
+                "source_ids": [
+                    33,
+                    28,
+                    38,
+                    36
+                ],
+                "id": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "raw document (d)",
+                "entity_type": "DATASET_OR_CORPUS",
+                "description": "The raw document (d) is the initial unstructured input, a collection of pages that is processed during the layout parsing phase and transformed into a structured hierarchical tree.",
+                "source_ids": [
+                    33,
+                    34
+                ],
+                "id": "Name: raw document (d)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "entity_name": "primitive blocks",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "primitive blocks are defined as a sequence of triplets representing components in a layout based model",
+                "source_ids": [
+                    35
+                ],
+                "id": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "title",
+                "entity_type": "SECTION_TITLE",
+                "description": "Title is a type of block identified during the layout parsing phase, listed as an initial layout-based type for a primitive block, which may be reclassified in the section filtering phase.",
+                "source_ids": [
+                    35,
+                    36,
+                    38
+                ],
+                "id": "Name: title\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "table",
+                "entity_type": "TABLE",
+                "description": "A table is listed as an initial layout-based type for a primitive block, representing a node in the tree structure for tabular content and identified as a type of block during the layout parsing phase.",
+                "source_ids": [
+                    35,
+                    37,
+                    38
+                ],
+                "id": "Name: table\nType: TABLE"
+            },
+            {
+                "entity_name": "fontsize",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "fontsize is a layout feature associated with a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "id": "Name: fontsize\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "section",
+                "entity_type": "SECTION_TITLE",
+                "description": "section is a type of node in the tree structure  representing a hierarchical section with a determined level",
+                "source_ids": [
+                    37
+                ],
+                "id": "Name: section\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "method",
+                "entity_type": "SECTION_TITLE",
+                "description": "method is a title candidate analyzed by the llm and identified as a section node",
+                "source_ids": [
+                    38
+                ],
+                "id": "Name: method\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "experiment",
+                "entity_type": "SECTION_TITLE",
+                "description": "experiment is a title candidate analyzed by the llm and identified as a section node",
+                "source_ids": [
+                    38
+                ],
+                "id": "Name: experiment\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "fontsize 14",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "fontsize  14 is a parameter associated with the blocks  method  and  experiment",
+                "source_ids": [
+                    38
+                ],
+                "id": "Name: fontsize 14\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "level 2",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "level  2 is a parameter indicating the hierarchical level of identified section nodes",
+                "source_ids": [
+                    38
+                ],
+                "id": "Name: level 2\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "4",
+                "entity_type": "NUMBER",
+                "description": "the number 4 is mentioned in the text",
+                "source_ids": [
+                    39
+                ],
+                "id": "Name: 4\nType: NUMBER"
+            },
+            {
+                "entity_name": "table 5",
+                "entity_type": "TABLE",
+                "description": "A table comparing the performance of different methods across various datasets for solving complex document question-answering tasks, with best and second-best results highlighted.",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: table 5\nType: TABLE"
+            },
+            {
+                "entity_name": "baseline type",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "A column header categorizing the methods or approaches being compared in the table.",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: baseline type\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "exact match m3docvqa",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the M3DocVQA dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: exact match m3docvqa\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "f1-score m3docvqa",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the M3DocVQA dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: f1-score m3docvqa\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "exact match mmlongbench",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the MMLongBench dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: exact match mmlongbench\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "f1-score mmlongbench",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the MMLongBench dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: f1-score mmlongbench\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "method",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "The method column is the primary categorical header in the table, listing the different layout-based methods or models being evaluated in the performance comparison.",
+                "source_ids": [
+                    40,
+                    42
+                ],
+                "id": "Name: method\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "accuracy qasper",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the Qasper dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: accuracy qasper\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "f1-score qasper",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "An evaluation metric for the Qasper dataset",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: f1-score qasper\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "m3docvqa",
+                "entity_type": "DATASET_OR_CORPUS",
+                "description": "m3docvqa is a dataset for document visual question answering, used as a benchmark in performance comparisons and for evaluating retrieval recall performance, where bookrag achieved a recall of 71.2.",
+                "source_ids": [
+                    40,
+                    41,
+                    42,
+                    43
+                ],
+                "id": "Name: m3docvqa\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "entity_name": "mmlongbench",
+                "entity_type": "DATASET_OR_CORPUS",
+                "description": "mmlongbench is a multimodal long document benchmark dataset used for evaluating retrieval recall performance in comparative assessments.",
+                "source_ids": [
+                    40,
+                    42
+                ],
+                "id": "Name: mmlongbench\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "entity_name": "qasper",
+                "entity_type": "DATASET_OR_CORPUS",
+                "description": "Qasper is a dataset for question answering on scientific papers, used as a benchmark for evaluating retrieval recall performance and for comparing query efficiency in terms of time and token cost.",
+                "source_ids": [
+                    40,
+                    42,
+                    47
+                ],
+                "id": "Name: qasper\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "entity_name": "performance comparison",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "The overarching purpose of the table, as stated in the description, to compare the performance of different methods.",
+                "source_ids": [
+                    40
+                ],
+                "id": "Name: performance comparison\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "bm25",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "BM25 is a conventional RAG baseline method for document QA, using a probabilistic retrieval model and search algorithm for information retrieval, evaluated across multiple datasets.",
+                "source_ids": [
+                    40,
+                    44
+                ],
+                "id": "Name: bm25\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "layout + vanilla",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "layout + vanilla is a conventional RAG baseline method for document QA that incorporates layout information, combining Vanilla RAG with layout analysis. It is a layout-based retrieval method that consistently outperforms vanilla RAG by preserving layout information, achieving a recall of 26.3 on document QA benchmarks.",
+                "source_ids": [
+                    40,
+                    41,
+                    42,
+                    44
+                ],
+                "id": "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "raptor",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Raptor is a graph-based retrieval-augmented generation (RAG) method designed for document question answering, utilizing an enhanced retrieval-augmented pretraining and fine-tuning approach.",
+                "source_ids": [
+                    40,
+                    44
+                ],
+                "id": "Name: raptor\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "graph based rag (graphrag-local)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "graph based rag (graphrag-local) is a state-of-the-art method for document question answering that uses graph data as an external knowledge source, focusing specifically on local graph structures and retrieval.",
+                "source_ids": [
+                    40,
+                    44,
+                    21
+                ],
+                "id": "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "graphrag-global",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "GraphRAG-global is a graph-based retrieval-augmented generation method for document question answering that focuses on leveraging global graph structures, representing a variant of GraphRAG specifically designed for global graph-based retrieval.",
+                "source_ids": [
+                    40,
+                    44
+                ],
+                "id": "Name: graphrag-global\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "mm-vanilla",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "mm-vanilla is a multimodal Vanilla RAG model and a layout-based retrieval method designed for document question answering. It uses layout segmentation for retrieval and has been evaluated on document QA benchmarks, achieving a recall of 7.5.",
+                "source_ids": [
+                    40,
+                    42,
+                    44
+                ],
+                "id": "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "tree-traverse",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "tree-traverse is a layout-based retrieval method for document question answering that uses a tree traversal approach, applying hierarchical navigation to a tree structure; it was compared for recall on document QA benchmarks, achieving a score of 11.2, but it shows suboptimal results.",
+                "source_ids": [
+                    40,
+                    41,
+                    42,
+                    44
+                ],
+                "id": "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "docetl",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "docetl is a layout segmented RAG method for document QA, serving as a document extraction and transformation pipeline. It is the strongest baseline to which bookrag is compared, with bookrag reducing token consumption by an order of magnitude.",
+                "source_ids": [
+                    40,
+                    48,
+                    44
+                ],
+                "id": "Name: docetl\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "bookrag",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "bookrag is a novel hierarchical structure-aware, index-based model for Retrieval-Augmented Generation (RAG), designed specifically for documents with a hierarchical layout. It utilizes a unified tree graph bookindex and agent-based planning to maintain the document's structural integrity, enabling precise retrieval and generation. Evaluated on document QA benchmarks, bookrag demonstrates superior performance, achieving the highest recall across datasets, including a score of 57.6 on layout-based tasks, and shows efficiency in terms of query time and token consumption.",
+                "source_ids": [
+                    1,
+                    40,
+                    41,
+                    42,
+                    43,
+                    12,
+                    44,
+                    48,
+                    20
+                ],
+                "id": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "exact match",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "exact match is a metric used to measure performance in document question answering",
+                "source_ids": [
+                    41
+                ],
+                "id": "Name: exact match\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "vanilla rag",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "Vanilla RAG is a baseline model used for comparison in retrieval-augmented generation tasks, representing a retrieval-augmented generation model without additional enhancements.",
+                "source_ids": [
+                    41,
+                    44
+                ],
+                "id": "Name: vanilla rag\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "graphranker",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "Graphranker is a layout-based retrieval model for document question answering that uses graph-based reasoning and ranking techniques to segment and rank candidate passages. It was evaluated as a baseline method on document QA benchmarks, achieving recall scores of 26.4 and a maximum recall of 44.5, though it has shown suboptimal results in some comparisons.",
+                "source_ids": [
+                    40,
+                    41,
+                    42,
+                    43,
+                    44
+                ],
+                "id": "Name: graphranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "agent based planning",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "agent based planning is a technique used by bookrag to configure optimal workflows for query processing, and it is also a method used in bookrag to first classify the query.",
+                "source_ids": [
+                    41,
+                    43
+                ],
+                "id": "Name: agent based planning\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "table 6",
+                "entity_type": "TABLE",
+                "description": "A table presenting a retrieval recall comparison among layout-based methods, with the best and second-best results highlighted, as described in the text.",
+                "source_ids": [
+                    42
+                ],
+                "id": "Name: table 6\nType: TABLE"
+            },
+            {
+                "entity_name": "layout-based methods",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The category of methods being compared in the table, as stated in the description",
+                "source_ids": [
+                    42
+                ],
+                "id": "Name: layout-based methods\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "selector",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "the selector is a component in bookrag s workflow that narrows the search to a precise information patch",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: selector\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "reasoner",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "the reasoner is a component in bookrag s workflow that analyzes information after the selector",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: reasoner\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "skyline ranker",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "skyline ranker is a process in bookrag that retains an average number of nodes comparable to a top k setting",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "71 2",
+                "entity_type": "PERCENTAGE",
+                "description": "71 2  is the recall percentage achieved by bookrag on the m3docvqa dataset",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 71 2\nType: PERCENTAGE"
+            },
+            {
+                "entity_name": "44 5",
+                "entity_type": "PERCENTAGE",
+                "description": "44 5  is the maximum recall percentage achieved by the graphranker baseline",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 44 5\nType: PERCENTAGE"
+            },
+            {
+                "entity_name": "9 87",
+                "entity_type": "MEASUREMENT",
+                "description": "9 87 is the average number of retained nodes after the skyline ranker process on one dataset",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 9 87\nType: MEASUREMENT"
+            },
+            {
+                "entity_name": "6 86",
+                "entity_type": "MEASUREMENT",
+                "description": "6 86 is the average number of retained nodes after the skyline ranker process on another dataset",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 6 86\nType: MEASUREMENT"
+            },
+            {
+                "entity_name": "8 6",
+                "entity_type": "MEASUREMENT",
+                "description": "8 6 is the average number of retained nodes after the skyline ranker process on a third dataset",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 8 6\nType: MEASUREMENT"
+            },
+            {
+                "entity_name": "k 10",
+                "entity_type": "PARAMETER_OR_VARIABLE",
+                "description": "k   10 is a standard top k setting parameter mentioned for comparison with bookrag s retained nodes",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: k 10\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "entity_name": "mmlongbench",
+                "entity_type": "IMAGE",
+                "description": "A graph set showing query time and token cost evaluations for different components including MMLongBench. The x-axis indicates 'Query Time' and 'Token cost', while the y-axis represents time in seconds and tokens in millions, respectively.",
+                "source_ids": [
+                    45
+                ],
+                "id": "Name: mmlongbench\nType: IMAGE"
+            },
+            {
+                "entity_name": "query time",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "Query time is an evaluation metric that measures the time taken for queries, displayed in seconds on a bar chart's y-axis, with corresponding values on the x-axis, serving as a comparative metric for assessing query efficiency.",
+                "source_ids": [
+                    45,
+                    46,
+                    47
+                ],
+                "id": "Name: query time\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "token cost",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "Token cost is a comparative evaluation metric measured in tokens for assessing query efficiency, typically visualized as a bar chart where the x-axis represents different methods or components and the y-axis shows token values in millions.",
+                "source_ids": [
+                    45,
+                    46,
+                    47
+                ],
+                "id": "Name: token cost\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "time (s)",
+                "entity_type": "MEASUREMENT",
+                "description": "The entity \"time (s)\" is a measurement of time in seconds, depicted on the left graph's y-axis, which uses a logarithmic scale; it specifically represents the Query Time on the chart's vertical axis.",
+                "source_ids": [
+                    45,
+                    46,
+                    47
+                ],
+                "id": "Name: time (s)\nType: MEASUREMENT"
+            },
+            {
+                "entity_name": "token (m)",
+                "entity_type": "MEASUREMENT",
+                "description": "The measurement \"token (m)\" represents millions of tokens and is shown on the vertical y-axis of the right bar chart, where token costs are displayed on a logarithmic scale.",
+                "source_ids": [
+                    45,
+                    46,
+                    47
+                ],
+                "id": "Name: token (m)\nType: MEASUREMENT"
+            },
+            {
+                "entity_name": "m3docvqa",
+                "entity_type": "IMAGE",
+                "description": "A pair of bar charts showing Query Time (left) and Token cost (right), comparing different methods, including their time in seconds and token costs.",
+                "source_ids": [
+                    46
+                ],
+                "id": "Name: m3docvqa\nType: IMAGE"
+            },
+            {
+                "entity_name": "figure 5",
+                "entity_type": "IMAGE",
+                "description": "Figure 5 is an image that illustrates the evaluation of efficiency through a comparison chart, showing query efficiency with two metrics: Query Time in seconds and Token cost, depicted through bar graphs under the label 'Qasper'.",
+                "source_ids": [
+                    48,
+                    47
+                ],
+                "id": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "entity_name": "graph based rag methods",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "graph based rag methods are existing approaches to which bookrag is compared in terms of time and token costs",
+                "source_ids": [
+                    48
+                ],
+                "id": "Name: graph based rag methods\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "text-based rag approaches (text-only rag)",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Text-based RAG approaches, also known as text-only RAG, are methods that involve plain text extraction, unstructured chunks, and fixed or graph retrieval using a vector, graph, or tree structure; these approaches generally have lower latency and token usage because they do not process images.",
+                "source_ids": [
+                    48,
+                    20
+                ],
+                "id": "Name: text-based rag approaches (text-only rag)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "multi modal methods",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "multi modal methods are a category of approaches among which bookrag maintains balanced efficiency",
+                "source_ids": [
+                    48
+                ],
+                "id": "Name: multi modal methods\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "10",
+                "entity_type": "MEASUREMENT",
+                "description": "the number 10 is mentioned in the text",
+                "source_ids": [
+                    49
+                ],
+                "id": "Name: 10\nType: MEASUREMENT"
+            }
+        ],
+        "links": [
+            {
+                "src_entity_name": "complex documents",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The problem domain of 'Complex Documents' is the primary application area and challenge addressed by the system described in the title.",
+                "source_ids": [
+                    1
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: complex documents\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "retrieval-augmented generation",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The technique 'Retrieval-Augmented Generation' is the foundational methodology that the title's proposed approach is based upon and aims to enhance.",
+                "source_ids": [
+                    1
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "shu wang",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "shu wang is an author of the paper titled bookrag",
+                "source_ids": [
+                    14
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: shu wang\nType: PERSON"
+            },
+            {
+                "src_entity_name": "yingli zhou",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "yingli zhou is an author of the paper titled bookrag",
+                "source_ids": [
+                    14
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: yingli zhou\nType: PERSON"
+            },
+            {
+                "src_entity_name": "yixiang fang",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "yixiang fang is an author of the paper titled bookrag",
+                "source_ids": [
+                    14
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: yixiang fang\nType: PERSON"
+            },
+            {
+                "src_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "tgt_entity_name": "2025",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the paper titled bookrag was published in the year 2025",
+                "source_ids": [
+                    14
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: 2025\nType: DATE"
+            },
+            {
+                "src_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "tgt_entity_name": "pvldb",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the paper titled bookrag is published in the venue pvldb",
+                "source_ids": [
+                    14
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The model 'BookRAG' is the central subject introduced and described by the main document title.",
+                "source_ids": [
+                    1
+                ],
+                "source": "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "retrieval-augmented generation (rag)",
+                "tgt_entity_name": "large language models (llms)",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "rag is adopted to address issues with llms by retrieving external knowledge to guide them",
+                "source_ids": [
+                    19
+                ],
+                "source": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "retrieval-augmented generation (rag)",
+                "tgt_entity_name": "question answering (qa) task",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the paper aims to design a rag system specifically for the qa task over structured documents",
+                "source_ids": [
+                    19
+                ],
+                "source": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: question answering (qa) task\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "retrieval-augmented generation (rag)",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "bookrag is introduced as a novel rag approach targeted for hierarchically structured documents",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "retrieval-augmented generation (rag)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Vanilla RAG'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table 5\nType: TABLE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "bookindex",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to BookIndex",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: figure 1\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "bookindex",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to BookIndex",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "4.1 overview of bookindex",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The concept of 'BookIndex' is the primary subject and topic of section 4.1.",
+                "source_ids": [
+                    29
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: 4.1 overview of bookindex\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "t",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "bookindex is defined as containing t  which represents the tree structure",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: t\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "g",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "bookindex is defined as containing g  which represents the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: g\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "m",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "bookindex is defined as containing m  which represents the graph tree link function",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: m\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "figure 2",
+                "tgt_entity_name": "bookindex",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "figure 2 provides an example of bookindex",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: figure 2\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "tree structure",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the tree component is part of bookindex  organizing the document hierarchically",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: tree structure\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookindex",
+                "tgt_entity_name": "graph component",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the graph component is part of bookindex  composed of entities and relations",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: graph component\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "bookindex",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "bookrag utilizes the tree graph bookindex as part of its architecture for effective evidence retrieval",
+                "source_ids": [
+                    41
+                ],
+                "source": "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "agent based query method",
+                "tgt_entity_name": "information foraging theory",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the agent based query method is inspired by the information foraging theory",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: information foraging theory\nType: SCIENTIFIC_THEORY",
+                "target": "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "hierarchical structure",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag is specifically targeted for documents with a hierarchical structure",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: hierarchical structure\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "retrieval recall",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag s performance is demonstrated by achieving state of the art results in retrieval recall",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: retrieval recall\nType: EVALUATION_METRIC",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "retrieval recall",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Retrieval Recall'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: retrieval recall\nType: EVALUATION_METRIC",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "qa accuracy",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag s performance is demonstrated by achieving state of the art results in qa accuracy",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: qa accuracy\nType: EVALUATION_METRIC",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "qwen 3",
+                "tgt_entity_name": "large language models llms",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "qwen 3 is an example of a large language model",
+                "source_ids": [
+                    18
+                ],
+                "source": "Name: qwen 3\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "gemini 2 5",
+                "tgt_entity_name": "large language models llms",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "gemini 2 5 is an example of a large language model",
+                "source_ids": [
+                    18
+                ],
+                "source": "Name: gemini 2 5\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "large language models llms",
+                "tgt_entity_name": "question answering (qa) task",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "large language models have revolutionized the question answering system",
+                "source_ids": [
+                    18
+                ],
+                "source": "Name: question answering (qa) task\nType: TASK_OR_PROBLEM",
+                "target": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "question answering (qa) task",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Document QA Tasks'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: question answering (qa) task\nType: TASK_OR_PROBLEM",
+                "target": "Name: table 5\nType: TABLE"
+            },
+            {
+                "src_entity_name": "creative commons by nc nd 4 0 international license",
+                "tgt_entity_name": "vldb endowment",
+                "relation_name": "",
+                "weight": 7.0,
+                "description": "the license covers the work whose publication rights are held by the vldb endowment",
+                "source_ids": [
+                    19
+                ],
+                "source": "Name: creative commons by nc nd 4 0 international license\nType: LAW",
+                "target": "Name: vldb endowment\nType: ORGANIZATION"
+            },
+            {
+                "src_entity_name": "proceedings of the vldb endowment (pvldb)",
+                "tgt_entity_name": "vldb endowment",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the proceedings are published by the vldb endowment  as indicated in the publication details",
+                "source_ids": [
+                    19
+                ],
+                "source": "Name: vldb endowment\nType: ORGANIZATION",
+                "target": "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "large language models (llms)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to LLM",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: figure 1\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "large language models (llms)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "during the section filtering phase  title candidates are analyzed by the llm",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "large language models (llms)",
+                "tgt_entity_name": "title",
+                "relation_name": "",
+                "weight": 7.0,
+                "description": "the llm analyzes candidates  including those identified as tit1e  to re classify them",
+                "source_ids": [
+                    36
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: title\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "large language models (llms)",
+                "tgt_entity_name": "text",
+                "relation_name": "",
+                "weight": 7.0,
+                "description": "the llm can re classify a block  such as from tit1e  to a final node type like text",
+                "source_ids": [
+                    36
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: text\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "large language models (llms)",
+                "tgt_entity_name": "method",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the llm analyzes the title candidate  method",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: method\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "large language models (llms)",
+                "tgt_entity_name": "experiment",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the llm analyzes the title candidate  experiment",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: experiment\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "complex query",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Complex Query",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: complex query\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "complex multi-page document",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Complex Multi-page Document",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: complex multi-page document\nType: DOCUMENT"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "plain text extraction (ocr)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Plain Text Extraction (OCR)",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: plain text extraction (ocr)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "unstructured chunks",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Unstructured Chunks",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: unstructured chunks\nType: DATA_STRUCTURE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "text index (vector/graph/tree)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Text Index (Vector/Graph/Tree)",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: text index (vector/graph/tree)\nType: DATA_STRUCTURE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "fixed/graph retrieval",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Fixed/Graph Retrieval",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: fixed/graph retrieval\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "fails on structural dependencies",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Fails on Structural dependencies",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: fails on structural dependencies\nType: LIMITATION"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "layout segmented rag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Layout Segmented RAG",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: layout segmented rag\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "flattened vector index",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Flattened Vector Index",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: flattened vector index\nType: DATA_STRUCTURE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "loses complex relationships",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Loses complex relationships",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: loses complex relationships\nType: LIMITATION"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "hierarchical chunks",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Hierarchical Chunks",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: hierarchical chunks\nType: DATA_STRUCTURE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "agent-based query method (agent-based retrieval)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Agent-based Retrieval",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "accurate, structured-grounded",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Accurate, structured-grounded",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: accurate, structured-grounded\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "rag",
+                "relation_name": "",
+                "weight": 7.0,
+                "description": "figure 1 illustrates the existing rag approaches for document level qa",
+                "source_ids": [
+                    21
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: rag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "layout analysis & parsing",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Layout Analysis & Parsing",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "bookrag (natively structure-aware)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to BookRAG (Natively Structure-aware)",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "figure 1",
+                "tgt_entity_name": "text-only rag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 1 related to Text-Only RAG",
+                "source_ids": [
+                    20
+                ],
+                "source": "Name: figure 1\nType: IMAGE",
+                "target": "Name: text-based rag approaches (text-only rag)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "agent based query method",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag proposes an agent based query method as part of its approach",
+                "source_ids": [
+                    12
+                ],
+                "source": "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "ocr",
+                "tgt_entity_name": "rag",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "ocr is used as a preliminary step in one paradigm of rag approaches to convert documents into plain text",
+                "source_ids": [
+                    21
+                ],
+                "source": "Name: ocr\nType: TECHNOLOGY",
+                "target": "Name: rag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "rag",
+                "tgt_entity_name": "graph based rag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "graph based rag is described as a state of the art approach within text based rag methods",
+                "source_ids": [
+                    21
+                ],
+                "source": "Name: rag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "the image",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to The Image",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: the image\nType: IMAGE",
+                "target": "Name: image\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "image entity",
+                "tgt_entity_name": "the image",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image Entity related to The Image",
+                "source_ids": [
+                    26
+                ],
+                "source": "Name: the image\nType: IMAGE",
+                "target": "Name: image entity\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "book icon",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Book Icon",
+                "source_ids": [
+                    22
+                ],
+                "source": "Name: book icon\nType: ARTWORK",
+                "target": "Name: image\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "photograph/table icon",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Photograph/Table Icon",
+                "source_ids": [
+                    23
+                ],
+                "source": "Name: photograph/table icon\nType: IMAGE",
+                "target": "Name: image\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "content blocks",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "images are a type of content block in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: content blocks\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "primitive blocks",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "image is one of the layout based types that can be assigned to a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "section",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both section and image are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: section\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "text",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both text and image are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: text\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "table",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both table and image are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: table\nType: TABLE"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "image",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the layout parsing phase identifies blocks typed as image",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "bm25",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to BM25",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: bm25\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "vanilla rag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Vanilla RAG",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: vanilla rag\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "layout + vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Layout + Vanilla",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "raptor",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to RAPTOR",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: raptor\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "graph based rag (graphrag-local)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to GraphRAG-Local",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "graphrag-global",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to GraphRAG-Global",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: graphrag-global\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "mm-vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to MM-Vanilla",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "tree-traverse",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Tree-Traverse",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "graphranker",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to GraphRanker",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: graphranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "docetl",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to DocETL",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: docetl\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "bookrag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to BookRAG",
+                "source_ids": [
+                    44
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "mmlongbench",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to MMLongBench",
+                "source_ids": [
+                    45
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: mmlongbench\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "query time",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Query Time",
+                "source_ids": [
+                    46
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: query time\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "token cost",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to Token cost",
+                "source_ids": [
+                    46
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: token cost\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "time (s)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to time (s)",
+                "source_ids": [
+                    46
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: time (s)\nType: MEASUREMENT"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "token (m)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to token (M)",
+                "source_ids": [
+                    46
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: token (m)\nType: MEASUREMENT"
+            },
+            {
+                "src_entity_name": "image",
+                "tgt_entity_name": "m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image  related to M3DocVQA",
+                "source_ids": [
+                    46
+                ],
+                "source": "Name: image\nType: IMAGE",
+                "target": "Name: m3docvqa\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "image entity",
+                "tgt_entity_name": "circle",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image Entity related to Circle",
+                "source_ids": [
+                    26
+                ],
+                "source": "Name: circle\nType: SHAPE",
+                "target": "Name: image entity\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "figure 2",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Figure 2",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: figure 2\nType: IMAGE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "figure 2",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "figure 2 is used as an example to illustrate the layout parsing phase",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: figure 2\nType: IMAGE",
+                "target": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "layout analysis & parsing (layout parsing)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Layout Parsing",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "t",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "robust layout parsing is a key step in the transformation process that creates the structured hierarchical tree t",
+                "source_ids": [
+                    33
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: t\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "raw document (d)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "layout parsing processes the input document d",
+                "source_ids": [
+                    34
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: raw document (d)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "layout analysis & parsing (layout parsing)",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "section filtering processes the initial sequence of blocks identified by layout parsing",
+                "source_ids": [
+                    36
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "title",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the layout parsing phase identifies blocks typed as title",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: title\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "text",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the layout parsing phase identifies blocks typed as text",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: text\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "layout analysis & parsing (layout parsing)",
+                "tgt_entity_name": "table",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the layout parsing phase identifies blocks typed as table",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table\nType: TABLE"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "tree construction",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Tree Construction",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: tree construction\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "graph construction",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Graph Construction",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: graph construction\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "kg construction",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to KG Construction",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: kg construction\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "gradient-based entity resolution",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Gradient-based Entity Resolution",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: gradient-based entity resolution\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "tree nodes",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Tree Nodes",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: tree nodes\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "match?",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Match?",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: match?\nType: TASK_OR_PROBLEM",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "merge",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Merge",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: merge\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "method",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Method",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: method\nType: EQUATION_OR_FORMULA",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "experiment",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Experiment",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: experiment\nType: EQUATION_OR_FORMULA",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "moe layer",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to MOE Layer",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: moe layer\nType: SECTION_TITLE",
+                "target": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "moe layer",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the section filtering phase analyzes the title candidate  moe layer",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: moe layer\nType: SECTION_TITLE",
+                "target": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "image bookindex construction gt-link relation figure",
+                "tgt_entity_name": "section filtering",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Image BookIndex Construction GT-Link Relation Figure related to Section Filtering",
+                "source_ids": [
+                    28
+                ],
+                "source": "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN",
+                "target": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "tree structure",
+                "tgt_entity_name": "content blocks",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the tree component organizes content blocks as leaf nodes within its structure",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: tree structure\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: content blocks\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "graph tree link (gt link)",
+                "tgt_entity_name": "tree structure",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "gt link connects entities to tree nodes within the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: tree structure\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: graph tree link (gt link)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "t",
+                "tgt_entity_name": "n",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "t is defined as containing n  the set of nodes in the tree structure",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: t\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: n\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "t",
+                "tgt_entity_name": "e t",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "t is defined as containing e t  the nesting relationships in the tree structure",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: t\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: e t\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "g",
+                "tgt_entity_name": "v",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "g is defined as containing v  the set of entities in the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: g\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: v\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "g",
+                "tgt_entity_name": "e g",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "g is defined as containing e g  the set of relations in the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: g\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: e g\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "m",
+                "tgt_entity_name": "v",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "m is a function that maps from v  the set of entities in the knowledge graph",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: m\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: v\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "m",
+                "tgt_entity_name": "n",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "m is a function that maps entities to nodes in n  the set of tree nodes",
+                "source_ids": [
+                    30
+                ],
+                "source": "Name: m\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: n\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "graph component",
+                "tgt_entity_name": "entities",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the graph component is composed of entities extracted from document nodes",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: graph component\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: entities\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "graph component",
+                "tgt_entity_name": "relations",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the graph component is composed of relations extracted from document nodes",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: graph component\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: relations\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "graph tree link (gt link)",
+                "tgt_entity_name": "entities",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "gt link connects entities back to their corresponding tree nodes",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: graph tree link (gt link)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: entities\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "content blocks",
+                "tgt_entity_name": "leaf nodes",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "content blocks serve as leaf nodes in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: content blocks\nType: SECTION_TITLE",
+                "target": "Name: leaf nodes\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "content blocks",
+                "tgt_entity_name": "text",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "text is a type of content block in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: content blocks\nType: SECTION_TITLE",
+                "target": "Name: text\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "content blocks",
+                "tgt_entity_name": "tables",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "tables are a type of content block in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: content blocks\nType: SECTION_TITLE",
+                "target": "Name: tables\nType: TABLE"
+            },
+            {
+                "src_entity_name": "primitive blocks",
+                "tgt_entity_name": "text",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "text is one of the layout based types that can be assigned to a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "source": "Name: text\nType: SECTION_TITLE",
+                "target": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "section",
+                "tgt_entity_name": "text",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both section and text are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: text\nType: SECTION_TITLE",
+                "target": "Name: section\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "text",
+                "tgt_entity_name": "table",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both text and table are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: text\nType: SECTION_TITLE",
+                "target": "Name: table\nType: TABLE"
+            },
+            {
+                "src_entity_name": "leaf nodes",
+                "tgt_entity_name": "section nodes",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "leaf nodes are nested within section nodes in the tree component",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: leaf nodes\nType: SECTION_TITLE",
+                "target": "Name: section nodes\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "t",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "intelligent section filtering is a key step in the transformation process that creates the structured hierarchical tree t",
+                "source_ids": [
+                    33
+                ],
+                "source": "Name: t\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "raw document",
+                "tgt_entity_name": "t",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the raw document is transformed into the structured hierarchical tree t",
+                "source_ids": [
+                    33
+                ],
+                "source": "Name: t\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: raw document (d)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "method",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the section filtering phase analyzes the title candidate  method",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: method\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "intelligent section filtering",
+                "tgt_entity_name": "experiment",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the section filtering phase analyzes the title candidate  experiment",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: experiment\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "primitive blocks",
+                "tgt_entity_name": "title",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "title is one of the layout based types that can be assigned to a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "source": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: title\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "primitive blocks",
+                "tgt_entity_name": "table",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "table is one of the layout based types that can be assigned to a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "source": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: table\nType: TABLE"
+            },
+            {
+                "src_entity_name": "primitive blocks",
+                "tgt_entity_name": "fontsize",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "fontsize is a layout feature that is part of the vector associated with a primitive block",
+                "source_ids": [
+                    35
+                ],
+                "source": "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: fontsize\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "section",
+                "tgt_entity_name": "table",
+                "relation_name": "",
+                "weight": 6.0,
+                "description": "both section and table are node types in the definitive tree structure t",
+                "source_ids": [
+                    37
+                ],
+                "source": "Name: table\nType: TABLE",
+                "target": "Name: section\nType: SECTION_TITLE"
+            },
+            {
+                "src_entity_name": "method",
+                "tgt_entity_name": "fontsize 14",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the block  method  has the parameter  fontsize  14",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: method\nType: SECTION_TITLE",
+                "target": "Name: fontsize 14\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "method",
+                "tgt_entity_name": "level 2",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the block  method  is identified as a section node at  level  2",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: method\nType: SECTION_TITLE",
+                "target": "Name: level 2\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "experiment",
+                "tgt_entity_name": "fontsize 14",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the block  experiment  has the parameter  fontsize  14",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: experiment\nType: SECTION_TITLE",
+                "target": "Name: fontsize 14\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "experiment",
+                "tgt_entity_name": "level 2",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the block  experiment  is identified as a section node at  level  2",
+                "source_ids": [
+                    38
+                ],
+                "source": "Name: experiment\nType: SECTION_TITLE",
+                "target": "Name: level 2\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "baseline type",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Baseline Type'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: baseline type\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "exact match m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Exact Match M3DocVQA'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: exact match m3docvqa\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "f1-score m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'F1-score M3DocVQA'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: f1-score m3docvqa\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "exact match mmlongbench",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Exact Match MMLongBench'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: exact match mmlongbench\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "f1-score mmlongbench",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'F1-score MMLongBench'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: f1-score mmlongbench\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "method",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Method'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: method\nType: PARAMETER_OR_VARIABLE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "accuracy qasper",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Accuracy Qasper'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: accuracy qasper\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "f1-score qasper",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'F1-score Qasper'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: f1-score qasper\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'M3DocVQA'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: m3docvqa\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "mmlongbench",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'MMLongBench'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: mmlongbench\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "qasper",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Qasper'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: qasper\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "performance comparison",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Performance Comparison'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: performance comparison\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "bm25",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'BM25'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: bm25\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "layout + vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Layout + Vanilla'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "raptor",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'RAPTOR'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: raptor\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "graph based rag (graphrag-local)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'GraphRAG-Local'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "graphrag-global",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'GraphRAG-Global'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: graphrag-global\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "mm-vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'MM-Vanilla'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "tree-traverse",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'Tree-Traverse'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "docetl",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'DocETL'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: docetl\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "bookrag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'BookRAG'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 5",
+                "tgt_entity_name": "graphranker",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 5' contains data about 'GraphRanker'.",
+                "source_ids": [
+                    40
+                ],
+                "source": "Name: table 5\nType: TABLE",
+                "target": "Name: graphranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "method",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Method'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: method\nType: PARAMETER_OR_VARIABLE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "exact match",
+                "tgt_entity_name": "m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "exact match is used as a performance metric on the m3docvqa dataset",
+                "source_ids": [
+                    41
+                ],
+                "source": "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+                "target": "Name: exact match\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'M3DocVQA'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "m3docvqa",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag achieved a recall of 71 2  on the m3docvqa dataset",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "mmlongbench",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'MMLongBench'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: mmlongbench\nType: DATASET_OR_CORPUS",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "qasper",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Qasper'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: qasper\nType: DATASET_OR_CORPUS",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "figure 5",
+                "tgt_entity_name": "qasper",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 5 related to Qasper",
+                "source_ids": [
+                    47
+                ],
+                "source": "Name: qasper\nType: DATASET_OR_CORPUS",
+                "target": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "layout + vanilla",
+                "tgt_entity_name": "vanilla rag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "layout   vanilla consistently outperforms vanilla rag  indicating its superior performance in preserving structural information",
+                "source_ids": [
+                    41
+                ],
+                "source": "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: vanilla rag\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "layout + vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Layout + Vanilla'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "mm-vanilla",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'MM-Vanilla'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "tree-traverse",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag overcomes the limitations of tree traverse  which relies solely on hierarchical navigation",
+                "source_ids": [
+                    41
+                ],
+                "source": "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "tree-traverse",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Tree-Traverse'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "docetl",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag reduces token consumption by an order of magnitude compared to the strongest baseline  docetl",
+                "source_ids": [
+                    48
+                ],
+                "source": "Name: docetl\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: bookrag\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "agent based planning",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag employs agent based planning to classify the query as part of its workflow",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: agent based planning\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "graphranker",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag significantly outperforms graphranker in retrieval recall  with 71 2  vs  44 5",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: graphranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "bookrag",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'BookRAG'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "selector",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag uses the selector as a component in its ift inspired workflow to narrow search",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: selector\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "reasoner",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "bookrag uses the reasoner as a component in its ift inspired workflow to analyze information",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: reasoner\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "skyline ranker",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag incorporates the skyline ranker process to retain a comparable number of nodes to a top k setting",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "graph based rag methods",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag is compared to existing graph based rag methods  maintaining comparable time and token costs",
+                "source_ids": [
+                    48
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: graph based rag methods\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "text-based rag approaches (text-only rag)",
+                "relation_name": "",
+                "weight": 7.0,
+                "description": "bookrag is contrasted with text based rag approaches  which generally have lower latency and token usage",
+                "source_ids": [
+                    48
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: text-based rag approaches (text-only rag)\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "multi modal methods",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "bookrag maintains a balanced efficiency among multi modal methods",
+                "source_ids": [
+                    48
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: multi modal methods\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "bookrag",
+                "tgt_entity_name": "figure 5",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "figure 5 illustrates the evaluation of bookrag s efficiency in terms of query time and token consumption",
+                "source_ids": [
+                    48
+                ],
+                "source": "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "graphranker",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'GraphRanker'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: table 6\nType: TABLE"
+            },
+            {
+                "src_entity_name": "agent based planning",
+                "tgt_entity_name": "selector",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "agent based planning classifies the query  enabling the selector to narrow the search",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: agent based planning\nType: METHOD_OR_TECHNIQUE",
+                "target": "Name: selector\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 6",
+                "tgt_entity_name": "layout-based methods",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 6' contains data about 'Layout-based Methods'.",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: table 6\nType: TABLE",
+                "target": "Name: layout-based methods\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "selector",
+                "tgt_entity_name": "reasoner",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the selector narrows the search  followed by the reasoner s analysis in bookrag s workflow",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: selector\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: reasoner\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "skyline ranker",
+                "tgt_entity_name": "9 87",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the skyline ranker process results in an average of 9 87 retained nodes on one dataset",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: 9 87\nType: MEASUREMENT"
+            },
+            {
+                "src_entity_name": "skyline ranker",
+                "tgt_entity_name": "6 86",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the skyline ranker process results in an average of 6 86 retained nodes on another dataset",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: 6 86\nType: MEASUREMENT"
+            },
+            {
+                "src_entity_name": "skyline ranker",
+                "tgt_entity_name": "8 6",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the skyline ranker process results in an average of 8 6 retained nodes on a third dataset",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: 8 6\nType: MEASUREMENT"
+            },
+            {
+                "src_entity_name": "figure 5",
+                "tgt_entity_name": "query time",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 5 related to Query Time",
+                "source_ids": [
+                    47
+                ],
+                "source": "Name: query time\nType: EVALUATION_METRIC",
+                "target": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "figure 5",
+                "tgt_entity_name": "token cost",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 5 related to Token cost",
+                "source_ids": [
+                    47
+                ],
+                "source": "Name: token cost\nType: EVALUATION_METRIC",
+                "target": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "figure 5",
+                "tgt_entity_name": "time (s)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 5 related to time (s)",
+                "source_ids": [
+                    47
+                ],
+                "source": "Name: time (s)\nType: MEASUREMENT",
+                "target": "Name: figure 5\nType: IMAGE"
+            },
+            {
+                "src_entity_name": "figure 5",
+                "tgt_entity_name": "token (m)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Image entity Figure 5 related to token (M)",
+                "source_ids": [
+                    47
+                ],
+                "source": "Name: token (m)\nType: MEASUREMENT",
+                "target": "Name: figure 5\nType: IMAGE"
+            }
+        ]
+    },
+    "tree2kg": {
+        "1": [
+            "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: complex documents\nType: TASK_OR_PROBLEM",
+            "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE"
+        ],
+        "2": [
+            "Name: shu wang\nType: PERSON"
+        ],
+        "3": [
+            "Name: the chinese university of hong kong shenzhen\nType: ORGANIZATION"
+        ],
+        "4": [
+            "Name: shuwang3 link cuhk edu cn\nType: PERSON"
+        ],
+        "5": [
+            "Name: yingli zhou\nType: PERSON"
+        ],
+        "6": [
+            "Name: the chinese university of hong kong shenzhen\nType: ORGANIZATION"
+        ],
+        "7": [
+            "Name: yinglizhou\nType: PERSON"
+        ],
+        "8": [
+            "Name: yixiang fang\nType: PERSON"
+        ],
+        "9": [
+            "Name: the chinese university of hong kong shenzhen\nType: ORGANIZATION"
+        ],
+        "10": [
+            "Name: fangyixiang\nType: PERSON",
+            "Name: cuhk\nType: ORGANIZATION"
+        ],
+        "11": [
+            "Name: abstract\nType: SECTION_TITLE"
+        ],
+        "12": [
+            "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: retrieval recall\nType: EVALUATION_METRIC",
+            "Name: qa accuracy\nType: EVALUATION_METRIC",
+            "Name: question answering (qa) task\nType: TASK_OR_PROBLEM",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE",
+            "Name: information foraging theory\nType: SCIENTIFIC_THEORY",
+            "Name: hierarchical structure\nType: MODEL_OR_ARCHITECTURE"
+        ],
+        "13": [
+            "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE"
+        ],
+        "14": [
+            "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE",
+            "Name: yixiang fang\nType: PERSON",
+            "Name: yingli zhou\nType: PERSON",
+            "Name: 2025\nType: DATE",
+            "Name: shu wang\nType: PERSON",
+            "Name: bookrag: a hierarchical structure-aware index-based approach for retrieval-augmented generation on complex documents\nType: SECTION_TITLE"
+        ],
+        "15": [
+            "Name: artifact availability\nType: SECTION_TITLE",
+            "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE"
+        ],
+        "16": [
+            "Name: https github com sam234990 bookrag\nType: SOFTWARE"
+        ],
+        "17": [
+            "Name: 1 introduction\nType: SECTION_TITLE"
+        ],
+        "18": [
+            "Name: question answering (qa) task\nType: TASK_OR_PROBLEM",
+            "Name: gemini 2 5\nType: MODEL_OR_ARCHITECTURE",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: qwen 3\nType: MODEL_OR_ARCHITECTURE"
+        ],
+        "19": [
+            "Name: proceedings of the vldb endowment (pvldb)\nType: PUBLICATION_VENUE",
+            "Name: vldb endowment\nType: ORGANIZATION",
+            "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: creative commons by nc nd 4 0 international license\nType: LAW",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: question answering (qa) task\nType: TASK_OR_PROBLEM"
+        ],
+        "20": [
+            "Name: fails on structural dependencies\nType: LIMITATION",
+            "Name: complex query\nType: PARAMETER_OR_VARIABLE",
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: complex multi-page document\nType: DOCUMENT",
+            "Name: accurate, structured-grounded\nType: EVALUATION_METRIC",
+            "Name: unstructured chunks\nType: DATA_STRUCTURE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: plain text extraction (ocr)\nType: METHOD_OR_TECHNIQUE",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: fixed/graph retrieval\nType: METHOD_OR_TECHNIQUE",
+            "Name: agent-based query method (agent-based retrieval)\nType: METHOD_OR_TECHNIQUE",
+            "Name: layout segmented rag\nType: MODEL_OR_ARCHITECTURE",
+            "Name: hierarchical chunks\nType: DATA_STRUCTURE",
+            "Name: text-based rag approaches (text-only rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: loses complex relationships\nType: LIMITATION",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: text index (vector/graph/tree)\nType: DATA_STRUCTURE",
+            "Name: flattened vector index\nType: DATA_STRUCTURE",
+            "Name: figure 1\nType: IMAGE"
+        ],
+        "21": [
+            "Name: ocr\nType: TECHNOLOGY",
+            "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE",
+            "Name: rag\nType: METHOD_OR_TECHNIQUE",
+            "Name: figure 1\nType: IMAGE"
+        ],
+        "22": [
+            "Name: the image\nType: IMAGE",
+            "Name: book icon\nType: ARTWORK",
+            "Name: image\nType: IMAGE"
+        ],
+        "23": [
+            "Name: image\nType: IMAGE",
+            "Name: the image\nType: IMAGE",
+            "Name: photograph/table icon\nType: IMAGE"
+        ],
+        "24": [
+            "Name: tree i\nType: IMAGE"
+        ],
+        "25": [
+            "Name: the image\nType: IMAGE",
+            "Name: image\nType: IMAGE"
+        ],
+        "26": [
+            "Name: the image\nType: IMAGE",
+            "Name: image entity\nType: UNKNOWN",
+            "Name: circle\nType: SHAPE"
+        ],
+        "27": [
+            "Name: the image\nType: IMAGE",
+            "Name: image\nType: IMAGE"
+        ],
+        "28": [
+            "Name: method\nType: EQUATION_OR_FORMULA",
+            "Name: figure 2\nType: IMAGE",
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: gradient-based entity resolution\nType: METHOD_OR_TECHNIQUE",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: image bookindex construction gt-link relation figure\nType: UNKNOWN",
+            "Name: merge\nType: METHOD_OR_TECHNIQUE",
+            "Name: match?\nType: TASK_OR_PROBLEM",
+            "Name: moe layer\nType: SECTION_TITLE",
+            "Name: experiment\nType: EQUATION_OR_FORMULA",
+            "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+            "Name: kg construction\nType: METHOD_OR_TECHNIQUE",
+            "Name: tree construction\nType: METHOD_OR_TECHNIQUE",
+            "Name: graph construction\nType: METHOD_OR_TECHNIQUE",
+            "Name: tree nodes\nType: MODEL_OR_ARCHITECTURE"
+        ],
+        "29": [
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: 4.1 overview of bookindex\nType: SECTION_TITLE"
+        ],
+        "30": [
+            "Name: knowledge graph\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: tree structure\nType: MODEL_OR_ARCHITECTURE",
+            "Name: t\nType: PARAMETER_OR_VARIABLE",
+            "Name: m\nType: PARAMETER_OR_VARIABLE",
+            "Name: graph tree link (gt link)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: e g\nType: PARAMETER_OR_VARIABLE",
+            "Name: v\nType: PARAMETER_OR_VARIABLE",
+            "Name: e t\nType: PARAMETER_OR_VARIABLE",
+            "Name: g\nType: PARAMETER_OR_VARIABLE",
+            "Name: n\nType: PARAMETER_OR_VARIABLE"
+        ],
+        "31": [
+            "Name: figure 2\nType: IMAGE",
+            "Name: section nodes\nType: SECTION_TITLE",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: graph tree link (gt link)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: tree structure\nType: MODEL_OR_ARCHITECTURE",
+            "Name: content blocks\nType: SECTION_TITLE",
+            "Name: image\nType: IMAGE",
+            "Name: relations\nType: PARAMETER_OR_VARIABLE",
+            "Name: leaf nodes\nType: SECTION_TITLE",
+            "Name: entities\nType: PARAMETER_OR_VARIABLE",
+            "Name: tables\nType: TABLE",
+            "Name: graph component\nType: MODEL_OR_ARCHITECTURE",
+            "Name: text\nType: SECTION_TITLE"
+        ],
+        "32": [
+            "Name: tree construction\nType: METHOD_OR_TECHNIQUE"
+        ],
+        "33": [
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: raw document (d)\nType: DATASET_OR_CORPUS",
+            "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+            "Name: t\nType: MODEL_OR_ARCHITECTURE"
+        ],
+        "34": [
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: raw document (d)\nType: DATASET_OR_CORPUS"
+        ],
+        "35": [
+            "Name: image\nType: IMAGE",
+            "Name: text\nType: SECTION_TITLE",
+            "Name: title\nType: SECTION_TITLE",
+            "Name: fontsize\nType: PARAMETER_OR_VARIABLE",
+            "Name: primitive blocks\nType: MODEL_OR_ARCHITECTURE",
+            "Name: table\nType: TABLE"
+        ],
+        "36": [
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+            "Name: title\nType: SECTION_TITLE",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: text\nType: SECTION_TITLE"
+        ],
+        "37": [
+            "Name: section\nType: SECTION_TITLE",
+            "Name: table\nType: TABLE",
+            "Name: text\nType: SECTION_TITLE",
+            "Name: image\nType: IMAGE"
+        ],
+        "38": [
+            "Name: figure 2\nType: IMAGE",
+            "Name: layout analysis & parsing (layout parsing)\nType: METHOD_OR_TECHNIQUE",
+            "Name: experiment\nType: SECTION_TITLE",
+            "Name: fontsize 14\nType: PARAMETER_OR_VARIABLE",
+            "Name: image\nType: IMAGE",
+            "Name: moe layer\nType: SECTION_TITLE",
+            "Name: level 2\nType: PARAMETER_OR_VARIABLE",
+            "Name: text\nType: SECTION_TITLE",
+            "Name: title\nType: SECTION_TITLE",
+            "Name: intelligent section filtering\nType: METHOD_OR_TECHNIQUE",
+            "Name: method\nType: SECTION_TITLE",
+            "Name: large language models (llms)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: table\nType: TABLE"
+        ],
+        "39": [
+            "Name: 4\nType: NUMBER"
+        ],
+        "40": [
+            "Name: retrieval-augmented generation (rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: exact match mmlongbench\nType: EVALUATION_METRIC",
+            "Name: accuracy qasper\nType: EVALUATION_METRIC",
+            "Name: raptor\nType: METHOD_OR_TECHNIQUE",
+            "Name: docetl\nType: METHOD_OR_TECHNIQUE",
+            "Name: question answering (qa) task\nType: TASK_OR_PROBLEM",
+            "Name: method\nType: PARAMETER_OR_VARIABLE",
+            "Name: graphrag-global\nType: METHOD_OR_TECHNIQUE",
+            "Name: mmlongbench\nType: DATASET_OR_CORPUS",
+            "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: bm25\nType: METHOD_OR_TECHNIQUE",
+            "Name: performance comparison\nType: EVALUATION_METRIC",
+            "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+            "Name: f1-score qasper\nType: EVALUATION_METRIC",
+            "Name: qasper\nType: DATASET_OR_CORPUS",
+            "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE",
+            "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+            "Name: f1-score mmlongbench\nType: EVALUATION_METRIC",
+            "Name: baseline type\nType: PARAMETER_OR_VARIABLE",
+            "Name: exact match m3docvqa\nType: EVALUATION_METRIC",
+            "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+            "Name: table 5\nType: TABLE",
+            "Name: f1-score m3docvqa\nType: EVALUATION_METRIC"
+        ],
+        "41": [
+            "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+            "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookindex\nType: MODEL_OR_ARCHITECTURE",
+            "Name: vanilla rag\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: agent based planning\nType: METHOD_OR_TECHNIQUE",
+            "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+            "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+            "Name: exact match\nType: EVALUATION_METRIC"
+        ],
+        "42": [
+            "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+            "Name: table 6\nType: TABLE",
+            "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: retrieval recall\nType: EVALUATION_METRIC",
+            "Name: qasper\nType: DATASET_OR_CORPUS",
+            "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+            "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+            "Name: method\nType: PARAMETER_OR_VARIABLE",
+            "Name: layout-based methods\nType: METHOD_OR_TECHNIQUE",
+            "Name: mmlongbench\nType: DATASET_OR_CORPUS",
+            "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE"
+        ],
+        "43": [
+            "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: agent based planning\nType: METHOD_OR_TECHNIQUE",
+            "Name: 6 86\nType: MEASUREMENT",
+            "Name: 44 5\nType: PERCENTAGE",
+            "Name: k 10\nType: PARAMETER_OR_VARIABLE",
+            "Name: m3docvqa\nType: DATASET_OR_CORPUS",
+            "Name: reasoner\nType: MODEL_OR_ARCHITECTURE",
+            "Name: selector\nType: MODEL_OR_ARCHITECTURE",
+            "Name: 8 6\nType: MEASUREMENT",
+            "Name: 9 87\nType: MEASUREMENT",
+            "Name: skyline ranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: 71 2\nType: PERCENTAGE"
+        ],
+        "44": [
+            "Name: layout + vanilla\nType: METHOD_OR_TECHNIQUE",
+            "Name: graphranker\nType: MODEL_OR_ARCHITECTURE",
+            "Name: vanilla rag\nType: MODEL_OR_ARCHITECTURE",
+            "Name: image\nType: IMAGE",
+            "Name: raptor\nType: METHOD_OR_TECHNIQUE",
+            "Name: the image\nType: IMAGE",
+            "Name: docetl\nType: METHOD_OR_TECHNIQUE",
+            "Name: tree-traverse\nType: METHOD_OR_TECHNIQUE",
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: graph based rag (graphrag-local)\nType: METHOD_OR_TECHNIQUE",
+            "Name: graphrag-global\nType: METHOD_OR_TECHNIQUE",
+            "Name: bm25\nType: METHOD_OR_TECHNIQUE",
+            "Name: mm-vanilla\nType: METHOD_OR_TECHNIQUE"
+        ],
+        "45": [
+            "Name: token (m)\nType: MEASUREMENT",
+            "Name: time (s)\nType: MEASUREMENT",
+            "Name: image\nType: IMAGE",
+            "Name: query time\nType: EVALUATION_METRIC",
+            "Name: mmlongbench\nType: IMAGE",
+            "Name: token cost\nType: EVALUATION_METRIC"
+        ],
+        "46": [
+            "Name: token (m)\nType: MEASUREMENT",
+            "Name: time (s)\nType: MEASUREMENT",
+            "Name: image\nType: IMAGE",
+            "Name: query time\nType: EVALUATION_METRIC",
+            "Name: m3docvqa\nType: IMAGE",
+            "Name: token cost\nType: EVALUATION_METRIC"
+        ],
+        "47": [
+            "Name: token (m)\nType: MEASUREMENT",
+            "Name: time (s)\nType: MEASUREMENT",
+            "Name: query time\nType: EVALUATION_METRIC",
+            "Name: qasper\nType: DATASET_OR_CORPUS",
+            "Name: figure 5\nType: IMAGE",
+            "Name: token cost\nType: EVALUATION_METRIC"
+        ],
+        "48": [
+            "Name: bookrag\nType: METHOD_OR_TECHNIQUE",
+            "Name: docetl\nType: METHOD_OR_TECHNIQUE",
+            "Name: multi modal methods\nType: MODEL_OR_ARCHITECTURE",
+            "Name: figure 5\nType: IMAGE",
+            "Name: text-based rag approaches (text-only rag)\nType: METHOD_OR_TECHNIQUE",
+            "Name: graph based rag methods\nType: MODEL_OR_ARCHITECTURE"
+        ],
+        "49": [
+            "Name: 10\nType: MEASUREMENT"
+        ]
+    },
+    "variant": null
+}

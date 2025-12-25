@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "4.2 tree construction",
+      "entity_type": "SECTION_TITLE",
+      "description": "As a subsection of the paper 'BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents', this section details the methodology for building a hierarchical tree structure, which is a core component of the proposed indexing approach for complex document retrieval.",
+      "source_ids": [
+        32
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 32
+}

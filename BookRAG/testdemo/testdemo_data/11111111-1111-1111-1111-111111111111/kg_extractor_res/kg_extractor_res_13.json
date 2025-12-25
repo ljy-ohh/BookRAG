@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "pvldb",
+      "entity_type": "PUBLICATION_VENUE",
+      "description": "pvldb is a publication venue referenced in the document",
+      "source_ids": [
+        13
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 13
+}

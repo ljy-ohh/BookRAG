@@ -1,0 +1,22 @@
+{
+  "entities": [
+    {
+      "entity_name": "fangyixiang",
+      "entity_type": "PERSON",
+      "description": "a person mentioned in the text via an email address",
+      "source_ids": [
+        10
+      ]
+    },
+    {
+      "entity_name": "cuhk",
+      "entity_type": "ORGANIZATION",
+      "description": "an organization indicated by the email domain  likely an educational institution",
+      "source_ids": [
+        10
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 10
+}

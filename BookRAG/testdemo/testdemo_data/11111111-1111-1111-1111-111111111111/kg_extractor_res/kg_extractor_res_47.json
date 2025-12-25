@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "entity_name": "figure 5",
+      "entity_type": "IMAGE",
+      "description": "A comparison chart showing query efficiency with two metrics: Query Time in seconds and Token cost, depicted through bar graphs under the label 'Qasper'.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "query time",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A comparative metric measured in seconds for assessing query efficiency displayed on the left bar graph.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "token cost",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A comparative metric measured in tokens for assessing query efficiency, shown on the right bar graph.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "qasper",
+      "entity_type": "TOOL_OR_PLATFORM",
+      "description": "The dataset or system for which the query efficiency in terms of time and token cost is compared.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "time (s)",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "The unit in which the Query Time is measured, representing seconds on the chart's vertical axis.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "token (m)",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "The unit in which Token cost is measured, representing millions of tokens on the chart's vertical axis.",
+      "source_ids": [
+        47
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "figure 5",
+      "tgt_entity_name": "query time",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Figure 5 related to Query Time",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "figure 5",
+      "tgt_entity_name": "token cost",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Figure 5 related to Token cost",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "figure 5",
+      "tgt_entity_name": "qasper",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Figure 5 related to Qasper",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "figure 5",
+      "tgt_entity_name": "time (s)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Figure 5 related to time (s)",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "figure 5",
+      "tgt_entity_name": "token (m)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Figure 5 related to token (M)",
+      "source_ids": [
+        47
+      ]
+    }
+  ],
+  "node_idx": 47
+}

@@ -1,0 +1,95 @@
+{
+  "entities": [
+    {
+      "entity_name": "creative commons by nc nd 4 0 international license",
+      "entity_type": "LAW",
+      "description": "a license under which this work is distributed  specifying terms of use",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "entity_name": "vldb endowment",
+      "entity_type": "ORGANIZATION",
+      "description": "an organization that holds publication rights for the proceedings mentioned in the text",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "entity_name": "proceedings of the vldb endowment",
+      "entity_type": "PUBLICATION_VENUE",
+      "description": "a publication venue where the work is published  as indicated by the citation details",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "entity_name": "retrieval augmented generation rag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "a technique used to enhance language models by retrieving external domain knowledge for response generation",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "entity_name": "llms",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "language models that are used in applications but may lack current or domain specific knowledge",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "entity_name": "qa",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "the task of question answering  which is the focus of the designed rag system in the paper",
+      "source_ids": [
+        19
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "creative commons by nc nd 4 0 international license",
+      "tgt_entity_name": "vldb endowment",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the license covers the work whose publication rights are held by the vldb endowment",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "src_entity_name": "proceedings of the vldb endowment",
+      "tgt_entity_name": "vldb endowment",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the proceedings are published by the vldb endowment  as indicated in the publication details",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "src_entity_name": "retrieval augmented generation rag",
+      "tgt_entity_name": "llms",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "rag is adopted to address issues with llms by retrieving external knowledge to guide them",
+      "source_ids": [
+        19
+      ]
+    },
+    {
+      "src_entity_name": "retrieval augmented generation rag",
+      "tgt_entity_name": "qa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the paper aims to design a rag system specifically for the qa task over structured documents",
+      "source_ids": [
+        19
+      ]
+    }
+  ],
+  "node_idx": 19
+}

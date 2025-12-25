@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "entity_name": "large language models llms",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "large language models are models whose performance is boosted for question answering tasks",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "retrieval augmented generation rag",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "retrieval augmented generation is a method to improve llm performance by querying relevant information from external documents",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookrag is a novel rag approach designed for documents with a hierarchical structure",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "bookindex",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookindex is a novel index structure built by extracting a hierarchical tree from a document",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "information foraging theory",
+      "entity_type": "SCIENTIFIC_THEORY",
+      "description": "information foraging theory is a theory that inspires the agent based query method in bookrag",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "question answering qa task",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "the question answering task is the performance target for llms that rag methods aim to boost",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "hierarchical structure",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "a hierarchical structure is a property of many real world documents that organizes content at different granularity levels",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "agent based query method",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "an agent based query method is proposed in bookrag  inspired by information foraging theory",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "retrieval recall",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "retrieval recall is a metric on which bookrag s performance is evaluated",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "entity_name": "qa accuracy",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "qa accuracy is a metric on which bookrag s performance is evaluated",
+      "source_ids": [
+        12
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "retrieval augmented generation rag",
+      "tgt_entity_name": "large language models llms",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "rag is a method used to boost the performance of llms on the qa task",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "retrieval augmented generation rag",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookrag is introduced as a novel rag approach targeted for hierarchically structured documents",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "bookindex",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag leverages the bookindex  a novel index structure  for its operation",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "hierarchical structure",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag is specifically targeted for documents with a hierarchical structure",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "agent based query method",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag proposes an agent based query method as part of its approach",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "agent based query method",
+      "tgt_entity_name": "information foraging theory",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the agent based query method is inspired by the information foraging theory",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "retrieval recall",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag s performance is demonstrated by achieving state of the art results in retrieval recall",
+      "source_ids": [
+        12
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "qa accuracy",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag s performance is demonstrated by achieving state of the art results in qa accuracy",
+      "source_ids": [
+        12
+      ]
+    }
+  ],
+  "node_idx": 12
+}

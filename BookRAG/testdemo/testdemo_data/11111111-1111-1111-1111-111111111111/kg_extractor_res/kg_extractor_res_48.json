@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookrag is a model or architecture evaluated for efficiency in terms of query time and token consumption",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "graph based rag methods",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "graph based rag methods are existing approaches to which bookrag is compared in terms of time and token costs",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "text based rag approaches",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "text based rag approaches are methods that generally have lower latency and token usage due to not processing images",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "multi modal methods",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "multi modal methods are a category of approaches among which bookrag maintains balanced efficiency",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "docetl",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "docetl is the strongest baseline to which bookrag is compared  with bookrag reducing token consumption by an order of magnitude",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "figure 5",
+      "entity_type": "IMAGE",
+      "description": "figure 5 is an image that illustrates the evaluation of efficiency in terms of query time and token consumption",
+      "source_ids": [
+        48
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "graph based rag methods",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag is compared to existing graph based rag methods  maintaining comparable time and token costs",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "text based rag approaches",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "bookrag is contrasted with text based rag approaches  which generally have lower latency and token usage",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "multi modal methods",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag maintains a balanced efficiency among multi modal methods",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "docetl",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag reduces token consumption by an order of magnitude compared to the strongest baseline  docetl",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "figure 5",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "figure 5 illustrates the evaluation of bookrag s efficiency in terms of query time and token consumption",
+      "source_ids": [
+        48
+      ]
+    }
+  ],
+  "node_idx": 48
+}

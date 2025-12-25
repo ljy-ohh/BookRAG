@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "yixiang fang",
+      "entity_type": "PERSON",
+      "description": "yixiang fang is a person mentioned in the text",
+      "source_ids": [
+        8
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 8
+}

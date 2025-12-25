@@ -1,0 +1,97 @@
+{
+  "entities": [
+    {
+      "entity_name": "section filtering",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "a phase that processes an initial sequence to identify a document s logically hierarchical structure",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "entity_name": "layout parsing",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "a method that identifies blocks as title but does not assign their hierarchical level",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "entity_name": "llm",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "a model used for analyzing content and layout features to determine hierarchical levels and node types",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "entity_name": "tit1e",
+      "entity_type": "SECTION_TITLE",
+      "description": "a type of block identified by layout parsing  which may be re classified in the section filtering phase",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "entity_name": "text",
+      "entity_type": "SECTION_TITLE",
+      "description": "a final node type that a block can be re classified as  such as from an erroneous tit1e",
+      "source_ids": [
+        36
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "layout parsing",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "section filtering processes the initial sequence of blocks identified by layout parsing",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "src_entity_name": "section filtering",
+      "tgt_entity_name": "llm",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "section filtering uses an llm based analysis to determine hierarchical levels and node types",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "src_entity_name": "layout parsing",
+      "tgt_entity_name": "tit1e",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "layout parsing identifies blocks as tit1e",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "src_entity_name": "llm",
+      "tgt_entity_name": "tit1e",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the llm analyzes candidates  including those identified as tit1e  to re classify them",
+      "source_ids": [
+        36
+      ]
+    },
+    {
+      "src_entity_name": "llm",
+      "tgt_entity_name": "text",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the llm can re classify a block  such as from tit1e  to a final node type like text",
+      "source_ids": [
+        36
+      ]
+    }
+  ],
+  "node_idx": 36
+}

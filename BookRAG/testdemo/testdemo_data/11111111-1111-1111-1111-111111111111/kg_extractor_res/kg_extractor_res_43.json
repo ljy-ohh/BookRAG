@@ -1,0 +1,221 @@
+{
+  "entities": [
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookrag is a retrieval model evaluated for its performance on layout based tasks  achieving the highest recall across datasets",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "m3docvqa",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "m3docvqa is a dataset on which bookrag achieved a recall of 71 2",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "graphranker",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "graphranker is a baseline model compared against bookrag  with a maximum recall of 44 5",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "selector",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "the selector is a component in bookrag s workflow that narrows the search to a precise information patch",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "reasoner",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "the reasoner is a component in bookrag s workflow that analyzes information after the selector",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "agent based planning",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "agent based planning is a method used in bookrag to first classify the query",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "skyline ranker",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "skyline ranker is a process in bookrag that retains an average number of nodes comparable to a top k setting",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "71 2",
+      "entity_type": "PERCENTAGE",
+      "description": "71 2  is the recall percentage achieved by bookrag on the m3docvqa dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "44 5",
+      "entity_type": "PERCENTAGE",
+      "description": "44 5  is the maximum recall percentage achieved by the graphranker baseline",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "9 87",
+      "entity_type": "MEASUREMENT",
+      "description": "9 87 is the average number of retained nodes after the skyline ranker process on one dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "6 86",
+      "entity_type": "MEASUREMENT",
+      "description": "6 86 is the average number of retained nodes after the skyline ranker process on another dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "8 6",
+      "entity_type": "MEASUREMENT",
+      "description": "8 6 is the average number of retained nodes after the skyline ranker process on a third dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "k 10",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "k   10 is a standard top k setting parameter mentioned for comparison with bookrag s retained nodes",
+      "source_ids": [
+        43
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag achieved a recall of 71 2  on the m3docvqa dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "graphranker",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag significantly outperforms graphranker in retrieval recall  with 71 2  vs  44 5",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "selector",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag uses the selector as a component in its ift inspired workflow to narrow search",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "reasoner",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "bookrag uses the reasoner as a component in its ift inspired workflow to analyze information",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "agent based planning",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag employs agent based planning to classify the query as part of its workflow",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "skyline ranker",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag incorporates the skyline ranker process to retain a comparable number of nodes to a top k setting",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "selector",
+      "tgt_entity_name": "reasoner",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the selector narrows the search  followed by the reasoner s analysis in bookrag s workflow",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "agent based planning",
+      "tgt_entity_name": "selector",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "agent based planning classifies the query  enabling the selector to narrow the search",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "skyline ranker",
+      "tgt_entity_name": "9 87",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the skyline ranker process results in an average of 9 87 retained nodes on one dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "skyline ranker",
+      "tgt_entity_name": "6 86",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the skyline ranker process results in an average of 6 86 retained nodes on another dataset",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "skyline ranker",
+      "tgt_entity_name": "8 6",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the skyline ranker process results in an average of 8 6 retained nodes on a third dataset",
+      "source_ids": [
+        43
+      ]
+    }
+  ],
+  "node_idx": 43
+}

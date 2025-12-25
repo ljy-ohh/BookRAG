@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "entity_name": "m3docvqa",
+      "entity_type": "IMAGE",
+      "description": "A pair of bar charts showing Query Time (left) and Token cost (right), comparing different methods, including their time in seconds and token costs.",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "entity_name": "query time",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A bar chart displaying the time taken by different methods for a query in seconds.",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "entity_name": "token cost",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "A bar chart showing the token costs for different methods in millions of tokens.",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "entity_name": "time (s)",
+      "entity_type": "MEASUREMENT",
+      "description": "The vertical axis for the left bar chart, representing time in seconds (s) on a logarithmic scale.",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "entity_name": "token (m)",
+      "entity_type": "MEASUREMENT",
+      "description": "The vertical axis for the right bar chart, representing token costs in millions (M) of tokens on a logarithmic scale.",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        46
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to M3DocVQA",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "query time",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Query Time",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "token cost",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Token cost",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "time (s)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to time (s)",
+      "source_ids": [
+        46
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "token (m)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to token (M)",
+      "source_ids": [
+        46
+      ]
+    }
+  ],
+  "node_idx": 46
+}

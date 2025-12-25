@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "entity_name": "mmlongbench",
+      "entity_type": "IMAGE",
+      "description": "A graph set showing query time and token cost evaluations for different components including MMLongBench. The x-axis indicates 'Query Time' and 'Token cost', while the y-axis represents time in seconds and tokens in millions, respectively.",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "entity_name": "query time",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "The metric measuring the time taken for queries, displayed on the left graph's x-axis, with corresponding time values (in seconds) on the y-axis.",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "entity_name": "token cost",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "The metric measuring the token cost related to different components, shown on the right graph's x-axis, with token values (in millions) on the y-axis.",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "entity_name": "time (s)",
+      "entity_type": "MEASUREMENT",
+      "description": "A measurement of time in seconds, depicted on the left graph’s y-axis.",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "entity_name": "token (m)",
+      "entity_type": "MEASUREMENT",
+      "description": "A measurement of tokens in millions, shown on the right graph's y-axis.",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        45
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "mmlongbench",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to MMLongBench",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "query time",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Query Time",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "token cost",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to Token cost",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "time (s)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to time (s)",
+      "source_ids": [
+        45
+      ]
+    },
+    {
+      "src_entity_name": "image",
+      "tgt_entity_name": "token (m)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image  related to token (M)",
+      "source_ids": [
+        45
+      ]
+    }
+  ],
+  "node_idx": 45
+}

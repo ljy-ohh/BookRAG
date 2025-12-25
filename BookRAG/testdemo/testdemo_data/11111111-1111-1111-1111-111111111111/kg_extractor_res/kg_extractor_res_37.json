@@ -1,0 +1,99 @@
+{
+  "entities": [
+    {
+      "entity_name": "text",
+      "entity_type": "SECTION_TITLE",
+      "description": "text is a type of node in the tree structure  representing a block of textual content",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "entity_name": "section",
+      "entity_type": "SECTION_TITLE",
+      "description": "section is a type of node in the tree structure  representing a hierarchical section with a determined level",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "entity_name": "table",
+      "entity_type": "TABLE",
+      "description": "table is a type of node in the tree structure  representing a block of tabular content",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "entity_name": "image",
+      "entity_type": "IMAGE",
+      "description": "image is a type of node in the tree structure  representing a block of image content",
+      "source_ids": [
+        37
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "section",
+      "tgt_entity_name": "text",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both section and text are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "src_entity_name": "section",
+      "tgt_entity_name": "table",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both section and table are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "src_entity_name": "section",
+      "tgt_entity_name": "image",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both section and image are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "src_entity_name": "text",
+      "tgt_entity_name": "table",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both text and table are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "src_entity_name": "text",
+      "tgt_entity_name": "image",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both text and image are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    },
+    {
+      "src_entity_name": "table",
+      "tgt_entity_name": "image",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both table and image are node types in the definitive tree structure t",
+      "source_ids": [
+        37
+      ]
+    }
+  ],
+  "node_idx": 37
+}

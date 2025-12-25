@@ -1,0 +1,241 @@
+{
+  "entities": [
+    {
+      "entity_name": "figure 2",
+      "entity_type": "IMAGE",
+      "description": "figure 2 is an image that provides an example of bookindex",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "bookindex",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookindex is a model or architecture that includes a tree component and a graph component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "tree component",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "the tree component organizes the document into a hierarchical structure with content blocks as leaf nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "graph component",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "the graph component is composed of entities and relations extracted from document nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "gt link",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "gt link is a component that connects entities back to their corresponding tree nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "entities",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "entities are extracted from document nodes and are part of the graph component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "relations",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "relations are extracted from document nodes and are part of the graph component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "content blocks",
+      "entity_type": "SECTION_TITLE",
+      "description": "content blocks such as text  tables  and images serve as leaf nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "text",
+      "entity_type": "SECTION_TITLE",
+      "description": "text is a type of content block that serves as a leaf node in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "tables",
+      "entity_type": "TABLE",
+      "description": "tables are a type of content block that serve as leaf nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "images",
+      "entity_type": "IMAGE",
+      "description": "images are a type of content block that serve as leaf nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "leaf nodes",
+      "entity_type": "SECTION_TITLE",
+      "description": "leaf nodes are content blocks nested within section nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "entity_name": "section nodes",
+      "entity_type": "SECTION_TITLE",
+      "description": "section nodes are part of the hierarchical structure in the tree component  containing leaf nodes",
+      "source_ids": [
+        31
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "figure 2",
+      "tgt_entity_name": "bookindex",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "figure 2 provides an example of bookindex",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "tree component",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the tree component is part of bookindex  organizing the document hierarchically",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "graph component",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the graph component is part of bookindex  composed of entities and relations",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "tree component",
+      "tgt_entity_name": "content blocks",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the tree component organizes content blocks as leaf nodes within its structure",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "graph component",
+      "tgt_entity_name": "entities",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the graph component is composed of entities extracted from document nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "graph component",
+      "tgt_entity_name": "relations",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the graph component is composed of relations extracted from document nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "gt link",
+      "tgt_entity_name": "entities",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "gt link connects entities back to their corresponding tree nodes",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "gt link",
+      "tgt_entity_name": "tree component",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "gt link connects entities to tree nodes within the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "content blocks",
+      "tgt_entity_name": "leaf nodes",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "content blocks serve as leaf nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "content blocks",
+      "tgt_entity_name": "text",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "text is a type of content block in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "content blocks",
+      "tgt_entity_name": "tables",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "tables are a type of content block in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "content blocks",
+      "tgt_entity_name": "images",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "images are a type of content block in the tree component",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "leaf nodes",
+      "tgt_entity_name": "section nodes",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "leaf nodes are nested within section nodes in the tree component",
+      "source_ids": [
+        31
+      ]
+    }
+  ],
+  "node_idx": 31
+}

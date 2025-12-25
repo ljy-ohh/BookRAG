@@ -1,0 +1,22 @@
+{
+  "entities": [
+    {
+      "entity_name": "pvldb",
+      "entity_type": "PUBLICATION_VENUE",
+      "description": "pvldb is a publication venue mentioned in the text",
+      "source_ids": [
+        15
+      ]
+    },
+    {
+      "entity_name": "artifact availability",
+      "entity_type": "SECTION_TITLE",
+      "description": "artifact availability is a section title in the text",
+      "source_ids": [
+        15
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 15
+}

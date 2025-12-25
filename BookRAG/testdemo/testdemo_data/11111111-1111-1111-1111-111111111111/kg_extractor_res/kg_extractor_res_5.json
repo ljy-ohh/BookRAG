@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "yingli zhou",
+      "entity_type": "PERSON",
+      "description": "yingli zhou is a person mentioned in the text",
+      "source_ids": [
+        5
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 5
+}

@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "abstract",
+      "entity_type": "SECTION_TITLE",
+      "description": "As the initial major section of the paper 'BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents', this section provides a concise summary of the research problem, the proposed methodology, and the key findings or contributions of the study.",
+      "source_ids": [
+        11
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 11
+}

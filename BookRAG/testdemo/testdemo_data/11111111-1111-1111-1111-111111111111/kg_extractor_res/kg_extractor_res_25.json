@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {
+      "entity_name": "the image",
+      "entity_type": "IMAGE",
+      "description": "An unspecified image with no accompanying description for analysis.",
+      "source_ids": [
+        25
+      ]
+    },
+    {
+      "entity_name": "image ··",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        25
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "image ··",
+      "tgt_entity_name": "the image",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Image entity Image ·· related to The Image",
+      "source_ids": [
+        25
+      ]
+    }
+  ],
+  "node_idx": 25
+}

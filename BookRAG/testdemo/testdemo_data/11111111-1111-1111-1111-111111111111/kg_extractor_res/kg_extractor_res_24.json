@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "tree i",
+      "entity_type": "IMAGE",
+      "description": "An image depicting a tree or a reference to the concept of a tree as suggested by the label 'Tree I'.",
+      "source_ids": [
+        24
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 24
+}

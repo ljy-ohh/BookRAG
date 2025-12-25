@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "4",
+      "entity_type": "NUMBER",
+      "description": "the number 4 is mentioned in the text",
+      "source_ids": [
+        39
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 39
+}

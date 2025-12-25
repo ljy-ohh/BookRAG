@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "the chinese university of hong kong shenzhen",
+      "entity_type": "ORGANIZATION",
+      "description": "an educational institution mentioned in the text",
+      "source_ids": [
+        9
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 9
+}

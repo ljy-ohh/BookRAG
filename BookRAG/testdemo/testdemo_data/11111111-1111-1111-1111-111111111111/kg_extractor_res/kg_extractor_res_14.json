@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "entity_name": "shu wang",
+      "entity_type": "PERSON",
+      "description": "shu wang is a person listed as an author of the research paper",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "entity_name": "yingli zhou",
+      "entity_type": "PERSON",
+      "description": "yingli zhou is a person listed as an author of the research paper",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "entity_name": "yixiang fang",
+      "entity_type": "PERSON",
+      "description": "yixiang fang is a person listed as an author of the research paper",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "entity_type": "TITLE",
+      "description": "bookrag is the title of a research paper on retrieval augmented generation",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "entity_name": "pvldb",
+      "entity_type": "PUBLICATION_VENUE",
+      "description": "pvldb is the publication venue where the research paper is published",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "entity_name": "2025",
+      "entity_type": "DATE",
+      "description": "2025 is the publication year of the research paper",
+      "source_ids": [
+        14
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "shu wang",
+      "tgt_entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "shu wang is an author of the paper titled bookrag",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "src_entity_name": "yingli zhou",
+      "tgt_entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "yingli zhou is an author of the paper titled bookrag",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "src_entity_name": "yixiang fang",
+      "tgt_entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "yixiang fang is an author of the paper titled bookrag",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "src_entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "tgt_entity_name": "pvldb",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the paper titled bookrag is published in the venue pvldb",
+      "source_ids": [
+        14
+      ]
+    },
+    {
+      "src_entity_name": "bookrag a hierarchical structure aware index based approach for retrieval augmented generation on complex documents",
+      "tgt_entity_name": "2025",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the paper titled bookrag was published in the year 2025",
+      "source_ids": [
+        14
+      ]
+    }
+  ],
+  "node_idx": 14
+}

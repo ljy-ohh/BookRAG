@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {
+      "entity_name": "4.1 overview of bookindex",
+      "entity_type": "SECTION_TITLE",
+      "description": "As a subsection of the paper's methodology, this section provides a high-level introduction to the BookIndex component, explaining its purpose and role within the overall BookRAG system for handling complex documents, as detailed in the paper's fourth main section.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "bookindex",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "Refers to the core indexing component of the BookRAG system, which is introduced and overviewed in section 4.1.",
+      "source_ids": [
+        29
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "bookindex",
+      "tgt_entity_name": "4.1 overview of bookindex",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The concept of 'BookIndex' is the primary subject and topic of section 4.1.",
+      "source_ids": [
+        29
+      ]
+    }
+  ],
+  "node_idx": 29
+}

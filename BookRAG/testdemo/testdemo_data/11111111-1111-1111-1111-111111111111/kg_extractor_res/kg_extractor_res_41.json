@@ -1,0 +1,139 @@
+{
+  "entities": [
+    {
+      "entity_name": "m3docvqa",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "m3docvqa is a dataset used for evaluating performance in document question answering",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "exact match",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "exact match is a metric used to measure performance in document question answering",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "layout vanilla",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "layout   vanilla is a model that consistently outperforms vanilla rag by preserving layout information",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "vanilla rag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "vanilla rag is a baseline model used for comparison in retrieval augmented generation tasks",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "tree traverse",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "tree traverse is a model that relies on hierarchical navigation and shows suboptimal results",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "graphranker",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "graphranker is a model that uses graph based reasoning and shows suboptimal results",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "bookrag",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "bookrag is a superior model that uses a unified tree graph bookindex and agent based planning for precise retrieval and generation",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "tree graph bookindex",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "tree graph bookindex is a unified indexing structure used by bookrag for effective evidence retrieval",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "entity_name": "agent based planning",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "agent based planning is a technique used by bookrag to configure optimal workflows for query processing",
+      "source_ids": [
+        41
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "layout vanilla",
+      "tgt_entity_name": "vanilla rag",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "layout   vanilla consistently outperforms vanilla rag  indicating its superior performance in preserving structural information",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "tree graph bookindex",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookrag utilizes the tree graph bookindex as part of its architecture for effective evidence retrieval",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "agent based planning",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bookrag employs agent based planning to configure optimal workflows and overcome limitations of static query processing",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "tree traverse",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag overcomes the limitations of tree traverse  which relies solely on hierarchical navigation",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "src_entity_name": "bookrag",
+      "tgt_entity_name": "graphranker",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "bookrag overcomes the limitations of graphranker  which relies solely on graph based reasoning",
+      "source_ids": [
+        41
+      ]
+    },
+    {
+      "src_entity_name": "exact match",
+      "tgt_entity_name": "m3docvqa",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "exact match is used as a performance metric on the m3docvqa dataset",
+      "source_ids": [
+        41
+      ]
+    }
+  ],
+  "node_idx": 41
+}

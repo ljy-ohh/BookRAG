@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "https github com sam234990 bookrag",
+      "entity_type": "SOFTWARE",
+      "description": "a url pointing to a github repository containing source code  data  and other artifacts",
+      "source_ids": [
+        16
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 16
+}
