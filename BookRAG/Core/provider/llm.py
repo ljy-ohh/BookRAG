@@ -7,7 +7,7 @@ from pydantic import BaseModel
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from Core.Common.Memory import Memory
 from Core.configs.llm_config import LLMConfig
-from Core.utils.utils import get_max_output_tokens
+from Core.utils.utils import get_max_output_tokens, try_parse_json_object
 from Core.provider.TokenTracker import TokenTracker
 import time
 
@@ -161,17 +161,43 @@ class OpenAIController(BaseLLMController):
                     )
             messages = [{"role": "user", "content": content_list}]
 
-        completion = self.client.beta.chat.completions.parse(
-            temperature=self.temperature,
-            model=self.model,
-            messages=messages,
-            response_format=schema,
-            extra_body={
-                "chat_template_kwargs": {"enable_thinking": think_mode},
-            },
-        )
+        completion = None
+        try:
+            completion = self.client.beta.chat.completions.parse(
+                temperature=self.temperature,
+                model=self.model,
+                messages=messages,
+                response_format=schema,
+                extra_body={
+                    "chat_template_kwargs": {"enable_thinking": think_mode},
+                },
+            )
+        except Exception as e:
+            log.warning(f"Strict JSON parsing failed: {e}. Attempting fallback with loose parsing.")
+            try:
+                # Fallback: Standard completion + manual parsing
+                completion = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=messages,
+                    temperature=self.temperature,
+                    response_format={"type": "json_object"},
+                )
+                
+                if completion.usage:
+                    tracker = TokenTracker.get_instance()
+                    tracker.add_usage(
+                        prompt_tokens=completion.usage.prompt_tokens,
+                        completion_tokens=completion.usage.completion_tokens,
+                    )
+                
+                content = completion.choices[0].message.content
+                _, parsed_dict = try_parse_json_object(content)
+                return schema.model_validate(parsed_dict)
+            except Exception as fallback_e:
+                log.error(f"Fallback failed: {fallback_e}")
+                raise e
 
-        if completion.usage:
+        if completion and completion.usage:
             tracker = TokenTracker.get_instance()
             tracker.add_usage(
                 prompt_tokens=completion.usage.prompt_tokens,

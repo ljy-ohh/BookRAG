@@ -28,6 +28,7 @@ class TextRerankerProvider:
         torch_dtype: torch.dtype = torch.bfloat16,
         backend: str = "local",
         api_base: str = None,
+        api_key: str = None,
     ):
         """
         初始化Reranker Provider。
@@ -38,27 +39,37 @@ class TextRerankerProvider:
             max_length (int): 模型的最大序列长度。
             use_flash_attention (bool): 是否尝试使用Flash Attention 2以提升性能。
             torch_dtype (torch.dtype): 模型加载时使用的数据类型，如 torch.bfloat16。
-            backend (str): 后端类型，支持 'local' 和 'vllm'。
-            api_base (str): 如果使用 'vllm' 后端，必须提供API基础URL。
+            backend (str): 后端类型，支持 'local', 'vllm', 'openai'。
+            api_base (str): 如果使用 'vllm' 或 'openai' 后端，必须提供API基础URL。
+            api_key (str): 如果使用 'openai' 后端，必须提供API Key。
         """
         self.model_name = model_name
         self.max_length = max_length
         self.backend = backend.lower()
 
         # ==========================================================
-        # vLLM 后端逻辑
+        # vLLM / OpenAI 后端逻辑
         # ==========================================================
-        if self.backend == "vllm":
+        if self.backend in ["vllm", "openai"]:
             if not api_base:
-                raise ValueError("api_base must be provided for the 'vllm' backend.")
+                raise ValueError(f"api_base must be provided for the '{self.backend}' backend.")
             # 您可以根据实际情况修改
             if api_base.strip("/").endswith("rerank"):
                 self.rerank_url = api_base
             else:
                 self.rerank_url = f"{api_base.strip('/')}/rerank"
+
             # 创建一个 session 以复用连接，提升性能
             self.session = requests.Session()
-            log.info(f"Using vLLM backend. Rerank endpoint: {self.rerank_url}")
+
+            # 处理 API Key
+            resolved_key = api_key or os.environ.get("OPENAI_API_KEY") or os.environ.get("SILICONFLOW_API_KEY")
+            if resolved_key:
+                self.session.headers.update({"Authorization": f"Bearer {resolved_key}"})
+            elif self.backend == "openai":
+                raise ValueError("Missing API key for OpenAI-compatible reranker backend.")
+
+            log.info(f"Using {self.backend} backend. Rerank endpoint: {self.rerank_url}")
         # ==========================================================
         # 本地后端逻辑 (将原有代码移入此分支)
         # ==========================================================
@@ -97,9 +108,10 @@ class TextRerankerProvider:
 
             log.info("Reranker model loaded successfully.")
 
+
         else:
             raise ValueError(
-                f"Unsupported backend: {self.backend}. Choose 'local' or 'vllm'."
+                f"Unsupported backend: {self.backend}. Choose 'local', 'vllm' or 'openai'."
             )
         self._define_prompt_template()
 
@@ -132,10 +144,10 @@ class TextRerankerProvider:
             gc.collect()
             log.info("Local reranker resources released.")
 
-        elif self.backend == "vllm":
+        elif self.backend in ["vllm", "openai"]:
             if hasattr(self, "session"):
                 self.session.close()  # 关闭 requests session
-            log.info("vLLM backend session closed.")
+            log.info(f"{self.backend} backend session closed.")
 
         log.info("TextRerankerProvider closed.")
 
@@ -263,24 +275,14 @@ class TextRerankerProvider:
         if not documents or not isinstance(documents, list):
             raise ValueError("Input 'documents' must be a non-empty list of strings.")
 
-        if self.backend == "vllm":
-
-            if instruction is None:
-                # 使用默认的 instruction
-                instruction = "Given a web search query, retrieve relevant passages that answer the query"
-
-            # 格式化查询 (注意 API 可能需要列表，所以我们把单个查询放入列表)
-            formatted_query = self.query_template.format(
-                prefix=self.prefix, instruction=instruction, query=query
-            )
-
-            # 1. 构建 payload，使用原始文本，无需客户端模板
-            all_formatted_documents = [
-                self.document_template.format(doc=doc, suffix=self.suffix)
-                for doc in documents
-            ]
-
+        if self.backend in ["vllm", "openai"]:
+            # For API-based backends, send raw text. The API provider handles templating.
+            # 1. Prepare query and documents
+            # If instruction is provided, some APIs might support it, but standard Rerank API usually just takes 'query'.
+            # For Qwen-Reranker via API, we assume the API handles the prompt construction or we just send the query.
+            # To be safe and avoid double-templating or 500 errors, we send raw strings.
             
+            # 2. Process in batches
             all_results = []
             num_docs = len(documents)
             num_batches = math.ceil(num_docs / batch_size)
@@ -288,48 +290,73 @@ class TextRerankerProvider:
             try:
                 for i in tqdm(
                     range(0, num_docs, batch_size),
-                    desc="Reranking Batches (vLLM)",
+                    desc=f"Reranking Batches ({self.backend})",
                     total=num_batches,
                     disable=num_docs < batch_size,
                 ):
-                    # 1. 直接从预先格式化好的列表中获取当前批次
-                    batch_formatted_documents = all_formatted_documents[i : i + batch_size]
+                    batch_docs = documents[i : i + batch_size]
 
-                    # 2. 为当前批次构建 payload
+                    # 3. Construct payload
+                    # Ensure all documents are strings
+                    batch_docs = [str(d) for d in batch_docs]
+                    
                     payload = {
                         "model": self.model_name,
-                        "query": formatted_query,
-                        "documents": batch_formatted_documents, # 使用已格式化的批次
+                        "query": query,
+                        "documents": batch_docs,
+                        "top_n": len(batch_docs),
+                        "return_documents": False
                     }
+                    if instruction:
+                        payload["instruction"] = instruction
                     
-                    # 3. 发送 API 请求
-                    response = self.session.post(self.rerank_url, json=payload)
-                    response.raise_for_status()
-                    
-                    data = response.json()
-                    results = data.get("results")
-                    
-                    if results is None or not isinstance(results, list):
-                        log.error(f"Unexpected response format from vLLM reranker: 'results' key not found or not a list. Response: {data}")
-                        raise ValueError("Failed to parse 'results' from vLL-M response.")
+                    # 4. Send API request
+                    try:
+                        response = self.session.post(self.rerank_url, json=payload)
+                        response.raise_for_status()
+                        
+                        data = response.json()
+                        results = data.get("results")
 
-                    # 4. 使用全局索引聚合结果
-                    for r in results:
-                        r['global_index'] = i + r.get('index', 0)
-                    all_results.extend(results)
+                        if results is None or not isinstance(results, list):
+                            log.error(
+                                f"Unexpected response format from {self.backend} reranker: 'results' key not found or not a list. Response: {data}")
+                            # Instead of raising error, treat as failed batch
+                            raise ValueError(f"Failed to parse 'results' from {self.backend} response.")
+
+                        # 4. 使用全局索引聚合结果
+                        for r in results:
+                            r['global_index'] = i + r.get('index', 0)
+                        all_results.extend(results)
+                    
+                    except Exception as batch_err:
+                        log.error(f"Failed to process batch {i//batch_size} (docs {i} to {i+len(batch_docs)}): {batch_err}")
+                        if hasattr(batch_err, 'response') and batch_err.response is not None:
+                             log.error(f"API Response Content: {batch_err.response.text}")
+                        
+                        # Fallback: Assign low score to failed documents to avoid pipeline crash
+                        log.warning("Skipping this batch and assigning default score -1.0")
+                        for idx in range(len(batch_docs)):
+                            all_results.append({
+                                'global_index': i + idx,
+                                'relevance_score': -1.0,
+                                'index': idx
+                            })
 
                 # --- 分批处理结束 ---
 
                 # 5. 根据全局索引对所有结果进行排序
                 all_results.sort(key=lambda r: r.get('global_index', 0))
-                
+
                 # 6. 从排好序的结果中提取分数
                 all_scores = [r['relevance_score'] for r in all_results]
-                
+
                 return all_scores
 
             except requests.exceptions.RequestException as e:
-                log.error(f"Error calling vLLM reranker API: {e}")
+                log.error(f"Error calling {self.backend} reranker API: {e}")
+                if hasattr(e, 'response') and e.response is not None:
+                    log.error(f"API Response Content: {e.response.text}")
                 raise e
 
 

@@ -47,14 +47,14 @@ graph:
   max_gleaning: 0
   refine_type: "advanced"
   embedding_config:
-    model_name: Qwen3-Embedding-0.6B
+    model_name: Qwen/Qwen3-Embedding-8B
     backend: openai
     api_base: https://api.siliconflow.cn/v1
     api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
     max_length: 4096
 #    device: "cuda:0"
   reranker_config:
-    model_name: Qwen3-Reranker-4B
+    model_name: Qwen/Qwen3-Reranker-8B
     backend: openai
     api_base: https://api.siliconflow.cn/v1
     api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
@@ -66,7 +66,7 @@ vdb:
   vdb_dir_name: "pdf_vanilla_vdb"
   collection_name: "PDFVanillaVDB"
   embedding_config:
-    model_name: Qwen3-Embedding-0.6B
+    model_name: Qwen/Qwen3-Embedding-8B
     backend: openai
     api_base: https://api.siliconflow.cn/v1
     api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb
@@ -84,7 +84,7 @@ rag:
     vdb_dir_name: "pdf_vanilla_vdb"
     collection_name: "PDFVanillaVDB"
     embedding_config:
-      model_name: Qwen3-Embedding-0.6B
+      model_name: Qwen/Qwen3-Embedding-8B
       backend: openai
       api_base: https://api.siliconflow.cn/v1
       api_key: sk-ymtdbmwdxitocndfhtampocvepxkhfqlcwbncnmubhfhlfgb

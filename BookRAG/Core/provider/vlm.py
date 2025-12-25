@@ -14,6 +14,7 @@ os.environ["OLLAMA_HOST"] = "http://127.0.0.1:11434"
 
 from Core.configs import vlm_config
 from Core.configs.vlm_config import VLMConfig
+from Core.utils.utils import try_parse_json_object
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -165,15 +166,31 @@ class GPTVLMController(BaseVLMController):
         self.temperature = config.temperature or 0.1
 
     def _encode_image(self, image_path):
-        if isinstance(image_path, Image.Image):
+        try:
+            if isinstance(image_path, Image.Image):
+                img = image_path
+            else:
+                img = Image.open(image_path)
+            
+            # Check dimensions and resize if too small (SiliconFlow/QwenVL requirement: > 28px)
+            width, height = img.size
+            if width < 28 or height < 28:
+                new_width = max(width, 28)
+                new_height = max(height, 28)
+                log.warning(f"Image size ({width}x{height}) is too small. Resizing to ({new_width}x{new_height}).")
+                img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            
             buffered = BytesIO()
-            image_path.save(buffered, format="JPEG")
+            # Ensure RGB for JPEG
+            if img.mode != "RGB":
+                img = img.convert("RGB")
+            
+            img.save(buffered, format="JPEG")
             img_data = buffered.getvalue()
-            base64_encoded = base64.b64encode(img_data).decode("utf-8")
-            return base64_encoded
-        else:
-            with open(image_path, "rb") as image_file:
-                return base64.b64encode(image_file.read()).decode("utf-8")
+            return base64.b64encode(img_data).decode("utf-8")
+        except Exception as e:
+            log.error(f"Failed to encode image: {e}")
+            raise e
 
     def _prepare_messages(
         self,
@@ -295,11 +312,23 @@ class GPTVLMController(BaseVLMController):
         if not system_message_exists:
             messages.insert(0, {"role": "system", "content": json_instruction})
 
-        completion = self.client.chat.completions.create(
-            model=self.model_name,
-            messages=messages,
-            response_format={"type": "json_object"},  # Use modern JSON mode
-        )
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=messages,
+                response_format={"type": "json_object"},  # Use modern JSON mode
+            )
+        except Exception as e:
+            log.warning(f"JSON mode failed: {e}. Attempting fallback to standard mode.")
+            try:
+                # Fallback: Standard completion without response_format
+                completion = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=messages,
+                )
+            except Exception as fallback_e:
+                log.error(f"Fallback VLM generation failed: {fallback_e}")
+                raise e
 
         if completion.usage:
             tracker = TokenTracker.get_instance()
@@ -311,7 +340,14 @@ class GPTVLMController(BaseVLMController):
                 f"Prompt tokens: {completion.usage.prompt_tokens}, Completion tokens: {completion.usage.completion_tokens}"
             )
 
-        return schema.model_validate_json(completion.choices[0].message.content)
+        content = completion.choices[0].message.content
+        try:
+            # Try direct validation first (if JSON mode worked)
+            return schema.model_validate_json(content)
+        except Exception:
+            # Fallback parsing
+            _, parsed_dict = try_parse_json_object(content)
+            return schema.model_validate(parsed_dict)
 
 
 class OllamaVLMController(BaseVLMController):
