@@ -3,7 +3,7 @@
     {
       "entity_name": "hdgse",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "hdgse is a model mentioned in the text as being affected by a data augmentation framework",
+      "description": "a model mentioned in the text in the context of evaluating the impact of a data augmentation framework on its performance",
       "source_ids": [
         22
       ]
@@ -23,7 +23,7 @@
       "tgt_entity_name": "hdgse",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the data augmentation framework is described as having an impact on the performance of the hdgse model",
+      "description": "the data augmentation framework is being evaluated for its impact on the performance of the hdgse model",
       "source_ids": [
         22
       ]

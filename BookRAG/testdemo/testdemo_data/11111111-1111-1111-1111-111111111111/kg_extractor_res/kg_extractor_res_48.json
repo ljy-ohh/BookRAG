@@ -3,183 +3,31 @@
     {
       "entity_name": "table",
       "entity_type": "TABLE",
-      "description": "A table with columns for Font, Character Style, Style, and a confirmation action, likely from a user interface dialog.",
+      "description": "A table with columns for variable symbols, their meanings, and remarks, as indicated by the column headers.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "字体",
+      "entity_name": "变量符号",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The column header for 'Font', representing a typographic setting or selection.",
+      "description": "The first column header 变量符号 (Variable Symbol), listing the symbols or identifiers for variables.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "字符样式",
+      "entity_name": "含义",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The column header for 'Character Style', representing a specific formatting style applied to text characters.",
+      "description": "The second column header 含义 (Meaning), describing the definition or significance of each variable symbol.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "样式",
+      "entity_name": "备注",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The column header for 'Style', representing a broader category of formatting or presentation.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "确定",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "The column header for 'Confirm' or 'OK', representing an action button to finalize selections.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "文本(i)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A text-related category or style setting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "文本(fe)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A text-related category or style setting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "函数功能(g)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for function-related formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "变量(v)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for variable-related formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "希腊字母(l)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for Greek letter formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "u.c.希腊语(g)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for uppercase Greek letter formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "符号(g)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for symbol formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "向量矩阵(m)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for vector and matrix formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "数字(n)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for number formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "数学附加(e)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A category for additional mathematical formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "用户1(1)",
-      "entity_type": "TASK_ORBLEM",
-      "description": "A user-defined category for formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "用户2(2)",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A user-defined category for formatting in a software interface",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "宋体",
-      "entity_type": "FONT",
-      "description": "A Chinese font type used for text and formula elements.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "edwardian script itc",
-      "entity_type": "FONT",
-      "description": "A script font type used for text elements.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "times new roman",
-      "entity_type": "FONT",
-      "description": "A serif font type used for various formula elements.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "symbol",
-      "entity_type": "FONT",
-      "description": "A font type containing symbols, used for Greek letters and mathematical symbols.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "mt extra",
-      "entity_type": "FONT",
-      "description": "A font type containing additional mathematical symbols.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "entity_name": "courier",
-      "entity_type": "FONT",
-      "description": "A monospaced font type used for a user-defined category.",
+      "description": "The third column header 备注 (Remarks), providing additional notes or comments for each variable.",
       "source_ids": [
         48
       ]
@@ -188,220 +36,30 @@
   "relations": [
     {
       "src_entity_name": "table",
-      "tgt_entity_name": "字体",
+      "tgt_entity_name": "变量符号",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '字体'.",
+      "description": "Table 'Table' contains data about '变量符号'.",
       "source_ids": [
         48
       ]
     },
     {
       "src_entity_name": "table",
-      "tgt_entity_name": "字符样式",
+      "tgt_entity_name": "含义",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '字符样式'.",
+      "description": "Table 'Table' contains data about '含义'.",
       "source_ids": [
         48
       ]
     },
     {
       "src_entity_name": "table",
-      "tgt_entity_name": "样式",
+      "tgt_entity_name": "备注",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '样式'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "确定",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '确定'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "文本(i)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '文本(I)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "文本(fe)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '文本(FE)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "函数功能(g)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '函数功能(G)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "变量(v)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '变量(V)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "希腊字母(l)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '希腊字母(L)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "u.c.希腊语(g)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'U.C.希腊语(g)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "符号(g)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '符号(g)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "向量矩阵(m)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '向量矩阵(M)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "数字(n)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '数字(N)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "数学附加(e)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '数学附加(E)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "用户1(1)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '用户1(1)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "用户2(2)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '用户2(2)'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "宋体",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '宋体'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "edwardian script itc",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'Edwardian Script ITC'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "times new roman",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'Times New Roman'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "symbol",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'Symbol'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "mt extra",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'MT Extra'.",
-      "source_ids": [
-        48
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "courier",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about 'Courier'.",
+      "description": "Table 'Table' contains data about '备注'.",
       "source_ids": [
         48
       ]

@@ -3,7 +3,7 @@
     {
       "entity_name": "2023 cxpt lc 005",
       "entity_type": "PROJECT",
-      "description": "a project identifier or grant number mentioned in the text",
+      "description": "a project funded by a laboratory",
       "source_ids": [
         19
       ]

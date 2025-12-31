@@ -23,7 +23,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 8.0,
-      "description": "hdgse is a specific event extraction model being compared to other event extraction models",
+      "description": "hdgse is compared against other event extraction models for performance  as indicated by the text discussing performance comparison",
       "source_ids": [
         36
       ]

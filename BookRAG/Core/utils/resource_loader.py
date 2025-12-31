@@ -1,11 +1,13 @@
 from typing import Dict, Any
 from Core.configs.system_config import SystemConfig
+from Core.utils.trace_logger import trace_execution
 import logging
 
 
 log = logging.getLogger(__name__)
 
 
+@trace_execution
 def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
     """
     根据配置加载并准备RAG agent所需的依赖项。

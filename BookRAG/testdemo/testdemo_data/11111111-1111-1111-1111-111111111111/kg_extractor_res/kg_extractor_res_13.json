@@ -31,7 +31,7 @@
       "tgt_entity_name": "beijing university of chemical technology",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the college is part of the university",
+      "description": "the college is part of the university  as indicated by the address structure",
       "source_ids": [
         13
       ]
@@ -41,7 +41,7 @@
       "tgt_entity_name": "beijing",
       "relation_name": "",
       "weight": 10.0,
-      "description": "the university is located in beijing",
+      "description": "the university is located in beijing  as stated in the address",
       "source_ids": [
         13
       ]

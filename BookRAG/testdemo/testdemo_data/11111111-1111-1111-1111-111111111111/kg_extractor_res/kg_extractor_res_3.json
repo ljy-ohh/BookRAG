@@ -15,7 +15,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "is part of         as indicated by the address structure",
+      "description": "is part of         as indicated in the address",
       "source_ids": [
         3
       ]

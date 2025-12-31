@@ -3,7 +3,7 @@
     {
       "entity_name": "表2",
       "entity_type": "TABLE",
-      "description": "A table titled 'Comparison Results of Different Data Augmentation Methods' presenting performance metrics for various data augmentation techniques on event extraction tasks.",
+      "description": "A table titled 'Comparison Results of Different Data Augmentation Methods' presenting the performance of various data augmentation methods on different datasets and tasks, as indicated by the column headers.",
       "source_ids": [
         29
       ]
@@ -11,7 +11,7 @@
     {
       "entity_name": "ace05-e+ > arg-c > f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The F1 score for Argument Classification (Arg-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The F1 score for the Argument Classification (Arg-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -19,7 +19,7 @@
     {
       "entity_name": "ace05-e+ > arg-c > p",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Precision (P) for Argument Classification (Arg-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The Precision for the Argument Classification (Arg-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -27,7 +27,7 @@
     {
       "entity_name": "ace05-e+ > arg-c > r",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Recall (R) for Argument Classification (Arg-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The Recall for the Argument Classification (Arg-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -35,7 +35,7 @@
     {
       "entity_name": "ace05-e+ > trig-c > f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The F1 score for Trigger Classification (Trig-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The F1 score for the Trigger Classification (Trig-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -43,7 +43,7 @@
     {
       "entity_name": "ace05-e+ > trig-c > p",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Precision (P) for Trigger Classification (Trig-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The Precision for the Trigger Classification (Trig-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -51,7 +51,7 @@
     {
       "entity_name": "ace05-e+ > trig-c > r",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Recall (R) for Trigger Classification (Trig-C) on the ACE05-E+ dataset, as indicated in the column header.",
+      "description": "The Recall for the Trigger Classification (Trig-C) task on the ACE05-E+ dataset",
       "source_ids": [
         29
       ]
@@ -59,7 +59,7 @@
     {
       "entity_name": "ere-en > arg-c > f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The F1 score for Argument Classification (Arg-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The F1 score for the Argument Classification (Arg-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -67,7 +67,7 @@
     {
       "entity_name": "ere-en > arg-c > p",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Precision (P) for Argument Classification (Arg-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The Precision for the Argument Classification (Arg-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -75,7 +75,7 @@
     {
       "entity_name": "ere-en > arg-c > r",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Recall (R) for Argument Classification (Arg-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The Recall for the Argument Classification (Arg-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -83,7 +83,7 @@
     {
       "entity_name": "ere-en > trig-c > f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The F1 score for Trigger Classification (Trig-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The F1 score for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -91,7 +91,7 @@
     {
       "entity_name": "ere-en > trig-c > p",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Precision (P) for Trigger Classification (Trig-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The Precision for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -99,7 +99,7 @@
     {
       "entity_name": "ere-en > trig-c > r",
       "entity_type": "EVALUATION_METRIC",
-      "description": "The Recall (R) for Trigger Classification (Trig-C) on the ERE-EN dataset, as indicated in the column header.",
+      "description": "The Recall for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
       "source_ids": [
         29
       ]
@@ -107,7 +107,7 @@
     {
       "entity_name": "增强方法",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The column header for 'Data Augmentation Methods', likely listing the specific techniques being compared.",
+      "description": "The column header for the data augmentation methods being compared in the table.",
       "source_ids": [
         29
       ]
@@ -115,7 +115,7 @@
     {
       "entity_name": "模型",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The column header for 'Model', likely listing the machine learning models used in the comparison.",
+      "description": "The column header for the models used in the comparison of data augmentation methods.",
       "source_ids": [
         29
       ]
@@ -123,7 +123,7 @@
     {
       "entity_name": "ace05-e+",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "A dataset for event extraction, referenced in multiple column headers as a benchmark for evaluation.",
+      "description": "A dataset (likely an enhanced version of ACE05) used for evaluating event extraction models, as indicated in the column headers.",
       "source_ids": [
         29
       ]
@@ -131,15 +131,7 @@
     {
       "entity_name": "ere-en",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "An English dataset for event extraction (ERE), referenced in multiple column headers as a benchmark for evaluation.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "data augmentation methods",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The primary subject of the table, as stated in the description, referring to techniques for artificially expanding training datasets.",
+      "description": "An English dataset (likely Event and Relation Extraction) used for evaluating event extraction models, as indicated in the column headers.",
       "source_ids": [
         29
       ]
@@ -161,9 +153,17 @@
       ]
     },
     {
+      "entity_name": "data augmentation methods",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "The primary subject of the table's comparison, as stated in the description 'Comparison Results of Different Data Augmentation Methods'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
       "entity_name": "text2event",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "An event extraction model used as a baseline in the comparison of data augmentation methods.",
+      "description": "An event extraction model used as a baseline in the comparison of data augmentation methods, evaluated on ACE05-E+ and ERE-EN datasets.",
       "source_ids": [
         29
       ]
@@ -171,7 +171,7 @@
     {
       "entity_name": "hdgse",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "An event extraction model used as a baseline in the comparison of data augmentation methods.",
+      "description": "An event extraction model used as a baseline in the comparison of data augmentation methods",
       "source_ids": [
         29
       ]
@@ -179,7 +179,7 @@
     {
       "entity_name": "none",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The baseline condition representing no data augmentation applied to the model.",
+      "description": "The baseline condition of using no data augmentation method.",
       "source_ids": [
         29
       ]
@@ -211,7 +211,7 @@
     {
       "entity_name": "auggpt",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method utilizing a GPT-based model for generation.",
+      "description": "A data augmentation method using a GPT-based model.",
       "source_ids": [
         29
       ]
@@ -219,23 +219,7 @@
     {
       "entity_name": "本文方法",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The novel data augmentation method proposed in the paper, evaluated against other techniques.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "同义词替换",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method using synonym replacement (variant used with HDGSE model).",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "回译",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method using back-translation (variant used with HDGSE model).",
+      "description": "The novel data augmentation method proposed in the paper.",
       "source_ids": [
         29
       ]
@@ -404,16 +388,6 @@
     },
     {
       "src_entity_name": "表2",
-      "tgt_entity_name": "data augmentation methods",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table '表2' contains data about 'Data Augmentation Methods'.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
       "tgt_entity_name": "argument classification",
       "relation_name": "",
       "weight": 9.0,
@@ -428,6 +402,16 @@
       "relation_name": "",
       "weight": 9.0,
       "description": "Table '表2' contains data about 'Trigger Classification'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "data augmentation methods",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'Data Augmentation Methods'.",
       "source_ids": [
         29
       ]
@@ -508,26 +492,6 @@
       "relation_name": "",
       "weight": 9.0,
       "description": "Table '表2' contains data about '本文方法'.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "同义词替换",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table '表2' contains data about '同义词替换'.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "回译",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table '表2' contains data about '回译'.",
       "source_ids": [
         29
       ]

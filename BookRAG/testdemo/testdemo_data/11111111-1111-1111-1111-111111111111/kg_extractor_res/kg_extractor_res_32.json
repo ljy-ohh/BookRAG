@@ -15,7 +15,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the large language model is directly used to generate event data for analysis in comparative experiments",
+      "description": "the large language model is used to directly generate event data for analysis",
       "source_ids": [
         32
       ]

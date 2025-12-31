@@ -3,31 +3,20 @@
     {
       "entity_name": "key laboratory of target cognition and application technology",
       "entity_type": "ORGANIZATION",
-      "description": "an organization that partially supports this work",
+      "description": "an organization that partially supports the work described in the text",
       "source_ids": [
         41
       ]
     },
     {
       "entity_name": "2023 cxpt lc 005",
-      "entity_type": "TITLE",
-      "description": "a title or identifier for a project or grant mentioned in the text",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "a project or task identifier mentioned as supporting the work",
       "source_ids": [
         41
       ]
     }
   ],
-  "relations": [
-    {
-      "src_entity_name": "key laboratory of target cognition and application technology",
-      "tgt_entity_name": "2023 cxpt lc 005",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the organization is associated with the identifier  likely as a funding or support source",
-      "source_ids": [
-        41
-      ]
-    }
-  ],
+  "relations": [],
   "node_idx": 41
 }

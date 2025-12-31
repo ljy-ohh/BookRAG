@@ -3,15 +3,15 @@
     {
       "entity_name": "key laboratory of network information system technology",
       "entity_type": "ORGANIZATION",
-      "description": "a laboratory mentioned as part of an institute",
+      "description": "a laboratory mentioned as part of the institute of electronic  chinese academy of sciences",
       "source_ids": [
         15
       ]
     },
     {
-      "entity_name": "institute of electronic",
+      "entity_name": "institute of electronic chinese academy of sciences",
       "entity_type": "ORGANIZATION",
-      "description": "an institute under the chinese academy of sciences",
+      "description": "an institute that is part of the chinese academy of sciences",
       "source_ids": [
         15
       ]
@@ -27,7 +27,7 @@
     {
       "entity_name": "beijing",
       "entity_type": "LOCATION",
-      "description": "a city where the institute is located",
+      "description": "a city where the institute of electronic  chinese academy of sciences is located",
       "source_ids": [
         15
       ]
@@ -36,26 +36,26 @@
   "relations": [
     {
       "src_entity_name": "key laboratory of network information system technology",
-      "tgt_entity_name": "institute of electronic",
+      "tgt_entity_name": "institute of electronic chinese academy of sciences",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the laboratory is part of the institute of electronic",
+      "description": "the laboratory is part of the institute of electronic  chinese academy of sciences",
       "source_ids": [
         15
       ]
     },
     {
-      "src_entity_name": "institute of electronic",
+      "src_entity_name": "institute of electronic chinese academy of sciences",
       "tgt_entity_name": "chinese academy of sciences",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the institute is under the chinese academy of sciences",
+      "description": "the institute is part of the chinese academy of sciences",
       "source_ids": [
         15
       ]
     },
     {
-      "src_entity_name": "institute of electronic",
+      "src_entity_name": "institute of electronic chinese academy of sciences",
       "tgt_entity_name": "beijing",
       "relation_name": "",
       "weight": 8.0,

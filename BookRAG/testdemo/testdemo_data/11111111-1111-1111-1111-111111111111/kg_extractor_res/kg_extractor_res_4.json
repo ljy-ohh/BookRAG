@@ -14,8 +14,8 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "is described as being under or part of        indicating a hierarchical or organizational relationship",
+      "weight": 8.0,
+      "description": "is listed in association with        suggesting it may be part of or affiliated with it",
       "source_ids": [
         4
       ]

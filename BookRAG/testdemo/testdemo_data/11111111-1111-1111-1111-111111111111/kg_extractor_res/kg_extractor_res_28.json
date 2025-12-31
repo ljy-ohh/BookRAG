@@ -11,7 +11,7 @@
     {
       "entity_name": "auggpt",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a generative model used for data augmentation  noted for improving diversity but having event structure issues",
+      "description": "a generative model used for data augmentation  noted for improving diversity but with event structure limitations",
       "source_ids": [
         28
       ]
@@ -19,7 +19,7 @@
     {
       "entity_name": "f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "an evaluation metric  f1 score  used to measure model performance in the text",
+      "description": "an evaluation metric  f1 score  used to assess model performance in the text",
       "source_ids": [
         28
       ]
@@ -27,7 +27,7 @@
     {
       "entity_name": "llmdirectgen",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a method for direct generation using large language models  noted for producing data that deviates from real event distributions",
+      "description": "a method that directly uses large language models for generation  noted for producing data that deviates from real event distributions",
       "source_ids": [
         28
       ]
@@ -47,7 +47,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 7.0,
-      "description": "is compared against the      as a baseline data augmentation method",
+      "description": "is compared as a baseline method against the      for performance evaluation",
       "source_ids": [
         28
       ]
@@ -57,7 +57,17 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 7.0,
-      "description": "auggpt is stated to outperform       in data augmentation",
+      "description": "auggpt is stated to generally outperform       in data augmentation",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "llmdirectgen",
+      "tgt_entity_name": "f1",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "llmdirectgen   results in f1 values lower than the baseline model",
       "source_ids": [
         28
       ]
@@ -67,7 +77,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "llmdirectgen   utilizes       for direct data generation",
+      "description": "llmdirectgen   directly utilizes       for data generation",
       "source_ids": [
         28
       ]

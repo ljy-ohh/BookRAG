@@ -1,33 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "2",
-      "entity_type": "TABLE",
-      "description": "table 2 presents the main experimental results of the paper  showing performance metrics for different data augmentation methods",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "entity_name": "trig c",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "trig c refers to the task of trigger word identification and classification in event extraction",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "entity_name": "arg c",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "arg c refers to the task of argument identification and classification in event extraction",
-      "source_ids": [
-        27
-      ]
-    },
-    {
       "entity_name": "text2event",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "text2event is an event extraction model used as a baseline for comparison in the experiments",
+      "description": "text2event is an event extraction model used as a baseline in experiments",
       "source_ids": [
         27
       ]
@@ -35,7 +11,7 @@
     {
       "entity_name": "hdgse",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "hdgse is an event extraction model used as a baseline for comparison in the experiments",
+      "description": "hdgse is an event extraction model used as a baseline in experiments",
       "source_ids": [
         27
       ]
@@ -43,7 +19,7 @@
     {
       "entity_name": "ace05 e",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "ace05 e  is a dataset used for testing event extraction models and data augmentation methods",
+      "description": "ace05 e  is a dataset used for testing event extraction models",
       "source_ids": [
         27
       ]
@@ -51,7 +27,23 @@
     {
       "entity_name": "ere en",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "ere en is a dataset with more events and roles than ace05 e   used for testing event extraction models",
+      "description": "ere en is a dataset used for testing event extraction models  noted for having more events and roles than ace05 e",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "entity_name": "trig c",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "trig c is an evaluation metric for trigger word identification and classification in event extraction",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "entity_name": "arg c",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "arg c is an evaluation metric for argument identification and classification in event extraction",
       "source_ids": [
         27
       ]
@@ -59,15 +51,15 @@
     {
       "entity_name": "f1",
       "entity_type": "EVALUATION_METRIC",
-      "description": "f1 is an evaluation metric used to measure the performance of event extraction models on tasks like trig c and arg c",
+      "description": "f1 is an evaluation metric used to measure performance  reported as a percentage",
       "source_ids": [
         27
       ]
     },
     {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "table 2",
+      "entity_type": "TABLE",
+      "description": "table 2 presents the main experimental results of the paper",
       "source_ids": [
         27
       ]
@@ -75,47 +67,127 @@
   ],
   "relations": [
     {
-      "src_entity_name": "2",
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "ace05 e",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the text2event model is tested on the ace05 e  dataset",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the text2event model is tested on the ere en dataset",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "ace05 e",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the hdgse model is tested on the ace05 e  dataset",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the hdgse model is tested on the ere en dataset",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "trig c",
+      "tgt_entity_name": "text2event",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "trig c is an evaluation metric used to assess the performance of the text2event model",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "arg c",
+      "tgt_entity_name": "text2event",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "arg c is an evaluation metric used to assess the performance of the text2event model",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "trig c",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "trig c is an evaluation metric used to assess the performance of the hdgse model",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "arg c",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "arg c is an evaluation metric used to assess the performance of the hdgse model",
+      "source_ids": [
+        27
+      ]
+    },
+    {
+      "src_entity_name": "f1",
       "tgt_entity_name": "trig c",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "table 2 contains experimental results for the trig c task  showing performance metrics",
+      "weight": 9.0,
+      "description": "f1 scores are reported for the trig c metric in the experiments",
       "source_ids": [
         27
       ]
     },
     {
-      "src_entity_name": "2",
+      "src_entity_name": "f1",
       "tgt_entity_name": "arg c",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "table 2 contains experimental results for the arg c task  showing performance metrics",
+      "weight": 9.0,
+      "description": "f1 scores are reported for the arg c metric in the experiments",
       "source_ids": [
         27
       ]
     },
     {
-      "src_entity_name": "2",
+      "src_entity_name": "table 2",
       "tgt_entity_name": "text2event",
       "relation_name": "",
       "weight": 8.0,
-      "description": "table 2 shows the performance of the text2event model under different data augmentation methods",
+      "description": "table 2 contains experimental results involving the text2event model",
       "source_ids": [
         27
       ]
     },
     {
-      "src_entity_name": "2",
+      "src_entity_name": "table 2",
       "tgt_entity_name": "hdgse",
       "relation_name": "",
       "weight": 8.0,
-      "description": "table 2 shows the performance of the hdgse model under different data augmentation methods",
+      "description": "table 2 contains experimental results involving the hdgse model",
       "source_ids": [
         27
       ]
     },
     {
-      "src_entity_name": "2",
+      "src_entity_name": "table 2",
       "tgt_entity_name": "ace05 e",
       "relation_name": "",
       "weight": 8.0,
@@ -125,81 +197,11 @@
       ]
     },
     {
-      "src_entity_name": "2",
+      "src_entity_name": "table 2",
       "tgt_entity_name": "ere en",
       "relation_name": "",
       "weight": 8.0,
       "description": "table 2 presents results from experiments conducted on the ere en dataset",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "text2event",
-      "tgt_entity_name": "ace05 e",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the text2event model was tested on the ace05 e  dataset in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "text2event",
-      "tgt_entity_name": "ere en",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the text2event model was tested on the ere en dataset in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "hdgse",
-      "tgt_entity_name": "ace05 e",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the hdgse model was tested on the ace05 e  dataset in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "hdgse",
-      "tgt_entity_name": "ere en",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the hdgse model was tested on the ere en dataset in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "trig c",
-      "tgt_entity_name": "f1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the performance of the trig c task is measured using the f1 metric in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "arg c",
-      "tgt_entity_name": "f1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the performance of the arg c task is measured using the f1 metric in the experiments",
-      "source_ids": [
-        27
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the multi stage data augmentation framework is proposed to improve performance on the event extraction task",
       "source_ids": [
         27
       ]

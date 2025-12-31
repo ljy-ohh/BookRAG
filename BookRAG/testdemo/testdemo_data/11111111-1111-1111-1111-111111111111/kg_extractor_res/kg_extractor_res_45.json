@@ -1,5 +1,14 @@
 {
-  "entities": [],
+  "entities": [
+    {
+      "entity_name": "wang jiaxin",
+      "entity_type": "PERSON",
+      "description": "wang jiaxin is a person born in 2000 and is a master of science candidate with research interests in natural language processing and data augmentation",
+      "source_ids": [
+        45
+      ]
+    }
+  ],
   "relations": [],
   "node_idx": 45
 }

@@ -29,6 +29,7 @@ from Core.rag.gbc_utils import (
     SubStep,
     filter_tree_nodes,
 )
+from Core.utils.trace_logger import trace_execution
 
 
 import json
@@ -312,6 +313,7 @@ class GBCRAG(BaseRAG):
 
         return query_prompt
 
+    @trace_execution
     def llm_section_selection(
         self,
         query: str,
@@ -397,6 +399,7 @@ class GBCRAG(BaseRAG):
         iter_context.iteration_image_nodes = image_nodes
         iter_context.iteration_text_nodes = text_nodes
 
+    @trace_execution
     def get_GBC_info(self, iter_context: SubStep) -> None:
         """
         1. Get subgraph: sel_sec_id --> subtree --> subgraph.
@@ -436,6 +439,7 @@ class GBCRAG(BaseRAG):
         tree_data = self.gbc_index.TreeIndex.get_nodes_data(tree_node_ids)
         self._process_retrieved_nodes(tree_data, iter_context)
 
+    @trace_execution
     def _retrieve(
         self,
         query: str,
@@ -467,6 +471,7 @@ class GBCRAG(BaseRAG):
         # 4. Graph-based retrieval on subgraph projected by the subtree (Select Section)
         self.get_GBC_info(iter_context)
 
+    @trace_execution
     def process_analysis(self, context: GBCRAGContext, query_analysis: PlanResult):
         log.info(f"Query analysis type: {query_analysis.query_type}")
 
@@ -569,6 +574,7 @@ class GBCRAG(BaseRAG):
     def _create_augmented_prompt(self, query: str) -> str:
         pass
 
+    @trace_execution
     def generation(self, query: str, query_output_dir: str):
         context = GBCRAGContext(query=query)
 

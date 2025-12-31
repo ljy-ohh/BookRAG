@@ -10,6 +10,7 @@ from Core.rag.base_rag import BaseRAG
 from Core.configs.rag.vanilla_config import VanillaConfig
 from Core.utils.bm25 import BM25
 from Core.utils.utils import TextProcessor
+from Core.utils.trace_logger import trace_execution
 
 from typing import Dict, Any, List
 import json
@@ -46,6 +47,7 @@ class VanillaRAG(BaseRAG):
         else:
             self.vdb = vector_store
 
+    @trace_execution
     def _retrieve(self, query: str, top_k: int = 3):
         if self.cfg.retrieval_method == "bm25":
             return self.bm25.search(query_text=query, top_k=top_k)
@@ -99,6 +101,7 @@ class VanillaRAG(BaseRAG):
 
         return retrieval_ids
 
+    @trace_execution
     def generation(self, query: str, query_output_dir: str) -> tuple:
         """
         Generates an answer for a given query and returns the answer along with the context used.

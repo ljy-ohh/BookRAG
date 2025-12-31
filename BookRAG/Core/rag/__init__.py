@@ -20,11 +20,13 @@ from Core.rag.vanilla_rag import VanillaRAG
 
 from Core.provider.llm import LLM
 from Core.provider.vlm import VLM
+from Core.utils.trace_logger import trace_execution
 
 # Define the type for the strategy_config parameter
 StrategyConfig = Union[*ALL_STRATEGY_CONFIGS]
 
 
+@trace_execution
 def create_rag_agent(
     # The first parameter is now the specific strategy config object
     strategy_config: StrategyConfig,

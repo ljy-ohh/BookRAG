@@ -17,25 +17,9 @@
       ]
     },
     {
-      "entity_name": "ph d",
-      "entity_type": "TITLE",
-      "description": "ph d  is an academic title held by jiang zhiying",
-      "source_ids": [
-        42
-      ]
-    },
-    {
-      "entity_name": "associate professor",
-      "entity_type": "TITLE",
-      "description": "associate professor is the academic title held by jiang zhiying",
-      "source_ids": [
-        42
-      ]
-    },
-    {
       "entity_name": "large language model",
       "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "large language model is a research interest of jiang zhiying",
+      "description": "large language model is mentioned as one of jiang zhiying s research interests",
       "source_ids": [
         42
       ]
@@ -43,7 +27,7 @@
     {
       "entity_name": "natural language processing",
       "entity_type": "RESEARCH_FIELD",
-      "description": "natural language processing is a research field that jiang zhiying is interested in",
+      "description": "natural language processing is mentioned as one of jiang zhiying s research interests",
       "source_ids": [
         42
       ]
@@ -51,7 +35,7 @@
     {
       "entity_name": "real time big data analytics",
       "entity_type": "RESEARCH_FIELD",
-      "description": "real time big data analytics is a research field that jiang zhiying is interested in",
+      "description": "real time big data analytics is mentioned as one of jiang zhiying s research interests",
       "source_ids": [
         42
       ]
@@ -64,26 +48,6 @@
       "relation_name": "",
       "weight": 9.0,
       "description": "jiang zhiying was born in 1987",
-      "source_ids": [
-        42
-      ]
-    },
-    {
-      "src_entity_name": "jiang zhiying",
-      "tgt_entity_name": "ph d",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "jiang zhiying holds a ph d  degree",
-      "source_ids": [
-        42
-      ]
-    },
-    {
-      "src_entity_name": "jiang zhiying",
-      "tgt_entity_name": "associate professor",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "jiang zhiying holds the title of associate professor",
       "source_ids": [
         42
       ]

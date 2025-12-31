@@ -1,33 +1,17 @@
 {
   "entities": [
     {
-      "entity_name": "table",
-      "entity_type": "TABLE",
-      "description": "A table with columns for variable symbols, their meanings, and remarks, as indicated by the column headers.",
+      "entity_name": "times new rome",
+      "entity_type": "FONT",
+      "description": "times new rome is a font specified for representing matrices and vectors in the main text",
       "source_ids": [
         47
       ]
     },
     {
-      "entity_name": "变量符号",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The first column header 变量符号 (Variable Symbol), listing the symbols for variables.",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "entity_name": "含义",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The second column header 含义 (Meaning), describing the definition or significance of the variable symbols.",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "entity_name": "备注",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The third column header 备注 (Remarks), providing additional notes or comments related to the variables.",
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         47
       ]
@@ -35,31 +19,21 @@
   ],
   "relations": [
     {
-      "src_entity_name": "table",
-      "tgt_entity_name": "变量符号",
+      "src_entity_name": "",
+      "tgt_entity_name": "times new rome",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '变量符号'.",
+      "description": "the text specifies that matrices should be represented using the times new rome font in bold italic",
       "source_ids": [
         47
       ]
     },
     {
-      "src_entity_name": "table",
-      "tgt_entity_name": "含义",
+      "src_entity_name": "",
+      "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '含义'.",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "src_entity_name": "table",
-      "tgt_entity_name": "备注",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Table 'Table' contains data about '备注'.",
+      "weight": 8.0,
+      "description": "matrices are described as a type of variable in the text",
       "source_ids": [
         47
       ]

@@ -1,5 +1,25 @@
 {
-  "entities": [],
-  "relations": [],
+  "entities": [
+    {
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
+      "source_ids": [
+        21
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the text suggests adding performance comparisons of different event extraction models to the paper s experimental section",
+      "source_ids": [
+        21
+      ]
+    }
+  ],
   "node_idx": 21
 }

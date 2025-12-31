@@ -17,6 +17,7 @@ from Core.prompts.gbc_prompt import (
 from Core.Index.Graph import Entity
 from Core.utils.table_utils import table2text
 from Core.utils.utils import TextProcessor
+from Core.utils.trace_logger import trace_execution
 
 from Core.rag.gbc_utils import enhance_graph_with_semantic_links
 
@@ -201,6 +202,7 @@ class GraphRAG(BaseRAG):
         graph_info = {"TreeNode_ids": tree_node_ids, "EntNode_name": res_entities}
         return graph_info
 
+    @trace_execution
     def _retrieve(
         self,
         query: str,
@@ -269,6 +271,7 @@ class GraphRAG(BaseRAG):
         context_text += question_text
         return context_text, context_images
 
+    @trace_execution
     def generation(self, query: str, query_output_dir: str):
         # Initialize the first iteration step
         cnt = 0

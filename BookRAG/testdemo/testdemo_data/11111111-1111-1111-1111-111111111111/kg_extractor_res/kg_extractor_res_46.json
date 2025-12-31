@@ -1,38 +1,5 @@
 {
-  "entities": [
-    {
-      "entity_name": "times new rome",
-      "entity_type": "FONT",
-      "description": "times new rome is a font used in the main text for representing matrices and vectors",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "entity_name": "matrix",
-      "entity_type": "VARIABLE_TYPE",
-      "description": "matrix is a type of variable mentioned in the text  represented with bold italic times new rome font",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "entity_name": "vector",
-      "entity_type": "VARIABLE_TYPE",
-      "description": "vector is a type of variable mentioned in the text  represented with bold italic times new rome font",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "entity_name": "formula editor",
-      "entity_type": "SOFTWARE",
-      "description": "formula editor is a tool referenced for setting up variable representations  with settings shown in an example image",
-      "source_ids": [
-        46
-      ]
-    }
-  ],
+  "entities": [],
   "relations": [],
   "node_idx": 46
 }

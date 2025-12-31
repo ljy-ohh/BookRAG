@@ -3,7 +3,23 @@
     {
       "entity_name": "2025 05 07",
       "entity_type": "DATE",
-      "description": "the date when the manuscript was received",
+      "description": "the date when the document was submitted",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "entity_name": "20yy mm dd",
+      "entity_type": "DATE",
+      "description": "the date when the document was revised",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "entity_name": "yyyy mm dd",
+      "entity_type": "DATE",
+      "description": "the date when the document was accepted",
       "source_ids": [
         18
       ]

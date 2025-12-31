@@ -5,6 +5,7 @@ from Core.provider.TokenTracker import TokenTracker
 from Core.rag import create_rag_agent
 from Core.rag.base_rag import BaseRAG
 from Core.utils.resource_loader import prepare_rag_dependencies
+from Core.utils.trace_logger import trace_execution
 
 import json
 from tqdm import tqdm
@@ -20,6 +21,7 @@ log = logging.getLogger(__name__)
 # )
 
 
+@trace_execution
 def run_rag(
     rag_agent: BaseRAG,
     output_dir: str,
@@ -187,6 +189,7 @@ def create_log_handler(cfg: SystemConfig, dataset_path: str):
     return output_dir
 
 
+@trace_execution
 def inference_base(cfg: SystemConfig, dataset_path: str):
     output_dir = create_log_handler(cfg, dataset_path)
 
@@ -211,6 +214,7 @@ def inference_base(cfg: SystemConfig, dataset_path: str):
     )
 
 
+@trace_execution
 def inference(cfg: SystemConfig, data_df: pd.DataFrame, dataset_name: str):
     dependencies = prepare_rag_dependencies(cfg=cfg)
     rag_agent = create_rag_agent(

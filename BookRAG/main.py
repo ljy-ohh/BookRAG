@@ -152,7 +152,7 @@ def build_index(config: SystemConfig, stage: str = "all", data_df: pd.DataFrame 
         log.info("  - STAGE: Rebuilding Graph VDB...")
         rebuild_graph_vdb(config)
 
-
+@trace_execution
 def run_inference(config: SystemConfig, data_df: pd.DataFrame, dataset_name: str):
     log.info(f"  - run_inference called. Using index from '{config.save_path}'")
     inference(
@@ -282,6 +282,7 @@ def main():
         base_system_cfg = process_resource(base_system_cfg, args)
 
     if args.dataset_config:
+        log.info("执行的是当前分支（第一个分支）")
         dataset_cfg: DatasetConfig = load_dataset_config(args.dataset_config)
 
         # 1. Load the entire dataset from the JSON file into a pandas DataFrame
@@ -422,7 +423,7 @@ def main():
         log.info(f"--- All documents in this split processed. ---\n")
     else:
         # SINGLE FILE MODE
-
+        log.info("执行的是当前分支（第二个分支）")
         setup_logging(
             save_path=base_system_cfg.save_path, config_to_log=base_system_cfg
         )
