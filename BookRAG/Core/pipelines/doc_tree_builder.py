@@ -8,13 +8,16 @@ from Core.configs.system_config import SystemConfig
 from Core.provider.llm import LLM
 from Core.provider.vlm import VLM
 from Core.provider.TokenTracker import TokenTracker
+from Core.utils.trace_logger import trace_execution
 import os
+import logging
 import logging
 from pathlib import Path
 
 log = logging.getLogger(__name__)
 
 
+@trace_execution
 def construct_tree_index(
     tree_index: DocumentTree, pdf_list: list[dict], title_outline: list[dict]
 ) -> DocumentTree:
@@ -60,6 +63,7 @@ def construct_tree_index(
     return tree_index
 
 
+@trace_execution
 def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTree:
 
     tree_index_path = DocumentTree.get_save_path(cfg.save_path)
@@ -108,6 +112,7 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
             server_url=server_url,
             lang=cfg.mineru.lang,
         )
+        log.info(f"parse_doc输出的content_list结果 {str(content_list)}...")
 
         file_name = str(Path(cfg.pdf_path).stem)
         save_dir = os.path.join(cfg.save_path, method)
@@ -118,7 +123,7 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
             save_dir=save_dir,
             file_name=file_name,
         )  # merge middle json content with content list.
-
+        log.info(f"merge_middle_content输出的pdf_list结果{str(pdf_list)}")
         # tmp pdf_list save for fast test
         log.info(f"Content extracted and saved to {tmp_save_path}")
 

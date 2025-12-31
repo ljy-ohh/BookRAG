@@ -1,14 +1,5 @@
 {
-  "entities": [
-    {
-      "entity_name": "10",
-      "entity_type": "MEASUREMENT",
-      "description": "the number 10 is mentioned in the text",
-      "source_ids": [
-        49
-      ]
-    }
-  ],
+  "entities": [],
   "relations": [],
   "node_idx": 49
 }

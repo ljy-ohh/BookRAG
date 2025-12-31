@@ -1,49 +1,33 @@
 {
   "entities": [
     {
-      "entity_name": "figure 5",
-      "entity_type": "IMAGE",
-      "description": "A comparison chart showing query efficiency with two metrics: Query Time in seconds and Token cost, depicted through bar graphs under the label 'Qasper'.",
+      "entity_name": "table",
+      "entity_type": "TABLE",
+      "description": "A table with columns for variable symbols, their meanings, and remarks, as indicated by the column headers.",
       "source_ids": [
         47
       ]
     },
     {
-      "entity_name": "query time",
+      "entity_name": "变量符号",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A comparative metric measured in seconds for assessing query efficiency displayed on the left bar graph.",
+      "description": "The first column header 变量符号 (Variable Symbol), listing the symbols for variables.",
       "source_ids": [
         47
       ]
     },
     {
-      "entity_name": "token cost",
+      "entity_name": "含义",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A comparative metric measured in tokens for assessing query efficiency, shown on the right bar graph.",
+      "description": "The second column header 含义 (Meaning), describing the definition or significance of the variable symbols.",
       "source_ids": [
         47
       ]
     },
     {
-      "entity_name": "qasper",
-      "entity_type": "TOOL_OR_PLATFORM",
-      "description": "The dataset or system for which the query efficiency in terms of time and token cost is compared.",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "entity_name": "time (s)",
+      "entity_name": "备注",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The unit in which the Query Time is measured, representing seconds on the chart's vertical axis.",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "entity_name": "token (m)",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The unit in which Token cost is measured, representing millions of tokens on the chart's vertical axis.",
+      "description": "The third column header 备注 (Remarks), providing additional notes or comments related to the variables.",
       "source_ids": [
         47
       ]
@@ -51,51 +35,31 @@
   ],
   "relations": [
     {
-      "src_entity_name": "figure 5",
-      "tgt_entity_name": "query time",
+      "src_entity_name": "table",
+      "tgt_entity_name": "变量符号",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Image entity Figure 5 related to Query Time",
+      "description": "Table 'Table' contains data about '变量符号'.",
       "source_ids": [
         47
       ]
     },
     {
-      "src_entity_name": "figure 5",
-      "tgt_entity_name": "token cost",
+      "src_entity_name": "table",
+      "tgt_entity_name": "含义",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Image entity Figure 5 related to Token cost",
+      "description": "Table 'Table' contains data about '含义'.",
       "source_ids": [
         47
       ]
     },
     {
-      "src_entity_name": "figure 5",
-      "tgt_entity_name": "qasper",
+      "src_entity_name": "table",
+      "tgt_entity_name": "备注",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Image entity Figure 5 related to Qasper",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "src_entity_name": "figure 5",
-      "tgt_entity_name": "time (s)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Figure 5 related to time (s)",
-      "source_ids": [
-        47
-      ]
-    },
-    {
-      "src_entity_name": "figure 5",
-      "tgt_entity_name": "token (m)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Figure 5 related to token (M)",
+      "description": "Table 'Table' contains data about '备注'.",
       "source_ids": [
         47
       ]

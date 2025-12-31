@@ -23,6 +23,7 @@ from mineru.backend.pipeline.model_json_to_middle_json import (
     result_to_middle_json as pipeline_result_to_middle_json,
 )
 from mineru.backend.vlm.vlm_middle_json_mkcontent import union_make as vlm_union_make
+from Core.utils.trace_logger import trace_execution
 
 log = logging.getLogger(__name__)
 
@@ -37,7 +38,7 @@ def prepare_result_dir(output_dir, parse_method):
     os.makedirs(local_md_dir, exist_ok=True)
     return local_image_dir, local_md_dir
 
-
+@trace_execution
 def do_parse(
     output_dir,  # Output directory for storing parsing results
     pdf_file_name: str,  # Name of the PDF file to be parsed
@@ -57,6 +58,14 @@ def do_parse(
     image_dir = str(os.path.basename(local_image_dir))
 
     if backend == "pipeline":
+        import asyncio
+        try:
+            asyncio.get_running_loop()
+        except RuntimeError:
+            # If no running loop, create a new one
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            
         infer_results, all_image_lists, all_pdf_docs, lang_list, ocr_enabled_list = (
             pipeline_doc_analyze(
                 [new_pdf_bytes],
@@ -142,6 +151,7 @@ def do_parse(
     return middle_json, content_list
 
 
+@trace_execution
 def parse_doc(
     pdf_path: Path,
     output_dir,
@@ -187,7 +197,7 @@ def parse_doc(
         log.error(f"Error parsing {pdf_path}: {e}")
         raise e
 
-
+@trace_execution
 def merge_middle_content(
     middle_json, content_list, parse_dir, save_dir=None, file_name=None
 ):

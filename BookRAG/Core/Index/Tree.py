@@ -82,6 +82,15 @@ class TreeNode:
         self.outline_node: bool = False  # Indicates if the node is a outline node
         self.summary: str = ""  # Summary of the node content
 
+    def __repr__(self):
+        """
+        Return a string representation of the TreeNode for debugging purposes.
+        """
+        return (
+            f"<TreeNode(index_id={self.index_id}, type={self.type}, "
+            f"depth={self.depth}, parent_id={self.parent.index_id if self.parent else None})>"
+        )
+
     def add_child(self, child_node: "TreeNode"):
         child_node.parent = self
         child_node.depth = self.depth + 1
@@ -118,6 +127,16 @@ class DocumentTree:
         self.save_dir = cfg.save_path
         self.pdf_id_to_index_id: Dict[int, int] = {}  # Maps pdf_id to index_id
         self.max_depth = -1
+
+    def __repr__(self):
+        """
+        Return a string representation of the DocumentTree for debugging purposes.
+        """
+        return (
+            f"<DocumentTree(root_node={self.root_node}, "
+            f"total_nodes={len(self.nodes)}, "
+            f"save_dir='{self.save_dir}')>"
+        )
 
     def init_root_node(self, meta_dict: dict):
         self.root_node = TreeNode(meta_dict)

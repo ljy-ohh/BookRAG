@@ -1,17 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "layout parsing",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "layout parsing is a phase that processes a document to identify  extract  and organize blocks like text  tables  and images",
-      "source_ids": [
-        34
-      ]
-    },
-    {
-      "entity_name": "d",
-      "entity_type": "DATASET_OR_CORPUS",
-      "description": "d is the input document  a collection of pages  that is processed during the layout parsing phase",
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         34
       ]
@@ -19,11 +11,11 @@
   ],
   "relations": [
     {
-      "src_entity_name": "layout parsing",
-      "tgt_entity_name": "d",
+      "src_entity_name": "",
+      "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "layout parsing processes the input document d",
+      "description": "the large model is used to directly generate event data",
       "source_ids": [
         34
       ]

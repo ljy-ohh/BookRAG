@@ -9,6 +9,8 @@ log = logging.getLogger(__name__)
 import json
 import math
 
+from Core.utils.trace_logger import trace_execution
+
 SELECT_COLS = ["pdf_id", "text", "page_idx", "height"]
 
 
@@ -197,7 +199,7 @@ def calculate_effective_height(entry: dict) -> float:
 
     return effective_height
 
-
+@trace_execution
 def extract_pdf_outline_in_chunks(
     pdf_list: List[Optional[str]], llm: LLM
 ) -> List[Optional[str]]:

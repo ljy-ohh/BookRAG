@@ -1,105 +1,38 @@
 {
   "entities": [
     {
-      "entity_name": "m3docvqa",
-      "entity_type": "IMAGE",
-      "description": "A pair of bar charts showing Query Time (left) and Token cost (right), comparing different methods, including their time in seconds and token costs.",
+      "entity_name": "times new rome",
+      "entity_type": "FONT",
+      "description": "times new rome is a font used in the main text for representing matrices and vectors",
       "source_ids": [
         46
       ]
     },
     {
-      "entity_name": "query time",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A bar chart displaying the time taken by different methods for a query in seconds.",
+      "entity_name": "matrix",
+      "entity_type": "VARIABLE_TYPE",
+      "description": "matrix is a type of variable mentioned in the text  represented with bold italic times new rome font",
       "source_ids": [
         46
       ]
     },
     {
-      "entity_name": "token cost",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A bar chart showing the token costs for different methods in millions of tokens.",
+      "entity_name": "vector",
+      "entity_type": "VARIABLE_TYPE",
+      "description": "vector is a type of variable mentioned in the text  represented with bold italic times new rome font",
       "source_ids": [
         46
       ]
     },
     {
-      "entity_name": "time (s)",
-      "entity_type": "MEASUREMENT",
-      "description": "The vertical axis for the left bar chart, representing time in seconds (s) on a logarithmic scale.",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "entity_name": "token (m)",
-      "entity_type": "MEASUREMENT",
-      "description": "The vertical axis for the right bar chart, representing token costs in millions (M) of tokens on a logarithmic scale.",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "entity_name": "image",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "formula editor",
+      "entity_type": "SOFTWARE",
+      "description": "formula editor is a tool referenced for setting up variable representations  with settings shown in an example image",
       "source_ids": [
         46
       ]
     }
   ],
-  "relations": [
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "m3docvqa",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to M3DocVQA",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "query time",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Query Time",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "token cost",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Token cost",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "time (s)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to time (s)",
-      "source_ids": [
-        46
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "token (m)",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to token (M)",
-      "source_ids": [
-        46
-      ]
-    }
-  ],
+  "relations": [],
   "node_idx": 46
 }

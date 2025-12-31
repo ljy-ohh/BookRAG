@@ -100,6 +100,10 @@ ipython_config.py
 #   commonly ignored for libraries.
 #uv.lock
 
+# User configuration
+config/pdf_vanilla_siliconflow.yaml
+
+
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more

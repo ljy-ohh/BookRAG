@@ -1,33 +1,14 @@
 {
   "entities": [
     {
-      "entity_name": "the image",
-      "entity_type": "IMAGE",
-      "description": "An unspecified image with no accompanying description for analysis.",
-      "source_ids": [
-        25
-      ]
-    },
-    {
-      "entity_name": "image ··",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "4 实验与结果分析",
+      "entity_type": "SECTION_TITLE",
+      "description": "As the final major section of the paper '面向事件抽取的多阶段数据增强框架研究', this section details the experimental setup, procedures, and the analysis of results to validate the proposed multi-stage data augmentation framework for event extraction.",
       "source_ids": [
         25
       ]
     }
   ],
-  "relations": [
-    {
-      "src_entity_name": "image ··",
-      "tgt_entity_name": "the image",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image ·· related to The Image",
-      "source_ids": [
-        25
-      ]
-    }
-  ],
+  "relations": [],
   "node_idx": 25
 }

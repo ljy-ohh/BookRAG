@@ -1,105 +1,41 @@
 {
   "entities": [
     {
-      "entity_name": "the image",
-      "entity_type": "IMAGE",
-      "description": "A color-coded legend associating different entities and approaches with specific colors.",
+      "entity_name": "han zhonghe",
+      "entity_type": "PERSON",
+      "description": "han zhonghe is an associate researcher born in 1993 with research interests in deep learning  natural language processing  and large language models",
       "source_ids": [
         44
       ]
     },
     {
-      "entity_name": "bm25",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A search algorithm used as a retrieval model for information retrieval.",
+      "entity_name": "1993",
+      "entity_type": "DATE",
+      "description": "1993 is the birth year of han zhonghe",
       "source_ids": [
         44
       ]
     },
     {
-      "entity_name": "vanilla rag",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A retrieval-augmented generation model without additional enhancements.",
+      "entity_name": "deep learning",
+      "entity_type": "RESEARCH_FIELD",
+      "description": "deep learning is listed as one of the research interests of han zhonghe",
       "source_ids": [
         44
       ]
     },
     {
-      "entity_name": "layout + vanilla",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A Vanilla RAG model combined with layout analysis.",
+      "entity_name": "natural language processing",
+      "entity_type": "RESEARCH_FIELD",
+      "description": "natural language processing is listed as one of the research interests of han zhonghe",
       "source_ids": [
         44
       ]
     },
     {
-      "entity_name": "raptor",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "An enhanced retrieval-augmented pretraining and fine-tuning approach.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "graphrag-local",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A variant of GraphRAG focused on local graph-based retrieval.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "graphrag-global",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A variant of GraphRAG focused on global graph-based retrieval.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "mm-vanilla",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A multimodal Vanilla RAG model.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "tree-traverse",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A traversal-based method applied to a tree structure.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "graphranker",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A model ranking candidates using graph-based techniques.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "docetl",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A document extraction and transformation pipeline.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "bookrag",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A model leveraging book-related data for retrieval-augmented generation.",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "entity_name": "image",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "large language model",
+      "entity_type": "RESEARCH_FIELD",
+      "description": "large language model is listed as one of the research interests of han zhonghe",
       "source_ids": [
         44
       ]
@@ -107,121 +43,41 @@
   ],
   "relations": [
     {
-      "src_entity_name": "image",
-      "tgt_entity_name": "the image",
+      "src_entity_name": "han zhonghe",
+      "tgt_entity_name": "1993",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Image entity Image  related to The Image",
+      "description": "han zhonghe was born in 1993",
       "source_ids": [
         44
       ]
     },
     {
-      "src_entity_name": "image",
-      "tgt_entity_name": "bm25",
+      "src_entity_name": "han zhonghe",
+      "tgt_entity_name": "deep learning",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to BM25",
+      "weight": 8.0,
+      "description": "han zhonghe has research interests that include deep learning",
       "source_ids": [
         44
       ]
     },
     {
-      "src_entity_name": "image",
-      "tgt_entity_name": "vanilla rag",
+      "src_entity_name": "han zhonghe",
+      "tgt_entity_name": "natural language processing",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Vanilla RAG",
+      "weight": 8.0,
+      "description": "han zhonghe has research interests that include natural language processing",
       "source_ids": [
         44
       ]
     },
     {
-      "src_entity_name": "image",
-      "tgt_entity_name": "layout + vanilla",
+      "src_entity_name": "han zhonghe",
+      "tgt_entity_name": "large language model",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Layout + Vanilla",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "raptor",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to RAPTOR",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "graphrag-local",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to GraphRAG-Local",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "graphrag-global",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to GraphRAG-Global",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "mm-vanilla",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to MM-Vanilla",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "tree-traverse",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Tree-Traverse",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "graphranker",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to GraphRanker",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "docetl",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to DocETL",
-      "source_ids": [
-        44
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "bookrag",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to BookRAG",
+      "weight": 8.0,
+      "description": "han zhonghe has research interests that include large language models",
       "source_ids": [
         44
       ]

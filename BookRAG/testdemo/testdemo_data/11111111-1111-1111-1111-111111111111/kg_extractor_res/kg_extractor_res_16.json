@@ -1,14 +1,51 @@
 {
   "entities": [
     {
-      "entity_name": "https github com sam234990 bookrag",
-      "entity_type": "SOFTWARE",
-      "description": "a url pointing to a github repository containing source code  data  and other artifacts",
+      "entity_name": "key laboratory of target cognition and application technology",
+      "entity_type": "ORGANIZATION",
+      "description": "a laboratory mentioned in the text",
+      "source_ids": [
+        16
+      ]
+    },
+    {
+      "entity_name": "chinese academy of sciences",
+      "entity_type": "ORGANIZATION",
+      "description": "an academy mentioned in the text",
+      "source_ids": [
+        16
+      ]
+    },
+    {
+      "entity_name": "beijing",
+      "entity_type": "LOCATION",
+      "description": "a city mentioned in the text",
       "source_ids": [
         16
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "key laboratory of target cognition and application technology",
+      "tgt_entity_name": "chinese academy of sciences",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the laboratory is part of or affiliated with the chinese academy of sciences  as indicated by the structure of the address",
+      "source_ids": [
+        16
+      ]
+    },
+    {
+      "src_entity_name": "key laboratory of target cognition and application technology",
+      "tgt_entity_name": "beijing",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the laboratory is located in beijing  as indicated by the address",
+      "source_ids": [
+        16
+      ]
+    }
+  ],
   "node_idx": 16
 }

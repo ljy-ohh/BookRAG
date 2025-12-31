@@ -1,49 +1,17 @@
 {
   "entities": [
     {
-      "entity_name": "primitive blocks",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "primitive blocks are defined as a sequence of triplets representing components in a layout based model",
+      "entity_name": "sr",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "sr is a baseline method mentioned as a synonym replacement data augmentation technique",
       "source_ids": [
         35
       ]
     },
     {
-      "entity_name": "title",
-      "entity_type": "SECTION_TITLE",
-      "description": "title is listed as an initial layout based type for a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "entity_name": "text",
-      "entity_type": "SECTION_TITLE",
-      "description": "text is listed as an initial layout based type for a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "entity_name": "table",
-      "entity_type": "TABLE",
-      "description": "table is listed as an initial layout based type for a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "entity_name": "image",
-      "entity_type": "IMAGE",
-      "description": "image is listed as an initial layout based type for a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "entity_name": "fontsize",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "fontsize is a layout feature associated with a primitive block",
+      "entity_name": "bt",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "bt is a baseline method mentioned as a back translation data augmentation technique",
       "source_ids": [
         35
       ]
@@ -51,51 +19,11 @@
   ],
   "relations": [
     {
-      "src_entity_name": "primitive blocks",
-      "tgt_entity_name": "title",
+      "src_entity_name": "sr",
+      "tgt_entity_name": "bt",
       "relation_name": "",
       "weight": 8.0,
-      "description": "title is one of the layout based types that can be assigned to a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "src_entity_name": "primitive blocks",
-      "tgt_entity_name": "text",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "text is one of the layout based types that can be assigned to a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "src_entity_name": "primitive blocks",
-      "tgt_entity_name": "table",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "table is one of the layout based types that can be assigned to a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "src_entity_name": "primitive blocks",
-      "tgt_entity_name": "image",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "image is one of the layout based types that can be assigned to a primitive block",
-      "source_ids": [
-        35
-      ]
-    },
-    {
-      "src_entity_name": "primitive blocks",
-      "tgt_entity_name": "fontsize",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "fontsize is a layout feature that is part of the vector associated with a primitive block",
+      "description": "both sr and bt are mentioned as baseline data augmentation methods for experimental comparison",
       "source_ids": [
         35
       ]

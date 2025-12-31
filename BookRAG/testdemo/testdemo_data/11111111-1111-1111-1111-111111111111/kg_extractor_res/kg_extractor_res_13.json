@@ -1,14 +1,51 @@
 {
   "entities": [
     {
-      "entity_name": "pvldb",
-      "entity_type": "PUBLICATION_VENUE",
-      "description": "pvldb is a publication venue referenced in the document",
+      "entity_name": "college of information science and technology",
+      "entity_type": "ORGANIZATION",
+      "description": "a college mentioned as part of a university",
+      "source_ids": [
+        13
+      ]
+    },
+    {
+      "entity_name": "beijing university of chemical technology",
+      "entity_type": "ORGANIZATION",
+      "description": "a university located in beijing",
+      "source_ids": [
+        13
+      ]
+    },
+    {
+      "entity_name": "beijing",
+      "entity_type": "LOCATION",
+      "description": "a city where the university is located",
       "source_ids": [
         13
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "college of information science and technology",
+      "tgt_entity_name": "beijing university of chemical technology",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the college is part of the university",
+      "source_ids": [
+        13
+      ]
+    },
+    {
+      "src_entity_name": "beijing university of chemical technology",
+      "tgt_entity_name": "beijing",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "the university is located in beijing",
+      "source_ids": [
+        13
+      ]
+    }
+  ],
   "node_idx": 13
 }

@@ -19,8 +19,10 @@ from Core.pipelines.vdb_index import (
 )
 from Core.provider.TokenTracker import TokenTracker
 from Core.utils.file_utils import save_indexing_stats
+from Core.utils.trace_logger import trace_execution
 
 
+@trace_execution
 def construct_GBC_index(cfg: SystemConfig, tree_only: bool = False):
     """
     Construct the GBC index from the document tree and knowledge graph.
@@ -81,6 +83,7 @@ def rebuild_graph_vdb(cfg: SystemConfig):
     log.info("Rebuilt graph VDB successfully.")
 
 
+@trace_execution
 def construct_vdb(cfg: SystemConfig):
     token_tracker = TokenTracker.get_instance()
     token_tracker.reset()

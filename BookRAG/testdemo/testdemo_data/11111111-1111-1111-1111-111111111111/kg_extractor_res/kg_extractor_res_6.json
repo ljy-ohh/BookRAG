@@ -1,14 +1,25 @@
 {
   "entities": [
     {
-      "entity_name": "the chinese university of hong kong shenzhen",
-      "entity_type": "ORGANIZATION",
-      "description": "an educational institution mentioned in the text",
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         6
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the laboratory affiliated with       is located in",
+      "source_ids": [
+        6
+      ]
+    }
+  ],
   "node_idx": 6
 }

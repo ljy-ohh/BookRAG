@@ -3,18 +3,24 @@
     "question": "这篇论文的标题是什么？",
     "answer": "",
     "doc_uuid": "11111111-1111-1111-1111-111111111111",
-    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\多阶段数据增强论文_20250709.pdf"
   },
   {
     "question": "BookRAG 的核心方法/贡献点用 1-2 句话概括是什么？",
     "answer": "",
     "doc_uuid": "11111111-1111-1111-1111-111111111111",
-    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\多阶段数据增强论文_20250709.pdf"
   },
   {
     "question": "论文里实验用了哪些数据集？",
     "answer": "",
     "doc_uuid": "11111111-1111-1111-1111-111111111111",
-    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\BOOKRAG_VLDB_2026_full.pdf"
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\多阶段数据增强论文_20250709.pdf"
+  },
+  {
+    "question": "介绍人工智能技术发展？",
+    "answer": "",
+    "doc_uuid": "22222222-2222-2222-2222-222222222222",
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\人工智能技术发展报告.pdf"
   }
 ]

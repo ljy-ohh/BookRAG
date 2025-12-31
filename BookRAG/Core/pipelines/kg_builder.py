@@ -7,6 +7,7 @@ from Core.configs.system_config import SystemConfig
 from Core.provider.llm import LLM
 from Core.provider.vlm import VLM
 from Core.provider.TokenTracker import TokenTracker
+from Core.utils.trace_logger import trace_execution
 
 import logging
 
@@ -35,6 +36,7 @@ import time
 # )
 
 
+@trace_execution
 def build_knowledge_graph(tree: DocumentTree, cfg: SystemConfig):
     """
     Build a knowledge graph from the given document tree.

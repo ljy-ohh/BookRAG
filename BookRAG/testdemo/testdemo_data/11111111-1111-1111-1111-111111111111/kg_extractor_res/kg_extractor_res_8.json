@@ -1,14 +1,153 @@
 {
   "entities": [
     {
-      "entity_name": "yixiang fang",
-      "entity_type": "PERSON",
-      "description": "yixiang fang is a person mentioned in the text",
+      "entity_name": "ace05 e",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "ace05 e  is a dataset used in experiments to evaluate event extraction models",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "ere en",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "ere en is a dataset used in experiments to evaluate event extraction models",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "text2event",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "text2event is an event extraction model evaluated in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "hdgse",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "hdgse is an event extraction model evaluated in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "auggpt",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "auggpt is a baseline data augmentation method used for comparison in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "f1",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "f1 score is the evaluation metric used to measure the performance of event extraction models",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         8
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "event extraction is described as a core task within the field of natural language processing",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "ace05 e",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the text2event model was evaluated on the ace05 e  dataset in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the text2event model was evaluated on the ere en dataset in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "ace05 e",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the hdgse model was evaluated on the ace05 e  dataset in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the hdgse model was evaluated on the ere en dataset in the experiments",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of the text2event model was measured on the trigger classification task using f1 scores",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of the hdgse model was measured on the trigger classification task using f1 scores",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "auggpt",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "the proposed framework is compared against the auggpt baseline method  showing superior performance",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "f1",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the trigger classification task is evaluated using the f1 score metric",
+      "source_ids": [
+        8
+      ]
+    }
+  ],
   "node_idx": 8
 }

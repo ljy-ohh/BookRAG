@@ -48,6 +48,8 @@ from nltk.metrics.distance import edit_distance
 from concurrent.futures import ThreadPoolExecutor
 import re
 
+from Core.utils.trace_logger import trace_execution
+
 logger = logging.getLogger(__name__)
 
 
@@ -1083,6 +1085,7 @@ class KGExtractor:
         self.save_tmp_res(res, node.index_id)
         return res
 
+    @trace_execution
     def batch_extract_kg(
         self, nodes: List[TreeNode], max_workers: int = 4
     ) -> List[Dict[str, Any]]:
@@ -1110,6 +1113,7 @@ class KGExtractor:
                     )
         return results
 
+    @trace_execution
     def batch_extract_titles(
         self,
         nodes: List[TreeNode],

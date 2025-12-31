@@ -1,14 +1,25 @@
 {
   "entities": [
     {
-      "entity_name": "yingli zhou",
-      "entity_type": "PERSON",
-      "description": "yingli zhou is a person mentioned in the text",
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         5
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the laboratory is part of the chinese academy of sciences  as indicated by its full name",
+      "source_ids": [
+        5
+      ]
+    }
+  ],
   "node_idx": 5
 }

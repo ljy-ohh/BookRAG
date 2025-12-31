@@ -1,14 +1,105 @@
 {
   "entities": [
     {
-      "entity_name": "tree i",
-      "entity_type": "IMAGE",
-      "description": "An image depicting a tree or a reference to the concept of a tree as suggested by the label 'Tree I'.",
+      "entity_name": "gpt 3 5 turbo",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "gpt 3 5 turbo is a large language model selected for the experiments described in the text",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "entity_name": "temperature",
+      "entity_type": "PARAMETER_OR_VARIABLE",
+      "description": "temperature is a parameter set to 0 8 during data generation to ensure diversity",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "entity_name": "nvidia rtx4090 gpu",
+      "entity_type": "HARDWARE",
+      "description": "an nvidia rtx4090 gpu is the hardware on which all experiments in the text were conducted",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "entity_name": "text2event",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "text2event is a model that is fine tuned as part of the experiments",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "entity_name": "hdgse",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "hdgse is a model that is fine tuned as part of the experiments",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         24
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "gpt 3 5 turbo",
+      "tgt_entity_name": "temperature",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the temperature parameter is set to 0 8 during data generation using the gpt 3 5 turbo model",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "gpt 3 5 turbo",
+      "tgt_entity_name": "nvidia rtx4090 gpu",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "experiments involving the gpt 3 5 turbo model are conducted on an nvidia rtx4090 gpu",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "text2event",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the scoring module of the data augmentation framework is used to select data for expanding the training set  which is then used to fine tune the text2event model",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the scoring module of the data augmentation framework is used to select data for expanding the training set  which is then used to fine tune the hdgse model",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "both text2event and hdgse are models that are fine tuned in the experiments described in the text",
+      "source_ids": [
+        24
+      ]
+    }
+  ],
   "node_idx": 24
 }

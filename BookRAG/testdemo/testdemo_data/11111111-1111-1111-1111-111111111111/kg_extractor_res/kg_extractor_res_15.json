@@ -1,22 +1,69 @@
 {
   "entities": [
     {
-      "entity_name": "pvldb",
-      "entity_type": "PUBLICATION_VENUE",
-      "description": "pvldb is a publication venue mentioned in the text",
+      "entity_name": "key laboratory of network information system technology",
+      "entity_type": "ORGANIZATION",
+      "description": "a laboratory mentioned as part of an institute",
       "source_ids": [
         15
       ]
     },
     {
-      "entity_name": "artifact availability",
-      "entity_type": "SECTION_TITLE",
-      "description": "artifact availability is a section title in the text",
+      "entity_name": "institute of electronic",
+      "entity_type": "ORGANIZATION",
+      "description": "an institute under the chinese academy of sciences",
+      "source_ids": [
+        15
+      ]
+    },
+    {
+      "entity_name": "chinese academy of sciences",
+      "entity_type": "ORGANIZATION",
+      "description": "an academy of sciences located in china",
+      "source_ids": [
+        15
+      ]
+    },
+    {
+      "entity_name": "beijing",
+      "entity_type": "LOCATION",
+      "description": "a city where the institute is located",
       "source_ids": [
         15
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "key laboratory of network information system technology",
+      "tgt_entity_name": "institute of electronic",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the laboratory is part of the institute of electronic",
+      "source_ids": [
+        15
+      ]
+    },
+    {
+      "src_entity_name": "institute of electronic",
+      "tgt_entity_name": "chinese academy of sciences",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the institute is under the chinese academy of sciences",
+      "source_ids": [
+        15
+      ]
+    },
+    {
+      "src_entity_name": "institute of electronic",
+      "tgt_entity_name": "beijing",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the institute is located in beijing",
+      "source_ids": [
+        15
+      ]
+    }
+  ],
   "node_idx": 15
 }

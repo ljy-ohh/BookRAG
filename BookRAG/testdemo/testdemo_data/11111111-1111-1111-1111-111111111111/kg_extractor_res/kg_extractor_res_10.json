@@ -1,17 +1,17 @@
 {
   "entities": [
     {
-      "entity_name": "fangyixiang",
-      "entity_type": "PERSON",
-      "description": "a person mentioned in the text via an email address",
+      "entity_name": "tp391",
+      "entity_type": "RESEARCH_FIELD",
+      "description": "tp391 is a classification code for a research field  as indicated by the chinese library classification",
       "source_ids": [
         10
       ]
     },
     {
-      "entity_name": "cuhk",
-      "entity_type": "ORGANIZATION",
-      "description": "an organization indicated by the email domain  likely an educational institution",
+      "entity_name": "a",
+      "entity_type": "PUBLICATION_VENUE",
+      "description": "a is a document code indicating the type of publication venue  as per the chinese literature marking system",
       "source_ids": [
         10
       ]

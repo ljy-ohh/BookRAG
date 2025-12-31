@@ -1,0 +1,5589 @@
+[12:46:31] - INFO - ==> ENTERING FUNCTION: extract_pdf_outline_in_chunks
+[12:46:31] - INFO -     Docstring: Extracts the PDF outline by processing titles in chunks with improved, stateful
+[12:46:31] - INFO -     Inputs: {
+  "pdf_list": [
+    {
+      "type": "text",
+      "text": "您的稿件编号：2025040501",
+      "bbox": [
+        68,
+        154,
+        206,
+        165
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          41,
+          130,
+          123,
+          139
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              130,
+              123,
+              139
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  130,
+                  123,
+                  139
+                ],
+                "type": "text",
+                "content": "您的稿件编号：2025040501"
+              }
+            ]
+          }
+        ],
+        "index": 0
+      },
+      "pdf_id": 1
+    },
+    {
+      "type": "text",
+      "text": "本稿件需要修改时请联系：",
+      "bbox": [
+        70,
+        168,
+        200,
+        179
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          42,
+          142,
+          119,
+          151
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              42,
+              142,
+              119,
+              151
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  42,
+                  142,
+                  119,
+                  151
+                ],
+                "type": "text",
+                "content": "本稿件需要修改时请联系："
+              }
+            ]
+          }
+        ],
+        "index": 1
+      },
+      "pdf_id": 2
+    },
+    {
+      "type": "text",
+      "text": "作者： 宋晨炜",
+      "bbox": [
+        70,
+        181,
+        146,
+        192
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          42,
+          153,
+          87,
+          162
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              42,
+              153,
+              87,
+              162
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  42,
+                  153,
+                  87,
+                  162
+                ],
+                "type": "text",
+                "content": "作者： 宋晨炜"
+              }
+            ]
+          }
+        ],
+        "index": 2
+      },
+      "pdf_id": 3
+    },
+    {
+      "type": "text",
+      "text": "手机号： 15067734428",
+      "bbox": [
+        72,
+        193,
+        186,
+        204
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          43,
+          163,
+          111,
+          172
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              43,
+              163,
+              111,
+              172
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  43,
+                  163,
+                  111,
+                  172
+                ],
+                "type": "text",
+                "content": "手机号： 15067734428"
+              }
+            ]
+          }
+        ],
+        "index": 3
+      },
+      "pdf_id": 4
+    },
+    {
+      "type": "text",
+      "text": "邮箱：2023210566@buct.edu.cn",
+      "bbox": [
+        275,
+        193,
+        428,
+        204
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          164,
+          163,
+          255,
+          172
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              164,
+              163,
+              255,
+              172
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  164,
+                  163,
+                  255,
+                  172
+                ],
+                "type": "text",
+                "content": "邮箱：2023210566@buct.edu.cn"
+              }
+            ]
+          }
+        ],
+        "index": 4
+      },
+      "pdf_id": 5
+    },
+    {
+      "type": "text",
+      "text": "请务必确认好作者、单位、基金等相关信息，投稿成功后不得随意修改",
+      "bbox": [
+        70,
+        206,
+        418,
+        219
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          42,
+          174,
+          249,
+          185
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              42,
+              174,
+              249,
+              185
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  42,
+                  174,
+                  249,
+                  185
+                ],
+                "type": "text",
+                "content": "请务必确认好作者、单位、基金等相关信息，投稿成功后不得随意修改"
+              }
+            ]
+          }
+        ],
+        "index": 5
+      },
+      "pdf_id": 6
+    },
+    {
+      "type": "text",
+      "text": "http://www.joca.cn",
+      "bbox": [
+        584,
+        178,
+        670,
+        189
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          348,
+          150,
+          399,
+          159
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              348,
+              150,
+              399,
+              159
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  348,
+                  150,
+                  399,
+                  159
+                ],
+                "type": "text",
+                "content": "http://www.joca.cn"
+              }
+            ]
+          }
+        ],
+        "index": 6
+      },
+      "pdf_id": 7
+    },
+    {
+      "type": "text",
+      "text": "doi:10.11772/j.issn.1001-9081.yyyymmnnnn",
+      "bbox": [
+        468,
+        199,
+        672,
+        211
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          279,
+          168,
+          400,
+          178
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              279,
+              168,
+              400,
+              178
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  279,
+                  168,
+                  400,
+                  178
+                ],
+                "type": "text",
+                "content": "doi:10.11772/j.issn.1001-9081.yyyymmnnnn"
+              }
+            ]
+          }
+        ],
+        "index": 7
+      },
+      "pdf_id": 8
+    },
+    {
+      "type": "text",
+      "text": "面向事件抽取的多阶段数据增强框架研究",
+      "text_level": 1,
+      "bbox": [
+        169,
+        223,
+        571,
+        242
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          101,
+          188,
+          340,
+          204
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              101,
+              188,
+              340,
+              204
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  101,
+                  188,
+                  340,
+                  204
+                ],
+                "type": "text",
+                "content": "面向事件抽取的多阶段数据增强框架研究"
+              }
+            ]
+          }
+        ],
+        "index": 8
+      },
+      "pdf_id": 9
+    },
+    {
+      "type": "text",
+      "text": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1",
+      "bbox": [
+        242,
+        258,
+        519,
+        271
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          144,
+          217,
+          309,
+          228
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              144,
+              217,
+              309,
+              228
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  144,
+                  217,
+                  309,
+                  228
+                ],
+                "type": "text",
+                "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1"
+              }
+            ]
+          }
+        ],
+        "index": 9
+      },
+      "pdf_id": 10
+    },
+    {
+      "type": "text",
+      "text": "(1. 北京化工大学 信息科学与技术学院，北京 100029;",
+      "bbox": [
+        258,
+        275,
+        482,
+        285
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          154,
+          232,
+          287,
+          240
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              154,
+              232,
+              287,
+              240
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  154,
+                  232,
+                  287,
+                  240
+                ],
+                "type": "text",
+                "content": "(1. 北京化工大学 信息科学与技术学院，北京 100029;"
+              }
+            ]
+          }
+        ],
+        "index": 10
+      },
+      "pdf_id": 11
+    },
+    {
+      "type": "text",
+      "text": "2. 中国科学院 空天信息创新研究院，北京100190；",
+      "bbox": [
+        263,
+        288,
+        478,
+        298
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          157,
+          243,
+          285,
+          251
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              157,
+              243,
+              285,
+              251
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  157,
+                  243,
+                  285,
+                  251
+                ],
+                "type": "text",
+                "content": "2. 中国科学院 空天信息创新研究院，北京100190；"
+              }
+            ]
+          }
+        ],
+        "index": 11
+      },
+      "pdf_id": 12
+    },
+    {
+      "type": "text",
+      "text": "3.中国科学院网络信息体系技术重点实验室，北京100190;",
+      "bbox": [
+        247,
+        300,
+        495,
+        310
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          147,
+          253,
+          295,
+          261
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              147,
+              253,
+              295,
+              261
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  147,
+                  253,
+                  295,
+                  261
+                ],
+                "type": "text",
+                "content": "3.中国科学院网络信息体系技术重点实验室，北京100190;"
+              }
+            ]
+          }
+        ],
+        "index": 12
+      },
+      "pdf_id": 13
+    },
+    {
+      "type": "text",
+      "text": "4. 中国科学院 目标认知与应用技术重点实验室，北京100190)",
+      "bbox": [
+        252,
+        313,
+        510,
+        323
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          150,
+          264,
+          304,
+          272
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              150,
+              264,
+              304,
+              272
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  150,
+                  264,
+                  304,
+                  272
+                ],
+                "type": "text",
+                "content": "4. 中国科学院 目标认知与应用技术重点实验室，北京100190)"
+              }
+            ]
+          }
+        ],
+        "index": 13
+      },
+      "pdf_id": 14
+    },
+    {
+      "type": "text",
+      "text": "(*通信作者电子邮箱jiangzy@buct.edu.cn)",
+      "bbox": [
+        285,
+        326,
+        455,
+        336
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          170,
+          275,
+          271,
+          283
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              170,
+              275,
+              271,
+              283
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  170,
+                  275,
+                  271,
+                  283
+                ],
+                "type": "text",
+                "content": "(*通信作者电子邮箱jiangzy@buct.edu.cn)"
+              }
+            ]
+          }
+        ],
+        "index": 14
+      },
+      "pdf_id": 15
+    },
+    {
+      "type": "text",
+      "text": "摘要：事件抽取是自然语言处理领域的一项核心任务，旨在从非结构化文本中精准识别事件触发词及关联论元。然而，传统文本语料中面向事件抽取任务的高质量标注数据集极度稀缺，严重制约了模型的泛化能力。现有数据增强方法（如同义词替换、回译等）虽能部分缓解数据稀疏问题，但普遍存在语义结构破坏、多样性不足及噪声引入等缺陷。为此，提出一种基于大语言模型（LLM）的多阶段协同增强框架，通过数据生成-标注-判别校验-评分四阶段闭环机制，在保持语义一致性的同时实现高质量多样化数据生成。具体而言：生成模块融合多策略改写（如语义角色替换、事件结构重组）与约束性生成，突破传统词级增强的局限性；校验模块通过触发词-论元逻辑验证与事件模板匹配，有效消除结构偏差；评分模块基于信息完整性、语义一致性、事实合理性三维度筛选优质数据。在ACE05-E+和ERE-EN数据集上的实验表明：经所提框架增强后，Text2event和HDGSE模型的触发词分类（Trig-C）和论元分类（Arg-C)-F1值较原始数据分别提升了4.3，4.2个百分点和2.4，2.9个百分点，在论元分类（Arg-C）F1值较原始数据分别提升了3.6，5.2个百分点和2.8，3.5个百分点；相较于同义词替换、回译及AugGPT基线方法，所提框架在两项任务上均达到最优性能（Trig-C/Arg-C F1值领先幅度达1.3~3.4个百分点），且消融实验证实各模块对性能提升贡献显著（如移除判别校验模块导致F1值下降0.8~2.3个百分点）。本研究为复杂结构化数据的增强提供了可扩展的解决方案，显著提升了事件抽取模型在低资源场景下的鲁棒性。",
+      "bbox": [
+        68,
+        338,
+        673,
+        494
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          41,
+          285,
+          401,
+          416
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              285,
+              401,
+              416
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  285,
+                  401,
+                  416
+                ],
+                "type": "text",
+                "content": "摘要：事件抽取是自然语言处理领域的一项核心任务，旨在从非结构化文本中精准识别事件触发词及关联论元。然而，传统文本语料中面向事件抽取任务的高质量标注数据集极度稀缺，严重制约了模型的泛化能力。现有数据增强方法（如同义词替换、回译等）虽能部分缓解数据稀疏问题，但普遍存在语义结构破坏、多样性不足及噪声引入等缺陷。为此，提出一种基于大语言模型（LLM）的多阶段协同增强框架，通过数据生成-标注-判别校验-评分四阶段闭环机制，在保持语义一致性的同时实现高质量多样化数据生成。具体而言：生成模块融合多策略改写（如语义角色替换、事件结构重组）与约束性生成，突破传统词级增强的局限性；校验模块通过触发词-论元逻辑验证与事件模板匹配，有效消除结构偏差；评分模块基于信息完整性、语义一致性、事实合理性三维度筛选优质数据。在ACE05-E+和ERE-EN数据集上的实验表明：经所提框架增强后，Text2event和HDGSE模型的触发词分类（Trig-C）和论元分类（Arg-C)-F1值较原始数据分别提升了4.3，4.2个百分点和2.4，2.9个百分点，在论元分类（Arg-C）F1值较原始数据分别提升了3.6，5.2个百分点和2.8，3.5个百分点；相较于同义词替换、回译及AugGPT基线方法，所提框架在两项任务上均达到最优性能（Trig-C/Arg-C F1值领先幅度达1.3~3.4个百分点），且消融实验证实各模块对性能提升贡献显著（如移除判别校验模块导致F1值下降0.8~2.3个百分点）。本研究为复杂结构化数据的增强提供了可扩展的解决方案，显著提升了事件抽取模型在低资源场景下的鲁棒性。"
+              }
+            ]
+          }
+        ],
+        "index": 15
+      },
+      "pdf_id": 16
+    },
+    {
+      "type": "text",
+      "text": "关键词：大语言模型；数据增强；事件抽取；数据稀缺",
+      "bbox": [
+        94,
+        495,
+        359,
+        507
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          56,
+          417,
+          214,
+          427
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              56,
+              417,
+              214,
+              427
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  56,
+                  417,
+                  214,
+                  427
+                ],
+                "type": "text",
+                "content": "关键词：大语言模型；数据增强；事件抽取；数据稀缺"
+              }
+            ]
+          }
+        ],
+        "index": 16
+      },
+      "pdf_id": 17
+    },
+    {
+      "type": "text",
+      "text": "中图分类号：TP391 文献标志码：A",
+      "bbox": [
+        95,
+        508,
+        307,
+        521
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          57,
+          428,
+          183,
+          439
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              57,
+              428,
+              183,
+              439
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  57,
+                  428,
+                  183,
+                  439
+                ],
+                "type": "text",
+                "content": "中图分类号：TP391 文献标志码：A"
+              }
+            ]
+          }
+        ],
+        "index": 17
+      },
+      "pdf_id": 18
+    },
+    {
+      "type": "text",
+      "text": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction",
+      "text_level": 1,
+      "bbox": [
+        73,
+        537,
+        668,
+        576
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          44,
+          452,
+          398,
+          485
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              44,
+              452,
+              398,
+              485
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  44,
+                  452,
+                  398,
+                  485
+                ],
+                "type": "text",
+                "content": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction"
+              }
+            ]
+          }
+        ],
+        "index": 18
+      },
+      "pdf_id": 19
+    },
+    {
+      "type": "text",
+      "text": "SONG Chenwei $^{1}$ , JIANG Zhiying $^{1*}$ , HAN Zhonghe $^{2,3,4}$ , WANG Jiaxin $^{1}$",
+      "bbox": [
+        146,
+        592,
+        594,
+        606
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          87,
+          498,
+          354,
+          510
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              87,
+              498,
+              354,
+              510
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "text",
+                "content": "SONG Chenwei"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "inline_equation",
+                "content": "^{1}"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "text",
+                "content": ", JIANG Zhiying"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "inline_equation",
+                "content": "^{1*}"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "text",
+                "content": ", HAN Zhonghe"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "inline_equation",
+                "content": "^{2,3,4}"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "text",
+                "content": ", WANG Jiaxin"
+              },
+              {
+                "bbox": [
+                  87,
+                  498,
+                  354,
+                  510
+                ],
+                "type": "inline_equation",
+                "content": "^{1}"
+              }
+            ]
+          }
+        ],
+        "index": 19
+      },
+      "pdf_id": 20
+    },
+    {
+      "type": "text",
+      "text": "(1. College of Information Science and Technology, Beijing University of Chemical Technology, Beijing 100029;",
+      "bbox": [
+        157,
+        608,
+        584,
+        619
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          94,
+          512,
+          348,
+          521
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              94,
+              512,
+              348,
+              521
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  94,
+                  512,
+                  348,
+                  521
+                ],
+                "type": "text",
+                "content": "(1. College of Information Science and Technology, Beijing University of Chemical Technology, Beijing 100029;"
+              }
+            ]
+          }
+        ],
+        "index": 20
+      },
+      "pdf_id": 21
+    },
+    {
+      "type": "text",
+      "text": "2. The Aerospace Information Research Institute, Chinese Academic of Sciences, Beijing 100190;",
+      "bbox": [
+        186,
+        621,
+        554,
+        630
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          111,
+          523,
+          330,
+          530
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              111,
+              523,
+              330,
+              530
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  111,
+                  523,
+                  330,
+                  530
+                ],
+                "type": "text",
+                "content": "2. The Aerospace Information Research Institute, Chinese Academic of Sciences, Beijing 100190;"
+              }
+            ]
+          }
+        ],
+        "index": 21
+      },
+      "pdf_id": 22
+    },
+    {
+      "type": "text",
+      "text": "3. Key Laboratory of Network Information System Technology, Institute of Electronic, Chinese Academy of Sciences, Beijing 100190;",
+      "bbox": [
+        119,
+        631,
+        623,
+        640
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          71,
+          531,
+          371,
+          539
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              71,
+              531,
+              371,
+              539
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  71,
+                  531,
+                  371,
+                  539
+                ],
+                "type": "text",
+                "content": "3. Key Laboratory of Network Information System Technology, Institute of Electronic, Chinese Academy of Sciences, Beijing 100190;"
+              }
+            ]
+          }
+        ],
+        "index": 22
+      },
+      "pdf_id": 23
+    },
+    {
+      "type": "text",
+      "text": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)",
+      "bbox": [
+        154,
+        642,
+        589,
+        653
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          92,
+          540,
+          351,
+          550
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              92,
+              540,
+              351,
+              550
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  92,
+                  540,
+                  351,
+                  550
+                ],
+                "type": "text",
+                "content": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)"
+              }
+            ]
+          }
+        ],
+        "index": 23
+      },
+      "pdf_id": 24
+    },
+    {
+      "type": "text",
+      "text": "Abstract: Event extraction, a core task in natural language processing, aims to precisely identify event triggers and associated arguments from unstructured text. However, the scarcity of high-quality annotated datasets tailored for event extraction severely constrains model generalization. While existing data augmentation methods (e.g., synonym substitution, back-translation) partially alleviate data sparsity, they suffer from semantic structure distortion, limited diversity, and noise introduction. To address this, we propose a multi-stage LLM-based synergistic enhancement framework featuring a closed-loop mechanism of Generation-Annotation-Validation-Scoring, enabling high-quality diverse data generation while preserving semantic consistency. The generation module integrates multi-strategy rewriting (e.g., semantic role substitution, event structure restructuring) and constrained generation to transcend word-level augmentation limitations; the validation module eliminates structural bias through trigger-argument logical verification and event template matching; the scoring module filters data based on information integrity, semantic consistency,",
+      "bbox": [
+        67,
+        653,
+        665,
+        749
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          40,
+          550,
+          396,
+          630
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              40,
+              550,
+              396,
+              630
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  40,
+                  550,
+                  396,
+                  630
+                ],
+                "type": "text",
+                "content": "Abstract: Event extraction, a core task in natural language processing, aims to precisely identify event triggers and associated arguments from unstructured text. However, the scarcity of high-quality annotated datasets tailored for event extraction severely constrains model generalization. While existing data augmentation methods (e.g., synonym substitution, back-translation) partially alleviate data sparsity, they suffer from semantic structure distortion, limited diversity, and noise introduction. To address this, we propose a multi-stage LLM-based synergistic enhancement framework featuring a closed-loop mechanism of Generation-Annotation-Validation-Scoring, enabling high-quality diverse data generation while preserving semantic consistency. The generation module integrates multi-strategy rewriting (e.g., semantic role substitution, event structure restructuring) and constrained generation to transcend word-level augmentation limitations; the validation module eliminates structural bias through trigger-argument logical verification and event template matching; the scoring module filters data based on information integrity, semantic consistency,"
+              }
+            ]
+          }
+        ],
+        "index": 24
+      },
+      "pdf_id": 25
+    },
+    {
+      "type": "text",
+      "text": "收稿日期：2025-05-07； 修回日期：20yy-mm-dd; 录用日期：yyyy-mm-dd。",
+      "bbox": [
+        68,
+        766,
+        440,
+        777
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          41,
+          645,
+          262,
+          654
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              645,
+              262,
+              654
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  645,
+                  262,
+                  654
+                ],
+                "type": "text",
+                "content": "收稿日期：2025-05-07； 修回日期：20yy-mm-dd; 录用日期：yyyy-mm-dd。"
+              }
+            ]
+          }
+        ],
+        "index": 25
+      },
+      "pdf_id": 26
+    },
+    {
+      "type": "text",
+      "text": "基金项目：目标认知与应用技术重点实验室资助(2023-CXPT-LC-005)",
+      "bbox": [
+        68,
+        778,
+        401,
+        788
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          41,
+          655,
+          239,
+          663
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              655,
+              239,
+              663
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  655,
+                  239,
+                  663
+                ],
+                "type": "text",
+                "content": "基金项目：目标认知与应用技术重点实验室资助(2023-CXPT-LC-005)"
+              }
+            ]
+          }
+        ],
+        "index": 26
+      },
+      "pdf_id": 27
+    },
+    {
+      "type": "text",
+      "text": "作者简介：宋晨炜(1999—)，男，浙江温州人，硕士研究生，主要研究方向：自然语言处理、数据增强；江志英(1987—)，江西景德镇人，高级工程师，博士，主要研究方向：大语言模型及自然语言处理、大数据实时分析;韩众和(1993—)，河南郑州人，副研究员，硕士研究生，主要研究方向：深度学习、自然语言处理、大语言模型;王嘉薪(2000—)，男，吉林长春人，硕士研究生，主要研究方向：自然语言处理、数据增强。",
+      "bbox": [
+        68,
+        789,
+        673,
+        831
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          41,
+          664,
+          401,
+          699
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              664,
+              401,
+              699
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  664,
+                  401,
+                  699
+                ],
+                "type": "text",
+                "content": "作者简介：宋晨炜(1999—)，男，浙江温州人，硕士研究生，主要研究方向：自然语言处理、数据增强；江志英(1987—)，江西景德镇人，高级工程师，博士，主要研究方向：大语言模型及自然语言处理、大数据实时分析;韩众和(1993—)，河南郑州人，副研究员，硕士研究生，主要研究方向：深度学习、自然语言处理、大语言模型;王嘉薪(2000—)，男，吉林长春人，硕士研究生，主要研究方向：自然语言处理、数据增强。"
+              }
+            ]
+          }
+        ],
+        "index": 27
+      },
+      "pdf_id": 28
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋1]:新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比",
+      "bbox": [
+        710,
+        445,
+        989,
+        466
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          423,
+          375,
+          589,
+          392
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              423,
+              375,
+              589,
+              392
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  423,
+                  375,
+                  589,
+                  392
+                ],
+                "type": "text",
+                "content": "批注[晨宋1]:新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比"
+              }
+            ]
+          }
+        ],
+        "index": 28
+      },
+      "pdf_id": 29
+    },
+    {
+      "type": "text",
+      "text": "回复：补充对数据增强框架对HDGSE模型性能的影响",
+      "bbox": [
+        712,
+        467,
+        979,
+        476
+      ],
+      "page_idx": 0,
+      "middle_json": {
+        "bbox": [
+          424,
+          393,
+          583,
+          401
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              424,
+              393,
+              583,
+              401
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  424,
+                  393,
+                  583,
+                  401
+                ],
+                "type": "text",
+                "content": "回复：补充对数据增强框架对HDGSE模型性能的影响"
+              }
+            ]
+          }
+        ],
+        "index": 29
+      },
+      "pdf_id": 30
+    },
+    {
+      "type": "text",
+      "text": "3.3 实验设置",
+      "text_level": 1,
+      "bbox": [
+        68,
+        193,
+        142,
+        203
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          41,
+          163,
+          85,
+          171
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              163,
+              85,
+              171
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  163,
+                  85,
+                  171
+                ],
+                "type": "text",
+                "content": "3.3 实验设置"
+              }
+            ]
+          }
+        ],
+        "index": 2
+      },
+      "pdf_id": 31
+    },
+    {
+      "type": "text",
+      "text": "本文将GPT-3.5-Turbo作为实验选择的大语言模型，数据生成中将temperature设置为0.8，来保证生成数据的多样性。本文所有实验均在一台Nvidia RTX4090 GPU上进行，本文通过数据增强框架的评分模块筛选出与原始数据一样规模大小的数据对真实训练集进行扩充，并对Text2Event和HDGSE模型进行微调。",
+      "bbox": [
+        67,
+        212,
+        359,
+        291
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          40,
+          179,
+          214,
+          245
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              40,
+              179,
+              214,
+              245
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  40,
+                  179,
+                  214,
+                  245
+                ],
+                "type": "text",
+                "content": "本文将GPT-3.5-Turbo作为实验选择的大语言模型，数据生成中将temperature设置为0.8，来保证生成数据的多样性。本文所有实验均在一台Nvidia RTX4090 GPU上进行，本文通过数据增强框架的评分模块筛选出与原始数据一样规模大小的数据对真实训练集进行扩充，并对Text2Event和HDGSE模型进行微调。"
+              }
+            ]
+          }
+        ],
+        "index": 3
+      },
+      "pdf_id": 32
+    },
+    {
+      "type": "text",
+      "text": "4 实验与结果分析",
+      "text_level": 1,
+      "bbox": [
+        68,
+        305,
+        200,
+        317
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          41,
+          257,
+          119,
+          267
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              257,
+              119,
+              267
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  257,
+                  119,
+                  267
+                ],
+                "type": "text",
+                "content": "4 实验与结果分析"
+              }
+            ]
+          }
+        ],
+        "index": 4
+      },
+      "pdf_id": 33
+    },
+    {
+      "type": "text",
+      "text": "4.1 实验结果",
+      "text_level": 1,
+      "bbox": [
+        68,
+        329,
+        142,
+        338
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          41,
+          277,
+          85,
+          285
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              277,
+              85,
+              285
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  277,
+                  85,
+                  285
+                ],
+                "type": "text",
+                "content": "4.1 实验结果"
+              }
+            ]
+          }
+        ],
+        "index": 5
+      },
+      "pdf_id": 34
+    },
+    {
+      "type": "text",
+      "text": "表2为本文的主要实验结果，其中Trig-C表示触发器词的识别和分类，Arg-C表示论元的识别和分类。通过Text2Event和HDGSE事件抽取模型在ACE05-E+和ERE-EN数据集上测试不同数据增强方法的效果。可以看出本文提出的数据增强方法在两个数据集上均达到了最优的性能。首先对于Text2Event事件抽取模型，在ACE05-E+数据集上本文的方法在Trig-C上的F1达到了  $76.1\\%$  ，相较于基线模型Text2Event提升了4.3个百分点，在Arg-C上的F1达到了 $58.0\\%$  ，相较于Text2Event提升了3.6个百分点。对于ENE-EN数据集，它相较于ACE05-E+拥有更多的事件和角色，事件结构更为丰富，本文的方法同样在Trig-C和Arg-C上的F1达到最高值，对比基线模型Text2Event分别提升了4.2个百分点和5.2个百分点。在HDGSE事件抽取模型上，本文的数据增强方法在两个数据集上同样展现出显著优势。在ACE05-E+数据集的Trig-C上的F1达到  $79.6\\%$  ，较基线模型 HDGSE提升2.4个百分点，在Arg-C上的F1达到  $60.5\\%$  较基线模型HDGSE提升2.8个百分点。对事件角色更为丰富的ERE-EN数据集，本文的方法同样在Trig-C和Arg-C展现出优势，对比基线模型HDGSE分别提升了2.9个百分点和3.5个百分点。因此表2的实验结果表明本文提出的基于大语言模型的多阶段数据增强框架在事件抽取任务上的有效性。",
+      "bbox": [
+        67,
+        350,
+        359,
+        545
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          40,
+          295,
+          214,
+          459
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              40,
+              295,
+              214,
+              459
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "text",
+                "content": "表2为本文的主要实验结果，其中Trig-C表示触发器词的识别和分类，Arg-C表示论元的识别和分类。通过Text2Event和HDGSE事件抽取模型在ACE05-E+和ERE-EN数据集上测试不同数据增强方法的效果。可以看出本文提出的数据增强方法在两个数据集上均达到了最优的性能。首先对于Text2Event事件抽取模型，在ACE05-E+数据集上本文的方法在Trig-C上的F1达到了 "
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "inline_equation",
+                "content": "76.1\\%"
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "text",
+                "content": " ，相较于基线模型Text2Event提升了4.3个百分点，在Arg-C上的F1达到了"
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "inline_equation",
+                "content": "58.0\\%"
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "text",
+                "content": " ，相较于Text2Event提升了3.6个百分点。对于ENE-EN数据集，它相较于ACE05-E+拥有更多的事件和角色，事件结构更为丰富，本文的方法同样在Trig-C和Arg-C上的F1达到最高值，对比基线模型Text2Event分别提升了4.2个百分点和5.2个百分点。在HDGSE事件抽取模型上，本文的数据增强方法在两个数据集上同样展现出显著优势。在ACE05-E+数据集的Trig-C上的F1达到 "
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "inline_equation",
+                "content": "79.6\\%"
+              },
+              {
+                "bbox": [
+                  40,
+                  295,
+                  214,
+                  459
+                ],
+                "type": "text",
+                "content": " ，较基线模型"
+              }
+            ]
+          }
+        ],
+        "index": 6
+      },
+      "pdf_id": 35
+    },
+    {
+      "type": "text",
+      "text": "对于同义词替换和回译两种基线方法，后者本是句子级增强，但为了尽量不破坏原有的事件结构，本文将句子回译替换为单词回译。由表2可以看出两种方法相较基线模型有一定的提升，但只是单词级别的修改，并没有对文本带来很大的变化，对模型性能的提升并没有这么明显。而对于AugGPT生成式方法，总体上是优于同义词替换和回译两种方法，但低于本文的数据增强方法，虽然AugGPT生成的数据弥补了多样性的不足，但因事件结构的偏差可能导致性能受限。不同于改写方法，对于直接利用大模型生成的方法其F1值均低于基线模型。在没有追加任何策略（如事件论元角色描述，小样本学习等）的情况下，LLMDirectGen方法生成的数据严重偏离真实事件分布。造成的可能原因是在特定的专业领域下，大语言模型不能充分理解事件类型与论元角色所表达的意思，所以导致事件结构标注错误，甚至是随意标注且不在生成的句子中。更值得的一提的是，这样的方法生成的句子结构，语法单一，不利于数据多样性的引入。由此可以看出本文提出的基于大语言模型的多阶段数据增强框架可以有效的提升数据集的质量，在多样化事件要素构造上更有优势。",
+      "bbox": [
+        381,
+        284,
+        673,
+        532
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          227,
+          239,
+          401,
+          448
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              239,
+              401,
+              448
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  239,
+                  401,
+                  448
+                ],
+                "type": "text",
+                "content": "对于同义词替换和回译两种基线方法，后者本是句子级增强，但为了尽量不破坏原有的事件结构，本文将句子回译替换为单词回译。由表2可以看出两种方法相较基线模型有一定的提升，但只是单词级别的修改，并没有对文本带来很大的变化，对模型性能的提升并没有这么明显。而对于AugGPT生成式方法，总体上是优于同义词替换和回译两种方法，但低于本文的数据增强方法，虽然AugGPT生成的数据弥补了多样性的不足，但因事件结构的偏差可能导致性能受限。不同于改写方法，对于直接利用大模型生成的方法其F1值均低于基线模型。在没有追加任何策略（如事件论元角色描述，小样本学习等）的情况下，LLMDirectGen方法生成的数据严重偏离真实事件分布。造成的可能原因是在特定的专业领域下，大语言模型不能充分理解事件类型与论元角色所表达的意思，所以导致事件结构标注错误，甚至是随意标注且不在生成的句子中。更值得的一提的是，这样的方法生成的句子结构，语法单一，不利于数据多样性的引入。由此可以看出本文提出的基于大语言模型的多阶段数据增强框架可以有效的提升数据集的质量，在多样化事件要素构造上更有优势。"
+              }
+            ]
+          }
+        ],
+        "index": 8
+      },
+      "pdf_id": 36
+    },
+    {
+      "type": "table",
+      "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/5f3f3fbdab1016d549e5c8d4d358064d59c18783970541fbf3c340c523802991.jpg",
+      "table_caption": [
+        "表2 不同数据增强方法的对比结果",
+        "Tab. 2 Comparison Results of Different Data Augmentation Methods"
+      ],
+      "table_footnote": [],
+      "table_body": "<table><tr><td rowspan=\"3\">模型</td><td rowspan=\"3\">增强方法</td><td colspan=\"6\">ACE05-E+</td><td colspan=\"6\">ERE-EN</td></tr><tr><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td></tr><tr><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td></tr><tr><td rowspan=\"6\">TEXT2EVENT</td><td>None</td><td>71.2</td><td>72.5</td><td>71.8</td><td>54.0</td><td>54.8</td><td>54.4</td><td>59.2</td><td>59.6</td><td>59.4</td><td>49.4</td><td>47.2</td><td>48.3</td></tr><tr><td>LLMDirectGen</td><td>64.8</td><td>67.9</td><td>66.3</td><td>48.4</td><td>50.4</td><td>49.4</td><td>53.5</td><td>54.6</td><td>54.0</td><td>42.0</td><td>45.2</td><td>43.5</td></tr><tr><td>同义词替换SR</td><td>71.9</td><td>74.2</td><td>73.0</td><td>54.5</td><td>55.7</td><td>55.1</td><td>60.4</td><td>61.3</td><td>60.8</td><td>50.8</td><td>50.5</td><td>50.6</td></tr><tr><td>回译BT</td><td>71.6</td><td>73.9</td><td>72.7</td><td>54.3</td><td>55.1</td><td>54.7</td><td>60.9</td><td>61.7</td><td>61.3</td><td>51.0</td><td>49.6</td><td>50.3</td></tr><tr><td>AugGPT</td><td>72.1</td><td>73.6</td><td>72.8</td><td>54.8</td><td>56.4</td><td>55.6</td><td>60.5</td><td>62.1</td><td>61.3</td><td>51.2</td><td>51.0</td><td>51.1</td></tr><tr><td>本文方法</td><td>74.3</td><td>77.9</td><td>76.1</td><td>57.7</td><td>58.4</td><td>58.0</td><td>64.5</td><td>62.8</td><td>63.6</td><td>52.9</td><td>54.1</td><td>53.5</td></tr><tr><td rowspan=\"6\">HDGSE</td><td>None</td><td>75.5</td><td>79.0</td><td>77.2</td><td>57.6</td><td>57.8</td><td>57.7</td><td>64.5</td><td>67.9</td><td>66.1</td><td>54.5</td><td>52.6</td><td>53.5</td></tr><tr><td>LLMDirectGen</td><td>69.3</td><td>73.6</td><td>71.4</td><td>51.8</td><td>54.3</td><td>53.0</td><td>59.7</td><td>62.4</td><td>61.0</td><td>50.1</td><td>48.4</td><td>49.2</td></tr><tr><td>同义词替换</td><td>75.9</td><td>80.1</td><td>77.9</td><td>58.4</td><td>59.3</td><td>58.8</td><td>64.7</td><td>68.3</td><td>66.5</td><td>54.8</td><td>53.1</td><td>53.9</td></tr><tr><td>回译</td><td>75.7</td><td>79.5</td><td>77.6</td><td>57.8</td><td>58.2</td><td>58.0</td><td>64.9</td><td>68.2</td><td>66.5</td><td>55.0</td><td>53.4</td><td>54.2</td></tr><tr><td>AugGPT</td><td>76.3</td><td>80.4</td><td>78.3</td><td>58.2</td><td>59.6</td><td>58.9</td><td>64.7</td><td>68.6</td><td>66.6</td><td>54.7</td><td>53.6</td><td>54.1</td></tr><tr><td>本文方法</td><td>77.9</td><td>81.3</td><td>79.6</td><td>60.1</td><td>60.9</td><td>60.5</td><td>67.9</td><td>70.1</td><td>69.0</td><td>56.3</td><td>57.8</td><td>57.0</td></tr></table>",
+      "bbox": [
+        65,
+        573,
+        678,
+        771
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "type": "table",
+        "bbox": [
+          39,
+          482,
+          404,
+          649
+        ],
+        "blocks": [
+          {
+            "bbox": [
+              170,
+              461,
+              272,
+              470
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  170,
+                  461,
+                  272,
+                  470
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      170,
+                      461,
+                      272,
+                      470
+                    ],
+                    "type": "text",
+                    "content": "表2 不同数据增强方法的对比结果"
+                  }
+                ]
+              }
+            ],
+            "index": 9,
+            "angle": 0,
+            "type": "table_caption"
+          },
+          {
+            "bbox": [
+              110,
+              472,
+              330,
+              481
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  110,
+                  472,
+                  330,
+                  481
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      110,
+                      472,
+                      330,
+                      481
+                    ],
+                    "type": "text",
+                    "content": "Tab. 2 Comparison Results of Different Data Augmentation Methods"
+                  }
+                ]
+              }
+            ],
+            "index": 10,
+            "angle": 0,
+            "type": "table_caption"
+          },
+          {
+            "bbox": [
+              39,
+              482,
+              404,
+              649
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  39,
+                  482,
+                  404,
+                  649
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      39,
+                      482,
+                      404,
+                      649
+                    ],
+                    "type": "table",
+                    "html": "<table><tr><td rowspan=\"3\">模型</td><td rowspan=\"3\">增强方法</td><td colspan=\"6\">ACE05-E+</td><td colspan=\"6\">ERE-EN</td></tr><tr><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td></tr><tr><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td></tr><tr><td rowspan=\"6\">TEXT2EVENT</td><td>None</td><td>71.2</td><td>72.5</td><td>71.8</td><td>54.0</td><td>54.8</td><td>54.4</td><td>59.2</td><td>59.6</td><td>59.4</td><td>49.4</td><td>47.2</td><td>48.3</td></tr><tr><td>LLMDirectGen</td><td>64.8</td><td>67.9</td><td>66.3</td><td>48.4</td><td>50.4</td><td>49.4</td><td>53.5</td><td>54.6</td><td>54.0</td><td>42.0</td><td>45.2</td><td>43.5</td></tr><tr><td>同义词替换SR</td><td>71.9</td><td>74.2</td><td>73.0</td><td>54.5</td><td>55.7</td><td>55.1</td><td>60.4</td><td>61.3</td><td>60.8</td><td>50.8</td><td>50.5</td><td>50.6</td></tr><tr><td>回译BT</td><td>71.6</td><td>73.9</td><td>72.7</td><td>54.3</td><td>55.1</td><td>54.7</td><td>60.9</td><td>61.7</td><td>61.3</td><td>51.0</td><td>49.6</td><td>50.3</td></tr><tr><td>AugGPT</td><td>72.1</td><td>73.6</td><td>72.8</td><td>54.8</td><td>56.4</td><td>55.6</td><td>60.5</td><td>62.1</td><td>61.3</td><td>51.2</td><td>51.0</td><td>51.1</td></tr><tr><td>本文方法</td><td>74.3</td><td>77.9</td><td>76.1</td><td>57.7</td><td>58.4</td><td>58.0</td><td>64.5</td><td>62.8</td><td>63.6</td><td>52.9</td><td>54.1</td><td>53.5</td></tr><tr><td rowspan=\"6\">HDGSE</td><td>None</td><td>75.5</td><td>79.0</td><td>77.2</td><td>57.6</td><td>57.8</td><td>57.7</td><td>64.5</td><td>67.9</td><td>66.1</td><td>54.5</td><td>52.6</td><td>53.5</td></tr><tr><td>LLMDirectGen</td><td>69.3</td><td>73.6</td><td>71.4</td><td>51.8</td><td>54.3</td><td>53.0</td><td>59.7</td><td>62.4</td><td>61.0</td><td>50.1</td><td>48.4</td><td>49.2</td></tr><tr><td>同义词替换</td><td>75.9</td><td>80.1</td><td>77.9</td><td>58.4</td><td>59.3</td><td>58.8</td><td>64.7</td><td>68.3</td><td>66.5</td><td>54.8</td><td>53.1</td><td>53.9</td></tr><tr><td>回译</td><td>75.7</td><td>79.5</td><td>77.6</td><td>57.8</td><td>58.2</td><td>58.0</td><td>64.9</td><td>68.2</td><td>66.5</td><td>55.0</td><td>53.4</td><td>54.2</td></tr><tr><td>AugGPT</td><td>76.3</td><td>80.4</td><td>78.3</td><td>58.2</td><td>59.6</td><td>58.9</td><td>64.7</td><td>68.6</td><td>66.6</td><td>54.7</td><td>53.6</td><td>54.1</td></tr><tr><td>本文方法</td><td>77.9</td><td>81.3</td><td>79.6</td><td>60.1</td><td>60.9</td><td>60.5</td><td>67.9</td><td>70.1</td><td>69.0</td><td>56.3</td><td>57.8</td><td>57.0</td></tr></table>",
+                    "image_path": "5f3f3fbdab1016d549e5c8d4d358064d59c18783970541fbf3c340c523802991.jpg"
+                  }
+                ]
+              }
+            ],
+            "index": 11,
+            "angle": 0,
+            "type": "table_body"
+          }
+        ],
+        "index": 11
+      },
+      "pdf_id": 37
+    },
+    {
+      "type": "text",
+      "text": "4.2 数据分析",
+      "text_level": 1,
+      "bbox": [
+        68,
+        778,
+        142,
+        789
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          41,
+          655,
+          85,
+          664
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              655,
+              85,
+              664
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  655,
+                  85,
+                  664
+                ],
+                "type": "text",
+                "content": "4.2 数据分析"
+              }
+            ]
+          }
+        ],
+        "index": 12
+      },
+      "pdf_id": 38
+    },
+    {
+      "type": "text",
+      "text": "表3展示了通过本文数据增强方法处理后的数据规模统计结果。在ACE05-EN+数据集中，事件数量经增强扩展至9931个，对应论元角色数量达13425个；而ERE-EN数据集",
+      "bbox": [
+        381,
+        771,
+        673,
+        807
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          227,
+          649,
+          401,
+          679
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              649,
+              401,
+              679
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  649,
+                  401,
+                  679
+                ],
+                "type": "text",
+                "content": "表3展示了通过本文数据增强方法处理后的数据规模统计结果。在ACE05-EN+数据集中，事件数量经增强扩展至9931个，对应论元角色数量达13425个；而ERE-EN数据集"
+              }
+            ]
+          }
+        ],
+        "index": 13
+      },
+      "pdf_id": 39
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋8]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果回复：补充对大语言模型直接生成事件数据的结果分析",
+      "bbox": [
+        712,
+        404,
+        986,
+        436
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          424,
+          340,
+          587,
+          367
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              424,
+              340,
+              587,
+              367
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  424,
+                  340,
+                  587,
+                  367
+                ],
+                "type": "text",
+                "content": "批注[晨宋8]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果回复：补充对大语言模型直接生成事件数据的结果分析"
+              }
+            ]
+          }
+        ],
+        "index": 14
+      },
+      "pdf_id": 40
+    },
+    {
+      "type": "text",
+      "text": "格式化表格",
+      "text_level": 1,
+      "bbox": [
+        712,
+        587,
+        771,
+        598
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          424,
+          494,
+          459,
+          503
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              424,
+              494,
+              459,
+              503
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  424,
+                  494,
+                  459,
+                  503
+                ],
+                "type": "text",
+                "content": "格式化表格"
+              }
+            ]
+          }
+        ],
+        "index": 15
+      },
+      "pdf_id": 41
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋9]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果  \n回复：补充使用大模型直接生成带有事件结构的句子。",
+      "bbox": [
+        710,
+        627,
+        989,
+        659
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          423,
+          528,
+          589,
+          555
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              423,
+              528,
+              589,
+              555
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  423,
+                  528,
+                  589,
+                  555
+                ],
+                "type": "text",
+                "content": "批注[晨宋9]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果  \n回复：补充使用大模型直接生成带有事件结构的句子。"
+              }
+            ]
+          }
+        ],
+        "index": 16
+      },
+      "pdf_id": 42
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋10]:意见：实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。回复：SR和BT为3.2.1所提到同义词替换和回译两种数据增强方法，在3.2.1进行了文献引用。",
+      "bbox": [
+        710,
+        664,
+        989,
+        706
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          423,
+          559,
+          589,
+          594
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              423,
+              559,
+              589,
+              594
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  423,
+                  559,
+                  589,
+                  594
+                ],
+                "type": "text",
+                "content": "批注[晨宋10]:意见：实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。回复：SR和BT为3.2.1所提到同义词替换和回译两种数据增强方法，在3.2.1进行了文献引用。"
+              }
+            ]
+          }
+        ],
+        "index": 17
+      },
+      "pdf_id": 43
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋11]：新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比回复：补充HDGSE事件抽取模型的性能对比",
+      "bbox": [
+        710,
+        727,
+        983,
+        759
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          423,
+          612,
+          585,
+          639
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              423,
+              612,
+              585,
+              639
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  423,
+                  612,
+                  585,
+                  639
+                ],
+                "type": "text",
+                "content": "批注[晨宋11]：新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比回复：补充HDGSE事件抽取模型的性能对比"
+              }
+            ]
+          }
+        ],
+        "index": 18
+      },
+      "pdf_id": 44
+    },
+    {
+      "type": "header",
+      "text": "计算机应用",
+      "bbox": [
+        337,
+        170,
+        394,
+        181
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          201,
+          143,
+          235,
+          153
+        ],
+        "type": "header",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              201,
+              143,
+              235,
+              153
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  201,
+                  143,
+                  235,
+                  153
+                ],
+                "type": "text",
+                "content": "计算机应用"
+              }
+            ]
+          }
+        ],
+        "index": 0
+      },
+      "pdf_id": 45
+    },
+    {
+      "type": "page_number",
+      "text": "7",
+      "bbox": [
+        663,
+        172,
+        672,
+        180
+      ],
+      "page_idx": 1,
+      "middle_json": {
+        "bbox": [
+          395,
+          145,
+          400,
+          152
+        ],
+        "type": "page_number",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              395,
+              145,
+              400,
+              152
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  395,
+                  145,
+                  400,
+                  152
+                ],
+                "type": "text",
+                "content": "7"
+              }
+            ]
+          }
+        ],
+        "index": 1
+      },
+      "pdf_id": 46
+    },
+    {
+      "type": "text",
+      "text": "只是对原句进行了简单的同义词替换，而在增强样本2和增强样本3中本文通过改写分别引入新的论元角色“起始地”和“起始地”，“交通工具”。在增强样本4中，“新英格兰”的角色从“目的地”变为了“起始地”。从这些增强样本中可以看出，对比同义词替换等传统数据增强方法，本文提出的增强方法在通过语义上的变化和细节的增加，生成了多个具有相似语义但表达方式不同的句子。这样做的目的是提高模型的泛化能力，使其能够引入新的事件结构。",
+      "bbox": [
+        68,
+        192,
+        359,
+        294
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          41,
+          162,
+          214,
+          248
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              162,
+              214,
+              248
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  162,
+                  214,
+                  248
+                ],
+                "type": "text",
+                "content": "只是对原句进行了简单的同义词替换，而在增强样本2和增强样本3中本文通过改写分别引入新的论元角色“起始地”和“起始地”，“交通工具”。在增强样本4中，“新英格兰”的角色从“目的地”变为了“起始地”。从这些增强样本中可以看出，对比同义词替换等传统数据增强方法，本文提出的增强方法在通过语义上的变化和细节的增加，生成了多个具有相似语义但表达方式不同的句子。这样做的目的是提高模型的泛化能力，使其能够引入新的事件结构。"
+              }
+            ]
+          }
+        ],
+        "index": 2
+      },
+      "pdf_id": 47
+    },
+    {
+      "type": "table",
+      "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/c18d336d520818135a7d856852c5db720b0e4cd56e05143e2ec34555319a11fc.jpg",
+      "table_caption": [
+        "表5 增强样例分析",
+        "Tab. 5 Analysis of Augmented Examples"
+      ],
+      "table_footnote": [],
+      "table_body": "<table><tr><td>原句</td><td>关于新英格兰旅行计划建议的评论</td></tr><tr><td>增强样本1</td><td>关于法国旅行计划建议的评论</td></tr><tr><td>增强样本2</td><td>大家对建议的从美国出发穿越新英格兰的旅行计划发表了意见。</td></tr><tr><td>增强样本3</td><td>关于从美国乘飞机出发的新英格兰旅行路线的建议</td></tr><tr><td>增强样本4</td><td>就以新英格兰为起点的拟议行程提供反馈意见</td></tr></table>",
+      "bbox": [
+        63,
+        323,
+        366,
+        432
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "type": "table",
+        "bbox": [
+          38,
+          272,
+          218,
+          364
+        ],
+        "blocks": [
+          {
+            "bbox": [
+              99,
+              251,
+              155,
+              259
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  99,
+                  251,
+                  155,
+                  259
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      99,
+                      251,
+                      155,
+                      259
+                    ],
+                    "type": "text",
+                    "content": "表5 增强样例分析"
+                  }
+                ]
+              }
+            ],
+            "index": 3,
+            "angle": 0,
+            "type": "table_caption"
+          },
+          {
+            "bbox": [
+              60,
+              262,
+              194,
+              270
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  60,
+                  262,
+                  194,
+                  270
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      60,
+                      262,
+                      194,
+                      270
+                    ],
+                    "type": "text",
+                    "content": "Tab. 5 Analysis of Augmented Examples"
+                  }
+                ]
+              }
+            ],
+            "index": 4,
+            "angle": 0,
+            "type": "table_caption"
+          },
+          {
+            "bbox": [
+              38,
+              272,
+              218,
+              364
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  38,
+                  272,
+                  218,
+                  364
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      38,
+                      272,
+                      218,
+                      364
+                    ],
+                    "type": "table",
+                    "html": "<table><tr><td>原句</td><td>关于新英格兰旅行计划建议的评论</td></tr><tr><td>增强样本1</td><td>关于法国旅行计划建议的评论</td></tr><tr><td>增强样本2</td><td>大家对建议的从美国出发穿越新英格兰的旅行计划发表了意见。</td></tr><tr><td>增强样本3</td><td>关于从美国乘飞机出发的新英格兰旅行路线的建议</td></tr><tr><td>增强样本4</td><td>就以新英格兰为起点的拟议行程提供反馈意见</td></tr></table>",
+                    "image_path": "c18d336d520818135a7d856852c5db720b0e4cd56e05143e2ec34555319a11fc.jpg"
+                  }
+                ]
+              }
+            ],
+            "index": 5,
+            "angle": 0,
+            "type": "table_body"
+          }
+        ],
+        "index": 5
+      },
+      "pdf_id": 48
+    },
+    {
+      "type": "text",
+      "text": "5 结语",
+      "text_level": 1,
+      "bbox": [
+        68,
+        443,
+        127,
+        456
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          41,
+          373,
+          76,
+          384
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              373,
+              76,
+              384
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  373,
+                  76,
+                  384
+                ],
+                "type": "text",
+                "content": "5 结语"
+              }
+            ]
+          }
+        ],
+        "index": 6
+      },
+      "pdf_id": 49
+    },
+    {
+      "type": "text",
+      "text": "本研究针对事件抽取任务中高质量、高多样性训练数据稀缺的核心挑战，创新性地构建了一个基于大语言模型的四阶段“生成-标注-校验-评估”闭环数据增强框架。该框架通过改写与生成协同的数据生成范式，有效克服了传统词级增强方法和简单生成方法在捕获复杂事件结构与事件论元多样性方面的局限。为解决事件结构标注的准确性难题，本框架引入自一致性标注机制，并结合自动化判别校验体系，实现了对生成数据的结构化高效标注和校验，显著降低了对传统高成本人工标注的依赖。为确保最终产出数据集的质量，本文提出了三维度细粒度质量评估体系，实现了生成样本的精准筛选。大量实验验证充分表明，该框架能在有效平衡数据多样性与质量的前提下，显著提升事件抽取模型的性能，为事件抽取任务提供新思路。未来，我们将进一步探索多模态数据增强或跨语言事件抽取的泛化性。本研究也为复杂结构信息的数据增强提供了可扩展的框架参考。本文针对事件抽取任务中的高质量数据稀缺的问题，构建了基于大语言模型的数据增强框架，本文通过改写与生成协同的数据生成范式，突破了传统词级增强的局限性。为了提高事件结构标注的准确性，本文设计了自一致性标注与自动评估校验体系来代替昂贵传统的人工标注，实现了生成数据的结构化验证。同时，为了确保最终生成数据的质量，本文通过三维度质量评估体系筛选出优质数据集，并通过实验证明证实了该框架对于能有效平衡数据多样性与质量的有效性，为事件抽取任务提供了新思路。未来，我们将进一步探索多模态数据增强或跨语言事件抽取的泛化性。本研究也为复杂结构信息的数据增强提供了可扩展的框架参考。",
+      "bbox": [
+        67,
+        467,
+        361,
+        806
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          40,
+          393,
+          215,
+          678
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              40,
+              393,
+              215,
+              678
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  40,
+                  393,
+                  215,
+                  678
+                ],
+                "type": "text",
+                "content": "本研究针对事件抽取任务中高质量、高多样性训练数据稀缺的核心挑战，创新性地构建了一个基于大语言模型的四阶段“生成-标注-校验-评估”闭环数据增强框架。该框架通过改写与生成协同的数据生成范式，有效克服了传统词级增强方法和简单生成方法在捕获复杂事件结构与事件论元多样性方面的局限。为解决事件结构标注的准确性难题，本框架引入自一致性标注机制，并结合自动化判别校验体系，实现了对生成数据的结构化高效标注和校验，显著降低了对传统高成本人工标注的依赖。为确保最终产出数据集的质量，本文提出了三维度细粒度质量评估体系，实现了生成样本的精准筛选。大量实验验证充分表明，该框架能在有效平衡数据多样性与质量的前提下，显著提升事件抽取模型的性能，为事件抽取任务提供新思路。未来，我们将进一步探索多模态数据增强或跨语言事件抽取的泛化性。本研究也为复杂结构信息的数据增强提供了可扩展的框架参考。本文针对事件抽取任务中的高质量数据稀缺的问题，构建了基于大语言模型的数据增强框架，本文通过改写与生成协同的数据生成范式，突破了传统词级增强的局限性。为了提高事件结构标注的准确性，本文设计了自一致性标注与自动评估校验体系来代替昂贵传统的人工标注，实现了生成数据的结构化验证。同时，为了确保最终生成数据的质量，本文通过三维度质量评估体系筛选出优质数据集，并通过实验证明证实了该框架对于能有效平衡数据多样性与质量的有效性，为事件抽取任务提供了新思路。未来，我们将进一步探索多模态数据增强或跨语言事件抽取的泛化性。本研究也为复杂结构信息的数据增强提供了可扩展的框架参考。"
+              }
+            ]
+          }
+        ],
+        "index": 7
+      },
+      "pdf_id": 50
+    },
+    {
+      "type": "text",
+      "text": "参考文献",
+      "text_level": 1,
+      "bbox": [
+        384,
+        192,
+        431,
+        203
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          229,
+          162,
+          257,
+          171
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              229,
+              162,
+              257,
+              171
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  229,
+                  162,
+                  257,
+                  171
+                ],
+                "type": "text",
+                "content": "参考文献"
+              }
+            ]
+          }
+        ],
+        "index": 8
+      },
+      "pdf_id": 51
+    },
+    {
+      "type": "list",
+      "sub_type": "ref_text",
+      "list_items": [
+        "[1] WANG Z, WANG X, HAN X, et al. CLEVE: contrastive pre-training for event extraction [J]. arXiv preprint arXiv:210514485, 2021.",
+        "[2] HUANG H, WEI X, SHI G, et al. Boosting event extraction with denoised structure-to-text augmentation [J]. arXiv preprint arXiv:230509598, 2023.",
+        "[3] DU X, CARDIE C. Event extraction by answering (almost) natural questions [J]. arXiv preprint arXiv:200413625, 2020.",
+        "[4] LIN Y, JI H, HUANG F, et al. A joint neural model for information extraction with global features; proceedings of the Proceedings of the 58th annual meeting of the association for computational linguistics, F, 2020 [C].",
+        "[5] LU Y, LIN H, XU J, et al. Text2Event: Controllable sequence-to-structure generation for end-to-end event extraction [J]. arXiv preprint arXiv:210609232, 2021.",
+        "[6] NGUYEN T M, NGUYEN T H. One for all: Neural joint modeling of entities and events; proceedings of the Proceedings of the AAAI conference on artificial intelligence, F, 2019 [C].",
+        "[7] SHI G, SU Y, MA Y, et al. A hybrid detection and generation framework with separate encoders for event extraction; proceedings of the Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics, F, 2023 [C].",
+        "[8] YASEEN U, LANGER S. Data augmentation for low-resource named entity recognition using backtranslation [J]. arXiv preprint arXiv:210811703, 2021.",
+        "[9] 盛坤，王中卿. 基于大语言模型和数据增强的通感隐喻分析[J]. 计算机应用，2025,45(03):794-800.(ShengK,Wangzq,Synaesthesia metaphor analysis based on large language model and data enhancement [j].computer applications,2025,45 (03):794-800)",
+        "[10] DAI X, ADEL H. An analysis of simple data augmentation for named entity recognition [J]. arXiv preprint arXiv:201011683, 2020.",
+        "[11] GAO J, YU C, WANG W, et al. Mask-then-fill: A flexible and effective data augmentation framework for event extraction [J]. arXiv preprint arXiv:230102427, 2023.",
+        "[12] WHITEHOUSE C, CHOUDHURY M, AJI A F. LLM-powered data augmentation for enhanced cross-lingual performance [J]. arXiv preprint arXiv:230514288, 2023.",
+        "[13] XIE Q, DAI Z, HOVY E, et al. Unsupervised data augmentation for consistency training [J]. Advances in neural information processing systems, 2020, 33: 6256-68.",
+        "[14] YANG S, FENG D, QIAO L, et al. Exploring pre-trained language models for event extraction and generation; proceedings of the Proceedings of the 57th annual meeting of the association for computational linguistics, F, 2019 [C].",
+        "[15] DAI H, LIU Z, LIAO W, et al. Auggpt: Leveraging chatgpt for text data augmentation [J]. IEEE Transactions on Big Data, 2025.",
+        "[16] JI H, GRISHMAN R. Refining event extraction through cross-document inference; proceedings of the Proceedings of ACL-08 Hlt, F, 2008 [C].",
+        "[17] LIAO S, GRISHMAN R. Using document level cross-event inference to improve event extraction; proceedings of the Proceedings of the 48th annual meeting of the association for computational linguistics, 2010 [C].",
+        "[18] NGUYEN T H, GRISHMAN R. Event detection and domain adaptation with convolutional neural networks; proceedings of the Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers), F, 2015 [C].",
+        "[19] NGUYEN T H, CHO K, GRISHMAN R. Joint event extraction via recurrent neural networks; proceedings of the Proceedings of the 2016"
+      ],
+      "bbox": [
+        383,
+        206,
+        675,
+        790
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          228,
+          174,
+          402,
+          665
+        ],
+        "type": "list",
+        "angle": 0,
+        "index": 28,
+        "blocks": [
+          {
+            "bbox": [
+              228,
+              174,
+              399,
+              190
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  174,
+                  399,
+                  190
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      174,
+                      399,
+                      190
+                    ],
+                    "type": "text",
+                    "content": "[1] WANG Z, WANG X, HAN X, et al. CLEVE: contrastive pre-training for event extraction [J]. arXiv preprint arXiv:210514485, 2021."
+                  }
+                ]
+              }
+            ],
+            "index": 9
+          },
+          {
+            "bbox": [
+              228,
+              190,
+              387,
+              213
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  190,
+                  387,
+                  213
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      190,
+                      387,
+                      213
+                    ],
+                    "type": "text",
+                    "content": "[2] HUANG H, WEI X, SHI G, et al. Boosting event extraction with denoised structure-to-text augmentation [J]. arXiv preprint arXiv:230509598, 2023."
+                  }
+                ]
+              }
+            ],
+            "index": 10
+          },
+          {
+            "bbox": [
+              228,
+              215,
+              392,
+              231
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  215,
+                  392,
+                  231
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      215,
+                      392,
+                      231
+                    ],
+                    "type": "text",
+                    "content": "[3] DU X, CARDIE C. Event extraction by answering (almost) natural questions [J]. arXiv preprint arXiv:200413625, 2020."
+                  }
+                ]
+              }
+            ],
+            "index": 11
+          },
+          {
+            "bbox": [
+              228,
+              232,
+              402,
+              263
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  232,
+                  402,
+                  263
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      232,
+                      402,
+                      263
+                    ],
+                    "type": "text",
+                    "content": "[4] LIN Y, JI H, HUANG F, et al. A joint neural model for information extraction with global features; proceedings of the Proceedings of the 58th annual meeting of the association for computational linguistics, F, 2020 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 12
+          },
+          {
+            "bbox": [
+              228,
+              264,
+              394,
+              288
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  264,
+                  394,
+                  288
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      264,
+                      394,
+                      288
+                    ],
+                    "type": "text",
+                    "content": "[5] LU Y, LIN H, XU J, et al. Text2Event: Controllable sequence-to-structure generation for end-to-end event extraction [J]. arXiv preprint arXiv:210609232, 2021."
+                  }
+                ]
+              }
+            ],
+            "index": 13
+          },
+          {
+            "bbox": [
+              228,
+              289,
+              399,
+              312
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  289,
+                  399,
+                  312
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      289,
+                      399,
+                      312
+                    ],
+                    "type": "text",
+                    "content": "[6] NGUYEN T M, NGUYEN T H. One for all: Neural joint modeling of entities and events; proceedings of the Proceedings of the AAAI conference on artificial intelligence, F, 2019 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 14
+          },
+          {
+            "bbox": [
+              228,
+              313,
+              401,
+              345
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  313,
+                  401,
+                  345
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      313,
+                      401,
+                      345
+                    ],
+                    "type": "text",
+                    "content": "[7] SHI G, SU Y, MA Y, et al. A hybrid detection and generation framework with separate encoders for event extraction; proceedings of the Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics, F, 2023 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 15
+          },
+          {
+            "bbox": [
+              228,
+              345,
+              399,
+              369
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  345,
+                  399,
+                  369
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      345,
+                      399,
+                      369
+                    ],
+                    "type": "text",
+                    "content": "[8] YASEEN U, LANGER S. Data augmentation for low-resource named entity recognition using backtranslation [J]. arXiv preprint arXiv:210811703, 2021."
+                  }
+                ]
+              }
+            ],
+            "index": 16
+          },
+          {
+            "bbox": [
+              228,
+              370,
+              400,
+              404
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  370,
+                  400,
+                  404
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      370,
+                      400,
+                      404
+                    ],
+                    "type": "text",
+                    "content": "[9] 盛坤，王中卿. 基于大语言模型和数据增强的通感隐喻分析[J]. 计算机应用，2025,45(03):794-800.(ShengK,Wangzq,Synaesthesia metaphor analysis based on large language model and data enhancement [j].computer applications,2025,45 (03):794-800)"
+                  }
+                ]
+              }
+            ],
+            "index": 17
+          },
+          {
+            "bbox": [
+              228,
+              405,
+              396,
+              420
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  405,
+                  396,
+                  420
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      405,
+                      396,
+                      420
+                    ],
+                    "type": "text",
+                    "content": "[10] DAI X, ADEL H. An analysis of simple data augmentation for named entity recognition [J]. arXiv preprint arXiv:201011683, 2020."
+                  }
+                ]
+              }
+            ],
+            "index": 18
+          },
+          {
+            "bbox": [
+              228,
+              421,
+              397,
+              444
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  421,
+                  397,
+                  444
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      421,
+                      397,
+                      444
+                    ],
+                    "type": "text",
+                    "content": "[11] GAO J, YU C, WANG W, et al. Mask-then-fill: A flexible and effective data augmentation framework for event extraction [J]. arXiv preprint arXiv:230102427, 2023."
+                  }
+                ]
+              }
+            ],
+            "index": 19
+          },
+          {
+            "bbox": [
+              228,
+              445,
+              396,
+              469
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  445,
+                  396,
+                  469
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      445,
+                      396,
+                      469
+                    ],
+                    "type": "text",
+                    "content": "[12] WHITEHOUSE C, CHOUDHURY M, AJI A F. LLM-powered data augmentation for enhanced cross-lingual performance [J]. arXiv preprint arXiv:230514288, 2023."
+                  }
+                ]
+              }
+            ],
+            "index": 20
+          },
+          {
+            "bbox": [
+              228,
+              470,
+              394,
+              494
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  470,
+                  394,
+                  494
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      470,
+                      394,
+                      494
+                    ],
+                    "type": "text",
+                    "content": "[13] XIE Q, DAI Z, HOVY E, et al. Unsupervised data augmentation for consistency training [J]. Advances in neural information processing systems, 2020, 33: 6256-68."
+                  }
+                ]
+              }
+            ],
+            "index": 21
+          },
+          {
+            "bbox": [
+              228,
+              495,
+              392,
+              527
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  495,
+                  392,
+                  527
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      495,
+                      392,
+                      527
+                    ],
+                    "type": "text",
+                    "content": "[14] YANG S, FENG D, QIAO L, et al. Exploring pre-trained language models for event extraction and generation; proceedings of the Proceedings of the 57th annual meeting of the association for computational linguistics, F, 2019 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 22
+          },
+          {
+            "bbox": [
+              228,
+              528,
+              393,
+              543
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  528,
+                  393,
+                  543
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      528,
+                      393,
+                      543
+                    ],
+                    "type": "text",
+                    "content": "[15] DAI H, LIU Z, LIAO W, et al. Auggpt: Leveraging chatgpt for text data augmentation [J]. IEEE Transactions on Big Data, 2025."
+                  }
+                ]
+              }
+            ],
+            "index": 23
+          },
+          {
+            "bbox": [
+              228,
+              544,
+              398,
+              567
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  544,
+                  398,
+                  567
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      544,
+                      398,
+                      567
+                    ],
+                    "type": "text",
+                    "content": "[16] JI H, GRISHMAN R. Refining event extraction through cross-document inference; proceedings of the Proceedings of ACL-08 Hlt, F, 2008 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 24
+          },
+          {
+            "bbox": [
+              228,
+              568,
+              399,
+              599
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  568,
+                  399,
+                  599
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      568,
+                      399,
+                      599
+                    ],
+                    "type": "text",
+                    "content": "[17] LIAO S, GRISHMAN R. Using document level cross-event inference to improve event extraction; proceedings of the Proceedings of the 48th annual meeting of the association for computational linguistics, 2010 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 25
+          },
+          {
+            "bbox": [
+              228,
+              600,
+              396,
+              649
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  600,
+                  396,
+                  649
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      600,
+                      396,
+                      649
+                    ],
+                    "type": "text",
+                    "content": "[18] NGUYEN T H, GRISHMAN R. Event detection and domain adaptation with convolutional neural networks; proceedings of the Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers), F, 2015 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 26
+          },
+          {
+            "bbox": [
+              228,
+              650,
+              399,
+              665
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  650,
+                  399,
+                  665
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      650,
+                      399,
+                      665
+                    ],
+                    "type": "text",
+                    "content": "[19] NGUYEN T H, CHO K, GRISHMAN R. Joint event extraction via recurrent neural networks; proceedings of the Proceedings of the 2016"
+                  }
+                ]
+              }
+            ],
+            "index": 27
+          }
+        ],
+        "sub_type": "ref_text"
+      },
+      "pdf_id": 52
+    },
+    {
+      "type": "text",
+      "text": "批注[晨宋13]:新意见3：最后，论文应该对本文的创新性的进行重新的凝练，目前看起来大部分的技术都是已有的技术的组合  \n回复：对论文创新点进行重新凝练，突出主要解决当前存在的问题",
+      "bbox": [
+        710,
+        469,
+        991,
+        521
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          423,
+          395,
+          590,
+          439
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              423,
+              395,
+              590,
+              439
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  423,
+                  395,
+                  590,
+                  439
+                ],
+                "type": "text",
+                "content": "批注[晨宋13]:新意见3：最后，论文应该对本文的创新性的进行重新的凝练，目前看起来大部分的技术都是已有的技术的组合  \n回复：对论文创新点进行重新凝练，突出主要解决当前存在的问题"
+              }
+            ]
+          }
+        ],
+        "index": 29
+      },
+      "pdf_id": 53
+    },
+    {
+      "type": "header",
+      "text": "计算机应用",
+      "bbox": [
+        337,
+        170,
+        394,
+        181
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          201,
+          143,
+          235,
+          153
+        ],
+        "type": "header",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              201,
+              143,
+              235,
+              153
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  201,
+                  143,
+                  235,
+                  153
+                ],
+                "type": "text",
+                "content": "计算机应用"
+              }
+            ]
+          }
+        ],
+        "index": 0
+      },
+      "pdf_id": 54
+    },
+    {
+      "type": "page_number",
+      "text": "9",
+      "bbox": [
+        662,
+        172,
+        670,
+        180
+      ],
+      "page_idx": 2,
+      "middle_json": {
+        "bbox": [
+          394,
+          145,
+          399,
+          152
+        ],
+        "type": "page_number",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              394,
+              145,
+              399,
+              152
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  394,
+                  145,
+                  399,
+                  152
+                ],
+                "type": "text",
+                "content": "9"
+              }
+            ]
+          }
+        ],
+        "index": 1
+      },
+      "pdf_id": 55
+    },
+    {
+      "type": "list",
+      "sub_type": "ref_text",
+      "list_items": [
+        "conference of the North American chapter of the association for computational linguistics: human language technologies, F, 2016 [C].",
+        "[20] PAOLINI G, ATHIWARATKUN B, KRONE J, et al. Structured prediction as translation between augmented natural languages [J]. arXiv preprint arXiv:210105779, 2021.",
+        "[21] HUANG H, LIU X, SHI G, et al. Event extraction with dynamic prefix tuning and relevance retrieval [J]. IEEE Transactions on Knowledge and Data Engineering, 2023, 35(10): 9946-58.",
+        "[22] OUYANG L, WU J, JIANG X, et al. Training language models to follow instructions with human feedback [J]. Advances in neural information processing systems, 2022, 35: 27730-44.",
+        "[23] WEI X, CUI X, CHENG N, et al. Zero-shot information extraction via chatting with chatgtt [J]. arXiv e-prints, 2023: arXiv: 2302.10205.",
+        "[24] DEVLIN J, CHANG M-W, LEE K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding; proceedings of the Proceedings of the 2019 conference of the North American chapter of the association for computational linguistics: human language technologies, volume 1 (long and short papers), F, 2019 [C].",
+        "[25] WEI J, WANG X, SCHUURMANS D, et al. Chain-of-thought prompting elicits reasoning in large language models [J]. Advances in neural information processing systems, 2022, 35: 24824-37.",
+        "[26] WANG X, WEI J, SCHUURMANS D, et al. Self-consistency improves chain of thought reasoning in language models [J]. arXiv preprint arXiv:220311171, 2022."
+      ],
+      "bbox": [
+        70,
+        192,
+        357,
+        424
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          42,
+          162,
+          213,
+          357
+        ],
+        "type": "list",
+        "angle": 0,
+        "index": 10,
+        "blocks": [
+          {
+            "bbox": [
+              57,
+              162,
+              211,
+              178
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  57,
+                  162,
+                  211,
+                  178
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      57,
+                      162,
+                      211,
+                      178
+                    ],
+                    "type": "text",
+                    "content": "conference of the North American chapter of the association for computational linguistics: human language technologies, F, 2016 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 2
+          },
+          {
+            "bbox": [
+              42,
+              179,
+              204,
+              202
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  179,
+                  204,
+                  202
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      179,
+                      204,
+                      202
+                    ],
+                    "type": "text",
+                    "content": "[20] PAOLINI G, ATHIWARATKUN B, KRONE J, et al. Structured prediction as translation between augmented natural languages [J]. arXiv preprint arXiv:210105779, 2021."
+                  }
+                ]
+              }
+            ],
+            "index": 3
+          },
+          {
+            "bbox": [
+              42,
+              203,
+              199,
+              227
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  203,
+                  199,
+                  227
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      203,
+                      199,
+                      227
+                    ],
+                    "type": "text",
+                    "content": "[21] HUANG H, LIU X, SHI G, et al. Event extraction with dynamic prefix tuning and relevance retrieval [J]. IEEE Transactions on Knowledge and Data Engineering, 2023, 35(10): 9946-58."
+                  }
+                ]
+              }
+            ],
+            "index": 4
+          },
+          {
+            "bbox": [
+              42,
+              227,
+              204,
+              250
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  227,
+                  204,
+                  250
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      227,
+                      204,
+                      250
+                    ],
+                    "type": "text",
+                    "content": "[22] OUYANG L, WU J, JIANG X, et al. Training language models to follow instructions with human feedback [J]. Advances in neural information processing systems, 2022, 35: 27730-44."
+                  }
+                ]
+              }
+            ],
+            "index": 5
+          },
+          {
+            "bbox": [
+              42,
+              252,
+              213,
+              267
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  252,
+                  213,
+                  267
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      252,
+                      213,
+                      267
+                    ],
+                    "type": "text",
+                    "content": "[23] WEI X, CUI X, CHENG N, et al. Zero-shot information extraction via chatting with chatgtt [J]. arXiv e-prints, 2023: arXiv: 2302.10205."
+                  }
+                ]
+              }
+            ],
+            "index": 6
+          },
+          {
+            "bbox": [
+              42,
+              269,
+              213,
+              307
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  269,
+                  213,
+                  307
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      269,
+                      213,
+                      307
+                    ],
+                    "type": "text",
+                    "content": "[24] DEVLIN J, CHANG M-W, LEE K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding; proceedings of the Proceedings of the 2019 conference of the North American chapter of the association for computational linguistics: human language technologies, volume 1 (long and short papers), F, 2019 [C]."
+                  }
+                ]
+              }
+            ],
+            "index": 7
+          },
+          {
+            "bbox": [
+              42,
+              309,
+              211,
+              333
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  309,
+                  211,
+                  333
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      309,
+                      211,
+                      333
+                    ],
+                    "type": "text",
+                    "content": "[25] WEI J, WANG X, SCHUURMANS D, et al. Chain-of-thought prompting elicits reasoning in large language models [J]. Advances in neural information processing systems, 2022, 35: 24824-37."
+                  }
+                ]
+              }
+            ],
+            "index": 8
+          },
+          {
+            "bbox": [
+              42,
+              334,
+              205,
+              357
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  42,
+                  334,
+                  205,
+                  357
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      42,
+                      334,
+                      205,
+                      357
+                    ],
+                    "type": "text",
+                    "content": "[26] WANG X, WEI J, SCHUURMANS D, et al. Self-consistency improves chain of thought reasoning in language models [J]. arXiv preprint arXiv:220311171, 2022."
+                  }
+                ]
+              }
+            ],
+            "index": 9
+          }
+        ],
+        "sub_type": "ref_text"
+      },
+      "pdf_id": 56
+    },
+    {
+      "type": "list",
+      "sub_type": "ref_text",
+      "list_items": [
+        "[27] MILLER G A. WordNet: a lexical database for English [J]. Communications of the ACM, 1995, 38(11): 39-41.",
+        "[28] RAFFEL C, SHAZEER N, ROBERTS A, et al. Exploring the limits of transfer learning with a unified text-to-text transformer [J]. Journal of machine learning research, 2020, 21(140): 1-67."
+      ],
+      "bbox": [
+        383,
+        192,
+        673,
+        240
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          228,
+          162,
+          401,
+          202
+        ],
+        "type": "list",
+        "angle": 0,
+        "index": 13,
+        "blocks": [
+          {
+            "bbox": [
+              228,
+              162,
+              375,
+              178
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  228,
+                  162,
+                  375,
+                  178
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      228,
+                      162,
+                      375,
+                      178
+                    ],
+                    "type": "text",
+                    "content": "[27] MILLER G A. WordNet: a lexical database for English [J]. Communications of the ACM, 1995, 38(11): 39-41."
+                  }
+                ]
+              }
+            ],
+            "index": 11
+          },
+          {
+            "bbox": [
+              229,
+              179,
+              401,
+              202
+            ],
+            "type": "ref_text",
+            "angle": 0,
+            "lines": [
+              {
+                "bbox": [
+                  229,
+                  179,
+                  401,
+                  202
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      229,
+                      179,
+                      401,
+                      202
+                    ],
+                    "type": "text",
+                    "content": "[28] RAFFEL C, SHAZEER N, ROBERTS A, et al. Exploring the limits of transfer learning with a unified text-to-text transformer [J]. Journal of machine learning research, 2020, 21(140): 1-67."
+                  }
+                ]
+              }
+            ],
+            "index": 12
+          }
+        ],
+        "sub_type": "ref_text"
+      },
+      "pdf_id": 57
+    },
+    {
+      "type": "text",
+      "text": "This work is partially supported by Key Laboratory of Target Cognition and Application Technology(2023-CXPT-LC-005)",
+      "bbox": [
+        381,
+        253,
+        670,
+        275
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          227,
+          213,
+          399,
+          232
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              213,
+              399,
+              232
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  213,
+                  399,
+                  232
+                ],
+                "type": "text",
+                "content": "This work is partially supported by Key Laboratory of Target Cognition and Application Technology(2023-CXPT-LC-005)"
+              }
+            ]
+          }
+        ],
+        "index": 14
+      },
+      "pdf_id": 58
+    },
+    {
+      "type": "text",
+      "text": "JIANG Zhiying, born in 1987, Ph.D., associate professor. His research interests include large language model, natural language processing, real-time big data analytics.",
+      "bbox": [
+        381,
+        288,
+        665,
+        321
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          227,
+          243,
+          396,
+          270
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              243,
+              396,
+              270
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  243,
+                  396,
+                  270
+                ],
+                "type": "text",
+                "content": "JIANG Zhiying, born in 1987, Ph.D., associate professor. His research interests include large language model, natural language processing, real-time big data analytics."
+              }
+            ]
+          }
+        ],
+        "index": 15
+      },
+      "pdf_id": 59
+    },
+    {
+      "type": "text",
+      "text": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation",
+      "bbox": [
+        381,
+        323,
+        670,
+        344
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          227,
+          272,
+          399,
+          290
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              272,
+              399,
+              290
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  272,
+                  399,
+                  290
+                ],
+                "type": "text",
+                "content": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation"
+              }
+            ]
+          }
+        ],
+        "index": 16
+      },
+      "pdf_id": 60
+    },
+    {
+      "type": "text",
+      "text": "HAN Zhonghe, born in 1993, M. S, associate researcher. His research interests include deep learning, natural language processing, large language model.",
+      "bbox": [
+        381,
+        357,
+        658,
+        391
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          227,
+          301,
+          392,
+          329
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              301,
+              392,
+              329
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  301,
+                  392,
+                  329
+                ],
+                "type": "text",
+                "content": "HAN Zhonghe, born in 1993, M. S, associate researcher. His research interests include deep learning, natural language processing, large language model."
+              }
+            ]
+          }
+        ],
+        "index": 17
+      },
+      "pdf_id": 61
+    },
+    {
+      "type": "text",
+      "text": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation.",
+      "bbox": [
+        381,
+        393,
+        673,
+        414
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          227,
+          331,
+          401,
+          349
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              227,
+              331,
+              401,
+              349
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  331,
+                  401,
+                  349
+                ],
+                "type": "text",
+                "content": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation."
+              }
+            ]
+          }
+        ],
+        "index": 18
+      },
+      "pdf_id": 62
+    },
+    {
+      "type": "text",
+      "text": "★本文矩阵、矢量/向量等变量符号说明（投稿时须附上相应内容）：",
+      "text_level": 1,
+      "bbox": [
+        68,
+        449,
+        477,
+        462
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          41,
+          378,
+          284,
+          389
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              378,
+              284,
+              389
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  378,
+                  284,
+                  389
+                ],
+                "type": "text",
+                "content": "★本文矩阵、矢量/向量等变量符号说明（投稿时须附上相应内容）："
+              }
+            ]
+          }
+        ],
+        "index": 19
+      },
+      "pdf_id": 63
+    },
+    {
+      "type": "text",
+      "text": "矩阵、矢量也是变量，正文用Times New Rome字体斜体加粗表示，其他变量用常规斜体即可，公式编辑器设置见图中示例；没有矩阵、矢量变量的填写“无”。需要注意：尽量不要使用同一字母的普通斜体及加粗斜体来表示不同变量，非常容易混淆；更不能错误地使用同一变量字母来表示不同含义的变量。",
+      "bbox": [
+        68,
+        475,
+        673,
+        513
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          41,
+          400,
+          401,
+          432
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              400,
+              401,
+              432
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  400,
+                  401,
+                  432
+                ],
+                "type": "text",
+                "content": "矩阵、矢量也是变量，正文用Times New Rome字体斜体加粗表示，其他变量用常规斜体即可，公式编辑器设置见图中示例；没有矩阵、矢量变量的填写“无”。需要注意：尽量不要使用同一字母的普通斜体及加粗斜体来表示不同变量，非常容易混淆；更不能错误地使用同一变量字母来表示不同含义的变量。"
+              }
+            ]
+          }
+        ],
+        "index": 20
+      },
+      "pdf_id": 64
+    },
+    {
+      "type": "table",
+      "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/c8808810a07f53b1a42cf1be440ac326d5ee587c364c54c664cfb4d28189703b.jpg",
+      "table_caption": [],
+      "table_footnote": [],
+      "table_body": "<table><tr><td>变量符号</td><td>含义</td><td>备注</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矩阵</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矢量</td></tr></table>",
+      "bbox": [
+        258,
+        514,
+        482,
+        560
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "type": "table",
+        "bbox": [
+          154,
+          433,
+          287,
+          471
+        ],
+        "blocks": [
+          {
+            "bbox": [
+              154,
+              433,
+              287,
+              471
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  154,
+                  433,
+                  287,
+                  471
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      154,
+                      433,
+                      287,
+                      471
+                    ],
+                    "type": "table",
+                    "html": "<table><tr><td>变量符号</td><td>含义</td><td>备注</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矩阵</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矢量</td></tr></table>",
+                    "image_path": "c8808810a07f53b1a42cf1be440ac326d5ee587c364c54c664cfb4d28189703b.jpg"
+                  }
+                ]
+              }
+            ],
+            "index": 21,
+            "angle": 0,
+            "type": "table_body"
+          }
+        ],
+        "index": 21
+      },
+      "pdf_id": 65
+    },
+    {
+      "type": "table",
+      "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/9e84cf9673d2e54a57cf8f192aa8528c25839cd20438bbcb0a88c67672affe6f.jpg",
+      "table_caption": [],
+      "table_footnote": [],
+      "table_body": "<table><tr><td rowspan=\"2\">样式</td><td rowspan=\"2\">字体</td><td colspan=\"2\">字符样式</td><td>确定</td></tr><tr><td>宋体</td><td>斜体</td><td>取消</td></tr><tr><td>文本(I)</td><td>Edwardian Script ITC</td><td></td><td></td><td>帮助</td></tr><tr><td>文本(FE)</td><td>宋体</td><td></td><td></td><td>应用(A)</td></tr><tr><td>函数功能(G)</td><td>Times New Roman</td><td></td><td></td><td>出厂设置(E)</td></tr><tr><td>变量(V)</td><td>Times New Roman</td><td></td><td></td><td>用于新公式(y)</td></tr><tr><td>希腊字母(L)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>U.C.希腊语(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>符号(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>向量矩阵(M)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数字(N)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数学附加(E)</td><td>MT Extra</td><td></td><td></td><td></td></tr><tr><td>用户1(1)</td><td>Courier</td><td></td><td></td><td></td></tr><tr><td>用户2(2)</td><td>Times New Roman</td><td></td><td></td><td></td></tr></table>",
+      "bbox": [
+        220,
+        560,
+        544,
+        728
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "type": "table",
+        "bbox": [
+          131,
+          471,
+          324,
+          613
+        ],
+        "blocks": [
+          {
+            "bbox": [
+              131,
+              471,
+              324,
+              613
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  131,
+                  471,
+                  324,
+                  613
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      131,
+                      471,
+                      324,
+                      613
+                    ],
+                    "type": "table",
+                    "html": "<table><tr><td rowspan=\"2\">样式</td><td rowspan=\"2\">字体</td><td colspan=\"2\">字符样式</td><td>确定</td></tr><tr><td>宋体</td><td>斜体</td><td>取消</td></tr><tr><td>文本(I)</td><td>Edwardian Script ITC</td><td></td><td></td><td>帮助</td></tr><tr><td>文本(FE)</td><td>宋体</td><td></td><td></td><td>应用(A)</td></tr><tr><td>函数功能(G)</td><td>Times New Roman</td><td></td><td></td><td>出厂设置(E)</td></tr><tr><td>变量(V)</td><td>Times New Roman</td><td></td><td></td><td>用于新公式(y)</td></tr><tr><td>希腊字母(L)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>U.C.希腊语(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>符号(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>向量矩阵(M)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数字(N)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数学附加(E)</td><td>MT Extra</td><td></td><td></td><td></td></tr><tr><td>用户1(1)</td><td>Courier</td><td></td><td></td><td></td></tr><tr><td>用户2(2)</td><td>Times New Roman</td><td></td><td></td><td></td></tr></table>",
+                    "image_path": "9e84cf9673d2e54a57cf8f192aa8528c25839cd20438bbcb0a88c67672affe6f.jpg"
+                  }
+                ]
+              }
+            ],
+            "index": 22,
+            "angle": 0,
+            "type": "table_body"
+          }
+        ],
+        "index": 22
+      },
+      "pdf_id": 66
+    },
+    {
+      "type": "text",
+      "text": "★研究背景、基金项目介绍（投稿时须附上相应内容）：",
+      "text_level": 1,
+      "bbox": [
+        68,
+        753,
+        406,
+        766
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          41,
+          634,
+          242,
+          645
+        ],
+        "type": "title",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              634,
+              242,
+              645
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  634,
+                  242,
+                  645
+                ],
+                "type": "text",
+                "content": "★研究背景、基金项目介绍（投稿时须附上相应内容）："
+              }
+            ]
+          }
+        ],
+        "index": 23
+      },
+      "pdf_id": 67
+    },
+    {
+      "type": "text",
+      "text": "【请提供与本文内容直接相关的工作背景、本文基金项目等的简要说明与介绍，不是指整个行业的研究背景，而是介绍作者写作本文内容涉及的具体应用技术背景等，所有基金依次填写以下表格内容】",
+      "bbox": [
+        68,
+        778,
+        673,
+        804
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          41,
+          655,
+          401,
+          677
+        ],
+        "type": "text",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              41,
+              655,
+              401,
+              677
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  655,
+                  401,
+                  677
+                ],
+                "type": "text",
+                "content": "【请提供与本文内容直接相关的工作背景、本文基金项目等的简要说明与介绍，不是指整个行业的研究背景，而是介绍作者写作本文内容涉及的具体应用技术背景等，所有基金依次填写以下表格内容】"
+              }
+            ]
+          }
+        ],
+        "index": 24
+      },
+      "pdf_id": 68
+    },
+    {
+      "type": "page_number",
+      "text": "10",
+      "bbox": [
+        70,
+        172,
+        84,
+        180
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          42,
+          145,
+          50,
+          152
+        ],
+        "type": "page_number",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              42,
+              145,
+              50,
+              152
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  42,
+                  145,
+                  50,
+                  152
+                ],
+                "type": "text",
+                "content": "10"
+              }
+            ]
+          }
+        ],
+        "index": 0
+      },
+      "pdf_id": 69
+    },
+    {
+      "type": "header",
+      "text": "计算机应用",
+      "bbox": [
+        337,
+        170,
+        394,
+        181
+      ],
+      "page_idx": 3,
+      "middle_json": {
+        "bbox": [
+          201,
+          143,
+          235,
+          153
+        ],
+        "type": "header",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              201,
+              143,
+              235,
+              153
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  201,
+                  143,
+                  235,
+                  153
+                ],
+                "type": "text",
+                "content": "计算机应用"
+              }
+            ]
+          }
+        ],
+        "index": 1
+      },
+      "pdf_id": 70
+    },
+    {
+      "type": "table",
+      "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/6bdddee6ae3208827c2f41fb2cdc71ed26f10b01cfedf2d4cfc257484a2f5684.jpg",
+      "table_caption": [],
+      "table_footnote": [
+        "退修意见1：",
+        "1.section1相关研究的两个章节。作者需要介绍这两个研究领域的关系、以及和本文的关系。另外需要对这两个领域当前研究现状做总结分类，比如：目前针对事件抽取的数据增强工作可以分为哪些类别。而不是只从时间线来讲述前后的已提出的工作。作者还需要总结归纳已有工作表现不好的原因。以及是否本文会解决这些问题。如果不解决，作者也需要解释why。",
+        "2.section2，作者需要解释该框架的researchnovelty或follow某个基本范式。而非只是工程实现。",
+        "3.整个section2，作者没有体现设计上的researchnovelty。例如在开发这套系统时，是否遇到了一些由于该场景导致的独有的challenge。然后应用或改进一种大家熟知的算法来解决该challenge。",
+        "4.实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。"
+      ],
+      "table_body": "<table><tr><td colspan=\"4\">第一项基金项目（多个基金依次在后面列出）</td></tr><tr><td colspan=\"2\">项目种类</td><td colspan=\"2\">纵向</td></tr><tr><td colspan=\"2\">项目编号</td><td colspan=\"2\">2023-CXPT-LC-005</td></tr><tr><td colspan=\"2\">项目名称</td><td colspan=\"2\">目标认知与应用技术重点实验室资助</td></tr><tr><td colspan=\"2\">项目主持人</td><td colspan=\"2\">江志英</td></tr><tr><td colspan=\"2\">项目起止时间</td><td colspan=\"2\">2024.8-2025.8</td></tr><tr><td colspan=\"2\">项目主要研究内容</td><td colspan=\"2\">聚焦于能源网络的复杂关系建模与关键节点分析，收集整理实际能源网络数据分析网络结构特点，通过数据增强技术进行随机删边/加边或节点特征掩码模拟网络结构变化来提升能源网络模型的鲁棒性与泛化能力</td></tr><tr><td colspan=\"2\">本文内容与项目研究的关系</td><td colspan=\"2\">拓展性关系</td></tr><tr><td colspan=\"4\">各作者在项目中承担的工作内容</td></tr><tr><td>文章中作者署名排序</td><td>姓名</td><td>在项目承担人中的排名</td><td>在项目中承担的工作内容</td></tr><tr><td>第1作者</td><td>宋晨炜</td><td>2</td><td>算法设计</td></tr><tr><td>第2作者</td><td>江志英</td><td>1</td><td>算法设计</td></tr><tr><td>第3作者</td><td>韩众和</td><td>4</td><td>代码实习</td></tr><tr><td>第4作者</td><td>王嘉薪</td><td>3</td><td>实验验证</td></tr></table>",
+      "bbox": [
+        68,
+        190,
+        672,
+        399
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "type": "table",
+        "bbox": [
+          41,
+          160,
+          400,
+          336
+        ],
+        "blocks": [
+          {
+            "bbox": [
+              41,
+              160,
+              400,
+              336
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  160,
+                  400,
+                  336
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      160,
+                      400,
+                      336
+                    ],
+                    "type": "table",
+                    "html": "<table><tr><td colspan=\"4\">第一项基金项目（多个基金依次在后面列出）</td></tr><tr><td colspan=\"2\">项目种类</td><td colspan=\"2\">纵向</td></tr><tr><td colspan=\"2\">项目编号</td><td colspan=\"2\">2023-CXPT-LC-005</td></tr><tr><td colspan=\"2\">项目名称</td><td colspan=\"2\">目标认知与应用技术重点实验室资助</td></tr><tr><td colspan=\"2\">项目主持人</td><td colspan=\"2\">江志英</td></tr><tr><td colspan=\"2\">项目起止时间</td><td colspan=\"2\">2024.8-2025.8</td></tr><tr><td colspan=\"2\">项目主要研究内容</td><td colspan=\"2\">聚焦于能源网络的复杂关系建模与关键节点分析，收集整理实际能源网络数据分析网络结构特点，通过数据增强技术进行随机删边/加边或节点特征掩码模拟网络结构变化来提升能源网络模型的鲁棒性与泛化能力</td></tr><tr><td colspan=\"2\">本文内容与项目研究的关系</td><td colspan=\"2\">拓展性关系</td></tr><tr><td colspan=\"4\">各作者在项目中承担的工作内容</td></tr><tr><td>文章中作者署名排序</td><td>姓名</td><td>在项目承担人中的排名</td><td>在项目中承担的工作内容</td></tr><tr><td>第1作者</td><td>宋晨炜</td><td>2</td><td>算法设计</td></tr><tr><td>第2作者</td><td>江志英</td><td>1</td><td>算法设计</td></tr><tr><td>第3作者</td><td>韩众和</td><td>4</td><td>代码实习</td></tr><tr><td>第4作者</td><td>王嘉薪</td><td>3</td><td>实验验证</td></tr></table>",
+                    "image_path": "6bdddee6ae3208827c2f41fb2cdc71ed26f10b01cfedf2d4cfc257484a2f5684.jpg"
+                  }
+                ]
+              }
+            ],
+            "index": 2,
+            "angle": 0,
+            "type": "table_body"
+          },
+          {
+            "bbox": [
+              41,
+              344,
+              77,
+              353
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  344,
+                  77,
+                  353
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      344,
+                      77,
+                      353
+                    ],
+                    "type": "text",
+                    "content": "退修意见1："
+                  }
+                ]
+              }
+            ],
+            "index": 3,
+            "angle": 0,
+            "type": "table_footnote"
+          },
+          {
+            "bbox": [
+              41,
+              354,
+              214,
+              431
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  354,
+                  214,
+                  431
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      354,
+                      214,
+                      431
+                    ],
+                    "type": "text",
+                    "content": "1.section1相关研究的两个章节。作者需要介绍这两个研究领域的关系、以及和本文的关系。另外需要对这两个领域当前研究现状做总结分类，比如：目前针对事件抽取的数据增强工作可以分为哪些类别。而不是只从时间线来讲述前后的已提出的工作。作者还需要总结归纳已有工作表现不好的原因。以及是否本文会解决这些问题。如果不解决，作者也需要解释why。"
+                  }
+                ]
+              }
+            ],
+            "index": 4,
+            "angle": 0,
+            "type": "table_footnote"
+          },
+          {
+            "bbox": [
+              41,
+              433,
+              214,
+              453
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  433,
+                  214,
+                  453
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      433,
+                      214,
+                      453
+                    ],
+                    "type": "text",
+                    "content": "2.section2，作者需要解释该框架的researchnovelty或follow某个基本范式。而非只是工程实现。"
+                  }
+                ]
+              }
+            ],
+            "index": 5,
+            "angle": 0,
+            "type": "table_footnote"
+          },
+          {
+            "bbox": [
+              41,
+              454,
+              214,
+              497
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  454,
+                  214,
+                  497
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      454,
+                      214,
+                      497
+                    ],
+                    "type": "text",
+                    "content": "3.整个section2，作者没有体现设计上的researchnovelty。例如在开发这套系统时，是否遇到了一些由于该场景导致的独有的challenge。然后应用或改进一种大家熟知的算法来解决该challenge。"
+                  }
+                ]
+              }
+            ],
+            "index": 6,
+            "angle": 0,
+            "type": "table_footnote"
+          },
+          {
+            "bbox": [
+              41,
+              498,
+              214,
+              519
+            ],
+            "lines": [
+              {
+                "bbox": [
+                  41,
+                  498,
+                  214,
+                  519
+                ],
+                "spans": [
+                  {
+                    "bbox": [
+                      41,
+                      498,
+                      214,
+                      519
+                    ],
+                    "type": "text",
+                    "content": "4.实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。"
+                  }
+                ]
+              }
+            ],
+            "index": 7,
+            "angle": 0,
+            "type": "table_footnote"
+          }
+        ],
+        "index": 2
+      },
+      "pdf_id": 71
+    },
+    {
+      "type": "text",
+      "text": "修改说明1：",
+      "bbox": [
+        68,
+        642,
+        129,
+        653
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          41,
+          540,
+          77,
+          550
+        ],
+        "lines": [
+          {
+            "bbox": [
+              41,
+              540,
+              77,
+              550
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  540,
+                  77,
+                  550
+                ],
+                "type": "text",
+                "content": "修改说明1："
+              }
+            ]
+          }
+        ],
+        "index": 9,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 72
+    },
+    {
+      "type": "text",
+      "text": "1.针对审稿意见，我们已对论文的Section1进行了如下重点修改，在引言和相关研究部分，更清晰地阐述并突出了数据增强与事件抽这两个领域之间的关联性。我们特别点明数据增强技术通过生成或扩充训练语料，能够有效缓解事件抽取任务中普遍存在的数据稀缺问题，是提升其模型性能的关键途径之一。并对当前数据增强方法研究现状的总结，指出应用于事件抽取时现有的数据增强方法的不足，本文针对问题提出了数据增强框架来解决这一系列问题。实验表明了该数据增强框架的有效性。",
+      "bbox": [
+        68,
+        655,
+        359,
+        771
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          41,
+          551,
+          214,
+          649
+        ],
+        "lines": [
+          {
+            "bbox": [
+              41,
+              551,
+              214,
+              649
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  551,
+                  214,
+                  649
+                ],
+                "type": "text",
+                "content": "1.针对审稿意见，我们已对论文的Section1进行了如下重点修改，在引言和相关研究部分，更清晰地阐述并突出了数据增强与事件抽这两个领域之间的关联性。我们特别点明数据增强技术通过生成或扩充训练语料，能够有效缓解事件抽取任务中普遍存在的数据稀缺问题，是提升其模型性能的关键途径之一。并对当前数据增强方法研究现状的总结，指出应用于事件抽取时现有的数据增强方法的不足，本文针对问题提出了数据增强框架来解决这一系列问题。实验表明了该数据增强框架的有效性。"
+              }
+            ]
+          }
+        ],
+        "index": 10,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 73
+    },
+    {
+      "type": "text",
+      "text": "2.针对Section2的修改意见，我们着重补充了关于所提出数据增强框架的研究新颖性。针对事件抽取任务的复杂性、",
+      "bbox": [
+        68,
+        772,
+        359,
+        797
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          41,
+          650,
+          214,
+          671
+        ],
+        "lines": [
+          {
+            "bbox": [
+              41,
+              650,
+              214,
+              671
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  41,
+                  650,
+                  214,
+                  671
+                ],
+                "type": "text",
+                "content": "2.针对Section2的修改意见，我们着重补充了关于所提出数据增强框架的研究新颖性。针对事件抽取任务的复杂性、"
+              }
+            ]
+          }
+        ],
+        "index": 11,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 74
+    },
+    {
+      "type": "text",
+      "text": "数据标注成本高昂以及高质量数据集稀缺的背景。这直接引出了应用数据增强技术的必要性。但目前面向事件抽取的数据增强方法有许多不足，如生成数据方法单一，增强数据质量不高，事件结构偏差过大，缺乏一个有效的评估机制等导致增强的效果并不明显，因此本文针对这一系列问题设计了一个多阶段的数据增强框架，通过多阶段的协同作用（生成，标注，判别  $\\rightarrow$  评估）来解决生成数据质量不高的问题。",
+      "bbox": [
+        379,
+        398,
+        673,
+        486
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          226,
+          335,
+          401,
+          409
+        ],
+        "lines": [
+          {
+            "bbox": [
+              226,
+              335,
+              401,
+              409
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  226,
+                  335,
+                  401,
+                  409
+                ],
+                "type": "text",
+                "content": "数据标注成本高昂以及高质量数据集稀缺的背景。这直接引出了应用数据增强技术的必要性。但目前面向事件抽取的数据增强方法有许多不足，如生成数据方法单一，增强数据质量不高，事件结构偏差过大，缺乏一个有效的评估机制等导致增强的效果并不明显，因此本文针对这一系列问题设计了一个多阶段的数据增强框架，通过多阶段的协同作用（生成，标注，判别 "
+              },
+              {
+                "bbox": [
+                  226,
+                  335,
+                  401,
+                  409
+                ],
+                "type": "inline_equation",
+                "content": "\\rightarrow"
+              },
+              {
+                "bbox": [
+                  226,
+                  335,
+                  401,
+                  409
+                ],
+                "type": "text",
+                "content": " 评估）来解决生成数据质量不高的问题。"
+              }
+            ]
+          }
+        ],
+        "index": 13,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 75
+    },
+    {
+      "type": "text",
+      "text": "3. 针对 Section 3 关于研究新颖性体现的意见，我们进行了重要补充，着重阐述了在设计面向事件抽取的数据增强框架过程中遇到的核心挑战，由于事件抽取任务本身的复杂性，理解事件往往需要复杂的上下文推理，这对模型语义理解提出了更大的挑战，在使用 Chatgpt 直接进行事件抽取时的效果并没有这么突出，因此我们引入先前的方法，通过思维链和自一致性的方法来增加大模型对事件结构标注的准确性，再设计一个判别模块进一步检查标注的准确性，通过这些方法来增强数据标注阶段的对事件结构标注的准确性，最后依靠评估模块来筛选出高质量数据集。",
+      "bbox": [
+        379,
+        489,
+        673,
+        618
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          226,
+          412,
+          401,
+          520
+        ],
+        "lines": [
+          {
+            "bbox": [
+              226,
+              412,
+              401,
+              520
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  226,
+                  412,
+                  401,
+                  520
+                ],
+                "type": "text",
+                "content": "3. 针对 Section 3 关于研究新颖性体现的意见，我们进行了重要补充，着重阐述了在设计面向事件抽取的数据增强框架过程中遇到的核心挑战，由于事件抽取任务本身的复杂性，理解事件往往需要复杂的上下文推理，这对模型语义理解提出了更大的挑战，在使用 Chatgpt 直接进行事件抽取时的效果并没有这么突出，因此我们引入先前的方法，通过思维链和自一致性的方法来增加大模型对事件结构标注的准确性，再设计一个判别模块进一步检查标注的准确性，通过这些方法来增强数据标注阶段的对事件结构标注的准确性，最后依靠评估模块来筛选出高质量数据集。"
+              }
+            ]
+          }
+        ],
+        "index": 14,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 76
+    },
+    {
+      "type": "text",
+      "text": "4. 对实验与结果分析分析进行了修改，SR，BT在3.2的基线方法提及并引用了相关文献，两个分别代表同义词替换和回译两种数据增强方法。",
+      "bbox": [
+        379,
+        620,
+        672,
+        657
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          226,
+          522,
+          400,
+          553
+        ],
+        "lines": [
+          {
+            "bbox": [
+              226,
+              522,
+              400,
+              553
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  226,
+                  522,
+                  400,
+                  553
+                ],
+                "type": "text",
+                "content": "4. 对实验与结果分析分析进行了修改，SR，BT在3.2的基线方法提及并引用了相关文献，两个分别代表同义词替换和回译两种数据增强方法。"
+              }
+            ]
+          }
+        ],
+        "index": 15,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 77
+    },
+    {
+      "type": "text",
+      "text": "退修意见2：",
+      "bbox": [
+        381,
+        671,
+        443,
+        682
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          227,
+          565,
+          264,
+          574
+        ],
+        "lines": [
+          {
+            "bbox": [
+              227,
+              565,
+              264,
+              574
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  565,
+                  264,
+                  574
+                ],
+                "type": "text",
+                "content": "退修意见2："
+              }
+            ]
+          }
+        ],
+        "index": 17,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 78
+    },
+    {
+      "type": "text",
+      "text": "1、主要表现在对比实验应加上大模型直接生成事件数据的结果。",
+      "bbox": [
+        381,
+        684,
+        672,
+        708
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          227,
+          576,
+          400,
+          596
+        ],
+        "lines": [
+          {
+            "bbox": [
+              227,
+              576,
+              400,
+              596
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  576,
+                  400,
+                  596
+                ],
+                "type": "text",
+                "content": "1、主要表现在对比实验应加上大模型直接生成事件数据的结果。"
+              }
+            ]
+          }
+        ],
+        "index": 18,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 79
+    },
+    {
+      "type": "text",
+      "text": "2、同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比。",
+      "bbox": [
+        381,
+        711,
+        672,
+        734
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          227,
+          598,
+          400,
+          618
+        ],
+        "lines": [
+          {
+            "bbox": [
+              227,
+              598,
+              400,
+              618
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  598,
+                  400,
+                  618
+                ],
+                "type": "text",
+                "content": "2、同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比。"
+              }
+            ]
+          }
+        ],
+        "index": 19,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 80
+    },
+    {
+      "type": "text",
+      "text": "3、最后，论文应该对本文的创新性的进行重新的凝练，目前看起来大部分的技术都是已有的技术的组合。",
+      "bbox": [
+        381,
+        737,
+        672,
+        760
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          227,
+          620,
+          400,
+          640
+        ],
+        "lines": [
+          {
+            "bbox": [
+              227,
+              620,
+              400,
+              640
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  620,
+                  400,
+                  640
+                ],
+                "type": "text",
+                "content": "3、最后，论文应该对本文的创新性的进行重新的凝练，目前看起来大部分的技术都是已有的技术的组合。"
+              }
+            ]
+          }
+        ],
+        "index": 20,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 81
+    },
+    {
+      "type": "text",
+      "text": "修改说明2：",
+      "bbox": [
+        381,
+        785,
+        443,
+        797
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          227,
+          661,
+          264,
+          671
+        ],
+        "lines": [
+          {
+            "bbox": [
+              227,
+              661,
+              264,
+              671
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  227,
+                  661,
+                  264,
+                  671
+                ],
+                "type": "text",
+                "content": "修改说明2："
+              }
+            ]
+          }
+        ],
+        "index": 22,
+        "angle": 0,
+        "type": "text"
+      },
+      "pdf_id": 82
+    },
+    {
+      "type": "header",
+      "text": "计算机应用",
+      "bbox": [
+        337,
+        170,
+        394,
+        181
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          201,
+          143,
+          235,
+          153
+        ],
+        "type": "header",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              201,
+              143,
+              235,
+              153
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  201,
+                  143,
+                  235,
+                  153
+                ],
+                "type": "text",
+                "content": "计算机应用"
+              }
+            ]
+          }
+        ],
+        "index": 0
+      },
+      "pdf_id": 83
+    },
+    {
+      "type": "page_number",
+      "text": "11",
+      "bbox": [
+        658,
+        172,
+        670,
+        181
+      ],
+      "page_idx": 4,
+      "middle_json": {
+        "bbox": [
+          392,
+          145,
+          399,
+          153
+        ],
+        "type": "page_number",
+        "angle": 0,
+        "lines": [
+          {
+            "bbox": [
+              392,
+              145,
+              399,
+              153
+            ],
+            "spans": [
+              {
+                "bbox": [
+                  392,
+                  145,
+                  399,
+                  153
+                ],
+                "type": "text",
+                "content": "11"
+              }
+            ]
+          }
+        ],
+        "index": 1
+      },
+      "pdf_id": 84
+    }
+  ],
+  "llm": "<LLM: <Core.provider.llm.LLM object at 0x0000015F95597380>...>"
+}
+[12:46:51] - INFO - <== EXITING FUNCTION: extract_pdf_outline_in_chunks
+[12:46:51] - INFO -     Duration: 20.4385 seconds
+[12:46:51] - INFO -     Return Value: [
+  {
+    "type": "text",
+    "text": "面向事件抽取的多阶段数据增强框架研究",
+    "text_level": 0,
+    "bbox": [
+      169,
+      223,
+      571,
+      242
+    ],
+    "page_idx": 0,
+    "middle_json": {
+      "bbox": [
+        101,
+        188,
+        340,
+        204
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            101,
+            188,
+            340,
+            204
+          ],
+          "spans": [
+            {
+              "bbox": [
+                101,
+                188,
+                340,
+                204
+              ],
+              "type": "text",
+              "content": "面向事件抽取的多阶段数据增强框架研究"
+            }
+          ]
+        }
+      ],
+      "index": 8
+    },
+    "pdf_id": 9,
+    "parent_id": 0,
+    "height": 16.0,
+    "end_id": 31
+  },
+  {
+    "type": "text",
+    "text": "3.3 实验设置",
+    "text_level": 2,
+    "bbox": [
+      68,
+      193,
+      142,
+      203
+    ],
+    "page_idx": 1,
+    "middle_json": {
+      "bbox": [
+        41,
+        163,
+        85,
+        171
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            41,
+            163,
+            85,
+            171
+          ],
+          "spans": [
+            {
+              "bbox": [
+                41,
+                163,
+                85,
+                171
+              ],
+              "type": "text",
+              "content": "3.3 实验设置"
+            }
+          ]
+        }
+      ],
+      "index": 2
+    },
+    "pdf_id": 31,
+    "parent_id": 33,
+    "height": 8.0,
+    "end_id": 33
+  },
+  {
+    "type": "text",
+    "text": "4 实验与结果分析",
+    "text_level": 1,
+    "bbox": [
+      68,
+      305,
+      200,
+      317
+    ],
+    "page_idx": 1,
+    "middle_json": {
+      "bbox": [
+        41,
+        257,
+        119,
+        267
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            41,
+            257,
+            119,
+            267
+          ],
+          "spans": [
+            {
+              "bbox": [
+                41,
+                257,
+                119,
+                267
+              ],
+              "type": "text",
+              "content": "4 实验与结果分析"
+            }
+          ]
+        }
+      ],
+      "index": 4
+    },
+    "pdf_id": 33,
+    "parent_id": 9,
+    "height": 10.0,
+    "end_id": 34
+  },
+  {
+    "type": "text",
+    "text": "4.1 实验结果",
+    "text_level": 2,
+    "bbox": [
+      68,
+      329,
+      142,
+      338
+    ],
+    "page_idx": 1,
+    "middle_json": {
+      "bbox": [
+        41,
+        277,
+        85,
+        285
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            41,
+            277,
+            85,
+            285
+          ],
+          "spans": [
+            {
+              "bbox": [
+                41,
+                277,
+                85,
+                285
+              ],
+              "type": "text",
+              "content": "4.1 实验结果"
+            }
+          ]
+        }
+      ],
+      "index": 5
+    },
+    "pdf_id": 34,
+    "parent_id": 33,
+    "height": 8.0,
+    "end_id": 38
+  },
+  {
+    "type": "text",
+    "text": "4.2 数据分析",
+    "text_level": 2,
+    "bbox": [
+      68,
+      778,
+      142,
+      789
+    ],
+    "page_idx": 1,
+    "middle_json": {
+      "bbox": [
+        41,
+        655,
+        85,
+        664
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            41,
+            655,
+            85,
+            664
+          ],
+          "spans": [
+            {
+              "bbox": [
+                41,
+                655,
+                85,
+                664
+              ],
+              "type": "text",
+              "content": "4.2 数据分析"
+            }
+          ]
+        }
+      ],
+      "index": 12
+    },
+    "pdf_id": 38,
+    "parent_id": 33,
+    "height": 9.0,
+    "end_id": 49
+  },
+  {
+    "type": "text",
+    "text": "5 结语",
+    "text_level": 1,
+    "bbox": [
+      68,
+      443,
+      127,
+      456
+    ],
+    "page_idx": 2,
+    "middle_json": {
+      "bbox": [
+        41,
+        373,
+        76,
+        384
+      ],
+      "type": "title",
+      "angle": 0,
+      "lines": [
+        {
+          "bbox": [
+            41,
+            373,
+            76,
+            384
+          ],
+          "spans": [
+            {
+              "bbox": [
+                41,
+                373,
+                76,
+                384
+              ],
+              "type": "text",
+              "content": "5 结语"
+            }
+          ]
+        }
+      ],
+      "index": 6
+    },
+    "pdf_id": 49,
+    "parent_id": 9,
+    "height": 11.0,
+    "end_id": 51
+  },
+  {
+    "type": "text",
+    "text": "参考文献",
+    "text_level": 1,
+    "bbox": [
+      384,
+      192,
+      431,
+      203
+    ],
+    "page_idx": 2,
+    "middle_json": {
+      "bbox": [
+        229,
+        162,
+        257,
+        171
+      ],
+      "type": "title",
+  ... [TRUNCATED]

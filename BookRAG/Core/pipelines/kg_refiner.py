@@ -27,6 +27,8 @@ import logging
 import gc
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from Core.utils.trace_logger import trace_execution
+
 log = logging.getLogger(__name__)
 
 
@@ -263,6 +265,7 @@ class KGRefiner:
 
         return merged_entity
 
+    @trace_execution
     def basic_kg_refiner(
         self, entities: List[Entity], relationships: List[Relationship], source_id: int
     ) -> None:
@@ -703,6 +706,7 @@ class KGRefiner:
                 f"graph and vdb contain the same number of nodes: {num_node_graph}."
             )
 
+    @trace_execution
     def advanced_kg_refiner(
         self, entities: List[Entity], relationships: List[Relationship], source_id: int
     ) -> None:
@@ -826,6 +830,7 @@ class KGRefiner:
             )
             return entity
 
+    @trace_execution
     def refine_entities(self):
         merged_entity_set = set()
         need_refine_entities = []
@@ -874,6 +879,7 @@ class KGRefiner:
         self._debug_check_num()
         return
 
+    @trace_execution
     def refine_relation(self):
         # delete self loop in graph index
         self.graph_index.remove_self_loops()

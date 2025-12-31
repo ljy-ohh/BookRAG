@@ -1,14 +1,25 @@
 {
   "entities": [
     {
-      "entity_name": "shu wang",
-      "entity_type": "PERSON",
-      "description": "shu wang is a person mentioned in the text",
+      "entity_name": "",
+      "entity_type": "UNKNOWN",
+      "description": "",
       "source_ids": [
         2
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
+      "source_ids": [
+        2
+      ]
+    }
+  ],
   "node_idx": 2
 }

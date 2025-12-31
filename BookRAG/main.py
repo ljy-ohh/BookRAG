@@ -17,6 +17,7 @@ from Core.construct_index import (
 )
 from Core.inference import inference
 from Core.provider.TokenTracker import TokenTracker
+from Core.utils.trace_logger import TRACE_LOGGER_NAME, trace_execution
 
 log = logging.getLogger(__name__)  # Get logger for main
 
@@ -119,6 +120,7 @@ def create_args():
     return parser.parse_args()
 
 
+@trace_execution
 def build_index(config: SystemConfig, stage: str = "all", data_df: pd.DataFrame = None):
     log.info(
         f"  - build_index called. Indexing '{config.pdf_path}' into '{config.save_path}'"
@@ -199,10 +201,29 @@ def setup_logging(save_path: str, config_to_log: SystemConfig):
     root_logger.addHandler(console_handler)
     root_logger.addHandler(file_handler)
 
+    # --- 3. Trace FileHandler for detailed execution logs ---
+    trace_log_file = log_dir / f"trace_{time.strftime('%Y%m%d_%H%M%S')}.log"
+    trace_handler = logging.FileHandler(trace_log_file, encoding="utf-8")
+    trace_formatter = logging.Formatter(
+        "%(asctime)s - %(levelname)s - %(message)s", datefmt="[%X]"
+    )
+    trace_handler.setFormatter(trace_formatter)
+
+    # Configure the specific TraceLogger
+    trace_logger = logging.getLogger(TRACE_LOGGER_NAME)
+    trace_logger.setLevel(logging.INFO)
+    # Clear existing handlers if any (to avoid duplicates on re-runs)
+    if trace_logger.hasHandlers():
+        trace_logger.handlers.clear()
+    trace_logger.addHandler(trace_handler)
+    # Prevent propagation to root logger to avoid cluttering main logs
+    trace_logger.propagate = False
+
     # --- Log the Initial Configuration ---
     # Get a logger instance for this setup function
     log = logging.getLogger("LoggerSetup")
     log.info(f"Logging initialized. Log file will be saved to: {log_file}")
+    log.info(f"Trace logging initialized. Trace file will be saved to: {trace_log_file}")
 
     # Prettify the config output using yaml.dump
     config_dict = config_to_log.model_dump()

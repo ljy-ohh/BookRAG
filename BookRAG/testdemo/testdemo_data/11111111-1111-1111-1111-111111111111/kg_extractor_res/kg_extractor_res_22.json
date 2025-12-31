@@ -1,23 +1,15 @@
 {
   "entities": [
     {
-      "entity_name": "the image",
-      "entity_type": "IMAGE",
-      "description": "An icon representing a small, open paperback book with a visible, darker cover and several pages, possibly indicating a book or text-based resource.",
+      "entity_name": "hdgse",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "hdgse is a model mentioned in the text as being affected by a data augmentation framework",
       "source_ids": [
         22
       ]
     },
     {
-      "entity_name": "book icon",
-      "entity_type": "ARTWORK",
-      "description": "A graphical representation showcasing a book with an open spine, typically used as an icon or symbol to depict books, reading, or literature.",
-      "source_ids": [
-        22
-      ]
-    },
-    {
-      "entity_name": "image",
+      "entity_name": "",
       "entity_type": "UNKNOWN",
       "description": "",
       "source_ids": [
@@ -27,21 +19,11 @@
   ],
   "relations": [
     {
-      "src_entity_name": "image",
-      "tgt_entity_name": "the image",
+      "src_entity_name": "",
+      "tgt_entity_name": "hdgse",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Image entity Image  related to The Image",
-      "source_ids": [
-        22
-      ]
-    },
-    {
-      "src_entity_name": "image",
-      "tgt_entity_name": "book icon",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "Image entity Image  related to Book Icon",
+      "description": "the data augmentation framework is described as having an impact on the performance of the hdgse model",
       "source_ids": [
         22
       ]

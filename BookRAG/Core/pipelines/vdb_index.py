@@ -16,6 +16,7 @@ from Core.configs.system_config import SystemConfig
 from Core.utils.utils import TextProcessor
 from Core.utils.raptor_utils import raptor_tree
 from Core.utils.bm25 import BM25
+from Core.utils.trace_logger import trace_execution
 import json
 import logging
 
@@ -83,6 +84,7 @@ def process_tree_nodes(tree: DocumentTree) -> Tuple[Dict[str, List], Dict[str, L
     return text_dict, image_dict
 
 
+@trace_execution
 def build_vdb_index(tree: DocumentTree, vdb_cfg: VDBConfig):
     if vdb_cfg.mm_embedding:
         embedder = GmeEmbeddingProvider(

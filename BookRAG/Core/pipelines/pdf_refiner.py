@@ -13,6 +13,8 @@ import re
 import logging
 from bs4 import BeautifulSoup
 
+from Core.utils.trace_logger import trace_execution
+
 log = logging.getLogger(__name__)
 
 
@@ -354,7 +356,7 @@ def merge_text_and_mark_invalid(prev_content: dict, merged_list: list[dict]):
     print(f"Index in Page: {prev_content['middle_json'].get("index", -1) + 1}")
     print(f"{prev_content['text']}")  # Print first 100 chars for debug
 
-
+@trace_execution
 def text_merger(pdf_list: list[Optional[str]], llm: LLM) -> list[Optional[str]]:
     incomplete_paragraphs = []
     # for循环的逻辑可以更清晰地组织
@@ -630,7 +632,7 @@ def llm_table_judger(table_pairs: list[tuple[dict, dict]], llm: LLM):
 
     log.info(f"LLM table judgment completed. Merged {merged_cnt} tables.")
 
-
+@trace_execution
 def table_merger(pdf_list: list[Optional[str]], llm: LLM) -> list[Optional[str]]:
     possible_tables = []
     for content in pdf_list:
@@ -743,19 +745,20 @@ def truncate_ocr_error_refiner(
 
     return pdf_list
 
-
+@trace_execution
 def pdf_info_refiner(pdf_list: list[Optional[str]], llm: LLM) -> list[Optional[str]]:
-    # Heuristic refiner for "-" error in OCR
+    # Heuristic refiner for "-" error in OCR 去除"-"后面的空格
     pdf_list = dash_line_refiner(pdf_list)
-    # Heuristic refiner for OCR Error
+    # Heuristic refiner for OCR Error - 作用 : 截断 OCR 识别出的乱码尾巴（Garbage Text）。
+    # - 场景 : 有些 PDF 页面底部可能有复杂的装饰图案或水印，OCR 可能会将其错误识别为一串无意义的字符（例如 "t t t i l l"）。
     pdf_list = truncate_ocr_error_refiner(pdf_list)
 
-    # we first enumerate the pdf_list to ensure each content has a unique index
+    # we first enumerate the pdf_list to ensure each content has a unique index 打上id，变成键值对了，方便后续处理
     pdf_list = enumerate_pdf_list(pdf_list)
 
     # Then we refine the PDF information by merging incomplete paragraphs and tables
-    pdf_list = text_merger(pdf_list, llm)
-    pdf_list = table_merger(pdf_list, llm)
+    pdf_list = text_merger(pdf_list, llm) #跨页/跨栏段落合并 。这是最核心的功能之一。
+    pdf_list = table_merger(pdf_list, llm) #跨页表格合并 。大表格经常跨越两页。解析工具通常会将它们识别为两个独立的表格，导致表头丢失或数据断层。
 
     # After merging, we need to re-enumerate the pdf_list
     pdf_list = enumerate_pdf_list(pdf_list)
