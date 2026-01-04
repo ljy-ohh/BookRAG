@@ -1,5 +1,26 @@
 {
   "entities": [],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both are listed as keywords in the same text  suggesting a potential application of the model to the task",
+      "source_ids": [
+        9
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "both are listed as keywords in the same text  suggesting the method is a potential solution to the problem",
+      "source_ids": [
+        9
+      ]
+    }
+  ],
   "node_idx": 9
 }

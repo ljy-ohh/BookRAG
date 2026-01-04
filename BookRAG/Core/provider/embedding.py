@@ -44,12 +44,12 @@ class GmeEmbeddingProvider(BaseEmbedder):
     def __new__(cls, *args, **kwargs):
         # 如果实例还不存在，就创建一个新的
         if cls._instance is None:
-            log.info("Creating a new GmeEmbeddingProvider instance...")
+            log.info("正在创建新的 GmeEmbeddingProvider 实例...")
             cls._instance = super(GmeEmbeddingProvider, cls).__new__(cls)
             # 标记一下，确保 __init__ 只被调用一次
             cls._instance._initialized = False
         else:
-            log.info("Returning existing GmeEmbeddingProvider instance.")
+            log.info("返回现有的 GmeEmbeddingProvider 实例。")
         return cls._instance
 
     def __init__(
@@ -66,9 +66,9 @@ class GmeEmbeddingProvider(BaseEmbedder):
         self.device_strategy = device.lower()
 
         log.info(
-            f"Using local backend (ModelScope) with device strategy: {self.device_strategy}"
+            f"正在使用本地后端 (ModelScope)，设备策略为: {self.device_strategy}"
         )
-        log.info(f"Loading model: {self.model_name}...")
+        log.info(f"正在加载模型: {self.model_name}...")
 
         try:
             self.model = transformer_AutoModel.from_pretrained(
@@ -79,11 +79,11 @@ class GmeEmbeddingProvider(BaseEmbedder):
                 use_fast=True,
             )
             self.model.eval()
-            log.info("GME model loaded successfully.")
+            log.info("GME 模型加载成功。")
             self._initialized = True  # 标记为已初始化
         except Exception as e:
             log.error(
-                f"Error loading GME model '{self.model_name}' from ModelScope.",
+                f"从 ModelScope 加载 GME 模型 '{self.model_name}' 时出错。",
                 exc_info=True,
             )
             raise e
@@ -107,7 +107,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
             np.ndarray: 返回一个 numpy 数组，形状为 (n_texts, embedding_dim)。
         """
         if not texts or not isinstance(texts, list):
-            raise ValueError("Input 'texts' must be a non-empty list of strings.")
+            raise ValueError("输入 'texts' 必须是非空字符串列表。")
 
         all_embeddings = []
         with torch.no_grad():
@@ -136,7 +136,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
             np.ndarray: 返回一个 numpy 数组，形状为 (n_images, embedding_dim)。
         """
         if not images or not isinstance(images, list):
-            raise ValueError("Input 'images' must be a non-empty list of image paths.")
+            raise ValueError("输入 'images' 必须是非空图像路径列表。")
 
         all_embeddings = []
         with torch.no_grad():
@@ -166,7 +166,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
         """
         if not texts or not images or len(texts) != len(images):
             raise ValueError(
-                "'texts' and 'images' must be non-empty lists of the same length."
+                "'texts' 和 'images' 必须是长度相同的非空列表。"
             )
 
         all_embeddings = []
@@ -186,32 +186,32 @@ class GmeEmbeddingProvider(BaseEmbedder):
 
     def close(self) -> None:
         """关闭GmeEmbeddingProvider并释放资源。"""
-        log.info(f"Closing GmeEmbeddingProvider for model: {self.model_name}...")
+        log.info(f"正在关闭模型 {self.model_name} 的 GmeEmbeddingProvider...")
 
         if hasattr(self, "model"):
-            log.info("Releasing GME model resources...")
+            log.info("正在释放 GME 模型资源...")
             del self.model
 
             # 如果模型是加载到CUDA上的，清空缓存
             if torch.cuda.is_available():
-                log.info("Embedder: Emptying CUDA cache.")
+                log.info("嵌入器: 清空 CUDA 缓存。")
                 torch.cuda.empty_cache()
 
             gc.collect()
-            log.info("GME model resources released.")
+            log.info("GME 模型资源已释放。")
 
-        log.info("GmeEmbeddingProvider closed.")
+        log.info("GmeEmbeddingProvider 已关闭。")
 
     def clear_cache(self) -> None:
         """
         手动清理PyTorch的CUDA缓存和Python的垃圾回收。
         注意：这是一个同步操作，可能会影响性能，请仅在必要时（如处理完一个大任务后）调用。
         """
-        log.info("Clearing CUDA cache...")
+        log.info("正在清理 CUDA 缓存...")
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         gc.collect()
-        log.info("CUDA cache cleared.")
+        log.info("CUDA 缓存已清理。")
 
     def rerank_documents(
         self,
@@ -220,15 +220,15 @@ class GmeEmbeddingProvider(BaseEmbedder):
         instruction: Optional[str] = None,
     ) -> List[float]:
         """
-        Rerank a list of documents based on a query and an optional instruction.
+        根据查询和可选指令对文档列表进行重排序。
         """
         if not query:
-            raise ValueError("Query cannot be empty.")
+            raise ValueError("查询不能为空。")
         if not doc_list:
             return []
 
         log.info(
-            f"Reranking {len(doc_list)} documents based on query and instruction..."
+            f"正在根据查询和指令对 {len(doc_list)} 个文档进行重排序..."
         )
 
         query_embedding = self.embed_texts([query], instruction=instruction)[0]
@@ -254,7 +254,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
 
         # 3. 对每个分组进行批量嵌入和相似度计算
         if text_only_group:
-            log.info(f"Processing {len(text_only_group)} text-only documents...")
+            log.info(f"正在处理 {len(text_only_group)} 个纯文本文档...")
             texts = [item["text"] for item in text_only_group]
             doc_embeddings = self.embed_texts(texts)
             similarities = (doc_embeddings @ query_embedding.T).tolist()
@@ -262,7 +262,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
                 scores[item["index"]] = similarities[i]
 
         if image_only_group:
-            log.info(f"Processing {len(image_only_group)} image-only documents...")
+            log.info(f"正在处理 {len(image_only_group)} 个纯图像文档...")
             images = [item["image"] for item in image_only_group]
             doc_embeddings = self.embed_images(images)
             similarities = (doc_embeddings @ query_embedding.T).tolist()
@@ -270,7 +270,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
                 scores[item["index"]] = similarities[i]
 
         if fused_group:
-            log.info(f"Processing {len(fused_group)} fused (text+image) documents...")
+            log.info(f"正在处理 {len(fused_group)} 个融合 (文本+图像) 文档...")
             texts = [item["text"] for item in fused_group]
             images = [item["image"] for item in fused_group]
             doc_embeddings = self.embed_fused(texts=texts, images=images)
@@ -278,7 +278,7 @@ class GmeEmbeddingProvider(BaseEmbedder):
             for i, item in enumerate(fused_group):
                 scores[item["index"]] = similarities[i]
 
-        log.info("Reranking complete.")
+        log.info("重排序完成。")
         return scores
 
 
@@ -296,7 +296,7 @@ class MMRerankerProvider(BaseEmbedder):
         self.doc_embeddings = np.array([])
         self.question_embeddings = {}
 
-        log.info(f"Initializing MMRerankerProvider from path: {self.index_path}")
+        log.info(f"正在从路径初始化 MMRerankerProvider: {self.index_path}")
         self._load_embeddings()
 
         self.gme_provider = GmeEmbeddingProvider(
@@ -306,63 +306,63 @@ class MMRerankerProvider(BaseEmbedder):
 
     def _load_embeddings(self):
         """
-        Loads metadata and embeddings for documents and questions from disk.
+        从磁盘加载文档和问题的元数据及嵌入。
         """
-        # --- Load Document Embeddings ---
+        # --- 加载文档嵌入 ---
         doc_metadata_path = os.path.join(self.index_path, "mm_node_metadata.json")
         doc_embeddings_path = os.path.join(self.index_path, "mm_embeddings.npy")
 
         if os.path.exists(doc_metadata_path) and os.path.exists(doc_embeddings_path):
-            log.info("Loading document metadata and embeddings...")
+            log.info("正在加载文档元数据和嵌入...")
             with open(doc_metadata_path, "r", encoding="utf-8") as f:
                 doc_metadata_list = json.load(f)
 
-            # Create a dictionary for fast O(1) lookup by node_id
+            # 创建一个字典，用于通过 node_id 进行快速 O(1) 查找
             self.doc_metadata = {item["node_id"]: item for item in doc_metadata_list}
 
             self.doc_embeddings = np.load(doc_embeddings_path)
             log.info(
-                f"Loaded {len(self.doc_metadata)} document metadata entries and {self.doc_embeddings.shape[0]} document embeddings."
+                f"加载了 {len(self.doc_metadata)} 个文档元数据条目和 {self.doc_embeddings.shape[0]} 个文档嵌入。"
             )
         else:
-            log.warning("Document metadata or embedding files not found")
+            log.warning("未找到文档元数据或嵌入文件")
 
-        # --- Load Question Embeddings ---
+        # --- 加载问题嵌入 ---
         q_metadata_path = os.path.join(self.index_path, "mm_question_metadata.json")
         q_embeddings_path = os.path.join(self.index_path, "mm_question_embeddings.npy")
 
         if os.path.exists(q_metadata_path) and os.path.exists(q_embeddings_path):
-            log.info("Loading question metadata and embeddings...")
-            # Use pandas to easily read the json records
+            log.info("正在加载问题元数据和嵌入...")
+            # 使用 pandas 轻松读取 json 记录
             q_metadata_df = pd.read_json(q_metadata_path, orient="records")
             q_embeddings = np.load(q_embeddings_path)
 
-            # Create a dictionary mapping question text to its embedding for fast lookup
+            # 创建一个将问题文本映射到其嵌入的字典，以便快速查找
             for _, row in q_metadata_df.iterrows():
                 question_text = row["question"]
                 embedding_idx = row["question_embedding_idx"]
                 self.question_embeddings[question_text] = q_embeddings[embedding_idx]
-                # The query key must include the instruction, as it was used during pre-computation
+                # 查询键必须包含指令，因为它在预计算期间被使用
                 # query_key = question_text + self.RERANKER_INSTRUCTION
                 # self.question_embeddings[query_key] = q_embeddings[embedding_idx]
 
             log.info(
-                f"Loaded {len(self.question_embeddings)} pre-computed question embeddings."
+                f"加载了 {len(self.question_embeddings)} 个预计算的问题嵌入。"
             )
         else:
-            log.warning("Question metadata or embedding files not found.")
+            log.warning("未找到问题元数据或嵌入文件。")
 
     def embed_texts(self, texts: List[str]) -> np.ndarray:
-        raise NotImplementedError("MMRerankerProvider does not support text embedding.")
+        raise NotImplementedError("MMRerankerProvider 不支持文本嵌入。")
 
     def embed_images(self, images: List[str]) -> np.ndarray:
         raise NotImplementedError(
-            "MMRerankerProvider does not support image embedding."
+            "MMRerankerProvider 不支持图像嵌入。"
         )
 
     def embed_fused(self, images: List[str], texts: List[str]) -> np.ndarray:
         raise NotImplementedError(
-            "MMRerankerProvider does not support fused embedding."
+            "MMRerankerProvider 不支持融合嵌入。"
         )
 
     def rerank_documents(
@@ -372,11 +372,11 @@ class MMRerankerProvider(BaseEmbedder):
         instruction: Optional[str] = None,
     ) -> List[float]:
         if not query:
-            raise ValueError("Query cannot be empty.")
+            raise ValueError("查询不能为空。")
         if not doc_list:
             return []
 
-        # 1. Get the pre-computed query embedding
+        # 1. 获取预计算的查询嵌入
         if query in self.question_embeddings.keys():
             query_embedding = self.question_embeddings[query]
         else:
@@ -387,7 +387,7 @@ class MMRerankerProvider(BaseEmbedder):
 
         if query_embedding is None:
             log.error(
-                f"Query '{query}' not found in pre-computed question embeddings. Returning zero scores."
+                f"在预计算的问题嵌入中未找到查询 '{query}'。返回零分。"
             )
             return [0.0] * len(doc_list)
 
@@ -397,17 +397,17 @@ class MMRerankerProvider(BaseEmbedder):
         if self.doc_embeddings.size == 0:
             embedding_dim = query_embedding.shape[
                 0
-            ]  # Get dimension from query embedding
+            ]  # 从查询嵌入获取维度
         else:
             embedding_dim = self.doc_embeddings.shape[1]
 
-        # 2. Prepare document embeddings for batch calculation
-        # Create a matrix to hold all document embeddings. Initialize with zeros.
+        # 2. 准备用于批量计算的文档嵌入
+        # 创建一个矩阵来保存所有文档嵌入。初始化为零。
         doc_embeddings_matrix = np.zeros(
             (len(doc_list), embedding_dim), dtype=query_embedding.dtype
         )
 
-        # Collect valid embedding indices and their corresponding positions in doc_list
+        # 收集有效的嵌入索引及其在 doc_list 中的对应位置
         valid_doc_indices = []
         valid_embedding_indices = []
 
@@ -416,9 +416,9 @@ class MMRerankerProvider(BaseEmbedder):
             metadata = self.doc_metadata.get(node_id)
 
             if metadata and metadata.get("embedding_idx") is not None:
-                # skip documents without valid embedding
+                # 跳过没有有效嵌入的文档
                 embedding_idx_in_storage = metadata["embedding_idx"]
-                valid_doc_indices.append(i)  # Original position in doc_list
+                valid_doc_indices.append(i)  # doc_list 中的原始位置
                 valid_embedding_indices.append(embedding_idx_in_storage)
 
         if valid_doc_indices:
@@ -426,17 +426,17 @@ class MMRerankerProvider(BaseEmbedder):
                 valid_embedding_indices
             ]
 
-        # 3. Perform batch similarity calculation
+        # 3. 执行批量相似度计算
         similarities = (doc_embeddings_matrix @ query_embedding).tolist()
 
-        log.info(f"Successfully reranked {len(doc_list)} documents in batch mode.")
+        log.info(f"成功以批量模式重排序了 {len(doc_list)} 个文档。")
         return similarities
 
     def close(self) -> None:
         """
-        Releases resources. In this implementation, data is in memory, so no action is needed.
+        释放资源。在此实现中，数据在内存中，因此无需执行任何操作。
         """
-        log.info("MMRerankerProvider does not hold resources to release.")
+        log.info("MMRerankerProvider 不持有需要释放的资源。")
         self.doc_metadata.clear()
         self.doc_embeddings = np.array([])
         self.question_embeddings.clear()
@@ -466,8 +466,8 @@ class TextEmbeddingProvider(BaseEmbedder):
             else:
                 self.device = device
 
-            log.info(f"Using local backend (ModelScope) on device: {self.device}")
-            log.info(f"Loading model: {self.model_name}...")
+            log.info(f"正在设备上使用本地后端 (ModelScope): {self.device}")
+            log.info(f"正在加载模型: {self.model_name}...")
 
             try:
                 # 根据官方示例，使用AutoTokenizer和AutoModel，并设置padding_side
@@ -479,10 +479,10 @@ class TextEmbeddingProvider(BaseEmbedder):
                 ).to(self.device)
                 self.model.eval()
             except Exception as e:
-                log.info(f"Error loading model '{self.model_name}' from Hugging Face.")
+                log.info(f"从 Hugging Face 加载模型 '{self.model_name}' 时出错。")
                 raise e
 
-            log.info("Local model loaded successfully.")
+            log.info("本地模型加载成功。")
 
         elif self.backend == "ollama":
             self.device = "ollama_service"
@@ -492,49 +492,37 @@ class TextEmbeddingProvider(BaseEmbedder):
             )
             if not resolved_key:
                 raise ValueError(
-                    "Missing API key for OpenAI-compatible embedding backend. Provide 'api_key' or set OPENAI_API_KEY/SILICONFLOW_API_KEY."
+                    "OpenAI 兼容的嵌入后端缺少 API 密钥。请提供 'api_key' 或设置 OPENAI_API_KEY/SILICONFLOW_API_KEY。"
                 )
             if not api_base:
                 raise ValueError(
-                    "Missing 'api_base' for OpenAI-compatible embedding backend (e.g., https://api.siliconflow.cn/v1)."
+                    "OpenAI 兼容的嵌入后端缺少 'api_base' (例如: https://api.siliconflow.cn/v1)。"
                 )
             self.client = openai.OpenAI(api_key=resolved_key, base_url=api_base)
         else:
             raise ValueError(
-                f"Unsupported backend: '{self.backend}'. Choose 'local' or 'ollama' or 'openai'."
+                f"不支持的后端: '{self.backend}'。请选择 'local'、'ollama' 或 'openai'。"
             )
 
-    @classmethod
-    def close_instance(cls) -> None:
-        """
-        作为类方法，用于在程序结束时关闭单例并释放资源。
-        """
-        if cls._instance is not None:
-            log.info(
-                f"Closing GmeEmbeddingProvider singleton for model: {cls._instance.model_name}..."
-            )
+    def close(self) -> None:
+        """释放模型和相关资源。"""
+        log.info(f"正在关闭模型 {self.model_name} 的 TextEmbeddingProvider...")
 
-            if hasattr(cls._instance, "model"):
-                log.info("Releasing GME model resources...")
-                del cls._instance.model
+        if self.backend == "local":
+            if hasattr(self, "model"):
+                log.info("正在释放本地模型资源...")
+                del self.model
+                if hasattr(self, "tokenizer"):
+                    del self.tokenizer
 
                 if torch.cuda.is_available():
-                    log.info("Embedder: Emptying CUDA cache.")
+                    log.info("嵌入器: 正在清空 CUDA 缓存。")
                     torch.cuda.empty_cache()
 
                 gc.collect()
-                log.info("GME model resources released.")
+                log.info("本地模型资源已释放。")
 
-            cls._instance = None  # 销毁实例
-            log.info("GmeEmbeddingProvider singleton instance closed.")
-
-    # (旧的 close 方法可以移除或保留，但不再建议实例级别调用)
-    def close(self) -> None:
-        """实例级别的 close 方法现在应提醒用户使用类方法。"""
-        log.warning(
-            "Calling close() on a singleton instance is discouraged. Use GmeEmbeddingProvider.close_instance() at application shutdown."
-        )
-        # 或者直接调用类方法： GmeEmbeddingProvider.close_instance()
+        log.info("TextEmbeddingProvider 已关闭。")
 
     def _last_token_pool(
         self, last_hidden_states: torch.Tensor, attention_mask: torch.Tensor
@@ -570,7 +558,7 @@ class TextEmbeddingProvider(BaseEmbedder):
             np.ndarray: 返回一个 numpy 数组，形状为 (n_texts, embedding_dim)。
         """
         if not texts or not isinstance(texts, list):
-            raise ValueError("Input 'texts' must be a non-empty list of strings.")
+            raise ValueError("输入 'texts' 必须是非空字符串列表。")
 
         if self.backend == "local":
             batch_size = 16
@@ -596,7 +584,7 @@ class TextEmbeddingProvider(BaseEmbedder):
                 num_batches = math.ceil(n / batch_size)
                 for i in tqdm(
                     range(0, n, batch_size),
-                    desc="Embedding batches",
+                    desc="正在嵌入文本",
                     total=num_batches,
                 ):
                     batch_texts = texts[i : i + batch_size]
@@ -650,10 +638,10 @@ class TextEmbeddingProvider(BaseEmbedder):
     def compute_texts_sim(self, text1: str, text2: str) -> float:
         """
         Args:
-            text1 (str): The first text string.
-            text2 (str): The second text string.
+            text1 (str): 第一个文本字符串。
+            text2 (str): 第二个文本字符串。
         Returns:
-            float: Cosine similarity between the two text embeddings, in the range [-1.0, 1.0].
+            float: 两个文本嵌入之间的余弦相似度，范围在 [-1.0, 1.0]。
         """
         embeddings = self.embed_texts([text1, text2])
         vec1, vec2 = embeddings[0], embeddings[1]
@@ -663,7 +651,7 @@ class TextEmbeddingProvider(BaseEmbedder):
 
 
 if __name__ == "__main__":
-    # Example usage
+    # 示例用法
     text_embedder = TextEmbeddingProvider(
         model_name="Qwen/Qwen3-Embedding-0.6B",
         # model_name="Qwen/Qwen3-Embedding-4B",
@@ -673,7 +661,7 @@ if __name__ == "__main__":
     texts = ["你好，世界！", "这是一个测试。"]
     embeddings = text_embedder.embed_texts(texts)
     print("Text embeddings shape:", embeddings.shape)
-    # test the cuda storage
+    # 测试 cuda 存储
 
     mm_embedder = GmeEmbeddingProvider(
         model_name="Alibaba-NLP/gme-Qwen2-VL-2B-Instruct",

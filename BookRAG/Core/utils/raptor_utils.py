@@ -92,14 +92,14 @@ def GMM_cluster(
         except ValueError as e:
             # 如果即使加了reg_covar仍然失败，则跳过这个n，而不是让程序崩溃
             logger.warning(
-                f"GMM fitting failed for n_components={n}. Skipping. Error: {e}"
+                f"GMM 拟合失败，n_components={n}。跳过。错误: {e}"
             )
             continue
 
     # 5. 处理所有聚类尝试都失败的边缘情况
     if not valid_n_clusters:
         logger.warning(
-            "GMM fitting failed for all attempted n_components. Returning 1 cluster as a fallback."
+            "GMM 拟合失败，所有尝试的 n_components 均无效。回退到返回 1 个聚类。"
         )
         labels = [np.array([0]) for _ in embeddings]
         return labels, 1
@@ -132,7 +132,7 @@ def get_embedding(texts: List[str], embedder: TextEmbeddingProvider):
 
 
 def get_summary_prompt(cluster_texts: List[str], max_tokens=3000):
-    SUMMARIZE = """You are a helpful assistant. Write a summary of the following, including as many key details as possible: {context}:"""
+    SUMMARIZE = """你是一个乐于助人的助手。请为以下内容写一个摘要，包含尽可能多的关键细节：{context}："""
 
     context = "\n".join(cluster_texts)
     prompt = SUMMARIZE.format(context=context)
@@ -162,7 +162,7 @@ def cluster_one_layer(
     embeddings = get_embedding(input_texts, embedder)
     labels, n = GMM_cluster(embeddings)
 
-    print(f"Clustered into {n} groups.")
+    print(f"聚类成 {n} 组。")
 
     summaries = []
     for cluster_id in range(n):
@@ -193,7 +193,7 @@ def raptor_tree(
     meta_data = []
     base_num = 0
 
-    # add the original chunks as depth 0
+    # 将原始块作为深度 0 添加
     tree_text.extend(current_texts)
     meta_data.extend(get_meta_data(current_texts, depth=0, base_num=base_num))
     base_num += len(current_texts)
@@ -202,7 +202,7 @@ def raptor_tree(
         if len(current_texts) <= 5:
             break
 
-        print(f"Clustering depth {depth+1} with {len(current_texts)} texts")
+        print(f"正在聚类深度 {depth+1}，共有 {len(current_texts)} 个文本")
         summaries = cluster_one_layer(current_texts, embedder, llm)
         tree_text.extend(summaries)
         current_texts = summaries

@@ -52,7 +52,7 @@ class TextRerankerProvider:
         # ==========================================================
         if self.backend in ["vllm", "openai"]:
             if not api_base:
-                raise ValueError(f"api_base must be provided for the '{self.backend}' backend.")
+                raise ValueError(f"'{self.backend}' 后端必须提供 api_base。")
             # 您可以根据实际情况修改
             if api_base.strip("/").endswith("rerank"):
                 self.rerank_url = api_base
@@ -67,9 +67,9 @@ class TextRerankerProvider:
             if resolved_key:
                 self.session.headers.update({"Authorization": f"Bearer {resolved_key}"})
             elif self.backend == "openai":
-                raise ValueError("Missing API key for OpenAI-compatible reranker backend.")
+                raise ValueError("OpenAI 兼容的重排序后端缺少 API Key。")
 
-            log.info(f"Using {self.backend} backend. Rerank endpoint: {self.rerank_url}")
+            log.info(f"正在使用 {self.backend} 后端。重排序端点: {self.rerank_url}")
         # ==========================================================
         # 本地后端逻辑 (将原有代码移入此分支)
         # ==========================================================
@@ -79,8 +79,8 @@ class TextRerankerProvider:
             else:
                 self.device = device
 
-            log.info(f"Using reranker on device: {self.device}")
-            log.info(f"Loading reranker model: {self.model_name}...")
+            log.info(f"正在设备上使用重排序器: {self.device}")
+            log.info(f"正在加载重排序模型: {self.model_name}...")
 
             # 加载分词器，Qwen Reranker要求左填充
             self.tokenizer = AutoTokenizer.from_pretrained(
@@ -94,10 +94,10 @@ class TextRerankerProvider:
                 if use_flash_attention:
                     try:
                         model_args["attn_implementation"] = "flash_attention_2"
-                        log.info("Using Flash Attention 2.")
+                        log.info("正在使用 Flash Attention 2。")
                     except ImportError:
                         log.info(
-                            "Flash Attention 2 not available. Falling back to default attention."
+                            "Flash Attention 2 不可用。回退到默认注意力机制。"
                         )
 
             self.model = (
@@ -106,30 +106,30 @@ class TextRerankerProvider:
                 .eval()
             )
 
-            log.info("Reranker model loaded successfully.")
+            log.info("重排序模型加载成功。")
 
 
         else:
             raise ValueError(
-                f"Unsupported backend: {self.backend}. Choose 'local', 'vllm' or 'openai'."
+                f"不支持的后端: {self.backend}。请选择 'local', 'vllm' 或 'openai'。"
             )
         self._define_prompt_template()
 
     def clean_cache(self):
         if self.backend == "local":
-            log.info("Cleaning cache...")
+            log.info("正在清理缓存...")
             gc.collect()
             if "cuda" in self.device:
                 torch.cuda.empty_cache()
-            log.info("Cache cleaned.")
+            log.info("缓存已清理。")
         else:
-            log.info(f"{self.backend} backend requires no local cache cleaning.")
+            log.info(f"{self.backend} 后端无需本地缓存清理。")
 
     def close(self) -> None:
         """
-        close the reranker provider and release resources.
+        关闭 reranker provider 并释放资源。
         """
-        log.info(f"Closing TextRerankerProvider for model: {self.model_name}...")
+        log.info(f"正在关闭 TextRerankerProvider 模型: {self.model_name}...")
 
         if self.backend == "local":
             if hasattr(self, "model"):
@@ -138,32 +138,32 @@ class TextRerankerProvider:
                 del self.tokenizer
 
             if "cuda" in self.device:
-                log.info("Reranker: Emptying CUDA cache.")
+                log.info("Reranker: 正在清空 CUDA 缓存。")
                 torch.cuda.empty_cache()
 
             gc.collect()
-            log.info("Local reranker resources released.")
+            log.info("本地 reranker 资源已释放。")
 
         elif self.backend in ["vllm", "openai"]:
             if hasattr(self, "session"):
                 self.session.close()  # 关闭 requests session
-            log.info(f"{self.backend} backend session closed.")
+            log.info(f"{self.backend} 后端会话已关闭。")
 
-        log.info("TextRerankerProvider closed.")
+        log.info("TextRerankerProvider 已关闭。")
 
     def _define_prompt_template(self):
         """
-        定义Qwen3-Reranker所需的特定提示词模板。
+        定义 Qwen3-Reranker 所需的特定提示词模板。
         """
-        # --- 步骤1: 定义所有后端都需要的字符串模板 ---
+        # --- 步骤 1: 定义所有后端都需要的字符串模板 ---
         self.prefix = '<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be "yes" or "no".<|im_end|>\n<|im_start|>user\n'
         self.suffix = "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
         self.query_template = "{prefix}<Instruct>: {instruction}\n<Query>: {query}\n"
         self.document_template = "<Document>: {doc}{suffix}"
 
-        # --- 步骤2: 仅为 local 后端预编码 token ---
+        # --- 步骤 2: 仅为 local 后端预编码 token ---
         if self.backend == "local":
-            # 获取"yes"和"no"的token ID
+            # 获取 "yes" 和 "no" 的 token ID
             self.token_false_id = self.tokenizer.convert_tokens_to_ids("no")
             self.token_true_id = self.tokenizer.convert_tokens_to_ids("yes")
             # 预先编码模板，以备后续拼接
@@ -186,7 +186,7 @@ class TextRerankerProvider:
 
     def _process_batch(self, batch_pairs: List[str]) -> Dict[str, torch.Tensor]:
         """
-        对一批格式化后的文本对进行分词、添加特殊token和填充。
+        对一批格式化后的文本对进行分词、添加特殊 token 和填充。
         """
         # 1. 对核心内容进行分词
         inputs = self.tokenizer(
@@ -199,7 +199,7 @@ class TextRerankerProvider:
             - len(self.suffix_tokens),
         )
 
-        # 2. 手动添加前缀和后缀token
+        # 2. 手动添加前缀和后缀 token
         for i in range(len(inputs["input_ids"])):
             inputs["input_ids"][i] = (
                 self.prefix_tokens + inputs["input_ids"][i] + self.suffix_tokens
@@ -226,19 +226,19 @@ class TextRerankerProvider:
         """
         从处理好的输入中计算相关性得分。
         """
-        # 模型前向传播，获取最后一个token的logits
+        # 模型前向传播，获取最后一个 token 的 logits
         outputs = self.model(**inputs)
         logits = outputs.logits[:, -1, :]
 
-        # 提取"yes"和"no"的logits
+        # 提取 "yes" 和 "no" 的 logits
         true_vector = logits[:, self.token_true_id]
         false_vector = logits[:, self.token_false_id]
 
-        # 计算Log-Softmax并转换为概率
+        # 计算 Log-Softmax 并转换为概率
         scores_tensor = torch.stack([false_vector, true_vector], dim=1)
         log_softmax_scores = torch.nn.functional.log_softmax(scores_tensor, dim=1)
 
-        # 返回"yes"的概率作为最终得分
+        # 返回 "yes" 的概率作为最终得分
         final_scores = log_softmax_scores[:, 1].exp().tolist()
 
         # 【关键修改】显式删除大的中间张量
@@ -273,16 +273,16 @@ class TextRerankerProvider:
             List[float]: 返回一个与文档列表对应的得分列表，每个分数在0到1之间。
         """
         if not documents or not isinstance(documents, list):
-            raise ValueError("Input 'documents' must be a non-empty list of strings.")
+            raise ValueError("输入 'documents' 必须是非空字符串列表。")
 
         if self.backend in ["vllm", "openai"]:
-            # For API-based backends, send raw text. The API provider handles templating.
-            # 1. Prepare query and documents
-            # If instruction is provided, some APIs might support it, but standard Rerank API usually just takes 'query'.
-            # For Qwen-Reranker via API, we assume the API handles the prompt construction or we just send the query.
-            # To be safe and avoid double-templating or 500 errors, we send raw strings.
+            # 对于基于 API 的后端，发送原始文本。API 提供商会处理模板。
+            # 1. 准备查询和文档
+            # 如果提供了指令，某些 API 可能支持它，但标准 Rerank API 通常只接受 'query'。
+            # 对于通过 API 的 Qwen-Reranker，我们假设 API 处理提示构造或者我们只发送查询。
+            # 为了安全起见并避免双重模板或 500 错误，我们发送原始字符串。
             
-            # 2. Process in batches
+            # 2. 分批处理
             all_results = []
             num_docs = len(documents)
             num_batches = math.ceil(num_docs / batch_size)
@@ -296,8 +296,8 @@ class TextRerankerProvider:
                 ):
                     batch_docs = documents[i : i + batch_size]
 
-                    # 3. Construct payload
-                    # Ensure all documents are strings
+                    # 3. 构造 payload
+                    # 确保所有文档都是字符串
                     batch_docs = [str(d) for d in batch_docs]
                     
                     payload = {
@@ -310,7 +310,7 @@ class TextRerankerProvider:
                     if instruction:
                         payload["instruction"] = instruction
                     
-                    # 4. Send API request
+                    # 4. 发送 API 请求
                     try:
                         response = self.session.post(self.rerank_url, json=payload)
                         response.raise_for_status()
@@ -320,9 +320,9 @@ class TextRerankerProvider:
 
                         if results is None or not isinstance(results, list):
                             log.error(
-                                f"Unexpected response format from {self.backend} reranker: 'results' key not found or not a list. Response: {data}")
-                            # Instead of raising error, treat as failed batch
-                            raise ValueError(f"Failed to parse 'results' from {self.backend} response.")
+                                f"来自 {self.backend} reranker 的响应格式意外: 未找到 'results' 键或不是列表。响应: {data}")
+                            # 不抛出错误，而是将其视为失败的批次
+                            raise ValueError(f"无法从 {self.backend} 响应中解析 'results'。")
 
                         # 4. 使用全局索引聚合结果
                         for r in results:
@@ -330,12 +330,12 @@ class TextRerankerProvider:
                         all_results.extend(results)
                     
                     except Exception as batch_err:
-                        log.error(f"Failed to process batch {i//batch_size} (docs {i} to {i+len(batch_docs)}): {batch_err}")
+                        log.error(f"处理批次 {i//batch_size} (文档 {i} 到 {i+len(batch_docs)}) 失败: {batch_err}")
                         if hasattr(batch_err, 'response') and batch_err.response is not None:
-                             log.error(f"API Response Content: {batch_err.response.text}")
+                             log.error(f"API 响应内容: {batch_err.response.text}")
                         
-                        # Fallback: Assign low score to failed documents to avoid pipeline crash
-                        log.warning("Skipping this batch and assigning default score -1.0")
+                        # 回退：为失败的文档分配低分以避免管道崩溃
+                        log.warning("跳过此批次并分配默认分数 -1.0")
                         for idx in range(len(batch_docs)):
                             all_results.append({
                                 'global_index': i + idx,
@@ -354,9 +354,9 @@ class TextRerankerProvider:
                 return all_scores
 
             except requests.exceptions.RequestException as e:
-                log.error(f"Error calling {self.backend} reranker API: {e}")
+                log.error(f"调用 {self.backend} reranker API 时出错: {e}")
                 if hasattr(e, 'response') and e.response is not None:
-                    log.error(f"API Response Content: {e.response.text}")
+                    log.error(f"API 响应内容: {e.response.text}")
                 raise e
 
 
@@ -378,7 +378,7 @@ class TextRerankerProvider:
 
             for i in tqdm(
                 range(0, num_docs, batch_size),
-                desc="Reranking Batches",
+                desc="正在重排序批次",
                 total=num_batches,
                 disable=num_docs < batch_size,
             ):
@@ -400,7 +400,7 @@ class TextRerankerProvider:
                     del inputs, batch_pairs, scores
 
                     log.info(
-                        f"Processed content count ({processed_content_count}) reached threshold. Cleaning cache."
+                        f"处理的内容数量 ({processed_content_count}) 达到阈值。正在清理缓存。"
                     )
                     self.clean_cache()
                     # 重置计数器
@@ -416,8 +416,8 @@ class TextRerankerProvider:
 
 
 def format_entity_for_reranking(entity: Entity) -> str:
-    """Formats the first three fields of an Entity object into a single,
-    English-keyed string for scoring."""
+    """将 Entity 对象的前三个字段格式化为一个字符串，
+    以英文键名用于评分。"""
     return f"Name: {entity.entity_name}\nType: {entity.entity_type}\nDescription: {entity.description}"
 
 
@@ -507,9 +507,9 @@ def test_example_1(reranker: TextRerankerProvider, instruction: str):
     )
 
     # 8. 打印结果
-    print("\n--- Entity Reranking Results ---")
-    print(f"Query Entity: {query_entity.entity_name} ({query_entity.description})\n")
-    print("Ranked candidate entities from VDB:")
+    print("\n--- 实体重排序结果 ---")
+    print(f"查询实体: {query_entity.entity_name} ({query_entity.description})\n")
+    print("来自 VDB 的排序后候选实体:")
     for entity, score in ranked_results:
         # 清晰地打印出实体名称和类型，以便于观察排序效果
         print(
@@ -526,7 +526,7 @@ def test_example_2(reranker: "TextRerankerProvider", instruction: str):
     查询: Katsushika Hokusai
     """
     print("\n" + "=" * 50)
-    print("--- Running Test Example 2: Katsushika Hokusai (No Exact Match) ---")
+    print("--- 运行测试示例 2: 葛饰北斋 (无精确匹配) ---")
     print("=" * 50)
 
     # 1. 定义查询实体
@@ -577,8 +577,8 @@ def test_example_2(reranker: "TextRerankerProvider", instruction: str):
         zip(candidate_entities, scores), key=lambda x: x[1], reverse=True
     )
 
-    print(f"\nQuery Entity: {query_entity.entity_name}\n")
-    print("Ranked candidate entities:")
+    print(f"\n查询实体: {query_entity.entity_name}\n")
+    print("排序后的候选实体:")
     for entity, score in ranked_results:
         print(
             f"Score: {score:.4f}\t Entity: '{entity.entity_name}' (Type: {entity.entity_type})"
@@ -594,7 +594,7 @@ def test_example_3(reranker: "TextRerankerProvider", instruction: str):
     """
     print("\n" + "=" * 50)
     print(
-        "--- Running Test Example 3: Tokyo Tower (Sanity Check - No Related Matches) ---"
+        "--- 运行测试示例 3: 东京塔 (健全性检查 - 无相关匹配) ---"
     )
     print("=" * 50)
 
@@ -646,8 +646,8 @@ def test_example_3(reranker: "TextRerankerProvider", instruction: str):
         zip(candidate_entities, scores), key=lambda x: x[1], reverse=True
     )
 
-    print(f"\nQuery Entity: {query_entity.entity_name}\n")
-    print("Ranked candidate entities:")
+    print(f"\n查询实体: {query_entity.entity_name}\n")
+    print("排序后的候选实体:")
     for entity, score in ranked_results:
         print(
             f"Score: {score:.4f}\t Entity: '{entity.entity_name}' (Type: {entity.entity_type})"
@@ -667,7 +667,7 @@ if __name__ == "__main__":
         )
     except Exception as e:
         print(
-            f"Failed to initialize reranker, maybe due to GPU memory limitations. Error: {e}"
+            f"初始化重排序器失败，可能是由于 GPU 内存限制。错误: {e}"
         )
         reranker = None
 

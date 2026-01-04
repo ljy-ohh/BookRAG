@@ -21,8 +21,8 @@ log = logging.getLogger(__name__)
 
 class VanillaRAG(BaseRAG):
     """
-    Text-only Vanilla Retrieval Augmented Generation,
-    supports vanilla, BM25, RAPTOR, PDF+Vanilla
+    仅文本的 Vanilla 检索增强生成，
+    支持 vanilla, BM25, RAPTOR, PDF+Vanilla
     """
 
     def __init__(
@@ -35,11 +35,11 @@ class VanillaRAG(BaseRAG):
         super().__init__(
             llm=llm,
             name="MM RAG",
-            description="Text-only Vanilla Retrieval Augmented Generation",
+            description="仅文本的 Vanilla 检索增强生成",
         )
         self.cfg = config
         self.max_tokens = self.llm.config.max_tokens - 200
-        log.info("Vanilla RAG initialized.")
+        log.info("Vanilla RAG 已初始化。")
         self.topk = self.cfg.topk
 
         if self.cfg.retrieval_method == "bm25":
@@ -60,7 +60,7 @@ class VanillaRAG(BaseRAG):
         question_text = f"--- User Question ---\n{query}\n\n"
         context_text += question_text
         if retrieved_docs is None:
-            context_text += "No relevant documents found.\n"
+            context_text += "No related documents found.\n"
             return context_text
 
         context_text += "\n--- Retrieved Documents ---\n"
@@ -70,7 +70,7 @@ class VanillaRAG(BaseRAG):
         context_text = TextProcessor.split_text_into_chunks(
             text=context_text, max_length=self.max_tokens-400
         )
-        context_text = context_text[0]  # take the fFirst chunk only
+        context_text = context_text[0]  # 仅获取第一个块
         return context_text
 
     def _save_retrieval_res(self, context_nodes, query_output_dir) -> List[Dict]:
@@ -97,20 +97,20 @@ class VanillaRAG(BaseRAG):
             with open(node_file_path, "w", encoding="utf-8") as f:
                 json.dump(meta_info_dict, f, indent=2, ensure_ascii=False)
 
-        log.info("Saved retrieval results to output directory.")
+        log.info("已将检索结果保存到输出目录。")
 
         return retrieval_ids
 
     @trace_execution
     def generation(self, query: str, query_output_dir: str) -> tuple:
         """
-        Generates an answer for a given query and returns the answer along with the context used.
+        为给定的查询生成答案，并返回答案以及所使用的上下文。
         Returns:
-            Tuple[str, List[Any]]: A tuple containing the final answer string and a list of the context nodes.
+            Tuple[str, List[Any]]: 包含最终答案字符串和上下文节点列表的元组。
         """
         retrieved_docs = self._retrieve(query, top_k=self.topk)
         if not retrieved_docs:
-            # not found any relevant documents, fallback to LLM generation
+            # 未找到任何相关文档，回退到 LLM 生成
             final_answer = self.llm.get_completion(query, json_response=False)
             return final_answer, []
 
@@ -125,7 +125,7 @@ class VanillaRAG(BaseRAG):
 
     def close(self):
         if self.cfg.retrieval_method == "bm25":
-            log.info("Closing BM25 resources...")
+            log.info("正在关闭 BM25 资源...")
             self.bm25.close()
         else:
             self.vdb.embedding_model.close()

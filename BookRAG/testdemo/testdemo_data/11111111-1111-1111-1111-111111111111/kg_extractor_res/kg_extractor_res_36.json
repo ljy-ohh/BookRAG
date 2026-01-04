@@ -2,16 +2,8 @@
   "entities": [
     {
       "entity_name": "hdgse",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "hdgse is an event extraction model mentioned for performance comparison in the text",
-      "source_ids": [
-        36
-      ]
-    },
-    {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_type": "model or architecture",
+      "description": "hdgse is an event extraction model mentioned for performance comparison",
       "source_ids": [
         36
       ]
@@ -22,8 +14,8 @@
       "src_entity_name": "hdgse",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "hdgse is compared against other event extraction models for performance  as indicated by the text discussing performance comparison",
+      "weight": 9.0,
+      "description": "hdgse is a specific event extraction model to be compared against other event extraction models",
       "source_ids": [
         36
       ]

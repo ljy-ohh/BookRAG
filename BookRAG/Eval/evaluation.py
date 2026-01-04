@@ -16,7 +16,7 @@ def create_args():
         type=str,
         required=False,
         default="/home/wangshu/multimodal/GBC-RAG/Scripts/cfg/MMLongBench.yaml",
-        help="Path to the dataset configuration file for batch processing.",
+        help="用于批处理的数据集配置文件的路径。",
     )
 
     parser.add_argument(
@@ -24,43 +24,43 @@ def create_args():
         type=str,
         required=False,
         default="mmr",
-        help="Method to use for evaluation (e.g., 'mmr', 'traverse').",
+        help="用于评估的方法（例如 'mmr'，'traverse'）。",
     )
     
     parser.add_argument(
         "--max_workers",
         type=int,
         default=16,
-        help="Number of parallel workers for processing.",
+        help="用于处理的并行工作线程数。",
     )
 
     return parser.parse_args()
 
 
 def eval(args):
-    # Load the dataset
+    # 加载数据集
     data_cfg: DatasetConfig = load_dataset_config(args.dataset_config)
     data_df = pd.read_json(data_cfg.dataset_path)
 
     document_groups = data_df.groupby(["doc_uuid", "doc_path"])
-    print(f"evaluation method: {args.method}")
+    print(f"评估方法: {args.method}")
     
-    print(f"Total document groups: {len(document_groups)}")
-    print(f"Total samples: {len(data_df)}")
-    print(f"Dataset name: {data_cfg.dataset_name}")
+    print(f"文档组总数: {len(document_groups)}")
+    print(f"样本总数: {len(data_df)}")
+    print(f"数据集名称: {data_cfg.dataset_name}")
 
     
     if data_cfg.dataset_name.lower() == "mmlongbench":
         eval_mmlong(data_df, data_cfg, args.method, max_workers=args.max_workers)
-        print("MMLongBench dataset evaluation completed.")
+        print("MMLongBench 数据集评估完成。")
 
     if data_cfg.dataset_name.lower() == "m3docrag":
         eval_m3doc(data_df, data_cfg, args.method, max_workers=args.max_workers)
-        print("M3DocRAG dataset evaluation completed.")
+        print("M3DocRAG 数据集评估完成。")
 
     if data_cfg.dataset_name.lower() == "qasper":
         eval_qasper(data_df, data_cfg, args.method, max_workers=args.max_workers)
-        print("QASPER dataset evaluation completed.")
+        print("QASPER 数据集评估完成。")
 
 
 if __name__ == "__main__":

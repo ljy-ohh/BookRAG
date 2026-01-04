@@ -114,15 +114,15 @@ def merge_ranker_scores(
     *ranker_scores_lists: List[Tuple[int, float]]
 ) -> Dict[int, List[float]]:
     """
-    将多个评分器（ranker）的评分列表合并为一个字典。
+    Merge the score lists from multiple rankers into a single dictionary.
 
     Args:
-        *ranker_scores_lists: 任意数量的评分列表。
-            每个列表的格式为 [(node_id, score), ...]。
+        *ranker_scores_lists: Arbitrary number of score lists.
+            Each list is formatted as [(node_id, score), ...].
 
     Returns:
-        一个字典，将每个 node_id 映射到一个包含所有评分器分数的列表。
-        格式: {node_id: [score1, score2, ...]}
+        A dictionary mapping each node_id to a list containing scores from all rankers.
+        Format: {node_id: [score1, score2, ...]}
     """
     num_rankers = len(ranker_scores_lists)
     # 使用 lambda 创建一个长度为 num_rankers 的默认值列表
@@ -217,12 +217,12 @@ def enhance_graph_with_semantic_links(
     if len(nodes) <= 1:
         return enhanced_graph
 
-    print(f"Enhancing graph with {len(nodes)} nodes...")
+    print(f"正在使用 {len(nodes)} 个节点增强图...")
 
     try:
         node_embeddings = embedder.embed_texts(nodes)
     except Exception as e:
-        print(f"Error during bulk embedding: {e}")
+        print(f"批量嵌入期间出错: {e}")
         return enhanced_graph
 
     # 计算所有节点对之间的余弦相似度矩阵
@@ -249,9 +249,9 @@ def enhance_graph_with_semantic_links(
         # 这样就不会添加任何新边，是安全的默认行为
         similarity_threshold = 1.0
 
-    log.info(f"Base similarities on {len(existing_edge_similarities)} existing edges.")
+    log.info(f"基于 {len(existing_edge_similarities)} 条现有边的相似度。")
     log.info(
-        f"Calculated similarity threshold at {x_percentile*100:.0f}th percentile: {similarity_threshold:.4f}"
+        f"在 {x_percentile*100:.0f}th 百分位计算的相似度阈值: {similarity_threshold:.4f}"
     )
 
     if n_nodes > 0:
@@ -262,8 +262,8 @@ def enhance_graph_with_semantic_links(
     else:
         max_new_edges = 1  # 对于空图的安全默认值
 
-    log.info(f"Original graph average degree: {average_degree:.2f}")
-    log.info(f"Global limit for adding new edges per node set to: {max_new_edges}")
+    log.info(f"原始图平均度数: {average_degree:.2f}")
+    log.info(f"每个节点添加新边的全局限制设置为: {max_new_edges}")
 
     for i, source_node in enumerate(nodes):
         new_edges_added_for_node = 0
@@ -292,7 +292,7 @@ def enhance_graph_with_semantic_links(
     original_edges = graph.number_of_edges()
     new_edges = enhanced_graph.number_of_edges()
     log.info(
-        f"Enhancement complete. Edges increased from {original_edges} to {new_edges}."
+        f"增强完成。边数从 {original_edges} 增加到 {new_edges}。"
     )
 
     return enhanced_graph

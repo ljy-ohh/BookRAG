@@ -3,13 +3,13 @@ from typing import List, Optional
 
 
 class MergeJudgment(BaseModel):
-    # The `pdf_id_1` from the input if the tables should be merged, otherwise -1
+    # 如果表格应该合并，则为输入的 `pdf_id_1`，否则为 -1
     merged_id: int
     explanation: str
 
 
 class MergeJudgmentsResponse(BaseModel):
-    """The final response object containing a list of all judgments."""
+    """包含所有判断列表的最终响应对象。"""
 
     judgments: List[MergeJudgment]
 

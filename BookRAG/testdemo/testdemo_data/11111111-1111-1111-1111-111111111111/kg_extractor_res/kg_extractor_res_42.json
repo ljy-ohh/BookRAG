@@ -2,40 +2,56 @@
   "entities": [
     {
       "entity_name": "jiang zhiying",
-      "entity_type": "PERSON",
-      "description": "jiang zhiying is an associate professor with a ph d   born in 1987  and his research interests include large language models  natural language processing  and real time big data analytics",
+      "entity_type": "person",
+      "description": "jiang zhiying is an associate professor with a ph d   born in 1987  whose research interests include large language models and natural language processing",
       "source_ids": [
         42
       ]
     },
     {
       "entity_name": "1987",
-      "entity_type": "DATE",
-      "description": "1987 is the birth year of jiang zhiying",
+      "entity_type": "date",
+      "description": "1987 is the year in which jiang zhiying was born",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "ph d",
+      "entity_type": "title",
+      "description": "ph d  is an academic title held by jiang zhiying",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "entity_name": "associate professor",
+      "entity_type": "profession",
+      "description": "associate professor is the professional position held by jiang zhiying",
       "source_ids": [
         42
       ]
     },
     {
       "entity_name": "large language model",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "large language model is mentioned as one of jiang zhiying s research interests",
+      "entity_type": "model or architecture",
+      "description": "large language model is a research interest of jiang zhiying",
       "source_ids": [
         42
       ]
     },
     {
       "entity_name": "natural language processing",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "natural language processing is mentioned as one of jiang zhiying s research interests",
+      "entity_type": "research field",
+      "description": "natural language processing is a research field of interest to jiang zhiying",
       "source_ids": [
         42
       ]
     },
     {
       "entity_name": "real time big data analytics",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "real time big data analytics is mentioned as one of jiang zhiying s research interests",
+      "entity_type": "research field",
+      "description": "real time big data analytics is a research interest of jiang zhiying",
       "source_ids": [
         42
       ]
@@ -47,7 +63,27 @@
       "tgt_entity_name": "1987",
       "relation_name": "",
       "weight": 9.0,
-      "description": "jiang zhiying was born in 1987",
+      "description": "jiang zhiying was born in the year 1987",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "jiang zhiying",
+      "tgt_entity_name": "ph d",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "jiang zhiying holds the academic title of ph d",
+      "source_ids": [
+        42
+      ]
+    },
+    {
+      "src_entity_name": "jiang zhiying",
+      "tgt_entity_name": "associate professor",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "jiang zhiying works in the profession of associate professor",
       "source_ids": [
         42
       ]
@@ -57,7 +93,7 @@
       "tgt_entity_name": "large language model",
       "relation_name": "",
       "weight": 8.0,
-      "description": "jiang zhiying s research interests include large language models",
+      "description": "large language model is a research interest of jiang zhiying",
       "source_ids": [
         42
       ]
@@ -67,7 +103,7 @@
       "tgt_entity_name": "natural language processing",
       "relation_name": "",
       "weight": 8.0,
-      "description": "jiang zhiying s research interests include natural language processing",
+      "description": "natural language processing is a research field of interest to jiang zhiying",
       "source_ids": [
         42
       ]
@@ -77,7 +113,7 @@
       "tgt_entity_name": "real time big data analytics",
       "relation_name": "",
       "weight": 8.0,
-      "description": "jiang zhiying s research interests include real time big data analytics",
+      "description": "real time big data analytics is a research interest of jiang zhiying",
       "source_ids": [
         42
       ]

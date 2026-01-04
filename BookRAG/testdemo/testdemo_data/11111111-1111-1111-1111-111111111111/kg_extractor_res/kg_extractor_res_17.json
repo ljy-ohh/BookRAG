@@ -2,7 +2,7 @@
   "entities": [
     {
       "entity_name": "event extraction",
-      "entity_type": "TASK_OR_PROBLEM",
+      "entity_type": "task or problem",
       "description": "event extraction is a core task in natural language processing aimed at identifying event triggers and arguments from text",
       "source_ids": [
         17
@@ -10,119 +10,119 @@
     },
     {
       "entity_name": "natural language processing",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "natural language processing is the research field where event extraction is a core task",
+      "entity_type": "research field",
+      "description": "natural language processing is the research field within which event extraction is a core task",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "synonym substitution",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "synonym substitution is an existing data augmentation method mentioned as partially alleviating data sparsity",
+      "entity_type": "method or technique",
+      "description": "synonym substitution is an existing data augmentation method mentioned as having limitations",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "back translation",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "back translation is an existing data augmentation method mentioned as partially alleviating data sparsity",
+      "entity_type": "method or technique",
+      "description": "back translation is an existing data augmentation method mentioned as having limitations",
       "source_ids": [
         17
       ]
     },
     {
-      "entity_name": "llm based synergistic enhancement framework",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a proposed framework featuring a closed loop mechanism for high quality data generation in event extraction",
+      "entity_name": "multi stage llm based synergistic enhancement framework",
+      "entity_type": "model or architecture",
+      "description": "a proposed framework for data generation featuring a closed loop mechanism of generation annotation validation scoring",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "generation annotation validation scoring",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a closed loop mechanism within the proposed framework for data generation and quality control",
+      "entity_type": "method or technique",
+      "description": "a closed loop mechanism that is part of the proposed framework for data generation",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "generation module",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a module within the proposed framework that integrates multi strategy rewriting and constrained generation",
+      "entity_type": "model or architecture",
+      "description": "a module that integrates multi strategy rewriting and constrained generation for data augmentation",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "multi strategy rewriting",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a technique integrated into the generation module  including semantic role substitution and event structure restructuring",
+      "entity_type": "method or technique",
+      "description": "a technique involving semantic role substitution and event structure restructuring used in the generation module",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "semantic role substitution",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a specific rewriting strategy mentioned as part of multi strategy rewriting",
+      "entity_type": "method or technique",
+      "description": "a specific rewriting strategy used as part of multi strategy rewriting",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "event structure restructuring",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a specific rewriting strategy mentioned as part of multi strategy rewriting",
+      "entity_type": "method or technique",
+      "description": "a specific rewriting strategy used as part of multi strategy rewriting",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "constrained generation",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a technique used in the generation module to transcend word level augmentation limitations",
+      "entity_type": "method or technique",
+      "description": "a technique used in the generation module for data augmentation",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "validation module",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a module within the proposed framework that eliminates structural bias through logical verification and template matching",
+      "entity_type": "model or architecture",
+      "description": "a module that eliminates structural bias through logical verification and template matching",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "trigger argument logical verification",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a method used by the validation module to check for structural bias",
+      "entity_type": "method or technique",
+      "description": "a method used by the validation module to check event structure",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "event template matching",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a method used by the validation module to check for structural bias",
+      "entity_type": "method or technique",
+      "description": "a method used by the validation module to check event structure",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "scoring module",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a module within the proposed framework that filters data based on information integrity and semantic consistency",
+      "entity_type": "model or architecture",
+      "description": "a module that filters data based on information integrity and semantic consistency",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "information integrity",
-      "entity_type": "EVALUATION_METRIC",
+      "entity_type": "evaluation metric",
       "description": "a criterion used by the scoring module to filter generated data",
       "source_ids": [
         17
@@ -130,7 +130,7 @@
     },
     {
       "entity_name": "semantic consistency",
-      "entity_type": "EVALUATION_METRIC",
+      "entity_type": "evaluation metric",
       "description": "a criterion used by the scoring module to filter generated data",
       "source_ids": [
         17
@@ -149,41 +149,11 @@
       ]
     },
     {
-      "src_entity_name": "llm based synergistic enhancement framework",
+      "src_entity_name": "multi stage llm based synergistic enhancement framework",
       "tgt_entity_name": "generation annotation validation scoring",
       "relation_name": "",
-      "weight": 8.0,
+      "weight": 9.0,
       "description": "the framework features the closed loop mechanism of generation annotation validation scoring",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "src_entity_name": "llm based synergistic enhancement framework",
-      "tgt_entity_name": "generation module",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the generation module is a component of the proposed llm based synergistic enhancement framework",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "src_entity_name": "llm based synergistic enhancement framework",
-      "tgt_entity_name": "validation module",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the validation module is a component of the proposed llm based synergistic enhancement framework",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "src_entity_name": "llm based synergistic enhancement framework",
-      "tgt_entity_name": "scoring module",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the scoring module is a component of the proposed llm based synergistic enhancement framework",
       "source_ids": [
         17
       ]
@@ -192,8 +162,8 @@
       "src_entity_name": "generation module",
       "tgt_entity_name": "multi strategy rewriting",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the generation module integrates the technique of multi strategy rewriting",
+      "weight": 9.0,
+      "description": "the generation module integrates multi strategy rewriting as part of its technique",
       "source_ids": [
         17
       ]
@@ -222,8 +192,8 @@
       "src_entity_name": "generation module",
       "tgt_entity_name": "constrained generation",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the generation module uses the technique of constrained generation",
+      "weight": 9.0,
+      "description": "the generation module uses constrained generation as a technique",
       "source_ids": [
         17
       ]
@@ -232,8 +202,8 @@
       "src_entity_name": "validation module",
       "tgt_entity_name": "trigger argument logical verification",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the validation module uses trigger argument logical verification to eliminate structural bias",
+      "weight": 9.0,
+      "description": "the validation module uses trigger argument logical verification to eliminate bias",
       "source_ids": [
         17
       ]
@@ -242,8 +212,8 @@
       "src_entity_name": "validation module",
       "tgt_entity_name": "event template matching",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the validation module uses event template matching to eliminate structural bias",
+      "weight": 9.0,
+      "description": "the validation module uses event template matching to eliminate bias",
       "source_ids": [
         17
       ]
@@ -252,8 +222,8 @@
       "src_entity_name": "scoring module",
       "tgt_entity_name": "information integrity",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the scoring module filters data based on the criterion of information integrity",
+      "weight": 9.0,
+      "description": "the scoring module filters data based on information integrity",
       "source_ids": [
         17
       ]
@@ -262,8 +232,8 @@
       "src_entity_name": "scoring module",
       "tgt_entity_name": "semantic consistency",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the scoring module filters data based on the criterion of semantic consistency",
+      "weight": 9.0,
+      "description": "the scoring module filters data based on semantic consistency",
       "source_ids": [
         17
       ]

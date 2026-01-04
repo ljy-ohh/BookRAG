@@ -2,6 +2,9 @@ from openai import OpenAI
 
 
 def load_prompt():
+    """
+    从文件加载提示词模板。
+    """
     PROMPT_PATH = "./Eval/utils/prompt.md"
     with open(PROMPT_PATH, "r") as file:
         prompt = file.read()
@@ -10,7 +13,11 @@ def load_prompt():
 
 class AnswerExtractor:
     def __init__(self, api_config_path="./Eval/utils/api.txt"):
-        print("Initializing AnswerExtractor and reading API config...")
+        """
+        初始化 AnswerExtractor。
+        :param api_config_path: API 配置文件路径
+        """
+        print("正在初始化 AnswerExtractor 并读取 API 配置...")
         with open(api_config_path, "r") as f:
             lines = f.readlines()
             base_url = lines[0].strip()  
@@ -19,8 +26,8 @@ class AnswerExtractor:
 
         self.client = OpenAI(api_key=api_key, base_url=base_url)
         self.model_name = model_name
-        print("Client created successfully.")
-        print(f"Using model: {self.model_name}")
+        print("客户端创建成功。")
+        print(f"使用的模型: {self.model_name}")
         self.system_prompt = load_prompt()
 
     def parse_evaluation_output(self, llm_output: str) -> dict:
@@ -51,12 +58,12 @@ class AnswerExtractor:
 
         for key in expected_keys:
             if key not in parsed_data:
-                print(f"Warning: Key '{key}' not found in LLM output.")
-                print(f"LLM Output was:\n{llm_output}\n")
+                print(f"警告：在 LLM 输出中未找到键 '{key}'。")
+                print(f"LLM 输出为：\n{llm_output}\n")
                 if key == "score":
                     parsed_data[key] = 0.0  # 默认分数为0.0
                 else:
-                    parsed_data[key] = "Failed to extract"
+                    parsed_data[key] = "提取失败"
 
         return parsed_data
 
@@ -78,7 +85,7 @@ Model Response: {output}
                 "content": self.system_prompt,
             },
             {
-                "role": "assistant",
+                "role": "user",
                 "content": input_content,
             },
         ]
@@ -96,13 +103,13 @@ Model Response: {output}
             response = self.client.chat.completions.create(**parameters)
             llm_res = response.choices[0].message.content
         except Exception as e:
-            print(f"An error occurred: {e}")
-            return "Failed to LLM response", "Failed", "Failed", 0.0
+            print(f"发生错误: {e}")
+            return "无法获取 LLM 响应", "失败", "失败", 0.0
 
         parse_res = self.parse_evaluation_output(llm_res)
         score = parse_res.get("score", 0.0)
-        pred_answer = parse_res.get("extracted results", "Failed to extract")
-        pred_format = parse_res.get("format", "Failed to extract")
+        pred_answer = parse_res.get("extracted results", "提取失败")
+        pred_format = parse_res.get("format", "提取失败")
         return llm_res, pred_answer, pred_format, float(score)
 
 
@@ -113,4 +120,4 @@ if __name__ == "__main__":
 
     extractor = AnswerExtractor()
     extract_answer = extractor.extract(question, output, correct_answer)
-    print("Extracted Answer in this example------\n", extract_answer)
+    print("本示例中的提取答案------\n", extract_answer)

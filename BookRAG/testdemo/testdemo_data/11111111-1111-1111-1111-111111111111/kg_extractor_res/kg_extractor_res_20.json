@@ -1,21 +1,142 @@
 {
-  "entities": [
-    {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
-      "source_ids": [
-        20
-      ]
-    }
-  ],
+  "entities": [],
   "relations": [
     {
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "is from       as indicated in the author introduction",
+      "description": "song chenwei is from wenzhou  zhejiang",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "song chenwei s main research direction includes natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "song chenwei s main research direction includes data augmentation",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "jiang zhiying is from jingdezhen  jiangxi",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "jiang zhiying s main research direction includes large language models",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "jiang zhiying s main research direction includes natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "jiang zhiying s main research direction includes big data real time analysis",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "han zhonghe is from zhengzhou  henan",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "han zhonghe s main research direction includes deep learning",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "han zhonghe s main research direction includes natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "han zhonghe s main research direction includes large language models",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "wang jiaxin is from changchun  jilin",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "wang jiaxin s main research direction includes natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "wang jiaxin s main research direction includes data augmentation",
       "source_ids": [
         20
       ]

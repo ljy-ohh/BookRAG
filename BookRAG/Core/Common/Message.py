@@ -18,12 +18,12 @@ logger = logging.getLogger(__name__)
 
 
 def get_class_name(cls) -> str:
-    """Return class name"""
+    """返回类名"""
     return f"{cls.__module__}.{cls.__name__}"
 
 
 def any_to_str(val: Any) -> str:
-    """Return the class name or the class name of the object, or 'val' if it's a string type."""
+    """返回类名或对象的类名，如果 'val' 是字符串类型则直接返回。"""
     if isinstance(val, str):
         return val
     elif not callable(val):
@@ -33,12 +33,12 @@ def any_to_str(val: Any) -> str:
 
 
 def any_to_str_set(val) -> set:
-    """Convert any type to string set."""
+    """将任意类型转换为字符串集合。"""
     res = set()
 
-    # Check if the value is iterable, but not a string (since strings are technically iterable)
+    # 检查值是否可迭代，但不是字符串（因为字符串在技术上也是可迭代的）
     if isinstance(val, (dict, list, set, tuple)):
-        # Special handling for dictionaries to iterate over values
+        # 对字典进行特殊处理以迭代值
         if isinstance(val, dict):
             val = val.values()
 
@@ -50,7 +50,7 @@ def any_to_str_set(val) -> set:
     return res
 
 
-# Used for the Memory
+# 用于 Memory
 
 MESSAGE_ROUTE_FROM = "sent_from"
 MESSAGE_ROUTE_TO = "send_to"
@@ -95,7 +95,7 @@ class Message(BaseModel):
         super().__init__(**data)
 
     def __setattr__(self, key, val):
-        """Override `@property.setter`, convert non-string parameters into string parameters."""
+        """重写 `@property.setter`，将非字符串参数转换为字符串参数。"""
         if key == MESSAGE_ROUTE_CAUSE_BY:
             new_val = any_to_str(val)
         elif key == MESSAGE_ROUTE_FROM:
@@ -116,20 +116,20 @@ class Message(BaseModel):
         return self.__str__()
 
     def rag_key(self) -> str:
-        """For search"""
+        """用于搜索"""
         return self.content
 
     def to_dict(self) -> dict:
-        """Return a dict containing `role` and `content` for the LLM call.l"""
+        """返回包含 `role` 和 `content` 的字典，用于 LLM 调用。"""
         return {"role": self.role, "content": self.content}
 
     def dump(self) -> str:
-        """Convert the object to json string"""
+        """将对象转换为 json 字符串"""
         return self.model_dump_json(exclude_none=True, warnings=False)
 
     @staticmethod
     def load(val):
-        """Convert the json string to object."""
+        """将 json 字符串转换为对象。"""
 
         try:
             m = json.loads(val)
@@ -146,27 +146,21 @@ class Message(BaseModel):
 
 
 class UserMessage(Message):
-    """便于支持OpenAI的消息
-    Facilitate support for OpenAI messages
-    """
+    """便于支持 OpenAI 的消息"""
 
     def __init__(self, content: str):
         super().__init__(content=content, role="user")
 
 
 class SystemMessage(Message):
-    """便于支持OpenAI的消息
-    Facilitate support for OpenAI messages
-    """
+    """便于支持 OpenAI 的消息"""
 
     def __init__(self, content: str):
         super().__init__(content=content, role="system")
 
 
 class AIMessage(Message):
-    """便于支持OpenAI的消息
-    Facilitate support for OpenAI messages
-    """
+    """便于支持 OpenAI 的消息"""
 
     def __init__(self, content: str):
         super().__init__(content=content, role="assistant")

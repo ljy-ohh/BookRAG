@@ -1,15 +1,56 @@
 {
-  "entities": [
+  "entities": [],
+  "relations": [
     {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
       "source_ids": [
         2
       ]
-    }
-  ],
-  "relations": [
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
+      "source_ids": [
+        2
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
+      "source_ids": [
+        2
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
+      "source_ids": [
+        2
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "listed as co authors on the same document",
+      "source_ids": [
+        2
+      ]
+    },
     {
       "src_entity_name": "",
       "tgt_entity_name": "",

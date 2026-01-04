@@ -12,29 +12,29 @@ from typing import Optional
 
 class SystemConfig(BaseModel):
     """
-    Top-level application configuration model.
-    Pydantic will automatically handle nested validation and instantiation.
+    顶级应用程序配置模型。
+    Pydantic 将自动处理嵌套验证和实例化。
     """
 
-    # LLM Configurations
+    # LLM 配置
     llm: LLMConfig = Field(default_factory=LLMConfig)
     vlm: VLMConfig = Field(default_factory=VLMConfig)
     mineru: MinerU = Field(default_factory=MinerU)
 
-    # Index Configurations
+    # 索引配置
     tree: TreeConfig = Field(default_factory=TreeConfig)
     graph: GraphConfig = Field(default_factory=GraphConfig)
     vdb: VDBConfig = Field(default_factory=VDBConfig)
 
-    # Other Index selection
-    index_type: Optional[str] = "gbc"  # Options: "gbc", "tree", "vanilla", "bm25", "raptor", "pdf_vanilla"
+    # 其他索引选择
+    index_type: Optional[str] = "gbc"  # 选项: "gbc", "tree", "vanilla", "bm25", "raptor", "pdf_vanilla"
 
     rag_force_reprocess: Optional[bool] = False
 
     # RAG Configurations
     rag: RAGConfig = Field(default_factory=RAGConfig)
 
-    # Paths
+    # 路径
     pdf_path: Optional[str] = "/home/wangshu/multimodal/GBC-RAG/test/double_paper.pdf"
     save_path: Optional[str] = "/home/wangshu/multimodal/GBC-RAG/test/tree_index"
 

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class VLMConfig:
-    backend: str = "ollama"  # "qwen", "gpt", "ollama"
+    backend: str = "ollama"  # 选项: "qwen", "gpt", "ollama"
     model_name: str = "qwen2.5vl:6k"
     max_tokens: int = 6000
     temperature: float = 0.7

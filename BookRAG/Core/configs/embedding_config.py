@@ -14,4 +14,4 @@ class EmbeddingConfig:
     
     def __post_init__(self):
         if self.backend not in ["local", "ollama", "openai"]:
-            raise ValueError(f"Unsupported backend: {self.backend}")
+            raise ValueError(f"不支持的后端: {self.backend}")

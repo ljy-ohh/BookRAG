@@ -31,13 +31,13 @@ class AnswerAgent:
         self, retrieved_nodes: List[Dict]
     ) -> Tuple[List[Dict], List[Dict]]:
         """
-        Separates retrieved nodes into text-based and image-based categories.
-        Tables are processed to be included in both.
+        将检索到的节点分离为基于文本和基于图像的类别。
+        表格被处理为包含在两者中。
         """
         image_nodes, text_nodes = [], []
         for node in retrieved_nodes:
             node_type = node.get("type", "text")
-            node["page"] = node["page"] + 1  # make page start from 1
+            node["page"] = node["page"] + 1  # 让页码从 1 开始
             if node_type == NodeType.IMAGE:
                 image_nodes.append(node)
             elif node_type == NodeType.TABLE:
@@ -57,9 +57,9 @@ class AnswerAgent:
         graph_str: str,
     ) -> Tuple[List[str], List[Dict[str, Any]]]:
         """
-        Builds chunked and formatted prompts for both LLM and VLM.
+        为 LLM 和 VLM 构建分块和格式化的提示词。
         """
-        # 1. Build VLM prompts for image-based evidence
+        # 1. 为基于图像的证据构建 VLM 提示词
         image_prompts = []
         for node in image_nodes:
             # 假设 page_number 已处理为从1开始
@@ -75,17 +75,17 @@ class AnswerAgent:
             if img_path:
                 image_prompts.append({"prompt": vlm_prompt, "image_url": img_path})
 
-        # 2. Build chunked LLM prompts for text-based evidence
+        # 2. 为基于文本的证据构建分块的 LLM 提示词
         text_prompts = []
 
-        # Build the graph part of the prompt only if graph_str is not empty
+        # 仅当 graph_str 不为空时构建提示词的图谱部分
         graph_prompt_part = ""
         if graph_str:
             graph_prompt_part = ITER_GENERATION_GRAPH.format(
                 knowledge_graph_subgraph=graph_str
             )
 
-        # Calculate token budget for retrieved content
+        # 计算检索内容的 token 预算
         base_prompt_tokens = num_tokens(
             ITER_GENERATION_USER_PROMPT.format(
                 user_question=query, retrieved_content=""
@@ -95,7 +95,7 @@ class AnswerAgent:
         system_prompt_tokens = num_tokens(ITER_GENERATION_SYS_PROMPT)
         content_limit = (
             self.llm.config.max_tokens - system_prompt_tokens - base_prompt_tokens - 400
-        )  # 400 as buffer
+        )  # 400 作为缓冲
 
         processed_nodes = []
         for node in text_nodes:
@@ -122,7 +122,7 @@ class AnswerAgent:
             else:
                 processed_nodes.append(node)
 
-        # Chunking logic
+        # 分块逻辑
         current_chunk_str = ""
         current_chunk_tokens = 0
         separator = "\n\n---\n\n"
@@ -186,11 +186,11 @@ class AnswerAgent:
         image_prompts: List[Dict[str, Any]],
     ) -> Tuple[str, List[Dict[str, Any]]]:
         """
-        Executes generation on chunked prompts and synthesizes a final answer.
+        在分块提示词上执行生成并合成最终答案。
         """
         partial_answers = []
 
-        # Generate answers from text prompts
+        # 从文本提示词生成答案
         for i, memory in enumerate(text_prompts):
             try:
                 answer = self.llm.get_completion(memory)
@@ -205,7 +205,7 @@ class AnswerAgent:
                     }
                 )
 
-        # Generate answers from image prompts
+        # 从图像提示词生成答案
         for i, item in enumerate(image_prompts):
             try:
                 answer = self.vlm.generate(item["prompt"], images=[item["image_url"]])
@@ -218,7 +218,7 @@ class AnswerAgent:
                     }
                 )
 
-        # Synthesize the final answer
+        # 合成最终答案
         if not partial_answers:
             final_answer = (
                 "Based on the provided information, I couldn't find an answer."
@@ -236,7 +236,7 @@ class AnswerAgent:
             ]
         )
 
-        log.info("Synthesizing the final answer from partial results...")
+        log.info("正在从部分结果合成最终答案...")
         synthesis_user_prompt = SYNTHESIS_USER_PROMPT.format(
             user_question=query, partial_answers_str=partial_answers_str
         )
@@ -247,11 +247,11 @@ class AnswerAgent:
         try:
             final_answer = self.llm.get_completion(synthesis_memory)
         except Exception as e:
-            log.error(f"Error during final synthesis step: {e}")
+            log.error(f"最终合成步骤出错: {e}")
             error_header = (
-                "I was able to analyze the provided information in parts, but "
-                "encountered an error while trying to synthesize the final answer. "
-                f"Here are the partial analyses I found:\n\n---\n\n"
+                "我能够部分分析提供的信息，但"
+                "在尝试合成最终答案时遇到错误。"
+                f"以下是我找到的部分分析：\n\n---\n\n"
             )
             final_answer = error_header + partial_answers_str
 
@@ -261,10 +261,9 @@ class AnswerAgent:
         self, query: str, retrieved_nodes: List[Dict], entities: List[Dict] = None
     ) -> str:
         """
-        Orchestrates answering a single, simple question by preparing evidence,
-        building prompts, and synthesizing results.
+        通过准备证据、构建提示词并合成结果，协调回答单个简单问题。
         """
-        # 1. Prepare evidence: Separate nodes and handle optional entities
+        # 1. 准备证据：分离节点并处理可选实体
         graph_str = ""
         if entities:
             graph_str = f"There are f{len(entities)} relevant entities:\n"
@@ -275,12 +274,12 @@ class AnswerAgent:
 
         text_nodes, image_nodes = self._prepare_evidence(retrieved_nodes)
 
-        # 2. Build chunked prompts for LLM and VLM
+        # 2. 为 LLM 和 VLM 构建分块提示词
         text_prompts, image_prompts = self._build_prompts(
             query, text_nodes, image_nodes, graph_str
         )
 
-        # 3. Execute prompts and synthesize the final answer
+        # 3. 执行提示词并合成最终答案
         final_answer, partial_answers = self._synthesize_from_chunks(
             query, text_prompts, image_prompts
         )
@@ -294,23 +293,22 @@ class AnswerAgent:
         sub_question_results: List[Dict[str, Any]],
     ) -> str:
         """
-        Answers a complex question by synthesizing the answers from its sub-questions
-        based on the full decomposition plan.
+        通过综合子问题的答案来回答复杂问题，基于完整的分解计划。
 
         Args:
-            original_query: The original complex user query.
-            sub_question_plan: The full list of SubQuestion objects (retrieval and synthesis).
-            sub_question_results: A list of dictionaries with results for the 'retrieval' tasks.
-                                  e.g., [{"question": "...", "answer": ("...", [...])}]
+            original_query: 原始的复杂用户查询。
+            sub_question_plan: SubQuestion 对象的完整列表（检索和合成）。
+            sub_question_results: 'retrieval' 任务的结果字典列表。
+                                  例如：[{"question": "...", "answer": ("...", [...])}]
         Returns:
-            The final, synthesized answer as a string.
+            最终合成的答案字符串。
         """
 
         if not sub_question_results:
-            return "I could not find the necessary information to answer the complex question."
+            return "我无法找到回答复杂问题所需的信息。"
 
-        # 1. Format the intermediate findings from the retrieval steps
-        # The 'answer' is a tuple (final_answer, partial_answers), we need the first element
+        # 1. 格式化检索步骤的中间发现
+        # 'answer' 是一个元组 (final_answer, partial_answers)，我们需要第一个元素
         intermediate_findings = "\n\n".join(
             [
                 f"--- Finding for '{res['question']}' ---\n{res['answer']}"
@@ -318,12 +316,12 @@ class AnswerAgent:
             ]
         )
 
-        # 2. Find the synthesis step from the plan (it might not exist)
+        # 2. 从计划中找到合成步骤（可能不存在）
         synthesis_step = next(
             (sq for sq in sub_question_plan if sq.type == "synthesis"), None
         )
 
-        # 3. Dynamically construct the final synthesis prompt
+        # 3. 动态构建最终合成提示词
         prompt_template = """
 You are an expert AI assistant that synthesizes information to answer a complex question. You have been provided with the original question and a set of findings from previous information retrieval steps. Your task is to use ONLY these findings to provide a final, cohesive answer.
 
@@ -334,8 +332,8 @@ You are an expert AI assistant that synthesizes information to answer a complex 
 {intermediate_findings}
 """
 
-        # --- MODIFICATION START ---
-        # Add the final task only if a synthesis step exists
+        # --- 修改开始 ---
+        # 仅当存在合成步骤时才添加最终任务
         if synthesis_step:
             prompt_template += """
 --- FINAL TASK ---
@@ -350,7 +348,7 @@ Final Answer:
                 synthesis_question=synthesis_step.question,
             )
         else:
-            # If no synthesis step, just ask for the final answer directly
+            # 如果没有合成步骤，直接请求最终答案
             prompt_template += """
 --- FINAL TASK ---
 Based on the findings above, provide a comprehensive final answer to the original complex question.
@@ -363,13 +361,13 @@ Final Answer:
             )
             
         try:
-            # 4. Call the LLM to get the final answer
+            # 4. 调用 LLM 获取最终答案
             final_answer = self.llm.get_completion(synthesis_prompt)
         except Exception as e:
-            log.error(f"Error during complex synthesis step: {e}")
+            log.error(f"复杂合成步骤出错: {e}")
             final_answer = (
-                "I encountered an error while trying to synthesize the final answer from the gathered information. "
-                f"Here are the intermediate findings I was able to collect:\n\n{intermediate_findings}"
+                "我在尝试从收集的信息中合成最终答案时遇到错误。"
+                f"以下是我能够收集到的中间发现：\n\n{intermediate_findings}"
             )
 
         return final_answer
@@ -378,10 +376,10 @@ Final Answer:
         self, original_query: str, operation: str, node: Dict
     ) -> str:
         """
-        Generates a partial analysis for a single node in the context of a global query,
-        respecting the model's token limits.
+        在全局查询的上下文中为单个节点生成部分分析，
+        同时遵守模型的 token 限制。
         """
-        # Determine the instruction based on the operation
+        # 根据操作确定指令
         operation_instruction = {
             "LIST": "Extract and list the key information from the evidence below that is relevant to the original question.",
             "SUMMARIZE": "Summarize the key points from the evidence below as they relate to the original question.",
@@ -403,10 +401,10 @@ You are working on a larger query and your current task is to analyze a single p
 Your concise analysis of this single piece of evidence:
 """
         node_type = node.get("type", "text")
-        # Determine which model to use and its context limit
+        # 确定使用的模型及其上下文限制
         img_path = node.get("img_path", "")
         content = node.get("content", "")
-        node["page"] = node.get("page", 0) + 1  # make page start from 1
+        node["page"] = node.get("page", 0) + 1  # 让页码从 1 开始
         page = node.get("page", -1)
 
         use_vlm = node_type == NodeType.IMAGE and img_path
@@ -414,31 +412,31 @@ Your concise analysis of this single piece of evidence:
             self.vlm.config.max_tokens if use_vlm else self.llm.config.max_tokens
         )
 
-        # Calculate the available token budget for the node's content
+        # 计算节点内容的可用 token 预算
         prompt_overhead = num_tokens(base_prompt_template.format(node_context=""))
         content_budget = (
             model_max_tokens - prompt_overhead - 400
-        )  # 400 as a safety buffer
+        )  # 400 作为安全缓冲
 
-        # Prepare the node content, truncating if necessary
-        # Assuming node.meta_info.content and node.type are the correct attributes
+        # 准备节点内容，必要时截断
+        # 假设 node.meta_info.content 和 node.type 是正确的属性
         if num_tokens(content) > content_budget:
-            # Using your TextProcessor logic for consistency
+            # 使用 TextProcessor 逻辑保持一致性
             content = TextProcessor.split_text_into_chunks(
                 text=content, max_length=content_budget
             )[0]
 
         node_context = f"Type: {node_type} in Page: {page}\nContent: {content}\n"
 
-        # Final prompt construction
+        # 最终提示词构建
         prompt = base_prompt_template.format(node_context=node_context)
 
-        # Call the appropriate model
+        # 调用适当的模型
         if use_vlm:
-            # VLM is now used ONLY for IMAGE nodes
+            # VLM 现在仅用于 IMAGE 节点
             return self.vlm.generate(prompt, images=[img_path])
         else:
-            # LLM is used for TEXT and TABLE nodes
+            # LLM 用于 TEXT 和 TABLE 节点
             return self.llm.get_completion(prompt)
 
     def answer_global_question(
@@ -448,16 +446,15 @@ Your concise analysis of this single piece of evidence:
         filtered_nodes: List[Dict],
     ) -> Tuple[str, List[Dict[str, Any]]]:
         """
-        Answers a global question by analyzing each filtered node individually
-        and then synthesizing the results.
+        通过单独分析每个过滤后的节点，然后合成结果来回答全局问题。
         """
         if not filtered_nodes:
             return (
-                "I found no items matching the specified filters to answer the question.",
+                "我没有找到符合指定过滤条件的条目来回答该问题。",
                 [],
             )
 
-        # 1. Map Step: Get partial analysis for each node individually
+        # 1. 映射步骤：单独获取每个节点的部分分析
         partial_answers = []
         for i, node in enumerate(filtered_nodes):
             try:
@@ -481,9 +478,9 @@ Your concise analysis of this single piece of evidence:
                     }
                 )
 
-        # 2. Reduce Step: Synthesize the partial analyses into a final answer
+        # 2. 归约步骤：将部分分析合成为最终答案
         if not partial_answers:
-            return "No analysis could be generated from the filtered items.", []
+            return "无法从过滤后的条目生成分析。", []
 
         partial_answers_str = "\n".join(
             [
@@ -492,7 +489,7 @@ Your concise analysis of this single piece of evidence:
             ]
         )
 
-        log.info("Synthesizing the final answer from partial results...")
+        log.info("正在从部分结果合成最终答案...")
         synthesis_user_prompt = SYNTHESIS_USER_PROMPT.format(
             user_question=original_query, partial_answers_str=partial_answers_str
         )
@@ -503,11 +500,11 @@ Your concise analysis of this single piece of evidence:
         try:
             final_answer = self.llm.get_completion(synthesis_memory)
         except Exception as e:
-            log.error(f"Error during final synthesis step: {e}")
+            log.error(f"最终合成步骤出错: {e}")
             error_header = (
-                "I was able to analyze the provided information in parts, but "
-                "encountered an error while trying to synthesize the final answer. "
-                f"Here are the partial analyses I found:\n\n---\n\n"
+                "我能够部分分析提供的信息，但"
+                "在尝试合成最终答案时遇到错误。"
+                f"以下是我找到的部分分析：\n\n---\n\n"
             )
             final_answer = error_header + partial_answers_str
 

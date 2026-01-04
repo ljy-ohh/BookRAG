@@ -42,9 +42,8 @@ log = logging.getLogger(__name__)
 
 class GBCRAG(BaseRAG):
     """
-    GBC RAG (Graph-Based Contextual Retrieval Augmented Generation) class.
-    This class is designed to handle the retrieval and generation of responses
-    based on a graph-based context.
+    GBC RAG (Graph-Based Contextual Retrieval Augmented Generation) 类。
+    该类旨在基于图上下文处理检索和生成响应。
     """
 
     def __init__(
@@ -63,7 +62,7 @@ class GBCRAG(BaseRAG):
         self.cfg = config
         self.varient = self.cfg.varient
         if not gbc_index:
-            raise ValueError("GBC index must be provided for GBCRAG.")
+            raise ValueError("GBCRAG 必须提供 GBC 索引。")
         self.gbc_index = gbc_index
         self.embedder = self.gbc_index.embedder if self.gbc_index else None
         self.reranker = TextRerankerProvider(
@@ -74,12 +73,12 @@ class GBCRAG(BaseRAG):
             api_base=self.cfg.reranker_config.api_base,
             api_key=self.cfg.reranker_config.api_key,
         )
-        # GBC RAG config
+        # GBC RAG 配置
         self.threshold_e = self.cfg.sim_threshold_e
         self.select_depth = self.cfg.select_depth
         self.max_retry = self.cfg.max_retry
 
-        # Agents
+        # 智能体
         self.planner = TaskPlanner(llm=self.llm)
         self.answer = AnswerAgent(llm=self.llm, vlm=self.vlm)
         self.retriever = Retriever(
@@ -94,14 +93,18 @@ class GBCRAG(BaseRAG):
         )
 
     def _get_entity_embed_text(self, entity: QuestionEntity) -> str:
+        """
+        获取实体的嵌入文本表示。
+        格式为：Name: {name}\nType: {type}
+        """
         return f"Name: {entity.entity_name}\nType: {entity.entity_type}"
 
     def _entity_map(
         self, entities: List[str], force_one: bool = False
     ) -> Dict[str, List[str]]:
         """
-        Maps entities to their corresponding IDs in the GBC index.
-        Use vdb to find the entity in GBC index.
+        将实体映射到 GBC 索引中对应的 ID。
+        使用 vdb 在 GBC 索引中查找实体。
         """
         entities_str = [self._get_entity_embed_text(entity) for entity in entities]
         Qent_GBCent_map = defaultdict(list)
@@ -116,25 +119,25 @@ class GBCRAG(BaseRAG):
             )
             if min_distance < self.threshold_e:
                 Qent_GBCent_map[ent_str].append(node_name)
-                log.info(f"Entity '{ent_str}' mapped to GBC entity: {node_name}")
+                log.info(f"实体 '{ent_str}' 映射到 GBC 实体: {node_name}")
             else:
                 res_list.append((ent_str, node_name, min_distance))
 
         if force_one and len(Qent_GBCent_map) == 0 and len(res_list) > 0:
-            # force map the closest entity if no entity is mapped
+            # 如果没有映射实体，则强制映射最近的实体
             res_list = sorted(res_list, key=lambda x: x[2])
             ent_str, node_name, min_distance = res_list[0]
             Qent_GBCent_map[ent_str].append(node_name)
-            log.info(f"Force map entity '{ent_str}' to GBC entity: {node_name}")
+            log.info(f"强制将实体 '{ent_str}' 映射到 GBC 实体: {node_name}")
 
         return Qent_GBCent_map
 
     def _get_query_entity(self, query: str) -> Dict[str, List[str]]:
         """
-        Get the entity mapping for the query.
+        获取查询的实体映射。
         """
 
-        # 1. retrieval relevent entities from the query
+        # 1. 从查询中检索相关实体
         retrieval_ents = self.gbc_index.entity_vdb.search(query_text=query, top_k=5)
         retrieval_node_names = set()
         retrieval_nodes = []
@@ -152,7 +155,7 @@ class GBCRAG(BaseRAG):
                 retrieval_node_names.add(node_name)
                 retrieval_nodes.append(node_dict)
 
-        # 2. llm generate and select entities from the query
+        # 2. llm 生成并从查询中选择实体
         prompt = QUESTION_ENT_PROMPT.format(
             input_text=query,
             entity_types=", ".join(QUESTION_ENTITY_TYPES),
@@ -166,16 +169,16 @@ class GBCRAG(BaseRAG):
             if res and res.entities:
                 res_entities = res.entities
                 entities_name = [entity.entity_name for entity in res_entities]
-                log.info(f"Extracted entities: {entities_name}")
+                log.info(f"提取的实体: {entities_name}")
             else:
-                log.info("No entities extracted from the query.")
+                log.info("未从查询中提取到实体。")
 
         except Exception as e:
-            log.error(f"Error during entity extraction: {e}")
+            log.error(f"实体提取过程中出错: {e}")
 
         if len(res_entities) == 0:
-            # use the retrieval entities if no entity is extracted by llm
-            log.info("Use the question as the entity.")
+            # 如果 llm 没有提取到实体，则使用问题本身作为实体
+            log.info("使用问题作为实体。")
             res_entities = [Entity(entity_name=query, entity_type="Question")]
 
         Qent_GBCent_map = defaultdict(list)
@@ -188,7 +191,7 @@ class GBCRAG(BaseRAG):
             if ent_node_name in retrieval_node_names:
                 Qent_GBCent_map[ent_node_name].append(ent_node_name)
                 log.info(
-                    f"Entity '{ent_node_name}' mapped to GBC entity: {ent_node_name}"
+                    f"实体 '{ent_node_name}' 映射到 GBC 实体: {ent_node_name}"
                 )
             else:
                 remain_ents.append(res_ent)
@@ -203,7 +206,7 @@ class GBCRAG(BaseRAG):
 
     def link_tree_node(self, entities_map: Dict[str, List[str]]) -> List[dict]:
         """
-        Get the tree nodes for the given entities.
+        获取给定实体的树节点。
         """
         tree_node_cnt = defaultdict(list)
         all_map_nodenames = set()
@@ -212,7 +215,7 @@ class GBCRAG(BaseRAG):
                 all_map_nodenames.add(ent)
         all_map_nodenames = list(all_map_nodenames)
         if not all_map_nodenames:
-            log.warning("No entities found in the mapping.")
+            log.warning("在映射中未找到实体。")
             return []
 
         for node_name in all_map_nodenames:
@@ -232,17 +235,17 @@ class GBCRAG(BaseRAG):
         ]
 
         if not tree_nodes:
-            log.warning("No tree nodes found for the given entities.")
+            log.warning("未找到给定实体的树节点。")
             return []
 
-        log.info(f"Retrieved {len(tree_nodes)} tree nodes based on entity mapping.")
+        log.info(f"基于实体映射检索到 {len(tree_nodes)} 个树节点。")
         return tree_nodes
 
     def link_section(self, tree_nodes: List[dict]) -> Dict[int, List[str]]:
         """
-        Get the linked section TreeNode ids from the tree nodes.
-        given the tree nodes, get the linked section TreeNode ids (specific depth).
-        return the Dict: section_id --> [linked_entity1, linked_entity2, ...]
+        从树节点获取链接的章节 TreeNode ID。
+        给定树节点，获取链接的章节 TreeNode ID（特定深度）。
+        返回字典: section_id --> [linked_entity1, linked_entity2, ...]
         """
         sec_entity_map = defaultdict(list)
         for node in tree_nodes:
@@ -259,20 +262,20 @@ class GBCRAG(BaseRAG):
             sec_entity_map[sec_id] = list(set(val))
 
         log.info(
-            f"Found {len(sec_entity_map)} linked sections at depth {self.select_depth}."
+            f"在深度 {self.select_depth} 找到 {len(sec_entity_map)} 个链接章节。"
         )
         return sec_entity_map
 
     def prep_SecSel_prompt(
         self,
-        query,
+        query: str,
         link_nodes: List[TreeNode] = None,
         remain_nodes: List[TreeNode] = None,
         sec_entity_map: Dict[int, List[str]] = None,
     ) -> str:
         """
-        Prepare the prompt for section selection.
-        This method should be implemented to prepare the prompt
+        准备章节选择的提示词。
+        此方法应实现以准备提示词
         """
 
         def prep_nodes_json(
@@ -321,7 +324,7 @@ class GBCRAG(BaseRAG):
         iter_context: Optional[SubStep] = None,
     ) -> None:
         """
-        Use LLM to select the most relevant section based on the query and Section info.
+        使用 LLM 基于查询和章节信息选择最相关的章节。
         """
         sec_entity_map = self.link_section(tree_nodes)
         link_section_ids = list(sec_entity_map.keys())
@@ -334,10 +337,10 @@ class GBCRAG(BaseRAG):
         iter_context.linked_section_ids = link_section_ids
 
         if len(remain_secs) == 0:
-            log.info("No remaining sections to select from. Skipping LLM expansion.")
+            log.info("没有剩余章节可供选择。跳过 LLM 扩展。")
             iter_context.supplementary_ids = []
             iter_context.selected_explanation = (
-                "No remaining sections for supplementary selection."
+                "没有剩余章节用于补充选择。"
             )
             iter_context.retrieval_sec_ids = link_section_ids
             return
@@ -349,7 +352,7 @@ class GBCRAG(BaseRAG):
             sec_entity_map=sec_entity_map,
         )
         sel_ids = []
-        explanation = "Error or no valid response from LLM during section expansion."
+        explanation = "章节扩展期间出错或 LLM 无有效响应。"
 
         remain_sec_ids_set = {sec.index_id for sec in remain_secs}
         try:
@@ -359,24 +362,24 @@ class GBCRAG(BaseRAG):
             if res:
                 explanation = res.explanation
                 if res.supplementary_ids:
-                    # Validate the IDs returned by the LLM
+                    # 验证 LLM 返回的 ID
                     for sup_id in res.supplementary_ids:
                         if sup_id in remain_sec_ids_set:
                             sel_ids.append(sup_id)
                         else:
                             log.warning(
-                                f"LLM returned a supplementary ID {sup_id} which is not in the valid list of remaining sections. Ignoring it."
+                                f"LLM 返回的补充 ID {sup_id} 不在剩余章节的有效列表中。忽略它。"
                             )
 
                     if sel_ids:
-                        log.info(f"LLM selected {len(sel_ids)} supplementary sections.")
+                        log.info(f"LLM 选择了 {len(sel_ids)} 个补充章节。")
                     else:
-                        log.info("LLM did not select any valid supplementary sections.")
+                        log.info("LLM 未选择任何有效的补充章节。")
                 else:
-                    log.info("LLM did not select any supplementary sections.")
+                    log.info("LLM 未选择任何补充章节。")
 
         except Exception as e:
-            log.error(f"Error occurred during section selection: {e}")
+            log.error(f"章节选择过程中出错: {e}")
 
         iter_context.supplementary_ids = sel_ids
         iter_context.selected_explanation = explanation
@@ -384,13 +387,13 @@ class GBCRAG(BaseRAG):
         retrieval_sec_ids = list(set(link_section_ids + sel_ids))
         iter_context.retrieval_sec_ids = retrieval_sec_ids
         log.info(
-            f"LLM selected {len(sel_ids)} supplementary sections, total {len(retrieval_sec_ids)} sections for retrieval."
+            f"LLM 选择了 {len(sel_ids)} 个补充章节，共 {len(retrieval_sec_ids)} 个章节用于检索。"
         )
 
     def _process_retrieved_nodes(
         self, tree_data: List[Dict[str, Any]], iter_context: SubStep
     ) -> None:
-        """Processes and categorizes retrieved nodes into the iteration context."""
+        """处理并将检索到的节点分类到迭代上下文中。"""
         iter_context.retrieval_nodes = tree_data
 
         image_nodes = [node for node in tree_data if node["type"] == NodeType.IMAGE]
@@ -402,22 +405,22 @@ class GBCRAG(BaseRAG):
     @trace_execution
     def get_GBC_info(self, iter_context: SubStep) -> None:
         """
-        1. Get subgraph: sel_sec_id --> subtree --> subgraph.
-        2. Use Three Layer Reranker to select most relevant TreeNodes in the subtree.
-            2.1 PPR to rank the most relevant TreeNodes in the subtree.
-            2.2 Rerank with text reranker model.
-            2.3 Rerank with Multimodal method.
-            Then: Skyline algorithm to select the most relevant TreeNodes.
-        3. Combine the connected TreeNodes and Subgraph info to form the final GBC data info.
+        1. 获取子图：sel_sec_id --> subtree --> subgraph。
+        2. 使用三层重排序器选择子树中最相关的 TreeNode。
+            2.1 PPR 排序子树中最相关的 TreeNode。
+            2.2 使用文本重排序器模型重排序。
+            2.3 使用多模态方法重排序。
+            然后：使用 Skyline 算法选择最相关的 TreeNode。
+        3. 结合连接的 TreeNode 和子图信息形成最终的 GBC 数据信息。
         """
 
-        # 1. Get subgraph: sel_sec_id --> subtree --> subgraph.
-        # Get the subtree rooted at the selected section ID
+        # 1. 获取子图：sel_sec_id --> subtree --> subgraph。
+        # 获取以选定章节 ID 为根的子树
         if self.varient == "wo_selector":
-            log.info("Variant 'wo_selector' selected")
+            log.info("选择了变体 'wo_selector'")
             subtree_nodes = self.gbc_index.TreeIndex.get_nodes(hasRoot=False)
         else:
-            log.info(f"Using {self.varient} variant for retrieval.")
+            log.info(f"使用 {self.varient} 变体进行检索。")
             retrieval_sec_ids = iter_context.retrieval_sec_ids
             subtree_nodes = self.gbc_index.TreeIndex.get_subtree_nodes(retrieval_sec_ids)
 
@@ -431,7 +434,7 @@ class GBCRAG(BaseRAG):
             iter_context.sub_query, subtree_nodes, subgraph, start_ent_map
         )
 
-        log.info(f"After skyline filtering, select {len(tree_node_ids)} TreeNodes")
+        log.info(f"Skyline 过滤后，选择了 {len(tree_node_ids)} 个 TreeNode")
 
         Graph_data = self.gbc_index.GraphIndex.get_subgraph_data(res_entities)
         iter_context.iteration_graph_nodes = Graph_data.get("nodes", [])
@@ -446,13 +449,13 @@ class GBCRAG(BaseRAG):
         iter_context: SubStep = None,
     ) -> None:
         """
-        GBC retrieval following the steps:
-        1. Extract entities from the query.
-        2. Get the section nodes based on the entities.
-        3. Use LLM to select the most relevant section based on the query and Section info.
-        4. Use graph-based retrieval on the subgraph projected by the subtree (Select Section).
+        GBC 检索遵循以下步骤：
+        1. 从查询中提取实体。
+        2. 基于实体获取章节节点。
+        3. 使用 LLM 基于查询和章节信息选择最相关的章节。
+        4. 在子树投影的子图上使用基于图的检索（选择章节）。
 
-        iter_context: IterationStep, Iteration context for the current step.
+        iter_context: IterationStep, 当前步骤的迭代上下文。
         """
 
         Qent_GBCent_map = self._get_query_entity(query)
@@ -461,19 +464,19 @@ class GBCRAG(BaseRAG):
         tree_nodes = self.link_tree_node(Qent_GBCent_map)
         iter_context.linked_tree_nodes = tree_nodes
 
-        # 3. Use LLM to select the most relevant section or supplementary sections
+        # 3. 使用 LLM 选择最相关的章节或补充章节
         if self.varient == "wo_selector":
-            log.info("Variant 'wo_selector' selected: Skipping LLM section selection.")
+            log.info("选择了变体 'wo_selector'：跳过 LLM 章节选择。")
             iter_context.retrieval_sec_ids = [self.gbc_index.TreeIndex.root_node.index_id]
         else:
             self.llm_section_selection(query, tree_nodes, iter_context)
 
-        # 4. Graph-based retrieval on subgraph projected by the subtree (Select Section)
+        # 4. 在子树投影的子图上进行基于图的检索（选择章节）
         self.get_GBC_info(iter_context)
 
     @trace_execution
     def process_analysis(self, context: GBCRAGContext, query_analysis: PlanResult):
-        log.info(f"Query analysis type: {query_analysis.query_type}")
+        log.info(f"查询分析类型: {query_analysis.query_type}")
 
         if query_analysis.query_type == "simple":
             query = query_analysis.original_query
@@ -491,14 +494,14 @@ class GBCRAG(BaseRAG):
             context.iterations.append(current_step)
             context.final_answer = final_answer
         elif query_analysis.query_type == "complex":
-            # 1. Separate retrieval tasks from the full plan
+            # 1. 从完整计划中分离检索任务
             retrieval_tasks = [
                 sub_q
                 for sub_q in query_analysis.sub_questions
                 if sub_q.type == "retrieval"
             ]
 
-            # 2. Execute each retrieval task and collect the results
+            # 2. 执行每个检索任务并收集结果
             sub_question_results = []
             for i, task in enumerate(retrieval_tasks):
                 sub_question = task.question
@@ -519,18 +522,18 @@ class GBCRAG(BaseRAG):
                 )
             final_answer = self.answer.answer_complex_question(
                 original_query=query_analysis.original_query,
-                sub_question_plan=query_analysis.sub_questions,  # Pass the full plan
-                sub_question_results=sub_question_results,  # Pass the results of the retrieval steps
+                sub_question_plan=query_analysis.sub_questions,  # 传递完整计划
+                sub_question_results=sub_question_results,  # 传递检索步骤的结果
             )
             context.final_answer = final_answer
 
         elif query_analysis.query_type == "global":
-            # Create a step for the global operation
+            # 为全局操作创建一个步骤
             current_step = SubStep(
                 sub_query=query_analysis.original_query, sub_number=1
             )
 
-            # 1. Filter the tree nodes based on the plan's filters
+            # 1. 根据计划的过滤器过滤树节点
             filtered_nodes: List[TreeNode] = filter_tree_nodes(
                 self.gbc_index.TreeIndex, query_analysis.filters
             )
@@ -539,25 +542,25 @@ class GBCRAG(BaseRAG):
             filter_nodes_ids = [node.index_id for node in filtered_nodes]
             tree_data = self.gbc_index.TreeIndex.get_nodes_data(filter_nodes_ids)
             self._process_retrieved_nodes(tree_data, current_step)
-            log.info(f"Global filter resulted in {len(filtered_nodes)} nodes.")
+            log.info(f"全局过滤结果包含 {len(filtered_nodes)} 个节点。")
 
             operation = query_analysis.operation.upper()
 
-            # 2. Perform the specified operation
+            # 2. 执行指定的操作
             if operation == "COUNT":
-                # Direct calculation, no LLM call needed for the final step
+                # 直接计算，最后一步不需要 LLM 调用
                 count_result = len(filtered_nodes)
-                # You can format this into a more natural sentence if desired
+                # 如果需要，可以将其格式化为更自然的句子
                 final_answer = (
-                    f"Based on my analysis of the document, I found {count_result} items"
-                    f" that answer the question: '{query_analysis.original_query}'"
+                    f"根据我对文档的分析，我找到了 {count_result} 个"
+                    f"能够回答问题 '{query_analysis.original_query}' 的项目。"
                 )
 
                 current_step.partial_answers = [
                     {"source": "Direct Count", "content": final_answer}
                 ]
-            else:  # For LIST, SUMMARIZE, ANALYZE
-                # Call the dedicated global answer agent method
+            else:  # 针对 LIST, SUMMARIZE, ANALYZE
+                # 调用专用的全局回答代理方法
                 final_answer, partials = self.answer.answer_global_question(
                     original_query=query_analysis.original_query,
                     operation=operation,
@@ -568,8 +571,8 @@ class GBCRAG(BaseRAG):
             context.iterations.append(current_step)
             context.final_answer = final_answer
         else:
-            log.warning(f"Unknown query type: {query_analysis.query_type}")
-            context.final_answer = "I'm sorry, I cannot process this query."
+            log.warning(f"未知查询分析类型: {query_analysis.query_type}")
+            context.final_answer = "抱歉，我无法处理此查询。"
 
     def _create_augmented_prompt(self, query: str) -> str:
         pass
@@ -579,7 +582,7 @@ class GBCRAG(BaseRAG):
         context = GBCRAGContext(query=query)
 
         if self.varient == "wo_plan":
-            log.info("Variant 'wo_plan' selected: Skipping LLM planning.")
+            log.info("选择了 'wo_plan' 变体：跳过 LLM 规划。")
             query_analysis = PlanResult(
                 query_type="simple",
                 original_query=query,
@@ -590,7 +593,7 @@ class GBCRAG(BaseRAG):
         context.plan = query_analysis
         self.process_analysis(context, query_analysis)
 
-        log.info(f"Final answer for query '{query}': {context.final_answer}")
+        log.info(f"查询 '{query}' 的最终答案: {context.final_answer}")
         retrieval_ids = self._save_retrieval_res(context, query_output_dir)
 
         return context.final_answer, retrieval_ids
@@ -598,14 +601,14 @@ class GBCRAG(BaseRAG):
     def _save_retrieval_res(self, context: GBCRAGContext, query_output_dir: str):
         retrieval_ids = []
 
-        # direct save the context to a json file
+        # 直接将上下文保存到 json 文件
         retrieval_save_res = query_output_dir / "retrieval_res.json"
         context_dict = context.model_dump()
         with open(retrieval_save_res, "w", encoding="utf-8") as f:
             json.dump(context_dict, f, indent=2, ensure_ascii=False)
-        log.info(f"Retrieval results saved to {retrieval_save_res}")
+        log.info(f"检索结果已保存至 {retrieval_save_res}")
 
-        # use the tree nodes as retrieval ids
+        # 使用树节点作为检索 ID
         retrieval_ids = []
         for iter_step in context.iterations:
             text_nodes = iter_step.iteration_text_nodes

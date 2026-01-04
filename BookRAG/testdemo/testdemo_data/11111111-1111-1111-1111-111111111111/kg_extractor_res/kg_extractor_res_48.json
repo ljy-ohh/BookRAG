@@ -1,33 +1,193 @@
 {
   "entities": [
     {
-      "entity_name": "table",
+      "entity_name": "Table",
       "entity_type": "TABLE",
-      "description": "A table with columns for variable symbols, their meanings, and remarks, as indicated by the column headers.",
+      "description": "A table with columns for font, character style, style, and a confirmation action, likely from a user interface.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "变量符号",
+      "entity_name": "字体",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The first column header 变量符号 (Variable Symbol), listing the symbols or identifiers for variables.",
+      "description": "A column header representing the 'Font' setting or selection.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "含义",
+      "entity_name": "字符样式",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The second column header 含义 (Meaning), describing the definition or significance of each variable symbol.",
+      "description": "A column header representing the 'Character Style' setting or selection.",
       "source_ids": [
         48
       ]
     },
     {
-      "entity_name": "备注",
+      "entity_name": "样式",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The third column header 备注 (Remarks), providing additional notes or comments for each variable.",
+      "description": "A column header representing the 'Style' setting or selection.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "确定",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "A column header representing a 'Confirm' or 'OK' action, likely a button or command.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "文本(I)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a text category  for font settings, possibly for italic text.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "文本(FE)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a text category  for font settings, possibly for Far East text.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "函数功能(G)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for function or feature names in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "变量(V)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for variables in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "希腊字母(L)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for Greek letters in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "U.C.希腊语(g)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for uppercase Greek letters in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "符号(g)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for symbols in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "向量矩阵(M)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for vectors and matrices in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "数字(N)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for numbers in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "数学附加(E)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a category for additional mathematical symbols in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "用户1(1)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a user-defined category 1 in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "用户2(2)",
+      "entity_type": "SECTION_TITLE",
+      "description": "A section title in a table row representing a user-defined category 2 in a font settings context.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "宋体",
+      "entity_type": "FONT",
+      "description": "A Chinese font name (SimSun) specified for certain text categories in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "Edwardian Script ITC",
+      "entity_type": "FONT",
+      "description": "A script font name specified for a text category in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "Times New Roman",
+      "entity_type": "FONT",
+      "description": "A serif font name specified for multiple categories (function, variable, vector/matrix, numbers, user2) in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "Symbol",
+      "entity_type": "FONT",
+      "description": "A font name containing symbols, specified for Greek letters and symbols categories in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "MT Extra",
+      "entity_type": "FONT",
+      "description": "A font name specified for the additional mathematical symbols category in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "Courier",
+      "entity_type": "FONT",
+      "description": "A monospaced font name specified for a user-defined category in the font settings table.",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "entity_name": "斜体",
+      "entity_type": "TEXT_STYLE",
+      "description": "A character style (italic) mentioned in the first row of the font settings table.",
       "source_ids": [
         48
       ]
@@ -35,31 +195,231 @@
   ],
   "relations": [
     {
-      "src_entity_name": "table",
-      "tgt_entity_name": "变量符号",
+      "src_entity_name": "Table",
+      "tgt_entity_name": "字体",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '变量符号'.",
+      "description": "表格 'Table' 包含关于 '字体' 的数据。",
       "source_ids": [
         48
       ]
     },
     {
-      "src_entity_name": "table",
-      "tgt_entity_name": "含义",
+      "src_entity_name": "Table",
+      "tgt_entity_name": "字符样式",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '含义'.",
+      "description": "表格 'Table' 包含关于 '字符样式' 的数据。",
       "source_ids": [
         48
       ]
     },
     {
-      "src_entity_name": "table",
-      "tgt_entity_name": "备注",
+      "src_entity_name": "Table",
+      "tgt_entity_name": "样式",
       "relation_name": "",
       "weight": 9.0,
-      "description": "Table 'Table' contains data about '备注'.",
+      "description": "表格 'Table' 包含关于 '样式' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "确定",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '确定' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "文本(I)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '文本(I)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "文本(FE)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '文本(FE)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "函数功能(G)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '函数功能(G)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "变量(V)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '变量(V)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "希腊字母(L)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '希腊字母(L)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "U.C.希腊语(g)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'U.C.希腊语(g)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "符号(g)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '符号(g)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "向量矩阵(M)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '向量矩阵(M)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "数字(N)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '数字(N)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "数学附加(E)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '数学附加(E)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "用户1(1)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '用户1(1)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "用户2(2)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '用户2(2)' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "宋体",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '宋体' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "Edwardian Script ITC",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'Edwardian Script ITC' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "Times New Roman",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'Times New Roman' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "Symbol",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'Symbol' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "MT Extra",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'MT Extra' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "Courier",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 'Courier' 的数据。",
+      "source_ids": [
+        48
+      ]
+    },
+    {
+      "src_entity_name": "Table",
+      "tgt_entity_name": "斜体",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "表格 'Table' 包含关于 '斜体' 的数据。",
       "source_ids": [
         48
       ]

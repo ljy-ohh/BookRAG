@@ -16,7 +16,7 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
 
     rag_config = cfg.rag.strategy_config
     strategy_name = rag_config.strategy
-    log.info(f"Preparing dependencies for RAG strategy: '{strategy_name}'")
+    log.info(f"正在为 RAG 策略准备依赖项: '{strategy_name}'")
 
     dependencies = {}
 
@@ -26,20 +26,20 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
         # 加载 TraverseAgent 需要的 tree_index
         tree_index_path = DocumentTree.get_save_path(cfg.save_path)
         tree_index = DocumentTree.load_from_file(tree_index_path)
-        log.info(f"Successfully loaded tree index from {tree_index_path}")
+        log.info(f"成功从 {tree_index_path} 加载树索引")
         dependencies["tree_index"] = tree_index
 
     elif strategy_name == "gbc":
         from Core.Index.GBCIndex import GBC
 
         gbc_index = GBC.load_gbc_index(cfg)
-        log.info(f"Successfully loaded GBC index from {cfg.save_path}")
+        log.info(f"成功从 {cfg.save_path} 加载 GBC 索引")
         dependencies["gbc_index"] = gbc_index
     elif strategy_name == "graph":
         from Core.Index.GBCIndex import GBC
 
         gbc_index = GBC.load_gbc_index(cfg)
-        log.info(f"Successfully loaded GBC index from {cfg.save_path}")
+        log.info(f"成功从 {cfg.save_path} 加载 GBC 索引")
         dependencies["gbc_index"] = gbc_index
 
     elif strategy_name == "vanilla":
@@ -56,7 +56,7 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
             from Core.utils.bm25 import BM25
             bm25_path = os.path.join(vdb_store_path, "bm25_index.pkl")
             bm25 = BM25.load(bm25_path)
-            log.info(f"Successfully loaded BM25 index from {bm25_path}")
+            log.info(f"成功从 {bm25_path} 加载 BM25 索引")
             dependencies["bm25"] = bm25
         else:
             from Core.configs.embedding_config import EmbeddingConfig
@@ -79,7 +79,7 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
                 db_path=vdb_store_path,
                 collection_name=vdb_cfg.collection_name,
             )
-            log.info(f"Successfully loaded vector store from {vdb_store_path}")
+            log.info(f"成功从 {vdb_store_path} 加载向量存储")
             dependencies["vector_store"] = vdb
 
     elif strategy_name == "mmr":
@@ -106,7 +106,7 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
                 device=embed_cfg.device,
             )
         else:
-            raise ValueError(f"Unsupported embedding model type: {embed_model_type}")
+            raise ValueError(f"不支持的嵌入模型类型: {embed_model_type}")
 
         import os
         from Core.configs.vdb_config import VDBConfig
@@ -121,9 +121,9 @@ def prepare_rag_dependencies(cfg: SystemConfig) -> Dict[str, Any]:
             db_path=vdb_store_path,
             collection_name=vdb_cfg.collection_name,
         )
-        log.info(f"Successfully loaded vector store from {vdb_store_path}")
+        log.info(f"成功从 {vdb_store_path} 加载向量存储")
         dependencies["vector_store"] = vdb
     else:
-        raise ValueError(f"Unknown or unsupported RAG strategy: '{strategy_name}'")
+        raise ValueError(f"未知或不支持的 RAG 策略: '{strategy_name}'")
 
     return dependencies

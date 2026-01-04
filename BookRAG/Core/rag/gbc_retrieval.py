@@ -42,15 +42,15 @@ class Retriever:
         self, subtree_nodes: List[TreeNode], query: str
     ) -> List[Tuple[int, float]]:
         """
-        Rerank the original text in the subtree based on their relevance to the query.
-        Use Reranker model
+        根据与查询的相关性对子树中的原始文本进行重排序。
+        使用重排序模型
         """
         doc_text = []
         tree_ids = [node.index_id for node in subtree_nodes]
         for node in subtree_nodes:
             node_type = node.type
             if node_type == NodeType.TABLE:
-                # Convert table to text
+                # 将表格转换为文本
                 text = table2text(node.meta_info.__dict__)
             else:
                 text = node.meta_info.content
@@ -58,7 +58,7 @@ class Retriever:
                 text = TextProcessor.split_text_into_chunks(
                     text=text, max_length=self.reranker.max_length - 1000
                 )
-                text = text[0]  # use the first chunk
+                text = text[0]  # 使用第一个块
             doc_text.append(text)
 
         scores = self.reranker.rerank(
@@ -98,19 +98,23 @@ class Retriever:
         ent_map: Dict[str, List[str]],
         subtree_nodes: List[TreeNode],
     ) -> Tuple[List[Tuple[int, float]], List[str]]:
+        """
+        基于图结构的重排序器。
+        结合实体相似度和 PageRank 算法对子图节点进行排序。
+        """
         ents_sim = {}
         for q_ent_name, gbc_ents in ent_map.items():
             for node_name in gbc_ents:
                 if node_name not in subgraph.nodes():
                     continue
-                # compute similarity between the query entity and the GBC entity
+                # 计算查询实体和 GBC 实体之间的相似度
                 sim = self.embedder.compute_texts_sim(q_ent_name, node_name)
                 positive_sim = (sim + 1) / 2
                 ents_sim[node_name] = ents_sim.get(node_name, 0.0) + positive_sim
 
         total_sim_sum = sum(ents_sim.values())
 
-        # Normalize the similarity scores
+        # 归一化相似度分数
         personalization_vector = {}
         if total_sim_sum > 0:
             for ent, score in ents_sim.items():
@@ -131,13 +135,13 @@ class Retriever:
             weight="weight",  # 可以考虑使用相似度作为边的权重
         )
 
-        # sort the ranked list by score and filter by topk_ent
+        # 按分数排序列表并按 topk_ent 过滤
         res_entities = [(ent, score) for ent, score in pagerank_scores.items()]
         res_entities = sorted(res_entities, key=lambda x: x[1], reverse=True)
         res_entities = res_entities[: self.topk_ent]
         res_entities = [ent for ent, _ in res_entities]
         log.info(
-            f"Graph reranker: Retrieved {len(res_entities)} entities with topk={self.topk_ent}."
+            f"图重排序器: 检索到 {len(res_entities)} 个实体，topk={self.topk_ent}。"
         )
 
         # --- 步骤 3 & 4: 聚合分数到 Tree Node ID 并排序返回 ---
@@ -179,17 +183,20 @@ class Retriever:
         subgraph: nx.Graph,
         start_ent_map: Dict[str, List[str]],
     ) -> Tuple[List[int], List[str]]:
+        """
+        使用 Skyline 算法结合多种重排序策略（图、文本、多模态）筛选最佳的树节点。
+        """
         if len(subtree_nodes) == 0:
-            log.info("No subtree nodes available for reranking.")
+            log.info("没有可用于重排序的子树节点。")
             return [], []
 
         if self.varient == "wo_graph":
-            log.info("Variant 'wo_graph' selected: Skipping graph reranker.")
-            # Only use text reranker
+            log.info("选择了 'wo_graph' 变体：跳过图重排序。")
+            # 仅使用文本重排序器
             text_rerank_res = self.text_reranker(subtree_nodes, sub_query)
             tree_node_ids = [node_id for node_id, _ in text_rerank_res[: self.topk]]
 
-            # use start_ent_map as the returned entities
+            # 使用 start_ent_map 作为返回的实体
             res_entities = set()
             for _, gbc_ents in start_ent_map.items():
                 for node_name in gbc_ents:
@@ -199,8 +206,8 @@ class Retriever:
             return tree_node_ids, res_entities
 
         if self.varient == "wo_text":
-            log.info("Variant 'wo_text' selected: Skipping text reranker.")
-            # Only use graph reranker
+            log.info("选择了 'wo_text' 变体：跳过文本重排序。")
+            # 仅使用图重排序器
             graph_rerank_res, res_entities = self.graph_reranker(
                 subgraph, start_ent_map, subtree_nodes
             )
@@ -208,29 +215,29 @@ class Retriever:
 
             return tree_node_ids, res_entities
 
-        # 2. Use Three Layer Reranker to select most relevant TreeNodes in the subtree.
-        # 2.1 PPR to rank the most relevant TreeNodes in the subtree.
+        # 2. 使用三层重排序器选择子树中最相关的 TreeNode。
+        # 2.1 PPR 排序子树中最相关的 TreeNode。
         graph_rerank_res, res_entities = self.graph_reranker(
             subgraph, start_ent_map, subtree_nodes
         )
         
-        # tmp_test
+        # 临时测试
         if len(graph_rerank_res) < self.topk:
             log.warning(
-                f"Graph reranker returned only {len(graph_rerank_res)} nodes, "
-                f"which is less than topk={self.topk}."
+                f"图重排序器返回了 {len(graph_rerank_res)} 个节点，"
+                f"少于 topk={self.topk}。"
             )
             tree_node_ids = [node_id for node_id, _ in graph_rerank_res]
             return tree_node_ids, res_entities
         
 
-        # 2.2 Rerank with text reranker model.
+        # 2.2 使用文本重排序器模型重排序。
         text_rerank_res = self.text_reranker(subtree_nodes, sub_query)
 
-        # 2.3 Rerank with Multimodal method.
+        # 2.3 使用多模态方法重排序。
         # mm_rerank_res = self.multimodal_reranker(subtree_nodes, sub_query)
 
-        # Combine the results from three rerankers
+        # 结合三个重排序器的结果
         # merged_scores: Dict[int, List[float]] = merge_ranker_scores(
         #     graph_rerank_res, text_rerank_res, mm_rerank_res
         # )
@@ -246,31 +253,31 @@ class Retriever:
             and len(merged_scores) >= self.topk
         ):
             log.info(
-                f"Skyline returned only {len(tree_node_ids)} nodes. "
-                f"Activating fallback to meet minimum of {self.topk}."
+                f"Skyline 仅返回了 {len(tree_node_ids)} 个节点。 "
+                f"激活回退机制以满足最小 {self.topk} 个节点。"
             )
 
-            # --- MODIFICATION START ---
+            # --- 修改开始 ---
 
-            # 1. Get IDs from the initial skyline result
+            # 1. 从初始 Skyline 结果中获取 ID
             final_node_ids = set(tree_node_ids)
 
-            # 2. Get top 5 from graph reranker
-            # Assuming the score is the first value in the list, sort descending
+            # 2. 从图重排序器获取前 5 个
+            # 假设分数是列表中的第一个值，降序排序
             top_5_graph = graph_rerank_res[:5]
             for node_id, _ in top_5_graph:
                 final_node_ids.add(node_id)
 
-            # 3. Get top 5 from text reranker
+            # 3. 从文本重排序器获取前 5 个
             top_5_text = text_rerank_res[:5]
             for node_id, _ in top_5_text:
                 final_node_ids.add(node_id)
 
-            # 4. Rebuild the sel_tree_nodes list from the unique IDs
-            # Create a quick lookup map for subtree_nodes by their ID
+            # 4. 从唯一 ID 重建 sel_tree_nodes 列表
+            # 为子树节点创建快速查找映射
             tree_node_ids = list(final_node_ids)
 
-            log.info(f"Fallback resulted in {len(tree_node_ids)} unique nodes.")
-            # --- MODIFICATION END ---
+            log.info(f"回退机制产生了 {len(tree_node_ids)} 个唯一节点。")
+            # --- 修改结束 ---
 
         return tree_node_ids, res_entities

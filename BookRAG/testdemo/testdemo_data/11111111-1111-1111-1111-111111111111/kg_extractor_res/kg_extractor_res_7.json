@@ -2,32 +2,13 @@
   "entities": [
     {
       "entity_name": "jiangzy buct edu cn",
-      "entity_type": "PERSON",
-      "description": "a person listed as the corresponding author of the document",
-      "source_ids": [
-        7
-      ]
-    },
-    {
-      "entity_name": "buct edu cn",
-      "entity_type": "ORGANIZATION",
-      "description": "an organization associated with the email domain  likely an educational institution",
+      "entity_type": "person",
+      "description": "a person listed as the corresponding author for the document",
       "source_ids": [
         7
       ]
     }
   ],
-  "relations": [
-    {
-      "src_entity_name": "jiangzy buct edu cn",
-      "tgt_entity_name": "buct edu cn",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the person s email address uses the domain of the organization  indicating an affiliation",
-      "source_ids": [
-        7
-      ]
-    }
-  ],
+  "relations": [],
   "node_idx": 7
 }

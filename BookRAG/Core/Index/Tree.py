@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 
 
 class NodeType(str, Enum):
-    """Enum for node types in the document tree."""
+    """文档树中节点类型的枚举。"""
 
     ROOT = "root"
     TEXT = "text"
@@ -22,52 +22,52 @@ class NodeType(str, Enum):
 
 class MetaInfo(BaseModel):
     # document info
-    file_name: str | None = Field(description="the name of the file", default=None)
-    file_path: str | None = Field(description="the path of the file", default=None)
+    file_name: str | None = Field(description="文件名", default=None)
+    file_path: str | None = Field(description="文件路径", default=None)
 
     # page info
-    page_idx: int | None = Field(description="the page index", default=None)
+    page_idx: int | None = Field(description="页面索引", default=None)
     page_path: str | None = Field(
-        description="the path of the page image", default=None
+        description="页面图像路径", default=None
     )
 
     # item info from PDF extractor
     pdf_id: int | None = Field(
-        description="the unique identifier of the item in the PDF", default=None
+        description="PDF 中项目的唯一标识符", default=None
     )
     pdf_para_block: dict | None = Field(
-        description="the paragraph block information from the PDF extractor",
+        description="来自 PDF 提取器的段落块信息",
         default=None,
     )
 
     # image and table info
     img_path: str | None = Field(
-        description="the path of the image or table", default=None
+        description="图像或表格的路径", default=None
     )
     image_width: int | None = Field(
-        description="the width of the image or table", default=0
+        description="图像或表格的宽度", default=0
     )
     image_height: int | None = Field(
-        description="the height of the image or table", default=0
+        description="图像或表格的高度", default=0
     )
     caption: str | None = Field(
-        description="the caption of the image or table", default=None
+        description="图像或表格的标题", default=None
     )
     footnote: str | None = Field(
-        description="the footnote of the image or table", default=None
+        description="图像或表格的脚注", default=None
     )
 
     # table info
     table_body: str | None = Field(
-        description="the body content of the table", default=None
+        description="表格的主体内容", default=None
     )
 
     # text info, TreeNodes of Any type have the content
-    content: str | None = Field(description="the content of the text", default=None)
+    content: str | None = Field(description="文本内容", default=None)
 
     # title info
     title_level: int | None = Field(
-        description="the level of the title, 0 is the root", default=-1
+        description="标题级别，0 为根节点", default=-1
     )
 
 
@@ -78,13 +78,13 @@ class TreeNode:
         self.type: NodeType = None
         self.meta_info: MetaInfo = MetaInfo(**meta_dict)
         self.depth = 0
-        self.index_id: int = -1  # Unique identifier for the node, should be set later
-        self.outline_node: bool = False  # Indicates if the node is a outline node
-        self.summary: str = ""  # Summary of the node content
+        self.index_id: int = -1  # 节点的唯一标识符，应稍后设置
+        self.outline_node: bool = False  # 指示该节点是否为大纲节点
+        self.summary: str = ""  # 节点内容摘要
 
     def __repr__(self):
         """
-        Return a string representation of the TreeNode for debugging purposes.
+        返回 TreeNode 的字符串表示形式以用于调试目的。
         """
         return (
             f"<TreeNode(index_id={self.index_id}, type={self.type}, "
@@ -99,17 +99,35 @@ class TreeNode:
     def get_meta_info(self):
         return self.meta_info
 
+    def to_log_summary(self) -> Dict[str, Any]:
+        """
+        Returns a dictionary summary for logging purposes.
+        """
+        content_preview = ""
+        if self.meta_info and self.meta_info.content:
+            content_preview = self.meta_info.content[:350] + "..." if len(self.meta_info.content) > 350 else self.meta_info.content
+        elif self.meta_info and self.meta_info.caption:
+             content_preview = f"[Caption] {self.meta_info.caption[:350]}..."
+
+        return {
+            "id": self.index_id,
+            "type": self.type.value if self.type else None,
+            "depth": self.depth,
+            "parent": self.parent.index_id if self.parent else None,
+            "content": content_preview
+        }
+
     def get_outline_entries(self) -> list:
         """
-        returns a list of tuples containing the outline entries.
+        返回包含大纲条目的元组列表。
 
-        Each tuple contains (depth, title, id) for the node.
+        每个元组包含节点的 (depth, title, id)。
         """
         entries = []
         if not self.outline_node:
             return entries
 
-        title = getattr(self.meta_info, "content", "Untitled")
+        title = getattr(self.meta_info, "content", "无标题")
         entries.append((self.depth, title, self.index_id))
 
         for child in self.children:
@@ -125,17 +143,18 @@ class DocumentTree:
         self.root_node: Optional[TreeNode] = None
         self.init_root_node(meta_dict) if meta_dict else None
         self.save_dir = cfg.save_path
-        self.pdf_id_to_index_id: Dict[int, int] = {}  # Maps pdf_id to index_id
+        self.pdf_id_to_index_id: Dict[int, int] = {}  # 映射 pdf_id 到 index_id
         self.max_depth = -1
 
     def __repr__(self):
         """
-        Return a string representation of the DocumentTree for debugging purposes.
+        返回 DocumentTree 的字符串表示形式以用于调试目的。
         """
+        save_dir = getattr(self, "save_dir", "未知")
         return (
             f"<DocumentTree(root_node={self.root_node}, "
             f"total_nodes={len(self.nodes)}, "
-            f"save_dir='{self.save_dir}')>"
+            f"save_dir='{save_dir}')>"
         )
 
     def init_root_node(self, meta_dict: dict):
@@ -181,18 +200,18 @@ class DocumentTree:
 
     def get_node_by_pdf_id(self, pdf_id: int) -> TreeNode:
         """
-        Returns the first node with the given pdf_id.
-        If no node is found, returns None.
+        返回具有给定 pdf_id 的第一个节点。
+        如果未找到节点，则返回 None。
         """
         node_idx = self.pdf_id_to_index_id.get(pdf_id, None)
         if node_idx is not None:
-            # If the pdf_id is mapped to an index_id, return the node directly
+            # 如果 pdf_id 映射到了 index_id，直接返回节点
             return self.nodes[node_idx]
 
-        # If the pdf_id is not mapped, search through the nodes
+        # 如果 pdf_id 未被映射，则在节点中搜索
         if len(self.nodes) > pdf_id and self.nodes[pdf_id].meta_info.pdf_id == pdf_id:
-            # If the pdf_id matches the index_id, return the node directly
-            # This is a special case where the pdf_id is used as the index_id
+            # 如果 pdf_id 与 index_id 匹配，直接返回节点
+            # 这是一个特殊情况，其中 pdf_id 被用作 index_id
             return self.nodes[pdf_id]
 
         for node in self.nodes:
@@ -213,8 +232,8 @@ class DocumentTree:
 
     def get_path_from_root(self, node_id: int) -> List[TreeNode]:
         """
-        Returns the path from the root node to the node with the given index_id.
-        If the node does not exist, returns an empty list.
+        返回从根节点到具有给定 index_id 的节点的路径。
+        如果该节点不存在，则返回空列表。
         """
         node = self.get_node_by_index_id(node_id)
         if not node:
@@ -246,8 +265,8 @@ class DocumentTree:
 
     def get_sibling_nodes(self, node_id: int) -> List[TreeNode]:
         """
-        Returns a list of sibling nodes for the node with the given index_id.
-        If the node does not exist or has no siblings, returns an empty list.
+        返回具有给定 index_id 的节点的兄弟节点列表。
+        如果该节点不存在或没有兄弟节点，则返回空列表。
         """
         node = self.get_node_by_index_id(node_id)
         if not node or not node.parent:
@@ -262,8 +281,7 @@ class DocumentTree:
 
     def get_subtree_nodes(self, node_ids: Union[List[int], int]) -> List[TreeNode]:
         """
-        Returns a unique list of TreeNode objects that are part of the subtrees 
-        rooted at the given node_ids.
+        返回作为以给定 node_ids 为根的子树的一部分的 TreeNode 对象的唯一列表。
         """
         if isinstance(node_ids, int):
             node_ids = [node_ids]
@@ -272,14 +290,14 @@ class DocumentTree:
         visited_ids = set()
 
         for node_id in node_ids:
-            # The helper function will populate the unique_nodes dictionary
+            # 辅助函数将填充 unique_nodes 字典
             self._get_subtree_recursive(node_id, unique_nodes, visited_ids)
         
         return list(unique_nodes.values())
 
     def _get_subtree_recursive(self, node_id: int, unique_nodes: Dict[int, TreeNode], visited_ids: set):
         """
-        Helper function to recursively traverse the tree and collect unique nodes.
+        递归遍历树并收集唯一节点的辅助函数。
         """
         if node_id in visited_ids:
             return
@@ -299,8 +317,8 @@ class DocumentTree:
 
     def get_ancestor_at_depth(self, node_id: int, depth: int) -> Optional[TreeNode]:
         """
-        Returns the ancestor of the node with the given index_id at the specified depth.
-        If the node does not exist or the depth is invalid, returns None.
+        返回具有给定 index_id 的节点在指定深度的祖先。
+        如果该节点不存在或深度无效，则返回 None。
         """
         node = self.get_node_by_index_id(node_id)
         if not node or depth < 0:
@@ -312,8 +330,8 @@ class DocumentTree:
 
     def get_nodes_at_depth(self, depth: int) -> List[TreeNode]:
         """
-        Returns a list of nodes that are at the specified depth.
-        If no nodes are found at that depth, returns an empty list.
+        返回指定深度的节点列表。
+        如果在该深度未找到节点，则返回空列表。
         """
         if depth < 0:
             return []
@@ -321,12 +339,30 @@ class DocumentTree:
         nodes_at_depth = [node for node in self.nodes if node.depth == depth]
         return nodes_at_depth
 
+    def init_root_node(self, meta_dict: dict):
+        self.root_node = TreeNode(meta_dict)
+        self.root_node.index_id = 0
+        self.root_node.depth = 0
+        self.root_node.type = NodeType.ROOT
+        self.root_node.meta_info.pdf_id = 0  # Root node has pdf_id 0
+        self.nodes.append(self.root_node)
+
+    def to_log_summary(self) -> Dict[str, Any]:
+        """
+        Returns a dictionary summary for logging purposes.
+        """
+        return {
+            "root_node": self.root_node.to_log_summary() if self.root_node else None,
+            "total_nodes": len(self.nodes),
+            "save_dir": getattr(self, "save_dir", "未知")
+        }
+
     def get_nodes_data(
         self, node_ids: Optional[List[int]] = None
     ) -> List[Dict[str, Any]]:
         """
-        Returns a list of dictionaries containing the data of the nodes.
-        If node_ids is provided, only those nodes will be included.
+        返回包含节点数据的字典列表。
+        如果提供了 node_ids，则仅包含这些节点。
         """
         if node_ids is None:
             return []
@@ -390,8 +426,8 @@ class DocumentTree:
 
     def get_one_depth_summary(self, node_id: int) -> str:
         """
-        Returns a one-depth summary of the node with the given index_id.
-        If the node does not exist, returns an empty string.
+        返回具有给定 index_id 的节点的一层深度摘要。
+        如果该节点不存在，则返回空字符串。
         """
         node = self.get_node_by_index_id(node_id)
         if not node:
@@ -414,10 +450,13 @@ class DocumentTree:
         return "\n".join(summaries)
 
     def save_to_file(self):
+        from Core.utils.trace_logger import TraceContext
+
         save_file_path = DocumentTree.get_save_path(self.save_dir)
         with open(save_file_path, "wb") as f:
             pickle.dump(self, f)
-        log.info(f"Document tree index saved to {save_file_path}")
+        log.info(f"文档树索引已保存至 {save_file_path}")
+        TraceContext.log_write(save_file_path)
 
         import json
 
@@ -425,7 +464,8 @@ class DocumentTree:
         json_path = os.path.join(self.save_dir, "tree.json")
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(self.to_json_summary(), f, ensure_ascii=False, indent=2)
-        log.info(f"Document tree summary saved to {json_path}")
+        log.info(f"文档树摘要已保存至 {json_path}")
+        TraceContext.log_write(json_path)
 
     @staticmethod
     def get_save_path(input_dir: str) -> str:
@@ -433,5 +473,7 @@ class DocumentTree:
 
     @staticmethod
     def load_from_file(filepath: str) -> "DocumentTree":
+        from Core.utils.trace_logger import TraceContext
+        TraceContext.log_read(filepath)
         with open(filepath, "rb") as f:
             return pickle.load(f)

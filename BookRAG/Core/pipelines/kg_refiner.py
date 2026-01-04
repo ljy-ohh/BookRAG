@@ -34,13 +34,13 @@ log = logging.getLogger(__name__)
 
 class KGRefiner:
     """
-    A class to refine knowledge graphs (KG).
-    Including the basic and advanced refinement methods.
-    For the basic refinement, it merges entities with the same name.
-    For the advanced refinement, it performs entity resolution.
+    用于优化知识图谱（KG）的类。
+    包括基本和高级优化方法。
+    对于基本优化，它合并具有相同名称的实体。
+    对于高级优化，它执行实体解析。
     """
 
-    # The separator used to merge entity descriptions
+    # 用于合并实体描述的分隔符
     _DESCRIPTION_SEP_ = "<SEP>"
 
     def __init__(
@@ -50,7 +50,7 @@ class KGRefiner:
         self.graph_index = graph_index
         self.graph_config = graph_config
 
-        # The following used for advanced refiner
+        # 以下用于高级优化器
         self.embedder = TextEmbeddingProvider(
             model_name=graph_config.embedding_config.model_name,
             backend=graph_config.embedding_config.backend,
@@ -67,11 +67,11 @@ class KGRefiner:
             api_base=graph_config.reranker_config.api_base,
             api_key=graph_config.reranker_config.api_key,
         )
-        # delete the old vector database if exists
+        # 如果存在旧的向量数据库，则删除它
         self.vdb_path = os.path.join(save_path, "kg_vdb")
         if os.path.exists(self.vdb_path):
-            log.info(f"Deleting old vector database at {self.vdb_path}")
-            # delete this dir
+            log.info(f"正在删除位于 {self.vdb_path} 的旧向量数据库")
+            # 删除此目录
             shutil.rmtree(self.vdb_path)
         self.vdb = VectorStore(
             embedding_model=self.embedder,
@@ -84,12 +84,11 @@ class KGRefiner:
 
     def close(self) -> None:
         """
-        Correctly closes all resources used by the KGRefiner, including the
-        Embedder, Reranker
+        正确关闭 KGRefiner 使用的所有资源，包括 Embedder 和 Reranker。
         """
-        log.info("Closing KGRefiner and all its resources...")
+        log.info("正在关闭 KGRefiner 及其所有资源...")
 
-        # 1. Close the Reranker and release its reference
+        # 1. 关闭 Reranker 并释放其引用
         if (
             hasattr(self, "reranker")
             and self.reranker
@@ -98,7 +97,7 @@ class KGRefiner:
             self.reranker.close()
         self.reranker = None
 
-        # 2. Close the Embedder and release its reference
+        # 2. 关闭 Embedder 并释放其引用
         if (
             hasattr(self, "embedder")
             and self.embedder
@@ -107,23 +106,23 @@ class KGRefiner:
             self.embedder.close()
         self.embedder = None
 
-        # 6. Perform a final garbage collection and empty the CUDA cache
-        log.info("Performing final cleanup...")
+        # 6. 执行最终的垃圾回收并清空 CUDA 缓存
+        log.info("正在执行最终清理...")
         gc.collect()
 
-        log.info("✅ KGRefiner resources closed successfully.")
+        log.info("✅ KGRefiner 资源已成功关闭。")
 
     def get_latest_entity_name(self, node_name: str) -> str:
         if node_name not in self.entity_alias_map.keys():
             raise ValueError(
-                f"Entity name '{node_name}' not found in the alias map. "
-                "Please ensure the entity has been processed before."
+                f"实体名称 '{node_name}' 未在别名映射中找到。"
+                "请确保实体之前已被处理。"
             )
         latest_node_name = self.entity_alias_map[node_name]
         if latest_node_name == node_name:
             return latest_node_name
         else:
-            # Recursively find the latest entity name
+            # 递归查找最新的实体名称
             return self.get_latest_entity_name(latest_node_name)
 
     def entity_merge(
@@ -133,24 +132,24 @@ class KGRefiner:
         merged_to_old_entity: Boolean = False,
     ) -> Entity:
         """
-        Merges two entities into one by summarizing their descriptions and updating the graph index.
+        通过总结描述并更新图索引，将两个实体合并为一个。
         Args:
-            old_entity (Entity): The old entity to merge.
-            new_entity (Entity): The new entity to merge with the old entity.
+            old_entity (Entity): 要合并的旧实体。
+            new_entity (Entity): 要与旧实体合并的新实体。
         Returns:
-            Entity: The merged entity with updated description and source IDs.
+            Entity: 具有更新描述和源 ID 的合并实体。
         """
-        # 1. delete old entity from the vector database
+        # 1. 从向量数据库中删除旧实体
 
         self.delete_entity_from_vdb(old_entity)
 
-        # 2. merge the two entities
+        # 2. 合并这两个实体
         old_node_name = self.graph_index.get_node_name_from_entity(old_entity)
         new_node_name = self.graph_index.get_node_name_from_entity(new_entity)
         if (old_node_name == new_node_name) or merged_to_old_entity:
-            # 2.1 if have the same node name, or merged to old entity,
-            # Directly merged if the entity name and type are the same
-            log.info("merged directly")
+            # 2.1 如果节点名称相同，或者合并到旧实体，
+            # 如果实体名称和类型相同，直接合并
+            log.info("直接合并")
             new_description = (
                 old_entity.description + self._DESCRIPTION_SEP_ + new_entity.description
             )
@@ -161,8 +160,8 @@ class KGRefiner:
                 source_ids=set(old_entity.source_ids).union(new_entity.source_ids),
             )
         else:
-            # 2.2 if have different node name, use LLM to create new entity
-            log.info("merged by LLM summarization")
+            # 2.2 如果节点名称不同，使用 LLM 创建新实体
+            log.info("通过 LLM 摘要合并")
             old_entity_dict = old_entity.model_dump(exclude={"source_ids"})
             old_entity_dict["description"] = truncate_description(
                 old_entity_dict["description"], max_words=200
@@ -202,31 +201,31 @@ class KGRefiner:
                 source_ids=set(old_entity.source_ids).union(new_entity.source_ids),
             )
 
-            # 2.3 If the llm generated merged entity is another entity (entityC) in the graph,
-            # merged entity_c to merged_entity and then update the graph index.
-            # delete entity_c from the vdb
+            # 2.3 如果 LLM 生成的合并实体是图中的另一个实体（实体 C），
+            # 将实体 C 合并到 merged_entity，然后更新图索引。
+            # 从 vdb 中删除实体 C
 
             merged_node_name = self.graph_index.get_node_name_from_entity(merged_entity)
             if (
                 merged_node_name != old_node_name
                 and merged_node_name in self.graph_index.get_all_nodes()
             ):
-                # If the merged entity is another entity (entityC) in the graph,
-                # merge entityC to old entity and then update the graph index.
+                # 如果合并实体是图中的另一个实体（实体 C），
+                # 将实体 C 合并到旧实体，然后更新图索引。
                 entity_c = self.graph_index.get_entity_by_node_name(merged_node_name)
 
                 log.info(
-                    f"Entity '{merged_node_name}' already exists in the graph. "
-                    "Merging it with the old entity.\n"
+                    f"实体 '{merged_node_name}' 已存在于图中。"
+                    "正在将其与旧实体合并。\n"
                 )
                 log.info(
-                    f"Old entity: {old_entity.entity_name} ({old_entity.entity_type}), \n"
-                    f"New entity: {new_entity.entity_name} ({new_entity.entity_type}), \n"
-                    f"Entity C: {entity_c.entity_name} ({entity_c.entity_type})"
+                    f"旧实体: {old_entity.entity_name} ({old_entity.entity_type}), \n"
+                    f"新实体: {new_entity.entity_name} ({new_entity.entity_type}), \n"
+                    f"实体 C: {entity_c.entity_name} ({entity_c.entity_type})"
                 )
                 self.delete_entity_from_vdb(entity_c)
 
-                # Merge entityC to old_entity
+                # 将实体 C 合并到 old_entity
                 self.graph_index.update_entity(
                     old_entity_name=entity_c.entity_name,
                     old_entity_type=entity_c.entity_type,
@@ -238,10 +237,10 @@ class KGRefiner:
                 merged_entity.source_ids = set(merged_entity.source_ids).union(
                     entity_c.source_ids
                 )
-                # since entity_c is the same as merged_entity, no need to update alias map
+                # 由于实体 C 与 merged_entity 相同，无需更新别名映射
 
-        # 3. update the graph index with the merged entity
-        # merge old_entity to merged_entity
+        # 3. 使用合并后的实体更新图索引
+        # 将 old_entity 合并到 merged_entity
         self.graph_index.update_entity(
             old_entity_name=old_entity.entity_name,
             old_entity_type=old_entity.entity_type,
@@ -249,10 +248,10 @@ class KGRefiner:
         )
 
         log.info(
-            f"Merged entity '{old_entity.entity_name}' with '{new_entity.entity_name}'. \n"
-            f"Old entity type: '{old_entity.entity_type}', \n"
-            f"New entity name: '{merged_entity.entity_name}', \n"
-            f"New entity type: '{merged_entity.entity_type}', \n"
+            f"已将实体 '{old_entity.entity_name}' 与 '{new_entity.entity_name}' 合并。\n"
+            f"旧实体类型: '{old_entity.entity_type}', \n"
+            f"新实体名称: '{merged_entity.entity_name}', \n"
+            f"新实体类型: '{merged_entity.entity_type}', \n"
         )
 
         # Update the entity alias map
@@ -270,20 +269,20 @@ class KGRefiner:
         self, entities: List[Entity], relationships: List[Relationship], source_id: int
     ) -> None:
         """
-        Merges entities if they have the same entity name and updates relationships accordingly.
+        如果实体具有相同的实体名称，则合并实体并相应地更新关系。
         Args:
-            entities (List[Entity]): List of entities to merge.
-            relationships (List[Relationship]): List of relationships to update.
-            source_id (int): The source ID of this extracted Sub KG.
+            entities (List[Entity]): 要合并的实体列表。
+            relationships (List[Relationship]): 要更新的关系列表。
+            source_id (int): 此提取的子 KG 的源 ID。
         """
 
-        # Create a map from original entity name to final entity  (if merged)
+        # 创建从原始实体名称到最终实体（如果已合并）的映射
         entity_map: dict[str, str] = {}
         add_entity_list = []
         for entity in entities:
             entity_node_name = self.graph_index.get_node_name_from_entity(entity=entity)
-            # If the entity is not in the graph index, add it
-            # Otherwise, merge it with the existing entity
+            # 如果实体不在图索引中，则添加它
+            # 否则，将其与现有实体合并
             if entity_node_name not in self.graph_index.get_all_nodes():
                 self.graph_index.add_and_link(
                     tree_node_id=source_id, entities=entity
@@ -291,7 +290,7 @@ class KGRefiner:
                 entity_map[entity.entity_name] = entity
                 add_entity_list.append(entity)
             else:
-                # Merge with existing entity
+                # 与现有实体合并
                 existing_entity = self.graph_index.get_entity(
                     entity.entity_name, entity.entity_type
                 )
@@ -299,10 +298,10 @@ class KGRefiner:
                 entity_map[existing_entity.entity_name] = merged_entity
                 add_entity_list.append(merged_entity)
 
-        # Add the new entities to the vector database
+        # 将新实体添加到向量数据库
         self.add_entities_to_vdb(add_entity_list)
 
-        # Update relationships
+        # 更新关系
         for rel in relationships:
             if rel.src_entity_name in entity_map:
                 rel.src_entity_name = entity_map[rel.src_entity_name].entity_name
@@ -314,12 +313,12 @@ class KGRefiner:
 
     def get_vdb_meta_data(self, entity: Entity) -> dict:
         """
-        Generates metadata for the entity to be stored in the vector database.
+        生成要存储在向量数据库中的实体元数据。
         Args:
-            entity (Entity): The entity to generate metadata for.
+            entity (Entity): 要生成元数据的实体。
         Returns:
-            dict: The metadata dictionary without source_ids.
-            since vdb does not support list type.
+            dict: 不包含 source_ids 的元数据字典。
+            因为 vdb 不支持列表类型。
         """
         return {
             "entity_name": entity.entity_name,
@@ -329,21 +328,21 @@ class KGRefiner:
 
     def add_entities_to_vdb(self, entities: List[Entity]) -> None:
         """
-        Adds a list of entities to the vector database.
+        将实体列表添加到向量数据库。
         Args:
-            entities (List[Entity]): The list of entities to add to the vector database.
+            entities (List[Entity]): 要添加到向量数据库的实体列表。
         """
         if not entities:
             return
 
-        # deduplicated entities
+        # 去重实体
         entity_map = {}
         for entity in entities:
             node_name = self.graph_index.get_node_name_from_entity(entity)
             if node_name not in entity_map:
                 entity_map[node_name] = entity
             else:
-                # If the entity already exists, select longer description
+                # 如果实体已存在，选择较长的描述
                 existing_entity = entity_map[node_name]
                 if len(entity.description) > len(existing_entity.description):
                     existing_entity.description = entity.description
@@ -356,8 +355,8 @@ class KGRefiner:
             node_name = self.graph_index.get_node_name_from_entity(ent)
             if node_name in self.entity_to_vdb_id:
                 log.info(
-                    f"Entity '{node_name}' already exists in the vector database."
-                    "Skipping adding it again."
+                    f"实体 '{node_name}' 已存在于向量数据库中。"
+                    "跳过再次添加。"
                 )
                 continue
             embed_texts.append(node_name)
@@ -369,52 +368,51 @@ class KGRefiner:
         for embed_text, vdbid in zip(embed_texts, vdbids):
             if embed_text in self.entity_to_vdb_id:
                 log.warning(
-                    f"Entity '{embed_text}' already exists in the vector database. "
-                    "Overwriting the existing entry."
+                    f"实体 '{embed_text}' 已存在于向量数据库中。"
+                    "覆盖现有条目。"
                 )
             self.entity_to_vdb_id[embed_text] = vdbid
 
     def delete_entity_from_vdb(self, old_entity: Entity) -> None:
         """
-        Deletes an entity from the vector database.
+        从向量数据库中删除实体。
         Args:
-            entity (Entity): The entity to delete from the vector database.
+            old_entity (Entity): 要从向量数据库中删除的实体。
         """
         embed_text = self.graph_index.get_node_name_from_entity(old_entity)
         vdbid = self.entity_to_vdb_id.get(embed_text, None)
         if vdbid is not None:
             self.vdb.delete_text_by_ids(ids=[vdbid])
             del self.entity_to_vdb_id[embed_text]
-            log.info(f"delete entity {embed_text} from vector database.")
+            log.info(f"从向量数据库中删除实体 {embed_text}。")
         else:
             log.info(
-                f"Entity '{old_entity.entity_name}' with type '{old_entity.entity_type}' "
-                f"not found in the vector database. Cannot delete."
+                f"类型为 '{old_entity.entity_type}' 的实体 '{old_entity.entity_name}' "
+                f"在向量数据库中未找到。无法删除。"
             )
-            log.info("this may cause add duplicate entities later.")
+            log.info("这可能会导致稍后添加重复的实体。")
 
     def search_similar_entities(
         self, entity: Entity, topk: int = 10, distance_threshold=0.2, mink=1, g=0.6
     ) -> List[Entity]:
         """
-        Searches for similar entities in the vector database based on the entity's text information.
-        This method is the core method for entity resolution.
-        1. First retrieval topk Entities from the vector database.
-        2. use the reranker to score these Entities
-        3. Gradient-based similar Entities selection.
-        4. 1) If all the Entities are not similar enough (With low score), return empty list.
-        2) If there are some similar Entities, return the gradient-based truncated list (one or more).
-        3) If all Entities are selected, return empty list. This means all Entities are similar enough.
+        根据实体的文本信息在向量数据库中搜索相似实体。
+        这是实体解析的核心方法。
+        1. 首先从向量数据库中检索前 k 个实体。
+        2. 使用 reranker 对这些实体进行评分。
+        3. 基于梯度的相似实体选择。
+        4. 1) 如果所有实体都不够相似（分数低），返回空列表。
+        2) 如果有一些相似实体，返回基于梯度的截断列表（一个或多个）。
+        3) 如果所有实体都被选中，返回空列表。这意味着所有实体都足够相似。
 
         Args:
-            entity (Entity): The entity to search for similar entities.
-            topk (int): The number of top similar entities to retrieve from the vector database.
-            distance_threshold (float): The maximum distance threshold from the closest entity,
-                below threshold, we consider it may have similar entities.
-            mink (int): The minimum number of entities to select before gradient-based selection.
-            g (float): The gradient factor for selecting additional entities based on their scores.
+            entity (Entity): 要搜索相似实体的实体。
+            topk (int): 从向量数据库中检索的前 k 个相似实体的数量。
+            distance_threshold (float): 距离最近实体的最大距离阈值，低于阈值，我们认为它可能有相似实体。
+            mink (int): 在基于梯度的选择之前选择的最小实体数量。
+            g (float): 基于分数选择额外实体的梯度因子。
         Returns:
-            List[Entity]: A list of similar entities or empty list if none found.
+            List[Entity]: 相似实体列表，如果没有找到则为空列表。
         """
         embed_text = self.graph_index.get_node_name_from_entity(entity)
         similar_entities = self.vdb.search(embed_text, top_k=topk)
@@ -423,8 +421,8 @@ class KGRefiner:
         )
         if min_distance > distance_threshold:
             log.info(
-                f"No similar entities found for '{entity.entity_name}' with type '{entity.entity_type}'. "
-                f"Minimum distance: {min_distance}, threshold: {distance_threshold}."
+                f"未找到 '{entity.entity_name}' ({entity.entity_type}) 的相似实体。"
+                f"最小距离: {min_distance}, 阈值: {distance_threshold}."
             )
             return []
 
@@ -463,16 +461,16 @@ class KGRefiner:
             zip(similar_entities, scores), key=lambda x: x[1], reverse=True
         )
 
-        # 4.1 max score < 0.5 not similar enough, return empty list
+        # 4.1 最大分数 < 0.5 不够相似，返回空列表
         if not ranked_results or ranked_results[0][1] < 0.5:
             return []
 
-        # 4.2 gradient-based selection
-        # add first min_k entities to the selection list
+        # 4.2 基于梯度的选择
+        # 将前 min_k 个实体添加到选择列表
         sel_entities = ranked_results[:mink]
-        score_remain = sel_entities[-1][1]  # the score of the last selected entity
+        score_remain = sel_entities[-1][1]  # 最后一个选定实体的分数
 
-        # add the remaining entities based on the gradient-based selection
+        # 基于梯度选择添加剩余实体
         for ent, score in ranked_results[mink:]:
             if score >= score_remain * g:
                 sel_entities.append((ent, score))
@@ -481,7 +479,7 @@ class KGRefiner:
                 break
 
         if len(sel_entities) == ranked_results:
-            # 4.3 If all entities are selected, return empty list
+            # 4.3 如果所有实体都被选中，返回空列表
             return []
 
         res_entities = []
@@ -494,9 +492,9 @@ class KGRefiner:
     def _prepare_selection_input(
         self, new_entity: Entity, similar_entities: List[Entity]
     ) -> str:
-        """Formats the entities into the JSON structure required by the prompt."""
+        """将实体格式化为提示所需的 JSON 结构。"""
 
-        # Give each similar entity a temporary ID (index)
+        # 为每个相似实体赋予一个临时 ID（索引）
         candidates_with_ids = []
         for i, entity in enumerate(similar_entities):
             entity_dict = entity.model_dump(exclude={"source_ids"})
@@ -517,65 +515,66 @@ class KGRefiner:
     def er_selection_by_llm(
         self, new_entity: Entity, similar_entities: List[Entity]
     ) -> Optional[Entity]:
-        # 1. Prepare the input for the LLM
+        # 1. 准备 LLM 的输入
         input_json_str = self._prepare_selection_input(new_entity, similar_entities)
         prompt = ENTITY_RESOLUATION_PROMPT.format(input_json=input_json_str)
 
-        # 2. Call the LLM
+        # 2. 调用 LLM
         try:
             res: ERExtractSel = self.llm.get_json_completion(
                 prompt=prompt, schema=ERExtractSel
             )
         except Exception as e:
-            log.error(f"LLM call failed: {e}")
+            log.error(f"LLM 调用失败: {e}")
             return None
 
-        # 3. Parse the LLM response
+        # 3. 解析 LLM 响应
         select_id = res.select_id
 
-        # 4. Return the result
+        # 4. 返回结果
         if select_id == -1:
             log.info(
-                f"LLM did not select any similar entity for the entity:\n {new_entity.entity_name} "
+                f"LLM 没有为实体选择任何相似实体:\n {new_entity.entity_name} "
             )
-            log.info(f"Reason:\n {res.explanation}")
+            log.info(f"原因:\n {res.explanation}")
             return None
 
         if 0 <= select_id < len(similar_entities):
-            # Log the selection and reason
+            # 记录选择和原因
             log.info(
-                f"LLM selected entity ID: {select_id}, " f"Reason: {res.explanation}"
+                f"LLM 选择的实体 ID: {select_id}, " f"原因: {res.explanation}"
             )
-            # Log the new entity and the selected similar entity
-            log.info("New Entity Info:")
+            # 记录新实体和选择的相似实体
+            log.info("新实体信息:")
             log.info(
-                f"Entity Name: {new_entity.entity_name}, Entity Type: {new_entity.entity_type}"
+                f"实体名称: {new_entity.entity_name}, 实体类型: {new_entity.entity_type}"
             )
-            log.info(f"LLM selected Entity Info:")
+            log.info(f"LLM 选择的实体信息:")
             log.info(
-                f"Entity Name: {similar_entities[select_id].entity_name}, Entity Type: {similar_entities[select_id].entity_type}"
+                f"实体名称: {similar_entities[select_id].entity_name}, 实体类型: {similar_entities[select_id].entity_type}"
             )
 
             return similar_entities[select_id]
         else:
-            print(f"Warning: LLM returned an out-of-bounds ID: {select_id}")
+            print(f"警告: LLM 返回了越界的 ID: {select_id}")
             return None
 
+    @trace_execution
     def entity_resolution(self, new_entity: Entity) -> Entity:
         """
-        Resolves the new entity by comparing it with similar entities.
-        Merge the new entity with the most similar one if they are true duplicated entity.
+        通过与相似实体比较来解析新实体。
+        如果它们是真正的重复实体，则将新实体与最相似的实体合并。
 
         Args:
-            new_entity (Entity): The new entity to resolve.
+            new_entity (Entity): 要解析的新实体。
         Returns:
-            Entity: The resolved entity, which may be a merged entity or the new entity itself.
+            Entity: 解析后的实体，可能是合并后的实体或新实体本身。
         """
 
-        # 1.1 the same entity name and entity type, merge them directly
+        # 1.1 实体名称和类型相同，直接合并
         node_name = self.graph_index.get_node_name_from_entity(entity=new_entity)
         if node_name in self.graph_index.get_all_nodes():
-            # If the entity already exists in the graph index with the same type, merge them
+            # 如果实体已存在于图索引中且类型相同，则合并它们
             existing_entity = self.graph_index.get_entity(
                 new_entity.entity_name, new_entity.entity_type
             )
@@ -583,14 +582,14 @@ class KGRefiner:
             merged_entity = self.entity_merge(existing_entity, new_entity)
             return merged_entity
 
-        # 1.2 If the entity have a same name with existing entity, but merged before.
-        # Merged them directly
+        # 1.2 如果实体与现有实体名称相同，但之前已合并。
+        # 直接合并它们
         if node_name in self.entity_alias_map.keys():
             latest_entity_name = self.get_latest_entity_name(node_name=node_name)
             log.info(
-                f"Entity '{new_entity.entity_name}' with type '{new_entity.entity_type}' "
-                f"has been merged before. Merging with the existing entity."
-                f"Latest node: {latest_entity_name}"
+                f"类型为 '{new_entity.entity_type}' 的实体 '{new_entity.entity_name}' "
+                f"之前已被合并。正在与现有实体合并。"
+                f"最新节点: {latest_entity_name}"
             )
             existing_entity = self.graph_index.get_entity_by_node_name(
                 latest_entity_name
@@ -602,63 +601,65 @@ class KGRefiner:
 
             return merged_entity
 
-        # 2. search similar entities in the vector database
+        # 2. 在向量数据库中搜索相似实体
         similar_entities = self.search_similar_entities(new_entity)
         if len(new_entity.source_ids) != 1:
             raise ValueError(
-                f"Expected exactly one source_id, but found {len(new_entity.source_ids)}."
+                f"预期只有一个 source_id，但发现了 {len(new_entity.source_ids)} 个。"
             )
         
         source_id = next(iter(new_entity.source_ids))
         
         if len(similar_entities) == 0:
-            # 2.1 No similar entities found, add the new entity directly
+            # 2.1 未找到相似实体，直接添加新实体
             self.graph_index.add_and_link(
                 tree_node_id=source_id, entities=new_entity
             )
             return new_entity
 
-        # 2.2 If similar entities are found, use the LLM to determine if exist one of them is the same entity as the new one.
+        # 2.2 如果找到相似实体，使用 LLM 判断其中是否存在与新实体相同的实体。
         sel_existing_entity = self.er_selection_by_llm(
             new_entity=new_entity, similar_entities=similar_entities
         )
         if sel_existing_entity is None:
-            # If no similar entity is selected, add the new entity directly
+            # 如果没有选择相似实体，直接添加新实体
             self.graph_index.add_and_link(
                 tree_node_id=source_id, entities=new_entity
             )
             return new_entity
         else:
-            # If a similar entity is selected, merge the new entity with it
+            # 如果选择了相似实体，将新实体与其合并
             merged_entity: Entity = self.entity_merge(sel_existing_entity, new_entity)
 
             return merged_entity
 
+    @trace_execution
     def process_unknown_entities(
         self, unknown_entities: List[Entity], entity_map: dict[str, Entity]
     ) -> dict[str, Entity]:
-        log.info(f"Processing unknown entities, length: {len(unknown_entities)}")
+        log.info(f"正在处理未知实体，长度: {len(unknown_entities)}")
         if unknown_entities:
             unknown_vdb_entities = []
             for entity in unknown_entities:
-                # Perform entity resolution for unknown entities
+                # 对未知实体执行实体解析
                 old_entity_name = entity.entity_name
                 new_entity: Entity = self.entity_resolution(entity)
                 entity_map[old_entity_name] = new_entity
                 unknown_vdb_entities.append(new_entity)
-            # Add the resolved unknown entities to the vector database
+            # 将解析后的未知实体添加到向量数据库
             self.add_entities_to_vdb(unknown_vdb_entities)
         return entity_map
 
+    @trace_execution
     def process_relationships(
         self, relationships: List[Relationship], entity_map: dict[str, Entity]
     ) -> None:
         """
-        Processes relationships by updating source and target entity names based on the entity map.
-        And adds them to the graph index.
+        通过基于实体映射更新源和目标实体名称来处理关系。
+        并将它们添加到图索引中。
         Args:
-            relationships (List[Relationship]): List of relationships to process.
-            entity_map (dict[str, Entity]): Map of old entity names to new entities.
+            relationships (List[Relationship]): 要处理的关系列表。
+            entity_map (dict[str, Entity]): 旧实体名称到新实体的映射。
         """
         for k, v in entity_map.items():
             node_name = self.graph_index.get_node_name_from_entity(v)
@@ -666,8 +667,8 @@ class KGRefiner:
                 new_node_name = self.get_latest_entity_name(node_name=node_name)
                 entity_map[k] = self.graph_index.get_entity_by_node_name(new_node_name)
                 log.info(
-                    f"Entity '{v.entity_name}' with type '{v.entity_type}' not found in the graph index. "
-                    f"Using the latest entity '{new_node_name}' instead."
+                    f"在图索引中未找到类型为 '{v.entity_type}' 的实体 '{v.entity_name}'。"
+                    f"改用最新实体 '{new_node_name}'。"
                 )
 
         for rel in relationships:
@@ -683,8 +684,8 @@ class KGRefiner:
                 tgt_type = entity_map[old_tgt_name].entity_type
             if src_type is None or tgt_type is None:
                 log.info(
-                    f"Relationship {rel} has missing entity types. "
-                    "Skipping this relationship."
+                    f"关系 {rel} 缺少实体类型。"
+                    "跳过此关系。"
                 )
                 continue
             else:
@@ -697,13 +698,13 @@ class KGRefiner:
         num_node_vdb = self.vdb.collection.count()
         if num_node_graph != num_node_vdb:
             log.warning(
-                f"Number of nodes in the graph index ({num_node_graph}) "
-                f"does not match the number of nodes in the vector database ({num_node_vdb})."
+                f"图索引中的节点数 ({num_node_graph}) "
+                f"与向量数据库中的节点数 ({num_node_vdb}) 不匹配。"
             )
             print("warning here")
         else:
             log.info(
-                f"graph and vdb contain the same number of nodes: {num_node_graph}."
+                f"图和向量数据库包含相同数量的节点: {num_node_graph}。"
             )
 
     @trace_execution
@@ -711,90 +712,90 @@ class KGRefiner:
         self, entities: List[Entity], relationships: List[Relationship], source_id: int
     ) -> None:
         """
-        Refines the knowledge graph by advanced entity resolution and relationship updates.
+        通过高级实体解析和关系更新来优化知识图谱。
         Args:
-            entities (List[Entity]): List of entities to refine.
-            relationships (List[Relationship]): List of relationships to update.
-            source_id (int): The source ID of this extracted tree node.
+            entities (List[Entity]): 要优化的实体列表。
+            relationships (List[Relationship]): 要更新的关系列表。
+            source_id (int): 此提取的树节点的源 ID。
         """
         log.info(
             f"--------------------\n"
-            f"Starting advanced knowledge graph refinement for source ID: {source_id}\n"
-            f"with {len(entities)} entities and {len(relationships)} relationships."
+            f"开始高级知识图谱优化，源 ID: {source_id}\n"
+            f"包含 {len(entities)} 个实体和 {len(relationships)} 个关系。"
         )
 
-        # map the old entity name to the new entity name after resolution
+        # 映射旧实体名称到解析后的新实体名称
         entity_map: dict[str, Entity] = {}
 
-        # 1. for the first time to refine the KG, the vector database and graph index are initialized.
+        # 1. 第一次优化 KG 时，向量数据库和图索引已初始化。
         if self.vdb.collection.count() <= 10:
-            # If the vector database is empty or has very few entities, we can skip entity resolution.
-            # Not entity resolution for normal entities.
+            # 如果向量数据库为空或实体很少，我们可以跳过实体解析。
+            # 对普通实体不进行实体解析。
 
             add_entities = []
             unknown_entities = []
             for entity in entities:
                 if entity.entity_type != "UNKNOWN":
-                    # For normal entities, we can add them directly to the vector database and graph index.
+                    # 对于普通实体，我们可以直接将它们添加到向量数据库和图索引。
                     add_entities.append(entity)
                     entity_map[entity.entity_name] = entity
                 else:
                     unknown_entities.append(entity)
 
-            # add to vdb and graph
+            # 添加到向量数据库和图
             self.add_entities_to_vdb(entities)
             self.graph_index.add_and_link(
                 tree_node_id=source_id, entities=entities
             )
 
-            # For unknown entities, we need to resoluation them
+            # 对于未知实体，我们需要解析它们
             entity_map = self.process_unknown_entities(
                 unknown_entities=unknown_entities, entity_map=entity_map
             )
 
-            # Update relationships based on the entity map
+            # 基于实体映射更新关系
             self.process_relationships(relationships, entity_map)
         else:
-            # 2. For each entity, perform resolution and update the graph index.
+            # 2. 对于每个实体，执行解析并更新图索引。
             new_entity_list = []
             unknown_entities = []
             for entity in entities:
                 if entity.entity_type == "UNKNOWN":
-                    # 2.1 for unknown entity type, perform resolution
-                    # For unknown entities, we need to resolve them later.
+                    # 2.1 对于未知实体类型，执行解析
+                    # 对于未知实体，我们需要稍后解析它们。
                     unknown_entities.append(entity)
                     continue
 
-                # 2.2 for other entity types, perform resolution
+                # 2.2 对于其他实体类型，执行解析
                 old_entity_name = entity.entity_name
                 new_entity: Entity = self.entity_resolution(entity)
                 entity_map[old_entity_name] = new_entity
                 new_entity_list.append(new_entity)
 
-            # 2.3 Add the resolved entities to the vector database
-            # Since the ER should not be performed within the same chunk
-            # The new entities should not be in the vector database yet.
+            # 2.3 将解析后的实体添加到向量数据库
+            # 由于 ER 不应在同一个块内执行
+            # 新实体此时不应在向量数据库中。
             self.add_entities_to_vdb(new_entity_list)
 
-            # 2.4 Address the unknown entities
+            # 2.4 处理未知实体
             entity_map = self.process_unknown_entities(
                 unknown_entities=unknown_entities, entity_map=entity_map
             )
 
-            # 3. Update relationships based on the resolved entities
+            # 3. 基于解析后的实体更新关系
             self.process_relationships(
                 relationships=relationships, entity_map=entity_map
             )
 
-        # for debug check the number of nodes in graph and vdb
+        # 调试检查图和向量数据库中的节点数
         self._debug_check_num()
 
     def refine_entity_description(self, entity: Entity) -> Entity:
-        # use LLM to refine the entity description
-        # update the graph
-        # delete the old entity from the vector database, insert new one later
+        # 使用 LLM 优化实体描述
+        # 更新图
+        # 从向量数据库中删除旧实体，稍后插入新实体
         log.info(
-            f"Refining entity description for {entity.entity_name} of type {entity.entity_type}."
+            f"正在优化类型为 {entity.entity_type} 的实体 {entity.entity_name} 的描述。"
         )
         json_entity = entity.model_dump(exclude={"source_ids"})
         prompt = DESCRIPTION_SYNTHESIS.format(
@@ -806,27 +807,27 @@ class KGRefiner:
             )
             if not refined_description:
                 log.warning(
-                    f"LLM returned an empty description for entity {entity.entity_name}."
+                    f"LLM 返回了实体 {entity.entity_name} 的空描述。"
                 )
                 return entity
             else:
-                # Update the entity description
+                # 更新实体描述
                 entity.description = refined_description
-                # Update the graph index with the new description
+                # 使用新描述更新图索引
                 self.graph_index.update_entity(
                     old_entity_name=entity.entity_name,
                     old_entity_type=entity.entity_type,
                     new_entity=entity,
                 )
-                # Delete the old entity from the vector database
+                # 从向量数据库中删除旧实体
                 self.delete_entity_from_vdb(entity)
                 log.info(
-                    f"Entity {entity.entity_name} description refined successfully."
+                    f"实体 {entity.entity_name} 描述优化成功。"
                 )
                 return entity
         except Exception as e:
             log.error(
-                f"Failed to refine entity description for {entity.entity_name}: {e}"
+                f"优化实体 {entity.entity_name} 的描述失败: {e}"
             )
             return entity
 
@@ -838,24 +839,24 @@ class KGRefiner:
             latest_entity_name = self.get_latest_entity_name(node_name)
             if latest_entity_name not in merged_entity_set:
                 merged_entity_set.add(latest_entity_name)
-                # Get the entity from the graph index
+                # 从图索引中获取实体
                 entity = self.graph_index.get_entity_by_node_name(latest_entity_name)
 
-                # check the sep in the description
+                # 检查描述中的分隔符
                 if self._DESCRIPTION_SEP_ in entity.description:
-                    # If the description contains the separator, we need to refine it
+                    # 如果描述包含分隔符，我们需要优化它
                     need_refine_entities.append(entity)
                 else:
-                    # If the description does not contain the separator, we can skip it
+                    # 如果描述不包含分隔符，我们可以跳过它
                     continue
 
         if not need_refine_entities:
-            log.info("No entities need to be refined.")
+            log.info("没有实体需要优化。")
             return
 
-        log.info(f"Found {len(need_refine_entities)} entities that need to be refined.")
+        log.info(f"发现 {len(need_refine_entities)} 个需要优化的实体。")
 
-        # parallel processing of entity refinement
+        # 并行处理实体优化
         add_entities = []
         with ThreadPoolExecutor(max_workers=8) as executor:
             futures = {
@@ -868,18 +869,18 @@ class KGRefiner:
                     refined_entity = future.result()
                     add_entities.append(refined_entity)
                 except Exception as e:
-                    log.error(f"Failed to refine entity {entity.entity_name}: {e}")
+                    log.error(f"优化实体 {entity.entity_name} 失败: {e}")
                     add_entities.append(entity)
 
-        # Add the refined entities to the vector database
+        # 将优化后的实体添加到向量数据库
         self.add_entities_to_vdb(add_entities)
         log.info(
-            f"Refined {len(add_entities)} entities and added them to the vector database."
+            f"优化了 {len(add_entities)} 个实体并将它们添加到向量数据库。"
         )
         self._debug_check_num()
         return
 
     @trace_execution
     def refine_relation(self):
-        # delete self loop in graph index
+        # 删除图索引中的自环
         self.graph_index.remove_self_loops()

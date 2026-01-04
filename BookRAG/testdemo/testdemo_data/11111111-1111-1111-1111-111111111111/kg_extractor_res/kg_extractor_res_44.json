@@ -2,40 +2,40 @@
   "entities": [
     {
       "entity_name": "han zhonghe",
-      "entity_type": "PERSON",
-      "description": "han zhonghe is a person born in 1993 who is an associate researcher with research interests in deep learning  natural language processing  and large language models",
+      "entity_type": "person",
+      "description": "a person born in 1993 who is an associate researcher with interests in deep learning  natural language processing  and large language models",
       "source_ids": [
         44
       ]
     },
     {
       "entity_name": "1993",
-      "entity_type": "DATE",
-      "description": "1993 is the year in which han zhonghe was born",
+      "entity_type": "date",
+      "description": "the year in which han zhonghe was born",
       "source_ids": [
         44
       ]
     },
     {
       "entity_name": "deep learning",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "deep learning is one of the research interests of han zhonghe",
+      "entity_type": "research field",
+      "description": "a research field mentioned as an interest of han zhonghe",
       "source_ids": [
         44
       ]
     },
     {
       "entity_name": "natural language processing",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "natural language processing is one of the research interests of han zhonghe",
+      "entity_type": "research field",
+      "description": "a research field mentioned as an interest of han zhonghe",
       "source_ids": [
         44
       ]
     },
     {
       "entity_name": "large language model",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "large language model is one of the research interests of han zhonghe",
+      "entity_type": "research field",
+      "description": "a research field mentioned as an interest of han zhonghe",
       "source_ids": [
         44
       ]
@@ -46,7 +46,7 @@
       "src_entity_name": "han zhonghe",
       "tgt_entity_name": "1993",
       "relation_name": "",
-      "weight": 9.0,
+      "weight": 10.0,
       "description": "han zhonghe was born in the year 1993",
       "source_ids": [
         44
@@ -57,7 +57,7 @@
       "tgt_entity_name": "deep learning",
       "relation_name": "",
       "weight": 8.0,
-      "description": "han zhonghe has a research interest in deep learning",
+      "description": "deep learning is listed as one of han zhonghe s research interests",
       "source_ids": [
         44
       ]
@@ -67,7 +67,7 @@
       "tgt_entity_name": "natural language processing",
       "relation_name": "",
       "weight": 8.0,
-      "description": "han zhonghe has a research interest in natural language processing",
+      "description": "natural language processing is listed as one of han zhonghe s research interests",
       "source_ids": [
         44
       ]
@@ -77,7 +77,7 @@
       "tgt_entity_name": "large language model",
       "relation_name": "",
       "weight": 8.0,
-      "description": "han zhonghe has a research interest in large language models",
+      "description": "large language model is listed as one of han zhonghe s research interests",
       "source_ids": [
         44
       ]

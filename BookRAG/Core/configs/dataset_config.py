@@ -3,8 +3,8 @@ import yaml
 
 
 class DatasetConfig(BaseModel):
-    dataset_path: str = Field(..., description="Path to the JSON dataset file.")
-    working_dir: str = Field(..., description="The working directory for the project.")
+    dataset_path: str = Field(..., description="JSON 数据集文件的路径。")
+    working_dir: str = Field(..., description="项目的工作目录。")
     dataset_name: str
 
 

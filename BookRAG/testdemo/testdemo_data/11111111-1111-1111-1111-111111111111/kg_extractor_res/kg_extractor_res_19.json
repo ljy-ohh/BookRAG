@@ -2,13 +2,24 @@
   "entities": [
     {
       "entity_name": "2023 cxpt lc 005",
-      "entity_type": "PROJECT",
-      "description": "a project funded by a laboratory",
+      "entity_type": "product",
+      "description": "a project or grant identified by the code  2023 cxpt lc 005",
       "source_ids": [
         19
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "2023 cxpt lc 005",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the laboratory funded the project identified by the code  2023 cxpt lc 005",
+      "source_ids": [
+        19
+      ]
+    }
+  ],
   "node_idx": 19
 }

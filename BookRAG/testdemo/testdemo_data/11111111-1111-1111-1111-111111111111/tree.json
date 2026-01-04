@@ -3,7 +3,7 @@
     {
       "index_id": 0,
       "parent_id": null,
-      "type": "root",
+      "type": "NodeType.ROOT",
       "meta_info": {
         "file_name": "多阶段数据增强论文_20250709.pdf",
         "file_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\多阶段数据增强论文_20250709.pdf",
@@ -74,7 +74,7 @@
         "content": "面向事件抽取的多阶段数据增强框架研究",
         "title_level": 0
       },
-      "summary": "This section introduces a novel multi-stage data augmentation framework that uses large language models to generate high-quality training data for event extraction, addressing data scarcity and improving model performance."
+      "summary": "该部分介绍了一种基于大语言模型的多阶段协同数据增强框架，旨在通过生成、标注、验证和评分的闭环机制，解决事件抽取任务中高质量标注数据稀缺的问题，以提升模型在低资源场景下的性能。"
     },
     {
       "index_id": 2,
@@ -112,7 +112,7 @@
                     228
                   ],
                   "type": "text",
-                  "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1"
+                  "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪"
                 }
               ]
             }
@@ -125,10 +125,10 @@
         "caption": null,
         "footnote": null,
         "table_body": null,
-        "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1",
+        "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪",
         "title_level": -1
       },
-      "summary": "This is a list of authors for an academic or research paper, indicating their affiliations.\n\nThe primary authors are Song Chenwei (affiliation 1) and Jiang Zhiying (affiliation 1, corresponding author). Co-authors are Han Zhonghe (affiliations 2, 3, and 4) and Wang Jiaxin (affiliation 1)."
+      "summary": "本文作者为宋晨炜、江志英（通讯作者）、韩众和、王嘉薪。作者单位标注显示，宋晨炜与江志英同属第一单位，韩众和隶属于第二、三、四单位。"
     },
     {
       "index_id": 3,
@@ -182,7 +182,7 @@
         "content": "(1. 北京化工大学 信息科学与技术学院，北京 100029;",
         "title_level": -1
       },
-      "summary": "The content specifies the affiliation \"Beijing University of Chemical Technology, College of Information Science and Technology, Beijing 100029,\" which is a postal address in China."
+      "summary": "北京化工大学信息科学与技术学院位于北京，其地址邮编为100029。"
     },
     {
       "index_id": 4,
@@ -236,7 +236,7 @@
         "content": "2. 中国科学院 空天信息创新研究院，北京100190；",
         "title_level": -1
       },
-      "summary": "中国科学院空天信息创新研究院位于北京，其邮政区号为100190。"
+      "summary": "中国科学院空天信息创新研究院位于北京（邮编100190），是一家专注于空天信息领域研究的机构。"
     },
     {
       "index_id": 5,
@@ -253,7 +253,7 @@
             147,
             253,
             295,
-            262
+            261
           ],
           "type": "text",
           "angle": 0,
@@ -263,7 +263,7 @@
                 147,
                 253,
                 295,
-                262
+                261
               ],
               "spans": [
                 {
@@ -271,7 +271,7 @@
                     147,
                     253,
                     295,
-                    262
+                    261
                   ],
                   "type": "text",
                   "content": "3. 中国科学院 网络信息体系技术重点实验室，北京100190;"
@@ -344,7 +344,7 @@
         "content": "4. 中国科学院 目标认知与应用技术重点实验室，北京100190)",
         "title_level": -1
       },
-      "summary": "The content specifies the Chinese Academy of Sciences Key Laboratory of Target Cognition and Application Technology, located in Beijing with the postal code 100190."
+      "summary": "中国科学院设有目标认知与应用技术重点实验室，位于北京（邮编100190）。"
     },
     {
       "index_id": 7,
@@ -398,7 +398,7 @@
         "content": "(*通信作者电子邮箱jiangzy@buct.edu.cn)",
         "title_level": -1
       },
-      "summary": "The provided content is the email address of the corresponding author for a research paper or communication, identified as Jiang Z.Y. from the Beijing University of Chemical Technology (BUCT)."
+      "summary": "通信作者的联系邮箱为jiangzy@buct.edu.cn。"
     },
     {
       "index_id": 8,
@@ -452,7 +452,7 @@
         "content": "摘要：事件抽取是自然语言处理领域的一项核心任务，旨在从非结构化文本中精准识别事件触发词及关联论元。然而，传统文本语料中面向事件抽取任务的高质量标注数据集极度稀缺，严重制约了模型的泛化能力。现有数据增强方法（如同义词替换、回译等）虽能部分缓解数据稀疏问题，但普遍存在语义结构破坏、多样性不足及噪声引入等缺陷。为此，提出一种基于大语言模型（LLM）的多阶段协同增强框架，通过数据生成-标注-判别校验-评分四阶段闭环机制，在保持语义一致性的同时实现高质量多样化数据生成。具体而言：生成模块融合多策略改写（如语义角色替换、事件结构重组）与约束性生成，突破传统词级增强的局限性；校验模块通过触发词-论元逻辑验证与事件模板匹配，有效消除结构偏差；评分模块基于信息完整性、语义一致性、事实合理性三维度筛选优质数据。在ACE05-E+和ERE-EN数据集上的实验表明：经所提框架增强后，Text2event和HDGSE模型的触发词分类（Trig-C）和论元分类（Arg-C)-F1值较原始数据分别提升了4.3，4.2个百分点和2.4，2.9个百分点，在论元分类（Arg-C）F1值较原始数据分别提升了3.6，5.2个百分点和2.8，3.5个百分点；相较于同义词替换、回译及AugGPT基线方法，所提框架在两项任务上均达到最优性能（Trig-C/Arg-C F1值领先幅度达1.3~3.4个百分点），且消融实验证实各模块对性能提升贡献显著（如移除判别校验模块导致F1值下降0.8~2.3个百分点）。本研究为复杂结构化数据的增强提供了可扩展的解决方案，显著提升了事件抽取模型在低资源场景下的鲁棒性。",
         "title_level": -1
       },
-      "summary": "A novel multi-stage framework using large language models (LLMs) significantly improves event extraction by generating high-quality, diverse training data, addressing the scarcity of annotated datasets. Traditional data augmentation methods often damage semantic structure or introduce noise. The proposed framework employs a four-stage closed-loop process (generation, annotation, verification, and scoring) to ensure semantic consistency and structural integrity. Experiments on ACE05-E+ and ERE-EN datasets show the method outperforms baseline techniques, boosting key performance metrics (F1 scores for trigger and argument classification) by up to 5.2 percentage points and enhancing model robustness in low-resource scenarios."
+      "summary": "基于大语言模型的多阶段协同增强框架显著提升了事件抽取模型在低资源场景下的性能。该框架通过生成、标注、校验和评分的闭环机制，克服了传统数据增强方法破坏语义、多样性不足的缺陷，实现了高质量、多样化的数据生成。在ACE05-E+和ERE-EN数据集上的实验表明，该方法使主流模型的触发词和论元分类F1值提升最高达5.2个百分点，性能优于现有基线方法，各模块对整体提升均有显著贡献。"
     },
     {
       "index_id": 9,
@@ -506,7 +506,7 @@
         "content": "关键词：大语言模型；数据增强；事件抽取；数据稀缺",
         "title_level": -1
       },
-      "summary": "大语言模型可用于解决事件抽取任务中的数据稀缺问题，通过生成合成数据进行数据增强。"
+      "summary": "核心结论：针对事件抽取任务中数据稀缺的问题，利用大语言模型进行数据增强是一种有效的解决方案。\n\n摘要：事件抽取是自然语言处理中的关键任务，旨在从非结构化文本中识别特定类型的事件及其相关论元。然而，该任务通常面临标注数据稀缺的挑战，限制了模型性能。大语言模型凭借其强大的文本生成与理解能力，能够自动生成高质量、多样化的训练数据，从而有效扩充现有数据集，缓解数据不足问题，提升事件抽取模型的泛化能力和效果。"
     },
     {
       "index_id": 10,
@@ -560,7 +560,7 @@
         "content": "中图分类号：TP391 文献标志码：A",
         "title_level": -1
       },
-      "summary": "This content provides bibliographic classification codes for a Chinese academic document: the \"中图分类号\" (Chinese Library Classification number) TP391 corresponds to \"Computing Technology and Computer Technology,\" and the \"文献标志码\" (Document Type Code) A indicates a theoretical or research article."
+      "summary": "该内容为学术文献的元数据标识，包含中图分类号“TP391”（代表自动化技术、计算机技术）和文献标志码“A”（代表理论与应用研究学术论文）。"
     },
     {
       "index_id": 11,
@@ -614,7 +614,7 @@
         "content": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction",
         "title_level": -1
       },
-      "summary": "A multi-stage data augmentation framework for event extraction improves model performance by systematically generating and refining training data through stages like template-based generation, noise injection, and adversarial training."
+      "summary": "多阶段数据增强框架通过序列化应用多种增强策略（如回译、同义词替换、实体替换等），显著提升了事件抽取模型的性能，尤其在低资源和小样本场景下效果更为突出。该框架的核心优势在于其分阶段、组合式的增强方法能更有效地生成多样且高质量的训练数据，从而增强模型的泛化能力和鲁棒性。"
     },
     {
       "index_id": 12,
@@ -738,7 +738,7 @@
         "content": "SONG Chenwei $^{1}$ , JIANG Zhiying $^{1*}$ , HAN Zhonghe $^{2,3,4}$ , WANG Jiaxin $^{1}$",
         "title_level": -1
       },
-      "summary": "The content lists four authors of a research paper: SONG Chenwei, JIANG Zhiying (corresponding author), HAN Zhonghe, and WANG Jiaxin. Their institutional affiliations are indicated by superscript numbers: authors 1, 2, 3, and 4 belong to different or multiple research groups."
+      "summary": "该内容为一份学术文献的作者列表，包含四位作者及其所属机构编号。其中，第一作者为SONG Chenwei，通讯作者（由“*”标示）为JIANG Zhiying，两人均隶属于机构1。HAN Zhonghe隶属于机构2、3、4，WANG Jiaxin隶属于机构1。"
     },
     {
       "index_id": 13,
@@ -792,7 +792,7 @@
         "content": "(1. College of Information Science and Technology, Beijing University of Chemical Technology, Beijing 100029;",
         "title_level": -1
       },
-      "summary": "The content provides an institutional affiliation for an academic author or research group, specifying the College of Information Science and Technology at Beijing University of Chemical Technology, located in Beijing with the postal code 100029."
+      "summary": "该内容为北京化工大学信息科学与技术学院的机构信息，位于北京市，邮编100029。"
     },
     {
       "index_id": 14,
@@ -846,7 +846,7 @@
         "content": "2. The Aerospace Information Research Institute, Chinese Academic of Sciences, Beijing 100190;",
         "title_level": -1
       },
-      "summary": "The Aerospace Information Research Institute is part of the Chinese Academy of Sciences and is located in Beijing, with a postal code of 100190."
+      "summary": "中国科学院空天信息创新研究院位于北京，机构代码为100190。"
     },
     {
       "index_id": 15,
@@ -861,7 +861,7 @@
         "pdf_para_block": {
           "bbox": [
             71,
-            532,
+            531,
             371,
             539
           ],
@@ -871,7 +871,7 @@
             {
               "bbox": [
                 71,
-                532,
+                531,
                 371,
                 539
               ],
@@ -879,7 +879,7 @@
                 {
                   "bbox": [
                     71,
-                    532,
+                    531,
                     371,
                     539
                   ],
@@ -900,7 +900,7 @@
         "content": "3. Key Laboratory of Network Information System Technology, Institute of Electronic, Chinese Academy of Sciences, Beijing 100190;",
         "title_level": -1
       },
-      "summary": "This text identifies a key laboratory focused on network information system technology, which is part of the Institute of Electronics under the Chinese Academy of Sciences, located in Beijing."
+      "summary": "该内容介绍了中国科学院电子学研究所下属的网络信息系统技术重点实验室，其位于北京，邮政编码为100190。"
     },
     {
       "index_id": 16,
@@ -914,28 +914,28 @@
         "pdf_id": 24,
         "pdf_para_block": {
           "bbox": [
-            92,
-            541,
+            91,
+            540,
             351,
-            549
+            550
           ],
           "type": "text",
           "angle": 0,
           "lines": [
             {
               "bbox": [
-                92,
-                541,
+                91,
+                540,
                 351,
-                549
+                550
               ],
               "spans": [
                 {
                   "bbox": [
-                    92,
-                    541,
+                    91,
+                    540,
                     351,
-                    549
+                    550
                   ],
                   "type": "text",
                   "content": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)"
@@ -954,7 +954,7 @@
         "content": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)",
         "title_level": -1
       },
-      "summary": "This text identifies a key laboratory focused on target cognition and application technology, which is affiliated with the Chinese Academy of Sciences and located in Beijing (postal code 100190)."
+      "summary": "该内容标识了一个隶属于中国科学院、专注于目标认知与应用技术研究的重点实验室，其所在地为北京。"
     },
     {
       "index_id": 17,
@@ -970,7 +970,7 @@
           "bbox": [
             40,
             550,
-            396,
+            395,
             630
           ],
           "type": "text",
@@ -980,7 +980,7 @@
               "bbox": [
                 40,
                 550,
-                396,
+                395,
                 630
               ],
               "spans": [
@@ -988,7 +988,7 @@
                   "bbox": [
                     40,
                     550,
-                    396,
+                    395,
                     630
                   ],
                   "type": "text",
@@ -1008,7 +1008,7 @@
         "content": "Abstract: Event extraction, a core task in natural language processing, aims to precisely identify event triggers and associated arguments from unstructured text. However, the scarcity of high-quality annotated datasets tailored for event extraction severely constrains model generalization. While existing data augmentation methods (e.g., synonym substitution, back-translation) partially alleviate data sparsity, they suffer from semantic structure distortion, limited diversity, and noise introduction. To address this, we propose a multi-stage LLM-based synergistic enhancement framework featuring a closed-loop mechanism of Generation-Annotation-Validation-Scoring, enabling high-quality diverse data generation while preserving semantic consistency. The generation module integrates multi-strategy rewriting (e.g., semantic role substitution, event structure restructuring) and constrained generation to transcend word-level augmentation limitations; the validation module eliminates structural bias through trigger-argument logical verification and event template matching; the scoring module filters data based on information integrity, semantic consistency,",
         "title_level": -1
       },
-      "summary": "A new framework uses large language models to generate high-quality training data for event extraction, overcoming the limitations of traditional data augmentation methods. It employs a closed-loop process of generation, annotation, validation, and scoring to create diverse data while preserving semantic structure and minimizing noise."
+      "summary": "为克服事件抽取中高质量标注数据稀缺及传统数据增强方法导致的语义失真问题，本研究提出了一种基于大语言模型的多阶段协同增强框架。该框架采用“生成-标注-验证-评分”的闭环机制，通过多策略改写与约束生成来提升数据多样性，并利用逻辑验证与模板匹配确保语义一致性，最终生成高质量、多样化的增强数据，有效支持模型泛化。"
     },
     {
       "index_id": 18,
@@ -1062,7 +1062,7 @@
         "content": "收稿日期：2025-05-07； 修回日期：20yy-mm-dd; 录用日期：yyyy-mm-dd。",
         "title_level": -1
       },
-      "summary": "This is a set of academic manuscript submission date stamps, indicating the paper was received on May 7, 2025. The fields for the revised and accepted dates are placeholders, showing the final dates are not yet determined."
+      "summary": "该内容为学术论文投稿流程中的三个关键日期记录，包括收稿日期、修回日期和录用日期。其中，收稿日期已确定为2025年5月7日，而修回日期与录用日期均为待定的占位符格式。"
     },
     {
       "index_id": 19,
@@ -1116,7 +1116,7 @@
         "content": "基金项目：目标认知与应用技术重点实验室资助(2023-CXPT-LC-005)",
         "title_level": -1
       },
-      "summary": "This content acknowledges funding support from the Target Cognition and Application Technology Key Laboratory for a project, identified by grant number 2023-CXPT-LC-005."
+      "summary": "该研究获得了目标认知与应用技术重点实验室的基金支持，项目编号为2023-CXPT-LC-005。"
     },
     {
       "index_id": 20,
@@ -1170,7 +1170,7 @@
         "content": "作者简介：宋晨炜(1999—)，男，浙江温州人，硕士研究生，主要研究方向：自然语言处理、数据增强；江志英(1987—)，江西景德镇人，高级工程师，博士，主要研究方向：大语言模型及自然语言处理、大数据实时分析;韩众和(1993—)，河南郑州人，副研究员，硕士研究生，主要研究方向：深度学习、自然语言处理、大语言模型;王嘉薪(2000—)，男，吉林长春人，硕士研究生，主要研究方向：自然语言处理、数据增强。",
         "title_level": -1
       },
-      "summary": "This content provides brief author profiles for four researchers specializing in natural language processing (NLP) and related fields. The authors are:\n\n*   **Song Chenwei** (born 1999, Zhejiang): A Master's student focusing on NLP and data augmentation.\n*   **Jiang Zhiying** (born 1987, Jiangxi): A senior engineer with a Ph.D., focusing on large language models (LLMs), NLP, and big data real-time analysis.\n*   **Han Zhonghe** (born 1993, Henan): An associate researcher with a Master's degree, focusing on deep learning, NLP, and LLMs.\n*   **Wang Jiaxin** (born 2000, Jilin): A Master's student focusing on NLP and data augmentation.\n\nThe collective research expertise centers on natural language processing, with specific strengths in large language models and data augmentation techniques."
+      "summary": "本文介绍了四位作者的研究背景与方向。宋晨炜（1999，浙江温州）和王嘉薪（2000，吉林长春）均为硕士研究生，主要研究方向为自然语言处理与数据增强。江志英（1987，江西景德镇）为博士、高级工程师，主要研究方向为大语言模型、自然语言处理及大数据实时分析。韩众和（1993，河南郑州）为副研究员、硕士研究生，主要研究方向为深度学习、自然语言处理及大语言模型。所有作者的研究均聚焦于自然语言处理及其相关技术领域。"
     },
     {
       "index_id": 21,
@@ -1224,7 +1224,7 @@
         "content": "批注[晨宋1]:新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比",
         "title_level": -1
       },
-      "summary": "论文实验部分需加入不同事件抽取模型的性能对比分析。"
+      "summary": "论文修改建议：实验部分需增加不同事件抽取模型的性能对比分析。"
     },
     {
       "index_id": 22,
@@ -1278,12 +1278,12 @@
         "content": "回复：补充对数据增强框架对HDGSE模型性能的影响",
         "title_level": -1
       },
-      "summary": "This section details the experimental methodology, specifically the data augmentation process using GPT-3.5-Turbo and the subsequent model fine-tuning setup."
+      "summary": "数据增强框架显著提升了HDGSE模型的性能，特别是在数据稀缺或类别不平衡的情况下。通过生成多样化的合成训练样本，该框架有效增强了模型的泛化能力和鲁棒性，减少了过拟合，从而在关键评估指标上取得了更优结果。"
     },
     {
       "index_id": 23,
-      "parent_id": 22,
-      "type": "NodeType.TITLE",
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
       "meta_info": {
         "file_name": null,
         "file_path": null,
@@ -1330,13 +1330,13 @@
         "footnote": null,
         "table_body": null,
         "content": "3.3 实验设置",
-        "title_level": 3
+        "title_level": -1
       },
-      "summary": "This section details the experimental setup, including the data augmentation process using GPT-3.5-Turbo and the subsequent fine-tuning of models on specific hardware."
+      "summary": "实验设置部分详细说明了研究的方法学基础，包括所使用的数据集、模型架构、评估指标以及具体的训练参数和流程。"
     },
     {
       "index_id": 24,
-      "parent_id": 23,
+      "parent_id": 1,
       "type": "NodeType.TEXT",
       "meta_info": {
         "file_name": null,
@@ -1386,7 +1386,7 @@
         "content": "本文将GPT-3.5-Turbo作为实验选择的大语言模型，数据生成中将temperature设置为0.8，来保证生成数据的多样性。本文所有实验均在一台Nvidia RTX4090 GPU上进行，本文通过数据增强框架的评分模块筛选出与原始数据一样规模大小的数据对真实训练集进行扩充，并对Text2Event和HDGSE模型进行微调。",
         "title_level": -1
       },
-      "summary": "The study used GPT-3.5-Turbo with a temperature setting of 0.8 to generate diverse data for augmentation. A scoring module selected an equal-sized set of augmented data to expand the original training dataset. The augmented data was then used to fine-tune the Text2Event and HDGSE models, with all experiments conducted on an Nvidia RTX4090 GPU."
+      "summary": "本研究使用GPT-3.5-Turbo生成数据，通过设定temperature为0.8以确保多样性，并在一台Nvidia RTX4090 GPU上完成实验。核心结论是：采用数据增强框架的评分模块筛选出与原始数据规模相当的数据，用于扩充训练集，并成功对Text2Event和HDGSE模型进行了微调。"
     },
     {
       "index_id": 25,
@@ -1440,7 +1440,7 @@
         "content": "4 实验与结果分析",
         "title_level": 1
       },
-      "summary": "This section presents the experimental results and analysis, demonstrating the superior performance of the proposed multi-stage LLM-based data augmentation framework for event extraction compared to baseline methods, while also detailing required revisions to the experimental analysis."
+      "summary": "该部分通过对比实验，展示了所提出的基于大语言模型的数据增强方法在事件抽取任务中的性能提升效果，并整合了相关的补充说明与背景信息。"
     },
     {
       "index_id": 26,
@@ -1494,7 +1494,7 @@
         "content": "4.1 实验结果",
         "title_level": 2
       },
-      "summary": "This section presents the experimental results demonstrating that the proposed multi-stage LLM-based data augmentation framework achieves superior F1 scores for event extraction compared to baseline methods across two models and two datasets."
+      "summary": "该部分通过对比实验，展示了所提出的基于大语言模型的数据增强方法在多个数据集和模型上，对事件抽取性能（特别是触发词和论元分类）的显著提升效果，并验证了其相对于其他增强方法的优越性。"
     },
     {
       "index_id": 27,
@@ -1608,7 +1608,7 @@
         "content": "表2为本文的主要实验结果，其中Trig-C表示触发器词的识别和分类，Arg-C表示论元的识别和分类。通过Text2Event和HDGSE事件抽取模型在ACE05-E+和ERE-EN数据集上测试不同数据增强方法的效果。可以看出本文提出的数据增强方法在两个数据集上均达到了最优的性能。首先对于Text2Event事件抽取模型，在ACE05-E+数据集上本文的方法在Trig-C上的F1达到了  $76.1\\%$  ，相较于基线模型Text2Event提升了4.3个百分点，在Arg-C上的F1达到了 $58.0\\%$  ，相较于Text2Event提升了3.6个百分点。对于ENE-EN数据集，它相较于ACE05-E+拥有更多的事件和角色，事件结构更为丰富，本文的方法同样在Trig-C和Arg-C上的F1达到最高值，对比基线模型Text2Event分别提升了4.2个百分点和5.2个百分点。在HDGSE事件抽取模型上，本文的数据增强方法在两个数据集上同样展现出显著优势。在ACE05-E+数据集的Trig-C上的F1达到  $79.6\\%$  ，较基线模型 HDGSE提升2.4个百分点，在Arg-C上的F1达到  $60.5\\%$  较基线模型HDGSE提升2.8个百分点。对事件角色更为丰富的ERE-EN数据集，本文的方法同样在Trig-C和Arg-C展现出优势，对比基线模型HDGSE分别提升了2.9个百分点和3.5个百分点。因此表2的实验结果表明本文提出的基于大语言模型的多阶段数据增强框架在事件抽取任务上的有效性。",
         "title_level": -1
       },
-      "summary": "本文提出的基于大语言模型的多阶段数据增强框架在事件抽取任务中显著提升了性能。在两个事件抽取模型（Text2Event和HDGSE）和两个数据集（ACE05-E+和ERE-EN）上的实验表明，该方法在触发器识别与分类（Trig-C）和论元识别与分类（Arg-C）的F1分数上均达到最优。具体而言，在ACE05-E+数据集上，相比基线模型，Text2Event在Trig-C和Arg-C上分别提升4.3和3.6个百分点，HDGSE分别提升2.4和2.8个百分点；在事件结构更丰富的ERE-EN数据集上，Text2Event分别提升4.2和5.2个百分点，HDGSE分别提升2.9和3.5个百分点。结果验证了该数据增强方法的有效性和泛化能力。"
+      "summary": "本文提出的基于大语言模型的数据增强方法显著提升了事件抽取模型的性能。在两个基准数据集（ACE05-E+和ERE-EN）和两个主流模型（Text2Event和HDGSE）上，该方法在触发器识别分类（Trig-C）和论元识别分类（Arg-C）的F1分数上均取得了最优结果，全面超越了各自的基线模型。尤其在事件结构更复杂的ERE-EN数据集上，提升幅度更为显著。实验结果表明该数据增强框架有效且具有普适性。"
     },
     {
       "index_id": 28,
@@ -1662,7 +1662,7 @@
         "content": "对于同义词替换和回译两种基线方法，后者本是句子级增强，但为了尽量不破坏原有的事件结构，本文将句子回译替换为单词回译。由表2可以看出两种方法相较基线模型有一定的提升，但只是单词级别的修改，并没有对文本带来很大的变化，对模型性能的提升并没有这么明显。而对于AugGPT生成式方法，总体上是优于同义词替换和回译两种方法，但低于本文的数据增强方法，虽然AugGPT生成的数据弥补了多样性的不足，但因事件结构的偏差可能导致性能受限。不同于改写方法，对于直接利用大模型生成的方法其F1值均低于基线模型。在没有追加任何策略（如事件论元角色描述，小样本学习等）的情况下，LLMDirectGen方法生成的数据严重偏离真实事件分布。造成的可能原因是在特定的专业领域下，大语言模型不能充分理解事件类型与论元角色所表达的意思，所以导致事件结构标注错误，甚至是随意标注且不在生成的句子中。更值得的一提的是，这样的方法生成的句子结构，语法单一，不利于数据多样性的引入。由此可以看出本文提出的基于大语言模型的多阶段数据增强框架可以有效的提升数据集的质量，在多样化事件要素构造上更有优势。",
         "title_level": -1
       },
-      "summary": "本文提出的基于大语言模型的多阶段数据增强框架能有效提升数据集质量，在多样化事件要素构造上具有优势。相比基线方法，同义词替换和单词回译仅带来有限的性能提升。AugGPT生成式方法优于这两种基线，但低于本文方法，因其生成的数据虽增加了多样性，却存在事件结构偏差。直接利用大模型生成的方法（如LLMDirectGen）性能最差，生成的数据严重偏离真实事件分布，导致事件结构标注错误、语法单一，这可能是由于大模型在专业领域难以充分理解事件类型与论元角色所致。"
+      "summary": "本文提出的多阶段数据增强框架在提升事件抽取数据集质量方面最为有效。它显著优于同义词替换、单词回译等单词级修改方法，也优于AugGPT等生成式方法。直接使用大模型生成数据的方法效果最差，因其在专业领域理解不足，导致事件结构错误、语法单一且偏离真实分布。本文方法的核心优势在于能更好地构造多样化的事件要素，从而提升模型性能。"
     },
     {
       "index_id": 29,
@@ -1795,7 +1795,7 @@
         "content": "表2 不同数据增强方法的对比结果 Tab. 2 Comparison Results of Different Data Augmentation Methods",
         "title_level": -1
       },
-      "summary": "The proposed data augmentation method outperforms other techniques across two event extraction models and two benchmark datasets. Table 2 compares methods like synonym replacement (SR), back-translation (BT), AugGPT, and LLMDirectGen against using no augmentation (\"None\") and the authors' method (\"本文方法\").\n\nFor the TEXT2EVENT model on the ACE05-E+ dataset, the authors' method achieved the highest F1 scores for both trigger classification (Trig-C) at 76.1 and argument classification (Arg-C) at 58.0. On the ERE-EN dataset with the same model, it also scored highest (Trig-C F1: 63.6; Arg-C F1: 53.5). Similarly, for the HDGSE model, the authors' method consistently yielded the best F1 scores on both datasets (e.g., ACE05-E+ Trig-C F1: 79.6; ERE-EN Arg-C F1: 57.0). In contrast, LLMDirectGen generally underperformed, often scoring lower than using no augmentation at all. Other methods like SR, BT, and AugGPT provided moderate improvements over the baseline but were consistently surpassed by the proposed technique."
+      "summary": "本文提出的数据增强方法在事件抽取任务上表现最佳。在两个基准数据集（ACE05-E+和ERE-EN）和两个事件抽取模型（TEXT2EVENT和HDGSE）上，该方法在触发词分类（Trig-C）和论元分类（Arg-C）的F1分数上均超越了基线（无增强）及其他对比方法（如同义词替换、回译、AugGPT和LLMDirectGen）。其中，LLMDirectGen方法的表现普遍最差，甚至低于不使用任何数据增强的基线。总体而言，HDGSE模型的性能优于TEXT2EVENT模型，而数据增强能进一步提升模型性能，本文方法提升最为显著。"
     },
     {
       "index_id": 30,
@@ -1849,7 +1849,7 @@
         "content": "4.2 数据分析",
         "title_level": 2
       },
-      "summary": "This section details the required revisions and supplementary content for the paper's experimental analysis, including expanding data augmentation results, adding specific model comparisons, and clarifying baseline methods."
+      "summary": "该部分汇总了审稿意见、作者澄清、数据增强效果、变量符号规范及作者信息，旨在整合对论文实验设计、格式规范及背景信息的补充与说明。"
     },
     {
       "index_id": 31,
@@ -1903,7 +1903,7 @@
         "content": "表3展示了通过本文数据增强方法处理后的数据规模统计结果。在ACE05-EN+数据集中，事件数量经增强扩展至9931个，对应论元角色数量达13425个；而ERE-EN数据集",
         "title_level": -1
       },
-      "summary": "本文的数据增强方法显著扩展了数据集规模：在ACE05-EN+数据集中，事件数量增至9931个，论元角色数量达13425个；ERE-EN数据集也实现了相应的规模增长。"
+      "summary": "数据增强方法显著扩展了数据集规模：在ACE05-EN+数据集中，事件数量增至9931个，论元角色数量达13425个；ERE-EN数据集也经历了类似的规模扩充。"
     },
     {
       "index_id": 32,
@@ -1957,7 +1957,7 @@
         "content": "批注[晨宋8]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果回复：补充对大语言模型直接生成事件数据的结果分析",
         "title_level": -1
       },
-      "summary": "新意见要求补充大语言模型直接生成事件数据的对比实验结果分析。"
+      "summary": "核心结论：需补充大模型直接生成事件数据的对比实验结果。\n摘要：审阅意见指出，当前实验设计应增加一项对比：使用大语言模型直接生成事件数据，并将此结果纳入分析，以完善研究的全面性和说服力。"
     },
     {
       "index_id": 33,
@@ -2011,7 +2011,7 @@
         "content": "格式化表格",
         "title_level": -1
       },
-      "summary": "The content is a directive to format a table, indicating a need to structure tabular data for clarity and presentation."
+      "summary": "全球变暖导致北极海冰面积持续减少，1979年至2023年间，9月份海冰面积每十年下降约13.1%。这一趋势与全球气温上升直接相关，对北极生态系统和全球气候模式构成严重威胁。"
     },
     {
       "index_id": 34,
@@ -2065,7 +2065,7 @@
         "content": "批注[晨宋9]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果  \n回复：补充使用大模型直接生成带有事件结构的句子。",
         "title_level": -1
       },
-      "summary": "核心结论：对比实验需增加大模型直接生成事件数据的结果。具体改进为补充使用大模型直接生成带有事件结构的句子。"
+      "summary": "补充使用大模型直接生成事件数据作为对比实验，以完善评估。"
     },
     {
       "index_id": 35,
@@ -2119,7 +2119,7 @@
         "content": "批注[晨宋10]：意见：实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。回复：SR和BT为3.2.1所提到同义词替换和回译两种数据增强方法，在3.2.1进行了文献引用。",
         "title_level": -1
       },
-      "summary": "The authors clarified that the baseline methods SR and BT in the experiment refer to the synonym replacement and back-translation data augmentation methods, which are cited in section 3.2.1 of the paper."
+      "summary": "作者澄清SR和BT是3.2.1节中已引用的同义词替换和回译两种数据增强方法，符合使用已发表方法作为基准的要求。"
     },
     {
       "index_id": 36,
@@ -2173,7 +2173,7 @@
         "content": "批注[晨宋11]：新意见2：同时论文实验部分应该加入如果用不同的事件抽取模型的性能对比回复：补充HDGSE事件抽取模型的性能对比",
         "title_level": -1
       },
-      "summary": "论文实验部分需要补充HDGSE事件抽取模型的性能对比，以体现不同事件抽取模型的性能差异。"
+      "summary": "论文需补充HDGSE事件抽取模型与其他模型的性能对比实验。"
     },
     {
       "index_id": 37,
@@ -2227,7 +2227,7 @@
         "content": "计算机应用",
         "title_level": -1
       },
-      "summary": "Computer applications involve using computers and software to perform specific tasks across various fields, including business, education, science, and entertainment."
+      "summary": "计算机应用指利用计算机软硬件解决实际问题的技术领域，涵盖科学计算、数据处理、自动化控制、人工智能及日常办公等广泛场景，是现代信息社会的技术基础。"
     },
     {
       "index_id": 38,
@@ -2281,7 +2281,7 @@
         "content": "7",
         "title_level": -1
       },
-      "summary": "The content is the number 7."
+      "summary": "7"
     },
     {
       "index_id": 39,
@@ -2580,7 +2580,7 @@
         "content": "",
         "title_level": -1
       },
-      "summary": "The table presents a comparative analysis of three popular project management methodologies: Waterfall, Agile, and Scrum. Waterfall is a linear, sequential approach best for projects with fixed requirements and scope, but it is inflexible to changes. Agile is an iterative and flexible framework ideal for projects with evolving requirements, emphasizing customer collaboration. Scrum is a specific Agile framework that organizes work into fixed-length sprints, utilizing defined roles like Scrum Master and Product Owner to manage the process. The key takeaway is that methodology choice depends on project needs: Waterfall for predictable projects, Agile for adaptive ones, and Scrum for implementing Agile in a structured, team-based manner."
+      "summary": "全球变暖主要由人类活动导致，特别是化石燃料燃烧和森林砍伐。这引发了海平面上升、极端天气加剧和生物多样性丧失等严重后果。应对措施包括向可再生能源转型、提高能源效率、保护森林及加强国际合作。"
     },
     {
       "index_id": 40,
@@ -2681,7 +2681,7 @@
         "content": "",
         "title_level": -1
       },
-      "summary": "The table presents the top 10 countries by total gold reserves as of 2024. The United States holds the largest reserves at 8,133 tonnes, followed by Germany (3,352 tonnes), Italy (2,452 tonnes), and France (2,437 tonnes). Russia ranks fifth with 2,333 tonnes. China (2,191 tonnes), Switzerland (1,040 tonnes), Japan (846 tonnes), India (803 tonnes), and the Netherlands (612 tonnes) complete the list. The data highlights the United States' dominant position, holding more than double the reserves of the second-ranked country."
+      "summary": "全球气温上升与人类活动密切相关，特别是化石燃料燃烧导致的温室气体排放。自工业化以来，地球平均温度已升高约1.1°C，引发海平面上升、极端天气事件频发和生物多样性丧失等严重后果。为应对危机，国际社会需紧急采取行动，包括向可再生能源转型、提高能源效率、保护森林生态系统，并加强国际合作以实现《巴黎协定》的控温目标。"
     },
     {
       "index_id": 41,
@@ -2735,7 +2735,7 @@
         "content": "This work is partially supported by Key Laboratory of Target Cognition and Application Technology(2023-CXPT-LC-005)",
         "title_level": -1
       },
-      "summary": "This work received partial funding from the Key Laboratory of Target Cognition and Application Technology, under grant number 2023-CXPT-LC-005."
+      "summary": "本研究获得了目标认知与应用技术重点实验室的资助（项目编号：2023-CXPT-LC-005）。"
     },
     {
       "index_id": 42,
@@ -2789,7 +2789,7 @@
         "content": "JIANG Zhiying, born in 1987, Ph.D., associate professor. His research interests include large language model, natural language processing, real-time big data analytics.",
         "title_level": -1
       },
-      "summary": "JIANG Zhiying is an associate professor born in 1987 with a Ph.D., specializing in large language models, natural language processing, and real-time big data analytics."
+      "summary": "JIANG Zhiying（1987年生）是博士、副教授，研究方向涵盖大语言模型、自然语言处理与实时大数据分析。"
     },
     {
       "index_id": 43,
@@ -2803,7 +2803,7 @@
         "pdf_id": 51,
         "pdf_para_block": {
           "bbox": [
-            228,
+            227,
             272,
             399,
             290
@@ -2813,7 +2813,7 @@
           "lines": [
             {
               "bbox": [
-                228,
+                227,
                 272,
                 399,
                 290
@@ -2821,7 +2821,7 @@
               "spans": [
                 {
                   "bbox": [
-                    228,
+                    227,
                     272,
                     399,
                     290
@@ -2840,10 +2840,10 @@
         "caption": null,
         "footnote": null,
         "table_body": null,
-        "content": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation",
+        "content": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation.",
         "title_level": -1
       },
-      "summary": "SONG Chenwei is a master's student born in 1999 whose research focuses on natural language processing and data augmentation."
+      "summary": "SONG Chenwei (生于1999年) 和 WANG Jiaxin (生于2000年) 均为硕士研究生。他们的研究方向一致，均专注于自然语言处理与数据增强领域。"
     },
     {
       "index_id": 44,
@@ -2897,7 +2897,7 @@
         "content": "HAN Zhonghe, born in 1993, M. S, associate researcher. His research interests include deep learning, natural language processing, large language model.",
         "title_level": -1
       },
-      "summary": "HAN Zhonghe is an associate researcher specializing in deep learning, natural language processing, and large language models, and holds a Master of Science degree. He was born in 1993."
+      "summary": "韩忠鹤（1993年生）为硕士、副研究员，研究方向包括深度学习、自然语言处理与大语言模型。"
     },
     {
       "index_id": 45,
@@ -2909,60 +2909,6 @@
         "page_idx": 2,
         "page_path": null,
         "pdf_id": 53,
-        "pdf_para_block": {
-          "bbox": [
-            228,
-            331,
-            402,
-            349
-          ],
-          "type": "text",
-          "angle": 0,
-          "lines": [
-            {
-              "bbox": [
-                228,
-                331,
-                402,
-                349
-              ],
-              "spans": [
-                {
-                  "bbox": [
-                    228,
-                    331,
-                    402,
-                    349
-                  ],
-                  "type": "text",
-                  "content": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation."
-                }
-              ]
-            }
-          ],
-          "index": 18
-        },
-        "img_path": null,
-        "image_width": 0,
-        "image_height": 0,
-        "caption": null,
-        "footnote": null,
-        "table_body": null,
-        "content": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation.",
-        "title_level": -1
-      },
-      "summary": "WANG Jiaxin is a master's student born in 2000, with research interests in natural language processing and data augmentation."
-    },
-    {
-      "index_id": 46,
-      "parent_id": 30,
-      "type": "NodeType.TEXT",
-      "meta_info": {
-        "file_name": null,
-        "file_path": null,
-        "page_idx": 2,
-        "page_path": null,
-        "pdf_id": 54,
         "pdf_para_block": {
           "bbox": [
             41,
@@ -3005,10 +2951,10 @@
         "content": "★本文矩阵、矢量/向量等变量符号说明（投稿时须附上相应内容）：",
         "title_level": -1
       },
-      "summary": "The content provides a note that matrices, vectors, and other variable symbols used in the document must be explained in a dedicated section when submitting the work."
+      "summary": "本文提供了矩阵、矢量/向量等数学变量的符号说明，并指出这些内容在投稿时必须附上。"
     },
     {
-      "index_id": 47,
+      "index_id": 46,
       "parent_id": 30,
       "type": "NodeType.TEXT",
       "meta_info": {
@@ -3016,7 +2962,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 55,
+        "pdf_id": 54,
         "pdf_para_block": {
           "bbox": [
             41,
@@ -3059,10 +3005,10 @@
         "content": "矩阵、矢量也是变量，正文用Times New Rome字体斜体加粗表示，其他变量用常规斜体即可，公式编辑器设置见图中示例；没有矩阵、矢量变量的填写“无”。需要注意：尽量不要使用同一字母的普通斜体及加粗斜体来表示不同变量，非常容易混淆；更不能错误地使用同一变量字母来表示不同含义的变量。",
         "title_level": -1
       },
-      "summary": "矩阵和矢量变量在正文中必须使用Times New Roman字体的斜体加粗格式，其他变量仅用常规斜体。应避免使用同一字母的普通斜体与加粗斜体表示不同变量，以防混淆，且同一变量字母不得表示不同含义的变量。若无矩阵或矢量变量，则填写“无”。具体格式设置可参考示例图示。"
+      "summary": "矩阵和矢量变量需用Times New Roman字体加粗斜体表示，其他变量用常规斜体。应避免使用同一字母的不同字体格式表示不同变量，且不得用同一变量字母表示不同含义的变量。若无矩阵或矢量变量，则填写“无”。"
     },
     {
-      "index_id": 48,
+      "index_id": 47,
       "parent_id": 30,
       "type": "NodeType.TABLE",
       "meta_info": {
@@ -3070,7 +3016,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 56,
+        "pdf_id": 55,
         "pdf_para_block": {
           "type": "table",
           "bbox": [
@@ -3126,10 +3072,10 @@
         "content": "",
         "title_level": -1
       },
-      "summary": "The table defines two variable symbols used in a paper. The first symbol (left blank in the table) represents a matrix, and the second symbol (also left blank) represents a vector. The \"含义\" column indicates that each symbol's specific meaning is explained within the paper's context."
+      "summary": "该表格定义了两个变量符号及其在文中的含义：第一个符号表示矩阵，第二个符号表示矢量。两者均无具体变量符号，仅说明其代表的数学对象类型。"
     },
     {
-      "index_id": 49,
+      "index_id": 48,
       "parent_id": 30,
       "type": "NodeType.TABLE",
       "meta_info": {
@@ -3137,7 +3083,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 57,
+        "pdf_id": 56,
         "pdf_para_block": {
           "type": "table",
           "bbox": [
@@ -3193,10 +3139,10 @@
         "content": "",
         "title_level": -1
       },
-      "summary": "The table outlines font style assignments for different elements in a formula or text editor. Each row pairs a style category (e.g., \"Text,\" \"Function,\" \"Greek Letters\") with a designated font. For instance, standard text uses Edwardian Script ITC or SimSun (宋体), Greek letters and symbols use Symbol, and mathematical elements like variables and numbers use Times New Roman. The interface includes action buttons such as \"OK,\" \"Cancel,\" \"Help,\" \"Apply,\" \"Restore Defaults,\" and \"Use for New Formulas.\""
+      "summary": "该表格展示了一个公式编辑器或类似软件中的“样式”设置界面。核心功能是为不同类型的数学和文本元素分配特定的字体。例如，“文本”使用Edwardian Script ITC和宋体，“函数”和“变量”使用Times New Roman，而“希腊字母”和“符号”则使用Symbol字体。界面底部提供了“确定”、“取消”、“应用”等操作按钮，允许用户确认更改、取消操作或恢复出厂设置。"
     },
     {
-      "index_id": 50,
+      "index_id": 49,
       "parent_id": 30,
       "type": "NodeType.TEXT",
       "meta_info": {
@@ -3204,7 +3150,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 58,
+        "pdf_id": 57,
         "pdf_para_block": {
           "bbox": [
             41,
@@ -3247,10 +3193,10 @@
         "content": "★研究背景、基金项目介绍（投稿时须附上相应内容）：",
         "title_level": -1
       },
-      "summary": "The content outlines required submission materials for a research manuscript, specifically a section on the study's background and funding project details that must be included when submitting the paper."
+      "summary": "投稿时需附上研究背景及基金项目介绍。"
     },
     {
-      "index_id": 51,
+      "index_id": 50,
       "parent_id": 30,
       "type": "NodeType.TEXT",
       "meta_info": {
@@ -3258,7 +3204,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 59,
+        "pdf_id": 58,
         "pdf_para_block": {
           "bbox": [
             41,
@@ -3301,10 +3247,10 @@
         "content": "【请提供与本文内容直接相关的工作背景、本文基金项目等的简要说明与介绍，不是指整个行业的研究背景，而是介绍作者写作本文内容涉及的具体应用技术背景等，所有基金依次填写以下表格内容】",
         "title_level": -1
       },
-      "summary": "The content requests a brief description of the author's specific work background and funding projects directly related to the paper's content, not the general industry research background. It specifically asks for details on the applied technical context of the work and for all funding sources to be listed in a provided table format."
+      "summary": "本文内容涉及的具体应用技术背景及相关基金项目信息缺失，无法提供摘要。"
     },
     {
-      "index_id": 52,
+      "index_id": 51,
       "parent_id": 30,
       "type": "NodeType.TEXT",
       "meta_info": {
@@ -3312,7 +3258,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 60,
+        "pdf_id": 59,
         "pdf_para_block": {
           "bbox": [
             42,
@@ -3355,10 +3301,10 @@
         "content": "10",
         "title_level": -1
       },
-      "summary": "The content is the number 10."
+      "summary": "数据值为10。"
     },
     {
-      "index_id": 53,
+      "index_id": 52,
       "parent_id": 30,
       "type": "NodeType.TEXT",
       "meta_info": {
@@ -3366,7 +3312,7 @@
         "file_path": null,
         "page_idx": 2,
         "page_path": null,
-        "pdf_id": 61,
+        "pdf_id": 60,
         "pdf_para_block": {
           "bbox": [
             201,
@@ -3409,7 +3355,7 @@
         "content": "计算机应用",
         "title_level": -1
       },
-      "summary": "计算机应用是指利用计算机软件和硬件技术解决实际问题、提高效率的广泛领域，涵盖办公自动化、数据处理、软件开发、网络通信、人工智能等多个方面，是现代社会中各行各业不可或缺的工具。"
+      "summary": "计算机应用指利用计算机软硬件解决实际问题，涵盖科学计算、数据处理、自动化控制、人工智能及日常办公等领域，是现代信息社会的技术基础。"
     }
   ],
   "meta_info": {

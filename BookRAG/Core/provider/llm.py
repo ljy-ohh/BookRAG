@@ -20,14 +20,14 @@ class BaseLLMController(ABC):
         self, prompt_or_memory: Union[str, Memory], images: Optional[List[str]] = None
     ) -> List[Dict[str, Any]]:
         """
-        Prepares the message list in the format required by the specific API.
-        This must be implemented by each subclass.
+        按照特定 API 要求的格式准备消息列表。
+        这必须由每个子类实现。
         """
         pass
 
     @abstractmethod
     def get_completion(self, prompt_or_memory: Union[str, Memory]) -> str:
-        """Get completion from LLM."""
+        """从 LLM 获取补全结果。"""
         pass
 
     @abstractmethod
@@ -37,7 +37,7 @@ class BaseLLMController(ABC):
         schema: BaseModel,
         images: Optional[List[str]] = None,
     ) -> dict:
-        """Get structured JSON response from LLM using Pydantic schema."""
+        """使用 Pydantic schema 从 LLM 获取结构化的 JSON 响应。"""
         pass
 
 
@@ -85,7 +85,7 @@ class OpenAIController(BaseLLMController):
     def _prepare_messages(
         self, prompt_or_memory: Union[str, Memory], add_system_prompt: bool = True
     ) -> List[Dict[str, Any]]:
-        """Prepares messages for the OpenAI API format."""
+        """为 OpenAI API 格式准备消息。"""
         if isinstance(prompt_or_memory, Memory):
             res_dict = [msg.to_dict() for msg in prompt_or_memory.storage]
             return res_dict
@@ -132,15 +132,15 @@ class OpenAIController(BaseLLMController):
         think_mode: bool = False,
     ) -> dict:
         """
-        Get structured JSON response from OpenAI using Pydantic schema.
-        :param prompt: str
+        使用 Pydantic schema 从 OpenAI 获取结构化的 JSON 响应。
+        :param prompt: 字符串
         :param schema: Pydantic BaseModel
-        :param images: Optional[list] = None
-        :return: dict
+        :param images: 可选[list] = None
+        :return: 字典
         """
         if isinstance(prompt_or_memory, Memory):
-            # If it's a memory object, use its history.
-            # We will attach images to the content of the *last* message.
+            # 如果是 Memory 对象，使用其历史记录。
+            # 我们会将图像附加到 *最后一条* 消息的内容中。
             messages = [msg.to_dict() for msg in prompt_or_memory.storage]
             last_content = messages[-1]["content"]
 
@@ -152,7 +152,7 @@ class OpenAIController(BaseLLMController):
                     )
             messages[-1]["content"] = content_list
 
-        else:  # It's a simple string prompt
+        else:  # 这是一个简单的字符串提示
             content_list = [{"type": "text", "text": prompt_or_memory}]
             if images:
                 for img_url in images:
@@ -173,9 +173,9 @@ class OpenAIController(BaseLLMController):
                 },
             )
         except Exception as e:
-            log.warning(f"Strict JSON parsing failed: {e}. Attempting fallback with loose parsing.")
+            log.warning(f"严格 JSON 解析失败: {e}。尝试使用宽松解析进行回退。")
             try:
-                # Fallback: Standard completion + manual parsing
+                # 回退：标准补全 + 手动解析
                 completion = self.client.chat.completions.create(
                     model=self.model,
                     messages=messages,
@@ -194,7 +194,7 @@ class OpenAIController(BaseLLMController):
                 _, parsed_dict = try_parse_json_object(content)
                 return schema.model_validate(parsed_dict)
             except Exception as fallback_e:
-                log.error(f"Fallback failed: {fallback_e}")
+                log.error(f"回退失败: {fallback_e}")
                 raise e
 
         if completion and completion.usage:
@@ -255,7 +255,7 @@ class OllamaController(BaseLLMController):
     def _prepare_messages(
         self, prompt_or_memory: Union[str, Memory], add_system_prompt: bool = True
     ) -> List[Dict[str, Any]]:
-        """Prepares messages for the Ollama API format."""
+        """为 Ollama API 格式准备消息。"""
         if isinstance(prompt_or_memory, Memory):
             return prompt_or_memory.get()
 
@@ -297,16 +297,16 @@ class OllamaController(BaseLLMController):
         think_mode: bool = False,
     ) -> dict:
         """
-        Get structured JSON response from Ollama using Pydantic schema.
-        :param prompt: str
+        使用 Pydantic schema 从 Ollama 获取结构化的 JSON 响应。
+        :param prompt: 字符串
         :param schema: Pydantic BaseModel
-        :param images: Optional[list] = None
-        :return: dict
+        :param images: 可选[list] = None
+        :return: 字典
         """
         messages = self._prepare_messages(prompt_or_memory)
 
         if images:
-            # Ollama expects images at the top level of the message dictionary
+            # Ollama 期望图片位于消息字典的顶层
             messages[-1]["images"] = images
         response = self.client.chat(
             model=self.model,
@@ -324,13 +324,13 @@ class OllamaController(BaseLLMController):
             try:
                 prompt_tokens = int(prompt_tokens)
             except Exception as e:
-                logging.error(f"Error converting prompt_tokens: {e}")
+                logging.error(f"转换 prompt_tokens 时出错: {e}")
                 prompt_tokens = 0
 
             try:
                 completion_tokens = int(completion_tokens)
             except Exception as e:
-                logging.error(f"Error converting completion_tokens: {e}")
+                logging.error(f"转换 completion_tokens 时出错: {e}")
                 completion_tokens = 0
             tracker.add_usage(
                 prompt_tokens=prompt_tokens,
@@ -341,14 +341,14 @@ class OllamaController(BaseLLMController):
 
 
 class LLM:
-    """LLM-based controller for memory metadata generation"""
+    """基于 LLM 的内存元数据生成控制器"""
 
     def __init__(
         self,
         llm_config: Optional[LLMConfig] = None,
     ):
         if llm_config is None:
-            raise ValueError("Config must be provided")
+            raise ValueError("必须提供配置")
         if not isinstance(llm_config, LLMConfig):
             config = LLMConfig(**llm_config)
         else:
@@ -361,7 +361,7 @@ class LLM:
         elif backend == "ollama":
             self.llm = OllamaController(llm_config=config)
         else:
-            raise ValueError("Backend must be one of: 'openai', 'ollama'")
+            raise ValueError("Backend 必须是以下之一: 'openai', 'ollama'")
 
     def get_completion(
         self, prompt: Union[str, Memory], json_response: bool = False
@@ -372,27 +372,32 @@ class LLM:
             try:
                 res = self.llm.get_completion(prompt, json_response)
                 if len(res.strip()) == 0:
-                    raise ValueError("Empty response from LLM")
+                    raise ValueError("LLM 返回空响应")
                 return res
             except Exception as e:
-                print(f"Error getting completion: {e}")
+                print(f"获取补全时出错: {e}")
                 retry += 1
                 time.sleep(1)
                 if retry >= max_retries:
                     raise RuntimeError(
-                        "Failed to get completion after multiple retries"
+                        "多次重试后未能获取补全"
                     )
-        # If we reach here, it means we failed to get a response after retries
-        logging.error("Max retries reached, returning empty response.")
-        # Log the error and return an empty string or handle it as needed
-        logging.error(f"Error: {e}")
-        logging.error("Returning empty response.")
+        # 如果到达这里，意味着重试后仍未能获得响应
+        logging.error("达到最大重试次数，返回空响应。")
+        # 记录错误并返回空字符串或根据需要处理
+        logging.error(f"错误: {e}")
+        logging.error("返回空响应。")
         return ""
 
     def batch_get_completion(
         self, prompts: List[Union[str, Memory]], json_response: bool = False
     ) -> list:
-        """ """
+        """
+        批量获取补全结果。
+        :param prompts: 提示词或 Memory 对象列表
+        :param json_response: 是否返回 JSON 格式
+        :return: 补全结果列表
+        """
         results = [None] * len(prompts)
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             future_to_idx = {
@@ -404,7 +409,7 @@ class LLM:
                 try:
                     results[idx] = future.result()
                 except Exception as e:
-                    results[idx] = f"Error: {e}"
+                    results[idx] = f"错误: {e}"
         return results
 
     def get_json_completion(
@@ -420,25 +425,25 @@ class LLM:
             try:
                 res = self.llm.get_json_completion(prompt, schema, images, think_mode=think_mode)
                 if not res:
-                    raise ValueError("Empty response from LLM")
+                    raise ValueError("LLM 返回空响应")
                 return res
             except Exception as e:
-                print(f"Error getting JSON completion: {e}")
+                print(f"获取 JSON 补全时出错: {e}")
                 retry += 1
                 time.sleep(1)
                 if retry >= max_retries:
                     raise RuntimeError(
-                        "Failed to get JSON completion after multiple retries"
+                        "多次重试后未能获取 JSON 补全"
                     )
-        logging.error("Max retries reached, returning empty dict.")
-        logging.error(f"Error: {e}")
-        logging.error("Returning empty dict.")
+        logging.error("达到最大重试次数，返回空字典。")
+        logging.error(f"错误: {e}")
+        logging.error("返回空字典。")
         return {}
 
 
 if __name__ == "__main__":
-    # Example usage
-    print("Testing LLM controller...")
+    # 使用示例
+    print("正在测试 LLM 控制器...")
 
     # from Core.configs.system_config import load_system_config
 
@@ -446,6 +451,7 @@ if __name__ == "__main__":
     # cfg.llm.max_workers = 4
     # controller = LLM(llm_config=cfg.llm)
     # prompt = "respond in 20 words. who are you?"
+    # prompt = "请用20个字回答。你是谁？"
 
     # token_tracker = TokenTracker.get_instance()
     # token_tracker.reset()
@@ -462,12 +468,13 @@ if __name__ == "__main__":
     # tmp_memory = Memory()
     # tmp_memory.add_batch(
     #     [
-    #         {"role": "system", "content": "You are a helpful assistant."},
-    #         {"role": "user", "content": "What is the capital of France?"},
+    #         {"role": "system", "content": "你是一个乐于助人的助手。"},
+    #         {"role": "user", "content": "法国的首都是哪里？"},
+    #         # {"role": "user", "content": "法国的首都是哪里？"},
     #     ]
     # )
     # response = controller.get_completion(tmp_memory)
     # print(response)
     # memory_cost = token_tracker.record_stage("get_completion")
-    # print(f"Memory cost: {memory_cost}")
+    # print(f"内存成本: {memory_cost}")
     # token_tracker.print_all_stages()

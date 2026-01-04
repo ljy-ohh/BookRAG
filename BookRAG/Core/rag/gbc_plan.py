@@ -3,12 +3,12 @@ from typing import List, Optional, Literal
 from Core.provider.llm import LLM
 
 
-# Step 1 Output Model
+# Step 1 输出模型
 class QueryTypeResult(BaseModel):
     query_type: Literal["simple", "complex", "global"]
 
 
-# Step 2 'complex' Output Model
+# Step 2 'complex' 输出模型
 class SubQuestion(BaseModel):
     question: str
     type: Literal["retrieval", "synthesis"]
@@ -18,7 +18,7 @@ class ComplexResult(BaseModel):
     sub_questions: List[SubQuestion]
 
 
-# Step 2 'global' Output Models (统一为Filter列表)
+# Step 2 'global' 输出模型 (统一为Filter列表)
 class Filter(BaseModel):
     filter_type: Literal["section", "image", "table", "page"]
     filter_value: Optional[str] = None
@@ -28,7 +28,7 @@ class Filter(BaseModel):
         filter_type = info.data.get("filter_type")
         if v is not None and filter_type not in ["section", "page"]:
             raise ValueError(
-                f"filter_value can only be set for 'section' or 'page', not for '{filter_type}'."
+                f"filter_value 只能为 'section' 或 'page' 设置，不能为 '{filter_type}' 设置。"
             )
         return v
 
@@ -38,7 +38,7 @@ class GlobalResult(BaseModel):
     operation: Literal["COUNT", "LIST", "SUMMARIZE", "ANALYZE"]
 
 
-# Final combined result model (for returning to the user)
+# 最终组合结果模型 (用于返回给用户)
 class PlanResult(BaseModel):
     query_type: Literal["simple", "complex", "global"]
     original_query: str
@@ -51,34 +51,34 @@ class PlanResult(BaseModel):
         # ... (校验逻辑更新以包含 operation)
         if self.query_type == "complex" and not self.sub_questions:
             raise ValueError(
-                "For 'complex' query_type, 'sub_questions' must be provided."
+                "对于 'complex' 查询类型，必须提供 'sub_questions'。"
             )
         if self.query_type == "global" and (not self.filters or not self.operation):
             raise ValueError(
-                "For 'global' query_type, 'filters' and 'operation' must be provided."
+                "对于 'global' 查询类型，必须提供 'filters' 和 'operation'。"
             )
         if self.query_type == "simple" and (
             self.sub_questions or self.filters or self.operation
         ):
             raise ValueError(
-                "For 'simple' query_type, all other specific fields must be null."
+                "对于 'simple' 查询类型，所有其他特定字段必须为空。"
             )
         return self
 
 
-# --- The Refactored Planner Class ---
+# --- 重构后的 Planner 类 ---
 class TaskPlanner:
     """
-    A two-step Planner for user queries.
-    Step 1: Classify the query type.
-    Step 2: Process the query based on its type.
+    用户查询的两步规划器。
+    第一步：对查询类型进行分类。
+    第二步：根据类型处理查询。
     """
 
     def __init__(self, llm: LLM):
         self.llm = llm
 
     def _get_classification_prompt(self, query: str) -> str:
-        # Prompt for Step 1: Classification Only
+        # Step 1 的提示词：仅分类
         # 强调了 "simple" 和 "global" 的区别
         return f"""
 You are an expert query analyzer. Your *only* task is to classify the user's question into one of three categories: "simple", "complex", or "global". Respond only with the specified JSON object.

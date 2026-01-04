@@ -1,5 +1,14 @@
 {
-  "entities": [],
+  "entities": [
+    {
+      "entity_name": "10",
+      "entity_type": "measurement",
+      "description": "a numerical value mentioned in the text",
+      "source_ids": [
+        51
+      ]
+    }
+  ],
   "relations": [],
   "node_idx": 51
 }

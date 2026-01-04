@@ -14,9 +14,9 @@ from Core.configs.dataset_config import DatasetConfig
 from Eval.utils.utils import get_all_cost
 
 from concurrent.futures import ThreadPoolExecutor
-from itertools import repeat  # Helper to pass constant arguments to map
+from itertools import repeat  # 辅助函数，用于向 map 传递常量参数
 
-# From here through _match_numbers_if_present was originally copied from the evaluation code of DROP dataset:
+# 从这里到 _match_numbers_if_present 最初是从 DROP 数据集的评估代码复制而来的：
 # https://github.com/allenai/allennlp-reading-comprehension/blob/master/allennlp_rc/eval/drop_eval.py
 
 
@@ -48,7 +48,7 @@ def _tokenize(text: str) -> List[str]:
 
 
 def _normalize_answer(text: str) -> str:
-    """Lower text and remove punctuation, articles and extra whitespace."""
+    """小写文本并删除标点符号、冠词和多余的空格。"""
 
     parts = [
         _white_space_fix(
@@ -80,7 +80,7 @@ def _is_word_number(text: str) -> bool:
 def _normalize_number(text: str) -> str:
     if _is_number(text):
         return str(float(text))
-    # TODO: this is not included in the original drop evaluation script, we need to have our own in the end anyways.
+    # TODO: 这不包含在原始的 drop 评估脚本中，无论如何我们需要最后拥有我们自己的脚本。
     elif _is_word_number(text):
         return str(float(word_to_num(text)))
     else:
@@ -105,8 +105,8 @@ def _answer_to_bags(
 
 def _align_bags(predicted: List[Set[str]], gold: List[Set[str]]) -> List[float]:
     """
-    Takes gold and predicted answer sets and first finds the optimal 1-1 alignment
-    between them and gets maximum metric values over all the answers.
+    获取标准答案和预测答案，找到它们之间最佳的 1-1 对齐，
+    并返回所有答案的最大度量值。
     """
     scores = np.zeros([len(gold), len(predicted)])
     for gold_index, gold_item in enumerate(gold):
@@ -140,6 +140,9 @@ def _compute_f1(predicted_bag: Set[str], gold_bag: Set[str]) -> float:
 
 
 def _match_numbers_if_present(gold_bag: Set[str], predicted_bag: Set[str]) -> bool:
+    """
+    如果两个集合中都包含数字，则检查它们是否包含相同的数字。
+    """
     gold_numbers = set()
     predicted_numbers = set()
     for word in gold_bag:
@@ -197,11 +200,6 @@ def eval_single_file(res_path: str, extractor: AnswerExtractor):
         item["em"] = em
         item["f1"] = f1
 
-    # Save results to output_dir
-    save_path = os.path.join(res_path, "eval.json")
-    with open(save_path, "w", encoding="utf-8") as f:
-        json.dump(res_data, f, ensure_ascii=False, indent=2)
-
     return res_data
 
 
@@ -214,32 +212,31 @@ def eval_m3doc(
     result = []
 
     if max_workers > 1:
-        # Step 1: Prepare the arguments for all the function calls. This is very fast.
-        # We create a list of the 'doc_res_dir' paths that will be processed.
+        # 步骤 1: 准备所有函数调用的参数。这非常快。
+        # 我们创建一个将要处理的 'doc_res_dir' 路径列表。
         doc_res_dirs = []
         for (doc_uuid, doc_path), group in document_groups:
             dir_name = f"eval_{data_cfg.dataset_name}_{method}"
             doc_res_dir = os.path.join(data_cfg.working_dir, doc_uuid, dir_name)
             doc_res_dirs.append(doc_res_dir)
 
-        # Step 2: Execute `eval_single_file` in parallel using ThreadPoolExecutor.map
-        # .map handles running the function on each item in the `doc_res_dirs` list.
-        # `repeat(extractor)` and `repeat(prompt)` pass the same extractor and prompt
-        # object to every function call.
+        # 步骤 2: 使用 ThreadPoolExecutor.map 并行执行 `eval_single_file`
+        # .map 处理在 `doc_res_dirs` 列表中的每个项目上运行函数。
+        # `repeat(extractor)` 和 `repeat(prompt)` 将相同的提取器和提示对象传递给每个函数调用。
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # The `map` function returns results in the same order as the input iterable.
-            # We wrap the iterator with tqdm for a progress bar.
+            # `map` 函数按输入可迭代对象的顺序返回结果。
+            # 我们用 tqdm 包装迭代器以显示进度条。
             results_iterator = executor.map(
                 eval_single_file,
-                doc_res_dirs,  # The iterable of first arguments
-                repeat(extractor),  # The constant second argument
+                doc_res_dirs,  # 第一个参数的可迭代对象
+                repeat(extractor),  # 常量第二个参数
             )
 
-            # Step 3: Combine the results. Because .map preserves order, we can
-            # simply loop through and extend our final list.
+            # 步骤 3: 合并结果。因为 .map 保留顺序，我们可以
+            # 简单地循环并扩展我们的最终列表。
             for doc_res in tqdm(
-                results_iterator, total=len(doc_res_dirs), desc="Processing Documents"
-            ):
+            results_iterator, total=len(doc_res_dirs), desc="正在处理文档"
+        ):
                 result.extend(doc_res)
     else:
         for (doc_uuid, doc_path), group in tqdm(document_groups):
@@ -258,10 +255,10 @@ def eval_m3doc(
     )
     avg_llm_score = round(avg_llm_score, 6)
     print("--------------------------------------")
-    print(f"total samples: {len(result)}")
-    print(f"Avg em: {average_em:.6f}")
-    print(f"Avg f1: {average_f1:.6f}")
-    print(f"Avg llm_score: {avg_llm_score:.6f}")
+    print(f"总样本数: {len(result)}")
+    print(f"平均 EM: {average_em:.6f}")
+    print(f"平均 F1: {average_f1:.6f}")
+    print(f"平均 LLM 分数: {avg_llm_score:.6f}")
     score_dict = {
         "Avg em": average_em,
         "Avg f1": average_f1,
@@ -300,7 +297,7 @@ def eval_m3doc(
     )
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(sorted_result, f, ensure_ascii=False, indent=2)
-    print(f"Saved detailed results to {save_path}")
+    print(f"已保存详细结果到 {save_path}")
 
 
     score_save_path = os.path.join(

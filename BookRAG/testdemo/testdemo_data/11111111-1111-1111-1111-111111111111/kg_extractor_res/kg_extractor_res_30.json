@@ -3,7 +3,7 @@
     {
       "entity_name": "4.2 数据分析",
       "entity_type": "SECTION_TITLE",
-      "description": "As a subsection of '实验与结果分析' (Experiments and Result Analysis), this section focuses on analyzing the data used in the experiments, likely detailing the characteristics, statistics, and quality of the datasets to support the subsequent result interpretation.",
+      "description": "As a subsection of '实验与结果分析' (Experiments and Result Analysis), this section focuses on analyzing the data, likely examining the characteristics, quality, or patterns within the datasets used in the study's experiments.",
       "source_ids": [
         30
       ]

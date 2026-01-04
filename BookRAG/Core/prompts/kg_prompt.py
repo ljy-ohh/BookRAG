@@ -4,20 +4,20 @@ from pydantic import BaseModel, Field
 
 
 class ExtractEntity(BaseModel):
-    entity_name: str  # Primary key for entity
-    entity_type: str = Field(default="")  # Entity type
-    description: str = Field(default="")  # The description of this entity
+    entity_name: str  # 实体的关键名称
+    entity_type: str = Field(default="")  # 实体类型
+    description: str = Field(default="")  # 该实体的描述
 
 
 class ExtractRelationship(BaseModel):
-    src_entity_name: str  # Name of the entity on the left side of the edge
-    tgt_entity_name: str  # Name of the entity on the right side of the edge
+    src_entity_name: str  # 边左侧的实体名称
+    tgt_entity_name: str  # 边右侧的实体名称
     weight: float = Field(
         default=1.0
-    )  # Weight of the edge, used in GraphRAG and LightRAG
+    )  # 边的权重，用于 GraphRAG 和 LightRAG
     description: str = Field(
         default=""
-    )  # Description of the edge, used in GraphRAG and LightRAG
+    )  # 边的描述，用于 GraphRAG 和 LightRAG
 
 
 class ExtractionResult(BaseModel):
@@ -26,8 +26,8 @@ class ExtractionResult(BaseModel):
 
 
 class FormulaEntity(BaseModel):
-    entity_name: str  # Primary key for entity
-    description: str = Field(default="")  # The description of this entity
+    entity_name: str  # 实体的关键名称
+    description: str = Field(default="")  # 该实体的描述
 
 
 class FormulaExtractionResult(BaseModel):
@@ -38,9 +38,9 @@ class EntityExtractionResult(BaseModel):
     entities: List[ExtractEntity]
 
 
-# This file is part of the Knowledge Graph Prompting project.
-# Our KG construction is build on the JayLZhou/GraphRAG projects.
-# Please refer to the following references:
+# 此文件是 Knowledge Graph Prompting 项目的一部分。
+# 我们的 KG 构建建立在 JayLZhou/GraphRAG 项目之上。
+# 请参考以下文献：
 # 1. https://github.com/JayLZhou/GraphRAG
 # 2. https://github.com/gusye1234/nano-graphrag
 # 3. https://github.com/HKUDS/LightRAG
@@ -97,7 +97,7 @@ DEFAULT_ENTITY_TYPES = [
     "PROGRAMMING_LANGUAGE",
     "MEDICAL_PROCEDURE",
     "CELESTIAL_BODY",
-    # Academic & Technical Extensions
+    # 学术和技术扩展
     "TASK_OR_PROBLEM",
     "MODEL_OR_ARCHITECTURE",
     "METHOD_OR_TECHNIQUE",
@@ -107,7 +107,7 @@ DEFAULT_ENTITY_TYPES = [
     "BENCHMARK",
     "RESEARCH_FIELD",
     "PUBLICATION_VENUE",
-    # Document Structure Entities
+    # 文档结构实体
     "SECTION_TITLE",
     "EQUATION_OR_FORMULA",
     "TABLE",
@@ -218,7 +218,7 @@ ENTITY_CONTINUE_EXTRACTION = """MANY entities were missed in the last extraction
 ENTITY_IF_LOOP_EXTRACTION = """It appears some entities may have still been missed.  Answer YES | NO if there are still entities that need to be added."""
 
 
-# The following PROMPTs are designed for the specifial layout in document
+# 以下提示词专为文档中的特殊布局设计
 
 # 1646 tokens
 TABLE_ENTITY_EXTRACTION = """

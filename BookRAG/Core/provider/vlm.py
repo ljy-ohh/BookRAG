@@ -60,53 +60,53 @@ class QwenVLController(BaseVLMController):
         images: Optional[List[str]] = None,
     ) -> List[Dict[str, Any]]:
         """
-        Prepares the message list for the Qwen-VL processor.
-        - If prompt_or_memory is a string, creates a new user message with images and text.
-        - If it's a list, uses it directly and prepends images to the last user message's content.
+        为 Qwen-VL 处理器准备消息列表。
+        - 如果 prompt_or_memory 是字符串，则创建一个包含图像和文本的新用户消息。
+        - 如果它是列表，则直接使用它，并将图像添加到最后一个用户消息的内容之前。
         """
         images = images or []
 
-        # --- Case 1: Input is a simple string query ---
+        # --- 情况 1: 输入是简单的字符串查询 ---
         if isinstance(prompt_or_memory, str):
             content = [{"type": "image", "image": img} for img in images]
             content.append({"type": "text", "text": prompt_or_memory})
             return [{"role": "user", "content": content}]
 
-        # --- Case 2: Input is a pre-structured list of messages ---
+        # --- 情况 2: 输入是预先结构化的消息列表 ---
         elif isinstance(prompt_or_memory, list):
             if not prompt_or_memory:
-                raise ValueError("Message list cannot be empty.")
+                raise ValueError("消息列表不能为空。")
 
-            messages = [dict(m) for m in prompt_or_memory]  # Create a copy
+            messages = [dict(m) for m in prompt_or_memory]  # 创建副本
 
             if images:
                 last_message = messages[-1]
                 if last_message.get("role") != "user":
                     log.warning(
-                        "Images can only be added to the last message if it's from the 'user'. Skipping image attachment."
+                        "仅当最后一条消息来自 'user' 时才能添加图像。跳过图像附件。"
                     )
                     return messages
 
-                # Prepend images to the content of the last user message
+                # 将图像添加到最后一条用户消息的内容之前
                 image_content = [{"type": "image", "image": img} for img in images]
 
                 if isinstance(last_message.get("content"), str):
-                    # If content is a string, convert it to the list format
+                    # 如果内容是字符串，将其转换为列表格式
                     text_content = [{"type": "text", "text": last_message["content"]}]
                     last_message["content"] = image_content + text_content
                 elif isinstance(last_message.get("content"), list):
-                    # If content is already a list, prepend the images
+                    # 如果内容已经是列表，则在前面添加图像
                     last_message["content"] = image_content + last_message["content"]
                 else:
                     log.warning(
-                        f"Unsupported content type in last message: {type(last_message.get('content'))}. Skipping image attachment."
+                        f"最后一条消息中的内容类型不支持: {type(last_message.get('content'))}。跳过图像附件。"
                     )
 
             return messages
 
         else:
             raise TypeError(
-                f"Unsupported type for 'prompt_or_memory': {type(prompt_or_memory)}"
+                f"'prompt_or_memory' 的类型不支持: {type(prompt_or_memory)}"
             )
 
     def generate(
@@ -116,7 +116,7 @@ class QwenVLController(BaseVLMController):
     ) -> str:
         from qwen_vl_utils import process_vision_info
 
-        # Use the helper to prepare messages payload
+        # 使用帮助函数准备消息负载
         messages = self._prepare_messages(prompt_or_memory, images)
 
         text = self.processor.apply_chat_template(
@@ -149,7 +149,7 @@ class QwenVLController(BaseVLMController):
         images=None,
         schema=None,
     ):
-        log.warning("generate_json is not implemented for QwenVLController.")
+        log.warning("QwenVLController 尚未实现 generate_json。")
         pass
 
 
@@ -172,16 +172,16 @@ class GPTVLMController(BaseVLMController):
             else:
                 img = Image.open(image_path)
             
-            # Check dimensions and resize if too small (SiliconFlow/QwenVL requirement: > 28px)
+            # 检查尺寸，如果太小则调整大小 (SiliconFlow/QwenVL 要求: > 28px)
             width, height = img.size
             if width < 28 or height < 28:
                 new_width = max(width, 28)
                 new_height = max(height, 28)
-                log.warning(f"Image size ({width}x{height}) is too small. Resizing to ({new_width}x{new_height}).")
+                log.warning(f"图片尺寸 ({width}x{height}) 太小。正在调整为 ({new_width}x{new_height})。")
                 img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
             
             buffered = BytesIO()
-            # Ensure RGB for JPEG
+            # 确保 JPEG 格式为 RGB
             if img.mode != "RGB":
                 img = img.convert("RGB")
             
@@ -189,7 +189,7 @@ class GPTVLMController(BaseVLMController):
             img_data = buffered.getvalue()
             return base64.b64encode(img_data).decode("utf-8")
         except Exception as e:
-            log.error(f"Failed to encode image: {e}")
+            log.error(f"图片编码失败: {e}")
             raise e
 
     def _prepare_messages(
@@ -198,11 +198,11 @@ class GPTVLMController(BaseVLMController):
         images: Optional[List[Union[str, Image.Image]]] = None,
     ) -> List[Dict[str, Any]]:
         """
-        Prepares the message list for the OpenAI API call.
-        - If prompt_or_memory is a string, creates a new user message with multimodal content.
-        - If it's a list, it uses the list directly and intelligently adds images to the last message.
+        为 OpenAI API 调用准备消息列表。
+        - 如果 prompt_or_memory 是字符串，则创建一个包含多模态内容的新用户消息。
+        - 如果它是列表，则直接使用它，并智能地将图像添加到最后一条消息。
         """
-        # --- Case 1: Input is a simple string query ---
+        # --- 情况 1: 输入是简单的字符串查询 ---
         if isinstance(prompt_or_memory, str):
             content = [{"type": "text", "text": prompt_or_memory}]
             if images:
@@ -218,21 +218,21 @@ class GPTVLMController(BaseVLMController):
                     )
             return [{"role": "user", "content": content}]
 
-        # --- Case 2: Input is a pre-structured list of messages ---
+        # --- 情况 2: 输入是预先结构化的消息列表 ---
         elif isinstance(prompt_or_memory, Memory):
             if not prompt_or_memory:
-                raise ValueError("Message list cannot be empty.")
+                raise ValueError("消息列表不能为空。")
 
             messages = prompt_or_memory.get()
             messages = [{"role": m.role, "content": m.content} for m in messages]
 
-            # If images are provided, find the last message and append images to its content
+            # 如果提供了图像，找到最后一条消息并将图像附加到其内容中
             if images:
                 last_message = messages[-1]
-                # Add a check to ensure images are only added to a 'user' message,
-                # as per the OpenAI API specification.
+                # 添加检查以确保仅将图像添加到 'user' 消息中，
+                # 符合 OpenAI API 规范。
                 if last_message.get("role") == "user":
-                    # This internal logic was already correct.
+                    # 此内部逻辑已经是正确的。
                     if isinstance(last_message.get("content"), str):
                         last_message["content"] = [
                             {"type": "text", "text": last_message["content"]}
@@ -253,18 +253,18 @@ class GPTVLMController(BaseVLMController):
                             )
                     else:
                         log.warning(
-                            "Could not attach images: The 'content' of the last message is not a string or list."
+                            "无法附加图像：最后一条消息的 'content' 不是字符串或列表。"
                         )
                 else:
                     log.warning(
-                        f"Could not attach images: The last message role is '{last_message.get('role')}', not 'user'."
+                        f"无法附加图像：最后一条消息的角色是 '{last_message.get('role')}'，而不是 'user'。"
                     )
                 # --- MODIFICATION 2 END ---
             return messages
 
         else:
             raise TypeError(
-                f"Unsupported type for 'prompt_or_memory': {type(prompt_or_memory)}"
+                f"'prompt_or_memory' 的类型不支持: {type(prompt_or_memory)}"
             )
 
     def generate(
@@ -293,15 +293,15 @@ class GPTVLMController(BaseVLMController):
         schema: Type[BaseModel] = None,
     ) -> Dict:
         if not schema:
-            raise ValueError("A Pydantic schema must be provided for generate_json.")
+            raise ValueError("generate_json 必须提供 Pydantic schema。")
 
-        # Prepare messages first, which might include a system prompt
+        # 首先准备消息，其中可能包含系统提示
         messages = self._prepare_messages(prompt_or_memory, images)
 
-        # Add or modify the system prompt to include JSON instructions
+        # 添加或修改系统提示以包含 JSON 指令
         json_instruction = f"\nYour output MUST conform to this JSON schema: {schema.model_json_schema()}"
 
-        # Check if a system message already exists
+        # 检查是否已存在系统消息
         system_message_exists = False
         for msg in messages:
             if msg.get("role") == "system":
@@ -316,18 +316,18 @@ class GPTVLMController(BaseVLMController):
             completion = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=messages,
-                response_format={"type": "json_object"},  # Use modern JSON mode
+                response_format={"type": "json_object"},  # 使用现代 JSON 模式
             )
         except Exception as e:
-            log.warning(f"JSON mode failed: {e}. Attempting fallback to standard mode.")
+            log.warning(f"JSON 模式失败: {e}。正在尝试回退到标准模式。")
             try:
-                # Fallback: Standard completion without response_format
+                # 回退：不使用 response_format 的标准补全
                 completion = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=messages,
                 )
             except Exception as fallback_e:
-                log.error(f"Fallback VLM generation failed: {fallback_e}")
+                log.error(f"回退 VLM 生成失败: {fallback_e}")
                 raise e
 
         if completion.usage:
@@ -337,15 +337,15 @@ class GPTVLMController(BaseVLMController):
                 completion_tokens=completion.usage.completion_tokens,
             )
             log.info(
-                f"Prompt tokens: {completion.usage.prompt_tokens}, Completion tokens: {completion.usage.completion_tokens}"
+                f"提示 tokens: {completion.usage.prompt_tokens}, 补全 tokens: {completion.usage.completion_tokens}"
             )
 
         content = completion.choices[0].message.content
         try:
-            # Try direct validation first (if JSON mode worked)
+            # 首先尝试直接验证（如果 JSON 模式有效）
             return schema.model_validate_json(content)
         except Exception:
-            # Fallback parsing
+            # 回退解析
             _, parsed_dict = try_parse_json_object(content)
             return schema.model_validate(parsed_dict)
 
@@ -363,44 +363,44 @@ class OllamaVLMController(BaseVLMController):
         images: Optional[List[str]] = None,
     ) -> List[Dict[str, Any]]:
         """
-        Prepares the message list for the Ollama API call.
-        - If prompt_or_memory is a string, creates a new user message.
-        - If it's a list of dicts, uses it directly and appends images to the last message if needed.
+        为 Ollama API 调用准备消息列表。
+        - 如果 prompt_or_memory 是字符串，则创建一个新的用户消息。
+        - 如果它是字典列表，则直接使用它，并在需要时将图像附加到最后一条消息。
         """
         if isinstance(prompt_or_memory, str):
-            # Case 1: Input is a simple string query.
-            log.debug("Preparing messages from a string query.")
+            # 情况 1: 输入是简单的字符串查询。
+            log.debug("正在从字符串查询准备消息。")
             return [
                 {"role": "user", "content": prompt_or_memory, "images": images or []}
             ]
 
         elif isinstance(prompt_or_memory, list):
-            # Case 2: Input is a pre-structured list of messages.
-            log.debug("Using pre-structured message list.")
+            # 情况 2: 输入是预先结构化的消息列表。
+            log.debug("正在使用预结构化的消息列表。")
             if not prompt_or_memory:
-                raise ValueError("Message list cannot be empty.")
+                raise ValueError("消息列表不能为空。")
 
-            # Make a copy to avoid modifying the original list passed by the caller.
+            # 创建副本以避免修改调用者传递的原始列表。
             messages = [dict(m) for m in prompt_or_memory]
 
-            # If images are provided, add them to the last message if it doesn't have images already.
+            # 如果提供了图像，且最后一条消息还没有图像，则将其添加到最后一条消息。
             if images:
                 last_message = messages[-1]
                 if last_message.get("role") == "user" and not last_message.get(
                     "images"
                 ):
-                    log.debug("Attaching images to the last user message.")
+                    log.debug("正在将图像附加到最后一条用户消息。")
                     last_message["images"] = images
                 else:
                     log.warning(
-                        "Could not attach images: Last message is not a user role or already contains images."
+                        "无法附加图像：最后一条消息不是用户角色或已包含图像。"
                     )
 
             return messages
 
         else:
             raise TypeError(
-                f"Unsupported type for 'prompt_or_memory': {type(prompt_or_memory)}"
+                f"'prompt_or_memory' 的类型不支持: {type(prompt_or_memory)}"
             )
 
     def generate(
@@ -420,13 +420,13 @@ class OllamaVLMController(BaseVLMController):
                 try:
                     prompt_tokens = int(prompt_tokens)
                 except Exception as e:
-                    logging.error(f"Error converting prompt_tokens: {e}")
+                    logging.error(f"转换 prompt_tokens 时出错: {e}")
                     prompt_tokens = 0
 
                 try:
                     completion_tokens = int(completion_tokens)
                 except Exception as e:
-                    logging.error(f"Error converting completion_tokens: {e}")
+                    logging.error(f"转换 completion_tokens 时出错: {e}")
                     completion_tokens = 0
                 tracker.add_usage(
                     prompt_tokens=prompt_tokens,
@@ -434,8 +434,8 @@ class OllamaVLMController(BaseVLMController):
                 )
             return response["message"]["content"]
         except Exception as e:
-            log.error(f"OllamaVLMController error: {e}")
-            return f"Error: Could not get a response from Ollama model '{self.model_name}'."
+            log.error(f"OllamaVLMController 错误: {e}")
+            return f"错误: 无法从 Ollama 模型 '{self.model_name}' 获取响应。"
 
     def generate_json(
         self,
@@ -459,13 +459,13 @@ class OllamaVLMController(BaseVLMController):
                 try:
                     prompt_tokens = int(prompt_tokens)
                 except Exception as e:
-                    logging.error(f"Error converting prompt_tokens: {e}")
+                    logging.error(f"转换 prompt_tokens 时出错: {e}")
                     prompt_tokens = 0
 
                 try:
                     completion_tokens = int(completion_tokens)
                 except Exception as e:
-                    logging.error(f"Error converting completion_tokens: {e}")
+                    logging.error(f"转换 completion_tokens 时出错: {e}")
                     completion_tokens = 0
                 tracker.add_usage(
                     prompt_tokens=prompt_tokens,
@@ -474,16 +474,16 @@ class OllamaVLMController(BaseVLMController):
 
             return schema.model_validate_json(response["message"]["content"])
         except Exception as e:
-            log.error(f"OllamaVLMController error: {e}")
+            log.error(f"OllamaVLMController 错误: {e}")
             return {
-                "error": f"Could not get a JSON response from Ollama model '{self.model_name}'."
+                "error": f"无法从 Ollama 模型 '{self.model_name}' 获取 JSON 响应。"
             }
 
 
 class VLM:
     def __init__(self, vlm_config: Optional[Dict[str, Any]] = None):
         if vlm_config is None:
-            raise ValueError("VLM config must be provided")
+            raise ValueError("必须提供 VLM 配置")
         if not isinstance(vlm_config, VLMConfig):
             config = VLMConfig(**vlm_config)
         else:
@@ -497,7 +497,7 @@ class VLM:
         elif backend == "ollama":
             self.vlm = OllamaVLMController(config)
         else:
-            raise ValueError(f"Unsupported VLM backend: {backend}")
+            raise ValueError(f"不支持的 VLM 后端: {backend}")
 
     def generate(
         self,
@@ -511,13 +511,13 @@ class VLM:
             try:
                 return self.vlm.generate(prompt_or_memory, images)
             except Exception as e:
-                log.warning(f"Error in VLM.generate (attempt {retry + 1}): {e}")
+                log.warning(f"VLM.generate 出错 (尝试 {retry + 1}): {e}")
                 retry += 1
                 last_exception = e
-        log.error("Max retries reached for VLM.generate.")
+        log.error("VLM.generate 达到最大重试次数。")
         if last_exception:
             raise RuntimeError(
-                "Failed to generate after multiple retries"
+                "多次重试后生成失败"
             ) from last_exception
         return ""
 
@@ -534,13 +534,13 @@ class VLM:
             try:
                 return self.vlm.generate_json(prompt_or_memory, images, schema)
             except Exception as e:
-                log.warning(f"Error in VLM.generate_json (attempt {retry + 1}): {e}")
+                log.warning(f"VLM.generate_json 出错 (尝试 {retry + 1}): {e}")
                 retry += 1
                 last_exception = e
-        log.error("Max retries reached for VLM.generate_json.")
+        log.error("VLM.generate_json 达到最大重试次数。")
         if last_exception:
             raise RuntimeError(
-                "Failed to generate JSON after multiple retries"
+                "多次重试后生成 JSON 失败"
             ) from last_exception
         return {}
 
@@ -550,7 +550,7 @@ class VLM:
         if isinstance(self.vlm, QwenVLController):
             if len(queries) > 1:
                 raise RuntimeError(
-                    "QwenVLController does not support parallel batch inference in a single process."
+                    "QwenVLController 不支持单进程并行批量推理。"
                 )
             return [self.generate(queries[0], images_list[0] if images_list else None)]
         results = [None] * len(queries)
@@ -566,7 +566,7 @@ class VLM:
                 try:
                     results[idx] = future.result()
                 except Exception as e:
-                    results[idx] = f"Error: {e}"
+                    results[idx] = f"错误: {e}"
         return results
 
 
@@ -578,9 +578,9 @@ if __name__ == "__main__":
 
     tmp_memory = Memory()
     query = (
-        "Description this image in a senence, and then list the objects in the image."
+        "用一句话描述这张图片，然后列出图片中的物体。"
     )
-    sys_temp = "You are a helpful assistant that helps people find information."
+    sys_temp = "你是一个乐于助人的助手，帮助人们查找信息。"
     tmp_memory.add(Message(role="system", content=sys_temp))
     tmp_memory.add(Message(role="user", content=query))
     response = vlm.generate(

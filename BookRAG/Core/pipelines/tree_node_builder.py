@@ -6,6 +6,11 @@ log = logging.getLogger(__name__)
 
 
 def create_node_by_type(pdf_content: Optional[str], isTitle: bool) -> TreeNode:
+    """根据 PDF 内容类型创建树节点。
+    :param pdf_content: 包含 PDF 内容信息的字典
+    :param isTitle: 是否为标题节点
+    :return: TreeNode 对象
+    """
     content_type = pdf_content.get("type", "unknown")
     if content_type == "text":
         node_meta = {
@@ -74,7 +79,7 @@ def create_node_by_type(pdf_content: Optional[str], isTitle: bool) -> TreeNode:
         node = TreeNode(node_meta)
         node.type = NodeType.EQUATION
     else:
-        log.warning(f"Unknown content type: {content_type}. Defaulting to text.")
+        log.warning(f"未知的内容类型: {content_type}。默认为文本。")
         node_meta = {
             "content": pdf_content.get("text", ""),
             "pdf_id": pdf_content.get("pdf_id", -1),

@@ -2,24 +2,24 @@
   "entities": [
     {
       "entity_name": "college of information science and technology",
-      "entity_type": "ORGANIZATION",
-      "description": "a college mentioned as part of a university",
+      "entity_type": "organization",
+      "description": "an academic college mentioned in the text",
       "source_ids": [
         13
       ]
     },
     {
       "entity_name": "beijing university of chemical technology",
-      "entity_type": "ORGANIZATION",
-      "description": "a university located in beijing",
+      "entity_type": "organization",
+      "description": "a university mentioned in the text",
       "source_ids": [
         13
       ]
     },
     {
       "entity_name": "beijing",
-      "entity_type": "LOCATION",
-      "description": "a city where the university is located",
+      "entity_type": "location",
+      "description": "a city mentioned in the text",
       "source_ids": [
         13
       ]
@@ -40,8 +40,8 @@
       "src_entity_name": "beijing university of chemical technology",
       "tgt_entity_name": "beijing",
       "relation_name": "",
-      "weight": 10.0,
-      "description": "the university is located in beijing  as stated in the address",
+      "weight": 9.0,
+      "description": "the university is located in the city of beijing",
       "source_ids": [
         13
       ]

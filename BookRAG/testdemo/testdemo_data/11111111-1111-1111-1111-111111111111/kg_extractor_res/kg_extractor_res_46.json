@@ -1,5 +1,14 @@
 {
-  "entities": [],
+  "entities": [
+    {
+      "entity_name": "times new rome",
+      "entity_type": "font",
+      "description": "times new rome is a font specified for formatting matrices and vectors in the main text",
+      "source_ids": [
+        46
+      ]
+    }
+  ],
   "relations": [],
   "node_idx": 46
 }

@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "7",
-      "entity_type": "NUMBER",
-      "description": "the text consists solely of the number 7  which is a numeric value",
+      "entity_type": "number",
+      "description": "the text is simply the number 7  which is a numeric value",
       "source_ids": [
         38
       ]

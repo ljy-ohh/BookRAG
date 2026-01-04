@@ -21,21 +21,21 @@ log = logging.getLogger(__name__)
 def construct_tree_index(
     tree_index: DocumentTree, pdf_list: list[dict], title_outline: list[dict]
 ) -> DocumentTree:
-    """Constructs the tree index from the provided PDF content and title outline.
-    :param tree_index: DocumentTree instance to construct the index.
-    :param pdf_list: List of dictionaries containing PDF content.
-    :param title_outline: List of dictionaries containing title outline information.
-    :return: The updated DocumentTree instance with the constructed index.
+    """根据提供的 PDF 内容和标题大纲构建树索引。
+    :param tree_index: 用于构建索引的 DocumentTree 实例。
+    :param pdf_list: 包含 PDF 内容的字典列表。
+    :param title_outline: 包含标题大纲信息的字典列表。
+    :return: 更新后的包含构建索引的 DocumentTree 实例。
     """
 
     for content in title_outline:
         node = create_node_by_type(pdf_content=content, isTitle=True)
         tree_index.add_node(node)
 
-        # Add parent node by parent_id
+        # 通过 parent_id 添加父节点
         text_level = content.get("text_level", -1)
         if text_level == 0:
-            # If text_level is 0, it is a root node
+            # 如果 text_level 为 0，则是根节点
             tree_index.root_node.add_child(node)
         else:
             parent_id = content.get("parent_id", None)
@@ -44,14 +44,14 @@ def construct_tree_index(
                 if parent_node:
                     parent_node.add_child(node)
             else:
-                # If no parent_id, add to root
+                # 如果没有 parent_id，添加到根节点
                 tree_index.root_node.add_child(node)
 
-        # Add child nodes
+        # 添加子节点
         end_idx = content["end_id"]
         for i in range(content["pdf_id"], end_idx):
             if i == len(pdf_list):
-                break  # Avoid index out of range
+                break  # 避免索引越界
             child_i = pdf_list[i]
             content_id = child_i.get("pdf_id", -1)
             if content_id > content["pdf_id"] and content_id < end_idx:
@@ -59,7 +59,7 @@ def construct_tree_index(
                 tree_index.add_node(child_node)
                 node.add_child(child_node)
 
-    log.info(f"Total {len(tree_index.nodes)} nodes added to the tree index.")
+    log.info(f"总共添加了 {len(tree_index.nodes)} 个节点到树索引。")
     return tree_index
 
 
@@ -68,14 +68,14 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
 
     tree_index_path = DocumentTree.get_save_path(cfg.save_path)
     if os.path.exists(tree_index_path) and not reforce:
-        # Load existing tree index
-        log.info(f"Loading existing tree index from {tree_index_path}...")
+        # 加载现有的树索引
+        log.info(f"正在从 {tree_index_path} 加载现有的树索引...")
         tree_index = DocumentTree.load_from_file(tree_index_path)
-        log.info("Tree index loaded successfully.")
+        log.info("树索引加载成功。")
         return tree_index
     else:
-        # Create a new tree index
-        log.info("Creating a new tree index...")
+        # 创建新的树索引
+        log.info("正在创建一个新的树索引...")
 
     meta_dict = {
         "file_name": os.path.basename(cfg.pdf_path),
@@ -95,15 +95,15 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
     )
 
     if os.path.exists(tmp_save_path) and not reforce:
-        # tmp load pdf_list
+        # 临时加载 pdf_list
         import json
 
         with open(tmp_save_path, "rb") as f:
             pdf_list = json.load(f)
-        print(f"Loaded content from {tmp_save_path}")
+        print(f"从 {tmp_save_path} 加载内容")
     else:
-        # Extract content from the PDF file
-        log.info(f"Extracting content from {cfg.pdf_path}...")
+        # 从 PDF 文件中提取内容
+        log.info(f"正在从 {cfg.pdf_path} 提取内容...")
         middle_json, content_list = parse_doc(
             cfg.pdf_path,
             output_dir=cfg.save_path,
@@ -122,10 +122,10 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
             parse_dir=os.path.join(cfg.save_path, method),
             save_dir=save_dir,
             file_name=file_name,
-        )  # merge middle json content with content list.
+        )  # 合并中间 json 内容和内容列表。
         log.info(f"merge_middle_content输出的pdf_list结果{str(pdf_list)}")
-        # tmp pdf_list save for fast test
-        log.info(f"Content extracted and saved to {tmp_save_path}")
+        # 临时保存 pdf_list 以便快速测试
+        log.info(f"内容已提取并保存到 {tmp_save_path}")
 
     llm = LLM(cfg.llm)
     vlm = VLM(cfg.vlm) if cfg.tree.use_vlm else None
@@ -137,10 +137,10 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
     )
     token_tracker = TokenTracker.get_instance()
     tree_index_cost = token_tracker.record_stage("tree_index_construction")
-    log.info(f"Tree index construction cost: {tree_index_cost}")
+    log.info(f"树索引构建成本: {tree_index_cost}")
 
     if cfg.tree.node_summary:
-        # Generate summaries for each node
+        # 为每个节点生成摘要
         tree_index = generate_tree_node_summary(
             tree_index=tree_index,
             llm=llm,
@@ -149,8 +149,8 @@ def build_tree_from_pdf(cfg: SystemConfig, reforce: bool = False) -> DocumentTre
         )
         token_tracker = TokenTracker.get_instance()
         summary_cost = token_tracker.record_stage("tree_node_summary")
-        log.info(f"Tree node summary generation cost: {summary_cost}")
+        log.info(f"树节点摘要生成成本: {summary_cost}")
 
-    # save
+    # 保存
     tree_index.save_to_file()
     return tree_index

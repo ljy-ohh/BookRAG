@@ -26,6 +26,10 @@ save_path = "/home/wangshu/multimodal/GBC-RAG/test/sf/"
 
 
 def process_tree_nodes(tree: DocumentTree) -> Tuple[Dict[str, List], Dict[str, List]]:
+    """处理树节点，提取文本和图像数据用于向量数据库索引。
+    :param tree: DocumentTree 对象
+    :return: 包含文本数据和图像数据的元组 (text_dict, image_dict)
+    """
     text_list = []
     text_meta_data = []
     image_list = []
@@ -47,7 +51,7 @@ def process_tree_nodes(tree: DocumentTree) -> Tuple[Dict[str, List], Dict[str, L
             text_list.append(image_str)
             text_meta_data.append(meta_data)
 
-            # Check if the image path exists before adding it
+            # 在添加之前检查图像路径是否存在
             if image_path and os.path.exists(image_path):
                 image_list.append(image_path)
                 image_meta_data.append(meta_data)
@@ -91,7 +95,7 @@ def build_vdb_index(tree: DocumentTree, vdb_cfg: VDBConfig):
             model_name=vdb_cfg.embedding_config.model_name,
             device=vdb_cfg.embedding_config.device,
         )
-        log.info("Using GME multi-modal embedding model for vector database.")
+        log.info("正在使用 GME 多模态嵌入模型用于向量数据库。")
     else:
         embedder = TextEmbeddingProvider(
             model_name=vdb_cfg.embedding_config.model_name,
@@ -101,7 +105,7 @@ def build_vdb_index(tree: DocumentTree, vdb_cfg: VDBConfig):
             api_key=vdb_cfg.embedding_config.api_key,
             max_length=vdb_cfg.embedding_config.max_length,
         )
-        log.info("Using text embedding model for vector database.")
+        log.info("正在使用文本嵌入模型用于向量数据库。")
 
     vdb = VectorStore(
         embedding_model=embedder,
@@ -122,15 +126,19 @@ def build_vdb_index(tree: DocumentTree, vdb_cfg: VDBConfig):
             image_dict["image_str"],
         )
         vdb.add_images(image_paths=image, metadatas=img_meta, image_str=img_str)
-        log.info("Images added to vector database successfully.")
+        log.info("图像已成功添加到向量数据库。")
 
-    log.info("Vector database index built successfully.")
+    log.info("向量数据库索引构建成功。")
 
-    vdb.embedding_model.close()  # Close the embedding model to free resources
+    vdb.embedding_model.close()  # 关闭嵌入模型以释放资源
     return
 
 
 def get_input_text(cfg: SystemConfig) -> str:
+    """获取输入文本。
+    :param cfg: SystemConfig 配置对象
+    :return: 输入文本字符串
+    """
     pdf_path = cfg.pdf_path
     file_name = str(Path(pdf_path).stem)
     md_file = os.path.join(cfg.save_path, "vlm", f"{file_name}.md")
@@ -165,6 +173,9 @@ def get_all_chunks(cfg: SystemConfig):
 
 
 def build_other_vdb_index(cfg: SystemConfig):
+    """构建其他类型的向量数据库索引（如 BM25）。
+    :param cfg: SystemConfig 配置对象
+    """
     vdb_dir = os.path.join(cfg.save_path, cfg.vdb.vdb_dir_name)
     if os.path.exists(vdb_dir) and not cfg.vdb.force_rebuild:
         if cfg.vdb.force_rebuild:
@@ -172,10 +183,10 @@ def build_other_vdb_index(cfg: SystemConfig):
 
             shutil.rmtree(vdb_dir)
             log.info(
-                f"Vector database path already exists: {vdb_dir}. Remove and rebuild"
+                f"向量数据库路径已存在: {vdb_dir}。正在移除并重建"
             )
         else:
-            log.info(f"Vector database path already exists: {vdb_dir}. Skip")
+            log.info(f"向量数据库路径已存在: {vdb_dir}。跳过")
             return
 
     os.makedirs(vdb_dir, exist_ok=True)
@@ -188,10 +199,10 @@ def build_other_vdb_index(cfg: SystemConfig):
         # test
         query = "quick"
         results = bm25.search(query, top_k=2)
-        log.info(f"BM25 search results for test query {query}: {results}")
+        log.info(f"测试查询 '{query}' 的 BM25 搜索结果: {results}")
 
         bm25.save(save_path)
-        log.info(f"BM25 index saved to {save_path}")
+        log.info(f"BM25 索引已保存至 {save_path}")
     else:
         vdb_config = cfg.vdb
         vdb = VectorStore(
@@ -207,11 +218,15 @@ def build_other_vdb_index(cfg: SystemConfig):
             collection_name=vdb_config.collection_name,
         )
         vdb.add_texts(texts=all_chunks, metadatas=meta_datas)
-        log.info("Vector database index built successfully.")
-        vdb.embedding_model.close()  # Close the embedding model to free resources
+        log.info("向量数据库索引构建成功。")
+        vdb.embedding_model.close()  # 关闭嵌入模型以释放资源
 
 
 def load_pdf_lists_from_dir(save_dir):
+    """从目录加载 PDF 列表。
+    :param save_dir: 保存目录路径
+    :return: PDF 列表信息字典的列表
+    """
     res_list = []
     pdf_list_json_files = os.listdir(save_dir)
     for pdf_list_json_file in pdf_list_json_files:
@@ -227,6 +242,10 @@ def load_pdf_lists_from_dir(save_dir):
 
 
 def compute_mm_embedding(cfg: SystemConfig, tree_index: DocumentTree):
+    """计算多模态嵌入。
+    :param cfg: SystemConfig 配置对象
+    :param tree_index: DocumentTree 对象
+    """
     embedder_cfg = cfg.vdb.embedding_config
     embedder = GmeEmbeddingProvider(
         model_name=embedder_cfg.model_name,
@@ -330,11 +349,11 @@ def compute_mm_embedding(cfg: SystemConfig, tree_index: DocumentTree):
     if all_embeddings_values:
         final_embeddings_array = np.array(all_embeddings_values)
         np.save(embeddings_filepath, final_embeddings_array)
-        log.info(f"All embeddings saved to: {embeddings_filepath}")
+        log.info(f"所有嵌入已保存至: {embeddings_filepath}")
     else:
-        log.warning("No embeddings were computed, .npy file not saved.")
+        log.warning("未计算任何嵌入，未保存 .npy 文件。")
 
-    log.info(f"All node metadata saved to: {metadata_filepath}")
+    log.info(f"所有节点元数据已保存至: {metadata_filepath}")
 
 
 def compute_mm_embedding_question(cfg: SystemConfig, group: pd.DataFrame):
@@ -348,7 +367,7 @@ def compute_mm_embedding_question(cfg: SystemConfig, group: pd.DataFrame):
     questions = group_dedup["question"].tolist()
     RERANKER_INSTRUCTION = "Retrieve the most relevant document for the given query."
 
-    # add instruction for gme model
+    # 为 gme 模型添加指令
     question_embeddings_raw = embedder.embed_texts(
         questions, instruction=RERANKER_INSTRUCTION
     )
@@ -375,11 +394,11 @@ def compute_mm_embedding_question(cfg: SystemConfig, group: pd.DataFrame):
     if all_question_embeddings:
         final_question_embeddings_array = np.array(all_question_embeddings)
         np.save(question_embeddings_filepath, final_question_embeddings_array)
-        log.info(f"All question embeddings saved to: {question_embeddings_filepath}")
+        log.info(f"所有问题嵌入已保存至: {question_embeddings_filepath}")
     else:
-        log.warning("No question embeddings were computed, .npy file not saved.")
+        log.warning("未计算任何问题嵌入，未保存 .npy 文件。")
 
-    log.info(f"All question metadata saved to: {question_metadata_filepath}")
+    log.info(f"所有问题元数据已保存至: {question_metadata_filepath}")
 
 
 if __name__ == "__main__":

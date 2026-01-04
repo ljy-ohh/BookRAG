@@ -1,35 +1,35 @@
-ORI_NODE_SUMMARY_PROMPT = """You are given a part of a document, your task is to generate a description of the partial document about what are main points covered in the partial document.
+ORI_NODE_SUMMARY_PROMPT = """给你文档的一部分，你的任务是生成关于该部分文档涵盖的主要点的描述。
 
 Partial Document Text: {node_text}
 
-Directly return the description, do not include any other text.
+直接返回描述，不要包含任何其他文本。
 """
 
-NODE_SUMMARY_PROMPT = """Condense the content below into a self-contained, informative summary. The summary must capture the key points and be easily understandable on its own.
+NODE_SUMMARY_PROMPT = """将以下内容浓缩成一个独立、信息丰富的摘要。摘要必须捕捉关键点，并且本身易于理解。
 
-The content may be text, an image, or a table. If a title is provided, use it to understand the core subject.
+内容可能是文本、图像或表格。如果提供了标题，请使用它来理解核心主题。
 
 ---
 **Content to Summarize:**
 {node_text}
 ---
 
-Directly output the summary. Your response must begin with the core conclusion, strictly avoiding any introductory phrases that describe the input, such as "The input is a table that shows...".
+直接输出摘要。你的回复必须以核心结论开头，严格避免任何描述输入的引导性短语，例如“输入是一个显示...的表格”。
 """
 
 
-ORI_SEC_SUMMARY_PROMPT = """Your are an expert in generating descriptions for a document.
-You are given a structure of a document. Your task is to generate a one-sentence description for the document, which makes it easy to distinguish the document from other documents.
+ORI_SEC_SUMMARY_PROMPT = """你是一位为文档生成描述的专家。
+给你一个文档的结构。你的任务是为该文档生成一个一句话的描述，使其易于与其他文档区分开来。
 
 Document Structure: {structure}
 
-Directly return the description, do not include any other text.
+直接返回描述，不要包含任何其他文本。
 """
 
 SEC_SUMMARY_PROMPT = """
-You are an expert AI assistant specializing in analyzing technical documents. Your task is to generate a concise, one-sentence summary that captures the core function of a specific document section.
+你是一位专门分析技术文档的专家 AI 助手。你的任务是生成一个简洁的一句话摘要，捕捉特定文档部分的核心功能。
 
-You will be provided with the section's text and a summary of its contents (which includes its subsections and key text). Your generated description must be a synthesis of this information, making it easy to distinguish this section from others.
+你将获得部分的文本及其内容的摘要（包括其子部分和关键文本）。你生成的描述必须是这些信息的综合，使其易于将此部分与其他部分区分开来。
 
 **Section Text:**
 {section_text}
@@ -38,10 +38,10 @@ You will be provided with the section's text and a summary of its contents (whic
 {content_summary}
 
 **Your Task:**
-Based on the information above, generate a single, descriptive sentence.
-- Focus on the section's primary purpose (e.g., "details a process," "introduces a methodology," "presents the results," "compares architectures").
-- Be specific. For example, instead of "This section is about graphs," a better summary is "This section details the methodology for constructing a knowledge graph from unstructured text."
+根据上述信息，生成一个描述性的句子。
+- 专注于该部分的主要目的（例如，“详细说明一个过程”、“介绍一种方法”、“展示结果”、“比较架构”）。
+- 具体一点。例如，与其说“这部分是关于图表的”，不如说“这部分详细介绍了从非结构化文本构建知识图谱的方法”。
 
 **Output:**
-Directly return the one-sentence description. Do not include any other text, labels, or preamble.
+直接返回一句话描述。不要包含任何其他文本、标签或前言。
 """

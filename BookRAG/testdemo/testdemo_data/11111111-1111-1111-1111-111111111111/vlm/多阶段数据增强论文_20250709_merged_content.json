@@ -133,18 +133,18 @@
     },
     {
         "type": "text",
-        "text": "手机号：15067734428",
+        "text": "手机号： 15067734428",
         "bbox": [
-            73,
-            195,
+            72,
+            193,
             186,
             204
         ],
         "page_idx": 0,
         "middle_json": {
             "bbox": [
-                44,
-                164,
+                43,
+                163,
                 111,
                 172
             ],
@@ -153,21 +153,21 @@
             "lines": [
                 {
                     "bbox": [
-                        44,
-                        164,
+                        43,
+                        163,
                         111,
                         172
                     ],
                     "spans": [
                         {
                             "bbox": [
-                                44,
-                                164,
+                                43,
+                                163,
                                 111,
                                 172
                             ],
                             "type": "text",
-                            "content": "手机号：15067734428"
+                            "content": "手机号： 15067734428"
                         }
                     ]
                 }
@@ -398,7 +398,7 @@
     },
     {
         "type": "text",
-        "text": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1",
+        "text": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪",
         "bbox": [
             242,
             258,
@@ -432,7 +432,7 @@
                                 228
                             ],
                             "type": "text",
-                            "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1"
+                            "content": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪"
                         }
                     ]
                 }
@@ -535,7 +535,7 @@
             247,
             300,
             495,
-            311
+            310
         ],
         "page_idx": 0,
         "middle_json": {
@@ -543,7 +543,7 @@
                 147,
                 253,
                 295,
-                262
+                261
             ],
             "type": "text",
             "angle": 0,
@@ -553,7 +553,7 @@
                         147,
                         253,
                         295,
-                        262
+                        261
                     ],
                     "spans": [
                         {
@@ -561,7 +561,7 @@
                                 147,
                                 253,
                                 295,
-                                262
+                                261
                             ],
                             "type": "text",
                             "content": "3. 中国科学院 网络信息体系技术重点实验室，北京100190;"
@@ -1044,7 +1044,7 @@
         "text": "3. Key Laboratory of Network Information System Technology, Institute of Electronic, Chinese Academy of Sciences, Beijing 100190;",
         "bbox": [
             119,
-            632,
+            631,
             623,
             640
         ],
@@ -1052,7 +1052,7 @@
         "middle_json": {
             "bbox": [
                 71,
-                532,
+                531,
                 371,
                 539
             ],
@@ -1062,7 +1062,7 @@
                 {
                     "bbox": [
                         71,
-                        532,
+                        531,
                         371,
                         539
                     ],
@@ -1070,7 +1070,7 @@
                         {
                             "bbox": [
                                 71,
-                                532,
+                                531,
                                 371,
                                 539
                             ],
@@ -1087,36 +1087,36 @@
         "type": "text",
         "text": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)",
         "bbox": [
-            154,
-            643,
+            152,
+            642,
             589,
-            652
+            653
         ],
         "page_idx": 0,
         "middle_json": {
             "bbox": [
-                92,
-                541,
+                91,
+                540,
                 351,
-                549
+                550
             ],
             "type": "text",
             "angle": 0,
             "lines": [
                 {
                     "bbox": [
-                        92,
-                        541,
+                        91,
+                        540,
                         351,
-                        549
+                        550
                     ],
                     "spans": [
                         {
                             "bbox": [
-                                92,
-                                541,
+                                91,
+                                540,
                                 351,
-                                549
+                                550
                             ],
                             "type": "text",
                             "content": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)"
@@ -1133,7 +1133,7 @@
         "bbox": [
             67,
             653,
-            665,
+            663,
             749
         ],
         "page_idx": 0,
@@ -1141,7 +1141,7 @@
             "bbox": [
                 40,
                 550,
-                396,
+                395,
                 630
             ],
             "type": "text",
@@ -1151,7 +1151,7 @@
                     "bbox": [
                         40,
                         550,
-                        396,
+                        395,
                         630
                     ],
                     "spans": [
@@ -1159,7 +1159,7 @@
                             "bbox": [
                                 40,
                                 550,
-                                396,
+                                395,
                                 630
                             ],
                             "type": "text",
@@ -2795,7 +2795,7 @@
         "type": "text",
         "text": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation",
         "bbox": [
-            383,
+            381,
             323,
             670,
             344
@@ -2803,7 +2803,7 @@
         "page_idx": 2,
         "middle_json": {
             "bbox": [
-                228,
+                227,
                 272,
                 399,
                 290
@@ -2813,7 +2813,7 @@
             "lines": [
                 {
                     "bbox": [
-                        228,
+                        227,
                         272,
                         399,
                         290
@@ -2821,7 +2821,7 @@
                     "spans": [
                         {
                             "bbox": [
-                                228,
+                                227,
                                 272,
                                 399,
                                 290
@@ -2883,17 +2883,17 @@
         "type": "text",
         "text": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation.",
         "bbox": [
-            383,
+            381,
             393,
-            675,
+            673,
             414
         ],
         "page_idx": 2,
         "middle_json": {
             "bbox": [
-                228,
+                227,
                 331,
-                402,
+                401,
                 349
             ],
             "type": "text",
@@ -2901,17 +2901,17 @@
             "lines": [
                 {
                     "bbox": [
-                        228,
+                        227,
                         331,
-                        402,
+                        401,
                         349
                     ],
                     "spans": [
                         {
                             "bbox": [
-                                228,
+                                227,
                                 331,
-                                402,
+                                401,
                                 349
                             ],
                             "type": "text",

@@ -2,32 +2,48 @@
   "entities": [
     {
       "entity_name": "song chenwei",
-      "entity_type": "PERSON",
-      "description": "song chenwei is a person born in 1999 and is a master of science candidate with research interests in natural language processing and data augmentation",
+      "entity_type": "person",
+      "description": "a person born in 1999 who is an m s  candidate with research interests in natural language processing and data augmentation",
       "source_ids": [
         43
       ]
     },
     {
       "entity_name": "1999",
-      "entity_type": "DATE",
-      "description": "1999 is the year in which song chenwei was born",
+      "entity_type": "date",
+      "description": "the year song chenwei was born",
       "source_ids": [
         43
       ]
     },
     {
       "entity_name": "natural language processing",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "natural language processing is a research field that song chenwei is interested in",
+      "entity_type": "research field",
+      "description": "a research field that song chenwei is interested in",
       "source_ids": [
         43
       ]
     },
     {
       "entity_name": "data augmentation",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "data augmentation is a research field that song chenwei is interested in",
+      "entity_type": "research field",
+      "description": "a research field that song chenwei is interested in",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "wang jiaxin",
+      "entity_type": "person",
+      "description": "a person born in 2000 who is an m s  candidate with research interests in natural language processing and data augmentation",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "entity_name": "2000",
+      "entity_type": "date",
+      "description": "the year wang jiaxin was born",
       "source_ids": [
         43
       ]
@@ -38,8 +54,8 @@
       "src_entity_name": "song chenwei",
       "tgt_entity_name": "1999",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "song chenwei was born in the year 1999",
+      "weight": 10.0,
+      "description": "song chenwei was born in 1999",
       "source_ids": [
         43
       ]
@@ -60,6 +76,36 @@
       "relation_name": "",
       "weight": 8.0,
       "description": "song chenwei s research interests include data augmentation",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "wang jiaxin",
+      "tgt_entity_name": "2000",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "wang jiaxin was born in 2000",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "wang jiaxin",
+      "tgt_entity_name": "natural language processing",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "wang jiaxin s research interests include natural language processing",
+      "source_ids": [
+        43
+      ]
+    },
+    {
+      "src_entity_name": "wang jiaxin",
+      "tgt_entity_name": "data augmentation",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "wang jiaxin s research interests include data augmentation",
       "source_ids": [
         43
       ]

@@ -24,97 +24,97 @@ log = logging.getLogger(__name__)  # Get logger for main
 
 def create_args():
     """
-    Configures the command-line arguments for the project.
+    配置项目的命令行参数。
 
-    This function sets up a main parser with global options (like config paths)
-    and then adds subparsers for the two main modes of operation: 'index' and 'rag'.
+    此函数设置一个带有全局选项（如配置路径）的主解析器，
+    然后为两种主要操作模式添加子解析器：'index' 和 'rag'。
     """
-    # --- Main Parser ---
-    # This parser handles global arguments that are common to all commands.
+    # --- 主解析器 ---
+    # 此解析器处理所有命令通用的全局参数。
     parser = argparse.ArgumentParser(
-        description="A command-line interface for building an index or running RAG inference.",
-        formatter_class=argparse.RawTextHelpFormatter,  # For better help text formatting
+        description="用于构建索引或运行 RAG 推理的命令行界面。",
+        formatter_class=argparse.RawTextHelpFormatter,  # 为了更好的帮助文本格式
     )
 
-    # Global arguments required by both 'index' and 'rag' commands
+    # 'index' 和 'rag' 命令都需要全局参数
     parser.add_argument(
         "-c",
         "--config",
         type=str,
         required=True,
-        help="Path to the main system configuration file (e.g., config/main_config.yaml).",
+        help="主系统配置文件的路径 (例如: config/main_config.yaml)。",
     )
     parser.add_argument(
         "-d",
         "--dataset_config",
         type=str,
         required=False,
-        help="(Optional) Path to the dataset configuration file for batch processing.",
+        help="(可选) 用于批处理的数据集配置文件的路径。",
     )
 
     parser.add_argument(
         "--debug",
         action="store_true",
-        help="Enable debug mode for more verbose logging and error output.",
+        help="启用调试模式以获取更详细的日志和错误输出。",
     )
 
     parser.add_argument(
         "--nsplit",
         type=int,
         default=2,
-        help="The total number of splits for parallel processing.",
+        help="并行处理的总分片数。",
     )
     parser.add_argument(
         "--num",
         type=int,
         default=2,
-        help="The current split number (1-indexed) to process.",
+        help="要处理的当前分片编号 (从 1 开始)。",
     )
 
-    # --- Subparsers for Commands ---
-    # This will hold the subparsers for 'index' and 'rag'
+    # --- 命令的子解析器 ---
+    # 这将保存 'index' 和 'rag' 的子解析器
     subparsers = parser.add_subparsers(
-        dest="command", required=True, help="Available commands"
+        dest="command", required=True, help="可用命令"
     )
 
-    # --- 'index' Command ---
-    # The parser for the 'index' command
+    # --- 'index' 命令 ---
+    # 'index' 命令的解析器
     parser_index = subparsers.add_parser(
         "index",
-        help="Build an search index from the documents specified in the dataset config.",
+        help="从数据集配置中指定的文档构建搜索索引。",
     )
-    # You can add arguments specific to indexing here if needed in the future
-    # For example:
-    # parser_index.add_argument("--force-rebuild", action="store_true", help="Force rebuilding the index if it already exists.")
+    # 将来可以在此处添加特定于索引的参数
+    # 例如:
+    # parser_index.add_argument("--force-rebuild", action="store_true", help="如果索引已存在，强制重建。")
 
-    # --- 'rag' Command ---
-    # The parser for the 'rag' (inference) command
+    # --- 'rag' 命令 ---
+    # 'rag' (推理) 命令的解析器
     parser_rag = subparsers.add_parser(
-        "rag", help="Run RAG inference using a pre-built index."
+        "rag", help="使用预构建的索引运行 RAG 推理。"
     )
-    # You can add arguments specific to inference here
-    # For example, to run a single query from the command line:
+    # 可以在此处添加特定于推理的参数
+    # 例如，从命令行运行单个查询：
     parser_rag.add_argument(
         "-q",
         "--query",
         type=str,
-        help="(Optional) A single query to run. If not provided, runs queries from the dataset config.",
+        help="(可选) 要运行的单个查询。如果未提供，则运行数据集配置中的查询。",
     )
 
-    # --- ADD THIS ARGUMENT ---
-    # This allows the user to select a specific pipeline stage to execute.
+    # --- 添加此参数 ---
+    # 这允许用户选择要执行的特定管道阶段。
     parser_index.add_argument(
         "--stage",
         type=str,
         default="all",
         choices=["tree", "graph", "vdb", "all", "mm_reranker", "rebuild_graph_vdb"],
-        help="Specify which stage of the indexing pipeline to run: "
-        "'tree' - Build and save the document tree only. "
-        "'graph' - Build and save the knowledge graph (requires a tree). "
-        "'vdb' - Build and save the vector database (requires a tree). "
-        "'all' - Run all stages sequentially."
-        "'mm_reranker' - Build and save the multi-modal reranker (requires a tree). "
-        "'rebuild_graph_vdb' - Rebuild the graph and vector database (requires GBC Index).",
+        help="指定要运行的索引管道阶段： "
+        "'tree' - 仅构建并保存文档树。 "
+        "'graph' - 构建并保存知识图谱 (需要树)。 "
+        "'vdb' - 构建并保存向量数据库 (需要树)。 "
+        "'all' - 按顺序运行所有阶段。"
+        "'mm_reranker' - 构建并保存多模态重排序器 (需要树)。 "
+        "'rebuild_graph_vdb' - 重建图和向量数据库 (需要 GBC 索引)。",
     )
 
     return parser.parse_args()
@@ -123,38 +123,39 @@ def create_args():
 @trace_execution
 def build_index(config: SystemConfig, stage: str = "all", data_df: pd.DataFrame = None):
     log.info(
-        f"  - build_index called. Indexing '{config.pdf_path}' into '{config.save_path}'"
+        f"  - build_index 被调用。正在将 '{config.pdf_path}' 索引到 '{config.save_path}'"
     )
 
-    # Stage 1: Build the Document Tree
+    # 第一阶段：构建文档树
     if stage in ["tree", "all"]:
-        log.info("  - STAGE: Building Document Tree...")
-        # This function should build the tree and save it to config.save_path
+        log.info("  - 阶段：正在构建文档树...")
+        # 此函数应构建树并将其保存到 config.save_path
         construct_GBC_index(config, tree_only=True)
 
-    # Stage 2: Build the Knowledge Graph
+    # 第二阶段：构建知识图谱
     if stage in ["graph", "all"]:
-        log.info("  - STAGE: Building Knowledge Graph...")
-        # This function should LOAD the pre-existing tree and then build/save the graph
+        log.info("  - 阶段：正在构建知识图谱...")
+        # 此函数应加载预先存在的树，然后构建/保存图谱
         construct_GBC_index(config)
 
-    # Stage 3: Build the Vector Database
+    # 第三阶段：构建向量数据库
     if stage in ["vdb", "all"]:
-        log.info("  - STAGE: Building Vector Database...")
-        # This function should LOAD the pre-existing tree and then build/save the VDB
+        log.info("  - 阶段：正在构建向量数据库...")
+        # 此函数应加载预先存在的树，然后构建/保存 VDB
         construct_vdb(config)
 
     if stage == "mm_reranker":
-        log.info("  - STAGE: Building MM Reranker Embedding...")
+        log.info("  - 阶段：正在构建多模态重排序器嵌入...")
         compute_mm_reranker(config, data_df)
     
     if stage == "rebuild_graph_vdb":
-        log.info("  - STAGE: Rebuilding Graph VDB...")
+        log.info("  - 阶段：正在重建图 VDB...")
         rebuild_graph_vdb(config)
 
 @trace_execution
 def run_inference(config: SystemConfig, data_df: pd.DataFrame, dataset_name: str):
-    log.info(f"  - run_inference called. Using index from '{config.save_path}'")
+    log.info(f"  - run_inference 被调用。使用来自 '{config.save_path}' 的索引")
+    log.info(f"  - data_df的问题为 '{data_df}' ")
     inference(
         cfg=config,
         data_df=data_df,
@@ -164,44 +165,44 @@ def run_inference(config: SystemConfig, data_df: pd.DataFrame, dataset_name: str
 
 def setup_logging(save_path: str, config_to_log: SystemConfig):
     """
-    Sets up the root logger to output to both a Rich console and a timestamped file.
-    A new log file is created for each run inside the specified save_path.
+    设置根记录器以输出到 Rich 控制台和带时间戳的文件。
+    在指定的 save_path 中为每次运行创建一个新的日志文件。
 
-    :param save_path: The base directory for the current run, where logs will be saved.
-    :param config_to_log: The configuration object to be logged at the start.
+    :param save_path: 当前运行的基本目录，日志将保存在此处。
+    :param config_to_log: 启动时要记录的配置对象。
     """
     log_dir = Path(save_path) / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
 
-    # Generate a timestamped log file name
+    # 生成带时间戳的日志文件名
     log_file = log_dir / f"run_{time.strftime('%Y%m%d_%H%M%S')}.log"
 
-    # It's better to get the root logger and configure it directly
-    # than to use basicConfig, especially for re-configuration.
+    # 直接获取根记录器并进行配置比使用 basicConfig 更好，
+    # 尤其是在重新配置时。
     root_logger = logging.getLogger()
 
-    # Clear any existing handlers to prevent duplicate logging
+    # 清除任何现有的处理程序以防止重复记录
     if root_logger.hasHandlers():
         root_logger.handlers.clear()
 
     root_logger.setLevel(logging.INFO)
 
-    # --- Create Handlers ---
-    # 1. RichHandler for beautiful console output
+    # --- 创建处理程序 ---
+    # 1. 用于美观控制台输出的 RichHandler
     console_handler = RichHandler(rich_tracebacks=True, show_path=False)
 
-    # 2. FileHandler for saving logs to a file
+    # 2. 用于将日志保存到文件的 FileHandler
     file_handler = logging.FileHandler(log_file, encoding="utf-8")
     file_formatter = logging.Formatter(
         "%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt="[%X]"
     )
     file_handler.setFormatter(file_formatter)
 
-    # --- Add Handlers to the Root Logger ---
+    # --- 将处理程序添加到根记录器 ---
     root_logger.addHandler(console_handler)
     root_logger.addHandler(file_handler)
 
-    # --- 3. Trace FileHandler for detailed execution logs ---
+    # --- 3. 用于详细执行日志的跟踪 FileHandler ---
     trace_log_file = log_dir / f"trace_{time.strftime('%Y%m%d_%H%M%S')}.log"
     trace_handler = logging.FileHandler(trace_log_file, encoding="utf-8")
     trace_formatter = logging.Formatter(
@@ -209,35 +210,35 @@ def setup_logging(save_path: str, config_to_log: SystemConfig):
     )
     trace_handler.setFormatter(trace_formatter)
 
-    # Configure the specific TraceLogger
+    # 配置特定的 TraceLogger
     trace_logger = logging.getLogger(TRACE_LOGGER_NAME)
     trace_logger.setLevel(logging.INFO)
-    # Clear existing handlers if any (to avoid duplicates on re-runs)
+    # 如果有现有的处理程序，请清除（以避免重新运行时重复）
     if trace_logger.hasHandlers():
         trace_logger.handlers.clear()
     trace_logger.addHandler(trace_handler)
-    # Prevent propagation to root logger to avoid cluttering main logs
+    # 防止传播到根记录器以避免混乱主日志
     trace_logger.propagate = False
 
-    # --- Log the Initial Configuration ---
-    # Get a logger instance for this setup function
+    # --- 记录初始配置 ---
+    # 获取此设置函数的记录器实例
     log = logging.getLogger("LoggerSetup")
-    log.info(f"Logging initialized. Log file will be saved to: {log_file}")
-    log.info(f"Trace logging initialized. Trace file will be saved to: {trace_log_file}")
+    log.info(f"日志已初始化。日志文件将保存到: {log_file}")
+    log.info(f"跟踪日志已初始化。跟踪文件将保存到: {trace_log_file}")
 
-    # Prettify the config output using yaml.dump
+    # 使用 yaml.dump 美化配置输出
     config_dict = config_to_log.model_dump()
     config_yaml_string = yaml.dump(
         config_dict, allow_unicode=True, default_flow_style=False
     )
-    log.info(f"--- Starting Run with Configuration ---\n{config_yaml_string}")
+    log.info(f"--- 开始使用配置运行 ---\n{config_yaml_string}")
 
 
 def process_resource(base_system_cfg: SystemConfig, args):
-    # Ensure the nested models exist before assigning
+    # 确保嵌套模型在赋值前存在
     base_system_cfg.mineru.server_url = "http://localhost:30001"
 
-    # For Graph construction
+    # 用于图构建
     # base_system_cfg.graph.reranker_config.api_base = "http://localhost:8010/v1"
     # base_system_cfg.llm.api_base = "http://10.26.1.21:8002/v1"
     base_system_cfg.llm.api_base = "http://localhost:8003/v1"
@@ -247,7 +248,7 @@ def process_resource(base_system_cfg: SystemConfig, args):
             "cuda:4"
         )
 
-    # For GBC inference
+    # 用于 GBC 推理
     if base_system_cfg.rag.strategy_config.strategy == "gbc":
         base_system_cfg.rag.strategy_config.mm_reranker_config.device = "cuda:3"
 
@@ -259,13 +260,13 @@ def process_resource(base_system_cfg: SystemConfig, args):
 
 def main():
     """
-    The main function to run the script.
+    运行脚本的主函数。
     """
     args = create_args()
 
-    log.info("--- Arguments Loaded ---")
-    log.info(f"Main Config Path: {args.config}")
-    log.info(f"Selected Command: {args.command}")
+    log.info("--- 参数已加载 ---")
+    log.info(f"主配置路径: {args.config}")
+    log.info(f"选定的命令: {args.command}")
     log.info("------------------------\n")
 
     base_system_cfg: SystemConfig = load_system_config(args.config)
@@ -274,10 +275,10 @@ def main():
     token_tracker.reset()
 
     if args.num % 2 == 0 or args.debug:
-        # modify the device config for mineru, embedding, reranker
-        # assign 30001 to a half of the num
+        # 修改 mineru, embedding, reranker 的设备配置
+        # 将 30001 分配给一半的 num
         log.info(
-            f"  - Split {args.num}: Overriding mineru.server_url to http://localhost:30001"
+            f"  - 分片 {args.num}: 覆盖 mineru.server_url 为 http://localhost:30001"
         )
         base_system_cfg = process_resource(base_system_cfg, args)
 
@@ -285,46 +286,46 @@ def main():
         log.info("执行的是当前分支（第一个分支）")
         dataset_cfg: DatasetConfig = load_dataset_config(args.dataset_config)
 
-        # 1. Load the entire dataset from the JSON file into a pandas DataFrame
-        log.info(f"  - Loading dataset from: {dataset_cfg.dataset_path}")
+        # 1. 将整个数据集从 JSON 文件加载到 pandas DataFrame 中
+        log.info(f"  - 正在从以下位置加载数据集: {dataset_cfg.dataset_path}")
         try:
             df = pd.read_json(dataset_cfg.dataset_path)
             print(f"Dataset shape: {df.shape}")
         except FileNotFoundError:
-            log.error(f"ERROR: Dataset file not found at '{dataset_cfg.dataset_path}'")
+            log.error(f"错误: 在 '{dataset_cfg.dataset_path}' 未找到数据集文件")
             return
         except Exception as e:
-            log.error(f" ERROR: Failed to parse JSON file. Reason: {e}")
+            log.error(f" 错误: 解析 JSON 文件失败。原因: {e}")
             return
 
-        # 2. Group by document identifiers to find unique documents
+        # 2. 按文档标识符分组以查找唯一文档
         document_groups = df.groupby(["doc_uuid", "doc_path"])
-        print(f"  - Found {len(document_groups)} unique documents in the dataset.")
+        print(f"  - 在数据集中找到 {len(document_groups)} 个唯一文档。")
 
-        # Convert groupby object to a list to allow slicing
+        # 将 groupby 对象转换为列表以允许切片
         all_groups = list(document_groups)
         total_docs = len(all_groups)
 
         if args.num > args.nsplit or args.num <= 0:
             print(
-                f"  - ERROR: --num ({args.num}) must be between 1 and --nsplit ({args.nsplit})."
+                f"  - 错误: --num ({args.num}) 必须在 1 和 --nsplit ({args.nsplit}) 之间。"
             )
             return
 
-        # Calculate the start and end index for the current split
+        # 计算当前分片的开始和结束索引
         items_per_split = math.ceil(total_docs / args.nsplit)
         start_index = (args.num - 1) * items_per_split
         end_index = min(
             start_index + items_per_split, total_docs
-        )  # Ensure we don't go past the end
+        )  # 确保我们不会超出结尾
 
         docs_to_process = all_groups[start_index:end_index]
 
         print(
-            f" This worker (split {args.num}/{args.nsplit}) will process {len(docs_to_process)} documents (from index {start_index} to {end_index-1})."
+            f" 此工作进程 (分片 {args.num}/{args.nsplit}) 将处理 {len(docs_to_process)} 个文档 (从索引 {start_index} 到 {end_index-1})。"
         )
 
-        # 3. Loop over each unique document group
+        # 3. 循环遍历每个唯一文档组
         index_error_list = []
         rag_error_list = []
 
@@ -332,11 +333,11 @@ def main():
             if args.debug and doc_uuid != "fe4f4a15-bc6c-5bf1-a21d-7fe10130b991":
                 continue
 
-            # a. Create a deep copy of the base config for this specific document run.
+            # a. 为此特定文档运行创建基本配置的深层副本。
             current_config = base_system_cfg.model_copy(deep=True)
 
-            # b. Dynamically set the paths based on the dataset's content
-            # The doc_path from JSON is the source PDF
+            # b. 根据数据集内容动态设置路径
+            # JSON 中的 doc_path 是源 PDF
             pdf_full_path = Path(doc_path)
             output_full_path = Path(dataset_cfg.working_dir) / str(
                 doc_uuid
@@ -349,19 +350,19 @@ def main():
                 save_path=current_config.save_path, config_to_log=current_config
             )
 
-            log.info(f"--- Processing Document UUID: {doc_uuid} ---")
-            log.info(f"  - PDF Path: {pdf_full_path}")
-            log.info(f"  - Save Path: {output_full_path}")
+            log.info(f"--- 正在处理文档 UUID: {doc_uuid} ---")
+            log.info(f"  - PDF 路径: {pdf_full_path}")
+            log.info(f"  - 保存路径: {output_full_path}")
 
-            # d. Ensure output directory exists and save a config snapshot for reproducibility
+            # d. 确保输出目录存在并保存配置快照以实现可复现性
             output_full_path.mkdir(parents=True, exist_ok=True)
 
             if args.command == "index":
-                # For indexing, save the general run_config.yaml
+                # 对于索引，保存通用的 run_config.yaml
                 config_snapshot_path = output_full_path / "run_config.yaml"
                 with open(config_snapshot_path, "w", encoding="utf-8") as f:
                     yaml.dump(current_config.model_dump(), f, allow_unicode=True)
-                log.info(f"  - Saved index config snapshot to: {config_snapshot_path}")
+                log.info(f"  - 已将索引配置快照保存到: {config_snapshot_path}")
 
                 try:
                     data_df = group.reset_index(drop=True)
@@ -369,33 +370,33 @@ def main():
                         config=current_config, stage=args.stage, data_df=data_df
                     )
                 except Exception as e:
-                    log.error(f"  - ERROR: Failed to build index. Reason: {e}")
+                    log.error(f"  - 错误: 构建索引失败。原因: {e}")
                     index_error_list.append((doc_uuid, str(e)))
 
             elif args.command == "rag":
-                # For RAG, create a strategy-specific config name
-                # We assume the path to the strategy is like: cfg.rag.strategy_config.strategy
+                # 对于 RAG，创建特定于策略的配置名称
+                # 我们假设策略路径类似于: cfg.rag.strategy_config.strategy
                 rag_strategy = current_config.rag.strategy_config.strategy
                 config_snapshot_filename = f"rag_config_{rag_strategy}.yaml"
                 config_snapshot_path = output_full_path / config_snapshot_filename
 
                 with open(config_snapshot_path, "w", encoding="utf-8") as f:
                     yaml.dump(current_config.model_dump(), f, allow_unicode=True)
-                log.info(f"  - Saved RAG config snapshot to: {config_snapshot_path}")
+                log.info(f"  - 已将 RAG 配置快照保存到: {config_snapshot_path}")
 
                 dataset_name = dataset_cfg.dataset_name
                 data_df = group.reset_index(drop=True)
                 try:
-                    run_inference(
+                    run_inference(   #RAG推理从这里进入
                         config=current_config,
                         data_df=data_df,
                         dataset_name=dataset_name,
                     )
                 except Exception as e:
-                    log.error(f"  - ERROR: Failed to run inference. Reason: {e}")
+                    log.error(f"  - 错误: 运行推理失败。原因: {e}")
                     rag_error_list.append((doc_uuid, str(e)))
 
-        # get the base directory of the script
+        # 获取脚本的基本目录
         import os
         base_dir = os.path.dirname(os.path.abspath(__file__))
         dataset_name = dataset_cfg.dataset_name
@@ -407,7 +408,7 @@ def main():
                 for item in index_error_list:
                     f.write(f"{item}\n")
             log.info(
-                f"  - Indexing completed with errors. See {error_log_path} for details."
+                f"  - 索引完成，但有错误。详情请见 {error_log_path}。"
             )
 
         if rag_error_list:
@@ -418,33 +419,32 @@ def main():
                 for item in rag_error_list:
                     f.write(f"{item}\n")
             log.info(
-                f"  - RAG completed with errors. See {error_log_path} for details."
+                f"  - RAG 完成，但有错误。详情请见 {error_log_path}。"
             )
-        log.info(f"--- All documents in this split processed. ---\n")
+        log.info(f"--- 此分片中的所有文档已处理完毕。 ---\n")
     else:
-        # SINGLE FILE MODE
+        # 单文件模式
         log.info("执行的是当前分支（第二个分支）")
         setup_logging(
             save_path=base_system_cfg.save_path, config_to_log=base_system_cfg
         )
 
-        log.info(f"🚀 No dataset config provided. Starting SINGLE mode...")
-        log.info(f"  - Using paths and settings from '{args.config}'")
+        log.info(f"🚀 未提供数据集配置。正在启动单文件模式...")
+        log.info(f"  - 使用来自 '{args.config}' 的路径和设置")
 
         if args.command == "index":
             build_index(config=base_system_cfg)
 
         elif args.command == "rag":
-            # Check if the --query argument was provided
+            # 检查是否提供了 --query 参数
             if args.query:
-                log.info(f"  - Running inference on single query: '{args.query}'")
-                # Note: run_inference expects a list of queries, so we wrap the single query in a list
+                log.info(f"  - 正在对单个查询运行推理: '{args.query}'")
+                # 注意: run_inference 期望查询列表，因此我们将单个查询包装在列表中
                 run_inference(config=base_system_cfg, queries=[args.query])
             else:
-                # If no query is provided, print a helpful message and exit.
-                log.error("  - ERROR: RAG command in single mode requires a query.")
-                log.error("  - Please provide one with the -q/--query argument.")
-
+                # 如果未提供查询，则打印帮助信息并退出。
+                log.error("  - 错误: 单文件模式下的 RAG 命令需要一个查询。")
+                log.error("  - 请使用 -q/--query 参数提供一个查询。")
 
 if __name__ == "__main__":
     main()

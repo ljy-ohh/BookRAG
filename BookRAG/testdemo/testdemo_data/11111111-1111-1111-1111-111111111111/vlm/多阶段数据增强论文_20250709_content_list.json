@@ -34,10 +34,10 @@
     },
     {
         "type": "text",
-        "text": "手机号：15067734428",
+        "text": "手机号： 15067734428",
         "bbox": [
-            73,
-            195,
+            72,
+            193,
             186,
             204
         ],
@@ -101,7 +101,7 @@
     },
     {
         "type": "text",
-        "text": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪1",
+        "text": "宋晨炜1，江志英1\\*，韩众和2,3,4，王嘉薪",
         "bbox": [
             242,
             258,
@@ -139,7 +139,7 @@
             247,
             300,
             495,
-            311
+            310
         ],
         "page_idx": 0
     },
@@ -248,7 +248,7 @@
         "text": "3. Key Laboratory of Network Information System Technology, Institute of Electronic, Chinese Academy of Sciences, Beijing 100190;",
         "bbox": [
             119,
-            632,
+            631,
             623,
             640
         ],
@@ -258,10 +258,10 @@
         "type": "text",
         "text": "4. Key Laboratory of Target Cognition and Application Technology, Chinese Academy of Sciences, Beijing 100190;)",
         "bbox": [
-            154,
-            643,
+            152,
+            642,
             589,
-            652
+            653
         ],
         "page_idx": 0
     },
@@ -271,7 +271,7 @@
         "bbox": [
             67,
             653,
-            665,
+            663,
             749
         ],
         "page_idx": 0
@@ -591,7 +591,7 @@
         "type": "text",
         "text": "SONG Chenwei, born in 1999, M. S. candidate. His research interests include natural language processing, data augmentation",
         "bbox": [
-            383,
+            381,
             323,
             670,
             344
@@ -613,9 +613,9 @@
         "type": "text",
         "text": "WANG Jiaxin, born in 2000, M. S. candidate. His research interests include natural language processing, data augmentation.",
         "bbox": [
-            383,
+            381,
             393,
-            675,
+            673,
             414
         ],
         "page_idx": 2

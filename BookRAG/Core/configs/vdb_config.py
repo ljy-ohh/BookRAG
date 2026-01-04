@@ -5,6 +5,9 @@ from Core.configs.embedding_config import EmbeddingConfig
 
 @dataclass
 class VDBConfig:
+    """
+    向量数据库配置类。
+    """
     mm_embedding: bool = True
     vdb_dir_name: str = "./chroma_db"
     collection_name: str = "default_collection"

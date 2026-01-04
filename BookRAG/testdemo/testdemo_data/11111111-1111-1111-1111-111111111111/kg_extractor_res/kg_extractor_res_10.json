@@ -2,16 +2,8 @@
   "entities": [
     {
       "entity_name": "tp391",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "tp391 is a classification code indicating a research field  likely related to computer science or information technology",
-      "source_ids": [
-        10
-      ]
-    },
-    {
-      "entity_name": "a",
-      "entity_type": "PUBLICATION_VENUE",
-      "description": "a is a document code used to indicate a type of publication or journal category",
+      "entity_type": "research field",
+      "description": "a research field classification code mentioned in the document",
       "source_ids": [
         10
       ]

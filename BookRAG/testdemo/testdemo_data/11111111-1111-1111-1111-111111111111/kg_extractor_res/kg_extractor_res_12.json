@@ -2,7 +2,7 @@
   "entities": [
     {
       "entity_name": "song chenwei",
-      "entity_type": "PERSON",
+      "entity_type": "person",
       "description": "a person listed as an author of the document",
       "source_ids": [
         12
@@ -10,7 +10,7 @@
     },
     {
       "entity_name": "jiang zhiying",
-      "entity_type": "PERSON",
+      "entity_type": "person",
       "description": "a person listed as an author of the document",
       "source_ids": [
         12
@@ -18,7 +18,7 @@
     },
     {
       "entity_name": "han zhonghe",
-      "entity_type": "PERSON",
+      "entity_type": "person",
       "description": "a person listed as an author of the document",
       "source_ids": [
         12
@@ -26,7 +26,7 @@
     },
     {
       "entity_name": "wang jiaxin",
-      "entity_type": "PERSON",
+      "entity_type": "person",
       "description": "a person listed as an author of the document",
       "source_ids": [
         12

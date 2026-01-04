@@ -2,21 +2,32 @@
   "entities": [
     {
       "entity_name": "ace05 en",
-      "entity_type": "DATASET_OR_CORPUS",
-      "description": "ace05 en  is a dataset where event counts were expanded to 9931 through a data augmentation method",
+      "entity_type": "dataset or corpus",
+      "description": "ace05 en  is a dataset where the number of events was expanded to 9931 through a data augmentation method",
       "source_ids": [
         31
       ]
     },
     {
       "entity_name": "ere en",
-      "entity_type": "DATASET_OR_CORPUS",
+      "entity_type": "dataset or corpus",
       "description": "ere en is a dataset mentioned alongside ace05 en  in the context of data augmentation",
       "source_ids": [
         31
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "ace05 en",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "both ace05 en  and ere en are datasets mentioned together in the statistical results of a data augmentation method",
+      "source_ids": [
+        31
+      ]
+    }
+  ],
   "node_idx": 31
 }

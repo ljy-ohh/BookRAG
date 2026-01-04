@@ -1,51 +1,5 @@
 {
-  "entities": [
-    {
-      "entity_name": "3.3 实验设置",
-      "entity_type": "SECTION_TITLE",
-      "description": "作为'回复：补充对数据增强框架对HDGSE模型性能的影响'的子章节，本节详细说明了验证数据增强框架对HDGSE模型性能影响的具体实验配置、环境和参数。",
-      "source_ids": [
-        23
-      ]
-    },
-    {
-      "entity_name": "实验",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "指代在章节3.3中详细描述的、用于评估数据增强框架对HDGSE模型性能影响的具体实验过程。",
-      "source_ids": [
-        23
-      ]
-    },
-    {
-      "entity_name": "设置",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "指代在章节3.3中定义的实验环境、配置参数和运行条件。",
-      "source_ids": [
-        23
-      ]
-    }
-  ],
-  "relations": [
-    {
-      "src_entity_name": "实验",
-      "tgt_entity_name": "3.3 实验设置",
-      "relation_name": "",
-      "weight": 10.0,
-      "description": "概念'实验'是章节3.3的核心主题之一。",
-      "source_ids": [
-        23
-      ]
-    },
-    {
-      "src_entity_name": "设置",
-      "tgt_entity_name": "3.3 实验设置",
-      "relation_name": "",
-      "weight": 10.0,
-      "description": "概念'设置'是章节3.3的核心主题之一。",
-      "source_ids": [
-        23
-      ]
-    }
-  ],
+  "entities": [],
+  "relations": [],
   "node_idx": 23
 }

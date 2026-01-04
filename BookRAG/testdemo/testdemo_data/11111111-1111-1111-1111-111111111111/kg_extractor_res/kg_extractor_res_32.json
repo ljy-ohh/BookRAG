@@ -1,25 +1,5 @@
 {
-  "entities": [
-    {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
-      "source_ids": [
-        32
-      ]
-    }
-  ],
-  "relations": [
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the large language model is used to directly generate event data for analysis",
-      "source_ids": [
-        32
-      ]
-    }
-  ],
+  "entities": [],
+  "relations": [],
   "node_idx": 32
 }

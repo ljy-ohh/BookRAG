@@ -1,12 +1,12 @@
-Given the question and analysis, you are tasked to extract answers with required formats from the free-form analysis. 
-- Your extracted answers should be one of the following formats: (1) Integer, (2) Float, (3) String and (4) List. If you find the analysis the question can not be answered from the given documents, type "Not answerable". Exception: If the analysis only tells you that it can not read/understand the images or documents, type "Fail to answer".
-- Please make your response as concise as possible. Also note that your response should be formatted as below:
+给定问题和分析，您的任务是从自由格式的分析中提取具有所需格式的答案。
+- 您提取的答案应为以下格式之一：(1) Integer（整数），(2) Float（浮点数），(3) String（字符串）和 (4) List（列表）。如果您发现分析表明无法根据给定的文档回答问题，请输入 "Not answerable"。例外情况：如果分析仅告诉您它无法读取/理解图像或文档，请输入 "Fail to answer"。
+- 请使您的回答尽可能简洁。另请注意，您的回答应按如下格式设置：
 ```
 Extracted answer: [answer]
 Answer format: [answer format]
 ```
 
-Please read the following example, then extract the answer from the model response and type it at the end of the prompt. 
+请阅读以下示例，然后从模型回答中提取答案并将其输入在提示的末尾。
 
 ---
 Question: List the primary questions asked about the services in this report.

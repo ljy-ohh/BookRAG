@@ -1,26 +1,26 @@
 {
-    "build_tree_time": 154.69,
+    "build_tree_time": 945.19,
     "token_stage_history": {
         "tree_index_construction": {
             "prompt_tokens": 6270,
-            "completion_tokens": 397,
-            "total_tokens": 6667
+            "completion_tokens": 403,
+            "total_tokens": 6673
         },
         "tree_node_summary": {
-            "prompt_tokens": 13872,
-            "completion_tokens": 2833,
-            "total_tokens": 16705
+            "prompt_tokens": 11941,
+            "completion_tokens": 2361,
+            "total_tokens": 14302
         },
         "kg_extraction": {
-            "prompt_tokens": 130975,
-            "completion_tokens": 15972,
-            "total_tokens": 146947
+            "prompt_tokens": 126233,
+            "completion_tokens": 14891,
+            "total_tokens": 141124
         },
         "kg_refinement": {
-            "prompt_tokens": 67743,
-            "completion_tokens": 2526,
-            "total_tokens": 70269
+            "prompt_tokens": 66641,
+            "completion_tokens": 2322,
+            "total_tokens": 68963
         }
     },
-    "build_kg_time": 986.45
+    "build_kg_time": 2102.91
 }

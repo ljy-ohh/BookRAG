@@ -32,9 +32,8 @@ log = logging.getLogger(__name__)
 
 class GraphRAG(BaseRAG):
     """
-    Graph RAG (Graph-Based Contextual Retrieval Augmented Generation) class.
-    This class is designed to handle the retrieval and generation of responses
-    based on a graph-based context.
+    Graph RAG (基于图的上下文检索增强生成) 类。
+    此类旨在处理基于图上下文的响应检索和生成。
     """
 
     def __init__(
@@ -47,7 +46,7 @@ class GraphRAG(BaseRAG):
         super().__init__(
             llm,
             name="Graph RAG",
-            description="Graph-Based Contextual Retrieval Augmented Generation",
+            description="基于图的上下文检索增强生成",
         )
         self.vlm = vlm
         self.cfg = config
@@ -74,11 +73,10 @@ class GraphRAG(BaseRAG):
 
     def _extract_entities(self, query: str) -> List[Any]:
         """
-        Extracts entities from the query string.
-        This method should be implemented to extract relevant entities
-        that can be used for retrieval.
+        从查询字符串中提取实体。
+        应实现此方法以提取可用于检索的相关实体。
         """
-        # Placeholder for entity extraction logic
+        # 实体提取逻辑的占位符
         prompt = QUESTION_EE_PROMPT.format(
             input_text=query, entity_types=", ".join(QUESTION_ENTITY_TYPES)
         )
@@ -89,15 +87,15 @@ class GraphRAG(BaseRAG):
             if res and res.entities:
                 entities = res.entities
                 entities_name = [entity.entity_name for entity in entities]
-                log.info(f"Extracted entities: {entities_name}")
+                log.info(f"已提取实体: {entities_name}")
                 return entities
             else:
-                log.info("No entities extracted from the query.")
+                log.info("未从查询中提取到实体。")
 
         except Exception as e:
-            log.error(f"Error during entity extraction: {e}")
+            log.error(f"实体提取过程中出错: {e}")
 
-        log.info("Use the question as the entity.")
+        log.info("使用问题作为实体。")
         res_entities = [Entity(entity_name=query, entity_type="Question")]
         return res_entities
 
@@ -106,8 +104,8 @@ class GraphRAG(BaseRAG):
 
     def _entity_map(self, entities: List[str]) -> Dict[str, List[str]]:
         """
-        Maps entities to their corresponding IDs in the GBC index.
-        Use vdb to find the entity in GBC index.
+        将实体映射到 GBC 索引中对应的 ID。
+        使用 vdb 在 GBC 索引中查找实体。
         """
         entities_str = [self._get_entity_embed_text(entity) for entity in entities]
         Qent_GBCent_map = defaultdict(list)
@@ -119,7 +117,7 @@ class GraphRAG(BaseRAG):
                 retrieve_name, retrieve_type
             )
             Qent_GBCent_map[ent_str].append(node_name)
-            log.info(f"Entity '{ent_str}' mapped to GBC entity: {node_name}")
+            log.info(f"实体 '{ent_str}' 映射到 GBC 实体: {node_name}")
 
         return Qent_GBCent_map
 
@@ -130,14 +128,14 @@ class GraphRAG(BaseRAG):
         ents_sim = {}
         for q_ent_name, gbc_ents in ent_map.items():
             for node_name in gbc_ents:
-                # compute similarity between the query entity and the GBC entity
+                # 计算查询实体和 GBC 实体之间的相似度
                 sim = self.embedder.compute_texts_sim(q_ent_name, node_name)
                 positive_sim = (sim + 1) / 2
                 ents_sim[node_name] = ents_sim.get(node_name, 0.0) + positive_sim
 
         total_sim_sum = sum(ents_sim.values())
 
-        # Normalize the similarity scores
+        # 归一化相似度分数
         personalization_vector = {}
         if total_sim_sum > 0:
             for ent, score in ents_sim.items():
@@ -160,7 +158,7 @@ class GraphRAG(BaseRAG):
         res_entities = res_entities[: self.topk_ent]
         res_entities = [ent for ent, _ in res_entities]
         log.info(
-            f"Graph reranker: Retrieved {len(res_entities)} entities with topk={self.topk_ent}."
+            f"图重排序器: 检索到 {len(res_entities)} 个实体，topk={self.topk_ent}。"
         )
 
         # --- 步骤 3 & 4: 聚合分数到 Tree Node ID 并排序返回 ---
@@ -193,12 +191,12 @@ class GraphRAG(BaseRAG):
         self,
         ent_map: Dict[str, List[str]],
     ) -> None:
-        # 2.1 PPR to rank the most relevant TreeNodes in the subtree.
+        # 2.1 使用 PPR 对子树中最相关的 TreeNode 进行排序。
         graph_rerank_res, res_entities = self.graph_reranker(ent_map)
 
         tree_node_ids = [node_id for node_id, _ in graph_rerank_res]
 
-        # 3. The final graph data info contain TreeNodes and Subgraph info (use Entities node name instead)
+        # 3. 最终的图数据信息包含 TreeNode 和子图信息（使用实体节点名称代替）
         graph_info = {"TreeNode_ids": tree_node_ids, "EntNode_name": res_entities}
         return graph_info
 
@@ -208,41 +206,41 @@ class GraphRAG(BaseRAG):
         query: str,
     ) -> None:
         """
-        GBC retrieval following the steps:
-        1. Extract entities from the query.
-        2. Get the section nodes based on the entities.
-        3. Use LLM to select the most relevant section based on the query and Section info.
-        4. Use graph-based retrieval on the subgraph projected by the subtree (Select Section).
+        GBC 检索遵循以下步骤：
+        1. 从查询中提取实体。
+        2. 根据实体获取部分节点。
+        3. 使用 LLM 根据查询和部分信息选择最相关的部分。
+        4. 在子树（选择部分）投影的子图上使用基于图的检索。
 
-        iter_context: IterationStep, Iteration context for the current step.
+        iter_context: IterationStep, 当前步骤的迭代上下文。
         """
-        # 1. Extract entities from the query
-        # For the first iteration, extract entities from the query
+        # 1. 从查询中提取实体
+        # 对于第一次迭代，从查询中提取实体
         query_entities = self._extract_entities(query)
         if not query_entities:
             return {"TreeNode_ids": [], "EntNode_name": []}
 
-        # 2. Get the entity mapping to GBC entities
+        # 2. 获取到 GBC 实体的实体映射
         Qent_GBCent_map = self._entity_map(query_entities)
 
-        # 4. Graph-based retrieval on subgraph projected by the subtree (Select Section)
+        # 4. 在子树投影的子图上进行基于图的检索（选择部分）
         graph_info = self.get_graph_info(Qent_GBCent_map)
         return graph_info
 
     def _create_augmented_prompt(self, query: str, graph_info: dict):
-        # 1. get retrieval data
+        # 1. 获取检索数据
 
         TreeNode_ids = graph_info.get("TreeNode_ids")
-        # Get the data for the selected TreeNodes and Entity nodes
+        # 获取选定的 TreeNode 和实体节点的数据
         Tree_data = self.gbc_index.TreeIndex.get_nodes_data(TreeNode_ids)
 
         # context_text = "Please refer to the following background information to answer the question. And you should try you best to given the answer\n\n"
-        context_text = "Please refer to the following background information to answer the question. You should answer the question based on the provided information. Don't make up any information.\n\n--- Background Information ---\n"
+        context_text = "请参考以下背景信息来回答问题。您应该基于提供的信息回答问题。不要编造任何信息。\n\n--- 背景信息 ---\n"
         context_images = []
-        question_text = f"--- User Question ---\n{query}\n\n"
+        question_text = f"--- 用户问题 ---\n{query}\n\n"
 
         if Tree_data is None or len(Tree_data) == 0:
-            context_text += "No relevant documents found.\n"
+            context_text += "未找到相关文档。\n"
             context_text += question_text
             return context_text, context_images
 
@@ -253,15 +251,15 @@ class GraphRAG(BaseRAG):
                 if image_path and os.path.exists(image_path):
                     context_images.append(image_path)
                 context_text += (
-                    f"Image: A relevant image is provided at the path: {image_path}\n"
+                    f"图像: 相关图像位于路径: {image_path}\n"
                 )
             elif node_type == NodeType.TABLE:
                 node_data["content"] = table2text(node_data)
-                context_text += f"Table: {node_data['content']}\n"
+                context_text += f"表格: {node_data['content']}\n"
             else:
-                context_text += f"Text: {node_data['content']}\n"
+                context_text += f"文本: {node_data['content']}\n"
 
-        # limit to 2 images as the VLM only support 2 images at once
+        # 限制为 2 张图像，因为 VLM 一次仅支持 2 张图像
         context = TextProcessor.split_text_into_chunks(
             context_text, max_length=self.llm.config.max_tokens - 400
         )
@@ -273,25 +271,28 @@ class GraphRAG(BaseRAG):
 
     @trace_execution
     def generation(self, query: str, query_output_dir: str):
-        # Initialize the first iteration step
+        """
+        执行 RAG 生成流程：检索、构建提示词、生成答案。
+        """
+        # 初始化第一次迭代步骤
         cnt = 0
         while cnt < self.max_retry:
             cnt += 1
-            log.info(f"Iteration {cnt} for query: {query}")
+            log.info(f"查询的第 {cnt} 次迭代: {query}")
 
-            # GBC retrieval process
+            # GBC 检索过程
             graph_info = self._retrieve(query)
 
             context_text, context_images = self._create_augmented_prompt(
                 query, graph_info
             )
             if len(context_images) > 0:
-                # if there are images, use VLM to generate the answer
+                # 如果有图片，使用 VLM 生成答案
                 final_answer = self.vlm.generate(
                     prompt_or_memory=context_text, images=context_images
                 )
             else:
-                # if no images, fallback to LLM generation
+                # 如果没有图片，回退到 LLM 生成
                 final_answer = self.llm.get_completion(
                     context_text, json_response=False
                 )
@@ -304,13 +305,13 @@ class GraphRAG(BaseRAG):
     def _save_retrieval_res(self, graph_info, query_output_dir: str):
         retrieval_ids = []
 
-        # direct save the context to a json file
+        # 直接将上下文保存到 json 文件
         retrieval_save_res = query_output_dir / "retrieval_res.json"
         with open(retrieval_save_res, "w", encoding="utf-8") as f:
             json.dump(graph_info, f, indent=2, ensure_ascii=False)
-        log.info(f"Retrieval results saved to {retrieval_save_res}")
+        log.info(f"检索结果已保存到 {retrieval_save_res}")
 
-        # use the graph nodes as retrieval ids
+        # 使用图节点作为检索 id
         retrieval_ids = graph_info.get("TreeNode_ids", [])
         return retrieval_ids
 

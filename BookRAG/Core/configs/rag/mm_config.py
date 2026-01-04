@@ -8,5 +8,5 @@ class MMConfig(BaseRAGStrategyConfig):
     vdb_config: VDBConfig = Field(default_factory=VDBConfig)
     strategy: Literal["mmr"] = "mmr"
     topk: int = Field(
-        default=5, description="The number of topk retrieval results for MMRAG."
+        default=5, description="MMRAG 的前 k 个检索结果的数量。"
     )

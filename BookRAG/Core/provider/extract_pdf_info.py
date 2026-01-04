@@ -30,7 +30,7 @@ log = logging.getLogger(__name__)
 
 def prepare_result_dir(output_dir, parse_method):
     """
-    Prepare the output environment by creating necessary directories for images and markdown files.
+    通过创建图像和 Markdown 文件的必要目录来准备输出环境。
     """
     local_md_dir = str(os.path.join(output_dir, parse_method))
     local_image_dir = os.path.join(str(local_md_dir), "images")
@@ -40,15 +40,15 @@ def prepare_result_dir(output_dir, parse_method):
 
 @trace_execution
 def do_parse(
-    output_dir,  # Output directory for storing parsing results
-    pdf_file_name: str,  # Name of the PDF file to be parsed
-    pdf_bytes: bytes,  # Bytes of the PDF file to be parsed
-    p_lang: str,  # Language for the PDF, default is 'ch' (Chinese)
-    backend="pipeline",  # The backend for parsing PDF, default is 'pipeline'
-    parse_method="auto",  # The method for parsing PDF, default is 'auto'
-    p_formula_enable=True,  # Enable formula parsing
-    p_table_enable=True,  # Enable table parsing
-    server_url=None,  # Server URL for vlm-sglang-client backend
+    output_dir,  # 存储解析结果的输出目录
+    pdf_file_name: str,  # 待解析的 PDF 文件名
+    pdf_bytes: bytes,  # 待解析的 PDF 文件字节内容
+    p_lang: str,  # PDF 的语言，默认为 'ch' (中文)
+    backend="pipeline",  # 解析 PDF 的后端，默认为 'pipeline'
+    parse_method="auto",  # 解析 PDF 的方法，默认为 'auto'
+    p_formula_enable=True,  # 启用公式解析
+    p_table_enable=True,  # 启用表格解析
+    server_url=None,  # vlm-sglang-client 后端的服务器 URL
 ):
     local_image_dir, local_md_dir = prepare_result_dir(output_dir, parse_method)
     new_pdf_bytes = convert_pdf_bytes_to_bytes_by_pypdfium2(pdf_bytes)
@@ -62,7 +62,7 @@ def do_parse(
         try:
             asyncio.get_running_loop()
         except RuntimeError:
-            # If no running loop, create a new one
+            # 如果没有运行中的循环，则创建一个新的
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
             
@@ -147,7 +147,7 @@ def do_parse(
 
     draw_layout_bbox(pdf_info, pdf_bytes, local_md_dir, f"{pdf_file_name}_layout.pdf")
 
-    log.info(f"PDF parsing completed. Output saved to {local_md_dir}")
+    log.info(f"PDF 解析完成。输出保存至 {local_md_dir}")
     return middle_json, content_list
 
 
@@ -161,25 +161,25 @@ def parse_doc(
     server_url=None,
 ):
     """
-    Parameter description:
-    pdf_path: Path to the PDF file to be parsed.
-    output_dir: Output directory for storing parsing results.
-    lang: Language option, default is 'en', optional values include['ch', 'ch_server', 'ch_lite', 'en', 'korean', 'japan', 'chinese_cht', 'ta', 'te', 'ka']。
-        Input the languages in the pdf (if known) to improve OCR accuracy.  Optional.
-        Adapted only for the case where the backend is set to "pipeline"
-    backend: the backend for parsing pdf:
-        pipeline: More general.
-        vlm-transformers: More general.
-        vlm-sglang-engine: Faster(engine).
-        vlm-sglang-client: Faster(client).
-        without method specified, pipeline will be used by default.
-    method: the method for parsing pdf:
-        auto: Automatically determine the method based on the file type.
-        txt: Use text extraction method.
-        ocr: Use OCR method for image-based PDFs.
-        Without method specified, 'auto' will be used by default.
-        Adapted only for the case where the backend is set to "pipeline".
-    server_url: When the backend is `sglang-client`, you need to specify the server_url, for example:`http://127.0.0.1:30000`
+    参数说明:
+    pdf_path: 待解析的 PDF 文件路径。
+    output_dir: 存储解析结果的输出目录。
+    lang: 语言选项，默认为 'en'，可选值包括 ['ch', 'ch_server', 'ch_lite', 'en', 'korean', 'japan', 'chinese_cht', 'ta', 'te', 'ka']。
+        输入 PDF 中的语言（如果已知）以提高 OCR 准确率。可选。
+        仅在 backend 设置为 "pipeline" 时适用。
+    backend: 解析 PDF 的后端:
+        pipeline: 更通用。
+        vlm-transformers: 更通用。
+        vlm-sglang-engine: 更快(engine)。
+        vlm-sglang-client: 更快(client)。
+        如果没有指定 method，默认使用 pipeline。
+    method: 解析 PDF 的方法:
+        auto: 根据文件类型自动确定方法。
+        txt: 使用文本提取方法。
+        ocr: 对基于图像的 PDF 使用 OCR 方法。
+        如果没有指定 method，默认使用 'auto'。
+        仅在 backend 设置为 "pipeline" 时适用。
+    server_url: 当 backend 为 `sglang-client` 时，需要指定 server_url，例如：`http://127.0.0.1:30000`
     """
     try:
         file_name = str(Path(pdf_path).stem)
@@ -194,23 +194,23 @@ def parse_doc(
             server_url=server_url,
         )
     except Exception as e:
-        log.error(f"Error parsing {pdf_path}: {e}")
+        log.error(f"解析 {pdf_path} 时出错: {e}")
         raise e
 
 @trace_execution
 def merge_middle_content(
     middle_json, content_list, parse_dir, save_dir=None, file_name=None
 ):
-    """Merge middle JSON content with corresponding content list.
+    """将中间 JSON 内容与相应的内容列表合并。
 
     Args:
-        middle_json (dict): The middle JSON object containing PDF information.
-        content_list (list): The list of content extracted from the PDF.
-        save_dir (str, optional): The directory to save the merged content. Defaults to None.
-        file_name (str, optional): The name of the file to save the merged content. Defaults to None.
+        middle_json (dict): 包含 PDF 信息的中间 JSON 对象。
+        content_list (list): 从 PDF 中提取的内容列表。
+        save_dir (str, optional): 保存合并内容的目录。默认为 None。
+        file_name (str, optional): 保存合并内容的文件名。默认为 None。
 
     Returns:
-        list: A list of merged PDF information.
+        list: 合并后的 PDF 信息列表。
     """
     pdf_info = middle_json["pdf_info"]
     middle_json_para_list = []
@@ -221,10 +221,10 @@ def merge_middle_content(
         middle_json_para_list.extend(discarded_blocks)
     if len(middle_json_para_list) != len(content_list):
         log.error(
-            f"Error: The number of items in middle_json ({len(middle_json_para_list)}) does not match the number of content items ({len(content_list)})."
+            f"错误: middle_json 中的条目数 ({len(middle_json_para_list)}) 与内容条目数 ({len(content_list)}) 不匹配。"
         )
         raise ValueError(
-            f"The number of items in middle_json ({len(middle_json_para_list)}) does not match the number of content items ({len(content_list)})."
+            f"middle_json 中的条目数 ({len(middle_json_para_list)}) 与内容条目数 ({len(content_list)}) 不匹配。"
         )
 
     res_pdf_info_list = []
@@ -234,10 +234,10 @@ def merge_middle_content(
         if "img_path" in res_pdf_info:
             res_pdf_info["img_path"] = os.path.join(parse_dir, res_pdf_info["img_path"])
             if not os.path.exists(res_pdf_info["img_path"]):
-                log.error(f"Image path does not exist: {res_pdf_info['img_path']}")
+                log.error(f"图片路径不存在: {res_pdf_info['img_path']}")
         res_pdf_info_list.append(res_pdf_info)
 
-    log.info(f"Total {len(res_pdf_info_list)} items merged.")
+    log.info(f"共合并 {len(res_pdf_info_list)} 个条目。")
 
     save_path = (
         os.path.join(save_dir, f"{file_name}_merged_content.json") if save_dir else None
@@ -245,9 +245,9 @@ def merge_middle_content(
     if save_path:
         with open(save_path, "w", encoding="utf-8") as f:
             json.dump(res_pdf_info_list, f, ensure_ascii=False, indent=4)
-        log.info(f"Merged content saved to {save_path}")
+        log.info(f"合并后的内容已保存至 {save_path}")
     else:
-        log.info("Merged content not saved, no save_dir provided.")
+        log.info("未提供 save_dir，合并后的内容未保存。")
 
     return res_pdf_info_list
 
@@ -261,18 +261,18 @@ def batch_process_pdfs(
     server_url=None,
 ):
     """
-    Batch process multiple PDF files and parse them.
+    批量处理多个 PDF 文件并进行解析。
 
     Args:
-        pdf_path_list (list): List of paths to PDF files.
-        output_dir (str): Output directory for storing parsing results.
-        lang (str): Language option for OCR, default is 'en'.
-        backend (str): Backend for parsing PDF, default is 'pipeline'.
-        method (str): Method for parsing PDF, default is 'auto'.
-        server_url (str, optional): Server URL for vlm-sglang-client backend.
+        input_pdf_dir (str): PDF 文件所在的目录路径。
+        output_dir (str): 存储解析结果的输出目录。
+        lang (str): OCR 的语言选项，默认为 'en'。
+        backend (str): 解析 PDF 的后端，默认为 'pipeline'。
+        method (str): 解析 PDF 的方法，默认为 'auto'。
+        server_url (str, optional): vlm-sglang-client 后端的服务器 URL。
 
     Returns:
-        list: List of parsed results for each PDF file.
+        list: 每个 PDF 文件的解析结果列表。
     """
     pdf_path_list = os.listdir(input_pdf_dir)
     pdf_path_list = [
@@ -280,28 +280,28 @@ def batch_process_pdfs(
         for pdf_path in pdf_path_list
         if pdf_path.endswith(".pdf")
     ]
-    print(f"Found {len(pdf_path_list)} PDF files in {input_pdf_dir}")
+    print(f"在 {input_pdf_dir} 中发现 {len(pdf_path_list)} 个 PDF 文件")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
-        log.info(f"Created output directory: {output_dir}")
+        log.info(f"已创建输出目录: {output_dir}")
     results = []
     for pdf_path in pdf_path_list:
         file_name = str(Path(pdf_path).stem)
-        log.info(f"Processing PDF: {file_name}")
+        log.info(f"正在处理 PDF: {file_name}")
 
         para_output_dir = os.path.join(output_dir, file_name)
 
         res_path = os.path.join(para_output_dir, f"{file_name}_merged_content.json")
         if os.path.exists(res_path):
-            print(f"Skipping {pdf_path}, already processed.")
+            print(f"跳过 {pdf_path}，已处理。")
             continue
 
         try:
-            # Parse the PDF document
-            log.info(f"Parsing {pdf_path} with backend {backend} and method {method}")
+            # 解析 PDF 文档
+            log.info(f"正在使用后端 {backend} 和方法 {method} 解析 {pdf_path}")
             if not os.path.exists(para_output_dir):
                 os.makedirs(para_output_dir, exist_ok=True)
-                log.info(f"Created directory for parsed content: {para_output_dir}")
+                log.info(f"已为解析内容创建目录: {para_output_dir}")
             middle_json, content_list = parse_doc(
                 pdf_path=Path(pdf_path),
                 output_dir=para_output_dir,
@@ -320,15 +320,15 @@ def batch_process_pdfs(
             )
             results.append(pdf_list)
         except Exception as e:
-            log.error(f"Error processing {pdf_path}: {e}")
+            log.error(f"处理 {pdf_path} 时出错: {e}")
             continue
 
     return results
 
 
 if __name__ == "__main__":
-    # test
-    # backend = "vlm-sglang-client"  # or "vlm-transformers", "vlm-sglang-engine", "vlm-sglang-client", "pipeline"
+    # 测试
+    # backend = "vlm-sglang-client"  # 或者 "vlm-transformers", "vlm-sglang-engine", "vlm-sglang-client", "pipeline"
     backend = "vlm-sglang-client"
     server_url = "http://127.0.0.1:30000" if backend == "vlm-sglang-client" else None
 
@@ -339,22 +339,22 @@ if __name__ == "__main__":
     input_pdf_path = "/home/wangshu/multimodal/GBC-RAG/test/test_code/mineru/tmp_cost/COSTCO_2021_10K.pdf"
     output_dir_path = "/home/wangshu/multimodal/GBC-RAG/test/test_code/mineru/tmp_cost"
 
-    # Set the environment variable to use models from modelscope if you cannot download the model due to network issues.
+    # 如果因网络问题无法下载模型，请设置环境变量以使用 modelscope 的模型。
     os.environ["MINERU_MODEL_SOURCE"] = "modelscope"
 
-    """To enable VLM mode, change the backend to 'vlm-xxx'"""
+    """要启用 VLM 模式，请将 backend 更改为 'vlm-xxx'"""
     middle_json, content_list = parse_doc(
         input_pdf_path,
         output_dir_path,
         backend=backend,
         method=method,
         server_url=server_url,
-    )  # more general.
-    # parse_doc(doc_path_list, output_dir, backend="vlm-sglang-client", server_url="http://127.0.0.1:30000"）  # faster(client).
+    )  # 更通用。
+    # parse_doc(doc_path_list, output_dir, backend="vlm-sglang-client", server_url="http://127.0.0.1:30000"）  # 更快(client)。
 
     file_name = str(Path(input_pdf_path).stem)
     save_dir = os.path.join(output_dir_path, method)
-    debug = False  # Set to True to load from saved files for debugging.
+    debug = False  # 设置为 True 以从保存的文件加载以进行调试。
     if debug:
         tmp_middle_json_path = os.path.join(save_dir, f"{file_name}_middle.json")
         tmp_content_list_path = os.path.join(save_dir, f"{file_name}_content_list.json")
@@ -362,7 +362,7 @@ if __name__ == "__main__":
             middle_json = json.load(f)
         with open(tmp_content_list_path, "r", encoding="utf-8") as f:
             content_list = json.load(f)
-        log.info(f"Loaded middle JSON and content list from {output_dir_path}")
+        log.info(f"从 {output_dir_path} 加载了中间 JSON 和内容列表")
 
     pdf_list = merge_middle_content(
         middle_json,
@@ -370,4 +370,4 @@ if __name__ == "__main__":
         parse_dir=os.path.join(output_dir_path, method),
         save_dir=save_dir,
         file_name=file_name,
-    )  # merge middle json content with content list.
+    )  # 将中间 JSON 内容与内容列表合并。

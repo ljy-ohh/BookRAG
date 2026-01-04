@@ -51,7 +51,7 @@ class BM25:
 
         # 计算每个词的IDF值
         num_docs = len(self.tokenized_docs)
-        for word, freq in tqdm.tqdm(df.items(), total=len(df), desc="Calculating IDF"):
+        for word, freq in tqdm.tqdm(df.items(), total=len(df), desc="计算 IDF"):
             self.idf[word] = math.log((num_docs - freq + 0.5) / (freq + 0.5) + 1)
 
     def _get_score(self, doc_index: int, query_tokens: List[str]) -> float:

@@ -25,29 +25,29 @@ log = logging.getLogger(__name__)
 def run_rag(
     rag_agent: BaseRAG,
     output_dir: str,
-    force_reprocess: bool = False,
+    force_reprocess: bool = False,   # 是否强制重新回答所有问题    也就是是否支持断点续传
     dataset_path: str = None,
     data_df: pd.DataFrame = None,
 ):
-    log.info(f"Results will be saved to: {output_dir}")
+    log.info(f"结果将保存至: {output_dir}")
 
-    # load dataset
+    # 加载数据集
     dataset = None
     if dataset_path and os.path.exists(dataset_path):
         with open(dataset_path, "r", encoding="utf-8") as f:
             dataset = json.load(f)
     elif data_df is not None:
-        # transform data_df into list of dict
+        # 将 data_df 转换为字典列表
         dataset = data_df.to_dict(orient="records")
     else:
-        log.error(f"Dataset file not found: {dataset_path}")
-        log.error("Dataframe data not provided")
-        raise FileNotFoundError(f"Dataset file not found: {dataset_path}")
+        log.error(f"未找到数据集文件: {dataset_path}")
+        log.error("未提供 Dataframe 数据")
+        raise FileNotFoundError(f"未找到数据集文件: {dataset_path}")
 
     results_list = []
     start_time = time.time()
     load_cnt = 0
-    for i, item in enumerate(tqdm(dataset, desc=f"Processing Query")):
+    for i, item in enumerate(tqdm(dataset, desc=f"正在处理查询")):
         query_index_str = f"query_{i+1:03d}"
         query_output_dir = output_dir / query_index_str
         query_result_file = query_output_dir / "result.json"
@@ -57,18 +57,18 @@ def run_rag(
                 with open(query_result_file, "r", encoding="utf-8") as f:
                     existing_result = json.load(f)
                 if existing_result.get("output"):
-                    log.info(f"Skipping {query_index_str}, result already exists.")
+                    log.info(f"跳过 {query_index_str}，结果已存在。")
                     results_list.append(existing_result)
                     load_cnt += 1
                     continue
             except (json.JSONDecodeError, KeyError):
                 log.warning(
-                    f"Found corrupted result file for {query_index_str}. Re-processing."
+                    f"发现 {query_index_str} 的结果文件损坏。重新处理。"
                 )
 
         query = item.get("question")
         if not query:
-            log.warning(f"Skipping item {i} due to missing 'question' field.")
+            log.warning(f"由于缺少 'question' 字段，跳过项目 {i}。")
             continue
 
         query_output_dir.mkdir(exist_ok=True)
@@ -86,17 +86,17 @@ def run_rag(
 
     end_time = time.time()
     total_time = end_time - start_time
-    log.info(f"✅ RAG processing complete in {total_time:.2f} seconds.")
+    log.info(f"✅ RAG 处理完成，耗时 {total_time:.2f} 秒。")
     final_res_path = output_dir / "final_results.json"
     with open(final_res_path, "w", encoding="utf-8") as f:
         json.dump(results_list, f, indent=2, ensure_ascii=False)
 
-    log.info(f"✅ RAG complete. All results are saved to {final_res_path}")
+    log.info(f"✅ RAG 完成。所有结果已保存至 {final_res_path}")
     rag_agent.close()
 
     token_tracker = TokenTracker.get_instance()
     rag_cost = token_tracker.record_stage("rag_cost")
-    log.info(f"The token cost of RAG in the current document: {rag_cost}")
+    log.info(f"当前文档中 RAG 的 token 成本: {rag_cost}")
 
     update_and_save_cost(
         output_dir=output_dir,
@@ -117,8 +117,8 @@ def update_and_save_cost(
     force_reprocess: bool,
 ):
     if load_cnt == dataset_len:
-        log.info(f"All {load_cnt} samples were loaded from existing results.")
-        log.info("Skipping saving token cost since no new inference was made.")
+        log.info(f"所有 {load_cnt} 个样本均已从现有结果加载。")
+        log.info("跳过保存 token 成本，因为没有进行新的推理。")
         return
 
     token_cost_path = output_dir / "token_cost.json"
@@ -127,7 +127,7 @@ def update_and_save_cost(
 
     if token_cost_path.exists() and load_cnt != 0 and not force_reprocess:
         log.info(
-            f"Found existing cost file at {token_cost_path}. Reading previous values."
+            f"在 {token_cost_path} 发现现有成本文件。读取先前的值。"
         )
         try:
             with open(token_cost_path, "r", encoding="utf-8") as f:
@@ -135,11 +135,11 @@ def update_and_save_cost(
             previous_cost = existing_data.get("rag_cost", {})
             previous_time = existing_data.get("time", 0)
             log.info(
-                f"Previous cost: {previous_cost}, Previous time: {previous_time:.2f}s"
+                f"先前的成本: {previous_cost}, 先前的时间: {previous_time:.2f}s"
             )
         except (json.JSONDecodeError, KeyError):
             log.warning(
-                f"Could not read or parse existing cost file. Starting from zero."
+                f"无法读取或解析现有成本文件。从零开始。"
             )
             previous_cost = {}
             previous_time = 0
@@ -156,7 +156,7 @@ def update_and_save_cost(
     }
 
     log.info(
-        f"Saving accumulated cost: {total_rag_cost}, Total time: {total_processing_time:.2f}s"
+        f"保存累计成本: {total_rag_cost}, 总时间: {total_processing_time:.2f}s"
     )
     with open(token_cost_path, "w", encoding="utf-8") as f:
         json.dump(final_token_cost, f, indent=2, ensure_ascii=False)
@@ -164,12 +164,12 @@ def update_and_save_cost(
 
 def create_log_handler(cfg: SystemConfig, dataset_path: str):
     """
-    Creates a logging handler that writes logs to a file in the specified output directory.
-    The log file is named based on the dataset file name.
-    Return: output_dir
+    创建一个日志处理程序，将日志写入指定输出目录中的文件。
+    日志文件根据数据集文件名命名。
+    返回: output_dir
     """
     rag_strategy = cfg.rag.strategy_config.strategy
-    log.info(f"Using RAG strategy: {rag_strategy}")
+    log.info(f"使用 RAG 策略: {rag_strategy}")
 
     dataset_file = Path(dataset_path)
     output_dir = Path(cfg.save_path) / f"eval_{dataset_file.stem}_{rag_strategy}"
@@ -184,7 +184,7 @@ def create_log_handler(cfg: SystemConfig, dataset_path: str):
     file_handler = logging.FileHandler(log_file_path, encoding="utf-8")
     file_handler.setFormatter(logging.Formatter("%(message)s"))
     root_logger.addHandler(file_handler)
-    root_logger.info(f"Logging to: {log_file_path}")
+    root_logger.info(f"日志记录至: {log_file_path}")
 
     return output_dir
 
@@ -194,7 +194,7 @@ def inference_base(cfg: SystemConfig, dataset_path: str):
     output_dir = create_log_handler(cfg, dataset_path)
 
     log.info(
-        f"Successfully loaded config. Using RAG strategy: {cfg.rag.strategy_config.strategy}"
+        f"成功加载配置。使用 RAG 策略: {cfg.rag.strategy_config.strategy}"
     )
     dependencies = prepare_rag_dependencies(cfg=cfg)
 
@@ -204,7 +204,7 @@ def inference_base(cfg: SystemConfig, dataset_path: str):
         vlm_config=cfg.vlm,
         **dependencies,
     )
-    log.info(f"RAG agent created with strategy: {rag_agent.name}")
+    log.info(f"RAG agent 已创建，策略: {rag_agent.name}")
 
     run_rag(
         rag_agent=rag_agent,
@@ -223,10 +223,10 @@ def inference(cfg: SystemConfig, data_df: pd.DataFrame, dataset_name: str):
         vlm_config=cfg.vlm,
         **dependencies,
     )
-    log.info(f"RAG agent created with strategy: {rag_agent.name}")
+    log.info(f"RAG agent 已创建，策略: {rag_agent.name}")
 
     rag_strategy = cfg.rag.strategy_config.strategy
-    log.info(f"Using RAG strategy: {rag_strategy}")
+    log.info(f"使用 RAG 策略: {rag_strategy}")
     if rag_strategy == "vanilla":
         retrieval_method = cfg.rag.strategy_config.retrieval_method
         output_dir = output_dir = (
@@ -252,18 +252,18 @@ def inference(cfg: SystemConfig, data_df: pd.DataFrame, dataset_name: str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run RAG evaluation on a dataset.")
+    parser = argparse.ArgumentParser(description="在数据集上运行 RAG 评估。")
     parser.add_argument(
         "--config_path",
         type=str,
         default="/home/wangshu/multimodal/GBC-RAG/config/gbc.yaml",
         # default="/home/wangshu/multimodal/GBC-RAG/config/mm.yaml",
-        help="Path to the configuration file.",
+        help="配置文件的路径。",
     )
     parser.add_argument(
         "--dataset_path",
         type=str,
-        help="Path to the JSON dataset file with questions.",
+        help="包含问题的 JSON 数据集文件的路径。",
         default="/home/wangshu/multimodal/GBC-RAG/test/test_qa/test_samples.json",
         # default="/home/wangshu/multimodal/GBC-RAG/test/sf/case-qa/sel_data_qa.json",
     )

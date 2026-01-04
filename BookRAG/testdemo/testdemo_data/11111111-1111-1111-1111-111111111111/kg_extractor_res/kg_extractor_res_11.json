@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "research on a multi stage data augmentation framework for event extraction",
-      "entity_type": "RESEARCH_FIELD",
-      "description": "a research field focused on developing a multi stage data augmentation framework for event extraction",
+      "entity_type": "research field",
+      "description": "a research field focused on developing a framework for augmenting data to improve event extraction",
       "source_ids": [
         11
       ]

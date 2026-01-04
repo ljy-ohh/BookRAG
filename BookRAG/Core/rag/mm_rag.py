@@ -28,23 +28,23 @@ class MMRAG(BaseRAG):
         super().__init__(
             llm=llm,
             name="MM RAG",
-            description="Multimodal Vanilla Retrieval Augmented Generation",
+            description="多模态 Vanilla 检索增强生成",
         )
         self.cfg = config
         self.vlm = vlm
         self.vdb = vector_store
-        log.info("MultimodalRAGPipeline initialized.")
+        log.info("多模态 RAG 流水线已初始化。")
         self.topk = topk
 
     def _retrieve(self, query: str, top_k: int = 3):
         return self.vdb.search(query_text=query, top_k=top_k)
 
     def _create_augmented_prompt(self, query: str, retrieved_docs=None) -> str:
-        context_text = "Please refer to the following background information to answer the question.\n\n--- Background Information ---\n"
+        context_text = "请参考以下背景信息来回答问题。\n\n--- 背景信息 ---\n"
         context_images = []
-        question_text = f"--- User Question ---\n{query}\n\n"
+        question_text = f"--- 用户问题 ---\n{query}\n\n"
         if retrieved_docs is None:
-            context_text += "No relevant documents found.\n"
+            context_text += "未找到相关文档。\n"
             context_text += question_text
             return context_text, context_images
 
@@ -54,9 +54,9 @@ class MMRAG(BaseRAG):
                 image_path = doc["content"]
                 if os.path.exists(image_path):
                     context_images.append(image_path)
-                    context_text += f"Image {i+1}: A relevant image is provided at the path: {image_path}\n"
+                    context_text += f"图像 {i+1}: 相关图像位于路径: {image_path}\n"
             else:
-                context_text += f"Text {i+1}: {doc['content']}\n"
+                context_text += f"文本 {i+1}: {doc['content']}\n"
 
         context_text += question_text
 
@@ -68,7 +68,7 @@ class MMRAG(BaseRAG):
             content_type = doc["metadata"].get("type", "text")
             if content_type not in ["text", "image"]:
                 log.warning(
-                    f"Unsupported content type: {content_type}. Skipping this document."
+                    f"不支持的内容类型: {content_type}。跳过此文档。"
                 )
                 continue
             node_id = doc["metadata"].get("node_id", -1)
@@ -87,19 +87,19 @@ class MMRAG(BaseRAG):
             with open(node_file_path, "w", encoding="utf-8") as f:
                 json.dump(meta_info_dict, f, indent=2, ensure_ascii=False)
 
-        log.info("Saved retrieval results to output directory.")
+        log.info("已将检索结果保存到输出目录。")
 
         return retrieval_ids
 
     def generation(self, query: str, query_output_dir: str) -> tuple:
         """
-        Generates an answer for a given query and returns the answer along with the context used.
+        生成给定查询的答案，并返回答案以及使用的上下文。
         Returns:
-            Tuple[str, List[Any]]: A tuple containing the final answer string and a list of the context nodes.
+            Tuple[str, List[Any]]: 包含最终答案字符串和上下文节点列表的元组。
         """
         retrieved_docs = self._retrieve(query, top_k=self.topk)
         if not retrieved_docs:
-            # not found any relevant documents, fallback to LLM generation
+            # 未找到任何相关文档，回退到 LLM 生成
             final_answer = self.llm.get_completion(query, json_response=False)
             return final_answer, []
 
@@ -108,15 +108,15 @@ class MMRAG(BaseRAG):
         )
 
         if len(context_images) > 0:
-            # if there are images, use VLM to generate the answer
+            # 如果有图片，使用 VLM 生成答案
             if len(context_images) > 2:
-                # VLM only support max 2 image input
+                # VLM 仅支持最多 2 张图片输入
                 context_images = context_images[:2]
             final_answer = self.vlm.generate(
                 prompt_or_memory=context_text, images=context_images
             )
         else:
-            # if no images, fallback to LLM generation
+            # 如果没有图片，回退到 LLM 生成
             final_answer = self.llm.get_completion(context_text, json_response=False)
         retrieval_ids = self._save_retrieval_res(
             retrieved_docs, query_output_dir=query_output_dir
@@ -124,12 +124,18 @@ class MMRAG(BaseRAG):
         return final_answer, retrieval_ids
 
     def run(self, query: str) -> Dict[str, Any]:
+        """
+        运行多模态 RAG 流程，返回答案和检索文档。
+        """
         answer, retrieved_docs = self.generation(query)
         return {"answer": answer, "retrieved_docs": retrieved_docs}
 
     def close(self):
+        """
+        关闭 RAG 管道，释放资源。
+        """
         # self.vdb.embedding_model.close()
         if isinstance(self.vdb.embedding_model, GmeEmbeddingProvider):
             self.vdb.embedding_model.clear_cache()
-            log.info("Cleared GmeEmbeddingProvider cache.")
-        log.info("MultimodalRAGPipeline resources have been released.")
+            log.info("已清除 GmeEmbeddingProvider 缓存。")
+        log.info("多模态 RAG 流水线资源已释放。")

@@ -14,13 +14,13 @@ IGNORED_MESSAGE_ID = 0
 
 
 class Memory(BaseModel):
-    """The most basic memory: super-memory"""
+    """最基础的记忆：超级记忆"""
 
     storage: list[SerializeAsAny[Message]] = []
     ignore_id: bool = False
 
     def add(self, message: Message):
-        """Add a new message to storage, while updating the index"""
+        """添加新消息到存储，同时更新索引"""
         if self.ignore_id:
             message.id = IGNORED_MESSAGE_ID
         if message in self.storage:
@@ -32,11 +32,11 @@ class Memory(BaseModel):
             self.add(message)
 
     def get_by_content(self, content: str) -> list[Message]:
-        """Return all messages containing a specified content"""
+        """返回包含指定内容的所有消息"""
         return [message for message in self.storage if content in message.content]
 
     def delete_newest(self) -> "Message":
-        """delete the newest message from the storage"""
+        """从存储中删除最新的消息"""
         if len(self.storage) > 0:
             newest_msg = self.storage.pop()
 
@@ -45,29 +45,29 @@ class Memory(BaseModel):
         return newest_msg
 
     def delete(self, message: Message):
-        """Delete the specified message from storage, while updating the index"""
+        """从存储中删除指定的消息，同时更新索引"""
         if self.ignore_id:
             message.id = IGNORED_MESSAGE_ID
         self.storage.remove(message)
 
     def clear(self):
-        """Clear storage and index"""
+        """清空存储和索引"""
         self.storage = []
 
     def count(self) -> int:
-        """Return the number of messages in storage"""
+        """返回存储中的消息数量"""
         return len(self.storage)
 
     def try_remember(self, keyword: str) -> list[Message]:
-        """Try to recall all messages containing a specified keyword"""
+        """尝试回忆所有包含指定关键词的消息"""
         return [message for message in self.storage if keyword in message.content]
 
     def get(self, k=0) -> list[Message]:
-        """Return the most recent k memories, return all when k=0"""
+        """返回最近的 k 条记忆，当 k=0 时返回所有"""
         return self.storage[-k:]
 
     def find_news(self, observed: list[Message], k=0) -> list[Message]:
-        """find news (previously unseen messages) from the most recent k memories, from all memories when k=0"""
+        """从最近的 k 条记忆中查找新闻（以前未见过的消息），当 k=0 时从所有记忆中查找"""
         already_observed = self.get(k)
         news: list[Message] = []
         for i in observed:

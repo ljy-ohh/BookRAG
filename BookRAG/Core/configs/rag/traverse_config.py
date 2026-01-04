@@ -7,6 +7,6 @@ class TraverseRAGConfig(BaseRAGStrategyConfig):
     strategy: Literal["traverse"] = "traverse"
     max_depth: int = Field(
         default=5,
-        description="The maximum depth for the document tree traversal."
+        description="文档树遍历的最大深度。"
     )
     

@@ -5,13 +5,13 @@ from Core.provider.llm import LLM
 from Core.Index.Graph import Graph
 from Core.provider.embedding import TextEmbeddingProvider
 from Core.provider.vdb import VectorStore
+from Core.utils.trace_logger import trace_execution
 
 
 class GBC:
     """
-    A class representing the index combining graph and tree structures.
-    This class allows for the creation and management of a tree index, which can be used
-    to organize and retrieve information in multimodal applications.
+    表示结合图和树结构的索引类。
+    该类允许创建和管理树索引，可用于在多模态应用中组织和检索信息。
     """
 
     def __init__(
@@ -21,9 +21,9 @@ class GBC:
         TreeIndex: Optional[DocumentTree] = None,
     ):
         """
-        Initializes the TreeIndex with an optional index.
+        使用可选索引初始化 TreeIndex。
 
-        :param index: Optional initial index for the tree.
+        :param index: 树的可选初始索引。
         """
         self.save_dir = config.save_path
         self.config = config
@@ -31,7 +31,7 @@ class GBC:
         self.TreeIndex: DocumentTree = TreeIndex
         self.GraphIndex: Graph = graph_index
 
-        # load the vdb of entities
+        # 加载实体的向量数据库
         if config.graph.refine_type == "basic":
             self.entity_vdb_path = os.path.join(self.save_dir, "kg_vdb_basic")
         else:
@@ -50,29 +50,31 @@ class GBC:
             embedding_model=self.embedder,
             collection_name="kg_collection",
         )
-        log.info(f"Entity VDB loaded from {self.entity_vdb_path}")
+        log.info(f"实体向量数据库加载自 {self.entity_vdb_path}")
 
+    @trace_execution
     def save_gbc_index(self):
         """
-        Saves the GBC index to the specified path.
+        将 GBC 索引保存到指定路径。
 
-        :param save_path: The path where the index will be saved.
+        :param save_path: 索引保存的路径。
         """
         if self.TreeIndex:
             self.TreeIndex.save_to_file()
         if self.GraphIndex:
             self.GraphIndex.save_graph()
 
-        # vdb is saved automatically when the entity_vdb is created
+        # 创建 entity_vdb 时会自动保存 vdb
 
-        log.info(f"GBC index saved")
+        log.info(f"GBC 索引已保存")
 
+    @trace_execution
     def rebuild_vdb(self):
         """
-        Rebuilds the vector database for entities using the current graph index.
+        使用当前图索引重建实体的向量数据库。
         """
         if not self.GraphIndex:
-            raise ValueError("GraphIndex is not set. Cannot rebuild VDB.")
+            raise ValueError("未设置 GraphIndex。无法重建向量数据库。")
 
         self.entity_vdb.reset()
 
@@ -92,15 +94,15 @@ class GBC:
             meta_datas.append(tmp_dict)
 
         self.entity_vdb.add_texts(texts=texts, metadatas=meta_datas)
-        log.info(f"Rebuilt entity VDB with {len(texts)} entries.")
+        log.info(f"使用 {len(texts)} 个条目重建实体向量数据库。")
 
     @classmethod
     def load_gbc_index(cls, config: SystemConfig):
         """
-        Loads the GBC index from the specified path.
+        从指定路径加载 GBC 索引。
 
-        :param config: The configuration object containing the save path.
-        :return: An instance of GBC with the loaded index.
+        :param config: 包含保存路径的配置对象。
+        :return: 带有已加载索引的 GBC 实例。
         """
         tree_index = DocumentTree.load_from_file(
             DocumentTree.get_save_path(config.save_path)
@@ -113,5 +115,5 @@ class GBC:
         
         graph_index = Graph.load_from_dir(config.save_path, variant=variant)
         GBC = cls(config=config, graph_index=graph_index, TreeIndex=tree_index)
-        log.info(f"GBC index loaded from {config.save_path}")
+        log.info(f"GBC 索引加载自 {config.save_path}")
         return GBC

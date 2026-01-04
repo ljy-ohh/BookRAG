@@ -2,56 +2,48 @@
   "entities": [
     {
       "entity_name": "ace05 e",
-      "entity_type": "DATASET_OR_CORPUS",
-      "description": "ace05 e  is a dataset used in experiments to evaluate the proposed framework",
+      "entity_type": "dataset or corpus",
+      "description": "ace05 e  is a dataset used for experimental evaluation of event extraction models",
       "source_ids": [
         8
       ]
     },
     {
       "entity_name": "ere en",
-      "entity_type": "DATASET_OR_CORPUS",
-      "description": "ere en is a dataset used in experiments to evaluate the proposed framework",
+      "entity_type": "dataset or corpus",
+      "description": "ere en is a dataset used for experimental evaluation of event extraction models",
       "source_ids": [
         8
       ]
     },
     {
       "entity_name": "text2event",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "text2event is a model whose performance was evaluated on event extraction tasks using the proposed framework",
+      "entity_type": "model or architecture",
+      "description": "text2event is an event extraction model whose performance was evaluated in the experiments",
       "source_ids": [
         8
       ]
     },
     {
       "entity_name": "hdgse",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "hdgse is a model whose performance was evaluated on event extraction tasks using the proposed framework",
-      "source_ids": [
-        8
-      ]
-    },
-    {
-      "entity_name": "f1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "f1 score is the evaluation metric used to measure performance in trigger and argument classification tasks",
+      "entity_type": "model or architecture",
+      "description": "hdgse is an event extraction model whose performance was evaluated in the experiments",
       "source_ids": [
         8
       ]
     },
     {
       "entity_name": "auggpt",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "auggpt is a baseline data augmentation method compared against the proposed framework",
+      "entity_type": "method or technique",
+      "description": "auggpt is a baseline data augmentation method used for performance comparison",
       "source_ids": [
         8
       ]
     },
     {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "f1",
+      "entity_type": "evaluation metric",
+      "description": "f1 score is the evaluation metric used to measure the performance of event extraction models",
       "source_ids": [
         8
       ]
@@ -70,40 +62,120 @@
     },
     {
       "src_entity_name": "",
-      "tgt_entity_name": "ace05 e",
+      "tgt_entity_name": "",
       "relation_name": "",
       "weight": 8.0,
-      "description": "the proposed framework was experimentally evaluated on the ace05 e  dataset",
-      "source_ids": [
-        8
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "ere en",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the proposed framework was experimentally evaluated on the ere en dataset",
+      "description": "the multi stage collaborative enhancement framework is based on large language models  llms",
       "source_ids": [
         8
       ]
     },
     {
       "src_entity_name": "text2event",
-      "tgt_entity_name": "",
+      "tgt_entity_name": "ace05 e",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the text2event model s performance in trigger classification was evaluated using f1 scores",
+      "weight": 7.0,
+      "description": "the text2event model was evaluated on the ace05 e  dataset",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the text2event model was evaluated on the ere en dataset",
       "source_ids": [
         8
       ]
     },
     {
       "src_entity_name": "hdgse",
-      "tgt_entity_name": "",
+      "tgt_entity_name": "ace05 e",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the hdgse model was evaluated on the ace05 e  dataset",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "ere en",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the hdgse model was evaluated on the ere en dataset",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "text2event",
       "relation_name": "",
       "weight": 8.0,
-      "description": "the hdgse model s performance in trigger classification was evaluated using f1 scores",
+      "description": "the proposed framework enhanced the performance of the text2event model",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the proposed framework enhanced the performance of the hdgse model",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "the proposed framework is compared against and outperforms the synonym replacement method",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "the proposed framework is compared against and outperforms the back translation method",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "auggpt",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "the proposed framework is compared against and outperforms the auggpt baseline method",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "text2event",
+      "tgt_entity_name": "f1",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of the text2event model is measured using the f1 score metric",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "hdgse",
+      "tgt_entity_name": "f1",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of the hdgse model is measured using the f1 score metric",
       "source_ids": [
         8
       ]
@@ -113,17 +185,17 @@
       "tgt_entity_name": "f1",
       "relation_name": "",
       "weight": 9.0,
-      "description": "f1 score is the metric used to evaluate performance in trigger classification",
+      "description": "the performance of the trigger classification task is measured using the f1 score",
       "source_ids": [
         8
       ]
     },
     {
       "src_entity_name": "",
-      "tgt_entity_name": "auggpt",
+      "tgt_entity_name": "f1",
       "relation_name": "",
-      "weight": 7.0,
-      "description": "the proposed framework s performance was compared against the auggpt baseline method",
+      "weight": 9.0,
+      "description": "the performance of the argument classification task is measured using the f1 score",
       "source_ids": [
         8
       ]

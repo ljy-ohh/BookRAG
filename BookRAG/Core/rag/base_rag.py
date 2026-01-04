@@ -25,9 +25,9 @@ class BaseRAG(ABC):
     @abstractmethod
     def generation(self, query: str, query_output_dir: str) -> Tuple[str, List[Any]]:
         """
-        Generates an answer for a given query and returns the answer along with the context used.
+        为给定的查询生成答案，并返回答案以及使用的上下文。
         Returns:
-            Tuple[str, List[Any]]: A tuple contains final answer and the retrieval ids
+            Tuple[str, List[Any]]: 包含最终答案和检索 ID 的元组
         """
         raise NotImplementedError
 

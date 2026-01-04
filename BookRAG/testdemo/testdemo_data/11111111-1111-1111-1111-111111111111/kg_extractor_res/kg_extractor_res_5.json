@@ -1,9 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_name": "100190",
+      "entity_type": "location",
+      "description": "a postal code mentioned in the text",
       "source_ids": [
         5
       ]
@@ -15,7 +15,27 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the laboratory is part of the chinese academy of sciences  as indicated by its full name",
+      "description": "the laboratory is affiliated with the organization",
+      "source_ids": [
+        5
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the laboratory is located in beijing",
+      "source_ids": [
+        5
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "100190",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the postal code 100190 is associated with the location beijing",
       "source_ids": [
         5
       ]

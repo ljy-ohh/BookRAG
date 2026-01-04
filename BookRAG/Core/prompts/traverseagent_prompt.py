@@ -1,13 +1,13 @@
 from pydantic import BaseModel, Field
 
 
-# Define a Pydantic schema for the LLM's navigation decision
+# 定义 LLM 导航决策的 Pydantic 模式
 class NavigatorDecision(BaseModel):
-    choice: int = Field(description="The number of the chosen sub-section. 0 to stop.")
-    reason: str = Field(description="A brief explanation for the choice.")
+    choice: int = Field(description="所选子章节的编号。0 表示停止。")
+    reason: str = Field(description="选择的简要解释。")
 
 
-# This prompt instructs the LLM to act as a navigator AND to output a structured JSON object.
+# 此提示词指示 LLM 充当导航员并输出结构化的 JSON 对象。
 NAVIGATOR_PROMPT_TEMPLATE = """
 You are a research assistant navigating a document outline to answer a user's question.
 Your task is to analyze the user's query, your current location summary, and a JSON array detailing the available nodes to explore next. Then, you must decide which node is the most relevant one to explore.

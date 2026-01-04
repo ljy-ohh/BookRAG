@@ -116,7 +116,7 @@ def identify_header_rows(grid: List[List[str]]) -> int:
         if is_strong_header_signal or is_structural_header or is_type_mismatch_header:
             header_row_count += 1
         else:
-            # --- Fallback Heuristic ---
+            # --- 后备启发式规则 ---
             # 如果主要规则都失效了，并且我们在处理第一行，就启用后备规则
             if i == 0:
                 is_current_row_all_text = all(
@@ -215,7 +215,7 @@ def intelligent_table_converter(
     output_parts = []
     caption = table_data.get("caption", "")
     if caption:
-        output_parts.append(f"Table Caption: {caption}")
+        output_parts.append(f"表格标题: {caption}")
 
     if non_text_ratio >= non_text_threshold:
         all_labels = {cell for cell in all_cells if contains_letters(cell)}
@@ -236,32 +236,32 @@ def intelligent_table_converter(
 
         other_labels = all_labels - column_labels - row_labels
 
-        output_parts.append("Type: Data-heavy table (schema summary)")
+        output_parts.append("类型: 数据密集型表格 (模式摘要)")
         if column_labels:
             output_parts.append(
-                f"Column Labels: {', '.join(sorted(list(column_labels)))}"
+                f"列标签: {', '.join(sorted(list(column_labels)))}"
             )
         if row_labels:
-            output_parts.append(f"Row Labels: {', '.join(sorted(list(row_labels)))}")
+            output_parts.append(f"行标签: {', '.join(sorted(list(row_labels)))}")
         if other_labels:
             output_parts.append(
-                f"Other Labels: {', '.join(sorted(list(other_labels)))}"
+                f"其他标签: {', '.join(sorted(list(other_labels)))}"
             )
 
     else:
-        output_parts.append("Type: Text-heavy table (full linearization)")
+        output_parts.append("类型: 文本密集型表格 (完全线性化)")
         header = grid[0]
         for i, row in enumerate(grid[1:]):
-            row_description = f"Row {i+1}: "
+            row_description = f"第 {i+1} 行: "
             row_len = len(row)
             for idx, h in enumerate(header):
                 if idx < row_len and h and row[idx]:
-                    row_description += f"'{h}' is '{row[idx]}'; "
+                    row_description += f"'{h}' 是 '{row[idx]}'; "
             output_parts.append(row_description.strip())
 
     footnote = table_data.get("footnote", "")
     if footnote:
-        output_parts.append(f"Footnote: {footnote}")
+        output_parts.append(f"脚注: {footnote}")
 
     return "\n".join(output_parts)
 
@@ -271,7 +271,7 @@ def table2text(table_data: dict):
 
     caption = table_data.get("caption", "")
     if caption:
-        output_parts.append(f"Caption: {caption}")
+        output_parts.append(f"标题: {caption}")
 
     table_body = table_data.get("table_body", "")
     if table_body:
@@ -279,7 +279,7 @@ def table2text(table_data: dict):
         num_header_rows = identify_header_rows(grid)
         column_headers = create_hierarchical_headers(grid, num_header_rows)
 
-        header_str = "This table contains the following columns:\n"
+        header_str = "此表格包含以下列:\n"
         for col in column_headers:
             header_str += f" - {col}\n"
         output_parts.append(header_str)
@@ -287,11 +287,11 @@ def table2text(table_data: dict):
         row_strings = [
             " | ".join(cell.strip() if cell else "" for cell in row) for row in grid
         ]
-        output_parts.append("Table Body:\n" + "\n".join(row_strings))
+        output_parts.append("表格内容:\n" + "\n".join(row_strings))
 
     footnote = table_data.get("footnote", "")
     if footnote:
-        output_parts.append(f"Footnote: {footnote}")
+        output_parts.append(f"脚注: {footnote}")
 
     return "\n".join(output_parts)
 

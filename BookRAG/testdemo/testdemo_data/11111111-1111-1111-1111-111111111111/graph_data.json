@@ -5,115 +5,66 @@
         "graph": {},
         "nodes": [
             {
-                "entity_name": "",
-                "entity_type": "UNKNOWN",
-                "description": "The entity's name and type are not specified, and no descriptive information is provided.",
+                "entity_name": "面向事件抽取的多阶段数据增强框架研究",
+                "entity_type": "SECTION_TITLE",
+                "description": "This is the main title of the document, indicating the research focuses on a multi-stage data augmentation framework specifically designed for the task of event extraction.",
                 "source_ids": [
-                    32,
-                    2,
-                    3,
-                    4,
-                    5,
-                    34,
-                    36,
-                    8,
-                    47,
-                    20,
-                    21,
-                    22,
-                    24,
-                    28
+                    1
                 ],
-                "id": "Name: \nType: UNKNOWN"
+                "id": "Name: 面向事件抽取的多阶段数据增强框架研究\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "buct edu cn",
-                "entity_type": "ORGANIZATION",
-                "description": "an organization associated with the email domain  likely an educational institution",
+                "entity_name": "100190",
+                "entity_type": "location",
+                "description": "a postal code mentioned in the text",
                 "source_ids": [
-                    7
+                    5
                 ],
-                "id": "Name: buct edu cn\nType: ORGANIZATION"
-            },
-            {
-                "entity_name": "text2event",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "text2event is an event extraction model that was fine-tuned and evaluated as part of the described experiments, serving as a baseline in the comparison of data augmentation methods. Its performance was assessed on the ACE05-E+ and ERE-EN datasets using the proposed framework.",
-                "source_ids": [
-                    8,
-                    24,
-                    27,
-                    29
-                ],
-                "id": "Name: text2event\nType: MODEL_OR_ARCHITECTURE"
-            },
-            {
-                "entity_name": "hdgse",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "hdgse is an event extraction model that was fine-tuned and used as a baseline in experiments to evaluate the impact of a data augmentation framework on its performance, with its performance being compared in the context of assessing data augmentation methods.",
-                "source_ids": [
-                    36,
-                    8,
-                    22,
-                    24,
-                    27,
-                    29
-                ],
-                "id": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: 100190\nType: location"
             },
             {
                 "entity_name": "f1",
-                "entity_type": "EVALUATION_METRIC",
-                "description": "The f1 score is an evaluation metric used to measure performance in trigger and argument classification tasks, typically reported as a percentage, and is employed to assess model performance in text-based applications.",
+                "entity_type": "evaluation metric",
+                "description": "The f1 score is an evaluation metric used to measure the performance of event extraction models, specifically on tasks such as trig c and arg c.",
                 "source_ids": [
                     8,
                     27,
                     28
                 ],
-                "id": "Name: f1\nType: EVALUATION_METRIC"
+                "id": "Name: f1\nType: evaluation metric"
             },
             {
                 "entity_name": "tp391",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "tp391 is a classification code indicating a research field  likely related to computer science or information technology",
+                "entity_type": "research field",
+                "description": "a research field classification code mentioned in the document",
                 "source_ids": [
                     10
                 ],
-                "id": "Name: tp391\nType: RESEARCH_FIELD"
+                "id": "Name: tp391\nType: research field"
             },
             {
-                "entity_name": "a",
-                "entity_type": "PUBLICATION_VENUE",
-                "description": "a is a document code used to indicate a type of publication or journal category",
+                "entity_name": "research on a multi stage data augmentation framework for event extraction",
+                "entity_type": "research field",
+                "description": "a research field focused on developing a framework for augmenting data to improve event extraction",
                 "source_ids": [
-                    10
-                ],
-                "id": "Name: a\nType: PUBLICATION_VENUE"
-            },
-            {
-                "entity_name": "面向事件抽取的多阶段数据增强框架研究 (research on a multi-stage data augmentation framework for event extraction)",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "面向事件抽取的多阶段数据增强框架研究是一个专注于为事件抽取任务开发多阶段数据增强框架的研究领域。",
-                "source_ids": [
-                    1,
                     11
                 ],
-                "id": "Name: 面向事件抽取的多阶段数据增强框架研究 (research on a multi-stage data augmentation framework for event extraction)\nType: RESEARCH_FIELD"
+                "id": "Name: research on a multi stage data augmentation framework for event extraction\nType: research field"
             },
             {
                 "entity_name": "song chenwei",
-                "entity_type": "PERSON",
-                "description": "Song Chenwei is a person born in 1999 who is listed as an author of a document and is a master of science candidate with research interests in natural language processing and data augmentation.",
+                "entity_type": "person",
+                "description": "Song Chenwei is a person listed as an author of the document, born in 1999, who is an M.S. candidate with research interests in natural language processing and data augmentation.",
                 "source_ids": [
                     43,
                     12
                 ],
-                "id": "Name: song chenwei\nType: PERSON"
+                "id": "Name: song chenwei\nType: person"
             },
             {
                 "entity_name": "jiang zhiying",
                 "entity_type": "PERSON",
-                "description": "Jiang Zhiying is an associate professor with a PhD, born in 1987, and his research interests include large language models, natural language processing, and real-time big data analytics. He is listed as an author and the corresponding author of the document.",
+                "description": "Jiang Zhiying is an associate professor with a PhD, born in 1987, whose research interests include large language models and natural language processing. He is listed as an author and the corresponding author for the document.",
                 "source_ids": [
                     42,
                     12,
@@ -123,67 +74,85 @@
             },
             {
                 "entity_name": "han zhonghe",
-                "entity_type": "PERSON",
-                "description": "Han Zhonghe is a person born in 1993 who is listed as an author of a document and is an associate researcher with research interests in deep learning, natural language processing, and large language models.",
+                "entity_type": "person",
+                "description": "Han Zhonghe is an associate researcher, born in 1993, with interests in deep learning, natural language processing, and large language models, and is listed as an author of the document.",
                 "source_ids": [
                     12,
                     44
                 ],
-                "id": "Name: han zhonghe\nType: PERSON"
+                "id": "Name: han zhonghe\nType: person"
             },
             {
                 "entity_name": "wang jiaxin",
-                "entity_type": "PERSON",
-                "description": "Wang Jiaxin is a person born in 2000 who is listed as an author of a document and is a Master of Science candidate with research interests in natural language processing and data augmentation.",
+                "entity_type": "person",
+                "description": "Wang Jiaxin is a person listed as an author of the document. Born in 2000, he is an M.S. candidate with research interests in natural language processing and data augmentation.",
                 "source_ids": [
-                    12,
-                    45
+                    43,
+                    12
                 ],
-                "id": "Name: wang jiaxin\nType: PERSON"
+                "id": "Name: wang jiaxin\nType: person"
             },
             {
                 "entity_name": "college of information science and technology",
-                "entity_type": "ORGANIZATION",
-                "description": "a college mentioned as part of a university",
+                "entity_type": "organization",
+                "description": "an academic college mentioned in the text",
                 "source_ids": [
                     13
                 ],
-                "id": "Name: college of information science and technology\nType: ORGANIZATION"
+                "id": "Name: college of information science and technology\nType: organization"
             },
             {
                 "entity_name": "beijing university of chemical technology",
-                "entity_type": "ORGANIZATION",
-                "description": "a university located in beijing",
+                "entity_type": "organization",
+                "description": "a university mentioned in the text",
                 "source_ids": [
                     13
                 ],
-                "id": "Name: beijing university of chemical technology\nType: ORGANIZATION"
+                "id": "Name: beijing university of chemical technology\nType: organization"
             },
             {
                 "entity_name": "beijing",
-                "entity_type": "LOCATION",
-                "description": "Beijing is a city where the university, the aerospace information research institute, the Institute of Electronic Chinese Academy of Sciences, and the key laboratory are located.",
+                "entity_type": "location",
+                "description": "Beijing is a city where the institute and its laboratory are located.",
                 "source_ids": [
                     16,
                     13,
                     14,
                     15
                 ],
-                "id": "Name: beijing\nType: LOCATION"
+                "id": "Name: beijing\nType: location"
             },
             {
                 "entity_name": "the aerospace information research institute",
-                "entity_type": "ORGANIZATION",
-                "description": "an institute mentioned in the text  part of the chinese academy of sciences",
+                "entity_type": "organization",
+                "description": "an institute mentioned in the text",
                 "source_ids": [
                     14
                 ],
-                "id": "Name: the aerospace information research institute\nType: ORGANIZATION"
+                "id": "Name: the aerospace information research institute\nType: organization"
+            },
+            {
+                "entity_name": "key laboratory of network information system technology",
+                "entity_type": "organization",
+                "description": "a key laboratory mentioned in the text",
+                "source_ids": [
+                    15
+                ],
+                "id": "Name: key laboratory of network information system technology\nType: organization"
+            },
+            {
+                "entity_name": "institute of electronic  chinese academy of sciences",
+                "entity_type": "organization",
+                "description": "an institute that is part of the chinese academy of sciences",
+                "source_ids": [
+                    15
+                ],
+                "id": "Name: institute of electronic  chinese academy of sciences\nType: organization"
             },
             {
                 "entity_name": "chinese academy of sciences",
                 "entity_type": "ORGANIZATION",
-                "description": "The Chinese Academy of Sciences is an academy of sciences located in China, to which both the Aerospace Information Research Institute and a key laboratory belong.",
+                "description": "The Chinese Academy of Sciences is an academic organization and academy of sciences.",
                 "source_ids": [
                     16,
                     14,
@@ -192,260 +161,188 @@
                 "id": "Name: chinese academy of sciences\nType: ORGANIZATION"
             },
             {
-                "entity_name": "key laboratory of network information system technology",
-                "entity_type": "ORGANIZATION",
-                "description": "a laboratory mentioned as part of the institute of electronic  chinese academy of sciences",
-                "source_ids": [
-                    15
-                ],
-                "id": "Name: key laboratory of network information system technology\nType: ORGANIZATION"
-            },
-            {
-                "entity_name": "institute of electronic chinese academy of sciences",
-                "entity_type": "ORGANIZATION",
-                "description": "an institute that is part of the chinese academy of sciences",
-                "source_ids": [
-                    15
-                ],
-                "id": "Name: institute of electronic chinese academy of sciences\nType: ORGANIZATION"
-            },
-            {
                 "entity_name": "key laboratory of target cognition and application technology",
-                "entity_type": "ORGANIZATION",
-                "description": "The Key Laboratory of Target Cognition and Application Technology is a laboratory that is part of the Chinese Academy of Sciences and an organization that partially supports the work described in the text.",
+                "entity_type": "organization",
+                "description": "The Key Laboratory of Target Cognition and Application Technology is an organization that partially supported the work mentioned in the text.",
                 "source_ids": [
                     16,
                     41
                 ],
-                "id": "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION"
-            },
-            {
-                "entity_name": "100190",
-                "entity_type": "LOCATION",
-                "description": "a postal code indicating a specific location in beijing",
-                "source_ids": [
-                    16
-                ],
-                "id": "Name: 100190\nType: LOCATION"
+                "id": "Name: key laboratory of target cognition and application technology\nType: organization"
             },
             {
                 "entity_name": "event extraction",
-                "entity_type": "TASK_OR_PROBLEM",
+                "entity_type": "task or problem",
                 "description": "event extraction is a core task in natural language processing aimed at identifying event triggers and arguments from text",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: event extraction\nType: TASK_OR_PROBLEM"
+                "id": "Name: event extraction\nType: task or problem"
             },
             {
                 "entity_name": "natural language processing",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "Natural language processing is a research field where event extraction is a core task, and it is mentioned as a research interest of Jiang Zhiying, Song Chenwei, and Han Zhonghe.",
+                "entity_type": "research field",
+                "description": "Natural language processing is a research field within which event extraction is a core task, and it is a field of interest to researchers such as Jiang Zhiying, Song Chenwei, and Han Zhonghe.",
                 "source_ids": [
                     17,
                     42,
                     43,
                     44
                 ],
-                "id": "Name: natural language processing\nType: RESEARCH_FIELD"
+                "id": "Name: natural language processing\nType: research field"
             },
             {
-                "entity_name": "llm based synergistic enhancement framework",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "a proposed framework featuring a closed loop mechanism for high quality data generation in event extraction",
+                "entity_name": "multi stage llm based synergistic enhancement framework",
+                "entity_type": "model or architecture",
+                "description": "a proposed framework for data generation featuring a closed loop mechanism of generation annotation validation scoring",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: multi stage llm based synergistic enhancement framework\nType: model or architecture"
             },
             {
                 "entity_name": "generation annotation validation scoring",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a closed loop mechanism within the proposed framework for data generation and quality control",
+                "entity_type": "method or technique",
+                "description": "a closed loop mechanism that is part of the proposed framework for data generation",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: generation annotation validation scoring\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: generation annotation validation scoring\nType: method or technique"
             },
             {
                 "entity_name": "generation module",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "a module within the proposed framework that integrates multi strategy rewriting and constrained generation",
+                "entity_type": "model or architecture",
+                "description": "a module that integrates multi strategy rewriting and constrained generation for data augmentation",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: generation module\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: generation module\nType: model or architecture"
             },
             {
                 "entity_name": "multi strategy rewriting",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a technique integrated into the generation module  including semantic role substitution and event structure restructuring",
+                "entity_type": "method or technique",
+                "description": "a technique involving semantic role substitution and event structure restructuring used in the generation module",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: multi strategy rewriting\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: multi strategy rewriting\nType: method or technique"
             },
             {
                 "entity_name": "semantic role substitution",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a specific rewriting strategy mentioned as part of multi strategy rewriting",
+                "entity_type": "method or technique",
+                "description": "a specific rewriting strategy used as part of multi strategy rewriting",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: semantic role substitution\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: semantic role substitution\nType: method or technique"
             },
             {
                 "entity_name": "event structure restructuring",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a specific rewriting strategy mentioned as part of multi strategy rewriting",
+                "entity_type": "method or technique",
+                "description": "a specific rewriting strategy used as part of multi strategy rewriting",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: event structure restructuring\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: event structure restructuring\nType: method or technique"
             },
             {
                 "entity_name": "constrained generation",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a technique used in the generation module to transcend word level augmentation limitations",
+                "entity_type": "method or technique",
+                "description": "a technique used in the generation module for data augmentation",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: constrained generation\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: constrained generation\nType: method or technique"
             },
             {
                 "entity_name": "validation module",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "a module within the proposed framework that eliminates structural bias through logical verification and template matching",
+                "entity_type": "model or architecture",
+                "description": "a module that eliminates structural bias through logical verification and template matching",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: validation module\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: validation module\nType: model or architecture"
             },
             {
                 "entity_name": "trigger argument logical verification",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a method used by the validation module to check for structural bias",
+                "entity_type": "method or technique",
+                "description": "a method used by the validation module to check event structure",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: trigger argument logical verification\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: trigger argument logical verification\nType: method or technique"
             },
             {
                 "entity_name": "event template matching",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "a method used by the validation module to check for structural bias",
+                "entity_type": "method or technique",
+                "description": "a method used by the validation module to check event structure",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: event template matching\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: event template matching\nType: method or technique"
             },
             {
                 "entity_name": "scoring module",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "a module within the proposed framework that filters data based on information integrity and semantic consistency",
+                "entity_type": "model or architecture",
+                "description": "a module that filters data based on information integrity and semantic consistency",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: scoring module\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: scoring module\nType: model or architecture"
             },
             {
                 "entity_name": "information integrity",
-                "entity_type": "EVALUATION_METRIC",
+                "entity_type": "evaluation metric",
                 "description": "a criterion used by the scoring module to filter generated data",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: information integrity\nType: EVALUATION_METRIC"
+                "id": "Name: information integrity\nType: evaluation metric"
             },
             {
                 "entity_name": "semantic consistency",
-                "entity_type": "EVALUATION_METRIC",
+                "entity_type": "evaluation metric",
                 "description": "a criterion used by the scoring module to filter generated data",
                 "source_ids": [
                     17
                 ],
-                "id": "Name: semantic consistency\nType: EVALUATION_METRIC"
+                "id": "Name: semantic consistency\nType: evaluation metric"
             },
             {
                 "entity_name": "2025 05 07",
-                "entity_type": "DATE",
-                "description": "the date when the document was submitted",
+                "entity_type": "date",
+                "description": "the date when the document was received",
                 "source_ids": [
                     18
                 ],
-                "id": "Name: 2025 05 07\nType: DATE"
-            },
-            {
-                "entity_name": "20yy mm dd",
-                "entity_type": "DATE",
-                "description": "the date when the document was revised",
-                "source_ids": [
-                    18
-                ],
-                "id": "Name: 20yy mm dd\nType: DATE"
-            },
-            {
-                "entity_name": "yyyy mm dd",
-                "entity_type": "DATE",
-                "description": "the date when the document was accepted",
-                "source_ids": [
-                    18
-                ],
-                "id": "Name: yyyy mm dd\nType: DATE"
-            },
-            {
-                "entity_name": "3.3 实验设置",
-                "entity_type": "SECTION_TITLE",
-                "description": "作为'回复：补充对数据增强框架对HDGSE模型性能的影响'的子章节，本节详细说明了验证数据增强框架对HDGSE模型性能影响的具体实验配置、环境和参数。",
-                "source_ids": [
-                    23
-                ],
-                "id": "Name: 3.3 实验设置\nType: SECTION_TITLE"
-            },
-            {
-                "entity_name": "实验",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "指代在章节3.3中详细描述的、用于评估数据增强框架对HDGSE模型性能影响的具体实验过程。",
-                "source_ids": [
-                    23
-                ],
-                "id": "Name: 实验\nType: METHOD_OR_TECHNIQUE"
-            },
-            {
-                "entity_name": "设置",
-                "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "指代在章节3.3中定义的实验环境、配置参数和运行条件。",
-                "source_ids": [
-                    23
-                ],
-                "id": "Name: 设置\nType: PARAMETER_OR_VARIABLE"
+                "id": "Name: 2025 05 07\nType: date"
             },
             {
                 "entity_name": "gpt 3 5 turbo",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "gpt 3 5 turbo is a large language model selected for the experiments described in the text",
+                "entity_type": "model or architecture",
+                "description": "gpt 3 5 turbo is the large language model selected for the experiments in the text",
                 "source_ids": [
                     24
                 ],
-                "id": "Name: gpt 3 5 turbo\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: gpt 3 5 turbo\nType: model or architecture"
             },
             {
                 "entity_name": "temperature",
-                "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "temperature is a parameter set to 0 8 during data generation to ensure diversity in the generated data",
+                "entity_type": "parameter or variable",
+                "description": "temperature is a parameter set to 0 8 during data generation to ensure diversity",
                 "source_ids": [
                     24
                 ],
-                "id": "Name: temperature\nType: PARAMETER_OR_VARIABLE"
+                "id": "Name: temperature\nType: parameter or variable"
             },
             {
                 "entity_name": "nvidia rtx4090 gpu",
-                "entity_type": "HARDWARE",
-                "description": "an nvidia rtx4090 gpu is the hardware used to conduct all experiments mentioned in the text",
+                "entity_type": "hardware",
+                "description": "an nvidia rtx4090 gpu is the hardware on which all experiments in the text were conducted",
                 "source_ids": [
                     24
                 ],
-                "id": "Name: nvidia rtx4090 gpu\nType: HARDWARE"
+                "id": "Name: nvidia rtx4090 gpu\nType: hardware"
             },
             {
                 "entity_name": "4 实验与结果分析",
@@ -459,26 +356,34 @@
             {
                 "entity_name": "4.1 实验结果",
                 "entity_type": "SECTION_TITLE",
-                "description": "作为 '4 实验与结果分析' 的一个子章节，本节专门呈现和总结所提出框架在事件抽取任务上的具体性能数据与量化结果。",
+                "description": "作为 '4 实验与结果分析' 的一个子章节，本节详细呈现了所提出框架在事件抽取任务上的具体性能数据，包括主要评估指标的得分，为后续分析提供实证基础。",
                 "source_ids": [
                     26
                 ],
                 "id": "Name: 4.1 实验结果\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "llmdirectgen",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "llmdirectgen is a data augmentation method that directly uses large language models for generation, noted for producing data that deviates from real event distributions.",
+                "entity_name": "trig c",
+                "entity_type": "task or problem",
+                "description": "trig c refers to the task of trigger word identification and classification in event extraction",
                 "source_ids": [
-                    28,
-                    29
+                    27
                 ],
-                "id": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: trig c\nType: task or problem"
+            },
+            {
+                "entity_name": "arg c",
+                "entity_type": "task or problem",
+                "description": "arg c refers to the task of argument identification and classification in event extraction",
+                "source_ids": [
+                    27
+                ],
+                "id": "Name: arg c\nType: task or problem"
             },
             {
                 "entity_name": "table 2 (表2)",
                 "entity_type": "TABLE",
-                "description": "Table 2, titled 'Comparison Results of Different Data Augmentation Methods,' presents the main experimental results of the paper, showing performance comparisons of various data augmentation methods across different datasets and tasks.",
+                "description": "Table 2, titled \"Comparison Results of Different Data Augmentation Methods,\" presents the main experimental results of the paper, showing performance comparisons and metrics for various data augmentation methods on event extraction tasks.",
                 "source_ids": [
                     27,
                     28,
@@ -487,119 +392,117 @@
                 "id": "Name: table 2 (表2)\nType: TABLE"
             },
             {
-                "entity_name": "ace05-e+ > arg-c > f1",
+                "entity_name": "ACE05-E+ > Arg-C > F1",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The F1 score for the Argument Classification (Arg-C) task on the ACE05-E+ dataset",
+                "description": "A synthesized column header representing the F1 score for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ace05-e+ > arg-c > f1\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Arg-C > F1\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "argument classification (arg-c)",
+                "entity_name": "ACE05-E+ > Arg-C > P",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "Argument classification (arg-c) is an evaluation metric for argument identification and classification in event extraction, with its precision measured on the ACE05-E+ dataset.",
+                "description": "A synthesized column header representing the Precision (P) for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
                 "source_ids": [
-                    27,
                     29
                 ],
-                "id": "Name: argument classification (arg-c)\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Arg-C > P\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ace05-e+ > arg-c > r",
+                "entity_name": "ACE05-E+ > Arg-C > R",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Recall for the Argument Classification (Arg-C) task on the ACE05-E+ dataset",
+                "description": "A synthesized column header representing the Recall (R) for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ace05-e+ > arg-c > r\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Arg-C > R\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ace05-e+ > trig-c > f1",
+                "entity_name": "ACE05-E+ > Trig-C > F1",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The F1 score for the Trigger Classification (Trig-C) task on the ACE05-E+ dataset",
+                "description": "A synthesized column header representing the F1 score for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ace05-e+ > trig-c > f1\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Trig-C > F1\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "trig c (trigger classification)",
+                "entity_name": "ACE05-E+ > Trig-C > P",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "trig c, also known as trigger classification, is an evaluation metric for trigger word identification and classification in event extraction, with its precision specifically measured on the ACE05-E+ dataset.",
+                "description": "A synthesized column header representing the Precision (P) for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
                 "source_ids": [
-                    27,
                     29
                 ],
-                "id": "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Trig-C > P\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ace05-e+ > trig-c > r",
+                "entity_name": "ACE05-E+ > Trig-C > R",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Recall for the Trigger Classification (Trig-C) task on the ACE05-E+ dataset",
+                "description": "A synthesized column header representing the Recall (R) for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ace05-e+ > trig-c > r\nType: EVALUATION_METRIC"
+                "id": "Name: ACE05-E+ > Trig-C > R\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > arg-c > f1",
+                "entity_name": "ERE-EN > Arg-C > F1",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The F1 score for the Argument Classification (Arg-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the F1 score for Argument Classification (Arg-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > arg-c > f1\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Arg-C > F1\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > arg-c > p",
+                "entity_name": "ERE-EN > Arg-C > P",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Precision for the Argument Classification (Arg-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the Precision (P) for Argument Classification (Arg-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > arg-c > p\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Arg-C > P\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > arg-c > r",
+                "entity_name": "ERE-EN > Arg-C > R",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Recall for the Argument Classification (Arg-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the Recall (R) for Argument Classification (Arg-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > arg-c > r\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Arg-C > R\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > trig-c > f1",
+                "entity_name": "ERE-EN > Trig-C > F1",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The F1 score for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the F1 score for Trigger Classification (Trig-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > trig-c > f1\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Trig-C > F1\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > trig-c > p",
+                "entity_name": "ERE-EN > Trig-C > P",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Precision for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the Precision (P) for Trigger Classification (Trig-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > trig-c > p\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Trig-C > P\nType: EVALUATION_METRIC"
             },
             {
-                "entity_name": "ere-en > trig-c > r",
+                "entity_name": "ERE-EN > Trig-C > R",
                 "entity_type": "EVALUATION_METRIC",
-                "description": "The Recall for the Trigger Classification (Trig-C) task on the ERE-EN dataset",
+                "description": "A synthesized column header representing the Recall (R) for Trigger Classification (Trig-C) on the ERE-EN dataset.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: ere-en > trig-c > r\nType: EVALUATION_METRIC"
+                "id": "Name: ERE-EN > Trig-C > R\nType: EVALUATION_METRIC"
             },
             {
                 "entity_name": "增强方法",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The column header for the data augmentation methods being compared in the table.",
+                "description": "A column header meaning 'Augmentation Method', listing the different data augmentation techniques being compared in the table.",
                 "source_ids": [
                     29
                 ],
@@ -608,64 +511,100 @@
             {
                 "entity_name": "模型",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The column header for the models used in the comparison of data augmentation methods.",
+                "description": "A column header meaning 'Model', likely listing the machine learning models used in the comparison.",
                 "source_ids": [
                     29
                 ],
                 "id": "Name: 模型\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "entity_name": "ere-en",
+                "entity_name": "Data Augmentation Methods",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "The primary subject of the table, referring to the various techniques for augmenting data that are being compared.",
+                "source_ids": [
+                    29
+                ],
+                "id": "Name: Data Augmentation Methods\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "ere-en (ere en)",
                 "entity_type": "DATASET_OR_CORPUS",
-                "description": "ere-en is an English dataset, likely for Event and Relation Extraction, used in experiments to evaluate event extraction models and the proposed framework. It is noted for containing more events and roles than the ACE05-E dataset and is often mentioned alongside ACE05-EN in the context of data augmentation.",
+                "description": "ere en is a dataset used for the experimental evaluation and testing of event extraction models, serving as a benchmark in performance evaluations. It is noted for containing more events and roles than the ACE05 dataset and is often mentioned alongside ACE05 in the context of data augmentation.",
                 "source_ids": [
                     8,
                     27,
                     29,
                     31
                 ],
-                "id": "Name: ere-en\nType: DATASET_OR_CORPUS"
+                "id": "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS"
             },
             {
-                "entity_name": "argument classification",
+                "entity_name": "Argument Classification",
                 "entity_type": "TASK_OR_PROBLEM",
-                "description": "A subtask in event extraction (Arg-C) for classifying arguments, as indicated in the column headers.",
+                "description": "A subtask in event extraction (Arg-C) for which performance metrics (F1, P, R) are reported in the table.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: argument classification\nType: TASK_OR_PROBLEM"
+                "id": "Name: Argument Classification\nType: TASK_OR_PROBLEM"
             },
             {
-                "entity_name": "trigger classification",
+                "entity_name": "Trigger Classification",
                 "entity_type": "TASK_OR_PROBLEM",
-                "description": "A subtask in event extraction (Trig-C) for classifying event triggers, as indicated in the column headers.",
+                "description": "A subtask in event extraction (Trig-C) for which performance metrics (F1, P, R) are reported in the table.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: trigger classification\nType: TASK_OR_PROBLEM"
+                "id": "Name: Trigger Classification\nType: TASK_OR_PROBLEM"
             },
             {
-                "entity_name": "data augmentation methods",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "The primary subject of the table's comparison, as stated in the description 'Comparison Results of Different Data Augmentation Methods'.",
+                "entity_name": "text2event (text2event)",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "text2event is an event extraction model that was used as a baseline and fine-tuned in the described experiments, where its performance was evaluated with different data augmentation methods.",
                 "source_ids": [
+                    8,
+                    24,
+                    27,
                     29
                 ],
-                "id": "Name: data augmentation methods\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE"
             },
             {
-                "entity_name": "none",
+                "entity_name": "hdgse (hdgse)",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "hdgse (hdgse) is an event extraction model, possibly graph-based, which was fine-tuned and used as a baseline for performance comparison in the described experiments, where its performance was evaluated in relation to a data augmentation framework.",
+                "source_ids": [
+                    36,
+                    8,
+                    22,
+                    24,
+                    27,
+                    29
+                ],
+                "id": "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "None",
                 "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "The baseline condition of using no data augmentation method.",
+                "description": "The baseline method indicating no data augmentation was applied.",
                 "source_ids": [
                     29
                 ],
-                "id": "Name: none\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: None\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "llmdirectgen",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "llmdirectgen is a data augmentation method that directly uses a Large Language Model for generation, which can result in synthetic data that deviates from the distribution of real-world events.",
+                "source_ids": [
+                    28,
+                    29
+                ],
+                "id": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE"
             },
             {
                 "entity_name": "synonym substitution (同义词替换sr)",
                 "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "Synonym substitution (同义词替换sr) is an existing data augmentation method that uses synonym replacement to partially alleviate data sparsity.",
+                "description": "Synonym substitution (同义词替换sr) is an existing data augmentation method that uses synonym replacement (SR) and is mentioned as having limitations.",
                 "source_ids": [
                     17,
                     29
@@ -675,7 +614,7 @@
             {
                 "entity_name": "back translation (回译bt)",
                 "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "Back translation (回译bt) is an existing data augmentation method that partially alleviates data sparsity by utilizing back-translation.",
+                "description": "Back translation (回译bt) is an existing data augmentation method that uses back-translation, though it is mentioned as having limitations.",
                 "source_ids": [
                     17,
                     29
@@ -683,20 +622,20 @@
                 "id": "Name: back translation (回译bt)\nType: METHOD_OR_TECHNIQUE"
             },
             {
-                "entity_name": "auggpt",
+                "entity_name": "auggpt (auggpt)",
                 "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "auggpt is a data augmentation method that uses a GPT-based generative model, noted for improving diversity but with event structure limitations, and it serves as a baseline method compared against the proposed framework.",
+                "description": "auggpt is a baseline data augmentation method based on the GPT generative model, which is used for performance comparison and improves diversity, though it may have issues with event structure.",
                 "source_ids": [
                     8,
                     28,
                     29
                 ],
-                "id": "Name: auggpt\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: auggpt (auggpt)\nType: METHOD_OR_TECHNIQUE"
             },
             {
                 "entity_name": "本文方法",
                 "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "The novel data augmentation method proposed in the paper.",
+                "description": "The data augmentation method proposed in the paper containing this table.",
                 "source_ids": [
                     29
                 ],
@@ -705,7 +644,7 @@
             {
                 "entity_name": "4.2 数据分析",
                 "entity_type": "SECTION_TITLE",
-                "description": "As a subsection of '实验与结果分析' (Experiments and Result Analysis), this section focuses on analyzing the data used in the experiments, likely detailing the characteristics, statistics, and quality of the datasets to support the subsequent result interpretation.",
+                "description": "As a subsection of '实验与结果分析' (Experiments and Result Analysis), this section focuses on analyzing the data, likely examining the characteristics, quality, or patterns within the datasets used in the study's experiments.",
                 "source_ids": [
                     30
                 ],
@@ -714,7 +653,7 @@
             {
                 "entity_name": "ace05-e+ (ace05-en)",
                 "entity_type": "DATASET_OR_CORPUS",
-                "description": "Ace05-e+ (ace05-en) is a dataset, likely an enhanced version of ACE05, used for evaluating and testing event extraction models in experiments; through a data augmentation method, its event counts were expanded to 9931.",
+                "description": "Ace05-e+ (ace05-en) is a dataset used for the experimental evaluation and testing of event extraction models, serving as a benchmark for performance evaluation. The dataset, which was expanded to contain 9,931 events through a data augmentation method, is specifically designed for event extraction tasks.",
                 "source_ids": [
                     8,
                     27,
@@ -725,35 +664,35 @@
             },
             {
                 "entity_name": "sr",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "sr is a baseline method mentioned as a synonym replacement data augmentation technique",
+                "entity_type": "method or technique",
+                "description": "sr is a baseline method for data augmentation  specifically a synonym replacement technique",
                 "source_ids": [
                     35
                 ],
-                "id": "Name: sr\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: sr\nType: method or technique"
             },
             {
                 "entity_name": "bt",
-                "entity_type": "METHOD_OR_TECHNIQUE",
-                "description": "bt is a baseline method mentioned as a back translation data augmentation technique",
+                "entity_type": "method or technique",
+                "description": "bt is a baseline method for data augmentation  specifically a back translation technique",
                 "source_ids": [
                     35
                 ],
-                "id": "Name: bt\nType: METHOD_OR_TECHNIQUE"
+                "id": "Name: bt\nType: method or technique"
             },
             {
                 "entity_name": "7",
-                "entity_type": "NUMBER",
-                "description": "the text consists solely of the number 7  which is a numeric value",
+                "entity_type": "number",
+                "description": "the text is simply the number 7  which is a numeric value",
                 "source_ids": [
                     38
                 ],
-                "id": "Name: 7\nType: NUMBER"
+                "id": "Name: 7\nType: number"
             },
             {
                 "entity_name": "2023 cxpt lc 005",
                 "entity_type": "TASK_OR_PROBLEM",
-                "description": "2023 cxpt lc 005 is a project funded by a laboratory and serves as a task identifier that supports the work.",
+                "description": "\"2023 cxpt lc 005\" is a project or grant identifier associated with the support for the work.",
                 "source_ids": [
                     41,
                     19
@@ -762,619 +701,398 @@
             },
             {
                 "entity_name": "1987",
-                "entity_type": "DATE",
-                "description": "1987 is the birth year of jiang zhiying",
+                "entity_type": "date",
+                "description": "1987 is the year in which jiang zhiying was born",
                 "source_ids": [
                     42
                 ],
-                "id": "Name: 1987\nType: DATE"
+                "id": "Name: 1987\nType: date"
+            },
+            {
+                "entity_name": "ph d",
+                "entity_type": "title",
+                "description": "ph d  is an academic title held by jiang zhiying",
+                "source_ids": [
+                    42
+                ],
+                "id": "Name: ph d\nType: title"
+            },
+            {
+                "entity_name": "associate professor",
+                "entity_type": "profession",
+                "description": "associate professor is the professional position held by jiang zhiying",
+                "source_ids": [
+                    42
+                ],
+                "id": "Name: associate professor\nType: profession"
+            },
+            {
+                "entity_name": "real time big data analytics",
+                "entity_type": "research field",
+                "description": "real time big data analytics is a research interest of jiang zhiying",
+                "source_ids": [
+                    42
+                ],
+                "id": "Name: real time big data analytics\nType: research field"
+            },
+            {
+                "entity_name": "1999",
+                "entity_type": "date",
+                "description": "the year song chenwei was born",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 1999\nType: date"
+            },
+            {
+                "entity_name": "data augmentation",
+                "entity_type": "research field",
+                "description": "a research field that song chenwei is interested in",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: data augmentation\nType: research field"
+            },
+            {
+                "entity_name": "2000",
+                "entity_type": "date",
+                "description": "the year wang jiaxin was born",
+                "source_ids": [
+                    43
+                ],
+                "id": "Name: 2000\nType: date"
+            },
+            {
+                "entity_name": "1993",
+                "entity_type": "date",
+                "description": "the year in which han zhonghe was born",
+                "source_ids": [
+                    44
+                ],
+                "id": "Name: 1993\nType: date"
+            },
+            {
+                "entity_name": "deep learning",
+                "entity_type": "research field",
+                "description": "a research field mentioned as an interest of han zhonghe",
+                "source_ids": [
+                    44
+                ],
+                "id": "Name: deep learning\nType: research field"
             },
             {
                 "entity_name": "large language model",
-                "entity_type": "MODEL_OR_ARCHITECTURE",
-                "description": "A large language model is mentioned as one of the research interests of Jiang Zhiying and Han Zhonghe.",
+                "entity_type": "RESEARCH_FIELD",
+                "description": "A large language model is a research field mentioned as an interest of both Jiang Zhiying and Han Zhonghe.",
                 "source_ids": [
                     42,
                     44
                 ],
-                "id": "Name: large language model\nType: MODEL_OR_ARCHITECTURE"
+                "id": "Name: large language model\nType: RESEARCH_FIELD"
             },
             {
-                "entity_name": "real time big data analytics",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "real time big data analytics is mentioned as one of jiang zhiying s research interests",
-                "source_ids": [
-                    42
-                ],
-                "id": "Name: real time big data analytics\nType: RESEARCH_FIELD"
-            },
-            {
-                "entity_name": "1999",
-                "entity_type": "DATE",
-                "description": "1999 is the year in which song chenwei was born",
-                "source_ids": [
-                    43
-                ],
-                "id": "Name: 1999\nType: DATE"
-            },
-            {
-                "entity_name": "data augmentation",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "data augmentation is a research field that song chenwei is interested in",
-                "source_ids": [
-                    43
-                ],
-                "id": "Name: data augmentation\nType: RESEARCH_FIELD"
-            },
-            {
-                "entity_name": "1993",
-                "entity_type": "DATE",
-                "description": "1993 is the year in which han zhonghe was born",
-                "source_ids": [
-                    44
-                ],
-                "id": "Name: 1993\nType: DATE"
-            },
-            {
-                "entity_name": "deep learning",
-                "entity_type": "RESEARCH_FIELD",
-                "description": "deep learning is one of the research interests of han zhonghe",
-                "source_ids": [
-                    44
-                ],
-                "id": "Name: deep learning\nType: RESEARCH_FIELD"
-            },
-            {
-                "entity_name": "times new rome",
-                "entity_type": "FONT",
-                "description": "times new rome is a font specified for representing matrices and vectors in the main text",
-                "source_ids": [
-                    47
-                ],
-                "id": "Name: times new rome\nType: FONT"
-            },
-            {
-                "entity_name": "table",
+                "entity_name": "Table",
                 "entity_type": "TABLE",
-                "description": "A table with columns for variable symbols, their meanings, and remarks, as indicated by the column headers, and also includes columns for font, character style, style, and a confirmation action, likely from a user interface for text formatting.",
+                "description": "The Table is a user interface element with column headers for variable symbol, meaning, and remarks, as well as columns for font, character style, style, and a confirmation action.",
                 "source_ids": [
                     48,
-                    49
+                    47
                 ],
-                "id": "Name: table\nType: TABLE"
+                "id": "Name: Table\nType: TABLE"
             },
             {
                 "entity_name": "变量符号",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The first column header 变量符号 (Variable Symbol), listing the symbols or identifiers for variables.",
+                "description": "The first column header 变量符号 (Variable Symbol), representing the symbolic notation for variables in the table.",
                 "source_ids": [
-                    48
+                    47
                 ],
                 "id": "Name: 变量符号\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "含义",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The second column header 含义 (Meaning), describing the definition or significance of each variable symbol.",
+                "description": "The second column header 含义 (Meaning), representing the definition or significance of the variables listed in the table.",
                 "source_ids": [
-                    48
+                    47
                 ],
                 "id": "Name: 含义\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "备注",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The third column header 备注 (Remarks), providing additional notes or comments for each variable.",
+                "description": "The third column header 备注 (Remarks), representing additional notes or comments related to the variables in the table.",
                 "source_ids": [
-                    48
+                    47
                 ],
                 "id": "Name: 备注\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "字体",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The column header for 'Font', representing the typeface or font family selection.",
+                "description": "A column header representing the 'Font' setting or selection.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 字体\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "字符样式",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The column header for 'Character Style', representing specific formatting applied to individual characters.",
+                "description": "A column header representing the 'Character Style' setting or selection.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 字符样式\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "样式",
                 "entity_type": "PARAMETER_OR_VARIABLE",
-                "description": "The column header for 'Style', representing a broader formatting category, possibly for paragraphs or the entire selection.",
+                "description": "A column header representing the 'Style' setting or selection.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 样式\nType: PARAMETER_OR_VARIABLE"
             },
             {
                 "entity_name": "确定",
                 "entity_type": "TASK_OR_PROBLEM",
-                "description": "The column header for 'Confirm' or 'OK', representing an action button to apply or finalize the selected formatting choices.",
+                "description": "A column header representing a 'Confirm' or 'OK' action, likely a button or command.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 确定\nType: TASK_OR_PROBLEM"
             },
             {
-                "entity_name": "文本(i)",
+                "entity_name": "文本(I)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row  indicating a text-related category, possibly for configuring text input or display settings.",
+                "description": "A section title in a table row representing a text category  for font settings, possibly for italic text.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 文本(i)\nType: SECTION_TITLE"
+                "id": "Name: 文本(I)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "文本(fe)",
+                "entity_name": "文本(FE)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a text-related category, possibly for configuring text input or display settings with a specific variant.",
+                "description": "A section title in a table row representing a text category  for font settings, possibly for Far East text.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 文本(fe)\nType: SECTION_TITLE"
+                "id": "Name: 文本(FE)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "函数功能(g)",
+                "entity_name": "函数功能(G)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for function-related settings or configurations.",
+                "description": "A section title in a table row representing a category for function or feature names in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 函数功能(g)\nType: SECTION_TITLE"
+                "id": "Name: 函数功能(G)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "变量(v)",
+                "entity_name": "变量(V)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for variable-related settings or configurations.",
+                "description": "A section title in a table row representing a category for variables in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 变量(v)\nType: SECTION_TITLE"
+                "id": "Name: 变量(V)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "希腊字母(l)",
+                "entity_name": "希腊字母(L)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for Greek letter settings or configurations.",
+                "description": "A section title in a table row representing a category for Greek letters in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 希腊字母(l)\nType: SECTION_TITLE"
+                "id": "Name: 希腊字母(L)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "u.c.希腊语(g)",
+                "entity_name": "U.C.希腊语(g)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for uppercase Greek letter settings or configurations.",
+                "description": "A section title in a table row representing a category for uppercase Greek letters in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: u.c.希腊语(g)\nType: SECTION_TITLE"
+                "id": "Name: U.C.希腊语(g)\nType: SECTION_TITLE"
             },
             {
                 "entity_name": "符号(g)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for symbol settings or configurations.",
+                "description": "A section title in a table row representing a category for symbols in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 符号(g)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "向量矩阵(m)",
+                "entity_name": "向量矩阵(M)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for vector or matrix-related settings or configurations.",
+                "description": "A section title in a table row representing a category for vectors and matrices in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 向量矩阵(m)\nType: SECTION_TITLE"
+                "id": "Name: 向量矩阵(M)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "数字(n)",
+                "entity_name": "数字(N)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for number-related settings or configurations.",
+                "description": "A section title in a table row representing a category for numbers in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 数字(n)\nType: SECTION_TITLE"
+                "id": "Name: 数字(N)\nType: SECTION_TITLE"
             },
             {
-                "entity_name": "数学附加(e)",
+                "entity_name": "数学附加(E)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for additional mathematical settings or configurations.",
+                "description": "A section title in a table row representing a category for additional mathematical symbols in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: 数学附加(e)\nType: SECTION_TITLE"
+                "id": "Name: 数学附加(E)\nType: SECTION_TITLE"
             },
             {
                 "entity_name": "用户1(1)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for user-defined settings or configurations, labeled as user 1.",
+                "description": "A section title in a table row representing a user-defined category 1 in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 用户1(1)\nType: SECTION_TITLE"
             },
             {
                 "entity_name": "用户2(2)",
                 "entity_type": "SECTION_TITLE",
-                "description": "A section title in a table row indicating a category for user-defined settings or configurations, labeled as user 2.",
+                "description": "A section title in a table row representing a user-defined category 2 in a font settings context.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 用户2(2)\nType: SECTION_TITLE"
             },
             {
                 "entity_name": "宋体",
                 "entity_type": "FONT",
-                "description": "A Chinese font name (SimSun) specified in the table rows for various text categories.",
+                "description": "A Chinese font name (SimSun) specified for certain text categories in the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 宋体\nType: FONT"
             },
             {
-                "entity_name": "edwardian script itc",
+                "entity_name": "Edwardian Script ITC",
                 "entity_type": "FONT",
-                "description": "A script font name specified in the table row for a text category.",
+                "description": "A script font name specified for a text category in the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: edwardian script itc\nType: FONT"
+                "id": "Name: Edwardian Script ITC\nType: FONT"
             },
             {
                 "entity_name": "times new roman",
-                "entity_type": "FONT",
-                "description": "A serif font name specified in multiple table rows for various categories like functions, variables, and user settings.",
+                "entity_type": "SOFTWARE",
+                "description": "Times New Roman is a serif font specified for formatting matrices and vectors in the main text, as well as for multiple categories including function, variable, vector/matrix, numbers, and user2 in the font settings table.",
                 "source_ids": [
-                    49
+                    48,
+                    46
                 ],
-                "id": "Name: times new roman\nType: FONT"
+                "id": "Name: times new roman\nType: SOFTWARE"
             },
             {
-                "entity_name": "symbol",
+                "entity_name": "Symbol",
                 "entity_type": "FONT",
-                "description": "A font name specified in table rows for categories involving Greek letters and symbols.",
+                "description": "A font name containing symbols, specified for Greek letters and symbols categories in the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: symbol\nType: FONT"
+                "id": "Name: Symbol\nType: FONT"
             },
             {
-                "entity_name": "mt extra",
+                "entity_name": "MT Extra",
                 "entity_type": "FONT",
-                "description": "A font name specified in the table row for additional mathematical settings.",
+                "description": "A font name specified for the additional mathematical symbols category in the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: mt extra\nType: FONT"
+                "id": "Name: MT Extra\nType: FONT"
             },
             {
-                "entity_name": "courier",
+                "entity_name": "Courier",
                 "entity_type": "FONT",
-                "description": "A monospaced font name specified in the table row for a user-defined settings category.",
+                "description": "A monospaced font name specified for a user-defined category in the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "id": "Name: courier\nType: FONT"
+                "id": "Name: Courier\nType: FONT"
             },
             {
                 "entity_name": "斜体",
                 "entity_type": "TEXT_STYLE",
-                "description": "A text style (italic) mentioned in the first row of the table.",
+                "description": "A character style (italic) mentioned in the first row of the font settings table.",
                 "source_ids": [
-                    49
+                    48
                 ],
                 "id": "Name: 斜体\nType: TEXT_STYLE"
             },
             {
                 "entity_name": "10",
-                "entity_type": "NUMBER",
-                "description": "the text is simply the number 10  which is a numerical value",
+                "entity_type": "measurement",
+                "description": "a numerical value mentioned in the text",
                 "source_ids": [
-                    52
+                    51
                 ],
-                "id": "Name: 10\nType: NUMBER"
+                "id": "Name: 10\nType: measurement"
             }
         ],
         "links": [
             {
-                "src_entity_name": "",
-                "tgt_entity_name": "text2event",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "the scoring module of the data augmentation framework is used to expand the training data  which is then used to fine tune the text2event model",
-                "source_ids": [
-                    24
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: text2event\nType: MODEL_OR_ARCHITECTURE"
-            },
-            {
-                "src_entity_name": "hdgse",
-                "tgt_entity_name": "",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "hdgse is compared against other event extraction models for performance  as indicated by the text discussing performance comparison",
-                "source_ids": [
-                    36
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE"
-            },
-            {
-                "src_entity_name": "",
+                "src_entity_name": "trig c",
                 "tgt_entity_name": "f1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "f1 score is the metric used to evaluate performance in trigger classification",
+                "description": "the performance of the trig c task is measured using the f1 metric",
                 "source_ids": [
-                    8
+                    27
                 ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: f1\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "llmdirectgen",
-                "tgt_entity_name": "",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "llmdirectgen   directly utilizes       for data generation",
-                "source_ids": [
-                    28
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE"
-            },
-            {
-                "src_entity_name": "",
-                "tgt_entity_name": "ere en",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the proposed framework was experimentally evaluated on the ere en dataset",
-                "source_ids": [
-                    8
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: ere-en\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "auggpt",
-                "tgt_entity_name": "",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "auggpt is stated to generally outperform       in data augmentation",
-                "source_ids": [
-                    28
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: auggpt\nType: METHOD_OR_TECHNIQUE"
-            },
-            {
-                "src_entity_name": "",
-                "tgt_entity_name": "ace05 e",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the proposed framework was experimentally evaluated on the ace05 e  dataset",
-                "source_ids": [
-                    8
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "",
-                "tgt_entity_name": "times new rome",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "the text specifies that matrices should be represented using the times new rome font in bold italic",
-                "source_ids": [
-                    47
-                ],
-                "source": "Name: \nType: UNKNOWN",
-                "target": "Name: times new rome\nType: FONT"
-            },
-            {
-                "src_entity_name": "jiangzy buct edu cn",
-                "tgt_entity_name": "buct edu cn",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the person s email address uses the domain of the organization  indicating an affiliation",
-                "source_ids": [
-                    7
-                ],
-                "source": "Name: buct edu cn\nType: ORGANIZATION",
-                "target": "Name: jiang zhiying\nType: PERSON"
-            },
-            {
-                "src_entity_name": "nvidia rtx4090 gpu",
-                "tgt_entity_name": "text2event",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "the text2event model is fine tuned on the nvidia rtx4090 gpu as part of the experiments",
-                "source_ids": [
-                    24
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: nvidia rtx4090 gpu\nType: HARDWARE"
-            },
-            {
-                "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "text2event",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "Table '表2' contains data about 'TEXT2EVENT'.",
-                "source_ids": [
-                    29
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: table 2 (表2)\nType: TABLE"
+                "source": "Name: f1\nType: evaluation metric",
+                "target": "Name: trig c\nType: task or problem"
             },
             {
                 "src_entity_name": "arg c",
-                "tgt_entity_name": "text2event",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "arg c is an evaluation metric used to assess the performance of the text2event model",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: argument classification (arg-c)\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "trig c",
-                "tgt_entity_name": "text2event",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "trig c is an evaluation metric used to assess the performance of the text2event model",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "text2event",
-                "tgt_entity_name": "ere en",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the text2event model is tested on the ere en dataset",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: ere-en\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "text2event",
-                "tgt_entity_name": "ace05 e",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the text2event model is tested on the ace05 e  dataset",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "nvidia rtx4090 gpu",
-                "tgt_entity_name": "hdgse",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "the hdgse model is fine tuned on the nvidia rtx4090 gpu as part of the experiments",
-                "source_ids": [
-                    24
-                ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: nvidia rtx4090 gpu\nType: HARDWARE"
-            },
-            {
-                "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "hdgse",
+                "tgt_entity_name": "f1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'HDGSE'.",
-                "source_ids": [
-                    29
-                ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: table 2 (表2)\nType: TABLE"
-            },
-            {
-                "src_entity_name": "arg c",
-                "tgt_entity_name": "hdgse",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "arg c is an evaluation metric used to assess the performance of the hdgse model",
+                "description": "the performance of the arg c task is measured using the f1 metric",
                 "source_ids": [
                     27
                 ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: argument classification (arg-c)\nType: EVALUATION_METRIC"
+                "source": "Name: f1\nType: evaluation metric",
+                "target": "Name: arg c\nType: task or problem"
             },
             {
-                "src_entity_name": "trig c",
-                "tgt_entity_name": "hdgse",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "trig c is an evaluation metric used to assess the performance of the hdgse model",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "hdgse",
-                "tgt_entity_name": "ere en",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the hdgse model is tested on the ere en dataset",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: ere-en\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "hdgse",
-                "tgt_entity_name": "ace05 e",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the hdgse model is tested on the ace05 e  dataset",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
-            },
-            {
-                "src_entity_name": "llmdirectgen",
+                "src_entity_name": "text2event",
                 "tgt_entity_name": "f1",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "llmdirectgen   results in f1 values lower than the baseline model",
+                "description": "the performance of the text2event model is measured using the f1 score metric",
                 "source_ids": [
-                    28
+                    8
                 ],
-                "source": "Name: f1\nType: EVALUATION_METRIC",
-                "target": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: f1\nType: evaluation metric",
+                "target": "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE"
             },
             {
-                "src_entity_name": "f1",
-                "tgt_entity_name": "arg c",
+                "src_entity_name": "hdgse",
+                "tgt_entity_name": "f1",
                 "relation_name": "",
-                "weight": 9.0,
-                "description": "f1 scores are reported for the arg c metric in the experiments",
+                "weight": 8.0,
+                "description": "the performance of the hdgse model is measured using the f1 score metric",
                 "source_ids": [
-                    27
+                    8
                 ],
-                "source": "Name: f1\nType: EVALUATION_METRIC",
-                "target": "Name: argument classification (arg-c)\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "f1",
-                "tgt_entity_name": "trig c",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "f1 scores are reported for the trig c metric in the experiments",
-                "source_ids": [
-                    27
-                ],
-                "source": "Name: f1\nType: EVALUATION_METRIC",
-                "target": "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
+                "source": "Name: f1\nType: evaluation metric",
+                "target": "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
             },
             {
                 "src_entity_name": "song chenwei",
@@ -1385,7 +1103,7 @@
                 "source_ids": [
                     12
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
+                "source": "Name: song chenwei\nType: person",
                 "target": "Name: jiang zhiying\nType: PERSON"
             },
             {
@@ -1397,8 +1115,8 @@
                 "source_ids": [
                     12
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
-                "target": "Name: han zhonghe\nType: PERSON"
+                "source": "Name: song chenwei\nType: person",
+                "target": "Name: han zhonghe\nType: person"
             },
             {
                 "src_entity_name": "song chenwei",
@@ -1409,20 +1127,20 @@
                 "source_ids": [
                     12
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
-                "target": "Name: wang jiaxin\nType: PERSON"
+                "source": "Name: song chenwei\nType: person",
+                "target": "Name: wang jiaxin\nType: person"
             },
             {
                 "src_entity_name": "song chenwei",
                 "tgt_entity_name": "1999",
                 "relation_name": "",
-                "weight": 9.0,
-                "description": "song chenwei was born in the year 1999",
+                "weight": 10.0,
+                "description": "song chenwei was born in 1999",
                 "source_ids": [
                     43
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
-                "target": "Name: 1999\nType: DATE"
+                "source": "Name: song chenwei\nType: person",
+                "target": "Name: 1999\nType: date"
             },
             {
                 "src_entity_name": "song chenwei",
@@ -1433,8 +1151,8 @@
                 "source_ids": [
                     43
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
-                "target": "Name: natural language processing\nType: RESEARCH_FIELD"
+                "source": "Name: song chenwei\nType: person",
+                "target": "Name: natural language processing\nType: research field"
             },
             {
                 "src_entity_name": "song chenwei",
@@ -1445,8 +1163,8 @@
                 "source_ids": [
                     43
                 ],
-                "source": "Name: song chenwei\nType: PERSON",
-                "target": "Name: data augmentation\nType: RESEARCH_FIELD"
+                "source": "Name: song chenwei\nType: person",
+                "target": "Name: data augmentation\nType: research field"
             },
             {
                 "src_entity_name": "jiang zhiying",
@@ -1458,7 +1176,7 @@
                     12
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: han zhonghe\nType: PERSON"
+                "target": "Name: han zhonghe\nType: person"
             },
             {
                 "src_entity_name": "jiang zhiying",
@@ -1470,55 +1188,79 @@
                     12
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: wang jiaxin\nType: PERSON"
+                "target": "Name: wang jiaxin\nType: person"
             },
             {
                 "src_entity_name": "jiang zhiying",
                 "tgt_entity_name": "1987",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "jiang zhiying was born in 1987",
+                "description": "jiang zhiying was born in the year 1987",
                 "source_ids": [
                     42
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: 1987\nType: DATE"
+                "target": "Name: 1987\nType: date"
             },
             {
                 "src_entity_name": "jiang zhiying",
-                "tgt_entity_name": "large language model",
+                "tgt_entity_name": "ph d",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "jiang zhiying s research interests include large language models",
+                "weight": 9.0,
+                "description": "jiang zhiying holds the academic title of ph d",
                 "source_ids": [
                     42
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: large language model\nType: MODEL_OR_ARCHITECTURE"
+                "target": "Name: ph d\nType: title"
+            },
+            {
+                "src_entity_name": "jiang zhiying",
+                "tgt_entity_name": "associate professor",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "jiang zhiying works in the profession of associate professor",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: jiang zhiying\nType: PERSON",
+                "target": "Name: associate professor\nType: profession"
             },
             {
                 "src_entity_name": "jiang zhiying",
                 "tgt_entity_name": "natural language processing",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "jiang zhiying s research interests include natural language processing",
+                "description": "natural language processing is a research field of interest to jiang zhiying",
                 "source_ids": [
                     42
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: natural language processing\nType: RESEARCH_FIELD"
+                "target": "Name: natural language processing\nType: research field"
             },
             {
                 "src_entity_name": "jiang zhiying",
                 "tgt_entity_name": "real time big data analytics",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "jiang zhiying s research interests include real time big data analytics",
+                "description": "real time big data analytics is a research interest of jiang zhiying",
                 "source_ids": [
                     42
                 ],
                 "source": "Name: jiang zhiying\nType: PERSON",
-                "target": "Name: real time big data analytics\nType: RESEARCH_FIELD"
+                "target": "Name: real time big data analytics\nType: research field"
+            },
+            {
+                "src_entity_name": "jiang zhiying",
+                "tgt_entity_name": "large language model",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "large language model is a research interest of jiang zhiying",
+                "source_ids": [
+                    42
+                ],
+                "source": "Name: jiang zhiying\nType: PERSON",
+                "target": "Name: large language model\nType: RESEARCH_FIELD"
             },
             {
                 "src_entity_name": "han zhonghe",
@@ -1529,56 +1271,92 @@
                 "source_ids": [
                     12
                 ],
-                "source": "Name: han zhonghe\nType: PERSON",
-                "target": "Name: wang jiaxin\nType: PERSON"
+                "source": "Name: han zhonghe\nType: person",
+                "target": "Name: wang jiaxin\nType: person"
             },
             {
                 "src_entity_name": "han zhonghe",
                 "tgt_entity_name": "1993",
                 "relation_name": "",
-                "weight": 9.0,
+                "weight": 10.0,
                 "description": "han zhonghe was born in the year 1993",
                 "source_ids": [
                     44
                 ],
-                "source": "Name: han zhonghe\nType: PERSON",
-                "target": "Name: 1993\nType: DATE"
+                "source": "Name: han zhonghe\nType: person",
+                "target": "Name: 1993\nType: date"
             },
             {
                 "src_entity_name": "han zhonghe",
                 "tgt_entity_name": "deep learning",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "han zhonghe has a research interest in deep learning",
+                "description": "deep learning is listed as one of han zhonghe s research interests",
                 "source_ids": [
                     44
                 ],
-                "source": "Name: han zhonghe\nType: PERSON",
-                "target": "Name: deep learning\nType: RESEARCH_FIELD"
+                "source": "Name: han zhonghe\nType: person",
+                "target": "Name: deep learning\nType: research field"
             },
             {
                 "src_entity_name": "han zhonghe",
                 "tgt_entity_name": "natural language processing",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "han zhonghe has a research interest in natural language processing",
+                "description": "natural language processing is listed as one of han zhonghe s research interests",
                 "source_ids": [
                     44
                 ],
-                "source": "Name: han zhonghe\nType: PERSON",
-                "target": "Name: natural language processing\nType: RESEARCH_FIELD"
+                "source": "Name: han zhonghe\nType: person",
+                "target": "Name: natural language processing\nType: research field"
             },
             {
                 "src_entity_name": "han zhonghe",
                 "tgt_entity_name": "large language model",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "han zhonghe has a research interest in large language models",
+                "description": "large language model is listed as one of han zhonghe s research interests",
                 "source_ids": [
                     44
                 ],
-                "source": "Name: han zhonghe\nType: PERSON",
-                "target": "Name: large language model\nType: MODEL_OR_ARCHITECTURE"
+                "source": "Name: han zhonghe\nType: person",
+                "target": "Name: large language model\nType: RESEARCH_FIELD"
+            },
+            {
+                "src_entity_name": "wang jiaxin",
+                "tgt_entity_name": "2000",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "wang jiaxin was born in 2000",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: wang jiaxin\nType: person",
+                "target": "Name: 2000\nType: date"
+            },
+            {
+                "src_entity_name": "wang jiaxin",
+                "tgt_entity_name": "natural language processing",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "wang jiaxin s research interests include natural language processing",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: wang jiaxin\nType: person",
+                "target": "Name: natural language processing\nType: research field"
+            },
+            {
+                "src_entity_name": "wang jiaxin",
+                "tgt_entity_name": "data augmentation",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "wang jiaxin s research interests include data augmentation",
+                "source_ids": [
+                    43
+                ],
+                "source": "Name: wang jiaxin\nType: person",
+                "target": "Name: data augmentation\nType: research field"
             },
             {
                 "src_entity_name": "college of information science and technology",
@@ -1589,35 +1367,47 @@
                 "source_ids": [
                     13
                 ],
-                "source": "Name: college of information science and technology\nType: ORGANIZATION",
-                "target": "Name: beijing university of chemical technology\nType: ORGANIZATION"
+                "source": "Name: college of information science and technology\nType: organization",
+                "target": "Name: beijing university of chemical technology\nType: organization"
             },
             {
                 "src_entity_name": "beijing university of chemical technology",
                 "tgt_entity_name": "beijing",
                 "relation_name": "",
-                "weight": 10.0,
-                "description": "the university is located in beijing  as stated in the address",
+                "weight": 9.0,
+                "description": "the university is located in the city of beijing",
                 "source_ids": [
                     13
                 ],
-                "source": "Name: beijing university of chemical technology\nType: ORGANIZATION",
-                "target": "Name: beijing\nType: LOCATION"
+                "source": "Name: beijing university of chemical technology\nType: organization",
+                "target": "Name: beijing\nType: location"
             },
             {
                 "src_entity_name": "the aerospace information research institute",
                 "tgt_entity_name": "beijing",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the aerospace information research institute is located in beijing",
+                "weight": 10.0,
+                "description": "the aerospace information research institute is located in beijing  as stated in the address",
                 "source_ids": [
                     14
                 ],
-                "source": "Name: beijing\nType: LOCATION",
-                "target": "Name: the aerospace information research institute\nType: ORGANIZATION"
+                "source": "Name: beijing\nType: location",
+                "target": "Name: the aerospace information research institute\nType: organization"
             },
             {
-                "src_entity_name": "institute of electronic chinese academy of sciences",
+                "src_entity_name": "key laboratory of network information system technology",
+                "tgt_entity_name": "beijing",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the laboratory is located in beijing",
+                "source_ids": [
+                    15
+                ],
+                "source": "Name: beijing\nType: location",
+                "target": "Name: key laboratory of network information system technology\nType: organization"
+            },
+            {
+                "src_entity_name": "institute of electronic  chinese academy of sciences",
                 "tgt_entity_name": "beijing",
                 "relation_name": "",
                 "weight": 8.0,
@@ -1625,47 +1415,47 @@
                 "source_ids": [
                     15
                 ],
-                "source": "Name: beijing\nType: LOCATION",
-                "target": "Name: institute of electronic chinese academy of sciences\nType: ORGANIZATION"
+                "source": "Name: beijing\nType: location",
+                "target": "Name: institute of electronic  chinese academy of sciences\nType: organization"
             },
             {
                 "src_entity_name": "key laboratory of target cognition and application technology",
                 "tgt_entity_name": "beijing",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the key laboratory is located in beijing",
+                "weight": 9.0,
+                "description": "the key laboratory is located in beijing  as indicated by the address",
                 "source_ids": [
                     16
                 ],
-                "source": "Name: beijing\nType: LOCATION",
-                "target": "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION"
-            },
-            {
-                "src_entity_name": "chinese academy of sciences",
-                "tgt_entity_name": "beijing",
-                "relation_name": "",
-                "weight": 7.0,
-                "description": "the chinese academy of sciences has a laboratory located in beijing",
-                "source_ids": [
-                    16
-                ],
-                "source": "Name: beijing\nType: LOCATION",
-                "target": "Name: chinese academy of sciences\nType: ORGANIZATION"
+                "source": "Name: beijing\nType: location",
+                "target": "Name: key laboratory of target cognition and application technology\nType: organization"
             },
             {
                 "src_entity_name": "the aerospace information research institute",
-                "tgt_entity_name": "chinese academy of sciences",
+                "tgt_entity_name": "chinese academic of sciences",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "the aerospace information research institute is part of the chinese academy of sciences",
+                "description": "the aerospace information research institute is part of or affiliated with the chinese academic of sciences  as indicated by the listing",
                 "source_ids": [
                     14
                 ],
-                "source": "Name: the aerospace information research institute\nType: ORGANIZATION",
+                "source": "Name: the aerospace information research institute\nType: organization",
                 "target": "Name: chinese academy of sciences\nType: ORGANIZATION"
             },
             {
-                "src_entity_name": "institute of electronic chinese academy of sciences",
+                "src_entity_name": "key laboratory of network information system technology",
+                "tgt_entity_name": "institute of electronic  chinese academy of sciences",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "the laboratory is affiliated with or part of the institute",
+                "source_ids": [
+                    15
+                ],
+                "source": "Name: key laboratory of network information system technology\nType: organization",
+                "target": "Name: institute of electronic  chinese academy of sciences\nType: organization"
+            },
+            {
+                "src_entity_name": "institute of electronic  chinese academy of sciences",
                 "tgt_entity_name": "chinese academy of sciences",
                 "relation_name": "",
                 "weight": 9.0,
@@ -1673,44 +1463,32 @@
                 "source_ids": [
                     15
                 ],
-                "source": "Name: chinese academy of sciences\nType: ORGANIZATION",
-                "target": "Name: institute of electronic chinese academy of sciences\nType: ORGANIZATION"
+                "source": "Name: institute of electronic  chinese academy of sciences\nType: organization",
+                "target": "Name: chinese academy of sciences\nType: ORGANIZATION"
             },
             {
                 "src_entity_name": "key laboratory of target cognition and application technology",
                 "tgt_entity_name": "chinese academy of sciences",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "the key laboratory is part of the chinese academy of sciences",
+                "description": "the key laboratory is affiliated with the chinese academy of sciences  as indicated by the text s structure",
                 "source_ids": [
                     16
                 ],
                 "source": "Name: chinese academy of sciences\nType: ORGANIZATION",
-                "target": "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION"
-            },
-            {
-                "src_entity_name": "key laboratory of network information system technology",
-                "tgt_entity_name": "institute of electronic chinese academy of sciences",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "the laboratory is part of the institute of electronic  chinese academy of sciences",
-                "source_ids": [
-                    15
-                ],
-                "source": "Name: key laboratory of network information system technology\nType: ORGANIZATION",
-                "target": "Name: institute of electronic chinese academy of sciences\nType: ORGANIZATION"
+                "target": "Name: key laboratory of target cognition and application technology\nType: organization"
             },
             {
                 "src_entity_name": "key laboratory of target cognition and application technology",
-                "tgt_entity_name": "100190",
+                "tgt_entity_name": "2023 cxpt lc 005",
                 "relation_name": "",
-                "weight": 7.0,
-                "description": "the key laboratory has the postal code 100190 in beijing",
+                "weight": 8.0,
+                "description": "the organization is associated with the grant or project identifier that provided partial support for the work",
                 "source_ids": [
-                    16
+                    41
                 ],
-                "source": "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION",
-                "target": "Name: 100190\nType: LOCATION"
+                "source": "Name: key laboratory of target cognition and application technology\nType: organization",
+                "target": "Name: 2023 cxpt lc 005\nType: TASK_OR_PROBLEM"
             },
             {
                 "src_entity_name": "event extraction",
@@ -1721,80 +1499,44 @@
                 "source_ids": [
                     17
                 ],
-                "source": "Name: event extraction\nType: TASK_OR_PROBLEM",
-                "target": "Name: natural language processing\nType: RESEARCH_FIELD"
+                "source": "Name: event extraction\nType: task or problem",
+                "target": "Name: natural language processing\nType: research field"
             },
             {
-                "src_entity_name": "llm based synergistic enhancement framework",
+                "src_entity_name": "multi stage llm based synergistic enhancement framework",
                 "tgt_entity_name": "generation annotation validation scoring",
                 "relation_name": "",
-                "weight": 8.0,
+                "weight": 9.0,
                 "description": "the framework features the closed loop mechanism of generation annotation validation scoring",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: generation annotation validation scoring\nType: METHOD_OR_TECHNIQUE"
-            },
-            {
-                "src_entity_name": "llm based synergistic enhancement framework",
-                "tgt_entity_name": "generation module",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the generation module is a component of the proposed llm based synergistic enhancement framework",
-                "source_ids": [
-                    17
-                ],
-                "source": "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: generation module\nType: MODEL_OR_ARCHITECTURE"
-            },
-            {
-                "src_entity_name": "llm based synergistic enhancement framework",
-                "tgt_entity_name": "validation module",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the validation module is a component of the proposed llm based synergistic enhancement framework",
-                "source_ids": [
-                    17
-                ],
-                "source": "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: validation module\nType: MODEL_OR_ARCHITECTURE"
-            },
-            {
-                "src_entity_name": "llm based synergistic enhancement framework",
-                "tgt_entity_name": "scoring module",
-                "relation_name": "",
-                "weight": 8.0,
-                "description": "the scoring module is a component of the proposed llm based synergistic enhancement framework",
-                "source_ids": [
-                    17
-                ],
-                "source": "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: scoring module\nType: MODEL_OR_ARCHITECTURE"
+                "source": "Name: multi stage llm based synergistic enhancement framework\nType: model or architecture",
+                "target": "Name: generation annotation validation scoring\nType: method or technique"
             },
             {
                 "src_entity_name": "generation module",
                 "tgt_entity_name": "multi strategy rewriting",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the generation module integrates the technique of multi strategy rewriting",
+                "weight": 9.0,
+                "description": "the generation module integrates multi strategy rewriting as part of its technique",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: generation module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: multi strategy rewriting\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: generation module\nType: model or architecture",
+                "target": "Name: multi strategy rewriting\nType: method or technique"
             },
             {
                 "src_entity_name": "generation module",
                 "tgt_entity_name": "constrained generation",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the generation module uses the technique of constrained generation",
+                "weight": 9.0,
+                "description": "the generation module uses constrained generation as a technique",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: generation module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: constrained generation\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: generation module\nType: model or architecture",
+                "target": "Name: constrained generation\nType: method or technique"
             },
             {
                 "src_entity_name": "multi strategy rewriting",
@@ -1805,8 +1547,8 @@
                 "source_ids": [
                     17
                 ],
-                "source": "Name: multi strategy rewriting\nType: METHOD_OR_TECHNIQUE",
-                "target": "Name: semantic role substitution\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: multi strategy rewriting\nType: method or technique",
+                "target": "Name: semantic role substitution\nType: method or technique"
             },
             {
                 "src_entity_name": "multi strategy rewriting",
@@ -1817,267 +1559,243 @@
                 "source_ids": [
                     17
                 ],
-                "source": "Name: multi strategy rewriting\nType: METHOD_OR_TECHNIQUE",
-                "target": "Name: event structure restructuring\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: multi strategy rewriting\nType: method or technique",
+                "target": "Name: event structure restructuring\nType: method or technique"
             },
             {
                 "src_entity_name": "validation module",
                 "tgt_entity_name": "trigger argument logical verification",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the validation module uses trigger argument logical verification to eliminate structural bias",
+                "weight": 9.0,
+                "description": "the validation module uses trigger argument logical verification to eliminate bias",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: validation module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: trigger argument logical verification\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: validation module\nType: model or architecture",
+                "target": "Name: trigger argument logical verification\nType: method or technique"
             },
             {
                 "src_entity_name": "validation module",
                 "tgt_entity_name": "event template matching",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the validation module uses event template matching to eliminate structural bias",
+                "weight": 9.0,
+                "description": "the validation module uses event template matching to eliminate bias",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: validation module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: event template matching\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: validation module\nType: model or architecture",
+                "target": "Name: event template matching\nType: method or technique"
             },
             {
                 "src_entity_name": "scoring module",
                 "tgt_entity_name": "information integrity",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the scoring module filters data based on the criterion of information integrity",
+                "weight": 9.0,
+                "description": "the scoring module filters data based on information integrity",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: scoring module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: information integrity\nType: EVALUATION_METRIC"
+                "source": "Name: scoring module\nType: model or architecture",
+                "target": "Name: information integrity\nType: evaluation metric"
             },
             {
                 "src_entity_name": "scoring module",
                 "tgt_entity_name": "semantic consistency",
                 "relation_name": "",
-                "weight": 8.0,
-                "description": "the scoring module filters data based on the criterion of semantic consistency",
+                "weight": 9.0,
+                "description": "the scoring module filters data based on semantic consistency",
                 "source_ids": [
                     17
                 ],
-                "source": "Name: scoring module\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: semantic consistency\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "实验",
-                "tgt_entity_name": "3.3 实验设置",
-                "relation_name": "",
-                "weight": 10.0,
-                "description": "概念'实验'是章节3.3的核心主题之一。",
-                "source_ids": [
-                    23
-                ],
-                "source": "Name: 3.3 实验设置\nType: SECTION_TITLE",
-                "target": "Name: 实验\nType: METHOD_OR_TECHNIQUE"
-            },
-            {
-                "src_entity_name": "设置",
-                "tgt_entity_name": "3.3 实验设置",
-                "relation_name": "",
-                "weight": 10.0,
-                "description": "概念'设置'是章节3.3的核心主题之一。",
-                "source_ids": [
-                    23
-                ],
-                "source": "Name: 3.3 实验设置\nType: SECTION_TITLE",
-                "target": "Name: 设置\nType: PARAMETER_OR_VARIABLE"
+                "source": "Name: scoring module\nType: model or architecture",
+                "target": "Name: semantic consistency\nType: evaluation metric"
             },
             {
                 "src_entity_name": "gpt 3 5 turbo",
                 "tgt_entity_name": "temperature",
                 "relation_name": "",
                 "weight": 8.0,
-                "description": "the temperature parameter is set to 0 8 during data generation using the gpt 3 5 turbo model",
+                "description": "the temperature parameter is set to 0 8 during the data generation process using the gpt 3 5 turbo model",
                 "source_ids": [
                     24
                 ],
-                "source": "Name: gpt 3 5 turbo\nType: MODEL_OR_ARCHITECTURE",
-                "target": "Name: temperature\nType: PARAMETER_OR_VARIABLE"
+                "source": "Name: gpt 3 5 turbo\nType: model or architecture",
+                "target": "Name: temperature\nType: parameter or variable"
             },
             {
-                "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "llmdirectgen",
+                "src_entity_name": "2",
+                "tgt_entity_name": "trig c",
                 "relation_name": "",
-                "weight": 9.0,
-                "description": "Table '表2' contains data about 'LLMDirectGen'.",
+                "weight": 8.0,
+                "description": "table 2 contains experimental results for the trig c task",
                 "source_ids": [
-                    29
+                    27
                 ],
-                "source": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE",
+                "source": "Name: trig c\nType: task or problem",
+                "target": "Name: table 2 (表2)\nType: TABLE"
+            },
+            {
+                "src_entity_name": "2",
+                "tgt_entity_name": "arg c",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "table 2 contains experimental results for the arg c task",
+                "source_ids": [
+                    27
+                ],
+                "source": "Name: arg c\nType: task or problem",
                 "target": "Name: table 2 (表2)\nType: TABLE"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en",
+                "tgt_entity_name": "ACE05-E+ > Arg-C > F1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > F1' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en\nType: DATASET_OR_CORPUS"
+                "target": "Name: ACE05-E+ > Arg-C > F1\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ace05-e+ > arg-c > f1",
+                "tgt_entity_name": "ACE05-E+ > Arg-C > P",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > F1'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > P' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ace05-e+ > arg-c > f1\nType: EVALUATION_METRIC"
+                "target": "Name: ACE05-E+ > Arg-C > P\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "argument classification (arg-c)",
+                "tgt_entity_name": "ACE05-E+ > Arg-C > R",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > P'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > R' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: argument classification (arg-c)\nType: EVALUATION_METRIC"
+                "target": "Name: ACE05-E+ > Arg-C > R\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ace05-e+ > arg-c > r",
+                "tgt_entity_name": "ACE05-E+ > Trig-C > F1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > R'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > F1' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ace05-e+ > arg-c > r\nType: EVALUATION_METRIC"
+                "target": "Name: ACE05-E+ > Trig-C > F1\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ace05-e+ > trig-c > f1",
+                "tgt_entity_name": "ACE05-E+ > Trig-C > P",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > F1'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > P' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ace05-e+ > trig-c > f1\nType: EVALUATION_METRIC"
+                "target": "Name: ACE05-E+ > Trig-C > P\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "trig c (trigger classification)",
+                "tgt_entity_name": "ACE05-E+ > Trig-C > R",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > P'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > R' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
+                "target": "Name: ACE05-E+ > Trig-C > R\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ace05-e+ > trig-c > r",
+                "tgt_entity_name": "ERE-EN > Arg-C > F1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > R'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > F1' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ace05-e+ > trig-c > r\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Arg-C > F1\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > arg-c > f1",
+                "tgt_entity_name": "ERE-EN > Arg-C > P",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Arg-C > F1'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > P' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > arg-c > f1\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Arg-C > P\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > arg-c > p",
+                "tgt_entity_name": "ERE-EN > Arg-C > R",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Arg-C > P'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > R' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > arg-c > p\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Arg-C > R\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > arg-c > r",
+                "tgt_entity_name": "ERE-EN > Trig-C > F1",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Arg-C > R'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > F1' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > arg-c > r\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Trig-C > F1\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > trig-c > f1",
+                "tgt_entity_name": "ERE-EN > Trig-C > P",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Trig-C > F1'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > P' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > trig-c > f1\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Trig-C > P\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > trig-c > p",
+                "tgt_entity_name": "ERE-EN > Trig-C > R",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Trig-C > P'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > R' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > trig-c > p\nType: EVALUATION_METRIC"
-            },
-            {
-                "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "ere-en > trig-c > r",
-                "relation_name": "",
-                "weight": 9.0,
-                "description": "Table '表2' contains data about 'ERE-EN > Trig-C > R'.",
-                "source_ids": [
-                    29
-                ],
-                "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: ere-en > trig-c > r\nType: EVALUATION_METRIC"
+                "target": "Name: ERE-EN > Trig-C > R\nType: EVALUATION_METRIC"
             },
             {
                 "src_entity_name": "table 2 (表2)",
                 "tgt_entity_name": "增强方法",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about '增强方法'.",
+                "description": "表格 '表2' 包含关于 '增强方法' 的数据。",
                 "source_ids": [
                     29
                 ],
@@ -2089,7 +1807,7 @@
                 "tgt_entity_name": "模型",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about '模型'.",
+                "description": "表格 '表2' 包含关于 '模型' 的数据。",
                 "source_ids": [
                     29
                 ],
@@ -2098,58 +1816,106 @@
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "argument classification",
+                "tgt_entity_name": "Data Augmentation Methods",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'Argument Classification'.",
+                "description": "表格 '表2' 包含关于 'Data Augmentation Methods' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: argument classification\nType: TASK_OR_PROBLEM"
+                "target": "Name: Data Augmentation Methods\nType: METHOD_OR_TECHNIQUE"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "trigger classification",
+                "tgt_entity_name": "ere-en (ere en)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'Trigger Classification'.",
+                "description": "表格 '表2' 包含关于 'ERE-EN' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: trigger classification\nType: TASK_OR_PROBLEM"
+                "target": "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "data augmentation methods",
+                "tgt_entity_name": "Argument Classification",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'Data Augmentation Methods'.",
+                "description": "表格 '表2' 包含关于 'Argument Classification' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: data augmentation methods\nType: METHOD_OR_TECHNIQUE"
+                "target": "Name: Argument Classification\nType: TASK_OR_PROBLEM"
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "none",
+                "tgt_entity_name": "Trigger Classification",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'None'.",
+                "description": "表格 '表2' 包含关于 'Trigger Classification' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: none\nType: METHOD_OR_TECHNIQUE"
+                "target": "Name: Trigger Classification\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "table 2 (表2)",
+                "tgt_entity_name": "text2event (text2event)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "表格 '表2' 包含关于 'TEXT2EVENT' 的数据。",
+                "source_ids": [
+                    29
+                ],
+                "source": "Name: table 2 (表2)\nType: TABLE",
+                "target": "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 2 (表2)",
+                "tgt_entity_name": "hdgse (hdgse)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "表格 '表2' 包含关于 'HDGSE' 的数据。",
+                "source_ids": [
+                    29
+                ],
+                "source": "Name: table 2 (表2)\nType: TABLE",
+                "target": "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "table 2 (表2)",
+                "tgt_entity_name": "None",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "表格 '表2' 包含关于 'None' 的数据。",
+                "source_ids": [
+                    29
+                ],
+                "source": "Name: table 2 (表2)\nType: TABLE",
+                "target": "Name: None\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "table 2 (表2)",
+                "tgt_entity_name": "llmdirectgen",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "表格 '表2' 包含关于 'LLMDirectGen' 的数据。",
+                "source_ids": [
+                    29
+                ],
+                "source": "Name: table 2 (表2)\nType: TABLE",
+                "target": "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE"
             },
             {
                 "src_entity_name": "table 2 (表2)",
                 "tgt_entity_name": "synonym substitution (同义词替换sr)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about '同义词替换SR'.",
+                "description": "表格 '表2' 包含关于 '同义词替换SR' 的数据。",
                 "source_ids": [
                     29
                 ],
@@ -2161,7 +1927,7 @@
                 "tgt_entity_name": "back translation (回译bt)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about '回译BT'.",
+                "description": "表格 '表2' 包含关于 '回译BT' 的数据。",
                 "source_ids": [
                     29
                 ],
@@ -2170,22 +1936,22 @@
             },
             {
                 "src_entity_name": "table 2 (表2)",
-                "tgt_entity_name": "auggpt",
+                "tgt_entity_name": "auggpt (auggpt)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'AugGPT'.",
+                "description": "表格 '表2' 包含关于 'AugGPT' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
-                "target": "Name: auggpt\nType: METHOD_OR_TECHNIQUE"
+                "target": "Name: auggpt (auggpt)\nType: METHOD_OR_TECHNIQUE"
             },
             {
                 "src_entity_name": "table 2 (表2)",
                 "tgt_entity_name": "本文方法",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about '本文方法'.",
+                "description": "表格 '表2' 包含关于 '本文方法' 的数据。",
                 "source_ids": [
                     29
                 ],
@@ -2197,11 +1963,71 @@
                 "tgt_entity_name": "ace05-e+",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table '表2' contains data about 'ACE05-E+'.",
+                "description": "表格 '表2' 包含关于 'ACE05-E+' 的数据。",
                 "source_ids": [
                     29
                 ],
                 "source": "Name: table 2 (表2)\nType: TABLE",
+                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "text2event",
+                "tgt_entity_name": "ere en",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the text2event model was tested on the ere en dataset",
+                "source_ids": [
+                    27
+                ],
+                "source": "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS",
+                "target": "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "hdgse",
+                "tgt_entity_name": "ere en",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the hdgse model was tested on the ere en dataset",
+                "source_ids": [
+                    27
+                ],
+                "source": "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS",
+                "target": "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "ace05-e+ (ace05-en)",
+                "tgt_entity_name": "ere-en (ere en)",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "both ace05 en  and ere en are datasets mentioned together in the statistical results of a data augmentation method",
+                "source_ids": [
+                    31
+                ],
+                "source": "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS",
+                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "text2event",
+                "tgt_entity_name": "ace05 e",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the text2event model was tested on the ace05 e  dataset",
+                "source_ids": [
+                    27
+                ],
+                "source": "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE",
+                "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
+            },
+            {
+                "src_entity_name": "hdgse",
+                "tgt_entity_name": "ace05 e",
+                "relation_name": "",
+                "weight": 8.0,
+                "description": "the hdgse model was tested on the ace05 e  dataset",
+                "source_ids": [
+                    27
+                ],
+                "source": "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE",
                 "target": "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
             },
             {
@@ -2213,436 +2039,408 @@
                 "source_ids": [
                     35
                 ],
-                "source": "Name: sr\nType: METHOD_OR_TECHNIQUE",
-                "target": "Name: bt\nType: METHOD_OR_TECHNIQUE"
+                "source": "Name: sr\nType: method or technique",
+                "target": "Name: bt\nType: method or technique"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "变量符号",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '变量符号'.",
+                "description": "表格 'Table' 包含关于 '变量符号' 的数据。",
                 "source_ids": [
-                    48
+                    47
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 变量符号\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "含义",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '含义'.",
+                "description": "表格 'Table' 包含关于 '含义' 的数据。",
                 "source_ids": [
-                    48
+                    47
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 含义\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "备注",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '备注'.",
+                "description": "表格 'Table' 包含关于 '备注' 的数据。",
                 "source_ids": [
-                    48
+                    47
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 备注\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "字体",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '字体'.",
+                "description": "表格 'Table' 包含关于 '字体' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 字体\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "字符样式",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '字符样式'.",
+                "description": "表格 'Table' 包含关于 '字符样式' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 字符样式\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "样式",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '样式'.",
+                "description": "表格 'Table' 包含关于 '样式' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 样式\nType: PARAMETER_OR_VARIABLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "确定",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '确定'.",
+                "description": "表格 'Table' 包含关于 '确定' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 确定\nType: TASK_OR_PROBLEM"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "文本(i)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "文本(I)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '文本(I)'.",
+                "description": "表格 'Table' 包含关于 '文本(I)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 文本(i)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 文本(I)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "文本(fe)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "文本(FE)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '文本(FE)'.",
+                "description": "表格 'Table' 包含关于 '文本(FE)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 文本(fe)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 文本(FE)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "函数功能(g)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "函数功能(G)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '函数功能(G)'.",
+                "description": "表格 'Table' 包含关于 '函数功能(G)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 函数功能(g)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 函数功能(G)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "变量(v)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "变量(V)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '变量(V)'.",
+                "description": "表格 'Table' 包含关于 '变量(V)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 变量(v)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 变量(V)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "希腊字母(l)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "希腊字母(L)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '希腊字母(L)'.",
+                "description": "表格 'Table' 包含关于 '希腊字母(L)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 希腊字母(l)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 希腊字母(L)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "u.c.希腊语(g)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "U.C.希腊语(g)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'U.C.希腊语(g)'.",
+                "description": "表格 'Table' 包含关于 'U.C.希腊语(g)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: u.c.希腊语(g)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: U.C.希腊语(g)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "符号(g)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '符号(g)'.",
+                "description": "表格 'Table' 包含关于 '符号(g)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 符号(g)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "向量矩阵(m)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "向量矩阵(M)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '向量矩阵(M)'.",
+                "description": "表格 'Table' 包含关于 '向量矩阵(M)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 向量矩阵(m)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 向量矩阵(M)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "数字(n)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "数字(N)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '数字(N)'.",
+                "description": "表格 'Table' 包含关于 '数字(N)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 数字(n)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 数字(N)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "数学附加(e)",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "数学附加(E)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '数学附加(E)'.",
+                "description": "表格 'Table' 包含关于 '数学附加(E)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: 数学附加(e)\nType: SECTION_TITLE"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: 数学附加(E)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "用户1(1)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '用户1(1)'.",
+                "description": "表格 'Table' 包含关于 '用户1(1)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 用户1(1)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "用户2(2)",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '用户2(2)'.",
+                "description": "表格 'Table' 包含关于 '用户2(2)' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 用户2(2)\nType: SECTION_TITLE"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "宋体",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '宋体'.",
+                "description": "表格 'Table' 包含关于 '宋体' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 宋体\nType: FONT"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "edwardian script itc",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "Edwardian Script ITC",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'Edwardian Script ITC'.",
+                "description": "表格 'Table' 包含关于 'Edwardian Script ITC' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: edwardian script itc\nType: FONT"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: Edwardian Script ITC\nType: FONT"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "times new roman",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'Times New Roman'.",
+                "description": "表格 'Table' 包含关于 'Times New Roman' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: times new roman\nType: FONT"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: times new roman\nType: SOFTWARE"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "symbol",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "Symbol",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'Symbol'.",
+                "description": "表格 'Table' 包含关于 'Symbol' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: symbol\nType: FONT"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: Symbol\nType: FONT"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "mt extra",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "MT Extra",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'MT Extra'.",
+                "description": "表格 'Table' 包含关于 'MT Extra' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: mt extra\nType: FONT"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: MT Extra\nType: FONT"
             },
             {
-                "src_entity_name": "table",
-                "tgt_entity_name": "courier",
+                "src_entity_name": "Table",
+                "tgt_entity_name": "Courier",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about 'Courier'.",
+                "description": "表格 'Table' 包含关于 'Courier' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
-                "target": "Name: courier\nType: FONT"
+                "source": "Name: Table\nType: TABLE",
+                "target": "Name: Courier\nType: FONT"
             },
             {
-                "src_entity_name": "table",
+                "src_entity_name": "Table",
                 "tgt_entity_name": "斜体",
                 "relation_name": "",
                 "weight": 9.0,
-                "description": "Table 'Table' contains data about '斜体'.",
+                "description": "表格 'Table' 包含关于 '斜体' 的数据。",
                 "source_ids": [
-                    49
+                    48
                 ],
-                "source": "Name: table\nType: TABLE",
+                "source": "Name: Table\nType: TABLE",
                 "target": "Name: 斜体\nType: TEXT_STYLE"
             }
         ]
     },
     "tree2kg": {
         "1": [
-            "Name: 面向事件抽取的多阶段数据增强框架研究 (research on a multi-stage data augmentation framework for event extraction)\nType: RESEARCH_FIELD"
-        ],
-        "2": [
-            "Name: \nType: UNKNOWN"
-        ],
-        "3": [
-            "Name: \nType: UNKNOWN"
-        ],
-        "4": [
-            "Name: \nType: UNKNOWN"
+            "Name: 面向事件抽取的多阶段数据增强框架研究\nType: SECTION_TITLE"
         ],
         "5": [
-            "Name: \nType: UNKNOWN"
+            "Name: 100190\nType: location"
         ],
         "7": [
-            "Name: jiang zhiying\nType: PERSON",
-            "Name: buct edu cn\nType: ORGANIZATION"
+            "Name: jiang zhiying\nType: PERSON"
         ],
         "8": [
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: ere-en\nType: DATASET_OR_CORPUS",
             "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS",
-            "Name: auggpt\nType: METHOD_OR_TECHNIQUE",
-            "Name: \nType: UNKNOWN",
-            "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-            "Name: f1\nType: EVALUATION_METRIC"
+            "Name: f1\nType: evaluation metric",
+            "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: auggpt (auggpt)\nType: METHOD_OR_TECHNIQUE",
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS"
         ],
         "10": [
-            "Name: tp391\nType: RESEARCH_FIELD",
-            "Name: a\nType: PUBLICATION_VENUE"
+            "Name: tp391\nType: research field"
         ],
         "11": [
-            "Name: 面向事件抽取的多阶段数据增强框架研究 (research on a multi-stage data augmentation framework for event extraction)\nType: RESEARCH_FIELD"
+            "Name: research on a multi stage data augmentation framework for event extraction\nType: research field"
         ],
         "12": [
-            "Name: han zhonghe\nType: PERSON",
-            "Name: wang jiaxin\nType: PERSON",
             "Name: jiang zhiying\nType: PERSON",
-            "Name: song chenwei\nType: PERSON"
+            "Name: song chenwei\nType: person",
+            "Name: han zhonghe\nType: person",
+            "Name: wang jiaxin\nType: person"
         ],
         "13": [
-            "Name: college of information science and technology\nType: ORGANIZATION",
-            "Name: beijing university of chemical technology\nType: ORGANIZATION",
-            "Name: beijing\nType: LOCATION"
+            "Name: beijing\nType: location",
+            "Name: beijing university of chemical technology\nType: organization",
+            "Name: college of information science and technology\nType: organization"
         ],
         "14": [
+            "Name: beijing\nType: location",
             "Name: chinese academy of sciences\nType: ORGANIZATION",
-            "Name: the aerospace information research institute\nType: ORGANIZATION",
-            "Name: beijing\nType: LOCATION"
+            "Name: the aerospace information research institute\nType: organization"
         ],
         "15": [
+            "Name: beijing\nType: location",
+            "Name: institute of electronic  chinese academy of sciences\nType: organization",
             "Name: chinese academy of sciences\nType: ORGANIZATION",
-            "Name: institute of electronic chinese academy of sciences\nType: ORGANIZATION",
-            "Name: key laboratory of network information system technology\nType: ORGANIZATION",
-            "Name: beijing\nType: LOCATION"
+            "Name: key laboratory of network information system technology\nType: organization"
         ],
         "16": [
-            "Name: chinese academy of sciences\nType: ORGANIZATION",
-            "Name: beijing\nType: LOCATION",
-            "Name: 100190\nType: LOCATION",
-            "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION"
+            "Name: beijing\nType: location",
+            "Name: key laboratory of target cognition and application technology\nType: organization",
+            "Name: chinese academy of sciences\nType: ORGANIZATION"
         ],
         "17": [
-            "Name: information integrity\nType: EVALUATION_METRIC",
-            "Name: multi strategy rewriting\nType: METHOD_OR_TECHNIQUE",
-            "Name: scoring module\nType: MODEL_OR_ARCHITECTURE",
-            "Name: semantic consistency\nType: EVALUATION_METRIC",
-            "Name: llm based synergistic enhancement framework\nType: MODEL_OR_ARCHITECTURE",
-            "Name: constrained generation\nType: METHOD_OR_TECHNIQUE",
-            "Name: event template matching\nType: METHOD_OR_TECHNIQUE",
-            "Name: generation module\nType: MODEL_OR_ARCHITECTURE",
+            "Name: event template matching\nType: method or technique",
+            "Name: multi strategy rewriting\nType: method or technique",
+            "Name: multi stage llm based synergistic enhancement framework\nType: model or architecture",
+            "Name: event extraction\nType: task or problem",
+            "Name: validation module\nType: model or architecture",
+            "Name: semantic role substitution\nType: method or technique",
+            "Name: information integrity\nType: evaluation metric",
             "Name: back translation (回译bt)\nType: METHOD_OR_TECHNIQUE",
-            "Name: natural language processing\nType: RESEARCH_FIELD",
-            "Name: event structure restructuring\nType: METHOD_OR_TECHNIQUE",
-            "Name: validation module\nType: MODEL_OR_ARCHITECTURE",
-            "Name: generation annotation validation scoring\nType: METHOD_OR_TECHNIQUE",
-            "Name: trigger argument logical verification\nType: METHOD_OR_TECHNIQUE",
-            "Name: event extraction\nType: TASK_OR_PROBLEM",
+            "Name: semantic consistency\nType: evaluation metric",
+            "Name: trigger argument logical verification\nType: method or technique",
+            "Name: natural language processing\nType: research field",
+            "Name: event structure restructuring\nType: method or technique",
+            "Name: generation annotation validation scoring\nType: method or technique",
+            "Name: constrained generation\nType: method or technique",
+            "Name: scoring module\nType: model or architecture",
             "Name: synonym substitution (同义词替换sr)\nType: METHOD_OR_TECHNIQUE",
-            "Name: semantic role substitution\nType: METHOD_OR_TECHNIQUE"
+            "Name: generation module\nType: model or architecture"
         ],
         "18": [
-            "Name: 2025 05 07\nType: DATE",
-            "Name: 20yy mm dd\nType: DATE",
-            "Name: yyyy mm dd\nType: DATE"
+            "Name: 2025 05 07\nType: date"
         ],
         "19": [
             "Name: 2023 cxpt lc 005\nType: TASK_OR_PROBLEM"
         ],
-        "20": [
-            "Name: \nType: UNKNOWN"
-        ],
-        "21": [
-            "Name: \nType: UNKNOWN"
-        ],
         "22": [
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: \nType: UNKNOWN"
-        ],
-        "23": [
-            "Name: 实验\nType: METHOD_OR_TECHNIQUE",
-            "Name: 设置\nType: PARAMETER_OR_VARIABLE",
-            "Name: 3.3 实验设置\nType: SECTION_TITLE"
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
         ],
         "24": [
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: temperature\nType: PARAMETER_OR_VARIABLE",
-            "Name: gpt 3 5 turbo\nType: MODEL_OR_ARCHITECTURE",
-            "Name: \nType: UNKNOWN",
-            "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-            "Name: nvidia rtx4090 gpu\nType: HARDWARE"
+            "Name: nvidia rtx4090 gpu\nType: hardware",
+            "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: temperature\nType: parameter or variable",
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: gpt 3 5 turbo\nType: model or architecture"
         ],
         "25": [
             "Name: 4 实验与结果分析\nType: SECTION_TITLE"
@@ -2651,141 +2449,133 @@
             "Name: 4.1 实验结果\nType: SECTION_TITLE"
         ],
         "27": [
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: ere-en\nType: DATASET_OR_CORPUS",
             "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS",
+            "Name: f1\nType: evaluation metric",
+            "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE",
             "Name: table 2 (表2)\nType: TABLE",
-            "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-            "Name: f1\nType: EVALUATION_METRIC",
-            "Name: argument classification (arg-c)\nType: EVALUATION_METRIC",
-            "Name: trig c (trigger classification)\nType: EVALUATION_METRIC"
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS",
+            "Name: trig c\nType: task or problem",
+            "Name: arg c\nType: task or problem"
         ],
         "28": [
-            "Name: table 2 (表2)\nType: TABLE",
-            "Name: auggpt\nType: METHOD_OR_TECHNIQUE",
+            "Name: f1\nType: evaluation metric",
+            "Name: auggpt (auggpt)\nType: METHOD_OR_TECHNIQUE",
             "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE",
-            "Name: \nType: UNKNOWN",
-            "Name: f1\nType: EVALUATION_METRIC"
+            "Name: table 2 (表2)\nType: TABLE"
         ],
         "29": [
-            "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS",
-            "Name: argument classification\nType: TASK_OR_PROBLEM",
+            "Name: ACE05-E+ > Trig-C > R\nType: EVALUATION_METRIC",
+            "Name: Trigger Classification\nType: TASK_OR_PROBLEM",
+            "Name: text2event (text2event)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: table 2 (表2)\nType: TABLE",
+            "Name: ERE-EN > Arg-C > F1\nType: EVALUATION_METRIC",
+            "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS",
+            "Name: 本文方法\nType: METHOD_OR_TECHNIQUE",
+            "Name: ACE05-E+ > Trig-C > F1\nType: EVALUATION_METRIC",
             "Name: 模型\nType: PARAMETER_OR_VARIABLE",
-            "Name: ace05-e+ > arg-c > r\nType: EVALUATION_METRIC",
-            "Name: ere-en > arg-c > r\nType: EVALUATION_METRIC",
-            "Name: auggpt\nType: METHOD_OR_TECHNIQUE",
-            "Name: trigger classification\nType: TASK_OR_PROBLEM",
-            "Name: text2event\nType: MODEL_OR_ARCHITECTURE",
-            "Name: data augmentation methods\nType: METHOD_OR_TECHNIQUE",
+            "Name: auggpt (auggpt)\nType: METHOD_OR_TECHNIQUE",
+            "Name: ERE-EN > Arg-C > R\nType: EVALUATION_METRIC",
             "Name: 增强方法\nType: PARAMETER_OR_VARIABLE",
             "Name: back translation (回译bt)\nType: METHOD_OR_TECHNIQUE",
-            "Name: ere-en > arg-c > p\nType: EVALUATION_METRIC",
-            "Name: table 2 (表2)\nType: TABLE",
-            "Name: ere-en > arg-c > f1\nType: EVALUATION_METRIC",
-            "Name: trig c (trigger classification)\nType: EVALUATION_METRIC",
-            "Name: argument classification (arg-c)\nType: EVALUATION_METRIC",
-            "Name: ere-en > trig-c > r\nType: EVALUATION_METRIC",
-            "Name: none\nType: METHOD_OR_TECHNIQUE",
-            "Name: ere-en\nType: DATASET_OR_CORPUS",
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: ace05-e+ > arg-c > f1\nType: EVALUATION_METRIC",
-            "Name: 本文方法\nType: METHOD_OR_TECHNIQUE",
+            "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS",
+            "Name: ACE05-E+ > Arg-C > R\nType: EVALUATION_METRIC",
+            "Name: ACE05-E+ > Trig-C > P\nType: EVALUATION_METRIC",
+            "Name: None\nType: METHOD_OR_TECHNIQUE",
+            "Name: ERE-EN > Trig-C > P\nType: EVALUATION_METRIC",
             "Name: llmdirectgen\nType: METHOD_OR_TECHNIQUE",
-            "Name: ace05-e+ > trig-c > f1\nType: EVALUATION_METRIC",
-            "Name: ere-en > trig-c > p\nType: EVALUATION_METRIC",
-            "Name: ere-en > trig-c > f1\nType: EVALUATION_METRIC",
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE",
+            "Name: ERE-EN > Trig-C > R\nType: EVALUATION_METRIC",
+            "Name: ACE05-E+ > Arg-C > F1\nType: EVALUATION_METRIC",
+            "Name: ACE05-E+ > Arg-C > P\nType: EVALUATION_METRIC",
+            "Name: ERE-EN > Trig-C > F1\nType: EVALUATION_METRIC",
             "Name: synonym substitution (同义词替换sr)\nType: METHOD_OR_TECHNIQUE",
-            "Name: ace05-e+ > trig-c > r\nType: EVALUATION_METRIC"
+            "Name: Data Augmentation Methods\nType: METHOD_OR_TECHNIQUE",
+            "Name: Argument Classification\nType: TASK_OR_PROBLEM",
+            "Name: ERE-EN > Arg-C > P\nType: EVALUATION_METRIC"
         ],
         "30": [
             "Name: 4.2 数据分析\nType: SECTION_TITLE"
         ],
         "31": [
-            "Name: ere-en\nType: DATASET_OR_CORPUS",
-            "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS"
-        ],
-        "32": [
-            "Name: \nType: UNKNOWN"
-        ],
-        "34": [
-            "Name: \nType: UNKNOWN"
+            "Name: ace05-e+ (ace05-en)\nType: DATASET_OR_CORPUS",
+            "Name: ere-en (ere en)\nType: DATASET_OR_CORPUS"
         ],
         "35": [
-            "Name: bt\nType: METHOD_OR_TECHNIQUE",
-            "Name: sr\nType: METHOD_OR_TECHNIQUE"
+            "Name: sr\nType: method or technique",
+            "Name: bt\nType: method or technique"
         ],
         "36": [
-            "Name: hdgse\nType: MODEL_OR_ARCHITECTURE",
-            "Name: \nType: UNKNOWN"
+            "Name: hdgse (hdgse)\nType: MODEL_OR_ARCHITECTURE"
         ],
         "38": [
-            "Name: 7\nType: NUMBER"
+            "Name: 7\nType: number"
         ],
         "41": [
-            "Name: 2023 cxpt lc 005\nType: TASK_OR_PROBLEM",
-            "Name: key laboratory of target cognition and application technology\nType: ORGANIZATION"
+            "Name: key laboratory of target cognition and application technology\nType: organization",
+            "Name: 2023 cxpt lc 005\nType: TASK_OR_PROBLEM"
         ],
         "42": [
-            "Name: natural language processing\nType: RESEARCH_FIELD",
+            "Name: associate professor\nType: profession",
+            "Name: ph d\nType: title",
+            "Name: 1987\nType: date",
             "Name: jiang zhiying\nType: PERSON",
-            "Name: large language model\nType: MODEL_OR_ARCHITECTURE",
-            "Name: real time big data analytics\nType: RESEARCH_FIELD",
-            "Name: 1987\nType: DATE"
+            "Name: natural language processing\nType: research field",
+            "Name: large language model\nType: RESEARCH_FIELD",
+            "Name: real time big data analytics\nType: research field"
         ],
         "43": [
-            "Name: natural language processing\nType: RESEARCH_FIELD",
-            "Name: data augmentation\nType: RESEARCH_FIELD",
-            "Name: song chenwei\nType: PERSON",
-            "Name: 1999\nType: DATE"
+            "Name: 1999\nType: date",
+            "Name: wang jiaxin\nType: person",
+            "Name: natural language processing\nType: research field",
+            "Name: 2000\nType: date",
+            "Name: song chenwei\nType: person",
+            "Name: data augmentation\nType: research field"
         ],
         "44": [
-            "Name: natural language processing\nType: RESEARCH_FIELD",
-            "Name: 1993\nType: DATE",
-            "Name: han zhonghe\nType: PERSON",
-            "Name: large language model\nType: MODEL_OR_ARCHITECTURE",
-            "Name: deep learning\nType: RESEARCH_FIELD"
+            "Name: deep learning\nType: research field",
+            "Name: 1993\nType: date",
+            "Name: natural language processing\nType: research field",
+            "Name: large language model\nType: RESEARCH_FIELD",
+            "Name: han zhonghe\nType: person"
         ],
-        "45": [
-            "Name: wang jiaxin\nType: PERSON"
+        "46": [
+            "Name: times new roman\nType: SOFTWARE"
         ],
         "47": [
-            "Name: \nType: UNKNOWN",
-            "Name: times new rome\nType: FONT"
-        ],
-        "48": [
             "Name: 备注\nType: PARAMETER_OR_VARIABLE",
-            "Name: table\nType: TABLE",
+            "Name: Table\nType: TABLE",
             "Name: 变量符号\nType: PARAMETER_OR_VARIABLE",
             "Name: 含义\nType: PARAMETER_OR_VARIABLE"
         ],
-        "49": [
-            "Name: 字体\nType: PARAMETER_OR_VARIABLE",
-            "Name: 用户2(2)\nType: SECTION_TITLE",
-            "Name: 向量矩阵(m)\nType: SECTION_TITLE",
-            "Name: 数字(n)\nType: SECTION_TITLE",
-            "Name: edwardian script itc\nType: FONT",
-            "Name: 函数功能(g)\nType: SECTION_TITLE",
-            "Name: table\nType: TABLE",
-            "Name: 希腊字母(l)\nType: SECTION_TITLE",
-            "Name: 斜体\nType: TEXT_STYLE",
-            "Name: 确定\nType: TASK_OR_PROBLEM",
-            "Name: u.c.希腊语(g)\nType: SECTION_TITLE",
-            "Name: 字符样式\nType: PARAMETER_OR_VARIABLE",
-            "Name: 文本(i)\nType: SECTION_TITLE",
-            "Name: courier\nType: FONT",
+        "48": [
+            "Name: MT Extra\nType: FONT",
+            "Name: 向量矩阵(M)\nType: SECTION_TITLE",
             "Name: 用户1(1)\nType: SECTION_TITLE",
-            "Name: mt extra\nType: FONT",
-            "Name: 宋体\nType: FONT",
-            "Name: times new roman\nType: FONT",
-            "Name: symbol\nType: FONT",
-            "Name: 符号(g)\nType: SECTION_TITLE",
             "Name: 样式\nType: PARAMETER_OR_VARIABLE",
-            "Name: 文本(fe)\nType: SECTION_TITLE",
-            "Name: 数学附加(e)\nType: SECTION_TITLE",
-            "Name: 变量(v)\nType: SECTION_TITLE"
+            "Name: 斜体\nType: TEXT_STYLE",
+            "Name: 字体\nType: PARAMETER_OR_VARIABLE",
+            "Name: 变量(V)\nType: SECTION_TITLE",
+            "Name: 希腊字母(L)\nType: SECTION_TITLE",
+            "Name: 符号(g)\nType: SECTION_TITLE",
+            "Name: 宋体\nType: FONT",
+            "Name: 文本(I)\nType: SECTION_TITLE",
+            "Name: 字符样式\nType: PARAMETER_OR_VARIABLE",
+            "Name: 数字(N)\nType: SECTION_TITLE",
+            "Name: times new roman\nType: SOFTWARE",
+            "Name: Edwardian Script ITC\nType: FONT",
+            "Name: 文本(FE)\nType: SECTION_TITLE",
+            "Name: 确定\nType: TASK_OR_PROBLEM",
+            "Name: 数学附加(E)\nType: SECTION_TITLE",
+            "Name: Table\nType: TABLE",
+            "Name: U.C.希腊语(g)\nType: SECTION_TITLE",
+            "Name: 用户2(2)\nType: SECTION_TITLE",
+            "Name: Symbol\nType: FONT",
+            "Name: Courier\nType: FONT",
+            "Name: 函数功能(G)\nType: SECTION_TITLE"
         ],
-        "52": [
-            "Name: 10\nType: NUMBER"
+        "51": [
+            "Name: 10\nType: measurement"
         ]
     },
     "variant": null

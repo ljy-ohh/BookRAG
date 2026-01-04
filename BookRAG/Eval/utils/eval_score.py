@@ -5,6 +5,9 @@ import json
 
 
 def levenshtein_distance(s1, s2):
+    """
+    计算两个字符串之间的 Levenshtein 距离（编辑距离）。
+    """
     if len(s1) > len(s2):
         s1, s2 = s2, s1
 
@@ -21,6 +24,11 @@ def levenshtein_distance(s1, s2):
 
 
 def anls_compute(groundtruth, prediction, threshold=0.5):
+    """
+    计算平均归一化 Levenshtein 相似度 (ANLS)。
+    ANLS = 1 - (Levenshtein距离 / max(len(groundtruth), len(prediction)))
+    如果 ANLS <= threshold，则返回 0.0。
+    """
     dist = levenshtein_distance(groundtruth, prediction)
     length = max(len(groundtruth.upper()), len(prediction.upper()))
     value = 0.0 if length == 0 else float(dist) / float(length)
@@ -31,6 +39,9 @@ def anls_compute(groundtruth, prediction, threshold=0.5):
 
 
 def is_float_equal(reference, prediction, include_percentage: bool = False, is_close: float = False) -> bool:
+    """
+    检查两个浮点数是否相等，支持百分比和容差。
+    """
     def get_precision(gt_ans: float) -> int:
         precision = 3
         if '.' in str(gt_ans):
@@ -68,9 +79,9 @@ def get_clean_string(s):
         s.rstrip("miles").strip()
     if s.endswith("million"):
         s.rstrip("million").strip()
-    # remove parenthesis
+    # 移除括号
     s = re.sub(r'\s*\([^)]*\)', '', s).strip()
-    # remove quotes
+    # 移除引号
     s = re.sub(r"^['\"]|['\"]$", "", s).strip()
     s = s.strip().lstrip("$").strip()
     s = s.strip().rstrip("%").strip()
@@ -78,19 +89,22 @@ def get_clean_string(s):
 
 
 def is_exact_match(s):
+    """
+    检查字符串是否需要精确匹配（如 URL、文件名、电话号码等）。
+    """
     flag = False
-    # Website
+    # 网址
     if "https://" in s:
         flag = True
-    # code file
+    # 代码文件
     if s.endswith(".py") or s.endswith("ipynb"):
         flag = True
     if s.startswith("page"):
         flag = True
-    # telephone number
+    # 电话号码
     if re.fullmatch(r'\b\d+(-\d+|\s\d+)?\b', s):
         flag = True
-    # time
+    # 时间
     if "a.m." in s or "p.m." in s:
         flag = True
     # YYYY-MM-DD
@@ -99,13 +113,16 @@ def is_exact_match(s):
     # YYYY-MM
     if re.fullmatch(r'\b\d{4}[-\s]\d{2}\b', s):
         flag = True
-    # Email address
+    # 电子邮件地址
     if re.fullmatch(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', s):
         flag = True
     return flag
 
 
 def isfloat(num):
+    """
+    检查字符串是否可以转换为浮点数。
+    """
     try:
         float(num)
         return True
@@ -114,6 +131,9 @@ def isfloat(num):
 
 
 def eval_score(gt, pred, answer_type):
+    """
+    根据答案类型计算评估分数。
+    """
     if answer_type=="Int":
         try:
             gt, pred = int(gt), int(float(pred))
@@ -159,6 +179,9 @@ def eval_score(gt, pred, answer_type):
 
 
 def eval_acc_and_f1(samples):
+    """
+    计算样本集的准确率和 F1 分数。
+    """
     evaluated_samples = [sample for sample in samples if "score" in sample]
     if not evaluated_samples:
         return 0.0, 0.0

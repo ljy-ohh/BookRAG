@@ -12,22 +12,22 @@ log = logging.getLogger(__name__)
 
 
 def num_tokens(text: str, token_encoder: tiktoken.Encoding | None = None) -> int:
-    """Return the number of tokens in the given text."""
+    """返回给定文本中的 token 数量。"""
     if token_encoder is None:
         token_encoder = tiktoken.get_encoding("cl100k_base")
     return len(token_encoder.encode(text))
 
 
 def try_parse_json_object(input: str) -> tuple[str, dict]:
-    """JSON cleaning and formatting utilities."""
-    # Sometimes, the LLM returns a json string with some extra description, this function will clean it up.
+    """JSON 清理和格式化工具。"""
+    # 有时 LLM 会返回带有额外描述的 json 字符串，此函数将对其进行清理。
 
     result = None
     try:
-        # Try parse first
+        # 首先尝试解析
         result = json.loads(input)
     except json.JSONDecodeError:
-        log.info("Warning: Error decoding faulty json, attempting repair")
+        log.info("警告: 解析错误的 json 失败，尝试修复")
 
     if result:
         return input, result
@@ -36,7 +36,7 @@ def try_parse_json_object(input: str) -> tuple[str, dict]:
     _match = re.search(_pattern, input)
     input = "{" + _match.group(1) + "}" if _match else input
 
-    # Clean up json string.
+    # 清理 json 字符串。
     input = (
         input.replace("{{", "{")
         .replace("}}", "}")
@@ -49,7 +49,7 @@ def try_parse_json_object(input: str) -> tuple[str, dict]:
         .strip()
     )
 
-    # Remove JSON Markdown Frame
+    # 移除 JSON Markdown 框架
     if input.startswith("```json"):
         input = input[len("```json") :]
     if input.endswith("```"):
@@ -58,18 +58,18 @@ def try_parse_json_object(input: str) -> tuple[str, dict]:
     try:
         result = json.loads(input)
     except json.JSONDecodeError:
-        # Fixup potentially malformed json string using json_repair.
+        # 使用 json_repair 修复可能格式错误的 json 字符串。
         input = str(repair_json(json_str=input, return_objects=False))
 
-        # Generate JSON-string output using best-attempt prompting & parsing techniques.
+        # 使用最佳尝试提示和解析技术生成 JSON 字符串输出。
         try:
             result = json.loads(input)
         except json.JSONDecodeError:
-            log.exception("error loading json, json=%s", input)
+            log.exception("加载 json 出错, json=%s", input)
             return input, {}
         else:
             if not isinstance(result, dict):
-                log.exception("not expected dict type. type=%s:", type(result))
+                log.exception("非预期的字典类型。类型=%s:", type(result))
                 return input, {}
             return input, result
     else:
@@ -77,7 +77,7 @@ def try_parse_json_object(input: str) -> tuple[str, dict]:
 
 
 def get_json_content(any_list: list[Optional[str]], selected_columns: list[str]) -> str:
-    """Get JSON content from the PDF list."""
+    """从 PDF 列表中获取 JSON 内容。"""
     json_list = []
     for content in any_list:
         if isinstance(content, dict):
@@ -90,7 +90,7 @@ def get_json_content(any_list: list[Optional[str]], selected_columns: list[str])
 
 
 def enumerate_pdf_list(pdf_list: list[Optional[str]]) -> list[Optional[str]]:
-    """Enumerate the PDF content list."""
+    """枚举 PDF 内容列表。"""
     enumerated_list = []
     i = 1  # pdf_id starts from 1
     for content in pdf_list:
@@ -103,14 +103,14 @@ def enumerate_pdf_list(pdf_list: list[Optional[str]]) -> list[Optional[str]]:
 
 def split_string_by_multi_markers(text: str, delimiters: list[str]) -> list[str]:
     """
-    Split a string by multiple delimiters.
+    使用多个分隔符分割字符串。
 
     Args:
-        text (str): The string to split.
-        delimiters (list[str]): A list of delimiter strings.
+        text (str): 要分割的字符串。
+        delimiters (list[str]): 分隔符字符串列表。
 
     Returns:
-        list[str]: A list of strings, split by the delimiters.
+        list[str]: 分割后的字符串列表。
     """
     if not delimiters:
         return [text]
@@ -120,8 +120,8 @@ def split_string_by_multi_markers(text: str, delimiters: list[str]) -> list[str]
 
 
 def clean_str(input: Any) -> str:
-    """Clean an input string by removing HTML escapes, control characters, and other unwanted characters."""
-    # If we get non-string input, just give it back
+    """通过移除 HTML 转义符、控制字符和其他不需要的字符来清理输入字符串。"""
+    # 如果输入不是字符串，直接返回
     if not isinstance(input, str):
         return input
 
@@ -129,26 +129,26 @@ def clean_str(input: Any) -> str:
     # https://stackoverflow.com/questions/4324790/removing-control-characters-from-a-string-in-python
     result = re.sub(r"[\x00-\x1f\x7f-\x9f]", "", result)
 
-    # Remove non-alphanumeric characters and convert to lowercase
+    # 移除非字母数字字符并转换为小写
     return re.sub("[^A-Za-z0-9 ]", " ", result.lower()).strip()
 
 
 def is_float_regex(value: str) -> bool:
     """
-    Check if a string matches the regular expression for a float.
+    检查字符串是否匹配浮点数的正则表达式。
 
     Args:
-        value (str): The string to check.
+        value (str): 要检查的字符串。
 
     Returns:
-        bool: Whether the string matches the regular expression.
+        bool: 字符串是否匹配正则表达式。
     """
     return bool(re.match(r"^[-+]?[0-9]*\.?[0-9]+$", value))
 
 
 def get_input_tokens(prompt_or_memory: Union[str, List[Dict[str, Any]]]) -> int:
     """
-    Get the number of tokens in the input string or list of strings.
+    获取输入字符串或字符串列表中的 token 数量。
 
     """
     if isinstance(prompt_or_memory, str):
@@ -158,7 +158,7 @@ def get_input_tokens(prompt_or_memory: Union[str, List[Dict[str, Any]]]) -> int:
         for message in prompt_or_memory:
             for key, value in message.items():
                 prompt_num_tokens += num_tokens(key)
-                # If the value is a string, count its tokens
+                # 如果值是字符串，计算其 token 数量
                 content = value
                 if isinstance(content, str):
                     prompt_num_tokens += num_tokens(content)
@@ -168,21 +168,21 @@ def get_input_tokens(prompt_or_memory: Union[str, List[Dict[str, Any]]]) -> int:
                             prompt_num_tokens += num_tokens(item)
                 else:
                     raise TypeError(
-                        "Message values must be strings or lists of strings."
+                        "消息值必须是字符串或字符串列表。"
                     )
         prompt_num_tokens += (
-            3  # every reply is primed with <|start|>assistant<|message|>
+            3  # 每个回复都以 <|start|>assistant<|message|> 开头
         )
         return prompt_num_tokens
     else:
-        raise TypeError("Input must be a string or a list of strings.")
+        raise TypeError("输入必须是字符串或字符串列表。")
 
 
 def get_max_output_tokens(
     prompt_or_memory: Union[str, List[Dict[str, Any]]], max_model_token: int
 ) -> int:
-    # 3 for the end token
-    # max 0 for negative values
+    # 3个 token 用于结束标记
+    # 负值取 0
     inptput_token = get_input_tokens(prompt_or_memory)
     max_output_toekens = max(max_model_token - inptput_token - 3, 0)
     return max_output_toekens
@@ -199,7 +199,7 @@ class TextProcessor:
     @staticmethod
     def split_text_into_chunks(text: str, max_length: int = 1000) -> List[str]:
         """
-        Split the input text into chunks, each not exceeding max_length tokens.
+        将输入文本分割成块，每个块不超过 max_length 个 token。
         Args:
             text: 需要被分割的原始文本。
             max_length: 每个块的最大 token 数量。
@@ -291,21 +291,21 @@ class TextProcessor:
     @staticmethod
     def split_texts_into_chunks(texts: List[str], max_length: int = 1000) -> List[str]:
         """
-        Splits a LIST of texts into a single list of chunks.
+        将文本列表分割成单个块列表。
 
-        This method iterates through each text in the input list and applies the
-        split_text_into_chunks logic to it, effectively flattening the result.
+        此方法遍历输入列表中的每个文本，并对其应用 split_text_into_chunks 逻辑，
+        实际上是将结果扁平化。
 
         Args:
-            texts: A list of original texts to be split.
-            max_length: The maximum number of tokens for each chunk.
+            texts: 要分割的原始文本列表。
+            max_length: 每个块的最大 token 数量。
 
         Returns:
-            A single list containing all text chunks from all input texts.
+            包含所有输入文本的所有文本块的单个列表。
         """
         all_chunks = []
         for text in texts:
-            # Reuse the existing static method for single text processing
+            # 重用现有的静态方法进行单个文本处理
             chunks_from_one_text = TextProcessor.split_text_into_chunks(
                 text, max_length
             )
@@ -314,12 +314,12 @@ class TextProcessor:
 
     # 只是为了方便演示，添加一个调用方法
     def process_and_print_chunks(self, sample_text: str, max_tokens: int):
-        print(f"--- Splitting text with max_length = {max_tokens} ---")
+        print(f"--- 正在以 max_length = {max_tokens} 分割文本 ---")
         chunks = TextProcessor.split_text_into_chunks(
             sample_text, max_length=max_tokens
         )
         for i, chunk in enumerate(chunks):
             chunk_token_count = num_tokens(chunk)
-            print(f"Chunk {i+1} (Tokens: {chunk_token_count}):")
+            print(f"块 {i+1} (Tokens: {chunk_token_count}):")
             print(f'"{chunk}"\n')
-        print("--- End of splitting ---\n")
+        print("--- 分割结束 ---\n")

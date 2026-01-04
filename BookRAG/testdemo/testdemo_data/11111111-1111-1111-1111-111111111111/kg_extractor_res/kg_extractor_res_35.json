@@ -2,16 +2,16 @@
   "entities": [
     {
       "entity_name": "sr",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "sr is a baseline method mentioned as a synonym replacement data augmentation technique",
+      "entity_type": "method or technique",
+      "description": "sr is a baseline method for data augmentation  specifically a synonym replacement technique",
       "source_ids": [
         35
       ]
     },
     {
       "entity_name": "bt",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "bt is a baseline method mentioned as a back translation data augmentation technique",
+      "entity_type": "method or technique",
+      "description": "bt is a baseline method for data augmentation  specifically a back translation technique",
       "source_ids": [
         35
       ]

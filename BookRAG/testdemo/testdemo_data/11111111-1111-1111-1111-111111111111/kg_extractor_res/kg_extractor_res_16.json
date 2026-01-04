@@ -2,32 +2,24 @@
   "entities": [
     {
       "entity_name": "key laboratory of target cognition and application technology",
-      "entity_type": "ORGANIZATION",
-      "description": "a laboratory mentioned in the text  part of the chinese academy of sciences",
+      "entity_type": "organization",
+      "description": "a key laboratory mentioned in the text",
       "source_ids": [
         16
       ]
     },
     {
       "entity_name": "chinese academy of sciences",
-      "entity_type": "ORGANIZATION",
-      "description": "an organization to which the key laboratory belongs",
+      "entity_type": "organization",
+      "description": "an academy of sciences mentioned in the text",
       "source_ids": [
         16
       ]
     },
     {
       "entity_name": "beijing",
-      "entity_type": "LOCATION",
-      "description": "a city where the key laboratory is located",
-      "source_ids": [
-        16
-      ]
-    },
-    {
-      "entity_name": "100190",
-      "entity_type": "LOCATION",
-      "description": "a postal code indicating a specific location in beijing",
+      "entity_type": "location",
+      "description": "a city mentioned as a location",
       "source_ids": [
         16
       ]
@@ -39,7 +31,7 @@
       "tgt_entity_name": "chinese academy of sciences",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the key laboratory is part of the chinese academy of sciences",
+      "description": "the key laboratory is affiliated with the chinese academy of sciences  as indicated by the text s structure",
       "source_ids": [
         16
       ]
@@ -48,28 +40,8 @@
       "src_entity_name": "key laboratory of target cognition and application technology",
       "tgt_entity_name": "beijing",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the key laboratory is located in beijing",
-      "source_ids": [
-        16
-      ]
-    },
-    {
-      "src_entity_name": "key laboratory of target cognition and application technology",
-      "tgt_entity_name": "100190",
-      "relation_name": "",
-      "weight": 7.0,
-      "description": "the key laboratory has the postal code 100190 in beijing",
-      "source_ids": [
-        16
-      ]
-    },
-    {
-      "src_entity_name": "chinese academy of sciences",
-      "tgt_entity_name": "beijing",
-      "relation_name": "",
-      "weight": 7.0,
-      "description": "the chinese academy of sciences has a laboratory located in beijing",
+      "weight": 9.0,
+      "description": "the key laboratory is located in beijing  as indicated by the address",
       "source_ids": [
         16
       ]

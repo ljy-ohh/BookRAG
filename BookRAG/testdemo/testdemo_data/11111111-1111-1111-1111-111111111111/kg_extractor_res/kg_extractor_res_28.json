@@ -2,40 +2,32 @@
   "entities": [
     {
       "entity_name": "2",
-      "entity_type": "TABLE",
-      "description": "a table referenced in the text showing performance comparisons of data augmentation methods",
+      "entity_type": "table",
+      "description": "a table referenced in the text showing performance comparisons of different methods",
       "source_ids": [
         28
       ]
     },
     {
       "entity_name": "auggpt",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "a generative model used for data augmentation  noted for improving diversity but with event structure limitations",
+      "entity_type": "model or architecture",
+      "description": "a generative model used for data augmentation  which improves diversity but may have event structure issues",
       "source_ids": [
         28
       ]
     },
     {
       "entity_name": "f1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "an evaluation metric  f1 score  used to assess model performance in the text",
+      "entity_type": "evaluation metric",
+      "description": "an evaluation metric  f1 score  used to measure model performance",
       "source_ids": [
         28
       ]
     },
     {
       "entity_name": "llmdirectgen",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "a method that directly uses large language models for generation  noted for producing data that deviates from real event distributions",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "entity_name": "",
-      "entity_type": "UNKNOWN",
-      "description": "",
+      "entity_type": "method or technique",
+      "description": "a method that directly uses large language models for generation  resulting in data that deviates from real event distribution",
       "source_ids": [
         28
       ]
@@ -47,7 +39,37 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 7.0,
-      "description": "is compared as a baseline method against the      for performance evaluation",
+      "description": "is compared against the      as a baseline augmentation method",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "is modified into      in this paper to preserve event structure",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "2",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of       is shown in  2",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "2",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "the performance of    is shown in  2",
       "source_ids": [
         28
       ]
@@ -57,17 +79,37 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 7.0,
-      "description": "auggpt is stated to generally outperform       in data augmentation",
+      "description": "auggpt is generally superior to the       method",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "auggpt",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "auggpt is generally superior to the    method",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "auggpt",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "auggpt performs lower than",
       "source_ids": [
         28
       ]
     },
     {
       "src_entity_name": "llmdirectgen",
-      "tgt_entity_name": "f1",
+      "tgt_entity_name": "",
       "relation_name": "",
       "weight": 8.0,
-      "description": "llmdirectgen   results in f1 values lower than the baseline model",
+      "description": "llmdirectgen   has an f1 value lower than the",
       "source_ids": [
         28
       ]
@@ -77,7 +119,37 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "llmdirectgen   directly utilizes       for data generation",
+      "description": "llmdirectgen   directly utilizes       for generation",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "is mentioned as a potential strategy to improve performance when using",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 6.0,
+      "description": "is mentioned as a potential strategy to improve performance when using",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "is the proposed method referred to as",
       "source_ids": [
         28
       ]

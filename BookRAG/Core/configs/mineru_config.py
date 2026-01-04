@@ -2,6 +2,9 @@ from dataclasses import dataclass
 
 @dataclass
 class MinerU:
+    """
+    MinerU 配置类。
+    """
     backend: str
     method: str
     lang:str
@@ -14,5 +17,5 @@ class MinerU:
             "vlm-sglang-engine",
             "pipeline",
         ]:
-            raise ValueError(f"Unsupported backend: {self.backend}")
+            raise ValueError(f"不支持的后端: {self.backend}")
         self.method = "auto" if self.backend == "pipeline" else "vlm"

@@ -13,7 +13,7 @@ from tqdm import tqdm
 import numpy as np
 
 from concurrent.futures import ThreadPoolExecutor
-from itertools import repeat  # Helper to pass constant arguments to map
+from itertools import repeat  # 辅助函数，用于向 map 传递常量参数
 
 
 def eval_single_file(res_path: str, extractor: AnswerExtractor):
@@ -38,20 +38,15 @@ def eval_single_file(res_path: str, extractor: AnswerExtractor):
             f1 = list_f1(pred_ans, item["answer"])
             score = eval_score(item["answer"], pred_ans, answer_format)
         except Exception as e:
-            print(f"Error evaluating score for question: {question}")
+            print(f"评估问题分数时出错: {question}")
             print(
-                f"Answer: {item['answer']}, Pred: {pred_ans}, Format: {answer_format}"
+                f"答案: {item['answer']}, 预测: {pred_ans}, 格式: {answer_format}"
             )
-            print(f"Exception: {e}")
+            print(f"异常: {e}")
             score = 0.0
             f1 = 0.0
         item["score"] = score
         item["f1_token"] = f1
-
-    # Save results to output_dir
-    save_path = os.path.join(res_path, "eval.json")
-    with open(save_path, "w", encoding="utf-8") as f:
-        json.dump(res_data, f, ensure_ascii=False, indent=2)
 
     return res_data
 
@@ -65,31 +60,30 @@ def eval_mmlong(
     result = []
 
     if max_workers > 1:
-        # Step 1: Prepare the arguments for all the function calls. This is very fast.
-        # We create a list of the 'doc_res_dir' paths that will be processed.
+        # 步骤 1: 准备所有函数调用的参数。这非常快。
+        # 我们创建一个将要处理的 'doc_res_dir' 路径列表。
         doc_res_dirs = []
         for (doc_uuid, doc_path), group in document_groups:
             dir_name = f"eval_{data_cfg.dataset_name}_{method}"
             doc_res_dir = os.path.join(data_cfg.working_dir, doc_uuid, dir_name)
             doc_res_dirs.append(doc_res_dir)
 
-        # Step 2: Execute `eval_single_file` in parallel using ThreadPoolExecutor.map
-        # .map handles running the function on each item in the `doc_res_dirs` list.
-        # `repeat(extractor)` and `repeat(prompt)` pass the same extractor and prompt
-        # object to every function call.
+        # 步骤 2: 使用 ThreadPoolExecutor.map 并行执行 `eval_single_file`
+        # .map 处理在 `doc_res_dirs` 列表中的每个项目上运行函数。
+        # `repeat(extractor)` 和 `repeat(prompt)` 将相同的提取器和提示对象传递给每个函数调用。
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # The `map` function returns results in the same order as the input iterable.
-            # We wrap the iterator with tqdm for a progress bar.
+            # `map` 函数按输入可迭代对象的顺序返回结果。
+            # 我们用 tqdm 包装迭代器以显示进度条。
             results_iterator = executor.map(
                 eval_single_file,
-                doc_res_dirs,  # The iterable of first arguments
-                repeat(extractor),  # The constant second argument
+                doc_res_dirs,  # 第一个参数的可迭代对象
+                repeat(extractor),  # 常量第二个参数
             )
 
-            # Step 3: Combine the results. Because .map preserves order, we can
-            # simply loop through and extend our final list.
+            # 步骤 3: 合并结果。因为 .map 保留顺序，我们可以
+            # 简单地循环并扩展我们的最终列表。
             for doc_res in tqdm(
-                results_iterator, total=len(doc_res_dirs), desc="Processing Documents"
+                results_iterator, total=len(doc_res_dirs), desc="正在处理文档"
             ):
                 result.extend(doc_res)
     else:
@@ -108,7 +102,7 @@ def eval_mmlong(
     avg_f1_token = np.mean([item["f1_token"] for item in result if "f1_token" in item])
     avg_f1_token = round(avg_f1_token, 6)
 
-    # answerable average score
+    # 可回答问题的平均分数
     answerable_acc = []
     answerable_llm_score = []
     answerable_f1 = []
@@ -127,11 +121,11 @@ def eval_mmlong(
     f1_2 = round(f1_2, 6)
 
     print("--------------------------------------")
-    print(f"total samples: {len(result)}")
-    print(f"Avg acc: {acc:.6f}")
-    print(f"Avg f1: {f1:.6f}")
-    print(f"Avg f1-token: {avg_f1_token:.6f}")
-    print(f"Avg llm_score: {avg_llm_score:.6f}")
+    print(f"总样本数: {len(result)}")
+    print(f"平均准确率 (acc): {acc:.6f}")
+    print(f"平均 F1: {f1:.6f}")
+    print(f"平均 F1-token: {avg_f1_token:.6f}")
+    print(f"平均 LLM 分数: {avg_llm_score:.6f}")
     score_dict = {
         "Avg acc": acc,
         "Avg f1": f1,
@@ -150,11 +144,11 @@ def eval_mmlong(
     save_dir = os.path.join(data_cfg.working_dir, "0_results")
     os.makedirs(save_dir, exist_ok=True)
 
-    print("------- Answerable answer result --------")
-    print(f"total answerable samples: {len(answerable_acc)}")
-    print(f"Avg acc: {acc_2:.6f}")
-    print(f"Avg llm_score: {avg_llm_score_2:.6f}")
-    print(f"Avg f1: {f1_2:.6f}")
+    print("------- 可回答问题的结果 --------")
+    print(f"总可回答样本数: {len(answerable_acc)}")
+    print(f"平均准确率 (acc): {acc_2:.6f}")
+    print(f"平均 LLM 分数: {avg_llm_score_2:.6f}")
+    print(f"平均 F1: {f1_2:.6f}")
     priority_keys = [
         "question",
         "answer",
@@ -183,4 +177,4 @@ def eval_mmlong(
     )
     with open(score_save_path, "w", encoding="utf-8") as f:
         json.dump(score_dict, f, ensure_ascii=False, indent=2)
-    print(f"Saved detailed results to {save_path}")
+    print(f"已保存详细结果到 {save_path}")
