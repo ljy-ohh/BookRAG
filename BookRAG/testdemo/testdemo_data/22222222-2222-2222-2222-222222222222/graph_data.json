@@ -1,0 +1,340 @@
+{
+    "graph": {
+        "directed": false,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "entity_name": "人工智能技术发展报告",
+                "entity_type": "SECTION_TITLE",
+                "description": "This is the main title of the document, which outlines the scope and focus of the report on the development of artificial intelligence technologies.",
+                "source_ids": [
+                    1
+                ],
+                "id": "Name: 人工智能技术发展报告\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "2025 3 15",
+                "entity_type": "date",
+                "description": "2025 3 15  is a date mentioned in the text",
+                "source_ids": [
+                    3
+                ],
+                "id": "Name: 2025 3 15\nType: date"
+            },
+            {
+                "entity_name": "2024 2025",
+                "entity_type": "date",
+                "description": "2024 2025",
+                "source_ids": [
+                    4
+                ],
+                "id": "Name: 2024 2025\nType: date"
+            },
+            {
+                "entity_name": "核心内容",
+                "entity_type": "SECTION_TITLE",
+                "description": "As a subsection of '人工智能技术发展报告', this section outlines the key themes and content that form the foundation of the report, including major advancements, challenges, and future directions in artificial intelligence.",
+                "source_ids": [
+                    5
+                ],
+                "id": "Name: 核心内容\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "1. 多模态模型演进",
+                "entity_type": "SECTION_TITLE",
+                "description": "As a subsection of '多模态模型演进', this section provides an overview of the evolution of multimodal models within the broader context of the '人工智能技术发展报告'.",
+                "source_ids": [
+                    6
+                ],
+                "id": "Name: 1. 多模态模型演进\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "2. 推理效率优化",
+                "entity_type": "SECTION_TITLE",
+                "description": "As a subsection of '推理效率优化', this section likely discusses techniques and methods aimed at improving the efficiency of reasoning processes in artificial intelligence systems.",
+                "source_ids": [
+                    8
+                ],
+                "id": "Name: 2. 推理效率优化\nType: SECTION_TITLE"
+            },
+            {
+                "entity_name": "推理效率",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "Refers to the process of making AI systems reason more efficiently, which is the focus of this section.",
+                "source_ids": [
+                    8
+                ],
+                "id": "Name: 推理效率\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "优化",
+                "entity_type": "METHOD_OR_TECHNIQUE",
+                "description": "Refers to the optimization techniques or strategies used to enhance reasoning performance, as detailed in this section.",
+                "source_ids": [
+                    8
+                ],
+                "id": "Name: 优化\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "entity_name": "Table 1",
+                "entity_type": "TABLE",
+                "description": "A table describing the multimodal support capabilities of different models, specifically GPT-4 and GPT-5, with technical metrics.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: Table 1\nType: TABLE"
+            },
+            {
+                "entity_name": "文本/图像",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "A column header indicating the model's support for text and image inputs, identified as a multimodal capability.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 文本/图像\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "文本/图像/音频/视频",
+                "entity_type": "TASK_OR_PROBLEM",
+                "description": "A column header indicating the model's support for text, image, audio, and video inputs, identified as a multimodal capability.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 文本/图像/音频/视频\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "entity_name": "多模态支持",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "A column header representing a technical metric related to the model's support for multimodal inputs.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 多模态支持\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "GPT-4",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "A model named GPT-4 with a release year of 2023, identified as supporting text and image inputs.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: GPT-4\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "GPT-5",
+                "entity_type": "MODEL_OR_ARCHITECTURE",
+                "description": "A model named GPT-5 with a release year of 2025, identified as supporting text, image, audio, and video inputs.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: GPT-5\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "entity_name": "2023",
+                "entity_type": "DATE",
+                "description": "The year 2023 associated with the GPT-4 model, indicating its release date.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 2023\nType: DATE"
+            },
+            {
+                "entity_name": "2025",
+                "entity_type": "DATE",
+                "description": "The year 2025 associated with the GPT-5 model, indicating its release date.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 2025\nType: DATE"
+            },
+            {
+                "entity_name": "平均响应延迟(ms)",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "A metric representing the average response delay in milliseconds for a model.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 平均响应延迟(ms)\nType: EVALUATION_METRIC"
+            },
+            {
+                "entity_name": "训练能耗(PJ)",
+                "entity_type": "EVALUATION_METRIC",
+                "description": "A metric representing the training energy consumption in petajoules for a model.",
+                "source_ids": [
+                    11
+                ],
+                "id": "Name: 训练能耗(PJ)\nType: EVALUATION_METRIC"
+            }
+        ],
+        "links": [
+            {
+                "src_entity_name": "推理效率",
+                "tgt_entity_name": "2. 推理效率优化",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The concept of '推理效率' is a primary topic of section 2. 推理效率优化.",
+                "source_ids": [
+                    8
+                ],
+                "source": "Name: 2. 推理效率优化\nType: SECTION_TITLE",
+                "target": "Name: 推理效率\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "优化",
+                "tgt_entity_name": "2. 推理效率优化",
+                "relation_name": "",
+                "weight": 10.0,
+                "description": "The concept of '优化' is a primary topic of section 2. 推理效率优化.",
+                "source_ids": [
+                    8
+                ],
+                "source": "Name: 2. 推理效率优化\nType: SECTION_TITLE",
+                "target": "Name: 优化\nType: METHOD_OR_TECHNIQUE"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "文本/图像",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '文本/图像'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 文本/图像\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "文本/图像/音频/视频",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '文本/图像/音频/视频'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 文本/图像/音频/视频\nType: TASK_OR_PROBLEM"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "多模态支持",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '多模态支持'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 多模态支持\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "GPT-4",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about 'GPT-4'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: GPT-4\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "GPT-5",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about 'GPT-5'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: GPT-5\nType: MODEL_OR_ARCHITECTURE"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "2023",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '2023'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 2023\nType: DATE"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "2025",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '2025'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 2025\nType: DATE"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "平均响应延迟(ms)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '平均响应延迟(ms)'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 平均响应延迟(ms)\nType: EVALUATION_METRIC"
+            },
+            {
+                "src_entity_name": "Table 1",
+                "tgt_entity_name": "训练能耗(PJ)",
+                "relation_name": "",
+                "weight": 9.0,
+                "description": "Table 'Table 1' contains data about '训练能耗(PJ)'.",
+                "source_ids": [
+                    11
+                ],
+                "source": "Name: Table 1\nType: TABLE",
+                "target": "Name: 训练能耗(PJ)\nType: EVALUATION_METRIC"
+            }
+        ]
+    },
+    "tree2kg": {
+        "1": [
+            "Name: 人工智能技术发展报告\nType: SECTION_TITLE"
+        ],
+        "3": [
+            "Name: 2025 3 15\nType: date"
+        ],
+        "4": [
+            "Name: 2024 2025\nType: date"
+        ],
+        "5": [
+            "Name: 核心内容\nType: SECTION_TITLE"
+        ],
+        "6": [
+            "Name: 1. 多模态模型演进\nType: SECTION_TITLE"
+        ],
+        "8": [
+            "Name: 2. 推理效率优化\nType: SECTION_TITLE",
+            "Name: 优化\nType: METHOD_OR_TECHNIQUE",
+            "Name: 推理效率\nType: TASK_OR_PROBLEM"
+        ],
+        "11": [
+            "Name: 2025\nType: DATE",
+            "Name: 文本/图像/音频/视频\nType: TASK_OR_PROBLEM",
+            "Name: GPT-5\nType: MODEL_OR_ARCHITECTURE",
+            "Name: 2023\nType: DATE",
+            "Name: 平均响应延迟(ms)\nType: EVALUATION_METRIC",
+            "Name: GPT-4\nType: MODEL_OR_ARCHITECTURE",
+            "Name: 训练能耗(PJ)\nType: EVALUATION_METRIC",
+            "Name: 文本/图像\nType: TASK_OR_PROBLEM",
+            "Name: 多模态支持\nType: EVALUATION_METRIC",
+            "Name: Table 1\nType: TABLE"
+        ]
+    },
+    "variant": null
+}

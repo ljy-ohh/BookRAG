@@ -1,5 +1,14 @@
 {
-  "entities": [],
+  "entities": [
+    {
+      "entity_name": "3.3 实验设置",
+      "entity_type": "SECTION_TITLE",
+      "description": "As a standalone section, this section outlines the experimental setup and configuration details for the study.",
+      "source_ids": [
+        23
+      ]
+    }
+  ],
   "relations": [],
   "node_idx": 23
 }

@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "jiangzy buct edu cn",
-      "entity_type": "person",
-      "description": "a person listed as the corresponding author for the document",
+      "entity_type": "location",
+      "description": "jiangzy buct edu cn is an email address associated with a communication author",
       "source_ids": [
         7
       ]

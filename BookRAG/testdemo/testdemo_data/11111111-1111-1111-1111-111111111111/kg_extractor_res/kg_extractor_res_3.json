@@ -6,17 +6,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "is a college within         as indicated by the address structure",
-      "source_ids": [
-        3
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "is located in     as indicated by the address",
+      "description": "the organization                  is located in",
       "source_ids": [
         3
       ]

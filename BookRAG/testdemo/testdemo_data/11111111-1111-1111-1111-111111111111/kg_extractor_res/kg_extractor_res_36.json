@@ -3,7 +3,7 @@
     {
       "entity_name": "hdgse",
       "entity_type": "model or architecture",
-      "description": "hdgse is an event extraction model mentioned for performance comparison",
+      "description": "hdgse       is a model or architecture mentioned in the text for event extraction performance comparison",
       "source_ids": [
         36
       ]
@@ -15,7 +15,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "hdgse is a specific event extraction model to be compared against other event extraction models",
+      "description": "the text refers to the performance comparison of hdgse       with other event extraction models",
       "source_ids": [
         36
       ]

@@ -102,6 +102,7 @@ ipython_config.py
 
 # User configuration
 config/pdf_vanilla_siliconflow.yaml
+config/gbc_siliconflow.yaml
 
 
 # poetry

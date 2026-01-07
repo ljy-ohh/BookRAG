@@ -3,127 +3,7 @@
     {
       "entity_name": "表2",
       "entity_type": "TABLE",
-      "description": "A table titled 'Comparison Results of Different Data Augmentation Methods' presenting performance metrics for various data augmentation methods on event extraction tasks.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Arg-C > F1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the F1 score for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Arg-C > P",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Precision (P) for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Arg-C > R",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Recall (R) for Argument Classification (Arg-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Trig-C > F1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the F1 score for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Trig-C > P",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Precision (P) for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ACE05-E+ > Trig-C > R",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Recall (R) for Trigger Classification (Trig-C) on the ACE05-E+ dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Arg-C > F1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the F1 score for Argument Classification (Arg-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Arg-C > P",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Precision (P) for Argument Classification (Arg-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Arg-C > R",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Recall (R) for Argument Classification (Arg-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Trig-C > F1",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the F1 score for Trigger Classification (Trig-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Trig-C > P",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Precision (P) for Trigger Classification (Trig-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "ERE-EN > Trig-C > R",
-      "entity_type": "EVALUATION_METRIC",
-      "description": "A synthesized column header representing the Recall (R) for Trigger Classification (Trig-C) on the ERE-EN dataset.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "增强方法",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A column header meaning 'Augmentation Method', listing the different data augmentation techniques being compared in the table.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "模型",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "A column header meaning 'Model', likely listing the machine learning models used in the comparison.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "Data Augmentation Methods",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The primary subject of the table, referring to the various techniques for augmenting data that are being compared.",
+      "description": "A table comparing the results of different data augmentation methods across various metrics and models.",
       "source_ids": [
         29
       ]
@@ -131,7 +11,7 @@
     {
       "entity_name": "ACE05-E+",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "A dataset for event extraction, used as a benchmark in the table's performance evaluation.",
+      "description": "A data augmentation method used in the table, specifically in the ACE05-E+ and ERE-EN datasets.",
       "source_ids": [
         29
       ]
@@ -139,47 +19,167 @@
     {
       "entity_name": "ERE-EN",
       "entity_type": "DATASET_OR_CORPUS",
-      "description": "A dataset for event extraction, used as a benchmark in the table's performance evaluation.",
+      "description": "A data augmentation method used in the table, specifically in the ACE05-E+ and ERE-EN datasets.",
       "source_ids": [
         29
       ]
     },
     {
-      "entity_name": "Argument Classification",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A subtask in event extraction (Arg-C) for which performance metrics (F1, P, R) are reported in the table.",
+      "entity_name": "F1",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A metric used in the table for evaluating performance, specifically F1 score for argument and trigger classification.",
       "source_ids": [
         29
       ]
     },
     {
-      "entity_name": "Trigger Classification",
-      "entity_type": "TASK_OR_PROBLEM",
-      "description": "A subtask in event extraction (Trig-C) for which performance metrics (F1, P, R) are reported in the table.",
+      "entity_name": "P",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A metric used in the table for evaluating performance, representing precision.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "R",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A metric used in the table for evaluating performance, representing recall.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "Arg-C",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A data augmentation method used in the table, specifically for argument classification.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "Trig-C",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A data augmentation method used in the table, specifically for trigger classification.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Arg-C > F1",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Arg-C > P",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Arg-C > R",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Trig-C > F1",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Trig-C > P",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ACE05-E+ > Trig-C > R",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Arg-C > F1",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Arg-C > P",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Arg-C > R",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Trig-C > F1",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Trig-C > P",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "ERE-EN > Trig-C > R",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ERE-EN dataset.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "增强方法",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "A data augmentation method used in the table, representing the overall method applied to the ACE05-E+ and ERE-EN datasets.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "模型",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A model used in the table for evaluation, representing the model name or identifier.",
       "source_ids": [
         29
       ]
     },
     {
       "entity_name": "TEXT2EVENT",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A model or architecture for event extraction, evaluated with different data augmentation methods, appearing as the primary subject in multiple rows.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "HDGSE",
-      "entity_type": "MODEL_OR_ARCHITECTURE",
-      "description": "A model or architecture for event extraction  (possibly a graph-based model), evaluated with different data augmentation methods, appearing as the primary subject in multiple rows.",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "entity_name": "None",
-      "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The baseline method indicating no data augmentation was applied.",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "A task or problem related to text-to-event conversion, used as a benchmark for evaluating data augmentation methods.",
       "source_ids": [
         29
       ]
@@ -187,7 +187,7 @@
     {
       "entity_name": "LLMDirectGen",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method that directly uses a Large Language Model for generation.",
+      "description": "A data augmentation method that involves generating text using a language model directly.",
       "source_ids": [
         29
       ]
@@ -195,7 +195,7 @@
     {
       "entity_name": "同义词替换SR",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method using synonym replacement (SR).",
+      "description": "A data augmentation method that involves replacing words in the text with synonyms.",
       "source_ids": [
         29
       ]
@@ -203,7 +203,7 @@
     {
       "entity_name": "回译BT",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method using back-translation (BT).",
+      "description": "A data augmentation method that involves translating text and then translating it back to the original language.",
       "source_ids": [
         29
       ]
@@ -211,7 +211,7 @@
     {
       "entity_name": "AugGPT",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "A data augmentation method based on the GPT model.",
+      "description": "A data augmentation method based on a pre-trained language model, specifically designed for generating augmented data.",
       "source_ids": [
         29
       ]
@@ -219,7 +219,15 @@
     {
       "entity_name": "本文方法",
       "entity_type": "METHOD_OR_TECHNIQUE",
-      "description": "The data augmentation method proposed in the paper containing this table.",
+      "description": "The method proposed in the current paper for data augmentation, which is being compared with other techniques.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "entity_name": "HDGSE",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "A dataset or corpus used for evaluating data augmentation methods, specifically for the task of event extraction.",
       "source_ids": [
         29
       ]
@@ -228,160 +236,10 @@
   "relations": [
     {
       "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Arg-C > F1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > F1' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Arg-C > P",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > P' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Arg-C > R",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Arg-C > R' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Trig-C > F1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > F1' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Trig-C > P",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > P' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ACE05-E+ > Trig-C > R",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+ > Trig-C > R' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Arg-C > F1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > F1' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Arg-C > P",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > P' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Arg-C > R",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Arg-C > R' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Trig-C > F1",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > F1' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Trig-C > P",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > P' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "ERE-EN > Trig-C > R",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN > Trig-C > R' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "增强方法",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 '增强方法' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "模型",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 '模型' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "Data Augmentation Methods",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'Data Augmentation Methods' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
       "tgt_entity_name": "ACE05-E+",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ACE05-E+' 的数据。",
+      "description": "Table '表2' contains data about 'ACE05-E+'.",
       "source_ids": [
         29
       ]
@@ -391,27 +249,197 @@
       "tgt_entity_name": "ERE-EN",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'ERE-EN' 的数据。",
+      "description": "Table '表2' contains data about 'ERE-EN'.",
       "source_ids": [
         29
       ]
     },
     {
       "src_entity_name": "表2",
-      "tgt_entity_name": "Argument Classification",
+      "tgt_entity_name": "F1",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'Argument Classification' 的数据。",
+      "description": "Table '表2' contains data about 'F1'.",
       "source_ids": [
         29
       ]
     },
     {
       "src_entity_name": "表2",
-      "tgt_entity_name": "Trigger Classification",
+      "tgt_entity_name": "P",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'Trigger Classification' 的数据。",
+      "description": "Table '表2' contains data about 'P'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "R",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'R'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "Arg-C",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'Arg-C'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "Trig-C",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'Trig-C'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Arg-C > F1",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > F1'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Arg-C > P",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > P'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Arg-C > R",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Arg-C > R'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Trig-C > F1",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > F1'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Trig-C > P",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > P'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ACE05-E+ > Trig-C > R",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ACE05-E+ > Trig-C > R'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Arg-C > F1",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Arg-C > F1'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Arg-C > P",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Arg-C > P'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Arg-C > R",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Arg-C > R'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Trig-C > F1",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Trig-C > F1'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Trig-C > P",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Trig-C > P'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "ERE-EN > Trig-C > R",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'ERE-EN > Trig-C > R'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "增强方法",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about '增强方法'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "模型",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about '模型'.",
       "source_ids": [
         29
       ]
@@ -421,27 +449,7 @@
       "tgt_entity_name": "TEXT2EVENT",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'TEXT2EVENT' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "HDGSE",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'HDGSE' 的数据。",
-      "source_ids": [
-        29
-      ]
-    },
-    {
-      "src_entity_name": "表2",
-      "tgt_entity_name": "None",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'None' 的数据。",
+      "description": "Table '表2' contains data about 'TEXT2EVENT'.",
       "source_ids": [
         29
       ]
@@ -451,7 +459,7 @@
       "tgt_entity_name": "LLMDirectGen",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'LLMDirectGen' 的数据。",
+      "description": "Table '表2' contains data about 'LLMDirectGen'.",
       "source_ids": [
         29
       ]
@@ -461,7 +469,7 @@
       "tgt_entity_name": "同义词替换SR",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 '同义词替换SR' 的数据。",
+      "description": "Table '表2' contains data about '同义词替换SR'.",
       "source_ids": [
         29
       ]
@@ -471,7 +479,7 @@
       "tgt_entity_name": "回译BT",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 '回译BT' 的数据。",
+      "description": "Table '表2' contains data about '回译BT'.",
       "source_ids": [
         29
       ]
@@ -481,7 +489,7 @@
       "tgt_entity_name": "AugGPT",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 'AugGPT' 的数据。",
+      "description": "Table '表2' contains data about 'AugGPT'.",
       "source_ids": [
         29
       ]
@@ -491,7 +499,17 @@
       "tgt_entity_name": "本文方法",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 '表2' 包含关于 '本文方法' 的数据。",
+      "description": "Table '表2' contains data about '本文方法'.",
+      "source_ids": [
+        29
+      ]
+    },
+    {
+      "src_entity_name": "表2",
+      "tgt_entity_name": "HDGSE",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table '表2' contains data about 'HDGSE'.",
       "source_ids": [
         29
       ]

@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "人工智能技术发展报告",
+      "entity_type": "SECTION_TITLE",
+      "description": "This is the main title of the document, which outlines the scope and focus of the report on the development of artificial intelligence technologies.",
+      "source_ids": [
+        1
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 1
+}

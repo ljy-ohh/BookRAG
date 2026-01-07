@@ -5,8 +5,8 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 6.0,
-      "description": "both are listed as keywords in the same text  suggesting a potential application of the model to the task",
+      "weight": 9.0,
+      "description": "is related to data augmentation as it may benefit from enhanced data for training and performance",
       "source_ids": [
         9
       ]
@@ -15,8 +15,18 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 6.0,
-      "description": "both are listed as keywords in the same text  suggesting the method is a potential solution to the problem",
+      "weight": 8.0,
+      "description": "is associated with event extraction as it is a task that may be addressed using large language models",
+      "source_ids": [
+        9
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "is a solution to the problem of data scarcity  aiming to improve data availability for machine learning models",
       "source_ids": [
         9
       ]

@@ -1,0 +1,36 @@
+{
+  "query": "介绍人工智能技术发展？",
+  "used_sec_ids": [],
+  "all_sec_ids": [],
+  "plan": {
+    "query_type": "global",
+    "original_query": "介绍人工智能技术发展？",
+    "sub_questions": null,
+    "filters": [
+      {
+        "filter_type": "section",
+        "filter_value": "introduction"
+      }
+    ],
+    "operation": "SUMMARIZE"
+  },
+  "iterations": [
+    {
+      "sub_query": "介绍人工智能技术发展？",
+      "sub_number": 1,
+      "gbc_entity_map": {},
+      "linked_tree_nodes": [],
+      "linked_section_ids": [],
+      "supplementary_ids": [],
+      "selected_explanation": "",
+      "retrieval_sec_ids": [],
+      "retrieval_nodes": [],
+      "iteration_text_nodes": [],
+      "iteration_image_nodes": [],
+      "iteration_graph_nodes": [],
+      "partial_answers": [],
+      "generated_answer": ""
+    }
+  ],
+  "final_answer": "我没有找到符合指定过滤条件的条目来回答该问题。"
+}

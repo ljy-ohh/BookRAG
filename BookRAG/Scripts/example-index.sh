@@ -8,7 +8,7 @@ method_name=$(basename "$index_config" .yaml)
 PYTHON_FILE="../main.py"
 
 nsplit=2
-stage="graph"
+stage="all"
 
 for num in $(seq 1 $nsplit); do
     log_dir="./logs/${dataset_name}/index/"

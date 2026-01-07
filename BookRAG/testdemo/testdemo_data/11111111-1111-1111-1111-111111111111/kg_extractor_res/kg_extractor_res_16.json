@@ -1,9 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "key laboratory of target cognition and application technology",
-      "entity_type": "organization",
-      "description": "a key laboratory mentioned in the text",
+      "entity_name": "beijing",
+      "entity_type": "location",
+      "description": "beijing is a location associated with the chinese academy of sciences  indicating it is the headquarters or a significant site for the organization",
       "source_ids": [
         16
       ]
@@ -11,15 +11,15 @@
     {
       "entity_name": "chinese academy of sciences",
       "entity_type": "organization",
-      "description": "an academy of sciences mentioned in the text",
+      "description": "chinese academy of sciences is an organization that operates a key laboratory for target cognition and application technology",
       "source_ids": [
         16
       ]
     },
     {
-      "entity_name": "beijing",
-      "entity_type": "location",
-      "description": "a city mentioned as a location",
+      "entity_name": "key laboratory of target cognition and application technology",
+      "entity_type": "organization",
+      "description": "key laboratory of target cognition and application technology is an organization affiliated with the chinese academy of sciences  located in beijing",
       "source_ids": [
         16
       ]
@@ -27,21 +27,31 @@
   ],
   "relations": [
     {
-      "src_entity_name": "key laboratory of target cognition and application technology",
-      "tgt_entity_name": "chinese academy of sciences",
+      "src_entity_name": "chinese academy of sciences",
+      "tgt_entity_name": "beijing",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the key laboratory is affiliated with the chinese academy of sciences  as indicated by the text s structure",
+      "description": "the chinese academy of sciences is located in beijing",
+      "source_ids": [
+        16
+      ]
+    },
+    {
+      "src_entity_name": "chinese academy of sciences",
+      "tgt_entity_name": "key laboratory of target cognition and application technology",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "the chinese academy of sciences operates the key laboratory of target cognition and application technology",
       "source_ids": [
         16
       ]
     },
     {
       "src_entity_name": "key laboratory of target cognition and application technology",
-      "tgt_entity_name": "beijing",
+      "tgt_entity_name": "chinese academy of sciences",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the key laboratory is located in beijing  as indicated by the address",
+      "description": "the key laboratory of target cognition and application technology is part of the chinese academy of sciences",
       "source_ids": [
         16
       ]

@@ -1,0 +1,43 @@
+{
+  "query": "BookRAG 的核心方法/贡献点用 1-2 句话概括是什么？",
+  "used_sec_ids": [],
+  "all_sec_ids": [],
+  "plan": {
+    "query_type": "simple",
+    "original_query": "BookRAG 的核心方法/贡献点用 1-2 句话概括是什么？",
+    "sub_questions": null,
+    "filters": null,
+    "operation": null
+  },
+  "iterations": [
+    {
+      "sub_query": "BookRAG 的核心方法/贡献点用 1-2 句话概括是什么？",
+      "sub_number": 1,
+      "gbc_entity_map": {
+        "Name: bookrag\nType: PRODUCT": [
+          "Name: nvidia rtx4090 gpu\nType: product"
+        ]
+      },
+      "linked_tree_nodes": [
+        {
+          "index_id": 24,
+          "map_cnt": 1,
+          "linked_entities": [
+            "Name: nvidia rtx4090 gpu\nType: product"
+          ]
+        }
+      ],
+      "linked_section_ids": [],
+      "supplementary_ids": [],
+      "selected_explanation": "用户的问题是关于BookRAG的核心方法或贡献点，但提供的剩余文档中没有直接提及BookRAG的内容。所有文档均围绕事件抽取的多阶段数据增强框架展开，未涉及BookRAG的具体信息。因此，没有进一步相关的文档部分。",
+      "retrieval_sec_ids": [],
+      "retrieval_nodes": [],
+      "iteration_text_nodes": [],
+      "iteration_image_nodes": [],
+      "iteration_graph_nodes": [],
+      "partial_answers": [],
+      "generated_answer": "Based on the provided information, I couldn't find an answer."
+    }
+  ],
+  "final_answer": "Based on the provided information, I couldn't find an answer."
+}

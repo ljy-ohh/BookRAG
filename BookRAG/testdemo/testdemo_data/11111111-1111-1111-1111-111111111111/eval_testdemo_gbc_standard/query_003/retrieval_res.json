@@ -1,0 +1,236 @@
+{
+  "query": "论文里实验用了哪些数据集？",
+  "used_sec_ids": [],
+  "all_sec_ids": [],
+  "plan": {
+    "query_type": "complex",
+    "original_query": "论文里实验用了哪些数据集？",
+    "sub_questions": [
+      {
+        "question": "论文里实验用了哪些数据集？",
+        "type": "retrieval"
+      }
+    ],
+    "filters": null,
+    "operation": null
+  },
+  "iterations": [
+    {
+      "sub_query": "论文里实验用了哪些数据集？",
+      "sub_number": 1,
+      "gbc_entity_map": {
+        "Name: 论文里实验用了哪些数据集？\nType: TASK_OR_PROBLEM": [
+          "Name: 数据分析\nType: DATASET_OR_CORPUS"
+        ]
+      },
+      "linked_tree_nodes": [
+        {
+          "index_id": 30,
+          "map_cnt": 1,
+          "linked_entities": [
+            "Name: 数据分析\nType: DATASET_OR_CORPUS"
+          ]
+        }
+      ],
+      "linked_section_ids": [
+        25
+      ],
+      "supplementary_ids": [],
+      "selected_explanation": "The primary candidate section already mentions the use of ACE05-E+ and ERE-EN datasets in the experiments. The remaining sections do not provide additional information about the specific datasets used in the experiments, but some sections mention the performance of models on these datasets. However, since the user is asking about the datasets used, not the model performance, no supplementary sections are relevant.",
+      "retrieval_sec_ids": [
+        25
+      ],
+      "retrieval_nodes": [
+        {
+          "index_id": 34,
+          "type": "text",
+          "content": "批注[晨宋9]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果  \n回复：补充使用大模型直接生成带有事件结构的句子。",
+          "page": 2
+        },
+        {
+          "index_id": 35,
+          "type": "text",
+          "content": "批注[晨宋10]：意见：实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。回复：SR和BT为3.2.1所提到同义词替换和回译两种数据增强方法，在3.2.1进行了文献引用。",
+          "page": 2
+        },
+        {
+          "index_id": 42,
+          "type": "text",
+          "content": "JIANG Zhiying, born in 1987, Ph.D., associate professor. His research interests include large language model, natural language processing, real-time big data analytics.",
+          "page": 3
+        },
+        {
+          "index_id": 46,
+          "type": "text",
+          "content": "矩阵、矢量也是变量，正文用Times New Rome字体斜体加粗表示，其他变量用常规斜体即可，公式编辑器设置见图中示例；没有矩阵、矢量变量的填写“无”。需要注意：尽量不要使用同一字母的普通斜体及加粗斜体来表示不同变量，非常容易混淆；更不能错误地使用同一变量字母来表示不同含义的变量。",
+          "page": 3
+        },
+        {
+          "index_id": 47,
+          "type": "table",
+          "content": "此表格包含以下列:\n - 变量符号\n - 含义\n - 备注\n\n表格内容:\n变量符号 | 含义 | 备注\n无 | 说明其在本文中表示的含义 | 矩阵\n无 | 说明其在本文中表示的含义 | 矢量",
+          "page": 3,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/833578f7e1c8151b86818e5ac6540774b6b5ad474d76cc39bc286eabbd42ac59.jpg",
+          "table_body": "<table><tr><td>变量符号</td><td>含义</td><td>备注</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矩阵</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矢量</td></tr></table>",
+          "caption": "",
+          "footnote": ""
+        },
+        {
+          "index_id": 48,
+          "type": "table",
+          "content": "此表格包含以下列:\n - 字体\n - 字符样式\n - 样式\n - 确定\n\n表格内容:\n样式 | 字体 | 字符样式 | 字符样式 | 确定\n样式 | 字体 | 宋体 | 斜体 | 取消\n文本(I) | Edwardian Script ITC |  |  | 帮助\n文本(FE) | 宋体 |  |  | 应用(A)\n函数功能(G) | Times New Roman |  |  | 出厂设置(E)\n变量(V) | Times New Roman |  |  | 用于新公式(y)\n希腊字母(L) | Symbol |  |  | \nU.C.希腊语(g) | Symbol |  |  | \n符号(g) | Symbol |  |  | \n向量矩阵(M) | Times New Roman |  |  | \n数字(N) | Times New Roman |  |  | \n数学附加(E) | MT Extra |  |  | \n用户1(1) | Courier |  |  | \n用户2(2) | Times New Roman |  |  | ",
+          "page": 3,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/80bafd3e81cd822a6833df5806ac9370a75ecb227e38a434339651756ecb5f59.jpg",
+          "table_body": "<table><tr><td rowspan=\"2\">样式</td><td rowspan=\"2\">字体</td><td colspan=\"2\">字符样式</td><td>确定</td></tr><tr><td>宋体</td><td>斜体</td><td>取消</td></tr><tr><td>文本(I)</td><td>Edwardian Script ITC</td><td></td><td></td><td>帮助</td></tr><tr><td>文本(FE)</td><td>宋体</td><td></td><td></td><td>应用(A)</td></tr><tr><td>函数功能(G)</td><td>Times New Roman</td><td></td><td></td><td>出厂设置(E)</td></tr><tr><td>变量(V)</td><td>Times New Roman</td><td></td><td></td><td>用于新公式(y)</td></tr><tr><td>希腊字母(L)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>U.C.希腊语(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>符号(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>向量矩阵(M)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数字(N)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数学附加(E)</td><td>MT Extra</td><td></td><td></td><td></td></tr><tr><td>用户1(1)</td><td>Courier</td><td></td><td></td><td></td></tr><tr><td>用户2(2)</td><td>Times New Roman</td><td></td><td></td><td></td></tr></table>",
+          "caption": "",
+          "footnote": ""
+        },
+        {
+          "index_id": 50,
+          "type": "text",
+          "content": "【请提供与本文内容直接相关的工作背景、本文基金项目等的简要说明与介绍，不是指整个行业的研究背景，而是介绍作者写作本文内容涉及的具体应用技术背景等，所有基金依次填写以下表格内容】",
+          "page": 3
+        },
+        {
+          "index_id": 27,
+          "type": "text",
+          "content": "表2为本文的主要实验结果，其中Trig-C表示触发器词的识别和分类，Arg-C表示论元的识别和分类。通过Text2Event和HDGSE事件抽取模型在ACE05-E+和ERE-EN数据集上测试不同数据增强方法的效果。可以看出本文提出的数据增强方法在两个数据集上均达到了最优的性能。首先对于Text2Event事件抽取模型，在ACE05-E+数据集上本文的方法在Trig-C上的F1达到了  $76.1\\%$  ，相较于基线模型Text2Event提升了4.3个百分点，在Arg-C上的F1达到了 $58.0\\%$  ，相较于Text2Event提升了3.6个百分点。对于ENE-EN数据集，它相较于ACE05-E+拥有更多的事件和角色，事件结构更为丰富，本文的方法同样在Trig-C和Arg-C上的F1达到最高值，对比基线模型Text2Event分别提升了4.2个百分点和5.2个百分点。在HDGSE事件抽取模型上，本文的数据增强方法在两个数据集上同样展现出显著优势。在ACE05-E+数据集的Trig-C上的F1达到  $79.6\\%$  ，较基线模型 HDGSE提升2.4个百分点，在Arg-C上的F1达到  $60.5\\%$  较基线模型HDGSE提升2.8个百分点。对事件角色更为丰富的ERE-EN数据集，本文的方法同样在Trig-C和Arg-C展现出优势，对比基线模型HDGSE分别提升了2.9个百分点和3.5个百分点。因此表2的实验结果表明本文提出的基于大语言模型的多阶段数据增强框架在事件抽取任务上的有效性。",
+          "page": 2
+        },
+        {
+          "index_id": 28,
+          "type": "text",
+          "content": "对于同义词替换和回译两种基线方法，后者本是句子级增强，但为了尽量不破坏原有的事件结构，本文将句子回译替换为单词回译。由表2可以看出两种方法相较基线模型有一定的提升，但只是单词级别的修改，并没有对文本带来很大的变化，对模型性能的提升并没有这么明显。而对于AugGPT生成式方法，总体上是优于同义词替换和回译两种方法，但低于本文的数据增强方法，虽然AugGPT生成的数据弥补了多样性的不足，但因事件结构的偏差可能导致性能受限。不同于改写方法，对于直接利用大模型生成的方法其F1值均低于基线模型。在没有追加任何策略（如事件论元角色描述，小样本学习等）的情况下，LLMDirectGen方法生成的数据严重偏离真实事件分布。造成的可能原因是在特定的专业领域下，大语言模型不能充分理解事件类型与论元角色所表达的意思，所以导致事件结构标注错误，甚至是随意标注且不在生成的句子中。更值得的一提的是，这样的方法生成的句子结构，语法单一，不利于数据多样性的引入。由此可以看出本文提出的基于大语言模型的多阶段数据增强框架可以有效的提升数据集的质量，在多样化事件要素构造上更有优势。",
+          "page": 2
+        },
+        {
+          "index_id": 29,
+          "type": "table",
+          "content": "标题: 表2 不同数据增强方法的对比结果 Tab. 2 Comparison Results of Different Data Augmentation Methods\n此表格包含以下列:\n - ACE05-E+ > Arg-C > F1\n - ACE05-E+ > Arg-C > P\n - ACE05-E+ > Arg-C > R\n - ACE05-E+ > Trig-C > F1\n - ACE05-E+ > Trig-C > P\n - ACE05-E+ > Trig-C > R\n - ERE-EN > Arg-C > F1\n - ERE-EN > Arg-C > P\n - ERE-EN > Arg-C > R\n - ERE-EN > Trig-C > F1\n - ERE-EN > Trig-C > P\n - ERE-EN > Trig-C > R\n - 增强方法\n - 模型\n\n表格内容:\n模型 | 增强方法 | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ERE-EN | ERE-EN | ERE-EN | ERE-EN | ERE-EN | ERE-EN\n模型 | 增强方法 | Trig-C | Trig-C | Trig-C | Arg-C | Arg-C | Arg-C | Trig-C | Trig-C | Trig-C | Arg-C | Arg-C | Arg-C\n模型 | 增强方法 | P | R | F1 | P | R | F1 | P | R | F1 | P | R | F1\nTEXT2EVENT | None | 71.2 | 72.5 | 71.8 | 54.0 | 54.8 | 54.4 | 59.2 | 59.6 | 59.4 | 49.4 | 47.2 | 48.3\nTEXT2EVENT | LLMDirectGen | 64.8 | 67.9 | 66.3 | 48.4 | 50.4 | 49.4 | 53.5 | 54.6 | 54.0 | 42.0 | 45.2 | 43.5\nTEXT2EVENT | 同义词替换SR | 71.9 | 74.2 | 73.0 | 54.5 | 55.7 | 55.1 | 60.4 | 61.3 | 60.8 | 50.8 | 50.5 | 50.6\nTEXT2EVENT | 回译BT | 71.6 | 73.9 | 72.7 | 54.3 | 55.1 | 54.7 | 60.9 | 61.7 | 61.3 | 51.0 | 49.6 | 50.3\nTEXT2EVENT | AugGPT | 72.1 | 73.6 | 72.8 | 54.8 | 56.4 | 55.6 | 60.5 | 62.1 | 61.3 | 51.2 | 51.0 | 51.1\nTEXT2EVENT | 本文方法 | 74.3 | 77.9 | 76.1 | 57.7 | 58.4 | 58.0 | 64.5 | 62.8 | 63.6 | 52.9 | 54.1 | 53.5\nHDGSE | None | 75.5 | 79.0 | 77.2 | 57.6 | 57.8 | 57.7 | 64.5 | 67.9 | 66.1 | 54.5 | 52.6 | 53.5\nHDGSE | LLMDirectGen | 69.3 | 73.6 | 71.4 | 51.8 | 54.3 | 53.0 | 59.7 | 62.4 | 61.0 | 50.1 | 48.4 | 49.2\nHDGSE | 同义词替换 | 75.9 | 80.1 | 77.9 | 58.4 | 59.3 | 58.8 | 64.7 | 68.3 | 66.5 | 54.8 | 53.1 | 53.9\nHDGSE | 回译 | 75.7 | 79.5 | 77.6 | 57.8 | 58.2 | 58.0 | 64.9 | 68.2 | 66.5 | 55.0 | 53.4 | 54.2\nHDGSE | AugGPT | 76.3 | 80.4 | 78.3 | 58.2 | 59.6 | 58.9 | 64.7 | 68.6 | 66.6 | 54.7 | 53.6 | 54.1\nHDGSE | 本文方法 | 77.9 | 81.3 | 79.6 | 60.1 | 60.9 | 60.5 | 67.9 | 70.1 | 69.0 | 56.3 | 57.8 | 57.0",
+          "page": 2,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/5f3f3fbdab1016d549e5c8d4d358064d59c18783970541fbf3c340c523802991.jpg",
+          "table_body": "<table><tr><td rowspan=\"3\">模型</td><td rowspan=\"3\">增强方法</td><td colspan=\"6\">ACE05-E+</td><td colspan=\"6\">ERE-EN</td></tr><tr><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td></tr><tr><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td></tr><tr><td rowspan=\"6\">TEXT2EVENT</td><td>None</td><td>71.2</td><td>72.5</td><td>71.8</td><td>54.0</td><td>54.8</td><td>54.4</td><td>59.2</td><td>59.6</td><td>59.4</td><td>49.4</td><td>47.2</td><td>48.3</td></tr><tr><td>LLMDirectGen</td><td>64.8</td><td>67.9</td><td>66.3</td><td>48.4</td><td>50.4</td><td>49.4</td><td>53.5</td><td>54.6</td><td>54.0</td><td>42.0</td><td>45.2</td><td>43.5</td></tr><tr><td>同义词替换SR</td><td>71.9</td><td>74.2</td><td>73.0</td><td>54.5</td><td>55.7</td><td>55.1</td><td>60.4</td><td>61.3</td><td>60.8</td><td>50.8</td><td>50.5</td><td>50.6</td></tr><tr><td>回译BT</td><td>71.6</td><td>73.9</td><td>72.7</td><td>54.3</td><td>55.1</td><td>54.7</td><td>60.9</td><td>61.7</td><td>61.3</td><td>51.0</td><td>49.6</td><td>50.3</td></tr><tr><td>AugGPT</td><td>72.1</td><td>73.6</td><td>72.8</td><td>54.8</td><td>56.4</td><td>55.6</td><td>60.5</td><td>62.1</td><td>61.3</td><td>51.2</td><td>51.0</td><td>51.1</td></tr><tr><td>本文方法</td><td>74.3</td><td>77.9</td><td>76.1</td><td>57.7</td><td>58.4</td><td>58.0</td><td>64.5</td><td>62.8</td><td>63.6</td><td>52.9</td><td>54.1</td><td>53.5</td></tr><tr><td rowspan=\"6\">HDGSE</td><td>None</td><td>75.5</td><td>79.0</td><td>77.2</td><td>57.6</td><td>57.8</td><td>57.7</td><td>64.5</td><td>67.9</td><td>66.1</td><td>54.5</td><td>52.6</td><td>53.5</td></tr><tr><td>LLMDirectGen</td><td>69.3</td><td>73.6</td><td>71.4</td><td>51.8</td><td>54.3</td><td>53.0</td><td>59.7</td><td>62.4</td><td>61.0</td><td>50.1</td><td>48.4</td><td>49.2</td></tr><tr><td>同义词替换</td><td>75.9</td><td>80.1</td><td>77.9</td><td>58.4</td><td>59.3</td><td>58.8</td><td>64.7</td><td>68.3</td><td>66.5</td><td>54.8</td><td>53.1</td><td>53.9</td></tr><tr><td>回译</td><td>75.7</td><td>79.5</td><td>77.6</td><td>57.8</td><td>58.2</td><td>58.0</td><td>64.9</td><td>68.2</td><td>66.5</td><td>55.0</td><td>53.4</td><td>54.2</td></tr><tr><td>AugGPT</td><td>76.3</td><td>80.4</td><td>78.3</td><td>58.2</td><td>59.6</td><td>58.9</td><td>64.7</td><td>68.6</td><td>66.6</td><td>54.7</td><td>53.6</td><td>54.1</td></tr><tr><td>本文方法</td><td>77.9</td><td>81.3</td><td>79.6</td><td>60.1</td><td>60.9</td><td>60.5</td><td>67.9</td><td>70.1</td><td>69.0</td><td>56.3</td><td>57.8</td><td>57.0</td></tr></table>",
+          "caption": "表2 不同数据增强方法的对比结果 Tab. 2 Comparison Results of Different Data Augmentation Methods",
+          "footnote": ""
+        },
+        {
+          "index_id": 30,
+          "type": "title",
+          "content": "4.2 数据分析",
+          "page": 2
+        }
+      ],
+      "iteration_text_nodes": [
+        {
+          "index_id": 34,
+          "type": "text",
+          "content": "批注[晨宋9]：新意见1：主要表现在对比实验应加上大模型直接生成事件数据的结果  \n回复：补充使用大模型直接生成带有事件结构的句子。",
+          "page": 2
+        },
+        {
+          "index_id": 35,
+          "type": "text",
+          "content": "批注[晨宋10]：意见：实验对比中，baseline方法SR和BT是什么？作者需要用已发表的科研方法作为baseline。回复：SR和BT为3.2.1所提到同义词替换和回译两种数据增强方法，在3.2.1进行了文献引用。",
+          "page": 2
+        },
+        {
+          "index_id": 42,
+          "type": "text",
+          "content": "JIANG Zhiying, born in 1987, Ph.D., associate professor. His research interests include large language model, natural language processing, real-time big data analytics.",
+          "page": 3
+        },
+        {
+          "index_id": 46,
+          "type": "text",
+          "content": "矩阵、矢量也是变量，正文用Times New Rome字体斜体加粗表示，其他变量用常规斜体即可，公式编辑器设置见图中示例；没有矩阵、矢量变量的填写“无”。需要注意：尽量不要使用同一字母的普通斜体及加粗斜体来表示不同变量，非常容易混淆；更不能错误地使用同一变量字母来表示不同含义的变量。",
+          "page": 3
+        },
+        {
+          "index_id": 47,
+          "type": "table",
+          "content": "此表格包含以下列:\n - 变量符号\n - 含义\n - 备注\n\n表格内容:\n变量符号 | 含义 | 备注\n无 | 说明其在本文中表示的含义 | 矩阵\n无 | 说明其在本文中表示的含义 | 矢量",
+          "page": 3,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/833578f7e1c8151b86818e5ac6540774b6b5ad474d76cc39bc286eabbd42ac59.jpg",
+          "table_body": "<table><tr><td>变量符号</td><td>含义</td><td>备注</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矩阵</td></tr><tr><td>无</td><td>说明其在本文中表示的含义</td><td>矢量</td></tr></table>",
+          "caption": "",
+          "footnote": ""
+        },
+        {
+          "index_id": 48,
+          "type": "table",
+          "content": "此表格包含以下列:\n - 字体\n - 字符样式\n - 样式\n - 确定\n\n表格内容:\n样式 | 字体 | 字符样式 | 字符样式 | 确定\n样式 | 字体 | 宋体 | 斜体 | 取消\n文本(I) | Edwardian Script ITC |  |  | 帮助\n文本(FE) | 宋体 |  |  | 应用(A)\n函数功能(G) | Times New Roman |  |  | 出厂设置(E)\n变量(V) | Times New Roman |  |  | 用于新公式(y)\n希腊字母(L) | Symbol |  |  | \nU.C.希腊语(g) | Symbol |  |  | \n符号(g) | Symbol |  |  | \n向量矩阵(M) | Times New Roman |  |  | \n数字(N) | Times New Roman |  |  | \n数学附加(E) | MT Extra |  |  | \n用户1(1) | Courier |  |  | \n用户2(2) | Times New Roman |  |  | ",
+          "page": 3,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/80bafd3e81cd822a6833df5806ac9370a75ecb227e38a434339651756ecb5f59.jpg",
+          "table_body": "<table><tr><td rowspan=\"2\">样式</td><td rowspan=\"2\">字体</td><td colspan=\"2\">字符样式</td><td>确定</td></tr><tr><td>宋体</td><td>斜体</td><td>取消</td></tr><tr><td>文本(I)</td><td>Edwardian Script ITC</td><td></td><td></td><td>帮助</td></tr><tr><td>文本(FE)</td><td>宋体</td><td></td><td></td><td>应用(A)</td></tr><tr><td>函数功能(G)</td><td>Times New Roman</td><td></td><td></td><td>出厂设置(E)</td></tr><tr><td>变量(V)</td><td>Times New Roman</td><td></td><td></td><td>用于新公式(y)</td></tr><tr><td>希腊字母(L)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>U.C.希腊语(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>符号(g)</td><td>Symbol</td><td></td><td></td><td></td></tr><tr><td>向量矩阵(M)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数字(N)</td><td>Times New Roman</td><td></td><td></td><td></td></tr><tr><td>数学附加(E)</td><td>MT Extra</td><td></td><td></td><td></td></tr><tr><td>用户1(1)</td><td>Courier</td><td></td><td></td><td></td></tr><tr><td>用户2(2)</td><td>Times New Roman</td><td></td><td></td><td></td></tr></table>",
+          "caption": "",
+          "footnote": ""
+        },
+        {
+          "index_id": 50,
+          "type": "text",
+          "content": "【请提供与本文内容直接相关的工作背景、本文基金项目等的简要说明与介绍，不是指整个行业的研究背景，而是介绍作者写作本文内容涉及的具体应用技术背景等，所有基金依次填写以下表格内容】",
+          "page": 3
+        },
+        {
+          "index_id": 27,
+          "type": "text",
+          "content": "表2为本文的主要实验结果，其中Trig-C表示触发器词的识别和分类，Arg-C表示论元的识别和分类。通过Text2Event和HDGSE事件抽取模型在ACE05-E+和ERE-EN数据集上测试不同数据增强方法的效果。可以看出本文提出的数据增强方法在两个数据集上均达到了最优的性能。首先对于Text2Event事件抽取模型，在ACE05-E+数据集上本文的方法在Trig-C上的F1达到了  $76.1\\%$  ，相较于基线模型Text2Event提升了4.3个百分点，在Arg-C上的F1达到了 $58.0\\%$  ，相较于Text2Event提升了3.6个百分点。对于ENE-EN数据集，它相较于ACE05-E+拥有更多的事件和角色，事件结构更为丰富，本文的方法同样在Trig-C和Arg-C上的F1达到最高值，对比基线模型Text2Event分别提升了4.2个百分点和5.2个百分点。在HDGSE事件抽取模型上，本文的数据增强方法在两个数据集上同样展现出显著优势。在ACE05-E+数据集的Trig-C上的F1达到  $79.6\\%$  ，较基线模型 HDGSE提升2.4个百分点，在Arg-C上的F1达到  $60.5\\%$  较基线模型HDGSE提升2.8个百分点。对事件角色更为丰富的ERE-EN数据集，本文的方法同样在Trig-C和Arg-C展现出优势，对比基线模型HDGSE分别提升了2.9个百分点和3.5个百分点。因此表2的实验结果表明本文提出的基于大语言模型的多阶段数据增强框架在事件抽取任务上的有效性。",
+          "page": 2
+        },
+        {
+          "index_id": 28,
+          "type": "text",
+          "content": "对于同义词替换和回译两种基线方法，后者本是句子级增强，但为了尽量不破坏原有的事件结构，本文将句子回译替换为单词回译。由表2可以看出两种方法相较基线模型有一定的提升，但只是单词级别的修改，并没有对文本带来很大的变化，对模型性能的提升并没有这么明显。而对于AugGPT生成式方法，总体上是优于同义词替换和回译两种方法，但低于本文的数据增强方法，虽然AugGPT生成的数据弥补了多样性的不足，但因事件结构的偏差可能导致性能受限。不同于改写方法，对于直接利用大模型生成的方法其F1值均低于基线模型。在没有追加任何策略（如事件论元角色描述，小样本学习等）的情况下，LLMDirectGen方法生成的数据严重偏离真实事件分布。造成的可能原因是在特定的专业领域下，大语言模型不能充分理解事件类型与论元角色所表达的意思，所以导致事件结构标注错误，甚至是随意标注且不在生成的句子中。更值得的一提的是，这样的方法生成的句子结构，语法单一，不利于数据多样性的引入。由此可以看出本文提出的基于大语言模型的多阶段数据增强框架可以有效的提升数据集的质量，在多样化事件要素构造上更有优势。",
+          "page": 2
+        },
+        {
+          "index_id": 29,
+          "type": "table",
+          "content": "标题: 表2 不同数据增强方法的对比结果 Tab. 2 Comparison Results of Different Data Augmentation Methods\n此表格包含以下列:\n - ACE05-E+ > Arg-C > F1\n - ACE05-E+ > Arg-C > P\n - ACE05-E+ > Arg-C > R\n - ACE05-E+ > Trig-C > F1\n - ACE05-E+ > Trig-C > P\n - ACE05-E+ > Trig-C > R\n - ERE-EN > Arg-C > F1\n - ERE-EN > Arg-C > P\n - ERE-EN > Arg-C > R\n - ERE-EN > Trig-C > F1\n - ERE-EN > Trig-C > P\n - ERE-EN > Trig-C > R\n - 增强方法\n - 模型\n\n表格内容:\n模型 | 增强方法 | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ACE05-E+ | ERE-EN | ERE-EN | ERE-EN | ERE-EN | ERE-EN | ERE-EN\n模型 | 增强方法 | Trig-C | Trig-C | Trig-C | Arg-C | Arg-C | Arg-C | Trig-C | Trig-C | Trig-C | Arg-C | Arg-C | Arg-C\n模型 | 增强方法 | P | R | F1 | P | R | F1 | P | R | F1 | P | R | F1\nTEXT2EVENT | None | 71.2 | 72.5 | 71.8 | 54.0 | 54.8 | 54.4 | 59.2 | 59.6 | 59.4 | 49.4 | 47.2 | 48.3\nTEXT2EVENT | LLMDirectGen | 64.8 | 67.9 | 66.3 | 48.4 | 50.4 | 49.4 | 53.5 | 54.6 | 54.0 | 42.0 | 45.2 | 43.5\nTEXT2EVENT | 同义词替换SR | 71.9 | 74.2 | 73.0 | 54.5 | 55.7 | 55.1 | 60.4 | 61.3 | 60.8 | 50.8 | 50.5 | 50.6\nTEXT2EVENT | 回译BT | 71.6 | 73.9 | 72.7 | 54.3 | 55.1 | 54.7 | 60.9 | 61.7 | 61.3 | 51.0 | 49.6 | 50.3\nTEXT2EVENT | AugGPT | 72.1 | 73.6 | 72.8 | 54.8 | 56.4 | 55.6 | 60.5 | 62.1 | 61.3 | 51.2 | 51.0 | 51.1\nTEXT2EVENT | 本文方法 | 74.3 | 77.9 | 76.1 | 57.7 | 58.4 | 58.0 | 64.5 | 62.8 | 63.6 | 52.9 | 54.1 | 53.5\nHDGSE | None | 75.5 | 79.0 | 77.2 | 57.6 | 57.8 | 57.7 | 64.5 | 67.9 | 66.1 | 54.5 | 52.6 | 53.5\nHDGSE | LLMDirectGen | 69.3 | 73.6 | 71.4 | 51.8 | 54.3 | 53.0 | 59.7 | 62.4 | 61.0 | 50.1 | 48.4 | 49.2\nHDGSE | 同义词替换 | 75.9 | 80.1 | 77.9 | 58.4 | 59.3 | 58.8 | 64.7 | 68.3 | 66.5 | 54.8 | 53.1 | 53.9\nHDGSE | 回译 | 75.7 | 79.5 | 77.6 | 57.8 | 58.2 | 58.0 | 64.9 | 68.2 | 66.5 | 55.0 | 53.4 | 54.2\nHDGSE | AugGPT | 76.3 | 80.4 | 78.3 | 58.2 | 59.6 | 58.9 | 64.7 | 68.6 | 66.6 | 54.7 | 53.6 | 54.1\nHDGSE | 本文方法 | 77.9 | 81.3 | 79.6 | 60.1 | 60.9 | 60.5 | 67.9 | 70.1 | 69.0 | 56.3 | 57.8 | 57.0",
+          "page": 2,
+          "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\11111111-1111-1111-1111-111111111111\\vlm\\images/5f3f3fbdab1016d549e5c8d4d358064d59c18783970541fbf3c340c523802991.jpg",
+          "table_body": "<table><tr><td rowspan=\"3\">模型</td><td rowspan=\"3\">增强方法</td><td colspan=\"6\">ACE05-E+</td><td colspan=\"6\">ERE-EN</td></tr><tr><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td><td colspan=\"3\">Trig-C</td><td colspan=\"3\">Arg-C</td></tr><tr><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td><td>P</td><td>R</td><td>F1</td></tr><tr><td rowspan=\"6\">TEXT2EVENT</td><td>None</td><td>71.2</td><td>72.5</td><td>71.8</td><td>54.0</td><td>54.8</td><td>54.4</td><td>59.2</td><td>59.6</td><td>59.4</td><td>49.4</td><td>47.2</td><td>48.3</td></tr><tr><td>LLMDirectGen</td><td>64.8</td><td>67.9</td><td>66.3</td><td>48.4</td><td>50.4</td><td>49.4</td><td>53.5</td><td>54.6</td><td>54.0</td><td>42.0</td><td>45.2</td><td>43.5</td></tr><tr><td>同义词替换SR</td><td>71.9</td><td>74.2</td><td>73.0</td><td>54.5</td><td>55.7</td><td>55.1</td><td>60.4</td><td>61.3</td><td>60.8</td><td>50.8</td><td>50.5</td><td>50.6</td></tr><tr><td>回译BT</td><td>71.6</td><td>73.9</td><td>72.7</td><td>54.3</td><td>55.1</td><td>54.7</td><td>60.9</td><td>61.7</td><td>61.3</td><td>51.0</td><td>49.6</td><td>50.3</td></tr><tr><td>AugGPT</td><td>72.1</td><td>73.6</td><td>72.8</td><td>54.8</td><td>56.4</td><td>55.6</td><td>60.5</td><td>62.1</td><td>61.3</td><td>51.2</td><td>51.0</td><td>51.1</td></tr><tr><td>本文方法</td><td>74.3</td><td>77.9</td><td>76.1</td><td>57.7</td><td>58.4</td><td>58.0</td><td>64.5</td><td>62.8</td><td>63.6</td><td>52.9</td><td>54.1</td><td>53.5</td></tr><tr><td rowspan=\"6\">HDGSE</td><td>None</td><td>75.5</td><td>79.0</td><td>77.2</td><td>57.6</td><td>57.8</td><td>57.7</td><td>64.5</td><td>67.9</td><td>66.1</td><td>54.5</td><td>52.6</td><td>53.5</td></tr><tr><td>LLMDirectGen</td><td>69.3</td><td>73.6</td><td>71.4</td><td>51.8</td><td>54.3</td><td>53.0</td><td>59.7</td><td>62.4</td><td>61.0</td><td>50.1</td><td>48.4</td><td>49.2</td></tr><tr><td>同义词替换</td><td>75.9</td><td>80.1</td><td>77.9</td><td>58.4</td><td>59.3</td><td>58.8</td><td>64.7</td><td>68.3</td><td>66.5</td><td>54.8</td><td>53.1</td><td>53.9</td></tr><tr><td>回译</td><td>75.7</td><td>79.5</td><td>77.6</td><td>57.8</td><td>58.2</td><td>58.0</td><td>64.9</td><td>68.2</td><td>66.5</td><td>55.0</td><td>53.4</td><td>54.2</td></tr><tr><td>AugGPT</td><td>76.3</td><td>80.4</td><td>78.3</td><td>58.2</td><td>59.6</td><td>58.9</td><td>64.7</td><td>68.6</td><td>66.6</td><td>54.7</td><td>53.6</td><td>54.1</td></tr><tr><td>本文方法</td><td>77.9</td><td>81.3</td><td>79.6</td><td>60.1</td><td>60.9</td><td>60.5</td><td>67.9</td><td>70.1</td><td>69.0</td><td>56.3</td><td>57.8</td><td>57.0</td></tr></table>",
+          "caption": "表2 不同数据增强方法的对比结果 Tab. 2 Comparison Results of Different Data Augmentation Methods",
+          "footnote": ""
+        },
+        {
+          "index_id": 30,
+          "type": "title",
+          "content": "4.2 数据分析",
+          "page": 2
+        }
+      ],
+      "iteration_image_nodes": [],
+      "iteration_graph_nodes": [
+        {
+          "entity_name": "4.2 数据分析",
+          "entity_type": "SECTION_TITLE"
+        },
+        {
+          "entity_name": "4 实验与结果分析",
+          "entity_type": "SECTION_TITLE"
+        },
+        {
+          "entity_name": "real time big data analytics",
+          "entity_type": "technology"
+        },
+        {
+          "entity_name": "数据分析",
+          "entity_type": "DATASET_OR_CORPUS"
+        },
+        {
+          "entity_name": "Table 1",
+          "entity_type": "TABLE"
+        }
+      ],
+      "partial_answers": [
+        {
+          "source": "Text Chunk 1",
+          "content": "根据提供的信息，论文中使用的数据集是 **ACE05-E+** 和 **ERE-EN**。这两个数据集用于测试 **Text2Event** 和 **HDGSE** 事件抽取模型在不同数据增强方法下的效果。"
+        }
+      ],
+      "generated_answer": "根据提供的信息，论文中使用的数据集是 **ACE05-E+** 和 **ERE-EN**。这两个数据集用于测试 **Text2Event** 和 **HDGSE** 事件抽取模型在不同数据增强方法下的效果。"
+    }
+  ],
+  "final_answer": "论文中实验使用了 **ACE05-E+** 和 **ERE-EN** 这两个数据集。它们被用来评估 **Text2Event** 和 **HDGSE** 事件抽取模型在不同数据增强方法下的性能表现。"
+}

@@ -1,0 +1,16 @@
+{
+  "entities": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "task or problem",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "is a task or problem that requires data comparison  suggesting it is a specific activity or challenge",
+      "source_ids": [
+        10
+      ]
+    }
+  ],
+  "node_idx": 10
+}

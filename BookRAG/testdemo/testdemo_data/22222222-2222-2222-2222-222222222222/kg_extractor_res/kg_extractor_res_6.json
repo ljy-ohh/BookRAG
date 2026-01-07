@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "1. 多模态模型演进",
+      "entity_type": "SECTION_TITLE",
+      "description": "As a subsection of '多模态模型演进', this section provides an overview of the evolution of multimodal models within the broader context of the '人工智能技术发展报告'.",
+      "source_ids": [
+        6
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 6
+}

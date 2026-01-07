@@ -3,15 +3,15 @@
     {
       "entity_name": "key laboratory of network information system technology",
       "entity_type": "organization",
-      "description": "a key laboratory mentioned in the text",
+      "description": "key laboratory of network information system technology is an organization mentioned in the text  associated with the institute of electronic and located in beijing",
       "source_ids": [
         15
       ]
     },
     {
-      "entity_name": "institute of electronic  chinese academy of sciences",
+      "entity_name": "institute of electronic",
       "entity_type": "organization",
-      "description": "an institute that is part of the chinese academy of sciences",
+      "description": "institute of electronic is an organization mentioned in the text  part of the chinese academy of sciences",
       "source_ids": [
         15
       ]
@@ -19,7 +19,7 @@
     {
       "entity_name": "chinese academy of sciences",
       "entity_type": "organization",
-      "description": "an academy of sciences mentioned in the text",
+      "description": "chinese academy of sciences is an organization mentioned in the text  which includes the institute of electronic",
       "source_ids": [
         15
       ]
@@ -27,7 +27,7 @@
     {
       "entity_name": "beijing",
       "entity_type": "location",
-      "description": "a city where the laboratory and institute are located",
+      "description": "beijing is a location mentioned in the text  where the key laboratory of network information system technology is situated",
       "source_ids": [
         15
       ]
@@ -36,20 +36,20 @@
   "relations": [
     {
       "src_entity_name": "key laboratory of network information system technology",
-      "tgt_entity_name": "institute of electronic  chinese academy of sciences",
+      "tgt_entity_name": "institute of electronic",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "the laboratory is affiliated with or part of the institute",
+      "weight": 10.0,
+      "description": "the key laboratory of network information system technology is part of the institute of electronic",
       "source_ids": [
         15
       ]
     },
     {
-      "src_entity_name": "institute of electronic  chinese academy of sciences",
+      "src_entity_name": "institute of electronic",
       "tgt_entity_name": "chinese academy of sciences",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "the institute is part of the chinese academy of sciences",
+      "weight": 10.0,
+      "description": "the institute of electronic is part of the chinese academy of sciences",
       "source_ids": [
         15
       ]
@@ -58,18 +58,8 @@
       "src_entity_name": "key laboratory of network information system technology",
       "tgt_entity_name": "beijing",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the laboratory is located in beijing",
-      "source_ids": [
-        15
-      ]
-    },
-    {
-      "src_entity_name": "institute of electronic  chinese academy of sciences",
-      "tgt_entity_name": "beijing",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the institute is located in beijing",
+      "weight": 9.0,
+      "description": "the key laboratory of network information system technology is located in beijing",
       "source_ids": [
         15
       ]

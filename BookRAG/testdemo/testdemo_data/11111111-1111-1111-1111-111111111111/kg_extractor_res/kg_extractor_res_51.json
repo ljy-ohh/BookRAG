@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "10",
-      "entity_type": "measurement",
-      "description": "a numerical value mentioned in the text",
+      "entity_type": "number",
+      "description": "10 is a numerical value mentioned in the text  though no specific entity type is provided  it is likely a count or measurement",
       "source_ids": [
         51
       ]

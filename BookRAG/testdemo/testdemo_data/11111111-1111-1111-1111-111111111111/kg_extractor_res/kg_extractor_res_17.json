@@ -3,39 +3,23 @@
     {
       "entity_name": "event extraction",
       "entity_type": "task or problem",
-      "description": "event extraction is a core task in natural language processing aimed at identifying event triggers and arguments from text",
+      "description": "event extraction is a core task in natural language processing that involves identifying event triggers and associated arguments from unstructured text",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "natural language processing",
-      "entity_type": "research field",
-      "description": "natural language processing is the research field within which event extraction is a core task",
+      "entity_type": "academic subject",
+      "description": "natural language processing is a field of study within artificial intelligence focused on the interaction between computers and human language",
       "source_ids": [
         17
       ]
     },
     {
-      "entity_name": "synonym substitution",
-      "entity_type": "method or technique",
-      "description": "synonym substitution is an existing data augmentation method mentioned as having limitations",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "entity_name": "back translation",
-      "entity_type": "method or technique",
-      "description": "back translation is an existing data augmentation method mentioned as having limitations",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "entity_name": "multi stage llm based synergistic enhancement framework",
+      "entity_name": "llm based synergistic enhancement framework",
       "entity_type": "model or architecture",
-      "description": "a proposed framework for data generation featuring a closed loop mechanism of generation annotation validation scoring",
+      "description": "llm based synergistic enhancement framework is a proposed model that features a closed loop mechanism of generation annotation validation scoring for data augmentation",
       "source_ids": [
         17
       ]
@@ -43,23 +27,31 @@
     {
       "entity_name": "generation annotation validation scoring",
       "entity_type": "method or technique",
-      "description": "a closed loop mechanism that is part of the proposed framework for data generation",
+      "description": "generation annotation validation scoring is a closed loop mechanism used in the proposed framework for data augmentation and quality control",
       "source_ids": [
         17
       ]
     },
     {
-      "entity_name": "generation module",
-      "entity_type": "model or architecture",
-      "description": "a module that integrates multi strategy rewriting and constrained generation for data augmentation",
+      "entity_name": "data augmentation",
+      "entity_type": "task or problem",
+      "description": "data augmentation is a process used to alleviate data sparsity in event extraction by generating additional training data",
       "source_ids": [
         17
       ]
     },
     {
-      "entity_name": "multi strategy rewriting",
+      "entity_name": "synonym substitution",
       "entity_type": "method or technique",
-      "description": "a technique involving semantic role substitution and event structure restructuring used in the generation module",
+      "description": "synonym substitution is a data augmentation method that replaces words with their synonyms to generate variations of the original text",
+      "source_ids": [
+        17
+      ]
+    },
+    {
+      "entity_name": "back translation",
+      "entity_type": "method or technique",
+      "description": "back translation is a data augmentation method that translates text to another language and then back to the original to create variations",
       "source_ids": [
         17
       ]
@@ -67,7 +59,7 @@
     {
       "entity_name": "semantic role substitution",
       "entity_type": "method or technique",
-      "description": "a specific rewriting strategy used as part of multi strategy rewriting",
+      "description": "semantic role substitution is a multi strategy rewriting method used in the generation module to transcend word level augmentation limitations",
       "source_ids": [
         17
       ]
@@ -75,7 +67,7 @@
     {
       "entity_name": "event structure restructuring",
       "entity_type": "method or technique",
-      "description": "a specific rewriting strategy used as part of multi strategy rewriting",
+      "description": "event structure restructuring is a multi strategy rewriting method used in the generation module to transcend word level augmentation limitations",
       "source_ids": [
         17
       ]
@@ -83,15 +75,7 @@
     {
       "entity_name": "constrained generation",
       "entity_type": "method or technique",
-      "description": "a technique used in the generation module for data augmentation",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "entity_name": "validation module",
-      "entity_type": "model or architecture",
-      "description": "a module that eliminates structural bias through logical verification and template matching",
+      "description": "constrained generation is a method used in the generation module to ensure semantic consistency during data augmentation",
       "source_ids": [
         17
       ]
@@ -99,7 +83,7 @@
     {
       "entity_name": "trigger argument logical verification",
       "entity_type": "method or technique",
-      "description": "a method used by the validation module to check event structure",
+      "description": "trigger argument logical verification is a method used in the validation module to eliminate structural bias in generated data",
       "source_ids": [
         17
       ]
@@ -107,31 +91,23 @@
     {
       "entity_name": "event template matching",
       "entity_type": "method or technique",
-      "description": "a method used by the validation module to check event structure",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "entity_name": "scoring module",
-      "entity_type": "model or architecture",
-      "description": "a module that filters data based on information integrity and semantic consistency",
+      "description": "event template matching is a method used in the validation module to eliminate structural bias in generated data",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "information integrity",
-      "entity_type": "evaluation metric",
-      "description": "a criterion used by the scoring module to filter generated data",
+      "entity_type": "measurement",
+      "description": "information integrity is a criterion used in the scoring module to filter data based on its accuracy and completeness",
       "source_ids": [
         17
       ]
     },
     {
       "entity_name": "semantic consistency",
-      "entity_type": "evaluation metric",
-      "description": "a criterion used by the scoring module to filter generated data",
+      "entity_type": "measurement",
+      "description": "semantic consistency is a criterion used in the scoring module to filter data based on its adherence to the original meaning",
       "source_ids": [
         17
       ]
@@ -143,47 +119,47 @@
       "tgt_entity_name": "natural language processing",
       "relation_name": "",
       "weight": 9.0,
-      "description": "event extraction is described as a core task within the field of natural language processing",
+      "description": "event extraction is a core task in natural language processing  indicating it is a subfield or application within the broader domain of natural language processing",
       "source_ids": [
         17
       ]
     },
     {
-      "src_entity_name": "multi stage llm based synergistic enhancement framework",
+      "src_entity_name": "event extraction",
+      "tgt_entity_name": "data augmentation",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "event extraction is a task that benefits from data augmentation to alleviate data sparsity issues",
+      "source_ids": [
+        17
+      ]
+    },
+    {
+      "src_entity_name": "llm based synergistic enhancement framework",
       "tgt_entity_name": "generation annotation validation scoring",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "the framework features the closed loop mechanism of generation annotation validation scoring",
+      "weight": 10.0,
+      "description": "llm based synergistic enhancement framework features a closed loop mechanism of generation annotation validation scoring  indicating that the latter is a component of the former",
       "source_ids": [
         17
       ]
     },
     {
       "src_entity_name": "generation module",
-      "tgt_entity_name": "multi strategy rewriting",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the generation module integrates multi strategy rewriting as part of its technique",
-      "source_ids": [
-        17
-      ]
-    },
-    {
-      "src_entity_name": "multi strategy rewriting",
       "tgt_entity_name": "semantic role substitution",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "semantic role substitution is a specific strategy included in multi strategy rewriting",
+      "weight": 9.0,
+      "description": "the generation module integrates semantic role substitution as one of its multi strategy rewriting methods",
       "source_ids": [
         17
       ]
     },
     {
-      "src_entity_name": "multi strategy rewriting",
+      "src_entity_name": "generation module",
       "tgt_entity_name": "event structure restructuring",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "event structure restructuring is a specific strategy included in multi strategy rewriting",
+      "weight": 9.0,
+      "description": "the generation module integrates event structure restructuring as one of its multi strategy rewriting methods",
       "source_ids": [
         17
       ]
@@ -193,7 +169,7 @@
       "tgt_entity_name": "constrained generation",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the generation module uses constrained generation as a technique",
+      "description": "the generation module integrates constrained generation as a method to ensure semantic consistency during data augmentation",
       "source_ids": [
         17
       ]
@@ -203,7 +179,7 @@
       "tgt_entity_name": "trigger argument logical verification",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the validation module uses trigger argument logical verification to eliminate bias",
+      "description": "the validation module uses trigger argument logical verification to eliminate structural bias in generated data",
       "source_ids": [
         17
       ]
@@ -213,7 +189,7 @@
       "tgt_entity_name": "event template matching",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the validation module uses event template matching to eliminate bias",
+      "description": "the validation module uses event template matching to eliminate structural bias in generated data",
       "source_ids": [
         17
       ]
@@ -223,7 +199,7 @@
       "tgt_entity_name": "information integrity",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the scoring module filters data based on information integrity",
+      "description": "the scoring module filters data based on information integrity  indicating it is a criterion used for evaluation",
       "source_ids": [
         17
       ]
@@ -233,7 +209,7 @@
       "tgt_entity_name": "semantic consistency",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the scoring module filters data based on semantic consistency",
+      "description": "the scoring module filters data based on semantic consistency  indicating it is a criterion used for evaluation",
       "source_ids": [
         17
       ]

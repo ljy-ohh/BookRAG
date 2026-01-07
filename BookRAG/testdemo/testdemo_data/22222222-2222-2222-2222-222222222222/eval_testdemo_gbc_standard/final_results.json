@@ -1,0 +1,10 @@
+[
+  {
+    "question": "介绍人工智能技术发展？",
+    "answer": "",
+    "doc_uuid": "22222222-2222-2222-2222-222222222222",
+    "doc_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\人工智能技术发展报告.pdf",
+    "output": "我没有找到符合指定过滤条件的条目来回答该问题。",
+    "retrieved_node_ids": []
+  }
+]

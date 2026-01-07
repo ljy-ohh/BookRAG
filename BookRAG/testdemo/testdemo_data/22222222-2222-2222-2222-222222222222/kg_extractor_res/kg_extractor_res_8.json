@@ -1,0 +1,51 @@
+{
+  "entities": [
+    {
+      "entity_name": "2. 推理效率优化",
+      "entity_type": "SECTION_TITLE",
+      "description": "As a subsection of '推理效率优化', this section likely discusses techniques and methods aimed at improving the efficiency of reasoning processes in artificial intelligence systems.",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "推理效率",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "Refers to the process of making AI systems reason more efficiently, which is the focus of this section.",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "entity_name": "优化",
+      "entity_type": "METHOD_OR_TECHNIQUE",
+      "description": "Refers to the optimization techniques or strategies used to enhance reasoning performance, as detailed in this section.",
+      "source_ids": [
+        8
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "推理效率",
+      "tgt_entity_name": "2. 推理效率优化",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The concept of '推理效率' is a primary topic of section 2. 推理效率优化.",
+      "source_ids": [
+        8
+      ]
+    },
+    {
+      "src_entity_name": "优化",
+      "tgt_entity_name": "2. 推理效率优化",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The concept of '优化' is a primary topic of section 2. 推理效率优化.",
+      "source_ids": [
+        8
+      ]
+    }
+  ],
+  "node_idx": 8
+}

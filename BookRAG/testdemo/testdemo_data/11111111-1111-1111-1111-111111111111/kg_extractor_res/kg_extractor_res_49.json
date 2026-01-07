@@ -1,5 +1,16 @@
 {
   "entities": [],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "and        are related as they both pertain to the context and funding information required for a research submission",
+      "source_ids": [
+        49
+      ]
+    }
+  ],
   "node_idx": 49
 }

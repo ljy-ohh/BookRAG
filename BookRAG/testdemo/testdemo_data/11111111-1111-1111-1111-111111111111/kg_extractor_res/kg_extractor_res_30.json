@@ -3,12 +3,31 @@
     {
       "entity_name": "4.2 数据分析",
       "entity_type": "SECTION_TITLE",
-      "description": "As a subsection of '实验与结果分析' (Experiments and Result Analysis), this section focuses on analyzing the data, likely examining the characteristics, quality, or patterns within the datasets used in the study's experiments.",
+      "description": "As a subsection of 'Experiment and Results Analysis', this section focuses on analyzing the data used in the study, including its characteristics, structure, and relevance to the event extraction framework.",
+      "source_ids": [
+        30
+      ]
+    },
+    {
+      "entity_name": "数据分析",
+      "entity_type": "DATASET_OR_CORPUS",
+      "description": "Refers to the data used in the study, which is analyzed in section 4.2.",
       "source_ids": [
         30
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "数据分析",
+      "tgt_entity_name": "4.2 数据分析",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The concept of '数据分析' (Data Analysis) is a primary topic of section 4.2.",
+      "source_ids": [
+        30
+      ]
+    }
+  ],
   "node_idx": 30
 }

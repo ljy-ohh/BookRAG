@@ -1,0 +1,177 @@
+{
+  "entities": [
+    {
+      "entity_name": "Table 1",
+      "entity_type": "TABLE",
+      "description": "A table describing the multimodal support capabilities of different models, specifically GPT-4 and GPT-5, with technical metrics.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "文本/图像",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "A column header indicating the model's support for text and image inputs, identified as a multimodal capability.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "文本/图像/音频/视频",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "A column header indicating the model's support for text, image, audio, and video inputs, identified as a multimodal capability.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "多模态支持",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A column header representing a technical metric related to the model's support for multimodal inputs.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "GPT-4",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A model named GPT-4 with a release year of 2023, identified as supporting text and image inputs.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "GPT-5",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "A model named GPT-5 with a release year of 2025, identified as supporting text, image, audio, and video inputs.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "2023",
+      "entity_type": "DATE",
+      "description": "The year 2023 associated with the GPT-4 model, indicating its release date.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "2025",
+      "entity_type": "DATE",
+      "description": "The year 2025 associated with the GPT-5 model, indicating its release date.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "平均响应延迟(ms)",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A metric representing the average response delay in milliseconds for a model.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "训练能耗(PJ)",
+      "entity_type": "EVALUATION_METRIC",
+      "description": "A metric representing the training energy consumption in petajoules for a model.",
+      "source_ids": [
+        11
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "文本/图像",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '文本/图像'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "文本/图像/音频/视频",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '文本/图像/音频/视频'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "多模态支持",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '多模态支持'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "GPT-4",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about 'GPT-4'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "GPT-5",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about 'GPT-5'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "2023",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '2023'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "2025",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '2025'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "平均响应延迟(ms)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '平均响应延迟(ms)'.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "训练能耗(PJ)",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '训练能耗(PJ)'.",
+      "source_ids": [
+        11
+      ]
+    }
+  ],
+  "node_idx": 11
+}

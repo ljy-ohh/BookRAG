@@ -7,6 +7,22 @@ from Core.provider.llm import LLM
 class QueryTypeResult(BaseModel):
     query_type: Literal["simple", "complex", "global"]
 
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_query_type(cls, data):
+        if isinstance(data, dict):
+            if "query_type" not in data:
+                for alt_key in ("classification", "category", "type"):
+                    if alt_key in data:
+                        data = {**data, "query_type": data.get(alt_key)}
+                        break
+
+            qt = data.get("query_type")
+            if isinstance(qt, str):
+                data["query_type"] = qt.strip().lower()
+
+        return data
+
 
 # Step 2 'complex' 输出模型
 class SubQuestion(BaseModel):

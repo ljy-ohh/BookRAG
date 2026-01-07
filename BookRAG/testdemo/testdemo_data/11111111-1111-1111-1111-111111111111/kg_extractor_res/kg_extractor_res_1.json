@@ -3,7 +3,7 @@
     {
       "entity_name": "面向事件抽取的多阶段数据增强框架研究",
       "entity_type": "SECTION_TITLE",
-      "description": "This is the main title of the document, indicating the research focuses on a multi-stage data augmentation framework specifically designed for the task of event extraction.",
+      "description": "As a top-level section, this title introduces the research focus on a multi-stage data augmentation framework designed for event extraction tasks.",
       "source_ids": [
         1
       ]

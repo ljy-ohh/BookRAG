@@ -355,7 +355,9 @@ class Graph:
 
         graph_instance = cls(save_path=load_dir)
 
-        graph_instance.kg = json_graph.node_link_graph(loaded_data["graph"])
+        graph_data = loaded_data["graph"]
+        edges_key = "links" if isinstance(graph_data, dict) and "links" in graph_data else "edges"
+        graph_instance.kg = json_graph.node_link_graph(graph_data, edges=edges_key)
 
         for _, node_data in graph_instance.kg.nodes(data=True):
             if "source_ids" in node_data and isinstance(node_data["source_ids"], list):

@@ -1,5 +1,25 @@
 {
-  "entities": [],
-  "relations": [],
+  "entities": [
+    {
+      "entity_name": "fund project",
+      "entity_type": "task or problem",
+      "description": "fund project is a task or problem that requires providing a brief explanation of the specific application technology background related to the article s content",
+      "source_ids": [
+        50
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "src_entity_name": "fund project",
+      "tgt_entity_name": "task or problem",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "fund project is directly related to the task or problem of providing a brief explanation of the specific application technology background related to the article s content",
+      "source_ids": [
+        50
+      ]
+    }
+  ],
   "node_idx": 50
 }

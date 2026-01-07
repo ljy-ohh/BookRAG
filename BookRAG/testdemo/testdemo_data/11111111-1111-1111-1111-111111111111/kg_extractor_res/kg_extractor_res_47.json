@@ -1,9 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "Table",
+      "entity_name": "Table 1",
       "entity_type": "TABLE",
-      "description": "A table with column headers for variable symbol, meaning, and remarks, as described by the column headers.",
+      "description": "A table with three columns: 变量符号 (Variable Symbol), 含义 (Meaning), and 备注 (Notes).",
       "source_ids": [
         47
       ]
@@ -11,23 +11,55 @@
     {
       "entity_name": "变量符号",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The first column header 变量符号 (Variable Symbol), representing the symbolic notation for variables in the table.",
+      "description": "The first column of the table, representing the variable symbols used in the context.",
       "source_ids": [
         47
       ]
     },
     {
       "entity_name": "含义",
-      "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The second column header 含义 (Meaning), representing the definition or significance of the variables listed in the table.",
+      "entity_type": "DESCRIPTION",
+      "description": "The second column of the table, indicating the meaning or description of the variable symbols.",
       "source_ids": [
         47
       ]
     },
     {
       "entity_name": "备注",
+      "entity_type": "NOTES",
+      "description": "The third column of the table, providing additional notes or comments related to the variable symbols.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "无",
       "entity_type": "PARAMETER_OR_VARIABLE",
-      "description": "The third column header 备注 (Remarks), representing additional notes or comments related to the variables in the table.",
+      "description": "A term representing the absence of a variable symbol in the context of this table.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "说明其在本文中表示的含义",
+      "entity_type": "SECTION_TITLE",
+      "description": "A term indicating the explanation of what a variable symbol represents in the text.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "矩阵",
+      "entity_type": "DATA_TYPE",
+      "description": "A term representing the matrix data structure used in the context of this table.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "entity_name": "矢量",
+      "entity_type": "DATA_TYPE",
+      "description": "A term representing the vector data structure used in the context of this table.",
       "source_ids": [
         47
       ]
@@ -35,31 +67,71 @@
   ],
   "relations": [
     {
-      "src_entity_name": "Table",
+      "src_entity_name": "Table 1",
       "tgt_entity_name": "变量符号",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 'Table' 包含关于 '变量符号' 的数据。",
+      "description": "Table 'Table 1' contains data about '变量符号'.",
       "source_ids": [
         47
       ]
     },
     {
-      "src_entity_name": "Table",
+      "src_entity_name": "Table 1",
       "tgt_entity_name": "含义",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 'Table' 包含关于 '含义' 的数据。",
+      "description": "Table 'Table 1' contains data about '含义'.",
       "source_ids": [
         47
       ]
     },
     {
-      "src_entity_name": "Table",
+      "src_entity_name": "Table 1",
       "tgt_entity_name": "备注",
       "relation_name": "",
       "weight": 9.0,
-      "description": "表格 'Table' 包含关于 '备注' 的数据。",
+      "description": "Table 'Table 1' contains data about '备注'.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "无",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '无'.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "说明其在本文中表示的含义",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '说明其在本文中表示的含义'.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "矩阵",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '矩阵'.",
+      "source_ids": [
+        47
+      ]
+    },
+    {
+      "src_entity_name": "Table 1",
+      "tgt_entity_name": "矢量",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "Table 'Table 1' contains data about '矢量'.",
       "source_ids": [
         47
       ]

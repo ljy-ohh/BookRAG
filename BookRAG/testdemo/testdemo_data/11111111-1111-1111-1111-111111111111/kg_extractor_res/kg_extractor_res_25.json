@@ -3,7 +3,7 @@
     {
       "entity_name": "4 实验与结果分析",
       "entity_type": "SECTION_TITLE",
-      "description": "As the final major section of the paper '面向事件抽取的多阶段数据增强框架研究', this section details the experimental setup, procedures, and the analysis of results to validate the proposed multi-stage data augmentation framework for event extraction.",
+      "description": "As a subsection of '面向事件抽取的多阶段数据增强框架研究', this section presents the experimental setup and analysis of results conducted to evaluate the proposed framework.",
       "source_ids": [
         25
       ]

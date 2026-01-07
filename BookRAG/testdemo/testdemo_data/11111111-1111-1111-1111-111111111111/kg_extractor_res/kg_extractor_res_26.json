@@ -3,7 +3,7 @@
     {
       "entity_name": "4.1 实验结果",
       "entity_type": "SECTION_TITLE",
-      "description": "作为 '4 实验与结果分析' 的一个子章节，本节详细呈现了所提出框架在事件抽取任务上的具体性能数据，包括主要评估指标的得分，为后续分析提供实证基础。",
+      "description": "As a subsection of '实验与结果分析', this section presents the outcomes of the experiments conducted within the multi-stage data augmentation framework for event extraction.",
       "source_ids": [
         26
       ]

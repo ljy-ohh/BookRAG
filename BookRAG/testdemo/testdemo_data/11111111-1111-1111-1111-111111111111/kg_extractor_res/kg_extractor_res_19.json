@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "2023 cxpt lc 005",
-      "entity_type": "product",
-      "description": "a project or grant identified by the code  2023 cxpt lc 005",
+      "entity_type": "stock symbol",
+      "description": "2023 cxpt lc 005 is a stock symbol representing the funding project of the organization",
       "source_ids": [
         19
       ]
@@ -14,8 +14,8 @@
       "src_entity_name": "",
       "tgt_entity_name": "2023 cxpt lc 005",
       "relation_name": "",
-      "weight": 9.0,
-      "description": "the laboratory funded the project identified by the code  2023 cxpt lc 005",
+      "weight": 10.0,
+      "description": "the organization funds the project identified by the stock symbol 2023 cxpt lc 005",
       "source_ids": [
         19
       ]

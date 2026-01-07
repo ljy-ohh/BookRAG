@@ -1,17 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "college of information science and technology",
-      "entity_type": "organization",
-      "description": "an academic college mentioned in the text",
-      "source_ids": [
-        13
-      ]
-    },
-    {
       "entity_name": "beijing university of chemical technology",
       "entity_type": "organization",
-      "description": "a university mentioned in the text",
+      "description": "beijing university of chemical technology is a university where the college of information science and technology is located",
       "source_ids": [
         13
       ]
@@ -19,7 +11,7 @@
     {
       "entity_name": "beijing",
       "entity_type": "location",
-      "description": "a city mentioned in the text",
+      "description": "beijing is a city where the college of information science and technology is located",
       "source_ids": [
         13
       ]
@@ -27,21 +19,11 @@
   ],
   "relations": [
     {
-      "src_entity_name": "college of information science and technology",
-      "tgt_entity_name": "beijing university of chemical technology",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the college is part of the university  as indicated by the address structure",
-      "source_ids": [
-        13
-      ]
-    },
-    {
       "src_entity_name": "beijing university of chemical technology",
       "tgt_entity_name": "beijing",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the university is located in the city of beijing",
+      "description": "beijing university of chemical technology is located in beijing",
       "source_ids": [
         13
       ]

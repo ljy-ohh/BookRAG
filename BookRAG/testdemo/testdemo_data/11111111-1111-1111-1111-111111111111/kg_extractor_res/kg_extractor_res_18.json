@@ -3,12 +3,59 @@
     {
       "entity_name": "2025 05 07",
       "entity_type": "date",
-      "description": "the date when the document was received",
+      "description": "2025 05 07 is the submission date of the document as indicated in the text",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "entity_name": "20yy mm dd",
+      "entity_type": "date",
+      "description": "20yy mm dd is the revision date of the document  though the year is not fully specified in the text",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "entity_name": "yyyy mm dd",
+      "entity_type": "date",
+      "description": "yyyy mm dd is the acceptance date of the document  though the year is not fully specified in the text",
       "source_ids": [
         18
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "2025 05 07",
+      "tgt_entity_name": "20yy mm dd",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the submission date is followed by the revision date in the document s timeline",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "src_entity_name": "2025 05 07",
+      "tgt_entity_name": "yyyy mm dd",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the submission date is followed by the acceptance date in the document s timeline",
+      "source_ids": [
+        18
+      ]
+    },
+    {
+      "src_entity_name": "20yy mm dd",
+      "tgt_entity_name": "yyyy mm dd",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the revision date is followed by the acceptance date in the document s timeline",
+      "source_ids": [
+        18
+      ]
+    }
+  ],
   "node_idx": 18
 }

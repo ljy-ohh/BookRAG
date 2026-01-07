@@ -6,17 +6,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the institute is part of or affiliated with the chinese academy of sciences",
-      "source_ids": [
-        4
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the institute is located in beijing",
+      "description": "the organization                 is located in beijing",
       "source_ids": [
         4
       ]

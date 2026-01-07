@@ -294,8 +294,8 @@ def main():
         except FileNotFoundError:
             log.error(f"错误: 在 '{dataset_cfg.dataset_path}' 未找到数据集文件")
             return
-        except Exception as e:
-            log.error(f" 错误: 解析 JSON 文件失败。原因: {e}")
+        except Exception:
+            log.exception(" 错误: 解析 JSON 文件失败。")
             return
 
         # 2. 按文档标识符分组以查找唯一文档
@@ -370,7 +370,7 @@ def main():
                         config=current_config, stage=args.stage, data_df=data_df
                     )
                 except Exception as e:
-                    log.error(f"  - 错误: 构建索引失败。原因: {e}")
+                    log.exception("  - 错误: 构建索引失败。")
                     index_error_list.append((doc_uuid, str(e)))
 
             elif args.command == "rag":
@@ -393,7 +393,7 @@ def main():
                         dataset_name=dataset_name,
                     )
                 except Exception as e:
-                    log.error(f"  - 错误: 运行推理失败。原因: {e}")
+                    log.exception("  - 错误: 运行推理失败。")
                     rag_error_list.append((doc_uuid, str(e)))
 
         # 获取脚本的基本目录

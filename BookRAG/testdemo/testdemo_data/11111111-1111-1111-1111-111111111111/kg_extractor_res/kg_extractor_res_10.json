@@ -2,13 +2,32 @@
   "entities": [
     {
       "entity_name": "tp391",
-      "entity_type": "research field",
-      "description": "a research field classification code mentioned in the document",
+      "entity_type": "academic subject",
+      "description": "tp391 is a chinese library classification code indicating a specific academic subject",
+      "source_ids": [
+        10
+      ]
+    },
+    {
+      "entity_name": "a",
+      "entity_type": "academic subject",
+      "description": "a is a literature marking code indicating the type of document or article",
       "source_ids": [
         10
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "tp391",
+      "tgt_entity_name": "a",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "tp391 and a are both classification codes used in the document to categorize academic materials",
+      "source_ids": [
+        10
+      ]
+    }
+  ],
   "node_idx": 10
 }

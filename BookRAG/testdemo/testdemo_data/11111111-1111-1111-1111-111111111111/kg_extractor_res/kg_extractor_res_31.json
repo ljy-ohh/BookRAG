@@ -1,9 +1,17 @@
 {
   "entities": [
     {
+      "entity_name": "3",
+      "entity_type": "table",
+      "description": "3",
+      "source_ids": [
+        31
+      ]
+    },
+    {
       "entity_name": "ace05 en",
       "entity_type": "dataset or corpus",
-      "description": "ace05 en  is a dataset where the number of events was expanded to 9931 through a data augmentation method",
+      "description": "ace05 en                    9931           13425",
       "source_ids": [
         31
       ]
@@ -11,7 +19,7 @@
     {
       "entity_name": "ere en",
       "entity_type": "dataset or corpus",
-      "description": "ere en is a dataset mentioned alongside ace05 en  in the context of data augmentation",
+      "description": "ere en",
       "source_ids": [
         31
       ]
@@ -19,11 +27,21 @@
   ],
   "relations": [
     {
-      "src_entity_name": "ace05 en",
+      "src_entity_name": "3",
+      "tgt_entity_name": "ace05 en",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "3   ace05 en",
+      "source_ids": [
+        31
+      ]
+    },
+    {
+      "src_entity_name": "3",
       "tgt_entity_name": "ere en",
       "relation_name": "",
       "weight": 8.0,
-      "description": "both ace05 en  and ere en are datasets mentioned together in the statistical results of a data augmentation method",
+      "description": "3   ere en",
       "source_ids": [
         31
       ]

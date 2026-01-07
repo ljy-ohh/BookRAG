@@ -1,17 +1,17 @@
 {
   "entities": [
     {
-      "entity_name": "the aerospace information research institute",
+      "entity_name": "aerospace information research institute",
       "entity_type": "organization",
-      "description": "an institute mentioned in the text",
+      "description": "the aerospace information research institute is an organization associated with the chinese academy of sciences and located in beijing",
       "source_ids": [
         14
       ]
     },
     {
-      "entity_name": "chinese academic of sciences",
+      "entity_name": "chinese academy of sciences",
       "entity_type": "organization",
-      "description": "an academic organization mentioned in the text",
+      "description": "the chinese academy of sciences is an organization that includes the aerospace information research institute as a part of its structure",
       "source_ids": [
         14
       ]
@@ -19,7 +19,7 @@
     {
       "entity_name": "beijing",
       "entity_type": "location",
-      "description": "a city mentioned as the location of the institute",
+      "description": "beijing is a location where the aerospace information research institute is situated",
       "source_ids": [
         14
       ]
@@ -27,21 +27,21 @@
   ],
   "relations": [
     {
-      "src_entity_name": "the aerospace information research institute",
-      "tgt_entity_name": "chinese academic of sciences",
+      "src_entity_name": "aerospace information research institute",
+      "tgt_entity_name": "chinese academy of sciences",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the aerospace information research institute is part of or affiliated with the chinese academic of sciences  as indicated by the listing",
+      "description": "the aerospace information research institute is part of the chinese academy of sciences",
       "source_ids": [
         14
       ]
     },
     {
-      "src_entity_name": "the aerospace information research institute",
+      "src_entity_name": "aerospace information research institute",
       "tgt_entity_name": "beijing",
       "relation_name": "",
       "weight": 10.0,
-      "description": "the aerospace information research institute is located in beijing  as stated in the address",
+      "description": "the aerospace information research institute is located in beijing",
       "source_ids": [
         14
       ]

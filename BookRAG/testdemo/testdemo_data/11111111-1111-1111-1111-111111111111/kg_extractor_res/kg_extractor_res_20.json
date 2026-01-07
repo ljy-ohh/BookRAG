@@ -6,27 +6,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "song chenwei is from wenzhou  zhejiang",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "song chenwei s main research direction includes natural language processing",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "song chenwei s main research direction includes data augmentation",
+      "description": "s research interests include natural language processing",
       "source_ids": [
         20
       ]
@@ -36,37 +16,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "jiang zhiying is from jingdezhen  jiangxi",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "jiang zhiying s main research direction includes large language models",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "jiang zhiying s main research direction includes natural language processing",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "jiang zhiying s main research direction includes big data real time analysis",
+      "description": "s research interests include data augmentation",
       "source_ids": [
         20
       ]
@@ -76,37 +26,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "han zhonghe is from zhengzhou  henan",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "han zhonghe s main research direction includes deep learning",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "han zhonghe s main research direction includes natural language processing",
-      "source_ids": [
-        20
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "han zhonghe s main research direction includes large language models",
+      "description": "s research interests include large language models",
       "source_ids": [
         20
       ]
@@ -116,7 +36,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "wang jiaxin is from changchun  jilin",
+      "description": "s research interests include natural language processing",
       "source_ids": [
         20
       ]
@@ -125,8 +45,8 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "wang jiaxin s main research direction includes natural language processing",
+      "weight": 9.0,
+      "description": "s research interests include big data real time analysis",
       "source_ids": [
         20
       ]
@@ -135,8 +55,48 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "wang jiaxin s main research direction includes data augmentation",
+      "weight": 9.0,
+      "description": "s research interests include deep learning",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "s research interests include natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "s research interests include large language models",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "s research interests include natural language processing",
+      "source_ids": [
+        20
+      ]
+    },
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 9.0,
+      "description": "s research interests include data augmentation",
       "source_ids": [
         20
       ]

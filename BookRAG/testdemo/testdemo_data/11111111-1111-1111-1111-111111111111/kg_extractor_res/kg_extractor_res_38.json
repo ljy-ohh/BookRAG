@@ -2,13 +2,24 @@
   "entities": [
     {
       "entity_name": "7",
-      "entity_type": "number",
-      "description": "the text is simply the number 7  which is a numeric value",
+      "entity_type": "date",
+      "description": "7 is a date mentioned in the text  though no specific context or year is provided",
       "source_ids": [
         38
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "7",
+      "tgt_entity_name": "7",
+      "relation_name": "",
+      "weight": 0.0,
+      "description": "the text refers to the number 7  but no relationships can be established between entities as there is only one entity identified",
+      "source_ids": [
+        38
+      ]
+    }
+  ],
   "node_idx": 38
 }

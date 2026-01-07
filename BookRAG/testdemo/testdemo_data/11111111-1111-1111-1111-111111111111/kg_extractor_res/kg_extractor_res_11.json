@@ -1,14 +1,51 @@
 {
   "entities": [
     {
-      "entity_name": "research on a multi stage data augmentation framework for event extraction",
-      "entity_type": "research field",
-      "description": "a research field focused on developing a framework for augmenting data to improve event extraction",
+      "entity_name": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction",
+      "entity_type": "SECTION_TITLE",
+      "description": "This section introduces the research focus on developing a multi-stage data augmentation framework specifically designed for event extraction tasks, as part of the broader research on event extraction frameworks.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "Event Extraction",
+      "entity_type": "TASK_OR_PROBLEM",
+      "description": "Refers to the core challenge of identifying and extracting events from text, which is the central theme of this section.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "entity_name": "Multi-Stage Data Augmentation Framework",
+      "entity_type": "MODEL_OR_ARCHITECTURE",
+      "description": "Describes the process of enhancing data through multiple stages to improve the performance of event extraction models.",
       "source_ids": [
         11
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "Event Extraction",
+      "tgt_entity_name": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The concept of 'Event Extraction' is the primary task addressed in this section.",
+      "source_ids": [
+        11
+      ]
+    },
+    {
+      "src_entity_name": "Multi-Stage Data Augmentation Framework",
+      "tgt_entity_name": "Research on a Multi-Stage Data Augmentation Framework for Event Extraction",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "The 'Multi-Stage Data Augmentation Framework' is the proposed model or architecture for solving the 'Event Extraction' task.",
+      "source_ids": [
+        11
+      ]
+    }
+  ],
   "node_idx": 11
 }

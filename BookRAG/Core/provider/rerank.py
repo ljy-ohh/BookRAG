@@ -7,7 +7,7 @@ from tqdm import tqdm
 import logging
 import gc
 import requests
-
+import os
 log = logging.getLogger(__name__)
 
 
@@ -276,15 +276,27 @@ class TextRerankerProvider:
             raise ValueError("输入 'documents' 必须是非空字符串列表。")
 
         if self.backend in ["vllm", "openai"]:
-            # 对于基于 API 的后端，发送原始文本。API 提供商会处理模板。
-            # 1. 准备查询和文档
-            # 如果提供了指令，某些 API 可能支持它，但标准 Rerank API 通常只接受 'query'。
-            # 对于通过 API 的 Qwen-Reranker，我们假设 API 处理提示构造或者我们只发送查询。
-            # 为了安全起见并避免双重模板或 500 错误，我们发送原始字符串。
-            
-            # 2. 分批处理
-            all_results = []
-            num_docs = len(documents)
+            query_str = "" if query is None else str(query)
+            query_str = query_str.strip()
+            if not query_str:
+                log.error("Rerank query 为空，返回默认分数 -1.0")
+                return [-1.0 for _ in range(len(documents))]
+
+            scored = [-1.0 for _ in range(len(documents))]
+
+            docs_with_idx = []
+            for idx, d in enumerate(documents):
+                s = "" if d is None else str(d)
+                s = s.strip()
+                if s:
+                    docs_with_idx.append((idx, s))
+                else:
+                    log.warning(f"Rerank 文档为空，index={idx}，分数设为 -1.0")
+
+            if not docs_with_idx:
+                return scored
+
+            num_docs = len(docs_with_idx)
             num_batches = math.ceil(num_docs / batch_size)
 
             try:
@@ -294,68 +306,49 @@ class TextRerankerProvider:
                     total=num_batches,
                     disable=num_docs < batch_size,
                 ):
-                    batch_docs = documents[i : i + batch_size]
+                    batch_items = docs_with_idx[i : i + batch_size]
+                    batch_indices = [bi[0] for bi in batch_items]
+                    batch_docs = [bi[1] for bi in batch_items]
 
-                    # 3. 构造 payload
-                    # 确保所有文档都是字符串
-                    batch_docs = [str(d) for d in batch_docs]
-                    
                     payload = {
                         "model": self.model_name,
-                        "query": query,
+                        "query": query_str,
                         "documents": batch_docs,
                         "top_n": len(batch_docs),
-                        "return_documents": False
+                        "return_documents": False,
                     }
                     if instruction:
                         payload["instruction"] = instruction
-                    
-                    # 4. 发送 API 请求
+
                     try:
                         response = self.session.post(self.rerank_url, json=payload)
                         response.raise_for_status()
-                        
+
                         data = response.json()
                         results = data.get("results")
-
                         if results is None or not isinstance(results, list):
                             log.error(
-                                f"来自 {self.backend} reranker 的响应格式意外: 未找到 'results' 键或不是列表。响应: {data}")
-                            # 不抛出错误，而是将其视为失败的批次
+                                f"来自 {self.backend} reranker 的响应格式意外: 未找到 'results' 键或不是列表。响应: {data}"
+                            )
                             raise ValueError(f"无法从 {self.backend} 响应中解析 'results'。")
 
-                        # 4. 使用全局索引聚合结果
                         for r in results:
-                            r['global_index'] = i + r.get('index', 0)
-                        all_results.extend(results)
-                    
+                            local_idx = r.get("index")
+                            if isinstance(local_idx, int) and 0 <= local_idx < len(batch_indices):
+                                scored[batch_indices[local_idx]] = r.get("relevance_score", -1.0)
+
                     except Exception as batch_err:
-                        log.error(f"处理批次 {i//batch_size} (文档 {i} 到 {i+len(batch_docs)}) 失败: {batch_err}")
-                        if hasattr(batch_err, 'response') and batch_err.response is not None:
-                             log.error(f"API 响应内容: {batch_err.response.text}")
-                        
-                        # 回退：为失败的文档分配低分以避免管道崩溃
-                        log.warning("跳过此批次并分配默认分数 -1.0")
-                        for idx in range(len(batch_docs)):
-                            all_results.append({
-                                'global_index': i + idx,
-                                'relevance_score': -1.0,
-                                'index': idx
-                            })
+                        log.error(
+                            f"处理批次 {i//batch_size} (文档 {batch_indices[0]} 到 {batch_indices[-1]}) 失败: {batch_err}"
+                        )
+                        if hasattr(batch_err, "response") and batch_err.response is not None:
+                            log.error(f"API 响应内容: {batch_err.response.text}")
 
-                # --- 分批处理结束 ---
-
-                # 5. 根据全局索引对所有结果进行排序
-                all_results.sort(key=lambda r: r.get('global_index', 0))
-
-                # 6. 从排好序的结果中提取分数
-                all_scores = [r['relevance_score'] for r in all_results]
-
-                return all_scores
+                return scored
 
             except requests.exceptions.RequestException as e:
                 log.error(f"调用 {self.backend} reranker API 时出错: {e}")
-                if hasattr(e, 'response') and e.response is not None:
+                if hasattr(e, "response") and e.response is not None:
                     log.error(f"API 响应内容: {e.response.text}")
                 raise e
 

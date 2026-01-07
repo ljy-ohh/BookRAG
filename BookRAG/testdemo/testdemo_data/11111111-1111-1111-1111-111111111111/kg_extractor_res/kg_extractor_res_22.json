@@ -3,12 +3,23 @@
     {
       "entity_name": "hdgse",
       "entity_type": "model or architecture",
-      "description": "hdgse is a model whose performance is being evaluated in relation to a data augmentation framework",
+      "description": "hdgse   is a model or architecture whose performance is discussed in the context of data augmentation frameworks",
       "source_ids": [
         22
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "src_entity_name": "",
+      "tgt_entity_name": "hdgse",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "is being analyzed for its impact on the hdgse model s performance",
+      "source_ids": [
+        22
+      ]
+    }
+  ],
   "node_idx": 22
 }

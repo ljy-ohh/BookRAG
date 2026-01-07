@@ -14,6 +14,7 @@ from mineru.cli.common import (
 from mineru.data.data_reader_writer import FileBasedDataWriter
 from mineru.utils.enum_class import MakeMode
 from mineru.backend.vlm.vlm_analyze import doc_analyze as vlm_doc_analyze
+from mineru.backend.vlm.vlm_analyze import ModelSingleton
 from mineru.backend.pipeline.pipeline_analyze import doc_analyze as pipeline_doc_analyze
 from mineru.utils.draw_bbox import draw_layout_bbox
 from mineru.backend.pipeline.pipeline_middle_json_mkcontent import (
@@ -57,15 +58,27 @@ def do_parse(
     )
     image_dir = str(os.path.basename(local_image_dir))
 
-    if backend == "pipeline":
-        import asyncio
+    import asyncio
+
+    def _ensure_event_loop_open():
         try:
             asyncio.get_running_loop()
+            return
         except RuntimeError:
-            # 如果没有运行中的循环，则创建一个新的
+            pass
+
+        try:
+            loop = asyncio.get_event_loop()
+        except RuntimeError:
+            loop = None
+
+        if loop is None or loop.is_closed():
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
-            
+
+    if backend == "pipeline":
+        _ensure_event_loop_open()
+
         infer_results, all_image_lists, all_pdf_docs, lang_list, ocr_enabled_list = (
             pipeline_doc_analyze(
                 [new_pdf_bytes],
@@ -97,19 +110,29 @@ def do_parse(
         content_list = pipeline_union_make(pdf_info, MakeMode.CONTENT_LIST, image_dir)
 
     else:
+        _ensure_event_loop_open()
+
         if backend.startswith("vlm-"):
             backend = backend[4:]
 
         if backend == "sglang-client":
             backend = "http-client"
 
-        middle_json, infer_result = vlm_doc_analyze(
-            new_pdf_bytes,
-            image_writer=image_writer,
-            backend=backend,
-            server_url=server_url,
-        )
+        try:
+            middle_json, infer_result = vlm_doc_analyze(
+                new_pdf_bytes,
+                image_writer=image_writer,
+                backend=backend,
+                server_url=server_url,
+            )
+        finally:
+            # Clear ModelSingleton to prevent "Event loop is closed" error caused by reused httpx client
+            # in subsequent asyncio.run() calls.
+            ModelSingleton._instance = None
+            ModelSingleton._models = {}
+
         pdf_info = middle_json["pdf_info"]
+
 
         md_content_str = vlm_union_make(pdf_info, MakeMode.MM_MD, image_dir)
         content_list = vlm_union_make(pdf_info, MakeMode.CONTENT_LIST, image_dir)

@@ -1,0 +1,14 @@
+{
+  "entities": [
+    {
+      "entity_name": "2025 3 15",
+      "entity_type": "date",
+      "description": "2025 3 15  is a date mentioned in the text",
+      "source_ids": [
+        3
+      ]
+    }
+  ],
+  "relations": [],
+  "node_idx": 3
+}

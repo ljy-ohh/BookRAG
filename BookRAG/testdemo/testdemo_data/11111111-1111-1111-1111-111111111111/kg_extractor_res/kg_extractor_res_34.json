@@ -6,27 +6,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the large model is used to directly generate event data",
-      "source_ids": [
-        34
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "the large model is used to generate sentences containing event structures",
-      "source_ids": [
-        34
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "the comparative experiment should include results from directly generating event data",
+      "description": "",
       "source_ids": [
         34
       ]

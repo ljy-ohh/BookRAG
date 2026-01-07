@@ -2,16 +2,16 @@
   "entities": [
     {
       "entity_name": "sr",
-      "entity_type": "method or technique",
-      "description": "sr is a baseline method for data augmentation  specifically a synonym replacement technique",
+      "entity_type": "model or architecture",
+      "description": "sr is a data augmentation method mentioned in the text as a baseline for comparison",
       "source_ids": [
         35
       ]
     },
     {
       "entity_name": "bt",
-      "entity_type": "method or technique",
-      "description": "bt is a baseline method for data augmentation  specifically a back translation technique",
+      "entity_type": "model or architecture",
+      "description": "bt is a data augmentation method mentioned in the text as a baseline for comparison",
       "source_ids": [
         35
       ]
@@ -20,10 +20,20 @@
   "relations": [
     {
       "src_entity_name": "sr",
-      "tgt_entity_name": "bt",
+      "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "both sr and bt are mentioned as baseline data augmentation methods for experimental comparison",
+      "weight": 10.0,
+      "description": "sr is the acronym for the method        as stated in the text",
+      "source_ids": [
+        35
+      ]
+    },
+    {
+      "src_entity_name": "bt",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 10.0,
+      "description": "bt is the acronym for the method     as stated in the text",
       "source_ids": [
         35
       ]

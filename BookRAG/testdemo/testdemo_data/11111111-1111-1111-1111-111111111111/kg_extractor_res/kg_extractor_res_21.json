@@ -1,12 +1,21 @@
 {
-  "entities": [],
+  "entities": [
+    {
+      "entity_name": "2",
+      "entity_type": "event",
+      "description": "2 is an event or discussion that suggests the paper s experimental section should include a performance comparison of different event extraction models",
+      "source_ids": [
+        21
+      ]
+    }
+  ],
   "relations": [
     {
-      "src_entity_name": "",
+      "src_entity_name": "2",
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "the performance of different event extraction models is suggested to be compared in the experiment",
+      "description": "2 refers to the suggestion of comparing performance across different event extraction models",
       "source_ids": [
         21
       ]

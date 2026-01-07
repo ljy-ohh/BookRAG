@@ -1,0 +1,8 @@
+{
+  "rag_cost": {
+    "prompt_tokens": 23353,
+    "completion_tokens": 528,
+    "total_tokens": 23881
+  },
+  "time": 222.2882537841797
+}

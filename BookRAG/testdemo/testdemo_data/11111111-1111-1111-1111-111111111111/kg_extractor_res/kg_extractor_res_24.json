@@ -2,8 +2,8 @@
   "entities": [
     {
       "entity_name": "gpt 3 5 turbo",
-      "entity_type": "model or architecture",
-      "description": "gpt 3 5 turbo is the large language model selected for the experiments in the text",
+      "entity_type": "product",
+      "description": "gpt 3 5 turbo is a large language model selected for experimentation in the text",
       "source_ids": [
         24
       ]
@@ -11,15 +11,15 @@
     {
       "entity_name": "temperature",
       "entity_type": "parameter or variable",
-      "description": "temperature is a parameter set to 0 8 during data generation to ensure diversity",
+      "description": "temperature is a parameter set to 0 8 to ensure diversity in data generation",
       "source_ids": [
         24
       ]
     },
     {
       "entity_name": "nvidia rtx4090 gpu",
-      "entity_type": "hardware",
-      "description": "an nvidia rtx4090 gpu is the hardware on which all experiments in the text were conducted",
+      "entity_type": "product",
+      "description": "nvidia rtx4090 gpu is a hardware device used for conducting all experiments in the text",
       "source_ids": [
         24
       ]
@@ -27,7 +27,7 @@
     {
       "entity_name": "text2event",
       "entity_type": "model or architecture",
-      "description": "text2event is a model that is fine tuned in the experiments described in the text",
+      "description": "text2event is a model that undergoes fine tuning as part of the experiments described in the text",
       "source_ids": [
         24
       ]
@@ -35,7 +35,7 @@
     {
       "entity_name": "hdgse",
       "entity_type": "model or architecture",
-      "description": "hdgse is a model that is fine tuned in the experiments described in the text",
+      "description": "hdgse is a model that undergoes fine tuning as part of the experiments described in the text",
       "source_ids": [
         24
       ]
@@ -46,48 +46,48 @@
       "src_entity_name": "gpt 3 5 turbo",
       "tgt_entity_name": "temperature",
       "relation_name": "",
+      "weight": 9.0,
+      "description": "the temperature parameter is set to 0 8 for data generation using gpt 3 5 turbo",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "gpt 3 5 turbo",
+      "tgt_entity_name": "",
+      "relation_name": "",
       "weight": 8.0,
-      "description": "the temperature parameter is set to 0 8 during the data generation process using the gpt 3 5 turbo model",
+      "description": "the data generation process for gpt 3 5 turbo uses the data augmentation framework s scoring module",
+      "source_ids": [
+        24
+      ]
+    },
+    {
+      "src_entity_name": "nvidia rtx4090 gpu",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 7.0,
+      "description": "the experiments are conducted on an nvidia rtx4090 gpu  which is used with the data augmentation framework",
       "source_ids": [
         24
       ]
     },
     {
       "src_entity_name": "",
-      "tgt_entity_name": "",
+      "tgt_entity_name": "text2event",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the scoring module of the data augmentation framework is used to filter data of the same scale as the original data",
+      "weight": 9.0,
+      "description": "the data augmentation framework is used to fine tune the text2event model",
       "source_ids": [
         24
       ]
     },
     {
       "src_entity_name": "",
-      "tgt_entity_name": "",
+      "tgt_entity_name": "hdgse",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the scoring module of the data augmentation framework is used to select data to augment the real training set",
-      "source_ids": [
-        24
-      ]
-    },
-    {
-      "src_entity_name": "text2event",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 7.0,
-      "description": "the text2event model is fine tuned using the augmented real training set",
-      "source_ids": [
-        24
-      ]
-    },
-    {
-      "src_entity_name": "hdgse",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 7.0,
-      "description": "the hdgse model is fine tuned using the augmented real training set",
+      "weight": 9.0,
+      "description": "the data augmentation framework is used to fine tune the hdgse model",
       "source_ids": [
         24
       ]

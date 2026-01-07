@@ -1,0 +1,998 @@
+{
+  "nodes": [
+    {
+      "index_id": 0,
+      "parent_id": null,
+      "type": "NodeType.ROOT",
+      "meta_info": {
+        "file_name": "人工智能技术发展报告.pdf",
+        "file_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\人工智能技术发展报告.pdf",
+        "page_idx": null,
+        "page_path": null,
+        "pdf_id": 0,
+        "pdf_para_block": null,
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": null,
+        "title_level": -1
+      },
+      "summary": ""
+    },
+    {
+      "index_id": 1,
+      "parent_id": 0,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 1,
+        "pdf_para_block": {
+          "bbox": [
+            86,
+            72,
+            194,
+            85
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                86,
+                72,
+                194,
+                85
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    86,
+                    72,
+                    194,
+                    85
+                  ],
+                  "type": "text",
+                  "content": "人工智能技术发展报告"
+                }
+              ]
+            }
+          ],
+          "index": 0
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "人工智能技术发展报告",
+        "title_level": 0
+      },
+      "summary": "该部分重点介绍了2024-2025年人工智能核心技术在大模型多模态融合与推理优化方面的突破及其对实际应用的推动作用。"
+    },
+    {
+      "index_id": 2,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 2,
+        "pdf_para_block": {
+          "bbox": [
+            86,
+            88,
+            195,
+            100
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                86,
+                88,
+                195,
+                100
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    86,
+                    88,
+                    195,
+                    100
+                  ],
+                  "type": "text",
+                  "content": "作者：科技前沿研究院"
+                }
+              ]
+            }
+          ],
+          "index": 1
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "作者：科技前沿研究院",
+        "title_level": -1
+      },
+      "summary": "核心结论：科技前沿研究院发布的资料强调了科技创新在推动社会进步和经济发展中的关键作用，指出当前技术突破主要集中在人工智能、量子计算、生物技术及清洁能源等领域，并呼吁加强跨学科合作与政策支持以加速技术转化与应用。"
+    },
+    {
+      "index_id": 3,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 3,
+        "pdf_para_block": {
+          "bbox": [
+            87,
+            103,
+            205,
+            116
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                87,
+                103,
+                205,
+                116
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    87,
+                    103,
+                    205,
+                    116
+                  ],
+                  "type": "text",
+                  "content": "日期：2025年3月15日"
+                }
+              ]
+            }
+          ],
+          "index": 2
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "日期：2025年3月15日",
+        "title_level": -1
+      },
+      "summary": "2025年3月15日是一个重要的日期，可能与特定事件、纪念日或计划安排相关，但具体信息未提供。"
+    },
+    {
+      "index_id": 4,
+      "parent_id": 1,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 4,
+        "pdf_para_block": {
+          "bbox": [
+            86,
+            118,
+            504,
+            147
+          ],
+          "type": "text",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                86,
+                118,
+                504,
+                147
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    86,
+                    118,
+                    504,
+                    147
+                  ],
+                  "type": "text",
+                  "content": "摘要：本文综述了2024-2025年人工智能核心技术的突破性进展，重点关注大模型多模态融合与推理优化。"
+                }
+              ]
+            }
+          ],
+          "index": 3
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "摘要：本文综述了2024-2025年人工智能核心技术的突破性进展，重点关注大模型多模态融合与推理优化。",
+        "title_level": -1
+      },
+      "summary": "2024-2025年人工智能核心技术取得显著突破，尤其在大模型多模态融合与推理优化方面展现出重要进展。多模态融合技术提升了模型对文本、图像、音频等多类型数据的理解与生成能力，而推理优化则增强了模型的运行效率与实时响应性能，推动了AI在实际场景中的广泛应用。"
+    },
+    {
+      "index_id": 5,
+      "parent_id": 1,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 5,
+        "pdf_para_block": {
+          "bbox": [
+            86,
+            151,
+            132,
+            163
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                86,
+                151,
+                132,
+                163
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    86,
+                    151,
+                    132,
+                    163
+                  ],
+                  "type": "text",
+                  "content": "核心内容"
+                }
+              ]
+            }
+          ],
+          "index": 4
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "核心内容",
+        "title_level": 1
+      },
+      "summary": "Hello! How can I assist you today? If you have any questions or need help with something, feel free to let me know! 😊"
+    },
+    {
+      "index_id": 6,
+      "parent_id": 1,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 6,
+        "pdf_para_block": {
+          "bbox": [
+            105,
+            165,
+            200,
+            179
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                105,
+                165,
+                200,
+                179
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    105,
+                    165,
+                    200,
+                    179
+                  ],
+                  "type": "text",
+                  "content": "1. 多模态模型演进"
+                }
+              ]
+            }
+          ],
+          "index": 5
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "1. 多模态模型演进",
+        "title_level": 1
+      },
+      "summary": "该部分通过对比不同品牌手机在性能、价格和用户评价方面的数据，帮助消费者做出更明智的购买决策。"
+    },
+    {
+      "index_id": 7,
+      "parent_id": 6,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 7,
+        "pdf_para_block": {
+          "bbox": [
+            140,
+            181,
+            504,
+            241
+          ],
+          "type": "list",
+          "angle": 0,
+          "index": 8,
+          "blocks": [
+            {
+              "bbox": [
+                140,
+                181,
+                504,
+                210
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    140,
+                    181,
+                    504,
+                    210
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        140,
+                        181,
+                        504,
+                        210
+                      ],
+                      "type": "text",
+                      "content": "- 技术突破：GPT-5及Gemini2.0支持跨文本、图像、音频的联合推理，在医疗诊断任务中准确率提升至 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        181,
+                        504,
+                        210
+                      ],
+                      "type": "inline_equation",
+                      "content": "92\\%"
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        181,
+                        504,
+                        210
+                      ],
+                      "type": "text",
+                      "content": "（较单模态提升 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        181,
+                        504,
+                        210
+                      ],
+                      "type": "inline_equation",
+                      "content": "18\\%"
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        181,
+                        504,
+                        210
+                      ],
+                      "type": "text",
+                      "content": "）"
+                    }
+                  ]
+                }
+              ],
+              "index": 6
+            },
+            {
+              "bbox": [
+                140,
+                227,
+                471,
+                241
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    140,
+                    227,
+                    471,
+                    241
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        140,
+                        227,
+                        471,
+                        241
+                      ],
+                      "type": "text",
+                      "content": "- 应用场景：工业质检系统通过多模态分析，误检率从 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        227,
+                        471,
+                        241
+                      ],
+                      "type": "inline_equation",
+                      "content": "5.3\\%"
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        227,
+                        471,
+                        241
+                      ],
+                      "type": "text",
+                      "content": " 降至 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        227,
+                        471,
+                        241
+                      ],
+                      "type": "inline_equation",
+                      "content": "1.7\\%"
+                    }
+                  ]
+                }
+              ],
+              "index": 7
+            }
+          ],
+          "sub_type": "text"
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "核心结论：该内容展示了不同品牌手机在性能、价格和用户评价方面的对比数据，帮助消费者做出更明智的购买决策。"
+    },
+    {
+      "index_id": 8,
+      "parent_id": 1,
+      "type": "NodeType.TITLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 8,
+        "pdf_para_block": {
+          "bbox": [
+            105,
+            243,
+            189,
+            257
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                105,
+                243,
+                189,
+                257
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    105,
+                    243,
+                    189,
+                    257
+                  ],
+                  "type": "text",
+                  "content": "2. 推理效率优化"
+                }
+              ]
+            }
+          ],
+          "index": 9
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "2. 推理效率优化",
+        "title_level": 1
+      },
+      "summary": "该部分通过对比不同数据集或指标，突显了GPT-5在多模态支持和推理效率上的显著提升。"
+    },
+    {
+      "index_id": 9,
+      "parent_id": 8,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 9,
+        "pdf_para_block": {
+          "bbox": [
+            140,
+            259,
+            504,
+            319
+          ],
+          "type": "list",
+          "angle": 0,
+          "index": 12,
+          "blocks": [
+            {
+              "bbox": [
+                140,
+                259,
+                504,
+                288
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    140,
+                    259,
+                    504,
+                    288
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        140,
+                        259,
+                        504,
+                        288
+                      ],
+                      "type": "text",
+                      "content": "- 算法创新：稀疏注意力机制（Sparse Attention）使千亿参数模型推理速度提升 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        259,
+                        504,
+                        288
+                      ],
+                      "type": "inline_equation",
+                      "content": "40\\%"
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        259,
+                        504,
+                        288
+                      ],
+                      "type": "text",
+                      "content": " ，能耗降低 "
+                    },
+                    {
+                      "bbox": [
+                        140,
+                        259,
+                        504,
+                        288
+                      ],
+                      "type": "inline_equation",
+                      "content": "35\\%"
+                    }
+                  ]
+                }
+              ],
+              "index": 10
+            },
+            {
+              "bbox": [
+                140,
+                306,
+                486,
+                319
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    140,
+                    306,
+                    486,
+                    319
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        140,
+                        306,
+                        486,
+                        319
+                      ],
+                      "type": "text",
+                      "content": "- 硬件适配：NPU芯片专为MoE架构优化，吞吐量达2.4倍于传统GPU。"
+                    }
+                  ]
+                }
+              ],
+              "index": 11
+            }
+          ],
+          "sub_type": "text"
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "核心结论：该内容展示了不同品牌手机在性能、价格和用户评价方面的对比数据，帮助消费者做出更明智的购买决策。"
+    },
+    {
+      "index_id": 10,
+      "parent_id": 8,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 10,
+        "pdf_para_block": {
+          "bbox": [
+            88,
+            322,
+            153,
+            334
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                88,
+                322,
+                153,
+                334
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    88,
+                    322,
+                    153,
+                    334
+                  ],
+                  "type": "text",
+                  "content": "关键数据对比"
+                }
+              ]
+            }
+          ],
+          "index": 13
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "关键数据对比",
+        "title_level": -1
+      },
+      "summary": "核心结论：该对比展示了不同数据集或指标之间的关键差异，突显了各自的优势与局限性。"
+    },
+    {
+      "index_id": 11,
+      "parent_id": 8,
+      "type": "NodeType.TABLE",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 11,
+        "pdf_para_block": {
+          "type": "table",
+          "bbox": [
+            88,
+            336,
+            384,
+            460
+          ],
+          "blocks": [
+            {
+              "bbox": [
+                88,
+                336,
+                384,
+                460
+              ],
+              "lines": [
+                {
+                  "bbox": [
+                    88,
+                    336,
+                    384,
+                    460
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        88,
+                        336,
+                        384,
+                        460
+                      ],
+                      "type": "table",
+                      "html": "<table><tr><td>技术指标</td><td>GPT-4 (2023)</td><td>GPT-5 (2025)</td></tr><tr><td>多模态支持</td><td>文本/图像</td><td>文本/图像/音频/视频</td></tr><tr><td>平均响应延迟(ms)</td><td>320</td><td>185</td></tr><tr><td>训练能耗(PJ)</td><td>12.7</td><td>8.9</td></tr></table>",
+                      "image_path": "d5be3ab8a6bc2c161a742c658473488c7f070372e69763aeb4af5af57e82094e.jpg"
+                    }
+                  ]
+                }
+              ],
+              "index": 14,
+              "angle": 0,
+              "type": "table_body"
+            }
+          ],
+          "index": 14
+        },
+        "img_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\testdemo\\testdemo_data\\22222222-2222-2222-2222-222222222222\\vlm\\images/d5be3ab8a6bc2c161a742c658473488c7f070372e69763aeb4af5af57e82094e.jpg",
+        "image_width": 0,
+        "image_height": 0,
+        "caption": "",
+        "footnote": "",
+        "table_body": "<table><tr><td>技术指标</td><td>GPT-4 (2023)</td><td>GPT-5 (2025)</td></tr><tr><td>多模态支持</td><td>文本/图像</td><td>文本/图像/音频/视频</td></tr><tr><td>平均响应延迟(ms)</td><td>320</td><td>185</td></tr><tr><td>训练能耗(PJ)</td><td>12.7</td><td>8.9</td></tr></table>",
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "GPT-5在2025年发布，相比GPT-4（2023年）在多模态支持上更全面，涵盖文本、图像、音频和视频。同时，GPT-5的平均响应延迟降低至185毫秒，训练能耗也减少到8.9 PJ，显示出更高的效率和性能。"
+    },
+    {
+      "index_id": 12,
+      "parent_id": 8,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 12,
+        "pdf_para_block": {
+          "bbox": [
+            87,
+            461,
+            125,
+            473
+          ],
+          "type": "title",
+          "angle": 0,
+          "lines": [
+            {
+              "bbox": [
+                87,
+                461,
+                125,
+                473
+              ],
+              "spans": [
+                {
+                  "bbox": [
+                    87,
+                    461,
+                    125,
+                    473
+                  ],
+                  "type": "text",
+                  "content": "术语表："
+                }
+              ]
+            }
+          ],
+          "index": 15
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "术语表：",
+        "title_level": -1
+      },
+      "summary": "本术语表提供了关键概念的定义，便于理解相关领域的专业术语。"
+    },
+    {
+      "index_id": 13,
+      "parent_id": 8,
+      "type": "NodeType.TEXT",
+      "meta_info": {
+        "file_name": null,
+        "file_path": null,
+        "page_idx": 0,
+        "page_path": null,
+        "pdf_id": 13,
+        "pdf_para_block": {
+          "bbox": [
+            104,
+            476,
+            423,
+            521
+          ],
+          "type": "list",
+          "angle": 0,
+          "index": 18,
+          "blocks": [
+            {
+              "bbox": [
+                104,
+                476,
+                398,
+                490
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    104,
+                    476,
+                    398,
+                    490
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        104,
+                        476,
+                        398,
+                        490
+                      ],
+                      "type": "text",
+                      "content": "- MoE (Mixture of Experts): 动态路由专家模块的模型架构"
+                    }
+                  ]
+                }
+              ],
+              "index": 16
+            },
+            {
+              "bbox": [
+                104,
+                507,
+                423,
+                521
+              ],
+              "type": "text",
+              "angle": 0,
+              "lines": [
+                {
+                  "bbox": [
+                    104,
+                    507,
+                    423,
+                    521
+                  ],
+                  "spans": [
+                    {
+                      "bbox": [
+                        104,
+                        507,
+                        423,
+                        521
+                      ],
+                      "type": "text",
+                      "content": "- NPU (Neural Processing Unit): 专为神经网络设计的处理芯片。"
+                    }
+                  ]
+                }
+              ],
+              "index": 17
+            }
+          ],
+          "sub_type": "text"
+        },
+        "img_path": null,
+        "image_width": 0,
+        "image_height": 0,
+        "caption": null,
+        "footnote": null,
+        "table_body": null,
+        "content": "",
+        "title_level": -1
+      },
+      "summary": "核心结论：该内容展示了不同品牌手机在性能、价格和用户评价方面的对比数据，帮助消费者做出更明智的购买决策。"
+    }
+  ],
+  "meta_info": {
+    "file_name": "人工智能技术发展报告.pdf",
+    "file_path": "D:\\pycharm\\Project\\BookRAG\\BookRAG\\人工智能技术发展报告.pdf",
+    "page_idx": null,
+    "page_path": null,
+    "pdf_id": null,
+    "pdf_para_block": null,
+    "img_path": null,
+    "image_width": 0,
+    "image_height": 0,
+    "caption": null,
+    "footnote": null,
+    "table_body": null,
+    "content": null,
+    "title_level": -1
+  }
+}

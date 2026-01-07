@@ -1,25 +1,9 @@
 {
   "entities": [
     {
-      "entity_name": "2",
-      "entity_type": "table",
-      "description": "a table referenced in the text showing performance comparisons of different methods",
-      "source_ids": [
-        28
-      ]
-    },
-    {
       "entity_name": "auggpt",
-      "entity_type": "model or architecture",
-      "description": "a generative model used for data augmentation  which improves diversity but may have event structure issues",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "entity_name": "f1",
-      "entity_type": "evaluation metric",
-      "description": "an evaluation metric  f1 score  used to measure model performance",
+      "entity_type": "method or technique",
+      "description": "auggpt",
       "source_ids": [
         28
       ]
@@ -27,7 +11,15 @@
     {
       "entity_name": "llmdirectgen",
       "entity_type": "method or technique",
-      "description": "a method that directly uses large language models for generation  resulting in data that deviates from real event distribution",
+      "description": "llmdirectgen",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "entity_name": "2",
+      "entity_type": "table",
+      "description": "2",
       "source_ids": [
         28
       ]
@@ -38,58 +30,28 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 7.0,
-      "description": "is compared against the      as a baseline augmentation method",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 9.0,
-      "description": "is modified into      in this paper to preserve event structure",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "2",
-      "relation_name": "",
       "weight": 8.0,
-      "description": "the performance of       is shown in  2",
+      "description": "",
       "source_ids": [
         28
       ]
     },
     {
       "src_entity_name": "",
-      "tgt_entity_name": "2",
+      "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 8.0,
-      "description": "the performance of    is shown in  2",
+      "weight": 7.0,
+      "description": "",
       "source_ids": [
         28
       ]
     },
     {
-      "src_entity_name": "auggpt",
+      "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 7.0,
-      "description": "auggpt is generally superior to the       method",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "src_entity_name": "auggpt",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 7.0,
-      "description": "auggpt is generally superior to the    method",
+      "description": "",
       "source_ids": [
         28
       ]
@@ -99,17 +61,7 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 8.0,
-      "description": "auggpt performs lower than",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "src_entity_name": "llmdirectgen",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 8.0,
-      "description": "llmdirectgen   has an f1 value lower than the",
+      "description": "auggpt",
       "source_ids": [
         28
       ]
@@ -119,7 +71,17 @@
       "tgt_entity_name": "",
       "relation_name": "",
       "weight": 9.0,
-      "description": "llmdirectgen   directly utilizes       for generation",
+      "description": "llmdirectgen",
+      "source_ids": [
+        28
+      ]
+    },
+    {
+      "src_entity_name": "llmdirectgen",
+      "tgt_entity_name": "",
+      "relation_name": "",
+      "weight": 8.0,
+      "description": "llmdirectgen",
       "source_ids": [
         28
       ]
@@ -128,28 +90,18 @@
       "src_entity_name": "",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 6.0,
-      "description": "is mentioned as a potential strategy to improve performance when using",
+      "weight": 9.0,
+      "description": "",
       "source_ids": [
         28
       ]
     },
     {
-      "src_entity_name": "",
+      "src_entity_name": "2",
       "tgt_entity_name": "",
       "relation_name": "",
-      "weight": 6.0,
-      "description": "is mentioned as a potential strategy to improve performance when using",
-      "source_ids": [
-        28
-      ]
-    },
-    {
-      "src_entity_name": "",
-      "tgt_entity_name": "",
-      "relation_name": "",
-      "weight": 10.0,
-      "description": "is the proposed method referred to as",
+      "weight": 9.0,
+      "description": "2",
       "source_ids": [
         28
       ]
